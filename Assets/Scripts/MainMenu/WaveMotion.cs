@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaveMotion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float _speed = 1f;
+    [SerializeField] private float _amplitude = 1f;
+
+    private Vector3 _initialPosition;
+
+    private void Start()
     {
-        
+        _initialPosition = transform.position;
+        _amplitude = Random.Range(3f, 5f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        float z = Mathf.Sin(Time.time * _speed) * _amplitude;
+        transform.position = new Vector3(_initialPosition.x, _initialPosition.y, _initialPosition.z + z);
     }
 }
