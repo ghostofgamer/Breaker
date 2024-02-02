@@ -400,7 +400,9 @@
             </e>
           </e>
         </e>
-        <e p="Materials" t="Include" />
+        <e p="Materials" t="Include">
+          <e p="BricksMaterials" t="Include" />
+        </e>
         <e p="Models" t="Include" />
         <e p="Packages" t="Include">
           <e p="TextMesh Pro" t="Include">
@@ -434,6 +436,7 @@
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="MainMenu" t="Include">
+            <e p="FadeObject.cs" t="Include" />
             <e p="WaveMotion.cs" t="Include" />
           </e>
         </e>

@@ -9,11 +9,11 @@ public class WaveMotion : MonoBehaviour
     private Vector3 _initialPosition;
 
     private void Start()
+
     {
         _initialPosition = transform.position;
         _amplitude = Random.Range(3f, 5f);
     }
-
     private void Update()
     {
         float z = Mathf.Sin(Time.time * _speed) * _amplitude;
