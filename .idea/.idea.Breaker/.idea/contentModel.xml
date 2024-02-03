@@ -435,13 +435,28 @@
         </e>
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="GameScene" t="Include">
+            <e p="PlatformController.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+          </e>
           <e p="MainMenu" t="Include">
             <e p="FadeObject.cs" t="Include" />
             <e p="WaveMotion.cs" t="Include" />
           </e>
+          <e p="UI" t="Include">
+            <e p="Buttons" t="Include">
+              <e p="AbstractButton.cs" t="Include" />
+              <e p="PlayButton.cs" t="Include" />
+              <e p="SettingsButton.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Sounds" t="Include" />
         <e p="Sprites" t="Include">
+          <e p="Buttons" t="Include">
+            <e p="SettingsButton" t="Include" />
+          </e>
+          <e p="Icons" t="Include" />
           <e p="Textures" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
