@@ -83,6 +83,9 @@
             </e>
           </e>
         </e>
+        <e p="Animations" t="Include">
+          <e p="Screen" t="Include" />
+        </e>
         <e p="JMO Assets" t="Include">
           <e p="Toony Colors Pro" t="Include">
             <e p="!ToonyColorsPro Readme.txt" t="Include" />
@@ -409,6 +412,7 @@
             <e p="Fonts" t="Include" />
           </e>
         </e>
+        <e p="Physics" t="Include" />
         <e p="Prefabs" t="Include" />
         <e p="Samples" t="Include">
           <e p="Web Utility" t="Include">
@@ -435,7 +439,9 @@
         </e>
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Ball.cs" t="Include" />
           <e p="GameScene" t="Include">
+            <e p="BallMover.cs" t="Include" />
             <e p="PlatformController.cs" t="Include" />
             <e p="Player.cs" t="Include" />
           </e>
@@ -446,10 +452,19 @@
           <e p="UI" t="Include">
             <e p="Buttons" t="Include">
               <e p="AbstractButton.cs" t="Include" />
+              <e p="BackButton.cs" t="Include" />
+              <e p="CloseShopButton.cs" t="Include" />
               <e p="PlayButton.cs" t="Include" />
               <e p="SettingsButton.cs" t="Include" />
+              <e p="SettingsButton1.cs" t="Include" />
+              <e p="ShopButton.cs" t="Include" />
+            </e>
+            <e p="Screens" t="Include">
+              <e p="MainScreen.cs" t="Include" />
+              <e p="SettingsScreen.cs" t="Include" />
             </e>
           </e>
+          <e p="Wall.cs" t="Include" />
         </e>
         <e p="Sounds" t="Include" />
         <e p="Sprites" t="Include">
