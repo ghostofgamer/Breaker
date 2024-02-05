@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UI.Buttons;
 using UnityEngine;
@@ -8,8 +9,13 @@ public class BackButton : AbstractButton
     [SerializeField] private MainScreen _mainScreen;
     [SerializeField] private SettingsScreen _settingsScreen;
     [SerializeField] private GameObject _settingsButton;
-    
+
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
+
+    private void Start()
+    {
+        CanvasValue(0);
+    }
 
     protected override void OnClick()
     {
@@ -18,10 +24,10 @@ public class BackButton : AbstractButton
 
     private IEnumerator ChangeOpenMenu()
     {
+        CanvasValue(0);
         _settingsScreen.GetComponent<FadeObject>().FadeOn();
         yield return _waitForSeconds;
         _settingsButton.SetActive(true);
-        gameObject.SetActive(false);
         _mainScreen.GetComponent<FadeObject>().FadeOut();
     }
 }

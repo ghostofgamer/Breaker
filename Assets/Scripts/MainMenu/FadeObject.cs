@@ -10,7 +10,6 @@ public class FadeObject : MonoBehaviour
     private void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
-        // StartCoroutine(Fade());
     }
 
     public void FadeOn()
@@ -31,10 +30,12 @@ public class FadeObject : MonoBehaviour
             yield return null;
         }
     }
+    
     public void FadeOut()
     {
         StartCoroutine(OnFadeOut());
     }
+    
     private IEnumerator OnFadeOut()
     {
         float elapsedTime = 0f;
