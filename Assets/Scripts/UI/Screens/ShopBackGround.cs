@@ -7,11 +7,7 @@ public class ShopBackGround : MonoBehaviour
 {
     private float _duration = 0.165f;
     private Coroutine _coroutine;
-    private void Start()
-    {
-        
-    }
-    
+
     public void BackGroundAlphaChange(int start, int end)
     {
         if(_coroutine!= null)
@@ -32,7 +28,6 @@ public class ShopBackGround : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 float alpha = Mathf.Lerp(startAlpha, needAlpha, elapsedTime / _duration);
                 canvas.alpha = alpha;
-                Debug.Log("Alpha");
                 yield return null;
             }
         }
