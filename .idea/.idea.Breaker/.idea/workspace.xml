@@ -22,10 +22,12 @@
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Screen/ShopScreenClose.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Screen/ShopScreenClose.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Screen/ShopScreenOpen.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Screen/ShopScreenOpen.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/ShopBackGround.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/ShopBackGround.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/FadeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/FadeObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SettingsButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SettingsButton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/MainScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SwipeLayout.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/PlatformRotate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameScene/PlatformController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SettingsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Wall.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,7 +52,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameScene/BallMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Knob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/AbstractButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MaskUi3D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Swipe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/ShopBackGround.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -65,14 +70,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/PlatformController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/AbstractButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SettingsButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/FadeObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/ShopBackGround.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Knob.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SwipeLayout.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/PlatformRotate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MaskUi3D.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/swipe.cs" />
+        <option value="$PROJECT_DIR$/Assets/swipeMenu/swipe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Swipe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SettingsButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/FadeObject.cs" />
       </list>
     </option>
   </component>
@@ -124,7 +134,8 @@
       <workItem from="1706869578263" duration="2847000" />
       <workItem from="1706949700132" duration="11073000" />
       <workItem from="1706963526156" duration="11897000" />
-      <workItem from="1707123840893" duration="9515000" />
+      <workItem from="1707123840893" duration="9760000" />
+      <workItem from="1707207425016" duration="12441000" />
     </task>
     <servers />
   </component>
@@ -165,9 +176,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1032@0.0.1920.1032" timestamp="1706951872337" />
-    <state x="616" y="238" key="run.anything.popup" timestamp="1706954519495">
+    <state x="616" y="238" key="run.anything.popup" timestamp="1707214795047">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1706954519495" />
+    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1707214795047" />
   </component>
 </project>

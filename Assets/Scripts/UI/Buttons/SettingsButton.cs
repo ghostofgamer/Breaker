@@ -9,7 +9,7 @@ namespace UI.Buttons
         [SerializeField]private SettingsScreen  _settingsScreen;
         [SerializeField] private GameObject _backButton;
 
-        private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.16f);
 
         protected override void OnClick()
         {

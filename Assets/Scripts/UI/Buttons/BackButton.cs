@@ -10,7 +10,7 @@ public class BackButton : AbstractButton
     [SerializeField] private SettingsScreen _settingsScreen;
     [SerializeField] private GameObject _settingsButton;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.16f);
 
     private void Start()
     {

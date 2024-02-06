@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadeObject : MonoBehaviour
 {
     private RectTransform _rectTransform;
-    private float _fadeDuration = 0.3f;
+    private float _fadeDuration = 0.16f;
 
     private void Start()
     {
