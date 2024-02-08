@@ -41,7 +41,8 @@ public class PlatformController : MonoBehaviour
             // Устанавливаем новую позицию платформы
             // transform.position = new Vector3(newX, newY, transform.position.z);
             Vector3 target = new Vector3(newX, transform.position.y, newZ);
-            transform.position = Vector3.Lerp(transform.position, target, _speed * Time.deltaTime);
+            transform.position = target;
+            // transform.position = Vector3.Lerp(transform.position, target, _speed * Time.deltaTime);
         }
 
 
@@ -72,13 +73,13 @@ public class PlatformController : MonoBehaviour
         _rigidbody.position = movement * _speed;*/
     }
 
-    private void OnCollisionEnter(Collision other)
+    /*private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.TryGetComponent<BallMover>(out var ball))
         {
             ball.Move();
         }
-    }
+    }*/
 
     private void FixedUpdate()
     {
