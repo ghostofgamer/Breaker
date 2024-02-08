@@ -41,8 +41,9 @@ public class PlatformController : MonoBehaviour
             // Устанавливаем новую позицию платформы
             // transform.position = new Vector3(newX, newY, transform.position.z);
             Vector3 target = new Vector3(newX, transform.position.y, newZ);
-            transform.position = target;
-            // transform.position = Vector3.Lerp(transform.position, target, _speed * Time.deltaTime);
+            // transform.position = target;
+            transform.position = Vector3.Lerp(transform.position, target, _speed * Time.deltaTime);
+            // transform.position = Vector3.MoveTowards(transform.position, target, _speed * Time.deltaTime);
         }
 
 

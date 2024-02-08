@@ -45,11 +45,13 @@ public class Forward : MonoBehaviour
 
 
     [SerializeField] private float _rayLength = 10f;
+    
     public float platformOffset = 3f;
 
     private void Checkplatform()
     {
         Ray ray = new Ray(transform.position, transform.forward);
+        Ray backray = new Ray(transform.position, -transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, _rayLength))
@@ -67,7 +69,23 @@ public class Forward : MonoBehaviour
             }
         }
 
+        if (Physics.Raycast(backray, out hit, _rayLength))
+        {
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController))
+            {
+                Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
+                // Debug.Log("UP : " + platformUp);
+                Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
+                // Debug.Log("Pos : " + newPosition);
+                transform.position = newPosition;
+                // transform.position = hit.point;
+                direction = Vector3.Reflect(direction, hit.normal);
+                // Debug.Log("Raycast hit : " + hit.collider.gameObject.name);
+            }
+        }
+
         Debug.DrawRay(ray.origin, ray.direction * _rayLength, Color.red);
+        Debug.DrawRay(backray.origin, backray.direction * _rayLength, Color.green);
     }
 
     /*private void Update()
