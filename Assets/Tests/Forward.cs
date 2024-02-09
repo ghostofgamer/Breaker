@@ -8,7 +8,6 @@ public class Forward : MonoBehaviour
 {
     public float speed = 10.0f; // Скорость движения мяча
     public LayerMask wallLayer; // Слой, который отмечен как стены
-
     private Vector3 direction; // Направление движения мяча
     private float radius; // Радиус мяча
 
