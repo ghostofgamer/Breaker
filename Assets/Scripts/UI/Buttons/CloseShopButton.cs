@@ -8,7 +8,6 @@ public class CloseShopButton : AbstractButton
 {
     [SerializeField] private GameObject _screen;
     [SerializeField] private ShopBackGround _shopBackGround;
-
     [SerializeField] private Image[] _imagesActive;
     [SerializeField] private Image[] _backgroundImage;
     [SerializeField] private Color _currentColor;

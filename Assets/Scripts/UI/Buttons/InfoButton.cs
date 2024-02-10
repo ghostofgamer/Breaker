@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InfoButton : MonoBehaviour
+public class InfoButton : AbstractButton
 {
-
-
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject _screenInfo;
+    [SerializeField] private ShopBackGround _shopBackGround;
+    
+    protected override void OnClick()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _screenInfo.SetActive(true);
+        _screenInfo.GetComponent<Animator>().Play("InfoScreenOpen");
+        _shopBackGround.BackGroundAlphaChange(0, 1);
     }
 }
