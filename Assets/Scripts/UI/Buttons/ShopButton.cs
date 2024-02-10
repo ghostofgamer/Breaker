@@ -8,7 +8,7 @@ public class ShopButton : AbstractButton
 {
     [SerializeField] private GameObject _screen;
     [SerializeField] private ShopBackGround _shopBackGround;
-    [SerializeField] private CloseShopButton _closeShopButton;
+    [SerializeField] private CloseShopButton[] _closeShopButtons;
     [SerializeField] private Image[] _imagesActive;
     [SerializeField] private int _tabIndex;
     [SerializeField] private Image[] _backgroundImage;
@@ -26,7 +26,10 @@ public class ShopButton : AbstractButton
     {
         _screen.GetComponent<Animator>().Play("ShopScreenOpen");
         _shopBackGround.BackGroundAlphaChange(0, 1);
-        _closeShopButton.gameObject.SetActive(true);
+        
+        foreach (CloseShopButton close in _closeShopButtons)
+            close.gameObject.SetActive(true);
+        
         ActiveImage();
         ColorChanger();
         ActiveTab();

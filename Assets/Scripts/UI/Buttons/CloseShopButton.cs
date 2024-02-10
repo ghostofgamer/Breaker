@@ -11,11 +11,16 @@ public class CloseShopButton : AbstractButton
     [SerializeField] private Image[] _imagesActive;
     [SerializeField] private Image[] _backgroundImage;
     [SerializeField] private Color _currentColor;
+    [SerializeField]private CloseShopButton[] _closeShopButtons;
     
     protected override void OnClick()
     {
         _screen.GetComponent<Animator>().Play("ShopScreenClose");
         _shopBackGround.BackGroundAlphaChange(1, 0);
+        
+        foreach (CloseShopButton close in _closeShopButtons)
+            close.gameObject.SetActive(false);
+        
         gameObject.SetActive(false);
         OffImages();
     }
