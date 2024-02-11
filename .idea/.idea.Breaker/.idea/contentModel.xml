@@ -463,11 +463,12 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Ball.cs" t="Include" />
           <e p="GameScene" t="Include">
-            <e p="BallMover.cs" t="Include" />
-            <e p="PlatformController.cs" t="Include" />
-            <e p="Player.cs" t="Include" />
+            <e p="BallContent" t="Include">
+              <e p="Ball.cs" t="Include" />
+              <e p="BallMover.cs" t="Include" />
+            </e>
+            <e p="Wall.cs" t="Include" />
           </e>
           <e p="MainMenu" t="Include">
             <e p="FadeObject.cs" t="Include" />
@@ -475,6 +476,11 @@
               <e p="PlatformRotate.cs" t="Include" />
             </e>
             <e p="WaveMotion.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="PlatformController.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="Wallet.cs" t="Include" />
           </e>
           <e p="Test" t="Include">
             <e p="SwipeTest.cs" t="Include" />
@@ -503,7 +509,6 @@
             <e p="Swipe.cs" t="Include" />
             <e p="SwipeLayout.cs" t="Include" />
           </e>
-          <e p="Wall.cs" t="Include" />
         </e>
         <e p="Simple Scroll-Snap" t="Include">
           <e p="Documentation" t="Include" />

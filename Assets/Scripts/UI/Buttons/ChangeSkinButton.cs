@@ -8,7 +8,6 @@ public class ChangeSkinButton : AbstractButton
     [SerializeField] private Image _image;
     [SerializeField] private Sprite _newSprite;
     [SerializeField] private Sprite _oldSprite;
-    [SerializeField] private int _index;
     [SerializeField] private ChangeSkinButton[] _buttons;
 
     protected override void OnClick()
