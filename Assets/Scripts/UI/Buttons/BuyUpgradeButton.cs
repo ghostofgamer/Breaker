@@ -8,34 +8,21 @@ using UnityEngine.UI;
 public class BuyUpgradeButton : AbstractButton
 {
     [SerializeField] private Wallet _wallet;
-    [SerializeField] private GameObject _infoButton;
-    [SerializeField] private GameObject _buyUpgradeButton;
-    [SerializeField] private Image _upgradeUpLevel;
-    [SerializeField] private Color _color;
     [SerializeField] private int _price;
-    [SerializeField]private CloseInfoScreenButton _closeInfoButton;
+    [SerializeField] private CloseInfoScreenButton _closeInfoButton;
     [SerializeField] private Save _save;
     [SerializeField] private Buffs _buffElement;
-    [SerializeField]private Buff _buff;
+    [SerializeField] private Buff _buff;
 
     protected override void OnClick()
     {
         if (_wallet.Money >= _price)
-            BuyUpgrade();
+            MakeDeal();
     }
 
-    /*private void ChangeValue()
+    private void MakeDeal()
     {
-        _infoButton.SetActive(true);
-        _buyUpgradeButton.SetActive(false);
-        _upgradeUpLevel.color = _color;
-        _closeInfoButton.ScreenClose();
-    }*/
-
-    private void BuyUpgrade()
-    {
-        _save.SetData(_buff.ToString(),1);
-        // ChangeValue();
+        _save.SetData(_buffElement.ToString(), 1);
         _buff.ChangeValue();
         _closeInfoButton.ScreenClose();
         _wallet.RemoveMoney(_price);
