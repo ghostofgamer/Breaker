@@ -22,17 +22,451 @@
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallMover.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallMover.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/PlatformController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/PlatformController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ChangeSkinButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ChangeSkinButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/ExampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/ExampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/ExampleSceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/ExampleSceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Floor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Floor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Instructions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Instructions.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Animations/Sails.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Animations/Sails.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Animations/Sails.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Animations/Sails.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/BallControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/BallControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Ceiling.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Ceiling.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/HighBounce.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/HighBounce.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Light.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Light.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Wall.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Wall.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Materials/Yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Shaders/FloorShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Shaders/FloorShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Shaders/FloorStencil.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Shaders/FloorStencil.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Text.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Text/Caveat-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Text/Caveat-VariableFont_wght.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Text/TextMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Text/TextMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Text/TextShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Text/TextShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/Metal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/Metal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/factory_wall_diff_1k.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/factory_wall_diff_1k.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/factory_wall_nor_1k.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/factory_wall_nor_1k.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/floor_tiles_06_diff_1k.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/Misc/Textures/floor_tiles_06_diff_1k.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/PlanarReflection.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/PlanarReflection/FloorMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/PlanarReflection/FloorMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/PlanarReflection/FloorStencil.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/PlanarReflection/FloorStencil.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/PlanarReflection/PlanarReflectionManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlanarReflection/PlanarReflection/PlanarReflectionManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BuySkinBallButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BuySkinBallButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Documentation/Documentation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Documentation/Documentation.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Prefabs/FileUI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Prefabs/FileUI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Scenes/Example 1 (macOS Finder).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Scenes/Example 1 (macOS Finder).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Scripts/FileUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Scripts/FileUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Desktop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Desktop.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/File-Browser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/File-Browser.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Baby One More Time” by Britney Spears.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Baby One More Time” by Britney Spears.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Billie Jean” by Michael Jackson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Billie Jean” by Michael Jackson.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Call Me Maybe” by Carly Rae Jepsen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Call Me Maybe” by Carly Rae Jepsen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Don’t Stop Believing” by Journey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Don’t Stop Believing” by Journey.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Everybody (Backstreet’s Back)” by the Backstreet Boys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Everybody (Backstreet’s Back)” by the Backstreet Boys.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Genie in a Bottle” by Christina Aguilera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Genie in a Bottle” by Christina Aguilera.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Hollaback Girl” by Gwen Stefani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Hollaback Girl” by Gwen Stefani.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“I Wanna Dance With Somebody” by Whitney Houston.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“I Wanna Dance With Somebody” by Whitney Houston.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“It’s Gonna Be Me” by ‘N Sync.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“It’s Gonna Be Me” by ‘N Sync.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Like a Prayer” by Madonna.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Like a Prayer” by Madonna.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Rolling in the Deep” by Adele.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Rolling in the Deep” by Adele.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Single Ladies (Put a Ring on It)” by Beyoncé.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Single Ladies (Put a Ring on It)” by Beyoncé.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Thriller” by Michael Jackson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Thriller” by Michael Jackson.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Uptown Funk” by Mark Ronson and Bruno Mars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“Uptown Funk” by Mark Ronson and Bruno Mars.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“When Doves Cry” by Prince.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 1 (macOS Finder)/Sprites/Songs/“When Doves Cry” by Prince.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Scenes/Example 2 (iOS Home Screen).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Scenes/Example 2 (iOS Home Screen).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Sprites/Background.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Sprites/Background.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Sprites/Icons.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 2 (iOS Home Screen)/Sprites/Icons.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Prefabs/Slot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Prefabs/Slot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Scenes/Example 3 (Slot Machine).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Scenes/Example 3 (Slot Machine).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Scripts/SlotMachine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Scripts/SlotMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Casino Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Casino Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Line Marker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Line Marker.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Slot Machine Icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Slot Machine Icons.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Slot Machine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 3 (Slot Machine)/Sprites/Slot Machine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Prefabs/Pin.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Prefabs/Pin.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Scenes/Example 4 (Pinned Map).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Scenes/Example 4 (Pinned Map).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Sprites/Pin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Sprites/Pin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Sprites/World Map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 4 (Pinned Map)/Sprites/World Map.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Prefabs/Panel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Prefabs/Panel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Prefabs/Toggle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Prefabs/Toggle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Scenes/Example 5 (Dynamic Content).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Scenes/Example 5 (Dynamic Content).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Scripts/DynamicContent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 5 (Dynamic Content)/Scripts/DynamicContent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Materials/Ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Materials/Ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Scenes/Example 6 (3D Shape Selection).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Scenes/Example 6 (3D Shape Selection).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Scripts/Rotator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/Example 6 (3D Shape Selection)/Scripts/Rotator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animations/Expanded.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animations/Expanded.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animations/Normal.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animations/Normal.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animator Controllers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animator Controllers/Information.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Animator Controllers/Information.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Prefabs/Information.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Prefabs/Information.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Scripts/ExpandInformation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Scripts/ExpandInformation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Sprites/Info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Examples/_Common/Sprites/Info.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/LICENSE.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Prefabs/Pagination.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Prefabs/Pagination.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Prefabs/Scroll-Snap.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Prefabs/Scroll-Snap.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Editor/SSSCopyrightEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Editor/SSSCopyrightEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Editor/SimpleScrollSnapEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Editor/SimpleScrollSnapEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Editor/SimpleScrollSnapEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Editor/SimpleScrollSnapEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/Helper.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/Helper/NestedScrollRect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/Helper/NestedScrollRect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/SimpleScrollSnap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/SimpleScrollSnap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/Fade.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/Fade.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RecolourBlue.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RecolourBlue.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RecolourGreen.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RecolourGreen.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RecolourRed.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RecolourRed.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RotateX.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RotateX.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RotateY.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RotateY.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RotateZ.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/RotateZ.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/Scale.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/Scale.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/ScaleX.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/ScaleX.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/ScaleY.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/ScaleY.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/ScaleZ.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/ScaleZ.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/TranslateZ.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/Samples/TranslateZ.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/TransitionEffectBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Behaviours/TransitionEffect/TransitionEffectBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/Direction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/Direction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/MovementAxis.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/MovementAxis.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/MovementType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/MovementType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/SizeControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/SizeControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/SnapTarget.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/Runtime/Enums/SnapTarget.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/SimpleScrollSnap.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Core/SimpleScrollSnap.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/CopyrightEditor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/CopyrightEditor/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/CopyrightEditor/Editor/CopyrightEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/CopyrightEditor/Editor/CopyrightEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/CopyrightEditor/Editor/CopyrightEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/CopyrightEditor/Editor/CopyrightEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Editor/MinMaxDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Editor/MinMaxDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Editor/SimpleInspectorAttributesEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Editor/SimpleInspectorAttributesEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Runtime/Margins.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Runtime/Margins.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Runtime/MinMax.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/Runtime/MinMax.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/SimpleInspectorAttributes.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/SimpleInspectorAttributes/SimpleInspectorAttributes.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/Editor/EditorLayoutUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/Editor/EditorLayoutUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/Editor/EditorUtilities.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/Editor/EditorUtilities.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/StringUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/StringUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/UnityEventUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/UnityEventUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/Utilities.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple Scroll-Snap/Scripts/Plugins/Utilities/Utilities.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/02 Sidekick_0.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/02 Sidekick_0.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/fluery_0.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/fluery_0.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/greyarms-medievil_0.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/greyarms-medievil_0.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/pirate1uf_0.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/pirate1uf_0.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/softpiano20_0.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/softpiano20_0.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/west1_0.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Audio/west1_0.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 5.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 5.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 6.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Materials/mat 6.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Default Menu Item.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Default Menu Item.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Info Text.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Info Text.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Instructions.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Instructions.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Menu Item With Srpite.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Menu Item With Srpite.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Scene Switcher.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Prefabs/Scene Switcher.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/Expansion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/Expansion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/controls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/controls.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/flatDark11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/flatDark11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/flatDark15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/flatDark15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/ghosts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/ghosts.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/yellow_panel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/yellow_panel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/yellow_sliderLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/yellow_sliderLeft.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/yellow_sliderRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Sprites/yellow_sliderRight.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Text.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Text/caladea-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Demo Resources/Text/caladea-regular.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Documentation/Code Documentation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Documentation/Code Documentation.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Documentation/Read Me First!.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Documentation/Read Me First!.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Documentation/Version History.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Documentation/Version History.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Editor/SwipeHandlerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Editor/SwipeHandlerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example Scene/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example Scene/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example Scene/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example Scene/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example SceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Character Selection Example SceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow Scene/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow Scene/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow Scene/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow Scene/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow SceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Classic Flow SceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu Scene/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu Scene/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu Scene/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu Scene/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu SceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Flat Menu SceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu Scene/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu Scene/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu Scene/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu Scene/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu SceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Multiple Menu SceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example Scene/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example Scene/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example Scene/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example Scene/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example SceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scenes/Music Player Example SceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/DemoSceneSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/DemoSceneSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/ExampleCharacterSelector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/ExampleCharacterSelector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/ExampleMenuAudioPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/ExampleMenuAudioPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/MoveBetweenMenus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/MoveBetweenMenus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/ShowTextOnMenuCentred.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/ShowTextOnMenuCentred.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/SwipeMenuAudioPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/SwipeMenuAudioPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/UpdateMenuItemOnClick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/UpdateMenuItemOnClick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/UpdateTextColourOnMenuClick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/Demo Scripts/UpdateTextColourOnMenuClick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Helper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Helper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Input.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Input/SwipeHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Input/SwipeHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Input/TouchHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Input/TouchHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Menu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/Menu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/MenuItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/MenuItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/SubMenuItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwipeMenu/Scripts/SwipeMenu/SubMenuItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/swipeMenu.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +489,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Knob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/AbstractButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MaskUi3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/SdkInitialization.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/PlayButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/BallMov.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,6 +498,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/PlatformRotate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SettingsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseInfoScreenButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/GameReady.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/TestBallPlatform.cs" root0="FORCE_HIGHLIGHTING" />
@@ -118,6 +554,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ChangeSkinButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SDK/SdkInitialization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SDK/GameReady.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BuySkinBallButton.cs" />
       </list>
     </option>
   </component>
@@ -177,7 +616,7 @@
       <workItem from="1707469402676" duration="5596000" />
       <workItem from="1707490305249" duration="306000" />
       <workItem from="1707559285324" duration="3753000" />
-      <workItem from="1707638930824" duration="854000" />
+      <workItem from="1707638930824" duration="3032000" />
     </task>
     <servers />
   </component>

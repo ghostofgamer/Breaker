@@ -9,6 +9,8 @@ public abstract class AbstractButton : MonoBehaviour
     private Button _button;
     private CanvasGroup _canvasGroup;
     
+    protected Button Button => _button;
+    
     private void Awake()
     {
         _button = GetComponent<Button>();

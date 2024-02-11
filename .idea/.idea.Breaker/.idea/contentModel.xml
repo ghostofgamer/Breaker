@@ -7,6 +7,7 @@
       <e p="Agava.WebUtility.Samples.Playtesting.csproj" t="IncludeRecursive" />
       <e p="Agava.YandexGames.Samples.Playtesting.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AddedAssets" t="Include">
@@ -337,6 +338,196 @@
               <e p="DistortionRim.shader" t="Include" />
             </e>
           </e>
+          <e p="PlanarReflection" t="Include">
+            <e p="Instructions.txt" t="Include" />
+            <e p="Misc" t="Include">
+              <e p="Animations" t="Include" />
+              <e p="BallControl.cs" t="Include" />
+              <e p="Materials" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="FloorShader.shader" t="Include" />
+                <e p="FloorStencil.shader" t="Include" />
+              </e>
+              <e p="Text" t="Include">
+                <e p="TextShader.shader" t="Include" />
+              </e>
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="PlanarReflection" t="Include">
+              <e p="PlanarReflectionManager.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Simple Scroll-Snap" t="Include">
+            <e p="Documentation" t="Include" />
+            <e p="Examples" t="Include">
+              <e p="_Common" t="Include">
+                <e p="Animations" t="Include" />
+                <e p="Animator Controllers" t="Include" />
+                <e p="Prefabs" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="ExpandInformation.cs" t="Include" />
+                </e>
+                <e p="Sprites" t="Include" />
+              </e>
+              <e p="Example 1 (macOS Finder)" t="Include">
+                <e p="Prefabs" t="Include" />
+                <e p="Scenes" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="FileUI.cs" t="Include" />
+                </e>
+                <e p="Sprites" t="Include">
+                  <e p="Songs" t="Include" />
+                </e>
+              </e>
+              <e p="Example 2 (iOS Home Screen)" t="Include">
+                <e p="Scenes" t="Include" />
+                <e p="Sprites" t="Include" />
+              </e>
+              <e p="Example 3 (Slot Machine)" t="Include">
+                <e p="Prefabs" t="Include" />
+                <e p="Scenes" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="SlotMachine.cs" t="Include" />
+                </e>
+                <e p="Sprites" t="Include" />
+              </e>
+              <e p="Example 4 (Pinned Map)" t="Include">
+                <e p="Prefabs" t="Include" />
+                <e p="Scenes" t="Include" />
+                <e p="Sprites" t="Include" />
+              </e>
+              <e p="Example 5 (Dynamic Content)" t="Include">
+                <e p="Prefabs" t="Include" />
+                <e p="Scenes" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="DynamicContent.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Example 6 (3D Shape Selection)" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Scenes" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="Rotator.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Prefabs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Core" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="SimpleScrollSnapEditor.asmdef" t="Include" />
+                  <e p="SimpleScrollSnapEditor.cs" t="Include" />
+                  <e p="SSSCopyrightEditor.cs" t="Include" />
+                </e>
+                <e p="Runtime" t="Include">
+                  <e p="Behaviours" t="Include">
+                    <e p="Helper" t="Include">
+                      <e p="NestedScrollRect.cs" t="Include" />
+                    </e>
+                    <e p="SimpleScrollSnap.cs" t="Include" />
+                    <e p="TransitionEffect" t="Include">
+                      <e p="Samples" t="Include">
+                        <e p="Fade.cs" t="Include" />
+                        <e p="RecolourBlue.cs" t="Include" />
+                        <e p="RecolourGreen.cs" t="Include" />
+                        <e p="RecolourRed.cs" t="Include" />
+                        <e p="RotateX.cs" t="Include" />
+                        <e p="RotateY.cs" t="Include" />
+                        <e p="RotateZ.cs" t="Include" />
+                        <e p="Scale.cs" t="Include" />
+                        <e p="ScaleX.cs" t="Include" />
+                        <e p="ScaleY.cs" t="Include" />
+                        <e p="ScaleZ.cs" t="Include" />
+                        <e p="TranslateZ.cs" t="Include" />
+                      </e>
+                      <e p="TransitionEffectBase.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Enums" t="Include">
+                    <e p="Direction.cs" t="Include" />
+                    <e p="MovementAxis.cs" t="Include" />
+                    <e p="MovementType.cs" t="Include" />
+                    <e p="SizeControl.cs" t="Include" />
+                    <e p="SnapTarget.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="SimpleScrollSnap.asmdef" t="Include" />
+              </e>
+              <e p="Plugins" t="Include">
+                <e p="CopyrightEditor" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="CopyrightEditor.asmdef" t="Include" />
+                    <e p="CopyrightEditor.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="SimpleInspectorAttributes" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="MinMaxDrawer.cs" t="Include" />
+                    <e p="SimpleInspectorAttributesEditor.asmdef" t="Include" />
+                  </e>
+                  <e p="Runtime" t="Include">
+                    <e p="Margins.cs" t="Include" />
+                    <e p="MinMax.cs" t="Include" />
+                  </e>
+                  <e p="SimpleInspectorAttributes.asmdef" t="Include" />
+                </e>
+                <e p="Utilities" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="EditorLayoutUtility.cs" t="Include" />
+                    <e p="EditorUtilities.asmdef" t="Include" />
+                  </e>
+                  <e p="StringUtility.cs" t="Include" />
+                  <e p="UnityEventUtility.cs" t="Include" />
+                  <e p="Utilities.asmdef" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="swipeMenu" t="Include">
+            <e p="Demo Resources" t="Include">
+              <e p="Audio" t="Include" />
+              <e p="Materials" t="Include" />
+              <e p="Prefabs" t="Include" />
+              <e p="Sprites" t="Include" />
+              <e p="Text" t="Include" />
+            </e>
+            <e p="Documentation" t="Include">
+              <e p="Read Me First!.txt" t="Include" />
+              <e p="Version History.txt" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="SwipeHandlerEditor.cs" t="Include" />
+            </e>
+            <e p="Scenes" t="Include">
+              <e p="Character Selection Example Scene" t="Include" />
+              <e p="Classic Flow Scene" t="Include" />
+              <e p="Flat Menu Scene" t="Include" />
+              <e p="Multiple Menu Scene" t="Include" />
+              <e p="Music Player Example Scene" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Demo Scripts" t="Include">
+                <e p="DemoSceneSwitcher.cs" t="Include" />
+                <e p="ExampleCharacterSelector.cs" t="Include" />
+                <e p="ExampleMenuAudioPlayer.cs" t="Include" />
+                <e p="MoveBetweenMenus.cs" t="Include" />
+                <e p="ShowTextOnMenuCentred.cs" t="Include" />
+                <e p="SwipeMenuAudioPlayer.cs" t="Include" />
+                <e p="UpdateMenuItemOnClick.cs" t="Include" />
+                <e p="UpdateTextColourOnMenuClick.cs" t="Include" />
+              </e>
+              <e p="swipeMenu" t="Include">
+                <e p="Helper.cs" t="Include" />
+                <e p="Input" t="Include">
+                  <e p="SwipeHandler.cs" t="Include" />
+                  <e p="TouchHandler.cs" t="Include" />
+                </e>
+                <e p="Menu.cs" t="Include" />
+                <e p="MenuItem.cs" t="Include" />
+                <e p="SubMenuItem.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Unity UI Samples" t="Include">
             <e p="Animation" t="Include">
               <e p="MainMenu" t="Include" />
@@ -414,23 +605,154 @@
           </e>
         </e>
         <e p="Physics" t="Include" />
-        <e p="PlanarReflection" t="Include">
-          <e p="Instructions.txt" t="Include" />
-          <e p="Misc" t="Include">
-            <e p="Animations" t="Include" />
-            <e p="BallControl.cs" t="Include" />
-            <e p="Materials" t="Include" />
-            <e p="Shaders" t="Include">
-              <e p="FloorShader.shader" t="Include" />
-              <e p="FloorStencil.shader" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="CW" t="Include">
+            <e p="LeanCommon" t="Include">
+              <e p="Examples" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Meshes" t="Include" />
+                <e p="Prefabs" t="Include" />
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="Extras" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="LeanDestroy.cs" t="Include" />
+                  <e p="LeanFormatString.cs" t="Include" />
+                  <e p="LeanPath.cs" t="Include" />
+                  <e p="LeanPlane.cs" t="Include" />
+                  <e p="LeanRoll.cs" t="Include" />
+                  <e p="LeanSelect.cs" t="Include" />
+                  <e p="LeanSelectable.cs" t="Include" />
+                  <e p="LeanSelectableBehaviour.cs" t="Include" />
+                  <e p="LeanSelectableGraphicColor.cs" t="Include" />
+                  <e p="LeanSelectableRendererColor.cs" t="Include" />
+                  <e p="LeanSelectableSpriteRendererColor.cs" t="Include" />
+                  <e p="LeanSpawn.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LeanCommon.asmdef" t="Include" />
+              <e p="package.json" t="Include" />
+              <e p="Required" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="LeanCommon.cs" t="Include" />
+                </e>
+              </e>
             </e>
-            <e p="Text" t="Include">
-              <e p="TextShader.shader" t="Include" />
+            <e p="LeanLocalization" t="Include">
+              <e p="Examples" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Texts" t="Include">
+                  <e p="English.txt" t="Include" />
+                  <e p="Japanese.txt" t="Include" />
+                  <e p="Spanish.txt" t="Include" />
+                </e>
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="Extras" t="Include">
+                <e p="Languages" t="Include" />
+                <e p="Phrases" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="LeanDebugLocalization.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LeanLocalization.asmdef" t="Include" />
+              <e p="package.json" t="Include" />
+              <e p="Required" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Behaviours" t="Include">
+                    <e p="LeanLocalizedAudioSource.cs" t="Include" />
+                    <e p="LeanLocalizedDropdown.cs" t="Include" />
+                    <e p="LeanLocalizedImage.cs" t="Include" />
+                    <e p="LeanLocalizedRenderer.cs" t="Include" />
+                    <e p="LeanLocalizedSpriteRenderer.cs" t="Include" />
+                    <e p="LeanLocalizedText.cs" t="Include" />
+                    <e p="LeanLocalizedTextFont.cs" t="Include" />
+                    <e p="LeanLocalizedTextMesh.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshFont.cs" t="Include" />
+                  </e>
+                  <e p="Editor" t="Include">
+                    <e p="csc.rsp" t="Include" />
+                    <e p="LeanLocalizationEditor.asmdef" t="Include" />
+                    <e p="LeanPhrase_Editor.cs" t="Include" />
+                  </e>
+                  <e p="ILocalizationHandler.cs" t="Include" />
+                  <e p="LeanLanguage.cs" t="Include" />
+                  <e p="LeanLanguageCSV.cs" t="Include" />
+                  <e p="LeanLanguageNameAttribute.cs" t="Include" />
+                  <e p="LeanLocalization.cs" t="Include" />
+                  <e p="LeanLocalizedBehaviour.cs" t="Include" />
+                  <e p="LeanLocalToken.cs" t="Include" />
+                  <e p="LeanPhrase.cs" t="Include" />
+                  <e p="LeanPrefab.cs" t="Include" />
+                  <e p="LeanSource.cs" t="Include" />
+                  <e p="LeanToken.cs" t="Include" />
+                  <e p="LeanTranslation.cs" t="Include" />
+                  <e p="LeanTranslationNameAttribute.cs" t="Include" />
+                  <e p="TMP" t="Include">
+                    <e p="LeanLocalization.TMP.asmdef" t="Include" />
+                    <e p="LeanLocalizedTextMeshPro.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshProFont.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshProUGUI.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshProUGUIFont.cs" t="Include" />
+                    <e p="LeanLocalizedTMP_Dropdown.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
             </e>
-            <e p="Textures" t="Include" />
-          </e>
-          <e p="PlanarReflection" t="Include">
-            <e p="PlanarReflectionManager.cs" t="Include" />
+            <e p="READ ME.txt" t="Include" />
+            <e p="Shared" t="Include">
+              <e p="Common" t="Include">
+                <e p="CW.Common.asmdef" t="Include" />
+                <e p="Examples" t="Include">
+                  <e p="Fonts" t="Include">
+                    <e p="VarelaRound-Regular.txt" t="Include" />
+                  </e>
+                  <e p="Materials" t="Include" />
+                  <e p="Scripts" t="Include">
+                    <e p="CwCameraLook.cs" t="Include" />
+                    <e p="CwCameraMove.cs" t="Include" />
+                    <e p="CwCameraPivot.cs" t="Include" />
+                    <e p="CwDemo.cs" t="Include" />
+                    <e p="CwDemoButton.cs" t="Include" />
+                    <e p="CwDemoButtonBuilder.cs" t="Include" />
+                    <e p="CwLightIntensity.cs" t="Include" />
+                    <e p="CwRotate.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="RimAlpha.shader" t="Include" />
+                    <e p="RimOpaque.shader" t="Include" />
+                    <e p="Skybox.shader" t="Include" />
+                  </e>
+                  <e p="Textures" t="Include" />
+                </e>
+                <e p="Extras" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="CwChild.cs" t="Include" />
+                    <e p="CwDepthTextureMode.cs" t="Include" />
+                    <e p="CwFollow.cs" t="Include" />
+                    <e p="CwInputManager.cs" t="Include" />
+                    <e p="CwRenderTextureManager.cs" t="Include" />
+                    <e p="CwSeedAttribute.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include" />
+                </e>
+                <e p="package.json" t="Include" />
+                <e p="Required" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="CwCommon.cs" t="Include" />
+                    <e p="CwEditor.cs" t="Include" />
+                    <e p="CwGuide.cs" t="Include" />
+                    <e p="CwHelper.cs" t="Include" />
+                    <e p="CwInput.cs" t="Include" />
+                    <e p="CwShaderBundle.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="ShapeOutline.shader" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Third-Party Notices.txt" t="Include" />
           </e>
         </e>
         <e p="Prefabs" t="Include" />
@@ -482,6 +804,10 @@
             <e p="Player.cs" t="Include" />
             <e p="Wallet.cs" t="Include" />
           </e>
+          <e p="SDK" t="Include">
+            <e p="GameReady.cs" t="Include" />
+            <e p="SdkInitialization.cs" t="Include" />
+          </e>
           <e p="Test" t="Include">
             <e p="SwipeTest.cs" t="Include" />
           </e>
@@ -510,132 +836,6 @@
             <e p="SwipeLayout.cs" t="Include" />
           </e>
         </e>
-        <e p="Simple Scroll-Snap" t="Include">
-          <e p="Documentation" t="Include" />
-          <e p="Examples" t="Include">
-            <e p="_Common" t="Include">
-              <e p="Animations" t="Include" />
-              <e p="Animator Controllers" t="Include" />
-              <e p="Prefabs" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="ExpandInformation.cs" t="Include" />
-              </e>
-              <e p="Sprites" t="Include" />
-            </e>
-            <e p="Example 1 (macOS Finder)" t="Include">
-              <e p="Prefabs" t="Include" />
-              <e p="Scenes" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="FileUI.cs" t="Include" />
-              </e>
-              <e p="Sprites" t="Include">
-                <e p="Songs" t="Include" />
-              </e>
-            </e>
-            <e p="Example 2 (iOS Home Screen)" t="Include">
-              <e p="Scenes" t="Include" />
-              <e p="Sprites" t="Include" />
-            </e>
-            <e p="Example 3 (Slot Machine)" t="Include">
-              <e p="Prefabs" t="Include" />
-              <e p="Scenes" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="SlotMachine.cs" t="Include" />
-              </e>
-              <e p="Sprites" t="Include" />
-            </e>
-            <e p="Example 4 (Pinned Map)" t="Include">
-              <e p="Prefabs" t="Include" />
-              <e p="Scenes" t="Include" />
-              <e p="Sprites" t="Include" />
-            </e>
-            <e p="Example 5 (Dynamic Content)" t="Include">
-              <e p="Prefabs" t="Include" />
-              <e p="Scenes" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="DynamicContent.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Example 6 (3D Shape Selection)" t="Include">
-              <e p="Materials" t="Include" />
-              <e p="Scenes" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="Rotator.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="Prefabs" t="Include" />
-          <e p="Scripts" t="Include">
-            <e p="Core" t="Include">
-              <e p="Editor" t="Include">
-                <e p="SimpleScrollSnapEditor.asmdef" t="Include" />
-                <e p="SimpleScrollSnapEditor.cs" t="Include" />
-                <e p="SSSCopyrightEditor.cs" t="Include" />
-              </e>
-              <e p="Runtime" t="Include">
-                <e p="Behaviours" t="Include">
-                  <e p="Helper" t="Include">
-                    <e p="NestedScrollRect.cs" t="Include" />
-                  </e>
-                  <e p="SimpleScrollSnap.cs" t="Include" />
-                  <e p="TransitionEffect" t="Include">
-                    <e p="Samples" t="Include">
-                      <e p="Fade.cs" t="Include" />
-                      <e p="RecolourBlue.cs" t="Include" />
-                      <e p="RecolourGreen.cs" t="Include" />
-                      <e p="RecolourRed.cs" t="Include" />
-                      <e p="RotateX.cs" t="Include" />
-                      <e p="RotateY.cs" t="Include" />
-                      <e p="RotateZ.cs" t="Include" />
-                      <e p="Scale.cs" t="Include" />
-                      <e p="ScaleX.cs" t="Include" />
-                      <e p="ScaleY.cs" t="Include" />
-                      <e p="ScaleZ.cs" t="Include" />
-                      <e p="TranslateZ.cs" t="Include" />
-                    </e>
-                    <e p="TransitionEffectBase.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Enums" t="Include">
-                  <e p="Direction.cs" t="Include" />
-                  <e p="MovementAxis.cs" t="Include" />
-                  <e p="MovementType.cs" t="Include" />
-                  <e p="SizeControl.cs" t="Include" />
-                  <e p="SnapTarget.cs" t="Include" />
-                </e>
-              </e>
-              <e p="SimpleScrollSnap.asmdef" t="Include" />
-            </e>
-            <e p="Plugins" t="Include">
-              <e p="CopyrightEditor" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="CopyrightEditor.asmdef" t="Include" />
-                  <e p="CopyrightEditor.cs" t="Include" />
-                </e>
-              </e>
-              <e p="SimpleInspectorAttributes" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="MinMaxDrawer.cs" t="Include" />
-                  <e p="SimpleInspectorAttributesEditor.asmdef" t="Include" />
-                </e>
-                <e p="Runtime" t="Include">
-                  <e p="Margins.cs" t="Include" />
-                  <e p="MinMax.cs" t="Include" />
-                </e>
-                <e p="SimpleInspectorAttributes.asmdef" t="Include" />
-              </e>
-              <e p="Utilities" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="EditorLayoutUtility.cs" t="Include" />
-                  <e p="EditorUtilities.asmdef" t="Include" />
-                </e>
-                <e p="StringUtility.cs" t="Include" />
-                <e p="UnityEventUtility.cs" t="Include" />
-                <e p="Utilities.asmdef" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="Sounds" t="Include" />
         <e p="Sprites" t="Include">
           <e p="Buttons" t="Include">
@@ -659,51 +859,6 @@
           </e>
           <e p="Textures" t="Include" />
           <e p="Window" t="Include" />
-        </e>
-        <e p="swipeMenu" t="Include">
-          <e p="Demo Resources" t="Include">
-            <e p="Audio" t="Include" />
-            <e p="Materials" t="Include" />
-            <e p="Prefabs" t="Include" />
-            <e p="Sprites" t="Include" />
-            <e p="Text" t="Include" />
-          </e>
-          <e p="Documentation" t="Include">
-            <e p="Read Me First!.txt" t="Include" />
-            <e p="Version History.txt" t="Include" />
-          </e>
-          <e p="Editor" t="Include">
-            <e p="SwipeHandlerEditor.cs" t="Include" />
-          </e>
-          <e p="Scenes" t="Include">
-            <e p="Character Selection Example Scene" t="Include" />
-            <e p="Classic Flow Scene" t="Include" />
-            <e p="Flat Menu Scene" t="Include" />
-            <e p="Multiple Menu Scene" t="Include" />
-            <e p="Music Player Example Scene" t="Include" />
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="Demo Scripts" t="Include">
-              <e p="DemoSceneSwitcher.cs" t="Include" />
-              <e p="ExampleCharacterSelector.cs" t="Include" />
-              <e p="ExampleMenuAudioPlayer.cs" t="Include" />
-              <e p="MoveBetweenMenus.cs" t="Include" />
-              <e p="ShowTextOnMenuCentred.cs" t="Include" />
-              <e p="SwipeMenuAudioPlayer.cs" t="Include" />
-              <e p="UpdateMenuItemOnClick.cs" t="Include" />
-              <e p="UpdateTextColourOnMenuClick.cs" t="Include" />
-            </e>
-            <e p="swipeMenu" t="Include">
-              <e p="Helper.cs" t="Include" />
-              <e p="Input" t="Include">
-                <e p="SwipeHandler.cs" t="Include" />
-                <e p="TouchHandler.cs" t="Include" />
-              </e>
-              <e p="Menu.cs" t="Include" />
-              <e p="MenuItem.cs" t="Include" />
-              <e p="SubMenuItem.cs" t="Include" />
-            </e>
-          </e>
         </e>
         <e p="Tests" t="Include">
           <e p="BackObjects.shader" t="Include" />
@@ -762,6 +917,11 @@
       </e>
       <e p="Breaker.sln" t="IncludeFlat" />
       <e p="CopyrightNoticeEditor.csproj" t="IncludeRecursive" />
+      <e p="CW.Common.csproj" t="IncludeRecursive" />
+      <e p="LeanCommon.csproj" t="IncludeRecursive" />
+      <e p="LeanLocalization.csproj" t="IncludeRecursive" />
+      <e p="LeanLocalization.TMP.csproj" t="IncludeRecursive" />
+      <e p="LeanLocalizationEditor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="SimpleInspectorAttributes.csproj" t="IncludeRecursive" />
