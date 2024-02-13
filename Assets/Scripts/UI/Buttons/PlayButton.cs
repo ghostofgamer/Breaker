@@ -8,7 +8,8 @@ public class PlayButton : AbstractButton
     [SerializeField]private WaveMotion _waveMotion;
     [SerializeField] private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
 
-    private const string SceneName = "Level1";
+    // private const string SceneName = "Level1";
+    private const string SceneName = "ChooseLvlScene";
 
     protected override void OnClick()
     {

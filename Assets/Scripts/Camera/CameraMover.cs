@@ -75,7 +75,6 @@ public class CameraMover : MonoBehaviour
         {
             Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
             Vector3 move = new Vector3(-pos.x * dragSpeed, 0, -pos.y * dragSpeed);
-            Debug.Log("NewPosition " + move);
             // Проверяем, не выходит ли камера за пределы ограничений
             float newX = Mathf.Clamp(transform.position.x + move.x, minX, maxX);
             float newZ = Mathf.Clamp(transform.position.z + move.z, minZ, maxZ);
