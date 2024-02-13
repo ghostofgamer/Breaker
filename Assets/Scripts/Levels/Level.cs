@@ -24,7 +24,7 @@ public class Level : MonoBehaviour
     [SerializeField] private Level[] _nextLevel;
     [SerializeField] private Level _previousLevel;
     [SerializeField] private Level[] _allLevels;
-
+[SerializeField]private LevelCubeJumping _levelCubeJumping;
     [SerializeField] private CameraDistance _cameraDistance;
 
     [SerializeField] private bool _isPassed = false;
@@ -45,6 +45,7 @@ public class Level : MonoBehaviour
                 ColorChanger(_notOpenColor);
                 break;
             case LevelState.Unlocked:
+                _levelCubeJumping.enabled = true;
                 ColorChanger(_notPassedColor);
                 break;
             case LevelState.Completed:

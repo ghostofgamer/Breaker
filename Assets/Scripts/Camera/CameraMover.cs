@@ -81,7 +81,7 @@ public class CameraMover : MonoBehaviour
 
             // Перемещаем камеру, если она не выходит за пределы ограничений
             transform.position = new Vector3(newX, transform.position.y, newZ);
-            Debug.Log("CurentPosition " + transform.position);
+            // Debug.Log("CurentPosition " + transform.position);
         }
     }
 }
