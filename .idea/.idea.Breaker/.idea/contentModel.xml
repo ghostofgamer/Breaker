@@ -1315,7 +1315,12 @@
             <e p="Third-Party Notices.txt" t="Include" />
           </e>
         </e>
-        <e p="Prefabs" t="Include" />
+        <e p="Prefabs" t="Include">
+          <e p="BuffDebuff" t="Include" />
+          <e p="MainMenu" t="Include" />
+          <e p="Mirror" t="Include" />
+          <e p="Particles" t="Include" />
+        </e>
         <e p="Samples" t="Include">
           <e p="Web Utility" t="Include">
             <e p="3.1.0" t="Include">
@@ -1345,6 +1350,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Buff&amp;&amp;Debuff" t="Include">
+            <e p="BuffMover.cs" t="Include" />
+          </e>
           <e p="Camera" t="Include">
             <e p="CameraDistance.cs" t="Include" />
             <e p="CameraMover.cs" t="Include" />
@@ -1421,6 +1429,7 @@
         </e>
         <e p="Sounds" t="Include" />
         <e p="Sprites" t="Include">
+          <e p="Buff&amp;DebaffGameScene" t="Include" />
           <e p="Buttons" t="Include">
             <e p="SettingsButton" t="Include" />
           </e>
@@ -1445,6 +1454,9 @@
         </e>
         <e p="Tests" t="Include">
           <e p="BackObjects.shader" t="Include" />
+          <e p="Ball" t="Include">
+            <e p="TestBallMover.cs" t="Include" />
+          </e>
           <e p="BallMov.cs" t="Include" />
           <e p="BrickDestroy.cs" t="Include" />
           <e p="ChatHelp.cs" t="Include" />
@@ -1452,6 +1464,9 @@
           <e p="Mask.shader" t="Include" />
           <e p="MaskObject.cs" t="Include" />
           <e p="NEW.cs" t="Include" />
+          <e p="Platform" t="Include">
+            <e p="TestPlatformaMover.cs" t="Include" />
+          </e>
           <e p="Portal.shader" t="Include" />
           <e p="ReflectNew.cs" t="Include" />
           <e p="TestBall.cs" t="Include" />

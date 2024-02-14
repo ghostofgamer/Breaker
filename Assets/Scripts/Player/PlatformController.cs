@@ -29,9 +29,11 @@ public class PlatformController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Vector3 mousePosition = Input.mousePosition;
+            Debug.Log(" MousePos   "+  mousePosition);
             // Преобразуем экранную позицию в мировые координаты
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y,
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(-mousePosition.x, -mousePosition.y,
                 Camera.main.transform.position.z));
+            Debug.Log(" worldPosition   "+  worldPosition);
 
             // Ограничиваем движение платформы по осям X и Y
             float newX = Mathf.Clamp(worldPosition.x, xMinLimit, xMaxLimit);

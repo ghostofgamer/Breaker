@@ -16,7 +16,7 @@ public class ChatHelp : MonoBehaviour
         // Инициализируем направление движения случайным вектором
         direction = new Vector3(Random.Range(-0.6f, 0.6f), 0, 1).normalized;
         // Получаем радиус сферы, которая описывает мяч
-        radius = GetComponent<SphereCollider>().radius + 0.1f;
+        radius = GetComponent<SphereCollider>().radius;
     }
 
     void Update()
@@ -35,6 +35,12 @@ public class ChatHelp : MonoBehaviour
 
             // Debug.Log(" normal " + hit.normal);
             // Debug.Log(" direction " + direction);
+            if (hit.collider.TryGetComponent(out BrickDestroy brickDestroy))
+            {
+                 // Debug.Log("попал");
+                 brickDestroy.Destroy();
+            }
+               
         }
         else
         {
@@ -59,7 +65,7 @@ public class ChatHelp : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _rayLength))
         {
-            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController))
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<TestPlatformaMover>(out TestPlatformaMover testPlatformaMover))
             {
                 Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
                 // Debug.Log("UP : " + platformUp);
@@ -74,7 +80,7 @@ public class ChatHelp : MonoBehaviour
 
         if (Physics.Raycast(backray, out hit, _rayLength))
         {
-            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController))
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<TestPlatformaMover>(out TestPlatformaMover testPlatformaMover))
             {
                 Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
                 // Debug.Log("UP : " + platformUp);
@@ -90,12 +96,14 @@ public class ChatHelp : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * _rayLength, Color.red);
         Debug.DrawRay(backray.origin, backray.direction * _rayLength, Color.green);
     }
-    
-    
-    
-    
-    
-    
+
+    /*private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.TryGetComponent(out BrickDestroy brickDestroy))
+            Debug.Log("попал");
+    }*/
+
+
     /*public float speed = 5f;
     public float bounceForce = 10f;
     public Transform platform;
