@@ -20,14 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuffDebuff/BonusPaddleGrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BuffDebuff/BonusPaddleGrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Buff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Buff.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Effect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Effect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/EffectTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/EffectTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/PaddleGrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/PaddleGrow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuffDebuff/BonusPaddleGrow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuffDebuff/BonusPaddleGrow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuffDebuff/PrefabBonus.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuffDebuff/PrefabBonus.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/BuffType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/BuffType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Platforma.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Platforma.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/BackGround1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/BackGround1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/BackGround3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/BackGround3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/FieldLaser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/FieldLaser.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/FieldPaddleGrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Buff&amp;DebaffGameScene/FieldPaddleGrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/BrickDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/BrickDestroy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,17 +142,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Debuff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BuyUpgradeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/BuffMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tests/BrickDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EffectDestroyer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/EffectTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enum/BuffType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/EffectApplier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/PaddleGrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Effect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Buff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/EffectApplier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Platforma.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Effect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/BrickDestroy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enum/BuffType.cs" />
       </list>
     </option>
   </component>
@@ -209,7 +217,7 @@
       <workItem from="1707729291965" duration="4152000" />
       <workItem from="1707810659344" duration="16025000" />
       <workItem from="1707900623797" duration="9086000" />
-      <workItem from="1707982182636" duration="12228000" />
+      <workItem from="1707982182636" duration="15891000" />
     </task>
     <servers />
   </component>

@@ -8,22 +8,18 @@ public class Platforma : MonoBehaviour
 
     public bool TryApplyEffect(BuffType buffType)
     {
-        if(!_buffs.Contains(buffType)) 
+        if (!_buffs.Contains(buffType))
         {
             _buffs.Add(buffType);
-            Debug.Log("применяем");
-            
             return true;
         }
-        Debug.Log("нет");
+
         return false;
     }
 
     public void DeleteEffect(BuffType buffType)
     {
         if (_buffs.Contains(buffType))
-        {
             _buffs.Remove(buffType);
-        }
     }
 }

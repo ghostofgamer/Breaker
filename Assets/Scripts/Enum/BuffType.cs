@@ -4,5 +4,20 @@ using UnityEngine;
 
 public enum BuffType
 {
-    PaddleGrow
+    PaddleGrow,
+    Laser,
+    BallGrow,
+    BonusTarget,
+    Mirror,
+    Portal,
+    Shield,
+    ShrinkBall,
+    SpeedUp,
+    Immune,
+    MoreBrick,
+    PaddleLag,
+    PaddleShrink,
+    Reverse,
+    Random,
+    Reset
 }

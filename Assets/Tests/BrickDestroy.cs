@@ -25,8 +25,9 @@ public class BrickDestroy : MonoBehaviour
     {
         particleEffectPrefab.SetActive(true);
         particleEffectPrefab.transform.parent = null;
-        _effect.transform.parent = null;
-        _effect.gameObject.SetActive(true);
+        /*_effect.transform.parent = null;
+        _effect.gameObject.SetActive(true);*/
+        Instantiate(_effect,transform.position,Quaternion.identity);
         gameObject.SetActive(false);
     }
 }
