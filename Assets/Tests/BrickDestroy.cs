@@ -6,6 +6,7 @@ using UnityEngine;
 public class BrickDestroy : MonoBehaviour
 {
     [SerializeField] private GameObject particleEffectPrefab;
+    [SerializeField] private Effect _effect;
     
     private void OnCollisionEnter(Collision other)
     {
@@ -22,7 +23,10 @@ public class BrickDestroy : MonoBehaviour
 
     public void Destroy()
     {
-        GameObject particleEffect = Instantiate(particleEffectPrefab, transform.position, Quaternion.identity);
+        particleEffectPrefab.SetActive(true);
+        particleEffectPrefab.transform.parent = null;
+        _effect.transform.parent = null;
+        _effect.gameObject.SetActive(true);
         gameObject.SetActive(false);
     }
 }

@@ -5,7 +5,7 @@ using Enum;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Buff : MonoBehaviour
+public class BuffInfo : MonoBehaviour
 {
     [SerializeField] private Load _load;
     [SerializeField] private Buffs _buff;

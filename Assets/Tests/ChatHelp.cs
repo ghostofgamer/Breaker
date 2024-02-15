@@ -21,7 +21,7 @@ public class ChatHelp : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, 4f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
          Checkplatform();
         // Проверяем, не сталкивается ли мяч со стеной вдоль пути
         Vector3 predictedPosition = transform.position + direction * speed * Time.deltaTime;
@@ -67,6 +67,7 @@ public class ChatHelp : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<TestPlatformaMover>(out TestPlatformaMover testPlatformaMover))
             {
+                Debug.Log("For");
                 Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
                 // Debug.Log("UP : " + platformUp);
                 Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
@@ -82,6 +83,7 @@ public class ChatHelp : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<TestPlatformaMover>(out TestPlatformaMover testPlatformaMover))
             {
+                Debug.Log("Back");
                 Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
                 // Debug.Log("UP : " + platformUp);
                 Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой

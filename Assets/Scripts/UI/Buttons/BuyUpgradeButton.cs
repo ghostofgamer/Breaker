@@ -12,7 +12,7 @@ public class BuyUpgradeButton : AbstractButton
     [SerializeField] private CloseInfoScreenButton _closeInfoButton;
     [SerializeField] private Save _save;
     [SerializeField] private Buffs _buffElement;
-    [SerializeField] private Buff _buff;
+    [SerializeField] private BuffInfo _buff;
 
     protected override void OnClick()
     {
