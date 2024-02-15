@@ -4,5 +4,7 @@ using UnityEngine;
 
 public abstract class Buff : Effect
 {
+    /*[SerializeField] private BuffType _buffType;
 
+    public BuffType BuffType => _buffType;*/
 }
