@@ -7,7 +7,7 @@ public class BrickDestroy : MonoBehaviour
 {
     [SerializeField] private GameObject particleEffectPrefab;
     [SerializeField] private Effect _effect;
-    
+
     private void OnCollisionEnter(Collision other)
     {
         /*if (other.gameObject.TryGetComponent(out TestBall testBall))
@@ -27,7 +27,9 @@ public class BrickDestroy : MonoBehaviour
         particleEffectPrefab.transform.parent = null;
         /*_effect.transform.parent = null;
         _effect.gameObject.SetActive(true);*/
-        Instantiate(_effect,transform.position,Quaternion.identity);
+        if (_effect != null)
+            Instantiate(_effect, transform.position, Quaternion.identity);
+
         gameObject.SetActive(false);
     }
 }
