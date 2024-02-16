@@ -5,13 +5,18 @@ using UnityEngine;
 public class BuffApplier : EffectApplier
 {
     [SerializeField] private PaddleGrowBuff _paddleGrow;
+    [SerializeField] private BallGrow _ballGrow;
 
     public override void Apply(BuffType buffType)
     {
         switch (buffType)
         {
             case BuffType.PaddleGrow:
-                _paddleGrow.PaddleCangeValue(TestPlatformaMover);
+                _paddleGrow.PaddleCangeValue(PlatformaMover);
+                break;
+            
+            case BuffType.BallGrow:
+                _ballGrow.BallChangeSize(BallController);
                 break;
         }
     }

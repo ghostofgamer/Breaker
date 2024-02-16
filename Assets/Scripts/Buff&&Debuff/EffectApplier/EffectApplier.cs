@@ -5,7 +5,8 @@ using UnityEngine;
 
 public abstract class EffectApplier : MonoBehaviour
 {
-    [SerializeField] protected TestPlatformaMover TestPlatformaMover;
+    [SerializeField] protected PlatformaMover PlatformaMover;
+    [SerializeField] protected BallController  BallController;
 
     public abstract void Apply(BuffType buffType);
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestPlatformaMover : MonoBehaviour
+public class PlatformaMover : MonoBehaviour
 {
     public float moveSpeed = 5f; // Скорость движения платформы
     public float offset = 1f; // Оффсет от точки, куда нажали мышь

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ChatHelp : MonoBehaviour
+public class BallController : MonoBehaviour
 {
     public float speed = 10.0f; // Скорость движения мяча
     public LayerMask wallLayer; // Слой, который отмечен как стены
@@ -65,7 +65,7 @@ public class ChatHelp : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _rayLength))
         {
-            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<TestPlatformaMover>(out TestPlatformaMover testPlatformaMover))
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover))
             {
                 Debug.Log("For");
                 Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
@@ -81,7 +81,7 @@ public class ChatHelp : MonoBehaviour
 
         if (Physics.Raycast(backray, out hit, _rayLength))
         {
-            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<TestPlatformaMover>(out TestPlatformaMover testPlatformaMover))
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover))
             {
                 Debug.Log("Back");
                 Vector3 platformUp = hit.transform.forward; // Направление вверх платформы

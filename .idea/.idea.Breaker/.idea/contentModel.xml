@@ -1356,19 +1356,24 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Buff&amp;&amp;Debuff" t="Include">
-            <e p="Buff.cs" t="Include" />
-            <e p="BuffApplier.cs" t="Include" />
+            <e p="BallSizeChanger.cs" t="Include" />
             <e p="BuffMover.cs" t="Include" />
             <e p="Buffs" t="Include">
+              <e p="BallGrow.cs" t="Include" />
+              <e p="Buff.cs" t="Include" />
               <e p="PaddleGrowBuff.cs" t="Include" />
             </e>
-            <e p="Debuff.cs" t="Include" />
-            <e p="DebuffApplier.cs" t="Include" />
             <e p="Debuffs" t="Include">
+              <e p="BallShrink.cs" t="Include" />
+              <e p="Debuff.cs" t="Include" />
               <e p="PaddleShrinkBuff.cs" t="Include" />
             </e>
             <e p="Effect.cs" t="Include" />
-            <e p="EffectApplier.cs" t="Include" />
+            <e p="EffectApplier" t="Include">
+              <e p="BuffApplier.cs" t="Include" />
+              <e p="DebuffApplier.cs" t="Include" />
+              <e p="EffectApplier.cs" t="Include" />
+            </e>
             <e p="EffectTrigger.cs" t="Include" />
             <e p="PaddleChanger.cs" t="Include" />
           </e>
@@ -1386,6 +1391,7 @@
           <e p="GameScene" t="Include">
             <e p="BallContent" t="Include">
               <e p="Ball.cs" t="Include" />
+              <e p="BallController.cs" t="Include" />
               <e p="BallMover.cs" t="Include" />
             </e>
             <e p="Wall.cs" t="Include" />
@@ -1406,9 +1412,12 @@
           </e>
           <e p="Player" t="Include">
             <e p="Platforma.cs" t="Include" />
+            <e p="PlatformaMover.cs" t="Include" />
             <e p="PlatformaTrigger.cs" t="Include" />
-            <e p="PlatformController.cs" t="Include" />
             <e p="Player.cs" t="Include" />
+            <e p="TestPlatformController" t="Include">
+              <e p="PlatformController.cs" t="Include" />
+            </e>
             <e p="Wallet.cs" t="Include" />
           </e>
           <e p="Save&amp;Load" t="Include">
@@ -1486,14 +1495,11 @@
           </e>
           <e p="BallMov.cs" t="Include" />
           <e p="BrickDestroy.cs" t="Include" />
-          <e p="ChatHelp.cs" t="Include" />
           <e p="Forward.cs" t="Include" />
           <e p="Mask.shader" t="Include" />
           <e p="MaskObject.cs" t="Include" />
           <e p="NEW.cs" t="Include" />
-          <e p="Platform" t="Include">
-            <e p="TestPlatformaMover.cs" t="Include" />
-          </e>
+          <e p="Platform" t="Include" />
           <e p="Portal.shader" t="Include" />
           <e p="ReflectNew.cs" t="Include" />
           <e p="TestBall.cs" t="Include" />

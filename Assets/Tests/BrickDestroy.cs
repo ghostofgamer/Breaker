@@ -14,7 +14,7 @@ public class BrickDestroy : MonoBehaviour
         {
             gameObject.SetActive(false);
         }*/
-        if (other.gameObject.TryGetComponent(out ChatHelp chatHelp))
+        if (other.gameObject.TryGetComponent(out BallController chatHelp))
         {
             // Debug.Log("GameObject");
             // gameObject.SetActive(false);

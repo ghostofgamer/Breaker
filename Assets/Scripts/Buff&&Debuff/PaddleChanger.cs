@@ -4,25 +4,25 @@ using UnityEngine;
 
 public abstract class PaddleChanger : MonoBehaviour
 {
-    [SerializeField] protected int _coefficien;
+    [SerializeField] protected int _sizeChange;
     [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.5f);
 
-    public virtual void PaddleCangeValue(TestPlatformaMover testPlatformaMover)
+    public void PaddleCangeValue(PlatformaMover platformaMover)
     {
-        if (testPlatformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnPaddleShrink(testPlatformaMover));
+        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
+            StartCoroutine(OnPaddleShrink(platformaMover));
     }
 
-    private IEnumerator OnPaddleShrink(TestPlatformaMover testPlatformaMover)
+    private IEnumerator OnPaddleShrink(PlatformaMover platformaMover)
     {
-        var localScale = testPlatformaMover.transform.localScale;
-        Vector3 target = new Vector3(localScale.x + _coefficien, localScale.y + _coefficien,
-            localScale.z + _coefficien);
-        testPlatformaMover.transform.localScale = target;
+        var localScale = platformaMover.transform.localScale;
+        Vector3 target = new Vector3(localScale.x + _sizeChange, localScale.y + _sizeChange,
+            localScale.z + _sizeChange);
+        platformaMover.transform.localScale = target;
         yield return _waitForSeconds;
-        testPlatformaMover.transform.localScale = localScale;
-        testPlatformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);
+        platformaMover.transform.localScale = localScale;
+        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);
     }
 }
