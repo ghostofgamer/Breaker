@@ -19,8 +19,8 @@ public abstract class PaddleChanger : MonoBehaviour
     private IEnumerator OnPaddleShrink(PlatformaMover platformaMover)
     {
         var localScale = platformaMover.transform.localScale;
-        Vector3 target = new Vector3(localScale.x + _sizeChange, localScale.y + _sizeChange,
-            localScale.z + _sizeChange);
+        Vector3 target = new Vector3(localScale.x/* + _sizeChange*/, localScale.y + _sizeChange,
+            localScale.z /*+ _sizeChange*/);
         platformaMover.transform.localScale = target;
         yield return _waitForSeconds;
         // platformaMover.transform.localScale = localScale;
