@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public abstract class PaddleChanger : MonoBehaviour
     [SerializeField] protected int _sizeChange;
     [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.5f);
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.65f);
 
     public void PaddleCangeValue(PlatformaMover platformaMover)
     {
@@ -22,7 +23,8 @@ public abstract class PaddleChanger : MonoBehaviour
             localScale.z + _sizeChange);
         platformaMover.transform.localScale = target;
         yield return _waitForSeconds;
-        platformaMover.transform.localScale = localScale;
+        // platformaMover.transform.localScale = localScale;
+        platformaMover.transform.localScale = platformaMover.GetComponent<Platforma>().StartSize;
         platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);
     }
 }

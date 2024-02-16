@@ -4,24 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Ball : MonoBehaviour
+public class Ball : Player
 {
-    private List<BuffType> _buffs = new List<BuffType>();
+    public Vector3 StartSize { get; private set; }
 
-    public bool TryApplyEffect(BuffType buffType)
+    private void Start()
     {
-        if (!_buffs.Contains(buffType))
-        {
-            _buffs.Add(buffType);
-            return true;
-        }
-
-        return false;
-    }
-
-    public void DeleteEffect(BuffType buffType)
-    {
-        if (_buffs.Contains(buffType))
-            _buffs.Remove(buffType);
+        StartSize = transform.localScale;
     }
 }

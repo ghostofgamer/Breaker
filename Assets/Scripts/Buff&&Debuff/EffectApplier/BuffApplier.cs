@@ -6,6 +6,7 @@ public class BuffApplier : EffectApplier
 {
     [SerializeField] private PaddleGrowBuff _paddleGrow;
     [SerializeField] private BallGrow _ballGrow;
+    [SerializeField]private Laser _laser;
 
     public override void Apply(BuffType buffType)
     {
@@ -17,6 +18,9 @@ public class BuffApplier : EffectApplier
             
             case BuffType.BallGrow:
                 _ballGrow.BallChangeSize(BallController);
+                break;
+            case BuffType.Laser:
+                _laser.Shooting(PlatformaMover);
                 break;
         }
     }

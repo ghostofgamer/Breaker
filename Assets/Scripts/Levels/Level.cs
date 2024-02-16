@@ -35,7 +35,7 @@ public class Level : MonoBehaviour
 
     private Color _currentColor;
 
-    private void Start()
+    private void Awake()
     {
         var module = _dontSelectedCircle.main;
 
@@ -58,6 +58,30 @@ public class Level : MonoBehaviour
             SetLevels(this, level);
         }
     }
+
+    /*private void Start()
+    {
+        var module = _dontSelectedCircle.main;
+
+        switch (state)
+        {
+            case LevelState.Locked:
+                ColorChanger(_notOpenColor);
+                break;
+            case LevelState.Unlocked:
+                _levelCubeJumping.enabled = true;
+                ColorChanger(_notPassedColor);
+                break;
+            case LevelState.Completed:
+                ColorChanger(_passedColor);
+                break;
+        }
+
+        foreach (var level in _nextLevel)
+        {
+            SetLevels(this, level);
+        }
+    }*/
 
     private void OnMouseDown()
     {

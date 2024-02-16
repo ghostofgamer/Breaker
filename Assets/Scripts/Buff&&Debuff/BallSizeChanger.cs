@@ -7,7 +7,7 @@ public abstract class BallSizeChanger : MonoBehaviour
     [SerializeField] protected int _sizeChange;
     [SerializeField] protected BuffType _buffType;
     
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.5f);
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.65f);
     
     public void BallChangeSize(BallController ballController)
     {
@@ -22,7 +22,8 @@ public abstract class BallSizeChanger : MonoBehaviour
             localScale.z + _sizeChange);
         ballController.transform.localScale = target;
         yield return _waitForSeconds;
-        ballController.transform.localScale = localScale;
+        // ballController.transform.localScale = localScale;
+        ballController.transform.localScale = ballController.GetComponent<Ball>().StartSize;
         ballController.GetComponent<Ball>().DeleteEffect(_buffType);
     }
 }
