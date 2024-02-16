@@ -9971,8 +9971,8 @@ GameObject:
   - component: {fileID: 4049869440731684584}
   - component: {fileID: 609385124789557832}
   - component: {fileID: 5685623203228074439}
-  - component: {fileID: 6070789081861601556}
   - component: {fileID: 2242227881575852733}
+  - component: {fileID: 6425915573690772157}
   m_Layer: 0
   m_Name: BallShrinkDebuff
   m_TagString: Untagged
@@ -10063,21 +10063,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6070789081861601556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9098376010825328557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322b0d482570ac64dbf5e6fe9076adce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 1
-  _effect: {fileID: 4786905819812848027}
-  _buffType: 7
 --- !u!114 &2242227881575852733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10091,6 +10076,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 4786905819812848027}
+--- !u!114 &6425915573690772157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098376010825328557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba836f03e16684749854526d064a8153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
+  _effect: {fileID: 4786905819812848027}
+  _buffType: 7
 --- !u!1001 &2767954680782605169
 PrefabInstance:
   m_ObjectHideFlags: 0

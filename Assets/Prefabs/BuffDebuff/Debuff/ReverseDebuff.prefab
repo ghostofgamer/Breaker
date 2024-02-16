@@ -5054,8 +5054,8 @@ GameObject:
   - component: {fileID: 6083121284057714565}
   - component: {fileID: 5348613466579856841}
   - component: {fileID: 2056806786214413868}
-  - component: {fileID: 9038772530243019640}
   - component: {fileID: 5442909901893528524}
+  - component: {fileID: 4987562903737706639}
   m_Layer: 0
   m_Name: ReverseDebuff
   m_TagString: Untagged
@@ -5146,21 +5146,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9038772530243019640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6118640722689991146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322b0d482570ac64dbf5e6fe9076adce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 1
-  _effect: {fileID: 5132004479485377029}
-  _buffType: 13
 --- !u!114 &5442909901893528524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5174,6 +5159,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 5132004479485377029}
+--- !u!114 &4987562903737706639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118640722689991146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba836f03e16684749854526d064a8153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
+  _effect: {fileID: 5132004479485377029}
+  _buffType: 13
 --- !u!1 &6329146458266020092
 GameObject:
   m_ObjectHideFlags: 0

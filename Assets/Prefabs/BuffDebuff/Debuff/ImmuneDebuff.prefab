@@ -4840,8 +4840,8 @@ GameObject:
   - component: {fileID: 7495130738992220235}
   - component: {fileID: 2354788121154130708}
   - component: {fileID: 2455159359335092788}
-  - component: {fileID: 2836162800366194630}
   - component: {fileID: 6949571653400137169}
+  - component: {fileID: 6442018842759311431}
   m_Layer: 0
   m_Name: ImmuneDebuff
   m_TagString: Untagged
@@ -4932,21 +4932,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2836162800366194630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888039548648175753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322b0d482570ac64dbf5e6fe9076adce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 1
-  _effect: {fileID: 8342020440756872544}
-  _buffType: 9
 --- !u!114 &6949571653400137169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4960,6 +4945,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 8342020440756872544}
+--- !u!114 &6442018842759311431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888039548648175753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba836f03e16684749854526d064a8153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
+  _effect: {fileID: 8342020440756872544}
+  _buffType: 9
 --- !u!1 &2413175831200607377
 GameObject:
   m_ObjectHideFlags: 0

@@ -5143,8 +5143,8 @@ GameObject:
   - component: {fileID: 7856850615337365803}
   - component: {fileID: 5317546192600677482}
   - component: {fileID: 773682977579606916}
-  - component: {fileID: 3709053451943582879}
   - component: {fileID: 9205201694144795739}
+  - component: {fileID: 7396833592769580590}
   m_Layer: 0
   m_Name: MoreBrickDebuff
   m_TagString: Untagged
@@ -5235,21 +5235,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3709053451943582879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6526052332402406997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322b0d482570ac64dbf5e6fe9076adce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 1
-  _effect: {fileID: 797592353686796435}
-  _buffType: 10
 --- !u!114 &9205201694144795739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5263,6 +5248,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 797592353686796435}
+--- !u!114 &7396833592769580590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6526052332402406997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba836f03e16684749854526d064a8153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
+  _effect: {fileID: 797592353686796435}
+  _buffType: 10
 --- !u!1 &9189993888966774247
 GameObject:
   m_ObjectHideFlags: 0

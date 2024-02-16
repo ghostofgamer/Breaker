@@ -4840,8 +4840,8 @@ GameObject:
   - component: {fileID: 1980748842066980538}
   - component: {fileID: 6143619698803594655}
   - component: {fileID: 2669902665807975089}
-  - component: {fileID: 7887277046965401523}
   - component: {fileID: 5442352277278294676}
+  - component: {fileID: 5715364807712204179}
   m_Layer: 0
   m_Name: SpeedUpDebuff
   m_TagString: Untagged
@@ -4932,21 +4932,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7887277046965401523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3180554457924163822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322b0d482570ac64dbf5e6fe9076adce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 1
-  _effect: {fileID: 600558907264981825}
-  _buffType: 8
 --- !u!114 &5442352277278294676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4960,6 +4945,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 600558907264981825}
+--- !u!114 &5715364807712204179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180554457924163822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba836f03e16684749854526d064a8153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
+  _effect: {fileID: 600558907264981825}
+  _buffType: 8
 --- !u!1 &6703816187988249561
 GameObject:
   m_ObjectHideFlags: 0

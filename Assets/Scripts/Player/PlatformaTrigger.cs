@@ -5,13 +5,31 @@ using UnityEngine;
 
 public class PlatformaTrigger : MonoBehaviour
 {
-    [SerializeField] private EffectApplier effectApplier;
+    [SerializeField] private EffectApplier _effectApplier;
+    [SerializeField]private BuffApplier _buffApplier;
+    [SerializeField]private DebuffApplier _debuffApplier;
+    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out Effect effect))
+        if (other.TryGetComponent(out Buff buff))
         {
-            effectApplier.Apply(effect.BuffType);
-            effect.Destroy();
+            _buffApplier.Apply(buff.BuffType);
+            buff.Destroy();
         }
+        if (other.TryGetComponent(out Debuff debuff))
+        {
+            _debuffApplier.Apply(debuff.BuffType);
+            debuff.Destroy();
+        }
+        
+        
+        
+        
+        
+        /*if (other.TryGetComponent(out Effect effect))
+        {
+            _effectApplier.Apply(effect.BuffType);
+            effect.Destroy();
+        }*/
     }
 }
