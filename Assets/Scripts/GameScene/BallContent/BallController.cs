@@ -65,7 +65,7 @@ public class BallController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _rayLength))
         {
-            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover))
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController)||hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover)||hit.collider.gameObject.TryGetComponent<MirrorPlatformaMover>(out MirrorPlatformaMover mirrorPlatformaMover))
             {
                 Debug.Log("For");
                 Vector3 platformUp = hit.transform.forward; // Направление вверх платформы

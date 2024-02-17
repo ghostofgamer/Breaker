@@ -17,6 +17,12 @@ public class PlatformaTrigger : MonoBehaviour
             CatchEffect(_debuffApplier, debuff);
     }
 
+    public void Init(BuffApplier buffApplier,DebuffApplier debuffApplier)
+    {
+        _buffApplier = buffApplier;
+        _debuffApplier = debuffApplier;
+    }
+    
     private void CatchEffect(EffectApplier effectApplier, Effect effect)
     {
         effectApplier.Apply(effect.BuffType);
