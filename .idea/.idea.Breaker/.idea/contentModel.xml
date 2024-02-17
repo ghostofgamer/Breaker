@@ -1157,6 +1157,7 @@
           <e p="ChooseLvl" t="Include">
             <e p="Materials" t="Include" />
           </e>
+          <e p="TargetCube" t="Include" />
         </e>
         <e p="Models" t="Include" />
         <e p="Packages" t="Include">
@@ -1325,6 +1326,7 @@
           <e p="Bullet" t="Include" />
           <e p="MainMenu" t="Include" />
           <e p="Mirror" t="Include" />
+          <e p="MirrorPlatforma" t="Include" />
           <e p="Particles" t="Include" />
           <e p="Shield" t="Include" />
         </e>
@@ -1357,7 +1359,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="BrickDestroy.cs" t="Include" />
+          <e p="Bricks" t="Include">
+            <e p="Brick.cs" t="Include" />
+            <e p="BrickDestroy.cs" t="Include" />
+            <e p="BrickExplosion.cs" t="Include" />
+          </e>
           <e p="Buff&amp;&amp;Debuff" t="Include">
             <e p="BallSizeChanger.cs" t="Include" />
             <e p="Buff.cs" t="Include" />

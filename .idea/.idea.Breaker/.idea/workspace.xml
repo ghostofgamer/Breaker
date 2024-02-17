@@ -22,19 +22,10 @@
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Emojis/em_text_ah_zz.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Emojis/em_text_ah_zz.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Unsorted/talkbubble_4x4_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Unsorted/talkbubble_4x4_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Unsorted/talkbubble_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Unsorted/talkbubble_AB.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/EffectApplier/BuffApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/EffectApplier/BuffApplier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickDestroy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickDestroy.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Bild.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/3a4739fc0df0f72af3e5ff8663815cf5.wasm.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/4af0521f465d47f0d81008af997d303e.js.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/a1a17d534cad5841068c767eae77319a.data.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +63,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/BallShrink.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/SwipeTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/MainScreen.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BrickDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/BallGrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/Forward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/Ball/TestBallMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/SettingsScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,6 +87,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseInfoScreenButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/GameReady.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Laser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/Buffs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -107,8 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/BuffInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/Debuff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BuyUpgradeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/Buff&amp;&amp;Debuff/BuffMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EffectDestroyer.cs" />
@@ -153,11 +143,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BrickDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Shield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/MirrorPlatforma.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/MirrorPlatformaMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/EffectApplier/BuffApplier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Mirror.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
       </list>
     </option>
   </component>
@@ -224,7 +216,7 @@
       <workItem from="1707900623797" duration="9086000" />
       <workItem from="1707982182636" duration="16496000" />
       <workItem from="1708073997798" duration="15331000" />
-      <workItem from="1708164329653" duration="3769000" />
+      <workItem from="1708164329653" duration="7069000" />
     </task>
     <servers />
   </component>
