@@ -9,7 +9,8 @@ public class BuffApplier : EffectApplier
     [SerializeField]private Laser _laser;
     [SerializeField] private Shield _shield;
     [SerializeField]private Mirror _mirror;
-
+    [SerializeField] private Portal _portal;
+[SerializeField]private BallPortalMover _ballPortalMover;
     public override void Apply(BuffType buffType)
     {
         switch (buffType)
@@ -32,6 +33,10 @@ public class BuffApplier : EffectApplier
             
             case BuffType.Mirror:
                 _mirror.GetMirrorPlatform(PlatformaMover);
+                break;
+            
+            case BuffType.Portal:
+                _portal.PortalActivated(_ballPortalMover);
                 break;
         }
     }

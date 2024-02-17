@@ -7,9 +7,9 @@ public class Mirror : MonoBehaviour
     [SerializeField] private Platforma _originalPlatforma;
     [SerializeField] private MirrorPlatformaMover _mirrorPlatforma;
     [SerializeField] private Transform _container;
-    [SerializeField] protected BuffType _buffType;
     [SerializeField]private BuffApplier _buffApplier;
     [SerializeField]private DebuffApplier _debuffApplier;
+    [SerializeField] protected BuffType _buffType;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
     

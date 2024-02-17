@@ -9,11 +9,11 @@ public class BallPortalMover : MonoBehaviour
     [SerializeField] private float _zMaxPosition;
     [SerializeField] private float _zMinPosition;
 
-    public float speed = 10.0f; // Скорость движения мяча
-    public LayerMask wallLayer; // Слой, который отмечен как стены
-    private Vector3 direction; // Направление движения мяча
-    private float radius; // Радиус мяча
-
+    public float speed = 10.0f;
+    public LayerMask wallLayer;
+    private Vector3 direction;
+    private float radius;
+    [SerializeField]private bool _isPortal = false;
 
     void Start()
     {
@@ -44,27 +44,8 @@ public class BallPortalMover : MonoBehaviour
         }
         else
         {
-            if (transform.position.x > _xMaxPosition)
-            {
-                Debug.Log("БОЛЬШЕ ТУТ УЖЕ");
-                transform.position = new Vector3(_xMinPosition, transform.position.y, transform.position.z);
-            }
-
-            if (transform.position.x < _xMinPosition)
-            {
-                Debug.Log("Меньше Чтоли Тут");
-                transform.position = new Vector3(_xMaxPosition, transform.position.y, transform.position.z);
-            }
-
-            if (transform.position.z < _zMinPosition)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y, _zMaxPosition);
-            }
-
-            if (transform.position.z > _zMaxPosition)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y, _zMinPosition);
-            }
+            if (_isPortal)
+                PortalMover();
 
             transform.position += direction * speed * Time.deltaTime;
         }
@@ -110,5 +91,33 @@ public class BallPortalMover : MonoBehaviour
 
         Debug.DrawRay(ray.origin, ray.direction * _rayLength, Color.red);
         Debug.DrawRay(backray.origin, backray.direction * _rayLength, Color.green);
+    }
+
+    private void PortalMover()
+    {
+        if (transform.position.x > _xMaxPosition)
+        {
+            transform.position = new Vector3(_xMinPosition, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x < _xMinPosition)
+        {
+            transform.position = new Vector3(_xMaxPosition, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.z < _zMinPosition)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, _zMaxPosition);
+        }
+
+        if (transform.position.z > _zMaxPosition)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, _zMinPosition);
+        }
+    }
+
+    public void SetValue(bool portalActivated)
+    {
+        _isPortal = portalActivated;
     }
 }
