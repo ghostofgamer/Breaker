@@ -13,7 +13,7 @@ public class BallPortalMover : MonoBehaviour
     public LayerMask wallLayer;
     private Vector3 direction;
     private float radius;
-    [SerializeField]private bool _isPortal = false;
+    [SerializeField] private bool _isPortal = false;
 
     void Start()
     {
@@ -46,6 +46,9 @@ public class BallPortalMover : MonoBehaviour
         {
             if (_isPortal)
                 PortalMover();
+
+            else
+                CheckBehindWall();
 
             transform.position += direction * speed * Time.deltaTime;
         }
@@ -116,8 +119,38 @@ public class BallPortalMover : MonoBehaviour
         }
     }
 
+    private void CheckBehindWall()
+    {
+        Vector3 predictedPosition = transform.position + direction * speed * Time.deltaTime;
+
+        if (transform.position.x > _xMaxPosition)
+        {
+            transform.position = new Vector3(_xMaxPosition, transform.position.y, transform.position.z);
+
+            if (Physics.SphereCast(transform.position, radius, direction, out RaycastHit hit,
+                (predictedPosition - transform.position).magnitude, wallLayer))
+            {
+                direction = Vector3.Reflect(direction, hit.normal);
+                Debug.Log("УшелВБольше");
+            }
+        }
+
+        if (transform.position.x < _xMinPosition)
+        {
+            transform.position = new Vector3(_xMinPosition, transform.position.y, transform.position.z);
+
+            if (Physics.SphereCast(transform.position, radius, direction, out RaycastHit hit,
+                (predictedPosition - transform.position).magnitude, wallLayer))
+            {
+                direction = Vector3.Reflect(direction, hit.normal);
+                Debug.Log("УшелВМеньше");
+            }
+        }
+    }
+
     public void SetValue(bool portalActivated)
     {
         _isPortal = portalActivated;
+        Debug.Log(_isPortal);
     }
 }
