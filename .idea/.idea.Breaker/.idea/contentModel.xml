@@ -1153,6 +1153,7 @@
         </e>
         <e p="Materials" t="Include">
           <e p="Ball" t="Include" />
+          <e p="Bonus" t="Include" />
           <e p="BricksMaterials" t="Include" />
           <e p="ChooseLvl" t="Include">
             <e p="Materials" t="Include" />
@@ -1317,6 +1318,7 @@
           </e>
         </e>
         <e p="Prefabs" t="Include">
+          <e p="Bonus" t="Include" />
           <e p="Bricks" t="Include" />
           <e p="BuffDebuff" t="Include">
             <e p="Buff" t="Include" />
@@ -1359,6 +1361,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Bonus" t="Include">
+            <e p="BonusDeath.cs" t="Include" />
+            <e p="BonusMover.cs" t="Include" />
+          </e>
           <e p="Bricks" t="Include">
             <e p="Brick.cs" t="Include" />
             <e p="BrickDestroy.cs" t="Include" />

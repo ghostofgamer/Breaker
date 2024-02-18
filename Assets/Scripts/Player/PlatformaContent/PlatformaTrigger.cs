@@ -15,6 +15,9 @@ public class PlatformaTrigger : MonoBehaviour
 
         if (other.TryGetComponent(out Debuff debuff))
             CatchEffect(_debuffApplier, debuff);
+
+        if (other.TryGetComponent(out BonusDeath bonusDeath))
+            bonusDeath.Die();
     }
 
     public void Init(BuffApplier buffApplier,DebuffApplier debuffApplier)
