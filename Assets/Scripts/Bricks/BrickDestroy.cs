@@ -12,17 +12,11 @@ public class BrickDestroy : MonoBehaviour
     [SerializeField] private bool _isBonus;
     
     private float _bonusRadius = 1.65f;
+
+    public bool IsBonus => _isBonus;
+    
     private void OnCollisionEnter(Collision other)
     {
-        /*if (other.gameObject.TryGetComponent(out TestBall testBall))
-        {
-            gameObject.SetActive(false);
-        }*/
-        if (other.gameObject.TryGetComponent(out BallController chatHelp))
-        {
-            // Debug.Log("GameObject");
-            // gameObject.SetActive(false);
-        }
     }
 
     public void Destroy()
@@ -39,6 +33,11 @@ public class BrickDestroy : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void SetBoolValue(bool isBonus)
+    {
+        _isBonus = isBonus;
+    }
+    
     private void GetBonus()
     {
         if (!_isBonus)
@@ -72,5 +71,4 @@ public class BrickDestroy : MonoBehaviour
             yield return  new WaitForSeconds(0.1f);
         }
     }
-
 }
