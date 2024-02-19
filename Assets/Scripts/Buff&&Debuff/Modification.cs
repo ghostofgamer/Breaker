@@ -6,9 +6,11 @@ public abstract class Modification : MonoBehaviour
 {
     [SerializeField] protected PlatformaMover PlatformaMover;
     [SerializeField] protected BallController  BallController;
+    [SerializeField] protected BallPortalMover BallPortalMover;
     [SerializeField] protected Player Player;
-    [SerializeField] protected BuffType BuffType;
+    // [SerializeField] protected BuffType BuffType;
 
-    protected abstract void ApplyModification(Player player);
+    public abstract void ApplyModification(Player player);
+    
     public abstract void StopModification(Player player);
 }

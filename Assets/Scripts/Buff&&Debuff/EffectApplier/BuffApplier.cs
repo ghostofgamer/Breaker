@@ -18,31 +18,38 @@ public class BuffApplier : EffectApplier
         switch (buffType)
         {
             case BuffType.PaddleGrow:
-                _paddleGrow.PaddleCangeValue(PlatformaMover);
+                // _paddleGrow.PaddleCangeValue(PlatformaMover);
+                _paddleGrow.ApplyModification(Player);
                 break;
 
             case BuffType.BallGrow:
-                _ballGrow.BallChangeSize(BallController);
+                // _ballGrow.BallChangeSize(_ballPortalMover);
+                _ballGrow.ApplyModification(Player);
                 break;
 
             case BuffType.Laser:
-                _laser.Shooting(PlatformaMover);
+                // _laser.Shooting(PlatformaMover);
+                _laser.ApplyModification(Player);
                 break;
 
             case BuffType.Shield:
-                _shield.ShieldActivated(PlatformaMover);
+                // _shield.ShieldActivated(PlatformaMover);
+                _shield.ApplyModification(Player);
                 break;
 
             case BuffType.Mirror:
-                _mirror.GetMirrorPlatform(PlatformaMover);
+                // _mirror.GetMirrorPlatform(PlatformaMover);
+                _mirror.ApplyModification(Player);
                 break;
 
             case BuffType.Portal:
-                _portal.PortalActivated(_ballPortalMover);
+                // _portal.PortalActivated(_ballPortalMover);
+                _portal.ApplyModification(Player);
                 break;
-            
+
             case BuffType.BonusTarget:
-                _bonusTarget.BonusTargetActivated(PlatformaMover);
+                // _bonusTarget.BonusTargetActivated(PlatformaMover);
+                _bonusTarget.ApplyModification(Player);
                 break;
         }
     }

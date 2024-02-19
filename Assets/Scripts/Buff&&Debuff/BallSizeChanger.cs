@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,47 +6,61 @@ using UnityEngine;
 public abstract class BallSizeChanger : Modification
 {
     [SerializeField] protected int _sizeChange;
-    [SerializeField] protected BuffType _buffType;
-    
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.65f);
+    // [SerializeField] protected BuffType _buffType;
 
-    protected override void ApplyModification(Player player)
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.65f);
+    private Vector3 _standardScale;
+
+    private void Start()
     {
-        if (player.TryApplyEffect(_buffType))
-            StartCoroutine(OnBallChangeSize(BallController));
-        /*if (ballController.GetComponent<Ball>().TryApplyEffect(_buffType))
-            StartCoroutine(OnBallChangeSize(ballController));*/
+        _standardScale = BallPortalMover.transform.localScale;
+    }
+
+    /*public override void ApplyModification(Player player)
+    {
+        if (player.TryApplyEffect(this))
+            StartCoroutine(OnBallChangeSize(BallPortalMover));
     }
 
     public override void StopModification(Player player)
     {
         // ballController.transform.localScale = ballController.GetComponent<Ball>().StartSize;
-        Reset(BallController);
-        player.DeleteEffect(_buffType);
-    }
+        Reset(player, BallPortalMover);
+        // player.DeleteEffect(this);
+    }*/
 
-    public void BallChangeSize(BallController ballController)
+    /*public void BallChangeSize(BallPortalMover ballController)
     {
         if (ballController.GetComponent<Ball>().TryApplyEffect(_buffType))
             StartCoroutine(OnBallChangeSize(ballController));
-    }
+    }*/
 
-    private IEnumerator OnBallChangeSize(BallController ballController)
+    protected IEnumerator OnBallChangeSize(BallPortalMover ballPortalMover)
     {
-        var localScale = ballController.transform.localScale;
+        Change(ballPortalMover);
+        /*var localScale = ballController.transform.localScale;
         Vector3 target = new Vector3(localScale.x + _sizeChange, localScale.y + _sizeChange,
             localScale.z + _sizeChange);
-        ballController.transform.localScale = target;
+        ballController.transform.localScale = target;*/
         yield return _waitForSeconds;
-        Reset(ballController);
-        ballController.GetComponent<Ball>().DeleteEffect(_buffType);
+        Reset(Player, ballPortalMover);
+        // ballController.GetComponent<Ball>().DeleteEffect(_buffType);
         // ballController.transform.localScale = localScale;
         /*ballController.transform.localScale = ballController.GetComponent<Ball>().StartSize;
         ballController.GetComponent<Ball>().DeleteEffect(_buffType);*/
     }
 
-    private void Reset(BallController ballController)
+    private void Change(BallPortalMover ballPortalMover)
     {
-        ballController.transform.localScale = ballController.GetComponent<Ball>().StartSize;
+        // var localScale = ballController.transform.localScale;
+        Vector3 target = new Vector3(_standardScale.x + _sizeChange, _standardScale.y + _sizeChange,
+            _standardScale.z + _sizeChange);
+        ballPortalMover.transform.localScale = target;
+    }
+
+    protected void Reset(Player player, BallPortalMover ballPortalMover)
+    {
+        ballPortalMover.transform.localScale = _standardScale;
+        player.DeleteEffect(this);
     }
 }

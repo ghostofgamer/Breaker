@@ -6,10 +6,10 @@ using Random = UnityEngine.Random;
 
 public class Ball : Player
 {
-    public Vector3 StartSize { get; private set; }
+    /*public Vector3 StartSize { get; private set; }
 
     private void Start()
     {
         StartSize = transform.localScale;
-    }
+    }*/
 }

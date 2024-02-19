@@ -3,28 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PaddleChanger : MonoBehaviour
+public abstract class PaddleChanger : Modification
 {
     [SerializeField] protected int _sizeChange;
-    [SerializeField] protected BuffType _buffType;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.65f);
-
-    public void PaddleCangeValue(PlatformaMover platformaMover)
+    private Vector3 _standardScale;
+    
+    private void Start()
     {
-        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnPaddleShrink(platformaMover));
+        _standardScale = PlatformaMover.transform.localScale;
+    }
+    
+    protected IEnumerator OnPaddleSizeChanger(PlatformaMover platformaMover)
+    {
+        Change(PlatformaMover);
+        yield return _waitForSeconds;
+        Reset(Player, PlatformaMover);
+    }
+    
+    private void Change(PlatformaMover platformaMover)
+    {
+        // Vector3 target = new Vector3(_standardScale.x + _sizeChange, _standardScale.y + _sizeChange,
+        //     _standardScale.z + _sizeChange);
+        Vector3 target = new Vector3(_standardScale.x , _standardScale.y + _sizeChange,
+            _standardScale.z);
+        platformaMover.transform.localScale = target;
     }
 
-    private IEnumerator OnPaddleShrink(PlatformaMover platformaMover)
+    protected void Reset(Player player, PlatformaMover platformaMover)
     {
-        var localScale = platformaMover.transform.localScale;
-        Vector3 target = new Vector3(localScale.x/* + _sizeChange*/, localScale.y + _sizeChange,
-            localScale.z /*+ _sizeChange*/);
-        platformaMover.transform.localScale = target;
-        yield return _waitForSeconds;
-        // platformaMover.transform.localScale = localScale;
-        platformaMover.transform.localScale = platformaMover.GetComponent<Platforma>().StartSize;
-        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);
+        platformaMover.transform.localScale = _standardScale;
+        player.DeleteEffect(this);
     }
 }

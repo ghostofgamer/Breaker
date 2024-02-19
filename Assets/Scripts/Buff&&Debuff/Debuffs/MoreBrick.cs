@@ -2,24 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoreBrick : MonoBehaviour
+public class MoreBrick : Modification
 {
     [SerializeField] private Transform _bricksContainer;
     [SerializeField] private float _amountBricks;
     [SerializeField] private GameObject _brickPrefab;
     [SerializeField] private float _spawnRadius;
     [SerializeField] private Transform _spawnPosition;
-    [SerializeField] protected BuffType _buffType;
+    // [SerializeField] protected BuffType _buffType;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.165f);
 
-    public void MoreBricksActivated(PlatformaMover platformaMover)
+    public override void ApplyModification(Player player)
+    {
+        if (Player.TryApplyEffect(this))
+            StartCoroutine(OnMoreBricksActivated());
+    }
+
+    public override void StopModification(Player player)
+    {
+        Stop();
+    }
+    
+    /*public void MoreBricksActivated(PlatformaMover platformaMover)
     {
         if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
             StartCoroutine(OnMoreBricksActivated(platformaMover));
-    }
+    }*/
     
-    private IEnumerator OnMoreBricksActivated(PlatformaMover platformaMover)
+    private IEnumerator OnMoreBricksActivated()
     {
         for (int i = 0; i < _amountBricks; i++)
         {
@@ -30,7 +41,12 @@ public class MoreBrick : MonoBehaviour
             cube.transform.localScale = Vector3.one;
             yield return _waitForSeconds;
         }
-        
-        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);
+
+        Stop();
+    }
+
+    private void Stop()
+    {
+        Player.DeleteEffect(this);
     }
 }

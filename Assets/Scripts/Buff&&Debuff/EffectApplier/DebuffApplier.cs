@@ -18,31 +18,38 @@ public class DebuffApplier : EffectApplier
         switch (buffType)
         {
             case BuffType.PaddleShrink:
-                _paddleShrink.PaddleCangeValue(PlatformaMover);
+                // _paddleShrink.PaddleCangeValue(PlatformaMover);
+                _paddleShrink.ApplyModification(Player);
                 break;
             
             case BuffType.ShrinkBall:
-                _ballShrink.BallChangeSize(BallController);
+                // _ballShrink.BallChangeSize(_ballPortalMover);
+                _ballShrink.ApplyModification(Player);
                 break;
             
             case BuffType.SpeedUp:
-                _speedUp.SpeedUpActivated(_ballPortalMover);
+                // _speedUp.SpeedUpActivated(_ballPortalMover);
+                _speedUp.ApplyModification(Player);
                 break;
             
             case BuffType.PaddleLag:
-                _paddleLag.PaddleLagActivated(PlatformaMover);
+                // _paddleLag.PaddleLagActivated(PlatformaMover);
+                _paddleLag.ApplyModification(Player);
                 break;
             
             case BuffType.Immune:
-                _immune.ImmuneBricksActivated(PlatformaMover);
+                // _immune.ImmuneBricksActivated(PlatformaMover);
+                _immune.ApplyModification(Player);
                 break;
             
             case BuffType.MoreBrick:
-                _moreBrick.MoreBricksActivated(PlatformaMover);
+                // _moreBrick.MoreBricksActivated(PlatformaMover);
+                _moreBrick.ApplyModification(Player);
                 break;
             
             case BuffType.Reverse:
-                _reverse.ReversePaddleActivated(PlatformaMover);
+                // _reverse.ReversePaddleActivated(PlatformaMover);
+                _reverse.ApplyModification(Player);
                 break;
         }
     }

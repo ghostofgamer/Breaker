@@ -2,24 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedUp : MonoBehaviour
+public class SpeedUp : Modification
 {
-    [SerializeField] protected BuffType _buffType;
+    // [SerializeField] protected BuffType _buffType;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(5f);
+    private float _startSpeed;
 
-    public void SpeedUpActivated(BallPortalMover ballPortalMover)
+    public override void ApplyModification(Player player)
+    {
+        if (Player.TryApplyEffect(this))
+            StartCoroutine(OnSpeedUpActivated());
+    }
+
+    public override void StopModification(Player player)
+    {
+        Stop();
+    }
+
+    private void Stop()
+    {
+        BallPortalMover.SetValue(_startSpeed);
+        Player.DeleteEffect(this);
+    }
+
+    /*public void SpeedUpActivated(BallPortalMover ballPortalMover)
     {
         if (ballPortalMover.GetComponent<Ball>().TryApplyEffect(_buffType))
             StartCoroutine(OnSpeedUpActivated(ballPortalMover));
-    }
+    }*/
 
-    private IEnumerator OnSpeedUpActivated(BallPortalMover ballPortalMover)
+    private IEnumerator OnSpeedUpActivated()
     {
-        float _startSpeed = ballPortalMover.Speed;
-        ballPortalMover.SetValue(_startSpeed*2);
+        _startSpeed = BallPortalMover.Speed;
+        BallPortalMover.SetValue(_startSpeed * 2);
         yield return _waitForSeconds;
-        ballPortalMover.SetValue(_startSpeed);
-        ballPortalMover.GetComponent<Ball>().DeleteEffect(_buffType);
+        Stop();
+        /*ballPortalMover.SetValue(_startSpeed);
+        ballPortalMover.GetComponent<Ball>().DeleteEffect(_buffType);*/
     }
 }
