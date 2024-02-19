@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1246639532634330345, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: 0.024
       objectReference: {fileID: 0}
     - target: {fileID: 1246639532634330345, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -402,12 +402,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6442018842759311431, guid: b6266c5297ac4c04ea554b7db6528ebe, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -7221,6 +7221,10 @@ GameObject:
   - component: {fileID: 588720366}
   - component: {fileID: 588720367}
   - component: {fileID: 588720368}
+  - component: {fileID: 588720369}
+  - component: {fileID: 588720370}
+  - component: {fileID: 588720371}
+  - component: {fileID: 588720372}
   m_Layer: 0
   m_Name: Debuffs
   m_TagString: Untagged
@@ -7271,6 +7275,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeChange: -1
   _buffType: 7
+--- !u!114 &588720369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588720365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b15a9805690e348be36d87e8f7b650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buffType: 8
+--- !u!114 &588720370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588720365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2103bb205125a9044a69548dcb6e2c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedChanger: 2
+  _buffType: 11
+--- !u!114 &588720371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588720365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e34c367cfee8e49a59a783c17c9bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricksContainer: {fileID: 1867502213}
+  _buffType: 9
+--- !u!114 &588720372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588720365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ec440e48c48ca44b209fe9b39289d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricksContainer: {fileID: 1867502213}
+  _amountBricks: 5
+  _brickPrefab: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+  _buffType: 10
+  _spawnRadius: 3
 --- !u!1 &590184258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7754,7 +7816,7 @@ PrefabInstance:
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 8704686646446999277, guid: 79775517cb12a4d4b99129bb175e5d69, type: 3}
+      objectReference: {fileID: 6442018842759311431, guid: b6266c5297ac4c04ea554b7db6528ebe, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -8030,12 +8092,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 2720848774291880741, guid: 6588aa96b61bf7d419551b9bae6bff32, type: 3}
+      objectReference: {fileID: 6442018842759311431, guid: b6266c5297ac4c04ea554b7db6528ebe, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -8553,12 +8615,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6442018842759311431, guid: b6266c5297ac4c04ea554b7db6528ebe, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -8788,7 +8850,7 @@ PrefabInstance:
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 8704686646446999277, guid: 79775517cb12a4d4b99129bb175e5d69, type: 3}
+      objectReference: {fileID: 6442018842759311431, guid: b6266c5297ac4c04ea554b7db6528ebe, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -8869,7 +8931,7 @@ PrefabInstance:
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 8704686646446999277, guid: 79775517cb12a4d4b99129bb175e5d69, type: 3}
+      objectReference: {fileID: 6442018842759311431, guid: b6266c5297ac4c04ea554b7db6528ebe, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -10318,6 +10380,11 @@ MonoBehaviour:
   BallController: {fileID: 2100933965}
   _paddleShrink: {fileID: 588720367}
   _ballShrink: {fileID: 588720368}
+  _speedUp: {fileID: 588720369}
+  _ballPortalMover: {fileID: 621576493}
+  _paddleLag: {fileID: 588720370}
+  _immune: {fileID: 588720371}
+  _moreBrick: {fileID: 588720372}
 --- !u!1001 &1231563613
 PrefabInstance:
   m_ObjectHideFlags: 0

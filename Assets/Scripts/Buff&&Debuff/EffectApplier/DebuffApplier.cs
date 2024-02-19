@@ -10,6 +10,7 @@ public class DebuffApplier : EffectApplier
     [SerializeField] private BallPortalMover _ballPortalMover;
     [SerializeField] private PaddleLag _paddleLag;
     [SerializeField] private Immune _immune;
+    [SerializeField] private MoreBrick _moreBrick;
     
     public override void Apply(BuffType buffType)
     {
@@ -33,6 +34,10 @@ public class DebuffApplier : EffectApplier
             
             case BuffType.Immune:
                 _immune.ImmuneBricksActivated(PlatformaMover);
+                break;
+            
+            case BuffType.MoreBrick:
+                _moreBrick.MoreBricksActivated(PlatformaMover);
                 break;
         }
     }
