@@ -15,6 +15,7 @@ public class BrickDestroy : MonoBehaviour
     private bool _isImmortal = false;
     
     public bool IsBonus => _isBonus;
+    public Effect Effect => _effect;
     
     private void OnCollisionEnter(Collision other)
     {
@@ -37,6 +38,11 @@ public class BrickDestroy : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void SetEffect(Effect effect)
+    {
+        _effect = effect;
+    }
+    
     public void SetBoolValue(bool isBonus)
     {
         _isBonus = isBonus;

@@ -6,10 +6,11 @@ using UnityEngine;
 public class BonusTarget : MonoBehaviour
 {
     [SerializeField] private Transform _bricks;
-    [SerializeField] protected BuffType _buffType;
     [SerializeField] private Material _newMaterial;
+    [SerializeField] private Effect[] _effects;
+    [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(15f);
 
     public void BonusTargetActivated(PlatformaMover platformMover)
     {
@@ -33,9 +34,13 @@ public class BonusTarget : MonoBehaviour
         {
             var random = new System.Random();
             randomIndex = random.Next(filtredBrick.Count);
+            int randomEffect = random.Next(_effects.Length);
             Material originalmaterial = filtredBrick[randomIndex].GetComponent<Renderer>().material;
+            Effect startEffect = filtredBrick[randomIndex].GetComponent<BrickDestroy>().Effect;
+            filtredBrick[randomIndex].GetComponent<BrickDestroy>().SetEffect(_effects[randomEffect]);
             filtredBrick[randomIndex].GetComponent<Renderer>().material = _newMaterial;
             yield return _waitForSeconds;
+            filtredBrick[randomIndex].GetComponent<BrickDestroy>().SetEffect(startEffect);
             filtredBrick[randomIndex].GetComponent<Renderer>().material = originalmaterial;
             platformMover.GetComponent<Platforma>().DeleteEffect(_buffType);
         }
