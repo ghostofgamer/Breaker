@@ -13,7 +13,7 @@ public class CFX_Demo_Translate : MonoBehaviour
 	
 	void Start ()
 	{
-		dir = new Vector3(Random.Range(0.0f,360.0f),Random.Range(0.0f,360.0f),Random.Range(0.0f,360.0f));
+		dir = new Vector3(UnityEngine.Random.Range(0.0f,360.0f),UnityEngine.Random.Range(0.0f,360.0f),UnityEngine.Random.Range(0.0f,360.0f));
 		dir.Scale(rotation);
 		this.transform.localEulerAngles = dir;
 	}

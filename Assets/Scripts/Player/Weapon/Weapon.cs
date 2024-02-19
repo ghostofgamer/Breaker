@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
-        int index = Random.Range(0, _shootPosition.Length);
+        int index = UnityEngine.Random.Range(0, _shootPosition.Length);
         Instantiate(_bullet, _shootPosition[index].position, Quaternion.identity, _container);
     }
 }

@@ -12,10 +12,10 @@ public class BallControl : MonoBehaviour
         {
             foreach(Rigidbody rb in balls)
             {
-                Vector3 randomDir = Random.onUnitSphere * Random.Range(10,30);
+                Vector3 randomDir = UnityEngine.Random.onUnitSphere * UnityEngine.Random.Range(10,30);
                 randomDir.y = 0;
                 rb.velocity = randomDir;
-                rb.AddForce(transform.up * Random.Range(100, 1000));
+                rb.AddForce(transform.up * UnityEngine.Random.Range(100, 1000));
             }
         }
     }

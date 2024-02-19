@@ -80,7 +80,7 @@ public class WaveMotion : MonoBehaviour
         {
             if (cubeList[i] != null)
             {
-                float flySpeed = Random.Range(minFlySpeed, maxFlySpeed);
+                float flySpeed = UnityEngine.Random.Range(minFlySpeed, maxFlySpeed);
                 StartCoroutine(FlyBackCube(cubeList[i], flySpeed));
             }
         }

@@ -97,7 +97,7 @@ public class TestBallMover : MonoBehaviour
     void Start()
     {
         // Задаем начальное направление движения с некоторым углом в бок
-        initialDirection = Quaternion.Euler(0, Random.Range(-45f, 45f), 0) * Vector3.forward;
+        initialDirection = Quaternion.Euler(0, UnityEngine.Random.Range(-45f, 45f), 0) * Vector3.forward;
     }
 
     void Update()

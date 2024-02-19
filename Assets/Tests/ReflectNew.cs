@@ -26,7 +26,7 @@ public class ReflectNew : MonoBehaviour
         Debug.Log(other.contacts[0].normal);
         // Debug.Log();
         
-        float angle = Random.Range(-15f, 15f);
+        float angle = UnityEngine.Random.Range(-15f, 15f);
         
         /*newDirection = Quaternion.Euler(angle, 0, angle) * newDirection;
         Debug.Log(newDirection);

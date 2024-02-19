@@ -16,7 +16,7 @@ namespace DanielLochner.Assets.SimpleScrollSnap
         {
             foreach (SimpleScrollSnap slot in slots)
             {
-                slot.Velocity += Random.Range(2500, 5000) * Vector2.up;
+                slot.Velocity += UnityEngine.Random.Range(2500, 5000) * Vector2.up;
             }
         }
         #endregion

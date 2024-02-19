@@ -23,7 +23,7 @@ public class MoreBrick : MonoBehaviour
     {
         for (int i = 0; i < _amountBricks; i++)
         {
-            Vector3 randomPoint = Random.insideUnitCircle * _spawnRadius;
+            Vector3 randomPoint = UnityEngine.Random.insideUnitCircle * _spawnRadius;
             Vector3 spawnPosition = _spawnPosition.position + new Vector3(randomPoint.x, 0, randomPoint.y);
             GameObject cube = Instantiate(_brickPrefab, _bricksContainer);
             cube.transform.position = spawnPosition;

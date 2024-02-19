@@ -43,8 +43,8 @@ public class ChangeColor : MonoBehaviour, IPointerClickHandler
 	public void OnPointerClick(PointerEventData data)
 	{
 		if (GetComponent<Renderer>() != null)
-			GetComponent<Renderer>().material.color = new Color(Random.value, Random.value, Random.value, 1.0f);
+			GetComponent<Renderer>().material.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value, 1.0f);
 		else if (GetComponent<Light>() != null)
-			GetComponent<Light>().color = new Color(Random.value, Random.value, Random.value, 1.0f);
+			GetComponent<Light>().color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value, 1.0f);
 	}
 }

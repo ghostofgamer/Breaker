@@ -15,7 +15,7 @@ public float speed = 10.0f; // Скорость движения мяча
     void Start()
     {
         // Инициализируем направление движения случайным вектором
-        direction = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+        direction = new Vector3(UnityEngine.Random.Range(-1f, 1f), 0, UnityEngine.Random.Range(-1f, 1f)).normalized;
         // Получаем радиус сферы, которая описывает мяч
         radius = GetComponent<SphereCollider>().radius;
     }

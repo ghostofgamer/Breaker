@@ -25,7 +25,7 @@ public class BonusMover : MonoBehaviour
     {
         _startY = transform.position.y;
         
-        float angle = Random.Range(minAngle, maxAngle);
+        float angle = UnityEngine.Random.Range(minAngle, maxAngle);
         _direction = Quaternion.AngleAxis(angle, Vector3.up) * -Vector3.forward;
     }
 
@@ -40,7 +40,7 @@ public class BonusMover : MonoBehaviour
     {
         if (!_isJumping && _currentJumps < _maxJumps)
         {
-            float newAngle = Random.Range(minAngle, maxAngle);
+            float newAngle = UnityEngine.Random.Range(minAngle, maxAngle);
             _direction = Quaternion.AngleAxis(newAngle, Vector3.up) * -Vector3.forward;
             _isJumping = true;
             _startTime = Time.time;

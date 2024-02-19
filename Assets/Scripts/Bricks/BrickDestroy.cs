@@ -58,7 +58,7 @@ public class BrickDestroy : MonoBehaviour
         if (!_isBonus)
             return;
 
-        int amount = Random.Range(1, 5);
+        int amount = UnityEngine.Random.Range(1, 5);
         
         for (int i = 0; i < amount; i++)
         {

@@ -20,7 +20,7 @@ public class BallPortalMover : MonoBehaviour
 
     void Start()
     {
-        direction = new Vector3(Random.Range(-0.6f, 0.6f), 0, 1).normalized;
+        direction = new Vector3(UnityEngine.Random.Range(-0.6f, 0.6f), 0, 1).normalized;
         radius = GetComponent<SphereCollider>().radius;
     }
 

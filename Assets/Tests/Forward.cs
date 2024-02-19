@@ -14,7 +14,7 @@ public class Forward : MonoBehaviour
     void Start()
     {
         // Инициализируем направление движения случайным вектором
-        direction = new Vector3(Random.Range(-0.6f, 0.6f), 0, 1).normalized;
+        direction = new Vector3(UnityEngine.Random.Range(-0.6f, 0.6f), 0, 1).normalized;
         // Получаем радиус сферы, которая описывает мяч
         radius = GetComponent<SphereCollider>().radius + 0.1f;
     }
