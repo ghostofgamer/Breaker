@@ -13,6 +13,9 @@ public class BallPortalMover : MonoBehaviour
     public LayerMask wallLayer;
     private Vector3 direction;
     private float radius;
+
+    public float Speed => speed;
+    
     [SerializeField] private bool _isPortal = false;
 
     void Start()
@@ -54,6 +57,11 @@ public class BallPortalMover : MonoBehaviour
         }
     }
 
+    public void SetValue(float speed)
+    {
+        this.speed = speed;
+    }
+    
 
     [SerializeField] private float _rayLength = 10f;
 

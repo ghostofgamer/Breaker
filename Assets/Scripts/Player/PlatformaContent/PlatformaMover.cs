@@ -13,6 +13,8 @@ public class PlatformaMover : MonoBehaviour
 
     private bool isMousePressed = false; // Флаг, указывающий, нажата ли мышь
 
+    public float Speed => moveSpeed;
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -34,6 +36,11 @@ public class PlatformaMover : MonoBehaviour
         }
     }
 
+    public void SetValue(float speed)
+    {
+        moveSpeed = speed;
+    }
+    
     void MovePlatformWithMouse()
     {
         // Определяем целевую позицию в мировых координатах с учетом оффсета

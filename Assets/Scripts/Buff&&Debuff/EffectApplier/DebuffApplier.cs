@@ -6,6 +6,10 @@ public class DebuffApplier : EffectApplier
 {
     [SerializeField] private PaddleShrinkBuff _paddleShrink;
     [SerializeField] private BallShrink _ballShrink;
+    [SerializeField] private SpeedUp _speedUp;
+    [SerializeField] private BallPortalMover _ballPortalMover;
+    [SerializeField] private PaddleLag _paddleLag;
+    [SerializeField] private Immune _immune;
     
     public override void Apply(BuffType buffType)
     {
@@ -17,6 +21,18 @@ public class DebuffApplier : EffectApplier
             
             case BuffType.ShrinkBall:
                 _ballShrink.BallChangeSize(BallController);
+                break;
+            
+            case BuffType.SpeedUp:
+                _speedUp.SpeedUpActivated(_ballPortalMover);
+                break;
+            
+            case BuffType.PaddleLag:
+                _paddleLag.PaddleLagActivated(PlatformaMover);
+                break;
+            
+            case BuffType.Immune:
+                _immune.ImmuneBricksActivated(PlatformaMover);
                 break;
         }
     }

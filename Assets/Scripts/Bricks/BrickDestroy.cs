@@ -12,7 +12,8 @@ public class BrickDestroy : MonoBehaviour
     [SerializeField] private bool _isBonus;
     
     private float _bonusRadius = 1.65f;
-
+    private bool _isImmortal = false;
+    
     public bool IsBonus => _isBonus;
     
     private void OnCollisionEnter(Collision other)
@@ -21,6 +22,9 @@ public class BrickDestroy : MonoBehaviour
 
     public void Destroy()
     {
+        if (_isImmortal)
+            return;
+        
         particleEffectPrefab.SetActive(true);
         particleEffectPrefab.transform.parent = null;
         /*_effect.transform.parent = null;
@@ -37,6 +41,11 @@ public class BrickDestroy : MonoBehaviour
     {
         _isBonus = isBonus;
     }
+
+    public void SetBoolImmortal(bool immortal)
+    {
+        _isImmortal = immortal;
+    }
     
     private void GetBonus()
     {
@@ -47,28 +56,12 @@ public class BrickDestroy : MonoBehaviour
         
         for (int i = 0; i < amount; i++)
         {
-            // Вычисляем угол для распределения бонусов вокруг центра куба
             float angle = i * Mathf.PI * 2 / amount;
-            // Вычисляем позицию для каждого бонуса
             float x = transform.position.x + Mathf.Cos(angle) * _bonusRadius;
             float z = transform.position.z + Mathf.Sin(angle) * _bonusRadius;
             Vector3 bonusPosition = new Vector3(x, transform.position.y, z);
-
-            // Создаем бонус на заданной позиции
+            
             Instantiate(_bonusPrefab, bonusPosition, Quaternion.identity);
-        }
-        /*for (int i = 0; i < amount; i++)
-        {
-            StartCoroutine(SpawnBonuses(amount));
-        }*/
-    }
-
-    private IEnumerator SpawnBonuses(int amount)
-    {
-        for (int i = 0; i < amount; i++)
-        {
-            Instantiate(_bonusPrefab, transform.position, Quaternion.identity);
-            yield return  new WaitForSeconds(0.1f);
         }
     }
 }
