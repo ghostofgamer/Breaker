@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlatformaMover : MonoBehaviour
 {
+    [SerializeField] private GameObject _positionMouse;
+    
+    
     public float moveSpeed = 5f; // Скорость движения платформы
     public float offset = 1f; // Оффсет от точки, куда нажали мышь
     public float minX = -5f; // Минимальная позиция по оси X
@@ -20,11 +23,13 @@ public class PlatformaMover : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Нажата левая кнопка мыши
+            _positionMouse.SetActive(true);
             isMousePressed = true;
         }
 
         if (Input.GetMouseButtonUp(0))
         {
+            _positionMouse.SetActive(false);
             // Отпущена левая кнопка мыши
             isMousePressed = false;
         }
@@ -50,7 +55,7 @@ public class PlatformaMover : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             Vector3 targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z + offset);
-
+            _positionMouse.transform.position = hit.point;
             // Ограничиваем позицию платформы по осям X и Z
             float clampedX = Mathf.Clamp(targetPosition.x, minX, maxX);
             float clampedZ = Mathf.Clamp(targetPosition.z, minZ, maxZ);
