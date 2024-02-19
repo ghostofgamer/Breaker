@@ -11,6 +11,7 @@ public class DebuffApplier : EffectApplier
     [SerializeField] private PaddleLag _paddleLag;
     [SerializeField] private Immune _immune;
     [SerializeField] private MoreBrick _moreBrick;
+    [SerializeField] private Reverse _reverse;
     
     public override void Apply(BuffType buffType)
     {
@@ -38,6 +39,10 @@ public class DebuffApplier : EffectApplier
             
             case BuffType.MoreBrick:
                 _moreBrick.MoreBricksActivated(PlatformaMover);
+                break;
+            
+            case BuffType.Reverse:
+                _reverse.ReversePaddleActivated(PlatformaMover);
                 break;
         }
     }

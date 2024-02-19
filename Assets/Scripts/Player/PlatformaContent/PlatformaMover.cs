@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlatformaMover : MonoBehaviour
 {
     [SerializeField] private GameObject _positionMouse;
-    
-    
+
+
     public float moveSpeed = 5f; // Скорость движения платформы
     public float offset = 1f; // Оффсет от точки, куда нажали мышь
     public float minX = -5f; // Минимальная позиция по оси X
@@ -15,14 +15,14 @@ public class PlatformaMover : MonoBehaviour
     public float maxZ = 5f; // Максимальная позиция по оси Z
 
     private bool isMousePressed = false; // Флаг, указывающий, нажата ли мышь
+    private bool _isReverse = false;
 
     public float Speed => moveSpeed;
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // Нажата левая кнопка мыши
             _positionMouse.SetActive(true);
             isMousePressed = true;
         }
@@ -30,13 +30,11 @@ public class PlatformaMover : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _positionMouse.SetActive(false);
-            // Отпущена левая кнопка мыши
             isMousePressed = false;
         }
 
         if (isMousePressed)
         {
-            // Если мышь зажата, двигаем платформу в направлении указателя мыши с ограничениями
             MovePlatformWithMouse();
         }
     }
@@ -45,7 +43,12 @@ public class PlatformaMover : MonoBehaviour
     {
         moveSpeed = speed;
     }
-    
+
+    public void SetReverse(bool reverse)
+    {
+        _isReverse = reverse;
+    }
+
     void MovePlatformWithMouse()
     {
         // Определяем целевую позицию в мировых координатах с учетом оффсета
@@ -54,17 +57,22 @@ public class PlatformaMover : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            Vector3 targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z + offset);
+            Vector3 targetPosition;
+
+            if (_isReverse)
+                targetPosition = new Vector3(-hit.point.x, transform.position.y, -(hit.point.z + offset));
+
+            else
+                targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z + offset);
+
             _positionMouse.transform.position = hit.point;
-            // Ограничиваем позицию платформы по осям X и Z
             float clampedX = Mathf.Clamp(targetPosition.x, minX, maxX);
             float clampedZ = Mathf.Clamp(targetPosition.z, minZ, maxZ);
 
-            // Создаем новый вектор с ограниченными значениями
             Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
 
-            // Двигаем платформу к целевой позиции с учетом скорости
-            transform.position = Vector3.MoveTowards(transform.position, clampedTargetPosition, moveSpeed * Time.deltaTime);
+            transform.position =
+                Vector3.MoveTowards(transform.position, clampedTargetPosition, moveSpeed * Time.deltaTime);
         }
     }
 }
