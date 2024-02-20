@@ -33,6 +33,7 @@ public class Laser : Modification
 
     private IEnumerator OnShoot()
     {
+        SetActiveImage(true);
         _elapsedTime = 0;
 
         while (_elapsedTime < Duration)
@@ -48,6 +49,7 @@ public class Laser : Modification
 
     private void Stop()
     {
+        SetActiveImage(false);
         StopCoroutine(Coroutine);
     }
 }
