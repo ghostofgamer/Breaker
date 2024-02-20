@@ -6,16 +6,16 @@ public abstract class Modification : MonoBehaviour
     [SerializeField] protected BallController  BallController;
     [SerializeField] protected BallPortalMover BallPortalMover;
     [SerializeField] protected Player Player;
+    [SerializeField] protected float Duration;
 
     [SerializeField] private BuffType _buffType;
-    [SerializeField] private float _duration;
-    
+
     protected Coroutine Coroutine;
     protected WaitForSeconds WaitForSeconds;
 
     protected virtual void Start()
     {
-        WaitForSeconds = new WaitForSeconds(_duration);
+        WaitForSeconds = new WaitForSeconds(Duration);
     }
 
     public abstract void ApplyModification();

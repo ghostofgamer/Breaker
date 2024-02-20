@@ -193,13 +193,21 @@ PrefabInstance:
       value: SimpleBrick (25)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 2720848774291880741, guid: 6588aa96b61bf7d419551b9bae6bff32, type: 3}
+      objectReference: {fileID: 271070223001455800, guid: 0c1b9ae77aa7fc34c9c26b8fc219e9a2, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -432,8 +440,16 @@ PrefabInstance:
       value: SimpleBrick (28)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
@@ -7389,8 +7405,8 @@ MonoBehaviour:
   BallController: {fileID: 0}
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
-  _buffType: 0
-  _duration: 0
+  _buffType: 12
+  _duration: 3
   _sizeChange: -1
 --- !u!114 &588720368
 MonoBehaviour:
@@ -7408,8 +7424,8 @@ MonoBehaviour:
   BallController: {fileID: 0}
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
-  _buffType: 0
-  _duration: 0
+  _buffType: 7
+  _duration: 3
   _sizeChange: -1
 --- !u!114 &588720369
 MonoBehaviour:
@@ -7427,8 +7443,8 @@ MonoBehaviour:
   BallController: {fileID: 0}
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
-  _buffType: 0
-  _duration: 0
+  _buffType: 8
+  _duration: 5
 --- !u!114 &588720370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7445,8 +7461,8 @@ MonoBehaviour:
   BallController: {fileID: 0}
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
-  _buffType: 0
-  _duration: 0
+  _buffType: 11
+  _duration: 3
   _speedChanger: 2
 --- !u!114 &588720371
 MonoBehaviour:
@@ -7464,8 +7480,8 @@ MonoBehaviour:
   BallController: {fileID: 0}
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
-  _buffType: 0
-  _duration: 0
+  _buffType: 9
+  _duration: 3
   _bricksContainer: {fileID: 1867502213}
 --- !u!114 &588720372
 MonoBehaviour:
@@ -7483,8 +7499,8 @@ MonoBehaviour:
   BallController: {fileID: 0}
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
-  _buffType: 0
-  _duration: 0
+  _buffType: 10
+  _duration: 0.1
   _bricksContainer: {fileID: 1867502213}
   _amountBricks: 5
   _brickPrefab: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
@@ -7506,8 +7522,8 @@ MonoBehaviour:
   BallController: {fileID: 2100933965}
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
-  _buffType: 0
-  _duration: 0
+  _buffType: 13
+  _duration: 3
 --- !u!1 &590184258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7673,6 +7689,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
+  _radius: 0
   _isPortal: 0
   _rayLength: 1
   platformOffset: 3
@@ -7988,6 +8005,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleBrick (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
@@ -8265,6 +8290,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleBrick (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
@@ -8347,8 +8380,16 @@ PrefabInstance:
       value: SimpleBrick (24)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
@@ -8872,8 +8913,16 @@ PrefabInstance:
       value: SimpleBrick (27)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
@@ -9105,6 +9154,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleBrick (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
@@ -9185,6 +9242,14 @@ PrefabInstance:
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_Name
       value: SimpleBrick (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
@@ -9560,13 +9625,21 @@ PrefabInstance:
       value: SimpleBrick (21)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 2720848774291880741, guid: 6588aa96b61bf7d419551b9bae6bff32, type: 3}
+      objectReference: {fileID: 271070223001455800, guid: 0c1b9ae77aa7fc34c9c26b8fc219e9a2, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -10327,13 +10400,21 @@ PrefabInstance:
       value: SimpleBrick (23)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 2720848774291880741, guid: 6588aa96b61bf7d419551b9bae6bff32, type: 3}
+      objectReference: {fileID: 271070223001455800, guid: 0c1b9ae77aa7fc34c9c26b8fc219e9a2, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -10705,7 +10786,6 @@ MonoBehaviour:
   _shield: {fileID: 1640829203}
   _mirror: {fileID: 1640829204}
   _portal: {fileID: 1640829205}
-  _ballPortalMover: {fileID: 621576493}
   _bonusTarget: {fileID: 1640829206}
 --- !u!114 &1230888012
 MonoBehaviour:
@@ -10725,7 +10805,6 @@ MonoBehaviour:
   _paddleShrink: {fileID: 588720367}
   _ballShrink: {fileID: 588720368}
   _speedUp: {fileID: 588720369}
-  _ballPortalMover: {fileID: 621576493}
   _paddleLag: {fileID: 588720370}
   _immune: {fileID: 588720371}
   _moreBrick: {fileID: 588720372}
@@ -11409,13 +11488,21 @@ PrefabInstance:
       value: SimpleBrick (22)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 2720848774291880741, guid: 6588aa96b61bf7d419551b9bae6bff32, type: 3}
+      objectReference: {fileID: 271070223001455800, guid: 0c1b9ae77aa7fc34c9c26b8fc219e9a2, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
@@ -11526,6 +11613,14 @@ PrefabInstance:
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_Name
       value: SimpleBrick (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
@@ -11717,6 +11812,14 @@ PrefabInstance:
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_Name
       value: SimpleBrick (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
@@ -12447,7 +12550,7 @@ MonoBehaviour:
   BallPortalMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   _buffType: 2
-  _duration: 3
+  _duration: 16
   _sizeChange: 1
 --- !u!114 &1640829202
 MonoBehaviour:
@@ -18642,6 +18745,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleBrick (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
@@ -19746,13 +19857,21 @@ PrefabInstance:
       value: SimpleBrick (19)
       objectReference: {fileID: 0}
     - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 2720848774291880741, guid: 6588aa96b61bf7d419551b9bae6bff32, type: 3}
+      objectReference: {fileID: 271070223001455800, guid: 0c1b9ae77aa7fc34c9c26b8fc219e9a2, type: 3}
     - target: {fileID: 2936073602032495537, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
       propertyPath: _isBonus
       value: 1
