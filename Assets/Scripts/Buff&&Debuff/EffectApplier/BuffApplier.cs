@@ -10,7 +10,6 @@ public class BuffApplier : EffectApplier
     [SerializeField] private Shield _shield;
     [SerializeField] private Mirror _mirror;
     [SerializeField] private Portal _portal;
-    [SerializeField] private BallPortalMover _ballPortalMover;
     [SerializeField] private BonusTarget _bonusTarget;
 
     public override void Apply(BuffType buffType)
@@ -18,38 +17,31 @@ public class BuffApplier : EffectApplier
         switch (buffType)
         {
             case BuffType.PaddleGrow:
-                // _paddleGrow.PaddleCangeValue(PlatformaMover);
-                _paddleGrow.ApplyModification(Player);
+                _paddleGrow.ApplyModification();
                 break;
 
             case BuffType.BallGrow:
-                // _ballGrow.BallChangeSize(_ballPortalMover);
-                _ballGrow.ApplyModification(Player);
+                _ballGrow.ApplyModification();
                 break;
 
             case BuffType.Laser:
-                // _laser.Shooting(PlatformaMover);
-                _laser.ApplyModification(Player);
+                _laser.ApplyModification();
                 break;
 
             case BuffType.Shield:
-                // _shield.ShieldActivated(PlatformaMover);
-                _shield.ApplyModification(Player);
+                _shield.ApplyModification();
                 break;
 
             case BuffType.Mirror:
-                // _mirror.GetMirrorPlatform(PlatformaMover);
-                _mirror.ApplyModification(Player);
+                _mirror.ApplyModification();
                 break;
 
             case BuffType.Portal:
-                // _portal.PortalActivated(_ballPortalMover);
-                _portal.ApplyModification(Player);
+                _portal.ApplyModification();
                 break;
 
             case BuffType.BonusTarget:
-                // _bonusTarget.BonusTargetActivated(PlatformaMover);
-                _bonusTarget.ApplyModification(Player);
+                _bonusTarget.ApplyModification();
                 break;
         }
     }

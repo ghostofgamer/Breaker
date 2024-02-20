@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class BallGrow : BallSizeChanger
 {
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
-        if (player.TryApplyEffect(this))
+        if (Player.TryApplyEffect(this))
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
             StartCoroutine(OnBallChangeSize(BallPortalMover));
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
-        // ballController.transform.localScale = ballController.GetComponent<Ball>().StartSize;
-        Reset(player, BallPortalMover);
-        // player.DeleteEffect(this);
+        Reset();
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Modification : MonoBehaviour
@@ -8,9 +6,19 @@ public abstract class Modification : MonoBehaviour
     [SerializeField] protected BallController  BallController;
     [SerializeField] protected BallPortalMover BallPortalMover;
     [SerializeField] protected Player Player;
-    // [SerializeField] protected BuffType BuffType;
 
-    public abstract void ApplyModification(Player player);
+    [SerializeField] private BuffType _buffType;
+    [SerializeField] private float _duration;
     
-    public abstract void StopModification(Player player);
+    protected Coroutine Coroutine;
+    protected WaitForSeconds WaitForSeconds;
+
+    protected virtual void Start()
+    {
+        WaitForSeconds = new WaitForSeconds(_duration);
+    }
+
+    public abstract void ApplyModification();
+    
+    public abstract void StopModification();
 }

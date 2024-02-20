@@ -7,33 +7,31 @@ public abstract class PaddleChanger : Modification
 {
     [SerializeField] protected int _sizeChange;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.65f);
     private Vector3 _standardScale;
-    
-    private void Start()
+
+    protected override void Start()
     {
+        base.Start();
         _standardScale = PlatformaMover.transform.localScale;
     }
     
-    protected IEnumerator OnPaddleSizeChanger(PlatformaMover platformaMover)
+    protected IEnumerator OnPaddleSizeChanger()
     {
-        Change(PlatformaMover);
-        yield return _waitForSeconds;
-        Reset(Player, PlatformaMover);
+        Change();
+        yield return WaitForSeconds;
+        Reset();
+        Player.DeleteEffect(this);
     }
     
-    private void Change(PlatformaMover platformaMover)
+    private void Change()
     {
-        // Vector3 target = new Vector3(_standardScale.x + _sizeChange, _standardScale.y + _sizeChange,
-        //     _standardScale.z + _sizeChange);
         Vector3 target = new Vector3(_standardScale.x , _standardScale.y + _sizeChange,
             _standardScale.z);
-        platformaMover.transform.localScale = target;
+        PlatformaMover.transform.localScale = target;
     }
 
-    protected void Reset(Player player, PlatformaMover platformaMover)
+    protected void Reset()
     {
-        platformaMover.transform.localScale = _standardScale;
-        player.DeleteEffect(this);
+        PlatformaMover.transform.localScale = _standardScale;
     }
 }

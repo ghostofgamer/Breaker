@@ -5,18 +5,21 @@ using UnityEngine;
 public class PaddleLag : Modification
 {
     [SerializeField] private float _speedChanger;
-    // [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
     private float _startSpeed;
-    
-    public override void ApplyModification(Player player)
+
+    public override void ApplyModification()
     {
         if (Player.TryApplyEffect(this))
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
             StartCoroutine(OnPaddleLagActivated());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
         Stop();
     }
@@ -24,22 +27,14 @@ public class PaddleLag : Modification
     private void Stop()
     {
         PlatformaMover.SetValue(_startSpeed);
-        Player.DeleteEffect(this);
     }
-
-    /*public void PaddleLagActivated(PlatformaMover platformaMover)
-    {
-        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnPaddleLagActivated(platformaMover));
-    }*/
 
     private IEnumerator OnPaddleLagActivated()
     {
         _startSpeed = PlatformaMover.Speed;
-        PlatformaMover.SetValue(_startSpeed/_speedChanger);
-        yield return _waitForSeconds;
+        PlatformaMover.SetValue(_startSpeed / _speedChanger);
+        yield return WaitForSeconds;
         Stop();
-        /*PlatformaMover.SetValue(_startSpeed);
-        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);*/
-    } 
+        Player.DeleteEffect(this);
+    }
 }

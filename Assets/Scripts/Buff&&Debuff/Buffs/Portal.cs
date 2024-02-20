@@ -1,64 +1,41 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Portal : Modification
 {
-    [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private GameObject _portal;
-    // [SerializeField] protected BuffType _buffType;
     [SerializeField] private GameObject[] _walls;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
-
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
-        if (player.TryApplyEffect(this))
-            StartCoroutine(OnPortalActivated());
+        if (Player.TryApplyEffect(this))
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
+            Coroutine = StartCoroutine(OnPortalActivated());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
-        Stop();
+        SetValue(false);
     }
-
-    /*public void PortalActivated(BallPortalMover ballPortalMover)
-    {
-        if (ballPortalMover.GetComponent<Ball>().TryApplyEffect(_buffType))
-            StartCoroutine(OnPortalActivated(ballPortalMover));
-    }*/
 
     private IEnumerator OnPortalActivated()
     {
-        foreach (var wall in _walls)
-            wall.GetComponent<BoxCollider>().enabled = false;
-
-        BallPortalMover.SetValue(true);
-        _portal.SetActive(true);
-        yield return _waitForSeconds;
-        Stop();
-        /*_portal.SetActive(false);
-
-        foreach (var wall in _walls)
-        {
-            wall.GetComponent<BoxCollider>().enabled = true;
-            // wall.gameObject.SetActive(true);
-        }
-
-        yield return new WaitForSeconds(0.1f);
-        ballPortalMover.SetValue(false);
-        // _particleSystem.Stop();
-        ballPortalMover.GetComponent<Ball>().DeleteEffect(_buffType);*/
+        SetValue(true);
+        yield return WaitForSeconds;
+        SetValue(false);
+        Player.DeleteEffect(this);
     }
 
-    private void Stop()
+    private void SetValue(bool value)
     {
-        _portal.SetActive(false);
-
         foreach (var wall in _walls)
-            wall.GetComponent<BoxCollider>().enabled = true;
+            wall.GetComponent<BoxCollider>().enabled = !value;
 
-        BallPortalMover.SetValue(false);
-        Player.DeleteEffect(this);
+        BallPortalMover.SetValue(value);
+        _portal.SetActive(value);
     }
 }

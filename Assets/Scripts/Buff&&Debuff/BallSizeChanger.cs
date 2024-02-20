@@ -6,61 +6,34 @@ using UnityEngine;
 public abstract class BallSizeChanger : Modification
 {
     [SerializeField] protected int _sizeChange;
-    // [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.65f);
     private Vector3 _standardScale;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         _standardScale = BallPortalMover.transform.localScale;
     }
 
-    /*public override void ApplyModification(Player player)
-    {
-        if (player.TryApplyEffect(this))
-            StartCoroutine(OnBallChangeSize(BallPortalMover));
-    }
-
-    public override void StopModification(Player player)
-    {
-        // ballController.transform.localScale = ballController.GetComponent<Ball>().StartSize;
-        Reset(player, BallPortalMover);
-        // player.DeleteEffect(this);
-    }*/
-
-    /*public void BallChangeSize(BallPortalMover ballController)
-    {
-        if (ballController.GetComponent<Ball>().TryApplyEffect(_buffType))
-            StartCoroutine(OnBallChangeSize(ballController));
-    }*/
-
     protected IEnumerator OnBallChangeSize(BallPortalMover ballPortalMover)
     {
-        Change(ballPortalMover);
-        /*var localScale = ballController.transform.localScale;
-        Vector3 target = new Vector3(localScale.x + _sizeChange, localScale.y + _sizeChange,
-            localScale.z + _sizeChange);
-        ballController.transform.localScale = target;*/
-        yield return _waitForSeconds;
-        Reset(Player, ballPortalMover);
-        // ballController.GetComponent<Ball>().DeleteEffect(_buffType);
-        // ballController.transform.localScale = localScale;
-        /*ballController.transform.localScale = ballController.GetComponent<Ball>().StartSize;
-        ballController.GetComponent<Ball>().DeleteEffect(_buffType);*/
+        Change();
+        yield return WaitForSeconds;
+        Reset();
+        Player.DeleteEffect(this);
     }
 
-    private void Change(BallPortalMover ballPortalMover)
+    private void Change()
     {
-        // var localScale = ballController.transform.localScale;
         Vector3 target = new Vector3(_standardScale.x + _sizeChange, _standardScale.y + _sizeChange,
             _standardScale.z + _sizeChange);
-        ballPortalMover.transform.localScale = target;
+        BallPortalMover.transform.localScale = target;
+        // BallPortalMover.SetRadius(_sizeChange);
     }
 
-    protected void Reset(Player player, BallPortalMover ballPortalMover)
+    protected void Reset()
     {
-        ballPortalMover.transform.localScale = _standardScale;
-        player.DeleteEffect(this);
+        BallPortalMover.transform.localScale = _standardScale;
+        // BallPortalMover.SetRadius(-_sizeChange);
     }
 }

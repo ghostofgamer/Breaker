@@ -8,64 +8,66 @@ public class BonusTarget : Modification
     [SerializeField] private Transform _bricks;
     [SerializeField] private Material _newMaterial;
     [SerializeField] private Effect[] _effects;
-    [SerializeField] protected BuffType _buffType;
-
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(15f);
+    
     private List<Transform> filtredBrick;
     private int _randomIndex;
+    private int _randomEffectIndex;
     private Effect _startEffect;
     private Material _startMaterial;
     
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
-        if (player.TryApplyEffect(this))
-            StartCoroutine(OnBonusTargetActivated());
+        if (Player.TryApplyEffect(this))
+        {
+          if( Coroutine!=null)
+              StopCoroutine(Coroutine);
+          
+          StartCoroutine(OnBonusTargetActivated());
+        }
     }
-
-    /*public void BonusTargetActivated(PlatformaMover platformMover)
-    {
-        if (platformMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnBonusTargetActivated(platformMover));
-    }*/
 
     private IEnumerator OnBonusTargetActivated()
     {
-        List<Transform> _bricksList = new List<Transform>();
+        List<Transform> bricksList = new List<Transform>();
 
         for (int i = 0; i < _bricks.childCount; i++)
-            _bricksList.Add(_bricks.GetChild(i));
+            bricksList.Add(_bricks.GetChild(i));
 
-        filtredBrick = _bricksList.Where(p => p.gameObject.activeSelf == true).ToList();
+        filtredBrick = bricksList.Where(p => p.gameObject.activeSelf == true).ToList();
 
         if (filtredBrick.Count > 0)
         {
             Change();
-            yield return _waitForSeconds;
-            Reset(Player);
+            yield return WaitForSeconds;
+            Reset();
+            Player.DeleteEffect(this);
         }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
-        Reset(Player);
+        Reset();
     }
 
     private void Change()
     {
-        var random = new System.Random();
-        _randomIndex = random.Next(filtredBrick.Count);
-        int randomEffect = random.Next(_effects.Length);
+        _randomIndex = GetRandomIndex(filtredBrick.Count);
+        _randomEffectIndex = GetRandomIndex(_effects.Length);
         _startMaterial = filtredBrick[_randomIndex].GetComponent<Renderer>().material;
         _startEffect = filtredBrick[_randomIndex].GetComponent<BrickDestroy>().Effect;
-        filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_effects[randomEffect]);
+        filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_effects[_randomEffectIndex]);
         filtredBrick[_randomIndex].GetComponent<Renderer>().material = _newMaterial;
     }
 
-    private void Reset(Player player)
+    private int GetRandomIndex(int count)
+    {
+        var random = new System.Random();
+        return random.Next(count);
+    }
+    
+    private void Reset()
     {
         filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_startEffect);
         filtredBrick[_randomIndex].GetComponent<Renderer>().material = _startMaterial;
-        player.DeleteEffect(this);
-        Debug.Log("выкл");
     }
 }

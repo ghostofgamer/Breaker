@@ -5143,8 +5143,8 @@ GameObject:
   - component: {fileID: 5297497712439967932}
   - component: {fileID: 816518585033692014}
   - component: {fileID: 6876679372855348229}
-  - component: {fileID: 4066561055687564476}
   - component: {fileID: 2633821835947453233}
+  - component: {fileID: 271070223001455800}
   m_Layer: 0
   m_Name: RandomNeutral
   m_TagString: Untagged
@@ -5235,21 +5235,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4066561055687564476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094796879097043877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322b0d482570ac64dbf5e6fe9076adce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 1
-  _effect: {fileID: 2043303714928140681}
-  _buffType: 14
 --- !u!114 &2633821835947453233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5263,6 +5248,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 2043303714928140681}
+--- !u!114 &271070223001455800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094796879097043877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fa54a6f38e9924185ac52ac950f263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
+  _effect: {fileID: 2043303714928140681}
+  _buffType: 14
 --- !u!1 &7424361300941146491
 GameObject:
   m_ObjectHideFlags: 0
@@ -10142,6 +10142,10 @@ PrefabInstance:
     - target: {fileID: 4840221768685815024, guid: 79a1987ce437cf74db0a89c56be0742a, type: 3}
       propertyPath: m_Name
       value: BoofNeutral
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840221768685815024, guid: 79a1987ce437cf74db0a89c56be0742a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PaddleGrowBuff : PaddleChanger
 {
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
-        if (player.TryApplyEffect(this))
-            StartCoroutine(OnPaddleSizeChanger(PlatformaMover));
+        if (Player.TryApplyEffect(this))
+        {
+            if(Coroutine!=null)
+                StopCoroutine(Coroutine);
+            
+            Coroutine = StartCoroutine(OnPaddleSizeChanger());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
-        Reset(player, PlatformaMover);
+        Reset();
     }
 }

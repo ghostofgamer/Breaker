@@ -6,58 +6,50 @@ using UnityEngine;
 public class Immune : Modification
 {
     [SerializeField] private Transform _bricksContainer;
-    // [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(10f);
     private List<Transform> _bricks;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         _bricks = new List<Transform>();
     }
 
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
         if (Player.TryApplyEffect(this))
-            StartCoroutine(OnImmuneBricksActivated());
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
+            Coroutine = StartCoroutine(OnImmuneBricksActivated());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
         Stop();
     }
-
-    /*public void ImmuneBricksActivated(PlatformaMover platformaMover)
-    {
-        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnImmuneBricksActivated(platformaMover));
-    }*/
 
     private IEnumerator OnImmuneBricksActivated()
     {
         GetBricks(true);
-        yield return _waitForSeconds;
+        yield return WaitForSeconds;
         Stop();
-        /*GetBricks(false);
-        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);*/
+        Player.DeleteEffect(this);
     }
 
     private void GetBricks(bool immortalBrick)
     {
         for (int i = 0; i < _bricksContainer.childCount; i++)
-        {
             _bricks.Add(_bricksContainer.GetChild(i));
-        }
 
         foreach (Transform brick in _bricks)
-        {
             brick.GetComponent<BrickDestroy>().SetBoolImmortal(immortalBrick);
-        }
     }
 
     private void Stop()
     {
         GetBricks(false);
-        Player.DeleteEffect(this); 
     }
 }

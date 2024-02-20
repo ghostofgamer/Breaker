@@ -7,7 +7,7 @@ public class MirrorPlatformaMover : MonoBehaviour
 {
     [SerializeField] private Transform _originalPlatform;
 
-    private Vector3 initialOffset; // Начальное смещение относительно оригинальной платформы
+    private Vector3 initialOffset;
     private Vector3 initialPosition;
 
     void Start()

@@ -7,7 +7,6 @@ public class DebuffApplier : EffectApplier
     [SerializeField] private PaddleShrinkBuff _paddleShrink;
     [SerializeField] private BallShrink _ballShrink;
     [SerializeField] private SpeedUp _speedUp;
-    [SerializeField] private BallPortalMover _ballPortalMover;
     [SerializeField] private PaddleLag _paddleLag;
     [SerializeField] private Immune _immune;
     [SerializeField] private MoreBrick _moreBrick;
@@ -18,38 +17,31 @@ public class DebuffApplier : EffectApplier
         switch (buffType)
         {
             case BuffType.PaddleShrink:
-                // _paddleShrink.PaddleCangeValue(PlatformaMover);
-                _paddleShrink.ApplyModification(Player);
+                _paddleShrink.ApplyModification();
                 break;
             
             case BuffType.ShrinkBall:
-                // _ballShrink.BallChangeSize(_ballPortalMover);
-                _ballShrink.ApplyModification(Player);
+                _ballShrink.ApplyModification();
                 break;
             
             case BuffType.SpeedUp:
-                // _speedUp.SpeedUpActivated(_ballPortalMover);
-                _speedUp.ApplyModification(Player);
+                _speedUp.ApplyModification();
                 break;
             
             case BuffType.PaddleLag:
-                // _paddleLag.PaddleLagActivated(PlatformaMover);
-                _paddleLag.ApplyModification(Player);
+                _paddleLag.ApplyModification();
                 break;
             
             case BuffType.Immune:
-                // _immune.ImmuneBricksActivated(PlatformaMover);
-                _immune.ApplyModification(Player);
+                _immune.ApplyModification();
                 break;
             
             case BuffType.MoreBrick:
-                // _moreBrick.MoreBricksActivated(PlatformaMover);
-                _moreBrick.ApplyModification(Player);
+                _moreBrick.ApplyModification();
                 break;
             
             case BuffType.Reverse:
-                // _reverse.ReversePaddleActivated(PlatformaMover);
-                _reverse.ApplyModification(Player);
+                _reverse.ApplyModification();
                 break;
         }
     }

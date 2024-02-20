@@ -5,50 +5,19 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-
-public class RandomEffect : MonoBehaviour
+public class RandomEffect : Modification
 {
-    [SerializeField] private Effect[] _effects;
-    [SerializeField] protected BuffType _buffType;
-    [SerializeField] private EffectApplier _effectApplier;
-    [SerializeField] private DebuffApplier _debuffApplier;
+    [SerializeField] private Modification[] _modifications;
+
+    private int _index;
     
-    private BuffType randomEnumValue;
-    
-    public void RandomEffectActivated(PlatformaMover platformMover)
+    public override void ApplyModification()
     {
-        System.Random random = new System.Random();
-        int choice = random.Next(0, 2);
-        
-        if (choice == 0)
-        {
-            ApplyBuff();
-        }
-        else
-        {
-            ApllyDebuff();
-        }
-        
-        /*Array values = BuffType.GetValues(typeof(BuffType));
-        int randomIndex = Random.Range(0, values.Length);
-        randomEnumValue = (BuffType) values.GetValue(randomIndex);
-        int value = Random.Range(0, 2);
-        // value == 0 ? "ApplyBuff()" : "ApllyDebuff()";*/
-    }
-    
-    private void ApplyBuff()
-    {
-        Array values = BuffType.GetValues(typeof(BuffType));
-        int randomIndex = Random.Range(0, values.Length);
-        randomEnumValue = (BuffType) values.GetValue(randomIndex);
-        _effectApplier.Apply(randomEnumValue);
+        _index = Random.Range(0, _modifications.Length);
+        _modifications[_index].ApplyModification();
     }
 
-    private void ApllyDebuff()
+    public override void StopModification()
     {
-        Array values = BuffType.GetValues(typeof(BuffType));
-        int randomIndex = Random.Range(0, values.Length);
-        randomEnumValue = (BuffType) values.GetValue(randomIndex);
-        _debuffApplier.Apply(randomEnumValue);
     }
 }

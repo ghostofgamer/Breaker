@@ -5,47 +5,36 @@ using UnityEngine;
 
 public class Mirror : Modification
 {
-    [SerializeField] private Platforma _originalPlatforma;
     [SerializeField] private MirrorPlatformaMover _mirrorPlatformaPrefab;
-    [SerializeField] private Transform _container;
-    [SerializeField]private BuffApplier _buffApplier;
-    [SerializeField]private DebuffApplier _debuffApplier;
-    // [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
     private MirrorPlatformaMover _mirrorPlatforma;
-    
-    public override void ApplyModification(Player player)
+
+    public override void ApplyModification()
     {
         if (Player.TryApplyEffect(this))
-            StartCoroutine(OnGetMirrorPlatform());
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
+            Coroutine = StartCoroutine(OnGetMirrorPlatform());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
-        Stop(_mirrorPlatforma);
+        Stop();
     }
-
-    /*public void GetMirrorPlatform(PlatformaMover platformaMover)
-    {
-        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnGetMirrorPlatform(platformaMover));
-    }*/
 
     private IEnumerator OnGetMirrorPlatform()
     {
-        _mirrorPlatforma = Instantiate(_mirrorPlatformaPrefab, _container);
-        _mirrorPlatforma.SetPlatform(_originalPlatforma.transform);
-        _mirrorPlatforma.GetComponent<PlatformaTrigger>().Init(_buffApplier, _debuffApplier);
-        yield return _waitForSeconds;
-        Stop(_mirrorPlatforma);
-        /*mirrorPlatforma.gameObject.SetActive(false);
-        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);*/
+        _mirrorPlatformaPrefab.gameObject.SetActive(true);
+        yield return WaitForSeconds;
+        Stop();
+        Player.DeleteEffect(this);
     }
 
-    private void Stop(MirrorPlatformaMover mirrorPlatformaMover)
+    private void Stop()
     {
-        mirrorPlatformaMover.gameObject.SetActive(false);
-        Player.DeleteEffect(this);
+        _mirrorPlatformaPrefab.gameObject.SetActive(false);
     }
 }

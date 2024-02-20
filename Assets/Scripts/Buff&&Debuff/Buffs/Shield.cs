@@ -1,43 +1,36 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shield : Modification
 {
     [SerializeField] private GameObject _shield;
-    // [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
-
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
-        if (player.TryApplyEffect(this))
-            StartCoroutine(OnShieldActivated());
+        if (Player.TryApplyEffect(this))
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine); 
+            
+            Coroutine = StartCoroutine(OnShieldActivated());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
-        
+        Stop();
     }
-
-    /*public void ShieldActivated(PlatformaMover platformaMover)
-    {
-        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnShieldActivated(platformaMover));
-    }*/
 
     private IEnumerator OnShieldActivated()
     {
         _shield.SetActive(true);
-        yield return _waitForSeconds;
+        yield return WaitForSeconds;
         Stop();
-        /*_shield.SetActive(false);
-        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);*/
+        Player.DeleteEffect(this);
     }
 
     private void Stop()
     {
         _shield.SetActive(false);
-        Player.DeleteEffect(this);
     }
 }

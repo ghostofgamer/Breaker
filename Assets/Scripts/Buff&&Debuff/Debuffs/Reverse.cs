@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Reverse : Modification
 {
-    // [SerializeField] protected BuffType _buffType;
-
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
-    
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
         if (Player.TryApplyEffect(this))
+        {
+            if(Coroutine!=null)
+                StopCoroutine(Coroutine);
+            
             StartCoroutine(OnReversePaddleActivated());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
         Stop();
     }
@@ -22,21 +23,13 @@ public class Reverse : Modification
     private void Stop()
     {
         PlatformaMover.SetReverse(false);
-        Player.DeleteEffect(this);
     }
-
-    /*public void ReversePaddleActivated(PlatformaMover platformaMover)
-    {
-        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnReversePaddleActivated(platformaMover));
-    }*/
 
     private IEnumerator OnReversePaddleActivated()
     {
         PlatformaMover.SetReverse(true);
-        yield return _waitForSeconds;
+        yield return WaitForSeconds;
         Stop();
-        /*platformaMover.SetReverse(false);
-        platformaMover.GetComponent<Platforma>().DeleteEffect(_buffType);*/
+        Player.DeleteEffect(this);
     } 
 }

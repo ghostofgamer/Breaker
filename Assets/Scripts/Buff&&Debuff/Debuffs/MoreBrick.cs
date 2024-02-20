@@ -9,44 +9,34 @@ public class MoreBrick : Modification
     [SerializeField] private GameObject _brickPrefab;
     [SerializeField] private float _spawnRadius;
     [SerializeField] private Transform _spawnPosition;
-    // [SerializeField] protected BuffType _buffType;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.165f);
-
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
         if (Player.TryApplyEffect(this))
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
             StartCoroutine(OnMoreBricksActivated());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
-        Stop();
     }
-    
-    /*public void MoreBricksActivated(PlatformaMover platformaMover)
-    {
-        if (platformaMover.GetComponent<Platforma>().TryApplyEffect(_buffType))
-            StartCoroutine(OnMoreBricksActivated(platformaMover));
-    }*/
-    
+
     private IEnumerator OnMoreBricksActivated()
     {
         for (int i = 0; i < _amountBricks; i++)
         {
-            Vector3 randomPoint = UnityEngine.Random.insideUnitCircle * _spawnRadius;
+            Vector3 randomPoint = Random.insideUnitCircle * _spawnRadius;
             Vector3 spawnPosition = _spawnPosition.position + new Vector3(randomPoint.x, 0, randomPoint.y);
             GameObject cube = Instantiate(_brickPrefab, _bricksContainer);
             cube.transform.position = spawnPosition;
             cube.transform.localScale = Vector3.one;
-            yield return _waitForSeconds;
+            yield return WaitForSeconds;
         }
-
-        Stop();
-    }
-
-    private void Stop()
-    {
+        
         Player.DeleteEffect(this);
     }
 }

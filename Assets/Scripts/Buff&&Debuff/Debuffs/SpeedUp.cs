@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class SpeedUp : Modification
 {
-    // [SerializeField] protected BuffType _buffType;
-
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(5f);
     private float _startSpeed;
 
-    public override void ApplyModification(Player player)
+    public override void ApplyModification()
     {
         if (Player.TryApplyEffect(this))
+        {
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
             StartCoroutine(OnSpeedUpActivated());
+        }
     }
 
-    public override void StopModification(Player player)
+    public override void StopModification()
     {
         Stop();
     }
@@ -23,22 +25,14 @@ public class SpeedUp : Modification
     private void Stop()
     {
         BallPortalMover.SetValue(_startSpeed);
-        Player.DeleteEffect(this);
     }
-
-    /*public void SpeedUpActivated(BallPortalMover ballPortalMover)
-    {
-        if (ballPortalMover.GetComponent<Ball>().TryApplyEffect(_buffType))
-            StartCoroutine(OnSpeedUpActivated(ballPortalMover));
-    }*/
 
     private IEnumerator OnSpeedUpActivated()
     {
         _startSpeed = BallPortalMover.Speed;
         BallPortalMover.SetValue(_startSpeed * 2);
-        yield return _waitForSeconds;
+        yield return WaitForSeconds;
         Stop();
-        /*ballPortalMover.SetValue(_startSpeed);
-        ballPortalMover.GetComponent<Ball>().DeleteEffect(_buffType);*/
+        Player.DeleteEffect(this);
     }
 }
