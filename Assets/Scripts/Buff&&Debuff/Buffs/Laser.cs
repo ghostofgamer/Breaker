@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,10 +10,22 @@ public class Laser : Modification
     [SerializeField] private float _timeBetweenShots;
 
     private float _elapsedTime = 0;
+    private bool _isActive = false;
 
     protected override void Start()
     {
         WaitForSeconds = new WaitForSeconds(_timeBetweenShots);
+    }
+
+    private void Update()
+    {
+        if (_isActive)
+        {
+            _elapsedTime += Time.deltaTime;
+
+            if (_elapsedTime >= Duration)
+                _isActive = false;
+        }
     }
 
     public override void ApplyModification()
@@ -22,19 +35,7 @@ public class Laser : Modification
             if (Coroutine != null)
                 StopCoroutine(Coroutine);
 
-            SetActive(true);
-            _elapsedTime = 0;
-
-
             Coroutine = StartCoroutine(OnShoot());
-
-            while (_elapsedTime < Duration)
-            {
-                _elapsedTime += Time.deltaTime;
-            }
-
-            Stop();
-            Player.DeleteEffect(this);
         }
     }
 
@@ -45,23 +46,23 @@ public class Laser : Modification
 
     private IEnumerator OnShoot()
     {
+        _elapsedTime = 0;
         SetActive(true);
-        /*_elapsedTime = 0;
+        _isActive = true;
 
-        while (_elapsedTime < Duration)
-        {*/
-        _weapon.Shoot();
-        yield return WaitForSeconds;
-        /*_elapsedTime += Time.deltaTime;
-    }*/
+        while (_isActive)
+        {
+            _weapon.Shoot();
+            yield return WaitForSeconds;
+        }
 
-        // Stop();
+        Stop();
         Player.DeleteEffect(this);
     }
 
     private void Stop()
     {
         SetActive(false);
-        StopCoroutine(Coroutine);
+        _isActive = false;
     }
 }
