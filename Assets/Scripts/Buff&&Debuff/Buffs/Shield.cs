@@ -23,6 +23,7 @@ public class Shield : Modification
 
     private IEnumerator OnShieldActivated()
     {
+        SetActive(true);
         _shield.SetActive(true);
         yield return WaitForSeconds;
         Stop();
@@ -31,6 +32,7 @@ public class Shield : Modification
 
     private void Stop()
     {
+        SetActive(false);
         _shield.SetActive(false);
     }
 }

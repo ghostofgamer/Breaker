@@ -24,11 +24,13 @@ public class SpeedUp : Modification
 
     private void Stop()
     {
+        SetActive(false);
         BallPortalMover.SetValue(_startSpeed);
     }
 
     private IEnumerator OnSpeedUpActivated()
     {
+        SetActive(true);
         _startSpeed = BallPortalMover.Speed;
         BallPortalMover.SetValue(_startSpeed * 2);
         yield return WaitForSeconds;

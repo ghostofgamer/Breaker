@@ -27,6 +27,7 @@ public class Mirror : Modification
 
     private IEnumerator OnGetMirrorPlatform()
     {
+        SetActive(true);
         _mirrorPlatformaPrefab.gameObject.SetActive(true);
         yield return WaitForSeconds;
         Stop();
@@ -35,6 +36,7 @@ public class Mirror : Modification
 
     private void Stop()
     {
+        SetActive(false);
         _mirrorPlatformaPrefab.gameObject.SetActive(false);
     }
 }

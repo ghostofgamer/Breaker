@@ -17,6 +17,7 @@ public abstract class PaddleChanger : Modification
     
     protected IEnumerator OnPaddleSizeChanger()
     {
+        SetActive(true);
         Change();
         yield return WaitForSeconds;
         Reset();
@@ -32,6 +33,7 @@ public abstract class PaddleChanger : Modification
 
     protected void Reset()
     {
+        SetActive(false);
         PlatformaMover.transform.localScale = _standardScale;
     }
 }

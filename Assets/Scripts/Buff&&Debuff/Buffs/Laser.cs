@@ -7,7 +7,7 @@ public class Laser : Modification
 {
     [SerializeField] private Weapon _weapon;
     [SerializeField] private float _timeBetweenShots;
-    
+
     private float _elapsedTime = 0;
 
     protected override void Start()
@@ -22,7 +22,19 @@ public class Laser : Modification
             if (Coroutine != null)
                 StopCoroutine(Coroutine);
 
+            SetActive(true);
+            _elapsedTime = 0;
+
+
             Coroutine = StartCoroutine(OnShoot());
+
+            while (_elapsedTime < Duration)
+            {
+                _elapsedTime += Time.deltaTime;
+            }
+
+            Stop();
+            Player.DeleteEffect(this);
         }
     }
 
@@ -33,23 +45,23 @@ public class Laser : Modification
 
     private IEnumerator OnShoot()
     {
-        SetActiveImage(true);
-        _elapsedTime = 0;
+        SetActive(true);
+        /*_elapsedTime = 0;
 
         while (_elapsedTime < Duration)
-        {
-            _weapon.Shoot();
-            yield return WaitForSeconds;
-            _elapsedTime += Time.deltaTime;
-        }
+        {*/
+        _weapon.Shoot();
+        yield return WaitForSeconds;
+        /*_elapsedTime += Time.deltaTime;
+    }*/
 
-        Stop();
+        // Stop();
         Player.DeleteEffect(this);
     }
 
     private void Stop()
     {
-        SetActiveImage(false);
+        SetActive(false);
         StopCoroutine(Coroutine);
     }
 }

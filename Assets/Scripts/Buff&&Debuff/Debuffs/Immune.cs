@@ -41,6 +41,8 @@ public class Immune : Modification
 
     private void GetBricks(bool immortalBrick)
     {
+        SetActive(true);
+        
         for (int i = 0; i < _bricksContainer.childCount; i++)
             _bricks.Add(_bricksContainer.GetChild(i));
 
@@ -50,6 +52,7 @@ public class Immune : Modification
 
     private void Stop()
     {
+        SetActive(false);
         GetBricks(false);
     }
 }

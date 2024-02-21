@@ -17,6 +17,7 @@ public abstract class BallSizeChanger : Modification
 
     protected IEnumerator OnBallChangeSize(BallPortalMover ballPortalMover)
     {
+        SetActive(true);
         Change();
         yield return WaitForSeconds;
         Reset();
@@ -33,6 +34,7 @@ public abstract class BallSizeChanger : Modification
 
     protected void Reset()
     {
+        SetActive(false);
         BallPortalMover.transform.localScale = _standardScale;
         // BallPortalMover.SetRadius(-_sizeChange);
     }

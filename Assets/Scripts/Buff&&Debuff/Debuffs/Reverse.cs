@@ -22,11 +22,13 @@ public class Reverse : Modification
 
     private void Stop()
     {
+        SetActive(false);
         PlatformaMover.SetReverse(false);
     }
 
     private IEnumerator OnReversePaddleActivated()
     {
+        SetActive(true);
         PlatformaMover.SetReverse(true);
         yield return WaitForSeconds;
         Stop();

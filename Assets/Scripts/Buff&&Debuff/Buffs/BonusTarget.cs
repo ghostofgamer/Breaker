@@ -51,6 +51,7 @@ public class BonusTarget : Modification
 
     private void Change()
     {
+        SetActive(true);
         _randomIndex = GetRandomIndex(filtredBrick.Count);
         _randomEffectIndex = GetRandomIndex(_effects.Length);
         _startMaterial = filtredBrick[_randomIndex].GetComponent<Renderer>().material;
@@ -67,6 +68,7 @@ public class BonusTarget : Modification
     
     private void Reset()
     {
+        SetActive(false);
         filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_startEffect);
         filtredBrick[_randomIndex].GetComponent<Renderer>().material = _startMaterial;
     }

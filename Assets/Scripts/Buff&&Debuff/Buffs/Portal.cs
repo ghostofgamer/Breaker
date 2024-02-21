@@ -32,6 +32,8 @@ public class Portal : Modification
 
     private void SetValue(bool value)
     {
+        SetActive(value);
+        
         foreach (var wall in _walls)
             wall.GetComponent<BoxCollider>().enabled = !value;
 

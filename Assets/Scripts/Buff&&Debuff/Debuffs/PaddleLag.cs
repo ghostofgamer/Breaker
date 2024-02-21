@@ -26,11 +26,13 @@ public class PaddleLag : Modification
 
     private void Stop()
     {
+        SetActive(false);
         PlatformaMover.SetValue(_startSpeed);
     }
 
     private IEnumerator OnPaddleLagActivated()
     {
+        SetActive(true);
         _startSpeed = PlatformaMover.Speed;
         PlatformaMover.SetValue(_startSpeed / _speedChanger);
         yield return WaitForSeconds;
