@@ -1410,6 +1410,11 @@
             <e p="Neutral.cs" t="Include" />
             <e p="PaddleChanger.cs" t="Include" />
           </e>
+          <e p="Bullet" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="BulletMover.cs" t="Include" />
+            <e p="Bullettrigger.cs" t="Include" />
+          </e>
           <e p="Camera" t="Include">
             <e p="CameraDistance.cs" t="Include" />
             <e p="CameraMover.cs" t="Include" />
@@ -1445,11 +1450,6 @@
             <e p="WaveMotion.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
-            <e p="Bullet" t="Include">
-              <e p="Bullet.cs" t="Include" />
-              <e p="BulletMover.cs" t="Include" />
-              <e p="Bullettrigger.cs" t="Include" />
-            </e>
             <e p="PlatformaContent" t="Include">
               <e p="MirrorPlatformaMover.cs" t="Include" />
               <e p="Platforma.cs" t="Include" />
@@ -1461,9 +1461,6 @@
               <e p="PlatformController.cs" t="Include" />
             </e>
             <e p="Wallet.cs" t="Include" />
-            <e p="Weapon" t="Include">
-              <e p="Weapon.cs" t="Include" />
-            </e>
           </e>
           <e p="Save&amp;Load" t="Include">
             <e p="Load.cs" t="Include" />
@@ -1502,6 +1499,9 @@
             </e>
             <e p="Swipe.cs" t="Include" />
             <e p="SwipeLayout.cs" t="Include" />
+          </e>
+          <e p="Weapon" t="Include">
+            <e p="Weapon.cs" t="Include" />
           </e>
         </e>
         <e p="Sounds" t="Include" />

@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class BulletTrigger : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem _explosion;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out BrickDestroy brickDestroy))
         {
             brickDestroy.Destroy();
+        }
+
+        if (other.TryGetComponent(out Wall wall))
+        {
+            Instantiate(_explosion, transform.position, Quaternion.identity);
         }
     }
 }

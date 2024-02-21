@@ -20,8 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Laser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/LaserBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/LaserBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/Bullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/Bullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/BulletMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/BulletMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/BulletTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/Bullettrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapon/Weapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapon/Weapon.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +45,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Tests/NEW.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/MaskObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraDistance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/ReflectNew.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,10 +88,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/SettingsScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Knob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/BallSizeChanger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Weapon/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save&amp;Load/Load.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bonus/BonusMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/AbstractButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,7 +114,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/BuffUIFade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/BuffInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bullet/BulletMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Neutral/RandomEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/BonusTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Swipe.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/BulletMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/TriggerBul.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Levels/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Bullet/BulletTrigger.cs" />
@@ -157,11 +166,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Shield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Modification.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/PaddleLag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Reverse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/SpeedUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Laser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrigger.cs" />
       </list>
     </option>
   </component>
@@ -232,7 +242,7 @@
       <workItem from="1708251913647" duration="9717000" />
       <workItem from="1708333622769" duration="18802000" />
       <workItem from="1708411051976" duration="19330000" />
-      <workItem from="1708504463600" duration="6026000" />
+      <workItem from="1708504463600" duration="8171000" />
     </task>
     <servers />
   </component>
@@ -281,10 +291,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1708335186660" />
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1708349852099">
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1708511219019">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1708349852099" />
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1708511219019" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

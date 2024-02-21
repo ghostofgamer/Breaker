@@ -28,20 +28,20 @@ public class Immune : Modification
 
     public override void StopModification()
     {
-        Stop();
+        ChangeBricksImmortal(false);
     }
 
     private IEnumerator OnImmuneBricksActivated()
     {
-        GetBricks(true);
+        ChangeBricksImmortal(true);
         yield return WaitForSeconds;
-        Stop();
+        ChangeBricksImmortal(false);
         Player.DeleteEffect(this);
     }
 
-    private void GetBricks(bool immortalBrick)
+    private void ChangeBricksImmortal(bool immortalBrick)
     {
-        SetActive(true);
+        SetActive(immortalBrick);
         
         for (int i = 0; i < _bricksContainer.childCount; i++)
             _bricks.Add(_bricksContainer.GetChild(i));
@@ -50,9 +50,9 @@ public class Immune : Modification
             brick.GetComponent<BrickDestroy>().SetBoolImmortal(immortalBrick);
     }
 
+    /*
     private void Stop()
     {
-        SetActive(false);
         GetBricks(false);
-    }
+    }*/
 }
