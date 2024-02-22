@@ -9,7 +9,7 @@ public class BallPortalMover : MonoBehaviour
     [SerializeField] private float _xMaxPosition;
     [SerializeField] private float _zMaxPosition;
     [SerializeField] private float _zMinPosition;
-[SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     public float speed = 10.0f;
     public LayerMask wallLayer;
