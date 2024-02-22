@@ -1158,6 +1158,7 @@
           <e p="ChooseLvl" t="Include">
             <e p="Materials" t="Include" />
           </e>
+          <e p="Portal" t="Include" />
           <e p="TargetCube" t="Include" />
         </e>
         <e p="Models" t="Include" />
@@ -1332,6 +1333,11 @@
           <e p="Particles" t="Include" />
           <e p="Shield" t="Include" />
         </e>
+        <e p="Rays" t="Include">
+          <e p="GradientShaders" t="Include">
+            <e p="MainShader" t="Include" />
+          </e>
+        </e>
         <e p="Samples" t="Include">
           <e p="Web Utility" t="Include">
             <e p="3.1.0" t="Include">
@@ -1462,6 +1468,7 @@
             </e>
             <e p="Wallet.cs" t="Include" />
           </e>
+          <e p="PortalMoving.cs" t="Include" />
           <e p="Save&amp;Load" t="Include">
             <e p="Load.cs" t="Include" />
             <e p="Save.cs" t="Include" />
@@ -1587,6 +1594,42 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
             <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+        <e p="Ultimate 10 Plus Shaders" t="Include">
+          <e p="3D Models" t="Include" />
+          <e p="Materials" t="Include">
+            <e p="Textures" t="Include" />
+            <e p="Unique" t="Include" />
+          </e>
+          <e p="Scenes" t="Include">
+            <e p="Review" t="Include" />
+            <e p="Review_Profiles" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="U10PS_DissolveOverTime.cs" t="Include" />
+            <e p="U10PS_ExampleReview.cs" t="Include" />
+            <e p="U10PS_MouseRotation.cs" t="Include" />
+            <e p="U10PS_SnowOverTime.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="Blur.shader" t="Include" />
+            <e p="Depth Mask Edge Detection.shader" t="Include" />
+            <e p="Dissolve.shader" t="Include" />
+            <e p="Edge Detection.shader" t="Include" />
+            <e p="Force Field.shader" t="Include" />
+            <e p="Grass Sway.shader" t="Include" />
+            <e p="Lava3D.shader" t="Include" />
+            <e p="Ocean.shader" t="Include" />
+            <e p="Outline.shader" t="Include" />
+            <e p="Plasma.shader" t="Include" />
+            <e p="Plexus" t="Include">
+              <e p="Plexus Line.shader" t="Include" />
+              <e p="Plexus.compute" t="Include" />
+              <e p="Plexus.cs" t="Include" />
+            </e>
+            <e p="Simple Sine Wave.shader" t="Include" />
+            <e p="Snow.shader" t="Include" />
           </e>
         </e>
         <e p="WebGLTemplates" t="Include">
