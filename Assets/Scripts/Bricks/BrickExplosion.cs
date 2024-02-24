@@ -15,12 +15,6 @@ public class BrickExplosion : Brick
 
     private bool _wickBurning = false;
 
-    /*
-    private void Explode()
-    {
-        StartCoroutine(OnExplode());
-    }*/
-
     public override void Die()
     {
         if (!_wickBurning)
@@ -34,7 +28,8 @@ public class BrickExplosion : Brick
         _wickBurning = true;
         _bombFuseEffect.Play();
         yield return _waitForSeconds;
-        BrickCounter.ChangeValue(GetComponent<Brick>().Reward);
+        GetBonus();
+        BrickCounter.ChangeValue(Reward);
         Collider[] overlappingColliders = Physics.OverlapSphere(transform.position, _radius);
 
         for (int i = 0; i < overlappingColliders.Length; i++)

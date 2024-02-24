@@ -15,7 +15,7 @@ public class BonusCounter : MonoBehaviour
         ShowInfo();
     }
 
-    public void ChangeValue(int reward)
+    public void AddBonus(int reward)
     {
         _amountBonuses += reward;
         ShowInfo();

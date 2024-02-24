@@ -22,20 +22,16 @@
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Prefabs/Combat/Explosions/BulletExplosion/BulletExplosionGreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Prefabs/Combat/Explosions/BulletExplosion/BulletExplosionGreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Bonus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Bonus.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bricks/ExplosionBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bricks/ExplosionBrick.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bricks/SimpleBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bricks/SimpleBrick.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/MoreBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/MoreBrick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Capsula.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capsula.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallPortalMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallPortalMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BrickCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BrickCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/MirrorPlatformaMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SelectLevelButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Levels/Level.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameScene/FlyBonus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/TestBall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Mirror.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -128,9 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/MirrorPlatformaMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/PaddleGrowBuff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/BallShrink.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/PaddleShrinkBuff.cs" />
@@ -170,15 +164,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/PortalTeleporterBall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/InfoManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallPortalMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/MoreBrick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BrickCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/FlyBonus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" />
       </list>
     </option>
   </component>
@@ -256,7 +253,7 @@
       <workItem from="1708603114148" duration="1964000" />
       <workItem from="1708607407113" duration="4598000" />
       <workItem from="1708682524836" duration="11848000" />
-      <workItem from="1708761188868" duration="12428000" />
+      <workItem from="1708761188868" duration="16211000" />
     </task>
     <servers />
   </component>

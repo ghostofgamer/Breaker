@@ -32,7 +32,7 @@ public class BrickCounter : MonoBehaviour
     public void ChangeValue(int reward)
     {
         _brickCount--;
-        _bonusCounter.ChangeValue(reward);
+        _bonusCounter.AddBonus(reward);
         ShowInfo();
 
         if (_brickCount <= 0)

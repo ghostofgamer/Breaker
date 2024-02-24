@@ -123,11 +123,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BrickCounter: {fileID: 0}
-  _reward: 1
+  BonusPrefab: {fileID: 604276215291435035, guid: e36766bd7e49cb54d8252530060a7a53, type: 3}
+  IsBonus: 0
+  Reward: 1
+  BonusAmount: 0
   particleEffectPrefab: {fileID: 6562946427237796047}
   _effect: {fileID: 3514979827312504124, guid: 8810ee564f067ae4b8cfa14a22b8de27, type: 3}
-  _bonusPrefab: {fileID: 0}
-  _isBonus: 0
 --- !u!65 &4711740993265884422
 BoxCollider:
   m_ObjectHideFlags: 0

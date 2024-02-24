@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FlyBonus : MonoBehaviour
+{
+    private float _timeFlying = 1;
+    private float _elapsedTime = 0;
+
+    private void Update()
+    {
+        if (_elapsedTime >= _timeFlying)
+            gameObject.SetActive(false);
+
+        _elapsedTime += Time.deltaTime;
+        transform.Translate(-Vector3.forward * 10 * Time.deltaTime);
+    }
+}
