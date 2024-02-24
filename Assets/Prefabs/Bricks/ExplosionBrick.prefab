@@ -496,11 +496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -520,16 +520,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1846532623458322791}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8142616660242362292}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2254466960901289790}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7532238585638072445}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6350435303788069566}
@@ -539,18 +533,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
   m_PrefabInstance: {fileID: 7696215458421043229}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1846532623458322791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7354126399139171660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553f4ebd8dc2fb84abd879f650fc78b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8142616660242362292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -599,18 +581,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7532238585638072445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7354126399139171660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3699b2da59ada51418802ae48d0524ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6350435303788069566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7388c4a46dd774a804ebec5e871d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BrickCounter: {fileID: 0}
+  _reward: 2
   _radius: 13
   _force: 300
   _explodeEffect: {fileID: 7074772048753574144}

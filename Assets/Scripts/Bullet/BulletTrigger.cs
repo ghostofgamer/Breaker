@@ -8,14 +8,21 @@ public class BulletTrigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out BrickDestroy brickDestroy))
+        /*if (other.TryGetComponent(out BrickDestroy brickDestroy))
         {
             brickDestroy.Destroy();
+        }*/
+        
+        if (other.TryGetComponent(out Brick brick))
+        {
+            brick.Die();
+            gameObject.SetActive(false);
         }
-
+        
         if (other.TryGetComponent(out Wall wall))
         {
             Instantiate(_explosion, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
         }
     }
 }

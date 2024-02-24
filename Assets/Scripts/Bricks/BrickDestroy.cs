@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class BrickDestroy : MonoBehaviour
+public class BrickDestroy : Brick
 {
     [SerializeField] private GameObject particleEffectPrefab;
     [SerializeField] private Effect _effect;
     [SerializeField] private GameObject _bonusPrefab;
     [SerializeField] private bool _isBonus;
-    
+
     private float _bonusRadius = 1.65f;
     private bool _isImmortal = false;
     
@@ -21,7 +21,12 @@ public class BrickDestroy : MonoBehaviour
     {
     }
 
-    public void Destroy()
+    public override void Die()
+    {
+        Destroy();
+    }
+
+    private void Destroy()
     {
         if (_isImmortal)
             return;
@@ -32,8 +37,8 @@ public class BrickDestroy : MonoBehaviour
         if (_effect != null)
             Instantiate(_effect, transform.position, Quaternion.identity);
 
+        BrickCounter.ChangeValue(GetComponent<Brick>().Reward);
         GetBonus();
-        
         gameObject.SetActive(false);
     }
 

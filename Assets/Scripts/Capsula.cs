@@ -43,7 +43,7 @@ public class Capsula : MonoBehaviour
         }
         else
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 5f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 10f);
             _rotate = false;
         }
     }

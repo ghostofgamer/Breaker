@@ -7,14 +7,14 @@ using UnityEngine;
 public class Wallet : MonoBehaviour
 {
     [Range(0, 50000)] [SerializeField] private int _startMoney;
-    [SerializeField]private  TMP_Text _moneyText;
-    [SerializeField]private Save _save;
-    [SerializeField ] private Load _load;
-    
+    [SerializeField] private TMP_Text _moneyText;
+    [SerializeField] private Save _save;
+    [SerializeField] private Load _load;
+
     private int _money;
-    
-    public int Money =>_money;
-    
+
+    public int Money => _money;
+
     private void Start()
     {
         _money = _load.Get(Save.Money, _startMoney);
@@ -27,7 +27,7 @@ public class Wallet : MonoBehaviour
         SaveMoney();
         ShowInfo();
     }
-    
+
     public void RemoveMoney(int amount)
     {
         _money -= amount;

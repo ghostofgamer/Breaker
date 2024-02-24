@@ -38,12 +38,12 @@ public class BallController : MonoBehaviour
             if (hit.collider.TryGetComponent(out BrickDestroy brickDestroy))
             {
                  // Debug.Log("попал");
-                 brickDestroy.Destroy();
+                 // brickDestroy.Destroy();
             }
 
             if (hit.collider.TryGetComponent(out BrickExplosion brickExplosion))
             {
-                brickExplosion.Explode();
+                // brickExplosion.Explode();
             }
                
         }

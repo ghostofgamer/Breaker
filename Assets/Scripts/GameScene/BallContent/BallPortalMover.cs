@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class BallPortalMover : MonoBehaviour
 {
+    [SerializeField] private PortalTeleporterBall _portalTeleporterBall;
     [SerializeField] private float _xMinPosition;
     [SerializeField] private float _xMaxPosition;
     [SerializeField] private float _zMaxPosition;
     [SerializeField] private float _zMinPosition;
-    [SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private bool _isPortal = false;
+    // [SerializeField] private Wallet _wallet;
 
     public float speed = 10.0f;
     public LayerMask wallLayer;
@@ -18,7 +20,6 @@ public class BallPortalMover : MonoBehaviour
 
     public float Speed => speed;
 
-    [SerializeField] private bool _isPortal = false;
 
     void Start()
     {
@@ -36,21 +37,11 @@ public class BallPortalMover : MonoBehaviour
             (predictedPosition - transform.position).magnitude, wallLayer))
         {
             _direction = Vector3.Reflect(_direction, hit.normal);
-
-            /*if (hit.collider.TryGetComponent(out BrickDestroy brickDestroy))
-            {
-                brickDestroy.Destroy();
-            }
-
-            if (hit.collider.TryGetComponent(out BrickExplosion brickExplosion))
-            {
-                brickExplosion.Explode();
-            }*/
         }
         else
         {
             if (_isPortal)
-                PortalMover();
+                _portalTeleporterBall.TeleportBall();
 
             /*else
                 CheckBehindWall();*/
@@ -61,8 +52,16 @@ public class BallPortalMover : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.TryGetComponent(out BrickDestroy brickDestroy))
+        if (other.collider.TryGetComponent(out Brick brick))
         {
+            _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
+            brick.Die();
+        }
+        
+        
+        /*if (other.collider.TryGetComponent(out BrickDestroy brickDestroy))
+        {
+            
             _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
             brickDestroy.Destroy();
         }
@@ -71,19 +70,13 @@ public class BallPortalMover : MonoBehaviour
         {
             _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
             brickExplosion.Explode();
-        }
+        }*/
     }
 
     public void SetValue(float speed)
     {
         this.speed = speed;
     }
-
-    /*public void SetRadius(int value)
-    {
-        _radius = GetComponent<SphereCollider>().radius + value;
-        Debug.Log(_radius);
-    }*/
 
     [SerializeField] private float _rayLength = 10f;
 
@@ -124,37 +117,6 @@ public class BallPortalMover : MonoBehaviour
 
         Debug.DrawRay(ray.origin, ray.direction * _rayLength, Color.red);
         Debug.DrawRay(backray.origin, backray.direction * _rayLength, Color.green);
-    }
-
-    private void PortalMover()
-    {
-        if (transform.position.x > _xMaxPosition)
-        {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            transform.position = new Vector3(_xMinPosition, transform.position.y, transform.position.z);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-        }
-
-        if (transform.position.x < _xMinPosition)
-        {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            transform.position = new Vector3(_xMaxPosition, transform.position.y, transform.position.z);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-        }
-
-        if (transform.position.z < _zMinPosition)
-        {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            transform.position = new Vector3(transform.position.x, transform.position.y, _zMaxPosition);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-        }
-
-        if (transform.position.z > _zMaxPosition)
-        {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            transform.position = new Vector3(transform.position.x, transform.position.y, _zMinPosition);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-        }
     }
 
     // private void CheckBehindWall()
