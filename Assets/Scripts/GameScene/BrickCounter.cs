@@ -11,7 +11,9 @@ public class BrickCounter : MonoBehaviour
     [SerializeField] private Transform _bricksContainer;
     [SerializeField] private BonusCounter _bonusCounter;
     [SerializeField] private TMP_Text _brickCountTxt;
-    
+    [SerializeField] private TMP_Text _brickSmashedTxt;
+
+    private int _bricksSmashedCount;
     private List<Brick> _bricks;
     private int _brickCount = 0;
     
@@ -32,6 +34,7 @@ public class BrickCounter : MonoBehaviour
     public void ChangeValue(int reward)
     {
         _brickCount--;
+        _bricksSmashedCount++;
         _bonusCounter.AddBonus(reward);
         ShowInfo();
 
@@ -51,5 +54,6 @@ public class BrickCounter : MonoBehaviour
     private void ShowInfo()
     {
         _brickCountTxt.text = _brickCount.ToString();
+        _brickSmashedTxt.text = _bricksSmashedCount.ToString();
     }
 }
