@@ -12,29 +12,42 @@ public abstract class Brick : MonoBehaviour
     [SerializeField] protected bool IsBonus;
     [SerializeField] protected int Reward;
     [SerializeField] protected int BonusAmount;
+    [SerializeField] protected BuffDistributor BuffDistributor;
+    [SerializeField] protected bool IsImmortal = false;
+
+    [SerializeField] protected Effect Effect;
 
     private int _minBonus = 1;
     private int _maxBonus = 3;
     private float _bonusRadius = 1.65f;
+    private float _randomProcent = 0.5f;
     
+    public Effect EffectElement => Effect;
+    public bool IsImmortalFlag => IsImmortal;
+
     private void Start()
     {
-        IsBonus = Random.value > 0.5f;
-        BonusAmount = Random.Range(_minBonus, _maxBonus);
+        if (!IsImmortal)
+        {
+            IsBonus = Random.value > _randomProcent;
+            Effect = BuffDistributor.AssignEffect();
+            BonusAmount = Random.Range(_minBonus, _maxBonus);
+        }
     }
 
     public abstract void Die();
 
-    public void Init(BrickCounter brickCounter)
+    public void Init(BrickCounter brickCounter, BuffDistributor buffDistributor)
     {
         BrickCounter = brickCounter;
+        BuffDistributor = buffDistributor;
     }
 
     public void GetBonus()
     {
         if (!IsBonus)
             return;
-        
+
         for (int i = 0; i < BonusAmount; i++)
         {
             float angle = i * Mathf.PI * 2 / BonusAmount;
@@ -43,5 +56,18 @@ public abstract class Brick : MonoBehaviour
             Vector3 bonusPosition = new Vector3(x, transform.position.y, z);
             Instantiate(BonusPrefab, bonusPosition, Quaternion.identity);
         }
+    }
+
+    public void SetBoolImmortal(bool immortal)
+    {
+        IsImmortal = immortal;
+    }
+
+    protected void GetBuff()
+    {
+        if (Effect == null)
+            return;
+        
+        Instantiate(Effect, transform.position, Quaternion.identity);
     }
 }

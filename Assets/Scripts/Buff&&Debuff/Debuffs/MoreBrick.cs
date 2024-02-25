@@ -10,6 +10,7 @@ public class MoreBrick : Modification
     [SerializeField] private float _spawnRadius;
     [SerializeField] private Transform _spawnPosition;
     [SerializeField] private BrickCounter _brickCounter;
+    [SerializeField] private BuffDistributor _buffDistributor;
 
     public override void ApplyModification()
     {
@@ -33,7 +34,7 @@ public class MoreBrick : Modification
             Vector3 randomPoint = Random.insideUnitCircle * _spawnRadius;
             Vector3 spawnPosition = _spawnPosition.position + new Vector3(randomPoint.x, 0, randomPoint.y);
             GameObject cube = Instantiate(_brickPrefab, _bricksContainer);
-            cube.GetComponent<Brick>().Init(_brickCounter);
+            cube.GetComponent<Brick>().Init(_brickCounter,_buffDistributor);
             cube.transform.position = spawnPosition;
             cube.transform.localScale = Vector3.one;
             yield return WaitForSeconds;

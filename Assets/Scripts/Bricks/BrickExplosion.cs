@@ -17,6 +17,9 @@ public class BrickExplosion : Brick
 
     public override void Die()
     {
+        if (IsImmortal)
+            return;
+        
         if (!_wickBurning)
         {
             StartCoroutine(OnExplode());
@@ -29,6 +32,7 @@ public class BrickExplosion : Brick
         _bombFuseEffect.Play();
         yield return _waitForSeconds;
         GetBonus();
+        GetBuff();
         BrickCounter.ChangeValue(Reward);
         Collider[] overlappingColliders = Physics.OverlapSphere(transform.position, _radius);
 

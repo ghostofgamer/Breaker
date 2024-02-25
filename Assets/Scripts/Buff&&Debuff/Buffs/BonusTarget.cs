@@ -8,21 +8,21 @@ public class BonusTarget : Modification
     [SerializeField] private Transform _bricks;
     [SerializeField] private Material _newMaterial;
     [SerializeField] private Effect[] _effects;
-    
-    private List<Transform> filtredBrick;
+
+    private List<Transform> _filtredBrick;
     private int _randomIndex;
     private int _randomEffectIndex;
     private Effect _startEffect;
     private Material _startMaterial;
-    
+
     public override void ApplyModification()
     {
         if (Player.TryApplyEffect(this))
         {
-          if( Coroutine!=null)
-              StopCoroutine(Coroutine);
-          
-          StartCoroutine(OnBonusTargetActivated());
+            if (Coroutine != null)
+                StopCoroutine(Coroutine);
+
+            StartCoroutine(OnBonusTargetActivated());
         }
     }
 
@@ -33,9 +33,10 @@ public class BonusTarget : Modification
         for (int i = 0; i < _bricks.childCount; i++)
             bricksList.Add(_bricks.GetChild(i));
 
-        filtredBrick = bricksList.Where(p => p.gameObject.activeSelf == true).ToList();
+        _filtredBrick = bricksList.Where(p =>
+            p.gameObject.activeSelf == true && p.gameObject.GetComponent<Brick>().IsImmortalFlag == false).ToList();
 
-        if (filtredBrick.Count > 0)
+        if (_filtredBrick.Count > 0)
         {
             Change();
             yield return WaitForSeconds;
@@ -52,12 +53,12 @@ public class BonusTarget : Modification
     private void Change()
     {
         SetActive(true);
-        _randomIndex = GetRandomIndex(filtredBrick.Count);
+        _randomIndex = GetRandomIndex(_filtredBrick.Count);
         _randomEffectIndex = GetRandomIndex(_effects.Length);
-        _startMaterial = filtredBrick[_randomIndex].GetComponent<Renderer>().material;
-        _startEffect = filtredBrick[_randomIndex].GetComponent<BrickDestroy>().Effect;
-        filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_effects[_randomEffectIndex]);
-        filtredBrick[_randomIndex].GetComponent<Renderer>().material = _newMaterial;
+        _startMaterial = _filtredBrick[_randomIndex].GetComponent<Renderer>().material;
+        _startEffect = _filtredBrick[_randomIndex].GetComponent<BrickDestroy>().EffectElement;
+        _filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_effects[_randomEffectIndex]);
+        _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _newMaterial;
     }
 
     private int GetRandomIndex(int count)
@@ -65,11 +66,11 @@ public class BonusTarget : Modification
         var random = new System.Random();
         return random.Next(count);
     }
-    
+
     private void Reset()
     {
         SetActive(false);
-        filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_startEffect);
-        filtredBrick[_randomIndex].GetComponent<Renderer>().material = _startMaterial;
+        _filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_startEffect);
+        _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _startMaterial;
     }
 }

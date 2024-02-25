@@ -1382,6 +1382,7 @@
           <e p="Buff&amp;&amp;Debuff" t="Include">
             <e p="BallSizeChanger.cs" t="Include" />
             <e p="Buff.cs" t="Include" />
+            <e p="BuffDistributor.cs" t="Include" />
             <e p="BuffMover.cs" t="Include" />
             <e p="Buffs" t="Include">
               <e p="BallGrow.cs" t="Include" />
@@ -1485,6 +1486,10 @@
             <e p="GameReady.cs" t="Include" />
             <e p="SdkInitialization.cs" t="Include" />
           </e>
+          <e p="Statistics" t="Include">
+            <e p="BuffCounter.cs" t="Include" />
+            <e p="LevelTimer.cs" t="Include" />
+          </e>
           <e p="Test" t="Include">
             <e p="SwipeTest.cs" t="Include" />
           </e>
@@ -1501,6 +1506,7 @@
               <e p="CloseInfoScreenButton.cs" t="Include" />
               <e p="CloseShopButton.cs" t="Include" />
               <e p="InfoButton.cs" t="Include" />
+              <e p="PauseButton.cs" t="Include" />
               <e p="PlayButton.cs" t="Include" />
               <e p="SelectLevelButton.cs" t="Include" />
               <e p="SettingsButton.cs" t="Include" />
@@ -1510,6 +1516,10 @@
             <e p="Knob.cs" t="Include" />
             <e p="MaskUi3D.cs" t="Include" />
             <e p="Screens" t="Include">
+              <e p="EndScreens" t="Include">
+                <e p="EndScreen.cs" t="Include" />
+                <e p="VictoryScreen.cs" t="Include" />
+              </e>
               <e p="MainScreen.cs" t="Include" />
               <e p="SettingsScreen.cs" t="Include" />
               <e p="ShopBackGround.cs" t="Include" />
@@ -1544,6 +1554,7 @@
             <e p="SettingsButton" t="Include" />
           </e>
           <e p="ChooseLvl" t="Include" />
+          <e p="EndScreen" t="Include" />
           <e p="Icons" t="Include" />
           <e p="Materials" t="Include" />
           <e p="NEWBUTTONS" t="Include">

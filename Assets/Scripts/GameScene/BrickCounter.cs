@@ -17,18 +17,12 @@ public class BrickCounter : MonoBehaviour
     private List<Brick> _bricks;
     private int _brickCount = 0;
     
-    private event UnityAction AllBrickDestory;
+    public event UnityAction AllBrickDestory;
     
     private void Start()
     {
         _brickCount = _bricksContainer.childCount;
         ShowInfo();
-        /*_bricks = new List<Brick>();
-
-        for (int i = 0; i < _bricksContainer.childCount; i++)
-        {
-            _bricks.Add(_bricksContainer.GetChild(i).GetComponent<Brick>());
-        }*/
     }
 
     public void ChangeValue(int reward)

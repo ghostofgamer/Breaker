@@ -7,11 +7,6 @@ using Random = UnityEngine.Random;
 public class BrickDestroy : Brick
 {
     [SerializeField] private GameObject particleEffectPrefab;
-    [SerializeField] private Effect _effect;
-
-    private bool _isImmortal = false;
-
-    public Effect Effect => _effect;
 
     public override void Die()
     {
@@ -20,14 +15,13 @@ public class BrickDestroy : Brick
 
     private void Destroy()
     {
-        if (_isImmortal)
+        if (IsImmortal)
             return;
         
         particleEffectPrefab.SetActive(true);
         particleEffectPrefab.transform.parent = null;
 
-        if (_effect != null)
-            Instantiate(_effect, transform.position, Quaternion.identity);
+        GetBuff();
 
         BrickCounter.ChangeValue(Reward);
         GetBonus();
@@ -36,16 +30,6 @@ public class BrickDestroy : Brick
 
     public void SetEffect(Effect effect)
     {
-        _effect = effect;
-    }
-    
-    public void SetBoolValue(bool isBonus)
-    {
-        IsBonus = isBonus;
-    }
-
-    public void SetBoolImmortal(bool immortal)
-    {
-        _isImmortal = immortal;
+        Effect = effect;
     }
 }
