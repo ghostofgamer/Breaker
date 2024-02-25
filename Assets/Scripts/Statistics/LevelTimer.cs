@@ -8,8 +8,6 @@ using UnityEngine;
 public class LevelTimer : MonoBehaviour
 {
     [SerializeField] private TMP_Text _timer;
-    [SerializeField] private BrickCounter _brickCounter;
-    [SerializeField] private VictoryScreen _victoryScreen;
 
     private Stopwatch stopwatch;
     private float _startTime;
@@ -33,20 +31,9 @@ public class LevelTimer : MonoBehaviour
         _timer.text = "Time: " + _timeString;
     }
 
-    private void OnEnable()
+    public string GetTime()
     {
-        _brickCounter.AllBrickDestory += OnStopTime;
-    }
-
-    private void OnDisable()
-    {
-        _brickCounter.AllBrickDestory -= OnStopTime;
-    }
-
-    private void OnStopTime()
-    {
-        _victoryScreen.SetTime(_timeString);
         _levelComplite = true;
-        // _timer.text = "Time: " + _timeString;
+        return _timeString;
     }
 }

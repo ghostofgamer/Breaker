@@ -27,9 +27,4 @@ public class BrickDestroy : Brick
         GetBonus();
         gameObject.SetActive(false);
     }
-
-    public void SetEffect(Effect effect)
-    {
-        Effect = effect;
-    }
 }

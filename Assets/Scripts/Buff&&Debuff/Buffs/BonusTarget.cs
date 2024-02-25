@@ -8,6 +8,7 @@ public class BonusTarget : Modification
     [SerializeField] private Transform _bricks;
     [SerializeField] private Material _newMaterial;
     [SerializeField] private Effect[] _effects;
+    [SerializeField] private BuffCounter _buffCounter;
 
     private List<Transform> _filtredBrick;
     private int _randomIndex;
@@ -29,12 +30,15 @@ public class BonusTarget : Modification
     private IEnumerator OnBonusTargetActivated()
     {
         List<Transform> bricksList = new List<Transform>();
+        _filtredBrick = new List<Transform>();
 
         for (int i = 0; i < _bricks.childCount; i++)
             bricksList.Add(_bricks.GetChild(i));
 
-        _filtredBrick = bricksList.Where(p =>
-            p.gameObject.activeSelf == true && p.gameObject.GetComponent<Brick>().IsImmortalFlag == false).ToList();
+
+        _filtredBrick = bricksList
+            .Where(p => p.gameObject.activeSelf == true && !p.gameObject.GetComponent<Brick>().IsEternal).ToList();
+
 
         if (_filtredBrick.Count > 0)
         {
@@ -56,8 +60,14 @@ public class BonusTarget : Modification
         _randomIndex = GetRandomIndex(_filtredBrick.Count);
         _randomEffectIndex = GetRandomIndex(_effects.Length);
         _startMaterial = _filtredBrick[_randomIndex].GetComponent<Renderer>().material;
-        _startEffect = _filtredBrick[_randomIndex].GetComponent<BrickDestroy>().EffectElement;
-        _filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_effects[_randomEffectIndex]);
+        _startEffect = _filtredBrick[_randomIndex].GetComponent<Brick>().EffectElement;
+
+        if (_startEffect == null)
+        {
+            _buffCounter.IncreaseBuffCount();
+        }
+
+        _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_effects[_randomEffectIndex],true);
         _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _newMaterial;
     }
 
@@ -70,7 +80,11 @@ public class BonusTarget : Modification
     private void Reset()
     {
         SetActive(false);
-        _filtredBrick[_randomIndex].GetComponent<BrickDestroy>().SetEffect(_startEffect);
+
+        _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_startEffect,false);
         _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _startMaterial;
+
+        if (_filtredBrick[_randomIndex].gameObject.activeSelf != false && _startEffect == null)
+            _buffCounter.DecreaseBuffCount();
     }
 }

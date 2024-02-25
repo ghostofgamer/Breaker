@@ -37,10 +37,11 @@ public class MoreBrick : Modification
             cube.GetComponent<Brick>().Init(_brickCounter,_buffDistributor);
             cube.transform.position = spawnPosition;
             cube.transform.localScale = Vector3.one;
+            // _brickCounter.AddBricks(_amountBricks);
             yield return WaitForSeconds;
         }
+
         
-        _brickCounter.AddBricks(_amountBricks);
         Player.DeleteEffect(this);
     }
 }

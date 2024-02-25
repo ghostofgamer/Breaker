@@ -12,17 +12,19 @@ public class BrickCounter : MonoBehaviour
     [SerializeField] private BonusCounter _bonusCounter;
     [SerializeField] private TMP_Text _brickCountTxt;
     [SerializeField] private TMP_Text _brickSmashedTxt;
-
+    [SerializeField] private ScoreCounter _scoreCounter;
+    
     private int _bricksSmashedCount;
     private List<Brick> _bricks;
     private int _brickCount = 0;
+    private int _score = 5;
     
     public event UnityAction AllBrickDestory;
-    
+
     private void Start()
     {
-        _brickCount = _bricksContainer.childCount;
-        ShowInfo();
+        /*_brickCount = _bricksContainer.childCount;
+        ShowInfo();*/
     }
 
     public void ChangeValue(int reward)
@@ -31,7 +33,8 @@ public class BrickCounter : MonoBehaviour
         _bricksSmashedCount++;
         _bonusCounter.AddBonus(reward);
         ShowInfo();
-
+        _scoreCounter.IncreaseScore(_score);
+        
         if (_brickCount <= 0)
         {
             Debug.Log("Victory");
@@ -41,13 +44,20 @@ public class BrickCounter : MonoBehaviour
 
     public void AddBricks(int bricksCount)
     {
-        _brickCount += bricksCount;
+        _brickCount++;
+Debug.Log("Brick");
+        // _brickCount += bricksCount;
         ShowInfo();
     }
-    
+
     private void ShowInfo()
     {
         _brickCountTxt.text = _brickCount.ToString();
         _brickSmashedTxt.text = _bricksSmashedCount.ToString();
+    }
+
+    public string GetAmountSmashed()
+    {
+        return _bricksSmashedCount.ToString();
     }
 }

@@ -5,16 +5,15 @@ using UnityEngine;
 public class PlatformaMover : MonoBehaviour
 {
     [SerializeField] private GameObject _positionMouse;
+    
+    public float moveSpeed = 5f; 
+    public float offset = 1f; 
+    public float minX = -5f; 
+    public float maxX = 5f;
+    public float minZ = -5f; 
+    public float maxZ = 5f; 
 
-
-    public float moveSpeed = 5f; // Скорость движения платформы
-    public float offset = 1f; // Оффсет от точки, куда нажали мышь
-    public float minX = -5f; // Минимальная позиция по оси X
-    public float maxX = 5f; // Максимальная позиция по оси X
-    public float minZ = -5f; // Минимальная позиция по оси Z
-    public float maxZ = 5f; // Максимальная позиция по оси Z
-
-    private bool isMousePressed = false; // Флаг, указывающий, нажата ли мышь
+    private bool isMousePressed = false;
     private bool _isReverse = false;
 
     public float Speed => moveSpeed;

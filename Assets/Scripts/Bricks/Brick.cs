@@ -14,24 +14,29 @@ public abstract class Brick : MonoBehaviour
     [SerializeField] protected int BonusAmount;
     [SerializeField] protected BuffDistributor BuffDistributor;
     [SerializeField] protected bool IsImmortal = false;
-
     [SerializeField] protected Effect Effect;
+
+    [SerializeField] private GameObject _targetVisual;
+    [SerializeField] private FragmentsCounter _fragmentsCounter;
+    [SerializeField] private bool _isEternal = false;
 
     private int _minBonus = 1;
     private int _maxBonus = 3;
     private float _bonusRadius = 1.65f;
     private float _randomProcent = 0.5f;
-    
+
     public Effect EffectElement => Effect;
     public bool IsImmortalFlag => IsImmortal;
+    public bool IsEternal => _isEternal;
 
     private void Start()
     {
-        if (!IsImmortal)
+        if (!_isEternal)
         {
             IsBonus = Random.value > _randomProcent;
             Effect = BuffDistributor.AssignEffect();
             BonusAmount = Random.Range(_minBonus, _maxBonus);
+            BrickCounter.AddBricks(0);
         }
     }
 
@@ -48,6 +53,8 @@ public abstract class Brick : MonoBehaviour
         if (!IsBonus)
             return;
 
+        _fragmentsCounter.SetAmountFragments(BonusAmount);
+        
         for (int i = 0; i < BonusAmount; i++)
         {
             float angle = i * Mathf.PI * 2 / BonusAmount;
@@ -63,11 +70,17 @@ public abstract class Brick : MonoBehaviour
         IsImmortal = immortal;
     }
 
+    public void SetEffect(Effect effect, bool activation)
+    {
+        Effect = effect;
+        _targetVisual.SetActive(activation);
+    }
+
     protected void GetBuff()
     {
         if (Effect == null)
             return;
-        
+
         Instantiate(Effect, transform.position, Quaternion.identity);
     }
 }

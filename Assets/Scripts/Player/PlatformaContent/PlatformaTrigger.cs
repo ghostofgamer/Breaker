@@ -9,12 +9,17 @@ public class PlatformaTrigger : MonoBehaviour
     [SerializeField] private DebuffApplier _debuffApplier;
     [SerializeField] private NeutralApplier _neutralApplier;
     [SerializeField] private BonusCounter _bonusCounter;
+    [SerializeField] private BuffCounter _buffCounter;
+    [SerializeField] private FragmentsCounter _fragmentsCounter;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out Buff buff))
+        {
+            _buffCounter.CollectBuff();
             CatchEffect(_buffApplier, buff);
-
+        }
+        
         if (other.TryGetComponent(out Debuff debuff))
             CatchEffect(_debuffApplier, debuff);
         
@@ -23,11 +28,10 @@ public class PlatformaTrigger : MonoBehaviour
 
         if (other.TryGetComponent(out BonusDeath bonusDeath))
         {
+            _fragmentsCounter.FragmentsCollect();
             _bonusCounter.AddBonus(bonusDeath.Reward);
             bonusDeath.Die();
         }
-
-        
     }
 
     public void Init(BuffApplier buffApplier,DebuffApplier debuffApplier,NeutralApplier neutralApplier)
