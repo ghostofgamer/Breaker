@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class MissileMove : MonoBehaviour
 {
-    [SerializeField] private BallPortalMover _ballPortalMover;
+    [SerializeField] private BallMover _ballMover;
 
     private void Update()
     {
-        transform.position = _ballPortalMover.transform.position;
+        transform.position = _ballMover.transform.position;
     }
 }

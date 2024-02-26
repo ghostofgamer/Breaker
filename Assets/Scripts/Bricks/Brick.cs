@@ -42,10 +42,11 @@ public abstract class Brick : MonoBehaviour
 
     public abstract void Die();
 
-    public void Init(BrickCounter brickCounter, BuffDistributor buffDistributor)
+    public void Init(BrickCounter brickCounter, BuffDistributor buffDistributor,FragmentsCounter fragmentsCounter)
     {
         BrickCounter = brickCounter;
         BuffDistributor = buffDistributor;
+        _fragmentsCounter = fragmentsCounter;
     }
 
     public void GetBonus()

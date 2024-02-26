@@ -8,7 +8,6 @@ using UnityEngine.Events;
 
 public class BrickCounter : MonoBehaviour
 {
-    [SerializeField] private Transform _bricksContainer;
     [SerializeField] private BonusCounter _bonusCounter;
     [SerializeField] private TMP_Text _brickCountTxt;
     [SerializeField] private TMP_Text _brickSmashedTxt;
@@ -20,12 +19,6 @@ public class BrickCounter : MonoBehaviour
     private int _score = 5;
     
     public event UnityAction AllBrickDestory;
-
-    private void Start()
-    {
-        /*_brickCount = _bricksContainer.childCount;
-        ShowInfo();*/
-    }
 
     public void ChangeValue(int reward)
     {
@@ -45,8 +38,6 @@ public class BrickCounter : MonoBehaviour
     public void AddBricks(int bricksCount)
     {
         _brickCount++;
-Debug.Log("Brick");
-        // _brickCount += bricksCount;
         ShowInfo();
     }
 

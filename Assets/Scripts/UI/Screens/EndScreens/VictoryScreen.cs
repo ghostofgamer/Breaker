@@ -11,8 +11,11 @@ public class VictoryScreen : EndScreen
     [SerializeField] private LevelTimer _levelTimer;
     [SerializeField] private FragmentsCounter _fragmentsCounter;
     [SerializeField] private ScoreCounter _scoreCounter;
-    [Header("StatisticTMP")] 
-    [SerializeField] private TMP_Text _timer;
+    [SerializeField] private Animator _animator;
+
+    [Header("StatisticTMP")] [SerializeField]
+    private TMP_Text _timer;
+
     [SerializeField] private TMP_Text _buffCollected;
     [SerializeField] private TMP_Text _brickSmashed;
     [SerializeField] private TMP_Text _fragmentsCollected;
@@ -20,8 +23,9 @@ public class VictoryScreen : EndScreen
     [SerializeField] private TMP_Text _creditsTxt;
 
     private int _credits = 0;
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         _brickCounter.AllBrickDestory += Open;
     }
@@ -29,12 +33,13 @@ public class VictoryScreen : EndScreen
     private void OnDisable()
     {
         _brickCounter.AllBrickDestory -= Open;
-    }
+    }*/
 
-    protected override void Open()
+    public override void Open()
     {
-        SetValue();
-        Time.timeScale = 0;
+        StartCoroutine(OnScreenMove());
+        // SetValue();
+        // Time.timeScale = 0;
         base.Open();
     }
 
@@ -45,7 +50,19 @@ public class VictoryScreen : EndScreen
         _brickSmashed.text = _brickCounter.GetAmountSmashed();
         _fragmentsCollected.text = _fragmentsCounter.GetAmountFragmentsCollect();
         _score.text = _scoreCounter.GetScore().ToString();
-        _credits = _scoreCounter.GetScore() /10;
+        _credits = _scoreCounter.GetScore() / 10;
         _creditsTxt.text = _credits.ToString();
+    }
+
+    private void ScreenMover()
+    {
+        _animator.SetTrigger("Victory");
+    }
+
+    private IEnumerator OnScreenMove()
+    {
+        ScreenMover();
+        yield return _waitForSeconds;
+        SetValue();
     }
 }

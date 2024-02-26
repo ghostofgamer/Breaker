@@ -11,7 +11,7 @@ public class BallGrow : BallSizeChanger
             if (Coroutine != null)
                 StopCoroutine(Coroutine);
 
-            StartCoroutine(OnBallChangeSize(BallPortalMover));
+            StartCoroutine(OnBallChangeSize(_ballMover));
         }
     }
 

@@ -6,7 +6,7 @@ public abstract class Modification : MonoBehaviour
 {
     [SerializeField] protected PlatformaMover PlatformaMover;
     [SerializeField] protected BallController BallController;
-    [SerializeField] protected BallPortalMover BallPortalMover;
+    [SerializeField] protected BallMover _ballMover;
     [SerializeField] protected Player Player;
     [SerializeField] protected float Duration;
 

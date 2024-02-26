@@ -2,67 +2,140 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 public class BallMover : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private float _pushForce;
-    [SerializeField] private float _offsetX;
-    private Rigidbody _rigidbody;
+    [SerializeField] private PortalTeleporterBall _portalTeleporterBall;
+    [SerializeField] private float _xMinPosition;
+    [SerializeField] private float _xMaxPosition;
+    [SerializeField] private float _zMaxPosition;
+    [SerializeField] private float _zMinPosition;
+    [SerializeField] private bool _isPortal = false;
+    // [SerializeField] private 
 
-    [SerializeField] private float bounceForce;
+    public float speed = 10.0f;
+    public LayerMask wallLayer;
+    private Vector3 _direction;
+    public float _radius;
 
-    private bool _isActive = false;
+    public float Speed => speed;
 
-    private void Start()
+
+    void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        _direction = new Vector3(UnityEngine.Random.Range(-0.6f, 0.6f), 0, 1).normalized;
+        _radius = GetComponent<SphereCollider>().radius;
     }
 
-    private void Update()
+    void Update()
     {
-        if (!_isActive)
+        transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
+        Checkplatform();
+        Vector3 predictedPosition = transform.position + _direction * speed * Time.deltaTime;
+
+        if (Physics.SphereCast(transform.position, _radius, _direction, out RaycastHit hit,
+            (predictedPosition - transform.position).magnitude, wallLayer))
         {
-            _isActive = true;
-            _rigidbody.AddForce(new Vector3(_offsetX, _speed));
-
-
-            // _rigidbody.AddForce(transform.forward * _speed, ForceMode.VelocityChange);
-
-            /*Vector3 direction = new Vector3(Random.Range(-1f, 1f), 0, 1).normalized;
-            _rigidbody.velocity = direction * _speed;
-            _isActive = true;
-            Debug.Log("старт   " + _rigidbody.velocity);*/
+            _direction = Vector3.Reflect(_direction, hit.normal);
         }
+        else
+        {
+            if (_isPortal)
+                _portalTeleporterBall.TeleportBall();
 
-        // _rigidbody.AddForce(transform.forward * _speed);
-        // _rigidbody.AddForce(1,0F,_speed);
+            /*else
+                CheckBehindWall();*/
+
+            transform.position += _direction * speed * Time.deltaTime;
+        }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.TryGetComponent<PlatformController>(out var platformController))
+        if (other.collider.TryGetComponent(out Brick brick))
         {
-            _rigidbody.AddForce(new Vector3(_offsetX, _speed * Time.deltaTime,0f));
+            _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
+            brick.Die();
         }
     }
 
-    public void Move()
+    public void SetValue(float speed)
     {
-        _rigidbody.AddForce(new Vector3(_offsetX, _speed * Time.deltaTime,0f));
+        this.speed = speed;
     }
 
-    /*void OnCollisionEnter(Collision collision)
+    [SerializeField] private float _rayLength = 10f;
+
+    public float platformOffset = 3f;
+
+    private void Checkplatform()
     {
-        if (collision.gameObject.TryGetComponent<Wall>(out var wall) ||
-            collision.gameObject.TryGetComponent<PlatformController>(out var platformController))
+        Ray ray = new Ray(transform.position, transform.forward);
+        Ray backray = new Ray(transform.position, -transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, _rayLength))
         {
-            // Vector3 normal = collision.contacts[0].normal;
-            _rigidbody.AddForce(new Vector3(_offsetX, _speed));
-            // _rigidbody.velocity = Vector3.Reflect(_rigidbody.velocity, normal) * _pushForce;
-            // Debug.Log(normal);
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController) ||
+                hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover) ||
+                hit.collider.gameObject.TryGetComponent<MirrorPlatformaMover>(
+                    out MirrorPlatformaMover mirrorPlatformaMover))
+            {
+                Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
+                Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
+                transform.position = newPosition;
+                _direction = Vector3.Reflect(_direction, hit.normal);
+            }
         }
-    }*/
+
+        if (Physics.Raycast(backray, out hit, _rayLength))
+        {
+            if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController) ||
+                hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover))
+            {
+                Debug.Log("Back");
+                Vector3 platformUp = hit.transform.forward; // Направление вверх платформы
+                Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
+                transform.position = newPosition;
+                _direction = Vector3.Reflect(_direction, hit.normal);
+            }
+        }
+
+        Debug.DrawRay(ray.origin, ray.direction * _rayLength, Color.red);
+        Debug.DrawRay(backray.origin, backray.direction * _rayLength, Color.green);
+    }
+
+    // private void CheckBehindWall()
+    // {
+    //     Vector3 predictedPosition = transform.position + direction * speed * Time.deltaTime;
+    //
+    //     if (transform.position.x > _xMaxPosition)
+    //     {
+    //         transform.position = new Vector3(_xMaxPosition, transform.position.y, transform.position.z);
+    //
+    //         if (Physics.SphereCast(transform.position, radius, direction, out RaycastHit hit,
+    //             (predictedPosition - transform.position).magnitude, wallLayer))
+    //         {
+    //             direction = Vector3.Reflect(direction, hit.normal);
+    //             Debug.Log("УшелВБольше");
+    //         }
+    //     }
+    //
+    //     if (transform.position.x < _xMinPosition)
+    //     {
+    //         transform.position = new Vector3(_xMinPosition, transform.position.y, transform.position.z);
+    //
+    //         if (Physics.SphereCast(transform.position, radius, direction, out RaycastHit hit,
+    //             (predictedPosition - transform.position).magnitude, wallLayer))
+    //         {
+    //             direction = Vector3.Reflect(direction, hit.normal);
+    //             Debug.Log("УшелВМеньше");
+    //         }
+    //     }
+    // }
+
+    public void SetValue(bool portalActivated)
+    {
+        _isPortal = portalActivated;
+    }
 }

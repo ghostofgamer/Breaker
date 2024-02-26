@@ -6,7 +6,7 @@ public abstract class EndScreen : MonoBehaviour
 {
     [SerializeField] private CanvasGroup _canvasGroup;
 
-    protected virtual void Open()
+    public virtual void Open()
     {
         ChangeValue(1, true, true);
     }

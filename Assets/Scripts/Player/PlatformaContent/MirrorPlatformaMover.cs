@@ -7,30 +7,9 @@ public class MirrorPlatformaMover : MonoBehaviour
 {
     [SerializeField] private Transform _originalPlatform;
 
-    private Vector3 initialOffset;
-    private Vector3 initialPosition;
+    /*private Vector3 _initialOffset;
+    private Vector3 _initialPosition;*/
 
-    void Start()
-    {
-        // initialOffset = transform.position - _originalPlatform.position;
-        /*initialPosition = transform.position;
-        Vector3 position = new Vector3(_originalPlatform.position.x + 7f, _originalPlatform.position.y,
-            _originalPlatform.position.z);
-        transform.position = position;*/
-    }
-
-    /*void Update()
-    {
-        transform.position = -(_originalPlatform.position - initialOffset);
-        /*Vector3 newPosition = new Vector3(
-            -(_originalPlatform.position.x - initialPosition.x) + _originalPlatform.position.x,
-            transform.position.y,
-            transform.position.z
-        );
-
-        // Обновляем позицию зеркальной платформы
-        transform.position = newPosition;#1#
-    }*/
     private void Update()
     {
         if (_originalPlatform != null)
@@ -38,8 +17,8 @@ public class MirrorPlatformaMover : MonoBehaviour
                 _originalPlatform.position.z);
     }
 
-    public void SetPlatform(Transform platforma)
+    /*public void SetPlatform(Transform platforma)
     {
         _originalPlatform = platforma;
-    }
+    }*/
 }

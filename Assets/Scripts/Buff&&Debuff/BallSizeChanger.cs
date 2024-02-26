@@ -12,10 +12,10 @@ public abstract class BallSizeChanger : Modification
     protected override void Start()
     {
         base.Start();
-        _standardScale = BallPortalMover.transform.localScale;
+        _standardScale = _ballMover.transform.localScale;
     }
 
-    protected IEnumerator OnBallChangeSize(BallPortalMover ballPortalMover)
+    protected IEnumerator OnBallChangeSize(BallMover ballMover)
     {
         SetActive(true);
         Change();
@@ -28,14 +28,14 @@ public abstract class BallSizeChanger : Modification
     {
         Vector3 target = new Vector3(_standardScale.x + _sizeChange, _standardScale.y + _sizeChange,
             _standardScale.z + _sizeChange);
-        BallPortalMover.transform.localScale = target;
+        _ballMover.transform.localScale = target;
         // BallPortalMover.SetRadius(_sizeChange);
     }
 
     protected void Reset()
     {
         SetActive(false);
-        BallPortalMover.transform.localScale = _standardScale;
+        _ballMover.transform.localScale = _standardScale;
         // BallPortalMover.SetRadius(-_sizeChange);
     }
 }
