@@ -24,17 +24,28 @@ public class VictoryScreen : EndScreen
 
     private int _credits = 0;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
+    private WaitForSeconds _waitForSecondsStatistics = new WaitForSeconds(0.165f);
+
+    [SerializeField] private GameObject[] _statistics;
+
+    [SerializeField] private GameObject _scoreTMP;
 
     /*private void OnEnable()
-    {
-        _brickCounter.AllBrickDestory += Open;
-    }
+   {
+       _brickCounter.AllBrickDestory += Open;
+   }
 
-    private void OnDisable()
+   private void OnDisable()
+   {
+       _brickCounter.AllBrickDestory -= Open;
+   }*/
+    private void Start()
     {
-        _brickCounter.AllBrickDestory -= Open;
-    }*/
-    
+        foreach (var statistic in _statistics)
+        {
+            statistic.SetActive(false);
+        }
+    }
 
     private void Update()
     {
@@ -55,7 +66,7 @@ public class VictoryScreen : EndScreen
         _timer.text = _levelTimer.GetTime();
         _brickSmashed.text = _brickCounter.GetAmountSmashed();
         _fragmentsCollected.text = _fragmentsCounter.GetAmountFragmentsCollect();
-        _score.text = _scoreCounter.GetScore().ToString();
+        // _score.text = _scoreCounter.GetScore().ToString();
         _credits = _scoreCounter.GetScore() / 10;
         _creditsTxt.text = _credits.ToString();
     }
@@ -70,5 +81,64 @@ public class VictoryScreen : EndScreen
         ScreenMover();
         yield return _waitForSeconds;
         SetValue();
+
+        for (int i = 0; i < _statistics.Length; i++)
+        {
+            _statistics[i].SetActive(true);
+
+            if (i == 4)
+            {
+                Debug.Log("зашел");
+                float score = 0;
+                int creditsWin = _scoreCounter.GetScore();
+                float elapsedTime = 0;
+                float endTime = 1;
+
+                while (elapsedTime < endTime)
+                {
+                    elapsedTime += Time.deltaTime;
+                    Debug.Log(elapsedTime);
+                    float time = elapsedTime / endTime;
+                    score = (int) Mathf.Lerp(score, creditsWin, time);
+                    _score.text = score.ToString();
+                    yield return null;
+                }
+            }
+            
+            yield return _waitForSecondsStatistics;
+        }
+
+        /*foreach (var statistic in _statistics)
+        {
+            statistic.SetActive(true);
+            
+            if (_scoreTMP.gameObject.activeSelf)
+            {
+                Debug.Log("зашел");
+                float score = 0;
+                int creditsWin = _scoreCounter.GetScore();
+               float elapsedTime = 0;
+               float endTime = 1;
+               
+               while (elapsedTime < endTime)
+               {
+                   elapsedTime += Time.deltaTime;
+                   Debug.Log(elapsedTime);
+                   float time = elapsedTime/endTime;
+                   score = (int) Mathf.Lerp(score, creditsWin, time);
+                   _score.text = score.ToString();
+                   yield return null;
+               }
+               
+               
+                /*while (score < creditsWin)
+                {
+                    score = Mathf.MoveTowards(score, creditsWin, 15 * Time.deltaTime);
+                    _score.text = score.ToString("0");
+                    yield return null;
+                }#1#
+            }*/
+
+        // yield return _waitForSecondsStatistics;
     }
 }

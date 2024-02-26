@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class ClaimButton : AbstractButton
@@ -10,8 +11,10 @@ public class ClaimButton : AbstractButton
     [SerializeField] private VictoryScreen _victoryScreen;
     [SerializeField] private TMP_Text _creditsTxt;
 
-    private float _credits = 0;
-
+    private int _credits = 0;
+    private float _endTime = 1f;
+    private float _elapsedTime = 0;
+    
     protected override void OnClick()
     {
         _levelComplite.gameObject.SetActive(false);
@@ -25,11 +28,20 @@ public class ClaimButton : AbstractButton
 
     private IEnumerator OnSetValue(int credits)
     {
-        while (_credits < credits)
+        _elapsedTime = 0;
+        
+        while (_elapsedTime < _endTime)
         {
-            _credits = Mathf.MoveTowards(_credits, credits, 15f * Time.deltaTime);
-            _creditsTxt.text = _credits.ToString("0");
+            _elapsedTime += Time.deltaTime;
+            float time = _elapsedTime/_endTime;
+            _credits = (int)Mathf.Lerp(_credits,credits,time);
+            _creditsTxt.text = _credits.ToString();
+            /*_credits = Mathf.MoveTowards(_credits, credits, 15f * Time.deltaTime);
+            _creditsTxt.text = _credits.ToString("0");*/
             yield return null;
         }
+
+        _credits = credits;
+        _creditsTxt.text = _credits.ToString();
     }
 }
