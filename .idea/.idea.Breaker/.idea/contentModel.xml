@@ -1008,9 +1008,12 @@
           </e>
         </e>
         <e p="Animations" t="Include">
+          <e p="Buttons" t="Include" />
           <e p="Camera" t="Include" />
           <e p="Levels" t="Include" />
-          <e p="Screen" t="Include" />
+          <e p="Screen" t="Include">
+            <e p="EndScreens" t="Include" />
+          </e>
         </e>
         <e p="JMO Assets" t="Include">
           <e p="Cartoon FX (legacy)" t="Include">
@@ -1150,6 +1153,83 @@
             <e p="CFXR_WelcomeScreen.cs" t="Include" />
             <e p="CFXR_WelcomeScreen.uss" t="Include" />
             <e p="CFXR_WelcomeScreen.uxml" t="Include" />
+          </e>
+        </e>
+        <e p="LeanTween" t="Include">
+          <e p="Documentation" t="Include">
+            <e p="Assets" t="Include">
+              <e p="css" t="Include" />
+            </e>
+            <e p="classes" t="Include" />
+            <e p="elements" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="LeanTweenDocumentationEditor.cs" t="Include" />
+          </e>
+          <e p="Examples" t="Include">
+            <e p="Material" t="Include" />
+            <e p="Models" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Prefabs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Following.cs" t="Include" />
+              <e p="GeneralAdvancedTechniques.cs" t="Include" />
+              <e p="GeneralBasic.cs" t="Include" />
+              <e p="GeneralBasics2d.cs" t="Include" />
+              <e p="GeneralCameraShake.cs" t="Include" />
+              <e p="GeneralEasingTypes.cs" t="Include" />
+              <e p="GeneralEventsListeners.cs" t="Include" />
+              <e p="GeneralSequencer.cs" t="Include" />
+              <e p="GeneralSimpleUI.cs" t="Include" />
+              <e p="GeneralUISpace.cs" t="Include" />
+              <e p="LogoCinematic.cs" t="Include" />
+              <e p="PathBezier.cs" t="Include" />
+              <e p="PathBezier2d.cs" t="Include" />
+              <e p="PathSpline.cs" t="Include" />
+              <e p="PathSpline2d.cs" t="Include" />
+              <e p="PathSplineEndless.cs" t="Include" />
+              <e p="PathSplinePerformance.cs" t="Include" />
+              <e p="PathSplines.cs" t="Include" />
+              <e p="PathSplineTrack.cs" t="Include" />
+              <e p="TestingUnitTests.cs" t="Include" />
+              <e p="TestingZLegacy.cs" t="Include" />
+              <e p="TestingZLegacyExt.cs" t="Include" />
+            </e>
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="Framework" t="Include">
+            <e p="LeanAudio.cs" t="Include" />
+            <e p="LeanSmooth.cs" t="Include" />
+            <e p="LeanTest.cs" t="Include" />
+            <e p="LeanTween.cs" t="Include" />
+            <e p="LeanTweenExt.cs" t="Include" />
+            <e p="LTDescr.cs" t="Include" />
+            <e p="LTDescrOptional.cs" t="Include" />
+            <e p="LTSeq.cs" t="Include" />
+          </e>
+          <e p="LICENSE.txt" t="Include" />
+          <e p="Readme.txt" t="Include" />
+          <e p="Testing" t="Include">
+            <e p="FollowingTests.cs" t="Include" />
+            <e p="PerformanceTests.cs" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="LeanPool.cs" t="Include" />
+            </e>
+            <e p="Testing240.cs" t="Include" />
+            <e p="Testing243.cs" t="Include" />
+            <e p="Testing246.cs" t="Include" />
+            <e p="Testing248.cs" t="Include" />
+            <e p="TestingColorTweening.cs" t="Include" />
+            <e p="TestingDescr.cs" t="Include" />
+            <e p="TestingIssue.cs" t="Include" />
+            <e p="TestingIssue2.cs" t="Include" />
+            <e p="TestingMaxTweens.cs" t="Include" />
+            <e p="TestingOptionalCancel.cs" t="Include" />
+            <e p="TestingRotate.cs" t="Include" />
+            <e p="TestingSceneSwitching.cs" t="Include" />
+            <e p="TestingSequencer.cs" t="Include" />
           </e>
         </e>
         <e p="Materials" t="Include">
@@ -1342,6 +1422,9 @@
             <e p="MainShader" t="Include" />
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="BillingMode.json" t="Include" />
+        </e>
         <e p="Samples" t="Include">
           <e p="Web Utility" t="Include">
             <e p="3.1.0" t="Include">
@@ -1518,7 +1601,6 @@
               <e p="PlayButton.cs" t="Include" />
               <e p="SelectLevelButton.cs" t="Include" />
               <e p="SettingsButton.cs" t="Include" />
-              <e p="SettingsButton1.cs" t="Include" />
               <e p="ShopButton.cs" t="Include" />
             </e>
             <e p="Knob.cs" t="Include" />

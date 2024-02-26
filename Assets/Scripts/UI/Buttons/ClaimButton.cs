@@ -10,8 +10,8 @@ public class ClaimButton : AbstractButton
     [SerializeField] private VictoryScreen _victoryScreen;
     [SerializeField] private TMP_Text _creditsTxt;
 
-    private float _credits = 0 ;
-    
+    private float _credits = 0;
+
     protected override void OnClick()
     {
         _levelComplite.gameObject.SetActive(false);
@@ -20,12 +20,16 @@ public class ClaimButton : AbstractButton
 
     public void SetValue(int credits)
     {
-        // _credits = credits;
+        StartCoroutine(OnSetValue(credits));
+    }
+
+    private IEnumerator OnSetValue(int credits)
+    {
         while (_credits < credits)
         {
-            _credits = Mathf.MoveTowards(_credits, credits, 5 * Time.deltaTime);
-             _creditsTxt.text = _credits.ToString();
+            _credits = Mathf.MoveTowards(_credits, credits, 15f * Time.deltaTime);
+            _creditsTxt.text = _credits.ToString("0");
+            yield return null;
         }
-       
     }
 }

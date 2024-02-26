@@ -34,6 +34,12 @@ public class VictoryScreen : EndScreen
     {
         _brickCounter.AllBrickDestory -= Open;
     }*/
+    
+
+    private void Update()
+    {
+    }
+
 
     public override void Open()
     {
@@ -56,7 +62,7 @@ public class VictoryScreen : EndScreen
 
     private void ScreenMover()
     {
-        _animator.SetTrigger("Victory");
+        _animator.Play("VictoryScreenOpen");
     }
 
     private IEnumerator OnScreenMove()
