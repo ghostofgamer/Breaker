@@ -11,7 +11,6 @@ public class VictoryScreen : EndScreen
     [SerializeField] private LevelTimer _levelTimer;
     [SerializeField] private FragmentsCounter _fragmentsCounter;
     [SerializeField] private ScoreCounter _scoreCounter;
-    [SerializeField] private Animator _animator;
     [SerializeField] private GameObject[] _statistics;
     
     [Header("StatisticTMP")] [SerializeField]
@@ -38,7 +37,6 @@ public class VictoryScreen : EndScreen
     public override void Open()
     {
         StartCoroutine(OnScreenMove());
-        base.Open();
     }
 
     private void SetValue()
@@ -51,14 +49,10 @@ public class VictoryScreen : EndScreen
         _creditsTxt.text = _credits.ToString();
     }
 
-    private void ScreenMover()
-    {
-        _animator.Play("ScreenOpen");
-    }
-
     private IEnumerator OnScreenMove()
     {
-        ScreenMover();
+        yield return _waitForSeconds;
+        base.Open();
         yield return _waitForSeconds;
         SetValue();
 

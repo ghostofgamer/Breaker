@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GameOverScreen : EndScreen
 {
-    [SerializeField] private Animator _animator;
+
+    public override void Open()
+    {
+        base.Open();
+        // StartCoroutine(OnScreenMove());
+    }
     
     private void ScreenMover()
     {
-        _animator.Play("ScreenOpen");
     }
 }

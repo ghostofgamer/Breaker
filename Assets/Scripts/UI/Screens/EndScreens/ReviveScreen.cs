@@ -8,12 +8,12 @@ public class ReviveScreen : EndScreen
 {
     [SerializeField] private Slider _slider;
     [SerializeField] private GameOverScreen _gameOverScreen;
-    [SerializeField] private Animator _animator;
     [SerializeField] private BallTrigger _ball;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private float _duration = 3f;
     private float _elapsedTime;
+    private Coroutine _coroutine;
 
     private void OnEnable()
     {
@@ -25,22 +25,26 @@ public class ReviveScreen : EndScreen
         _ball.Dying -= Open;
     }
 
-    public override void Open()
+    private void Update()
     {
-        base.Open();
-        StartCoroutine(OnScreenMove());
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StopCoroutine(_coroutine );
+        }
     }
 
-    private void ScreenMover()
+    public override void Open()
     {
-        _animator.Play("ScreenOpen");
+        _coroutine =  StartCoroutine(OnScreenMove());
     }
 
     private IEnumerator OnScreenMove()
     {
-        ScreenMover();
-        yield return _waitForSeconds;
         _elapsedTime = 0;
+        _slider.value = 1;
+        yield return _waitForSeconds;
+        base.Open();
+        yield return _waitForSeconds;
         float startValue = _slider.value;
         float endValue = 0;
 
@@ -52,10 +56,14 @@ public class ReviveScreen : EndScreen
         }
 
         _slider.value = endValue;
+        Close();
+        yield return _waitForSeconds;
+        _gameOverScreen.Open();
     }
 
-    private void ChangeValue()
+    public void ChooseRevive()
     {
-     
+        StopCoroutine(_coroutine );
+        Close();
     }
 }
