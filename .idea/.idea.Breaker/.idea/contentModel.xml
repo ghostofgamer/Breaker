@@ -1012,7 +1012,9 @@
           <e p="Camera" t="Include" />
           <e p="Levels" t="Include" />
           <e p="Screen" t="Include">
-            <e p="EndScreens" t="Include" />
+            <e p="EndScreens" t="Include">
+              <e p="Victory" t="Include" />
+            </e>
           </e>
         </e>
         <e p="JMO Assets" t="Include">
@@ -1334,6 +1336,7 @@
             <e p="Neutral" t="Include" />
           </e>
           <e p="Bullet" t="Include" />
+          <e p="Button" t="Include" />
           <e p="MainMenu" t="Include" />
           <e p="Mirror" t="Include" />
           <e p="MirrorPlatforma" t="Include" />
@@ -1449,12 +1452,13 @@
               <e p="Ball.cs" t="Include" />
               <e p="BallController.cs" t="Include" />
               <e p="BallMover.cs" t="Include" />
+              <e p="BallTrigger.cs" t="Include" />
               <e p="PortalTeleporterBall.cs" t="Include" />
             </e>
             <e p="BonusCounter.cs" t="Include" />
+            <e p="Bourder.cs" t="Include" />
             <e p="BrickCounter.cs" t="Include" />
             <e p="FlyBonus.cs" t="Include" />
-            <e p="LevelComplite.cs" t="Include" />
             <e p="PanelMoving.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
           </e>
@@ -1487,7 +1491,6 @@
             </e>
             <e p="Wallet.cs" t="Include" />
           </e>
-          <e p="PortalMoving.cs" t="Include" />
           <e p="RotateBonusTarget.cs" t="Include" />
           <e p="Save&amp;Load" t="Include">
             <e p="Load.cs" t="Include" />
@@ -1505,6 +1508,7 @@
           </e>
           <e p="Test" t="Include">
             <e p="SwipeTest.cs" t="Include" />
+            <e p="TestBallLose.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Buttons" t="Include">
@@ -1519,20 +1523,26 @@
               <e p="CloseButton.cs" t="Include" />
               <e p="CloseInfoScreenButton.cs" t="Include" />
               <e p="CloseShopButton.cs" t="Include" />
+              <e p="ContinueButton.cs" t="Include" />
               <e p="InfoButton.cs" t="Include" />
               <e p="PauseButton.cs" t="Include" />
               <e p="PlayButton.cs" t="Include" />
               <e p="SelectLevelButton.cs" t="Include" />
               <e p="SettingsButton.cs" t="Include" />
               <e p="ShopButton.cs" t="Include" />
+              <e p="TryAgainButton.cs" t="Include" />
             </e>
+            <e p="FadeStatistics.cs" t="Include" />
             <e p="Knob.cs" t="Include" />
             <e p="MaskUi3D.cs" t="Include" />
             <e p="Screens" t="Include">
               <e p="EndScreens" t="Include">
                 <e p="EndScreen.cs" t="Include" />
+                <e p="GameOverScreen.cs" t="Include" />
+                <e p="ReviveScreen.cs" t="Include" />
                 <e p="VictoryScreen.cs" t="Include" />
               </e>
+              <e p="LevelComplite.cs" t="Include" />
               <e p="MainScreen.cs" t="Include" />
               <e p="SettingsScreen.cs" t="Include" />
               <e p="ShopBackGround.cs" t="Include" />

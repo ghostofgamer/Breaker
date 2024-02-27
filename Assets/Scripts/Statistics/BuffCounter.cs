@@ -39,7 +39,6 @@ public class BuffCounter : MonoBehaviour
 
     private void Show()
     {
-        Debug.Log("Show");
         string statistic = _buffsCollected + "/" + _buffCount;
         _statText.text = statistic;
     }

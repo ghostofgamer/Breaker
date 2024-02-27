@@ -10,15 +10,18 @@ public class PlatformaDestroyer : MonoBehaviour
     [SerializeField] private ParticleSystem _victoryEffect;
     [SerializeField] private ParticleSystem _loseEffect;
     [SerializeField] private GameObject _mousePosition;
+    [SerializeField] private BallTrigger _ballTrigger;
 
     private void OnEnable()
     {
         _brickCounter.AllBrickDestory += OnVictoriousDestruction;
+        _ballTrigger.Dying += OnLosingDestruction;
     }
 
     private void OnDisable()
     {
         _brickCounter.AllBrickDestory -= OnVictoriousDestruction;
+        _ballTrigger.Dying -= OnLosingDestruction;
     }
 
     private void OnVictoriousDestruction()
@@ -31,6 +34,9 @@ public class PlatformaDestroyer : MonoBehaviour
     
     private void OnLosingDestruction()
     {
-        
+        _loseEffect.transform.parent = null;
+        _loseEffect.Play();
+        gameObject.SetActive(false);
+        _mousePosition.SetActive(false);
     }
 }
