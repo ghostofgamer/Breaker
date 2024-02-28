@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class BonusForWinnerFlying : MonoBehaviour
 {
     public Image startImage; // Начальный Image
-    public Image endImage; // Конечный Image
+    public Image endImage;
+
+    [SerializeField] private Image _start;
+    // Конечный Image
     public float speed = 1.0f; // Скорость движения
 
     private RectTransform rectTransform; // RectTransform объекта, который вы хотите двигать
@@ -65,7 +68,6 @@ public class BonusForWinnerFlying : MonoBehaviour
 
         rectTransform.position = endImage.GetComponent<RectTransform>().position;
     }
-    
     
     
     
