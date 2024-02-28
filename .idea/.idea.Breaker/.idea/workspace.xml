@@ -22,8 +22,11 @@
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/BonusForWinnerFlying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/BonusForWinnerFlying.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/BonusEndScreenMoving.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/BonusEndScreenMoving.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/SpawnBonusLevelComplite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/SpawnBonusLevelComplite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/LevelComplite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/LevelComplite.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SelectLevelButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameScene/FlyBonus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/TestBall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnviropmentRotate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ChangeSkinPlatformButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/PaddleChanger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,6 +61,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/PaddleGrowBuff.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/MissileMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/BonusEndScreenMoving.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Neutral.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/BuffType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/MainScreen.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,7 +79,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Levels/LevelCubeJumping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/EndScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/BonusEndScreenMoving.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/InfoButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SwipeLayout.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/PlatformRotate.cs" root0="FORCE_HIGHLIGHTING" />
@@ -143,11 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/PauseButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BonestargetRotate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BonustargetRotate.cs" />
@@ -194,6 +193,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Test/BonusForWinnerFlying.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Test/BEZIE.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Test/BonusEndScreenMoving.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Test/SpawnBonusLevelComplite.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/BonusEndScreenMoving.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/SpawnBonusLevelComplite.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/LevelComplite.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnviropmentRotate.cs" />
       </list>
     </option>
   </component>
@@ -275,7 +279,7 @@
       <workItem from="1708845625544" duration="21608000" />
       <workItem from="1708938166189" duration="16545000" />
       <workItem from="1709014664699" duration="22716000" />
-      <workItem from="1709110195605" duration="7516000" />
+      <workItem from="1709110195605" duration="9547000" />
     </task>
     <servers />
   </component>

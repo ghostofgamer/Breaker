@@ -11,11 +11,14 @@ public class LevelComplite : MonoBehaviour
     [SerializeField] private TMP_Text _text;
     [SerializeField] private ClaimButton _claimButton;
     [SerializeField] private ScoreCounter _scoreCounter;
+    [SerializeField] private SpawnBonusLevelComplite _spawnBonusLevelComplite;
+    [SerializeField] private Animator _animator;
 
     private Vector3 _target;
     private bool _isVictory = false;
     private float _speed = 100f;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
+    private WaitForSeconds _waitForSeconds1 = new WaitForSeconds(3f);
 
     private void OnEnable()
     {
@@ -60,6 +63,9 @@ public class LevelComplite : MonoBehaviour
         SetValue();
         yield return _waitForSeconds;
         _claimButton.gameObject.SetActive(true);
+        _animator.Play("EnviropmentRotate");
+        yield return _waitForSeconds1;
+        _spawnBonusLevelComplite.StartFlightBonuses();
         _claimButton.SetValue(_scoreCounter.GetScore() / 10);
     }
 }

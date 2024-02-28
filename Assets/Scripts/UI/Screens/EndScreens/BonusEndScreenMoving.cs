@@ -6,39 +6,39 @@ using UnityEngine;
 public class BonusEndScreenMoving : MonoBehaviour
 {
     [SerializeField] private Transform _parentLine;
-    [Range(0, 1)] [SerializeField] private float _value;
-    
-    private List<Transform> _line;
-    private int _countLine;
 
-    void Start()
+    private float _value;
+    private float _endValue = 1;
+    private float _sumValue = 0.01f;
+    private List<Transform> _line;
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.01f);
+
+    private void Start()
     {
         _line = new List<Transform>();
-
-        RefreshLine3();
         _value = 0;
+        RefreshLine();
         StartCoroutine(PlusValue());
     }
-    
-    void RefreshLine3()
+
+    private void RefreshLine()
     {
         _parentLine.GetComponentsInChildren<Transform>(_line);
-        _countLine = _line.Count;
     }
-    
-    private void LerpPosition(List<Transform> lines,Transform objectMove)
+
+    private void LerpPosition(List<Transform> lines, Transform objectMove)
     {
-        List<Vector3> list = new List<Vector3>(); 
-        
+        List<Vector3> list = new List<Vector3>();
+
         for (int i = 1; i < _line.Count - 1; i++)
         {
             list.Add(Vector3.Lerp(lines[i].position, lines[i + 1].position, _value));
         }
 
-        LerpNext(list,objectMove);
+        LerpNext(list, objectMove);
     }
 
-    private void LerpNext(List<Vector3> listStart,Transform objectMove)
+    private void LerpNext(List<Vector3> listStart, Transform objectMove)
     {
         if (listStart.Count > 2)
         {
@@ -49,46 +49,28 @@ public class BonusEndScreenMoving : MonoBehaviour
                 list.Add(Vector3.Lerp(listStart[i], listStart[i + 1], _value));
             }
 
-            LerpNext(list,objectMove);
+            LerpNext(list, objectMove);
         }
         else
         {
             objectMove.position = Vector3.Lerp(listStart[0], listStart[1], _value);
         }
     }
-    
+
     IEnumerator PlusValue()
     {
-        while (_value <= 1)
+        while (_value <= _endValue)
         {
-            yield return new WaitForSeconds(0.01f);
-            _value += 0.01f;
+            yield return _waitForSeconds;
+            _value += _sumValue;
             Move();
         }
-gameObject.SetActive(false);
-        // StartCoroutine(MinusValue());
+
+        gameObject.SetActive(false);
     }
-
-    /*IEnumerator MinusValue()
-    {
-        while (_value >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            _value -= 0.01f;
-            Move();
-        }
-
-        StartCoroutine(PlusValue());
-    }*/
 
     void Move()
     {
-        if (_countLine != _parentLine.childCount)
-        {
-            Debug.Log("Refresh");
-            RefreshLine3();
-        }
-        
         LerpPosition(_line, transform);
     }
 }
