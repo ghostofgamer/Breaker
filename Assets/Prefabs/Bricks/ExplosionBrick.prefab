@@ -575,7 +575,9 @@ MonoBehaviour:
   BuffDistributor: {fileID: 0}
   IsImmortal: 0
   Effect: {fileID: 0}
+  _hologramEffectDie: {fileID: 6611887799836988051}
   _targetVisual: {fileID: 2609698217272195222}
+  _fragmentsCounter: {fileID: 0}
   _isEternal: 0
   _radius: 5
   _force: 150
@@ -784,5 +786,10 @@ PrefabInstance:
 --- !u!4 &2136295282602566033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8966654220980506173, guid: 95529ef378acee74cbb9cba50e4045ca, type: 3}
+  m_PrefabInstance: {fileID: 7046534435399970732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6611887799836988051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4181721241202687295, guid: 95529ef378acee74cbb9cba50e4045ca, type: 3}
   m_PrefabInstance: {fileID: 7046534435399970732}
   m_PrefabAsset: {fileID: 0}

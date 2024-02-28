@@ -6,7 +6,6 @@ public class BallRevive : MonoBehaviour
 {
     public void Revive()
     {
-        Debug.Log("мяч оживай");
         gameObject.transform.position = new Vector3(0f,5.1f,0f); 
         gameObject.SetActive(true);
         // GetComponent<Ball>().StopMove();

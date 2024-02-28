@@ -15,7 +15,7 @@ public abstract class Brick : MonoBehaviour
     [SerializeField] protected BuffDistributor BuffDistributor;
     [SerializeField] protected bool IsImmortal = false;
     [SerializeField] protected Effect Effect;
-
+    [SerializeField] private GameObject _hologramEffectDie;
     [SerializeField] private GameObject _targetVisual;
     [SerializeField] private FragmentsCounter _fragmentsCounter;
     [SerializeField] private bool _isEternal = false;
@@ -24,7 +24,7 @@ public abstract class Brick : MonoBehaviour
     private int _maxBonus = 3;
     private float _bonusRadius = 1.65f;
     private float _randomProcent = 0.5f;
-
+    protected bool IsTargetBonus;
     public Effect EffectElement => Effect;
     public bool IsImmortalFlag => IsImmortal;
     public bool IsEternal => _isEternal;
@@ -75,6 +75,7 @@ public abstract class Brick : MonoBehaviour
     {
         Effect = effect;
         _targetVisual.SetActive(activation);
+        IsTargetBonus = activation;
     }
 
     protected void GetBuff()
@@ -83,5 +84,20 @@ public abstract class Brick : MonoBehaviour
             return;
 
         Instantiate(Effect, transform.position, Quaternion.identity);
+    }
+    
+    protected void Destroy()
+    {
+        if (IsImmortal)
+            return;
+        
+        _hologramEffectDie.SetActive(true);
+        _hologramEffectDie.transform.parent = null;
+
+        GetBuff();
+
+        BrickCounter.ChangeValue(Reward);
+        GetBonus();
+        gameObject.SetActive(false);
     }
 }

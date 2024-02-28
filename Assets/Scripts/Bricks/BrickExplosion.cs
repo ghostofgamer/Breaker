@@ -19,7 +19,12 @@ public class BrickExplosion : Brick
     {
         if (IsImmortal)
             return;
-        
+
+        if (!_wickBurning && IsTargetBonus)
+        {
+            Destroy();
+        }
+
         if (!_wickBurning)
         {
             StartCoroutine(OnExplode());

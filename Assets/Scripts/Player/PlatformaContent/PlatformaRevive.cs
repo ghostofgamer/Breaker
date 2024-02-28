@@ -8,7 +8,6 @@ public class PlatformaRevive : MonoBehaviour
     
     public void Revive()
     {
-        Debug.Log("платформа оживай");
         gameObject.SetActive(true);
         _mousePosition.SetActive(true);
     }
