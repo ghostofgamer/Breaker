@@ -14,6 +14,7 @@ public class ClaimButton : AbstractButton
     private int _credits = 0;
     private float _endTime = 1f;
     private float _elapsedTime = 0;
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     
     protected override void OnClick()
     {
@@ -29,6 +30,8 @@ public class ClaimButton : AbstractButton
     private IEnumerator OnSetValue(int credits)
     {
         _elapsedTime = 0;
+        yield return _waitForSeconds;
+        _creditsTxt.enabled = true;
         
         while (_elapsedTime < _endTime)
         {

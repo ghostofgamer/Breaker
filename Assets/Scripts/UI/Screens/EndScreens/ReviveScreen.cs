@@ -29,13 +29,13 @@ public class ReviveScreen : EndScreen
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StopCoroutine(_coroutine );
+            StopCoroutine(_coroutine);
         }
     }
 
     public override void Open()
     {
-        _coroutine =  StartCoroutine(OnScreenMove());
+        _coroutine = StartCoroutine(OnScreenMove());
     }
 
     private IEnumerator OnScreenMove()
@@ -48,10 +48,10 @@ public class ReviveScreen : EndScreen
         float startValue = _slider.value;
         float endValue = 0;
 
-        while (_elapsedTime<_duration)
+        while (_elapsedTime < _duration)
         {
             _elapsedTime += Time.deltaTime;
-            _slider.value = Mathf.Lerp(startValue,endValue,_elapsedTime/_duration);
+            _slider.value = Mathf.Lerp(startValue, endValue, _elapsedTime / _duration);
             yield return null;
         }
 
@@ -63,7 +63,20 @@ public class ReviveScreen : EndScreen
 
     public void ChooseRevive()
     {
-        StopCoroutine(_coroutine );
+        StopCoroutine(_coroutine);
         Close();
+    }
+
+    public void ChooseLose()
+    {
+        StartCoroutine(SetActiveScreens());
+    }
+
+    private IEnumerator SetActiveScreens()
+    {
+        StopCoroutine(_coroutine);
+        Close();
+        yield return _waitForSeconds;
+        _gameOverScreen.Open();
     }
 }

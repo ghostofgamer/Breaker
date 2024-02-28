@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,13 +13,14 @@ public class LevelComplite : MonoBehaviour
     [SerializeField] private ClaimButton _claimButton;
     [SerializeField] private ScoreCounter _scoreCounter;
     [SerializeField] private SpawnBonusLevelComplite _spawnBonusLevelComplite;
-    [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _animatorEnviropment;
+    [SerializeField] private Animator _animatorText;
 
     private Vector3 _target;
     private bool _isVictory = false;
     private float _speed = 100f;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
-    private WaitForSeconds _waitForSeconds1 = new WaitForSeconds(3f);
+    private WaitForSeconds _waitForSeconds1 = new WaitForSeconds(1f);
 
     private void OnEnable()
     {
@@ -32,25 +34,29 @@ public class LevelComplite : MonoBehaviour
 
     private void Start()
     {
-        Vector3 position = transform.position;
-        _target = new Vector3(_text.transform.position.x, _text.transform.position.y - 100f,
-            _text.transform.position.z);
+        // Vector3 position = transform.position;
+        // _target = new Vector3(_text.transform.position.x, _text.transform.position.y - 100f,
+        //     _text.transform.position.z);
+        //
+        // Debug.Log(_target);
+        // Debug.Log(transform.position);
+        
     }
 
     private void Update()
     {
-        if (!_isVictory)
-            return;
-
-        if (_text.transform.position != _target)
-            _text.transform.position = Vector3.MoveTowards(_text.transform.position, _target, _speed * Time.deltaTime);
+        // if (!_isVictory)
+        //     return;
+        //
+        // if (_text.transform.position != _target)
+        //     _text.transform.position = Vector3.MoveTowards(_text.transform.position, _target, _speed * Time.deltaTime);
     }
 
     private void SetValue()
     {
         gameObject.SetActive(true);
         _text.enabled = true;
-        _isVictory = true;
+        // _isVictory = true;
     }
 
     private void Victory()
@@ -61,11 +67,12 @@ public class LevelComplite : MonoBehaviour
     private IEnumerator _OnVictory()
     {
         SetValue();
+        _animatorText.Play("LevelCompliteTextMove");
         yield return _waitForSeconds;
         _claimButton.gameObject.SetActive(true);
-        _animator.Play("EnviropmentRotate");
-        yield return _waitForSeconds1;
+        _animatorEnviropment.Play("EnviropmentRotate");
         _spawnBonusLevelComplite.StartFlightBonuses();
+        // yield return _waitForSeconds1;
         _claimButton.SetValue(_scoreCounter.GetScore() / 10);
     }
 }
