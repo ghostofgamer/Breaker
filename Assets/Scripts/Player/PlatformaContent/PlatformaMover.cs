@@ -25,11 +25,11 @@ public class PlatformaMover : MonoBehaviour
 
     void Update()
     {
-        /*float mouse = Input.GetAxis("Mouse X") * 2;
-        Debug.Log("Mouse Direction: " + mouse);
+        float mouse = Input.GetAxis("Mouse X") * 2;
+        /*Debug.Log("Mouse Direction: " + mouse);
         Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
         
-        if (Input.GetMouseButton(0))
+        /*if (Input.GetMouseButton(0))
         {
             // Получаем значения движения мыши по осям X и Y
             float mouseX = Input.GetAxis("Mouse X");
@@ -40,7 +40,7 @@ public class PlatformaMover : MonoBehaviour
 
             // Выводим значения на экран для отладки
             // Debug.Log("Mouse Direction: " + mouseDirection);
-        }
+        }*/
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -51,7 +51,7 @@ public class PlatformaMover : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             if (!_ball.IsMoving)
-                _ball.SetMove(true);
+                _ball.SetMove(true,mouse);
 
             _positionMouse.SetActive(false);
             isMousePressed = false;

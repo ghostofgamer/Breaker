@@ -9,10 +9,14 @@ using Random = UnityEngine.Random;
 public class Ball : Player
 {
     [SerializeField] private BrickCounter _brickCounter;
-
+    [SerializeField] private Transform _startPosition;
+    [SerializeField] private PlatformaMover _platformaMover;
+    
     private BallMover _ballMover;
     public bool IsMoving { get; private set; }
-
+    public Transform StartPosition => _startPosition;
+    public PlatformaMover PlatformaMover => _platformaMover;
+    
     public event UnityAction Die;
 
     private void Start()
@@ -38,12 +42,14 @@ public class Ball : Player
         GetComponent<Rigidbody>().isKinematic = true;
     }
 
-    public void SetMove(bool flag)
+    public void SetMove(bool flag, float DirectionX)
     {
         IsMoving = flag;
         _ballMover.enabled = flag;
         GetComponent<Rigidbody>().isKinematic = !flag;
         gameObject.transform.parent = null;
+        _ballMover.SetStartDirection(new Vector3(DirectionX,0,1).normalized);
+        Debug.Log("STARTDIRECTMOVE   " + new Vector3(DirectionX,0,1).normalized);
     }
 
     protected void Lost()
