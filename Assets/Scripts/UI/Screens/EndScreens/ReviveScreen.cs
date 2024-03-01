@@ -14,6 +14,7 @@ public class ReviveScreen : EndScreen
     private float _duration = 3f;
     private float _elapsedTime;
     private Coroutine _coroutine;
+    public bool IsLose { get; private set; }
 
     private void OnEnable()
     {
@@ -35,6 +36,7 @@ public class ReviveScreen : EndScreen
 
     public override void Open()
     {
+        IsLose = true;
         _coroutine = StartCoroutine(OnScreenMove());
     }
 
@@ -63,6 +65,7 @@ public class ReviveScreen : EndScreen
 
     public void ChooseRevive()
     {
+        IsLose = false;
         StopCoroutine(_coroutine);
         Close();
     }

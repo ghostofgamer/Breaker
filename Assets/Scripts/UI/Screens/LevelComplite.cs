@@ -15,13 +15,15 @@ public class LevelComplite : MonoBehaviour
     [SerializeField] private SpawnBonusLevelComplite _spawnBonusLevelComplite;
     [SerializeField] private Animator _animatorEnviropment;
     [SerializeField] private Animator _animatorText;
+    [SerializeField] private ReviveScreen _reviveScreen;
 
     private Vector3 _target;
     private bool _isVictory = false;
     private float _speed = 100f;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
     private WaitForSeconds _waitForSeconds1 = new WaitForSeconds(1f);
-
+    private Coroutine _coroutine;
+    
     private void OnEnable()
     {
         _brickCounter.AllBrickDestory += Victory;
@@ -32,36 +34,21 @@ public class LevelComplite : MonoBehaviour
         _brickCounter.AllBrickDestory -= Victory;
     }
 
-    private void Start()
-    {
-        // Vector3 position = transform.position;
-        // _target = new Vector3(_text.transform.position.x, _text.transform.position.y - 100f,
-        //     _text.transform.position.z);
-        //
-        // Debug.Log(_target);
-        // Debug.Log(transform.position);
-        
-    }
-
-    private void Update()
-    {
-        // if (!_isVictory)
-        //     return;
-        //
-        // if (_text.transform.position != _target)
-        //     _text.transform.position = Vector3.MoveTowards(_text.transform.position, _target, _speed * Time.deltaTime);
-    }
-
     private void SetValue()
     {
         gameObject.SetActive(true);
         _text.enabled = true;
-        // _isVictory = true;
     }
 
     private void Victory()
     {
-        StartCoroutine(_OnVictory());
+        if (_reviveScreen.IsLose)
+            return;
+        
+        if(_coroutine!=null)
+            StopCoroutine(_coroutine);
+        
+        _coroutine =   StartCoroutine(_OnVictory());
     }
 
     private IEnumerator _OnVictory()
