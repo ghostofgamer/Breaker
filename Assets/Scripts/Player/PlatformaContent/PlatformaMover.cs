@@ -28,7 +28,7 @@ public class PlatformaMover : MonoBehaviour
         float mouse = Input.GetAxis("Mouse X") * 2;
         /*Debug.Log("Mouse Direction: " + mouse);
         Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
-        
+
         /*if (Input.GetMouseButton(0))
         {
             // Получаем значения движения мыши по осям X и Y
@@ -51,7 +51,7 @@ public class PlatformaMover : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             if (!_ball.IsMoving)
-                _ball.SetMove(true,mouse);
+                _ball.SetMove(true, mouse);
 
             _positionMouse.SetActive(false);
             isMousePressed = false;
@@ -89,12 +89,13 @@ public class PlatformaMover : MonoBehaviour
             else
                 targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z + offset);
 
-            _positionMouse.transform.position = hit.point;
+
             float clampedX = Mathf.Clamp(targetPosition.x, minX, maxX);
             float clampedZ = Mathf.Clamp(targetPosition.z, minZ, maxZ);
 
             Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
 
+            _positionMouse.transform.position = hit.point;
             transform.position =
                 Vector3.MoveTowards(transform.position, clampedTargetPosition, moveSpeed * Time.deltaTime);
         }
