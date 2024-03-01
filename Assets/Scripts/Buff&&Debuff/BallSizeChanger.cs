@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class BallSizeChanger : Modification
 {
-    [SerializeField] protected int _sizeChange;
+    [SerializeField] protected float _sizeChange;
 
     [SerializeField]private Vector3 _standardScale;
 
