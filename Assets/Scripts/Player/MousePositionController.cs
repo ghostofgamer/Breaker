@@ -15,6 +15,7 @@ public class MousePositionController : MonoBehaviour
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer.enabled = false;
     }
 
     private void Update()

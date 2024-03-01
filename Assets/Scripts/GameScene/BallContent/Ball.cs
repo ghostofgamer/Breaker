@@ -11,6 +11,7 @@ public class Ball : Player
     [SerializeField] private BrickCounter _brickCounter;
     [SerializeField] private Transform _startPosition;
     [SerializeField] private PlatformaMover _platformaMover;
+    [SerializeField] private Transform _enviropment;
     
     private BallMover _ballMover;
     public bool IsMoving { get; private set; }
@@ -28,11 +29,13 @@ public class Ball : Player
     private void OnEnable()
     {
         _brickCounter.AllBrickDestory += StopMove;
+        _brickCounter.AllBrickDestory += SetParent;
     }
 
     private void OnDisable()
     {
         _brickCounter.AllBrickDestory -= StopMove;
+        _brickCounter.AllBrickDestory -= SetParent;
     }
 
     public void StopMove()
@@ -40,6 +43,12 @@ public class Ball : Player
         IsMoving = false;
         _ballMover.enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
+        
+    }
+
+    private void SetParent()
+    {
+        transform.parent = _enviropment;
     }
 
     public void SetMove(bool flag, float DirectionX)
@@ -49,7 +58,7 @@ public class Ball : Player
         GetComponent<Rigidbody>().isKinematic = !flag;
         gameObject.transform.parent = null;
         _ballMover.SetStartDirection(new Vector3(DirectionX,0,1).normalized);
-        Debug.Log("STARTDIRECTMOVE   " + new Vector3(DirectionX,0,1).normalized);
+        // Debug.Log("STARTDIRECTMOVE   " + new Vector3(DirectionX,0,1).normalized);
     }
 
     protected void Lost()

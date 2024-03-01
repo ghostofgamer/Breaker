@@ -6,8 +6,9 @@ using UnityEngine.Events;
 
 public class BallTrigger : MonoBehaviour
 {
-    public float platformOffset = 3f;
     [SerializeField] private BallMover _ballMover;
+    // [SerializeField] private Transform _enviropment;
+    public float platformOffset = 3f;
     public float sphereRadius = 0.5f;
     public LayerMask platformLayer;
     public event UnityAction Dying;
@@ -23,6 +24,7 @@ public class BallTrigger : MonoBehaviour
             Dying?.Invoke();
             gameObject.SetActive(false);
             GetComponent<Ball>().StopMove();
+            // transform.parent = _enviropment;
         }
     }
 
@@ -106,7 +108,7 @@ public class BallTrigger : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover PlatformaMover))
             {
-                Debug.Log("HIT");
+                // Debug.Log("HIT");
                 ChangeDirection(New, hit);
             }
         }
@@ -116,9 +118,9 @@ public class BallTrigger : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover зlatformaMover))
             {
-                Debug.Log("BackHit");
+                // Debug.Log("BackHit");
                 ChangeDirection(New, hit);
-                Debug.Log("NEWDIRECTION" + _ballMover.Direction);
+                // Debug.Log("NEWDIRECTION" + _ballMover.Direction);
             }
         }
 
@@ -144,7 +146,7 @@ if (Input.GetAxis("Mouse Y") > 0.3)
 /*Debug.Log("Mouse Direction: " + mouse);
 Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
         Vector3 New = new Vector3(mouse, 0, mouseY).normalized;
-        if (Physics.Raycast(ray, out hit, _ballMover.RayLength))
+        /*if (Physics.Raycast(ray, out hit, _ballMover.RayLength))
         {
             if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController) ||
                 hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover) ||
@@ -153,7 +155,7 @@ Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
             {
                 ChangeDirection(New, hit);
             }
-        }
+        }*/
 
         if (Physics.Raycast(backray, out hit, _ballMover.RayLength))
         {
@@ -174,7 +176,7 @@ Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
         Vector3 platformUp = hit.transform.forward;
         Debug.Log("PlatformUP " + platformUp);
         Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
-        transform.position = newPosition;
+        // transform.position = newPosition;
         GetComponent<MeshRenderer>().enabled = true;
 // _direction = Vector3.Reflect(_direction, hit.normal);
 

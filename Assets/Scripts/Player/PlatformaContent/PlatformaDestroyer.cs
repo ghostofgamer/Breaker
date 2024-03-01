@@ -11,6 +11,7 @@ public class PlatformaDestroyer : MonoBehaviour
     [SerializeField] private ParticleSystem _loseEffect;
     [SerializeField] private GameObject _mousePosition;
     [SerializeField] private BallTrigger _ballTrigger;
+    [SerializeField] private Transform _enviropment;
 
     private void OnEnable()
     {
@@ -30,6 +31,7 @@ public class PlatformaDestroyer : MonoBehaviour
         _victoryEffect.Play();
         gameObject.SetActive(false);
         _mousePosition.SetActive(false);
+        transform.parent = _enviropment;
     }
     
     private void OnLosingDestruction()

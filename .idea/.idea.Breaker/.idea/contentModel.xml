@@ -1017,6 +1017,78 @@
             </e>
           </e>
         </e>
+        <e p="Graphy - Ultimate Stats Monitor" t="Include">
+          <e p="Changelog.txt" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="GraphyDebuggerEditor.cs" t="Include" />
+            <e p="GraphyEditorStyle.cs" t="Include" />
+            <e p="GraphyManagerEditor.cs" t="Include" />
+            <e p="GraphyMenuItem.cs" t="Include" />
+            <e p="Tayx.Graphy.Editor.asmdef" t="Include" />
+          </e>
+          <e p="Font" t="Include">
+            <e p="Northwest-Bold" t="Include">
+              <e p="ERIC-TIRADO-NORTHWEST-LICENSE.txt" t="Include" />
+            </e>
+            <e p="Roboto" t="Include">
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+          <e p="GUI" t="Include" />
+          <e p="Materials" t="Include" />
+          <e p="package.json" t="Include" />
+          <e p="Prefab" t="Include">
+            <e p="Internal" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Advanced" t="Include">
+              <e p="G_AdvancedData.cs" t="Include" />
+            </e>
+            <e p="Audio" t="Include">
+              <e p="G_AudioGraph.cs" t="Include" />
+              <e p="G_AudioManager.cs" t="Include" />
+              <e p="G_AudioMonitor.cs" t="Include" />
+              <e p="G_AudioText.cs" t="Include" />
+            </e>
+            <e p="Fps" t="Include">
+              <e p="G_FpsGraph.cs" t="Include" />
+              <e p="G_FpsManager.cs" t="Include" />
+              <e p="G_FpsMonitor.cs" t="Include" />
+              <e p="G_FpsText.cs" t="Include" />
+            </e>
+            <e p="Graph" t="Include">
+              <e p="G_Graph.cs" t="Include" />
+            </e>
+            <e p="GraphyDebugger.cs" t="Include" />
+            <e p="GraphyManager.cs" t="Include" />
+            <e p="Ram" t="Include">
+              <e p="G_RamGraph.cs" t="Include" />
+              <e p="G_RamManager.cs" t="Include" />
+              <e p="G_RamMonitor.cs" t="Include" />
+              <e p="G_RamText.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="G_GraphShader.cs" t="Include" />
+            </e>
+            <e p="Tayx.Graphy.asmdef" t="Include" />
+            <e p="UI" t="Include">
+              <e p="G_SafeArea.cs" t="Include" />
+              <e p="IModifiableState.cs" t="Include" />
+              <e p="IMovable.cs" t="Include" />
+            </e>
+            <e p="Util" t="Include">
+              <e p="G_ExtensionMethods.cs" t="Include" />
+              <e p="G_FloatString.cs" t="Include" />
+              <e p="G_Intstring.cs" t="Include" />
+              <e p="G_Singleton.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="GraphMobile.shader" t="Include" />
+            <e p="GraphStandard.shader" t="Include" />
+          </e>
+          <e p="Textures" t="Include" />
+        </e>
         <e p="JMO Assets" t="Include">
           <e p="Cartoon FX (legacy)" t="Include">
             <e p="CartoonFX Free.txt" t="Include" />
@@ -1158,6 +1230,7 @@
           </e>
         </e>
         <e p="Materials" t="Include">
+          <e p="BackGroundMainMenu" t="Include" />
           <e p="Ball" t="Include" />
           <e p="Bonus" t="Include" />
           <e p="BricksMaterials" t="Include" />
@@ -1723,6 +1796,8 @@
       <e p="SimpleInspectorAttributesEditor.csproj" t="IncludeRecursive" />
       <e p="SimpleScrollSnap.csproj" t="IncludeRecursive" />
       <e p="SimpleScrollSnapEditor.csproj" t="IncludeRecursive" />
+      <e p="Tayx.Graphy.csproj" t="IncludeRecursive" />
+      <e p="Tayx.Graphy.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
       <e p="ToonyColorsPro.Demo.Editor.csproj" t="IncludeRecursive" />
       <e p="ToonyColorsPro.Editor.csproj" t="IncludeRecursive" />

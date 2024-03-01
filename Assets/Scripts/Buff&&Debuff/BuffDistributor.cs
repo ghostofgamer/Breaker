@@ -16,7 +16,8 @@ public class BuffDistributor : MonoBehaviour
 
         if (_isEffect)
         {
-            int index = Random.Range(0, _effects.Length);
+            // int index = Random.Range(0, _effects.Length);
+            int index = 5;
 
             if (_effects[index].GetComponent<Buff>())
                 _buffCounter.IncreaseBuffCount();

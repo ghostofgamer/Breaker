@@ -7,12 +7,12 @@ public abstract class BallSizeChanger : Modification
 {
     [SerializeField] protected int _sizeChange;
 
-    private Vector3 _standardScale;
+    [SerializeField]private Vector3 _standardScale;
 
     protected override void Start()
     {
         base.Start();
-        _standardScale = _ballMover.transform.localScale;
+        // _standardScale = _ballMover.transform.localScale;
     }
 
     protected IEnumerator OnBallChangeSize(BallMover ballMover)

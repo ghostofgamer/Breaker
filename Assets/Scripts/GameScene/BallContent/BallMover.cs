@@ -248,7 +248,7 @@ public class BallMover : MonoBehaviour
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
-            Debug.Log("Ушел с права " + _direction);
+            // Debug.Log("Ушел с права " + _direction);
         }
 
         if (transform.position.x < _xMinPosition)
@@ -259,7 +259,7 @@ public class BallMover : MonoBehaviour
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
-            Debug.Log("Ушел с лева " + _direction);
+            // Debug.Log("Ушел с лева " + _direction);
         }
         
         if (transform.position.z> _zMaxPosition)
@@ -270,8 +270,19 @@ public class BallMover : MonoBehaviour
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
-            Debug.Log("Ушел с лева " + _direction);
+            // Debug.Log("Ушел с лева " + _direction);
         }
+        
+        /*if (transform.position.z< _zMinPosition)
+        {
+            Vector3 normal = new Vector3(0, 0, 1);
+            var position = transform.position;
+            position = new Vector3(position.x, position.y, _zMinPosition);
+            transform.position = position;
+            _direction = Vector3.Reflect(_direction, normal);
+            CheckAngle();
+            // Debug.Log("Ушел с лева " + _direction);
+        }*/
 
 
         /*Vector3 predictedPosition = transform.position + direction * speed * Time.deltaTime;

@@ -94,8 +94,10 @@ public class PlatformaMover : MonoBehaviour
             float clampedZ = Mathf.Clamp(targetPosition.z, minZ, maxZ);
 
             Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
+            Vector3 targetPositiomMouse = new Vector3(hit.point.x, 4, hit.point.z);
 
-            _positionMouse.transform.position = hit.point;
+            _positionMouse.transform.position = targetPositiomMouse;
+            // _positionMouse.transform.position = hit.point;
             transform.position =
                 Vector3.MoveTowards(transform.position, clampedTargetPosition, moveSpeed * Time.deltaTime);
         }
