@@ -12,13 +12,16 @@ public class BrickCounter : MonoBehaviour
     [SerializeField] private TMP_Text _brickCountTxt;
     [SerializeField] private TMP_Text _brickSmashedTxt;
     [SerializeField] private ScoreCounter _scoreCounter;
-    
+
     private int _bricksSmashedCount;
     private List<Brick> _bricks;
     private int _brickCount = 0;
     private int _score = 5;
-    
+    private int _remainingAmountHelp = 3;
+    private bool _isRemainingActivated;
+
     public event UnityAction AllBrickDestory;
+    public event UnityAction BricksDestructionHelp;
 
     public void ChangeValue(int reward)
     {
@@ -27,7 +30,16 @@ public class BrickCounter : MonoBehaviour
         _bonusCounter.AddBonus(reward);
         ShowInfo();
         _scoreCounter.IncreaseScore(_score);
-        
+
+        if (_brickCount <= _remainingAmountHelp)
+        {
+            if (!_isRemainingActivated)
+            {
+                BricksDestructionHelp?.Invoke();
+                _isRemainingActivated = true;
+            }
+        }
+
         if (_brickCount <= 0)
         {
             Debug.Log("Victory");
