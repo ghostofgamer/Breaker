@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraMover : MonoBehaviour
@@ -14,6 +16,10 @@ public class CameraMover : MonoBehaviour
     private Vector3 _cameraStartPos;
     private Vector3 _newCameraPos;
 
+    /*private float _elapsedTime;
+    private float _duration = 3f;*/
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.1f);
+
     private void Start()
     {
         _mouseStartPos = Input.mousePosition;
@@ -23,15 +29,15 @@ public class CameraMover : MonoBehaviour
 
     void Update()
     {
-        if (transform.position != _newCameraPos)
+        if (transform.position != _newCameraPos && !Input.GetMouseButton(0))
         {
-            Debug.Log(transform.position + "   ...   " + _newCameraPos);
+            // Debug.Log(transform.position);
             transform.position = Vector3.MoveTowards(transform.position, _newCameraPos, _overSpeed * Time.deltaTime);
         }
 
-
         if (Input.GetMouseButtonDown(0))
         {
+            // _elapsedTime = 0;
             _mouseStartPos = Input.mousePosition;
             _cameraStartPos = transform.position;
         }
@@ -44,6 +50,18 @@ public class CameraMover : MonoBehaviour
             _newCameraPos.z = Mathf.Clamp(_newCameraPos.z, _minZ, _maxZ);
             transform.position = Vector3.Lerp(transform.position, _newCameraPos, _speed * Time.deltaTime);
         }
+    }
+
+    public void SetTargetPosition(Vector3 position)
+    {
+        StartCoroutine(SetTarget(position));
+        _newCameraPos = position;
+    }
+
+    private IEnumerator SetTarget(Vector3 position)
+    {
+        yield return _waitForSeconds;
+        _newCameraPos = position;
     }
 
 

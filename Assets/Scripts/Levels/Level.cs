@@ -106,7 +106,6 @@ public class Level : MonoBehaviour
         for (int i = 0; i < _effectsSelect.Length; i++)
         {
           _effectsSelect[i].Stop();
-            Debug.Log("effects");
         }
     }
 

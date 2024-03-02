@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CameraDistance : MonoBehaviour
 {
+    [SerializeField] private CameraMover _cameraMover;
+    
     private float _distance = 15f;
     private float _lerpDuration = 1f;
     private Vector3 _targetPosition;
@@ -19,7 +21,7 @@ public class CameraDistance : MonoBehaviour
 
     private void Update()
     {
-        if (_isLerping)
+        /*if (_isLerping)
         {
             _timeElapsed += Time.deltaTime;
             float lerpProgress = _timeElapsed / _lerpDuration;
@@ -28,12 +30,14 @@ public class CameraDistance : MonoBehaviour
 
             if (lerpProgress >= 1f)
                 _isLerping = false;
-        }
+        }*/
     }
 
     public void MoveCameraToTarget(Transform target)
     {
         _targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z - _distance);
+        _cameraMover.SetTargetPosition(_targetPosition);
+        Debug.Log("Target   " + _targetPosition);
         _initialPosition = transform.position;
         _timeElapsed = 0f;
         _isLerping = true;
