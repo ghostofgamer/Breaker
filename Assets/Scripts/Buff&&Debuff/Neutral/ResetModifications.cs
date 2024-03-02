@@ -22,7 +22,6 @@ public class ResetModifications : Modification
 
     public override void ApplyModification()
     {
-        Debug.Log("Reset");
         List<Modification> modifications = Player.Modifications;
 
         if (modifications.Count > 0)
@@ -32,6 +31,8 @@ public class ResetModifications : Modification
 
             Player.ClearList();
         }
+        
+        ShowNameEffect();
     }
 
     public override void StopModification()

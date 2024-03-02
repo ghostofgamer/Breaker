@@ -14,6 +14,7 @@ public class SpeedUp : Modification
                 StopCoroutine(Coroutine);
 
             StartCoroutine(OnSpeedUpActivated());
+            ShowNameEffect();
         }
     }
 

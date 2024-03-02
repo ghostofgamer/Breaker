@@ -26,6 +26,7 @@ public class Immune : Modification
                 StopCoroutine(Coroutine);
 
             Coroutine = StartCoroutine(OnImmuneBricksActivated());
+            ShowNameEffect();
         }
     }
 

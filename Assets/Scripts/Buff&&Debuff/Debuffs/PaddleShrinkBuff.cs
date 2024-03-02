@@ -12,6 +12,7 @@ public class PaddleShrinkBuff : PaddleChanger
                 StopCoroutine(Coroutine);
 
             Coroutine = StartCoroutine(OnPaddleSizeChanger());
+            ShowNameEffect();
         }
     }
 

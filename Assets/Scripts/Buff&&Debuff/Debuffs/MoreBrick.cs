@@ -21,6 +21,7 @@ public class MoreBrick : Modification
                 StopCoroutine(Coroutine);
 
             StartCoroutine(OnMoreBricksActivated());
+            ShowNameEffect();
         }
     }
 

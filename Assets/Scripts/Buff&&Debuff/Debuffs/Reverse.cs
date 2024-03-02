@@ -12,6 +12,7 @@ public class Reverse : Modification
                 StopCoroutine(Coroutine);
             
             StartCoroutine(OnReversePaddleActivated());
+            ShowNameEffect();
         }
     }
 

@@ -12,6 +12,7 @@ public class BallShrink : BallSizeChanger
                 StopCoroutine(Coroutine);
 
             StartCoroutine(OnBallChangeSize(_ballMover));
+            ShowNameEffect();
         }
     }
 

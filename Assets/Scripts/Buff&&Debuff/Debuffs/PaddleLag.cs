@@ -16,6 +16,7 @@ public class PaddleLag : Modification
                 StopCoroutine(Coroutine);
 
             StartCoroutine(OnPaddleLagActivated());
+            ShowNameEffect();
         }
     }
 
