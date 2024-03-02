@@ -21,7 +21,8 @@ public class PlatformaMover : MonoBehaviour
 
 
     private Vector2 mouseDirection;
-
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
+    private Coroutine _coroutine;
 
     void Update()
     {
@@ -46,6 +47,7 @@ public class PlatformaMover : MonoBehaviour
         {
             _positionMouse.SetActive(true);
             isMousePressed = true;
+            Time.timeScale = 1;
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -55,12 +57,25 @@ public class PlatformaMover : MonoBehaviour
 
             _positionMouse.SetActive(false);
             isMousePressed = false;
+            
+            if(_coroutine!=null)
+                StopCoroutine(_coroutine);
+            StartCoroutine(TimeScaleChanged());
         }
 
         if (isMousePressed)
         {
             MovePlatformWithMouse();
         }
+    }
+
+    private IEnumerator TimeScaleChanged()
+    {
+        Time.timeScale = 0.35f;
+        yield return _waitForSeconds;
+        
+        while (Time.timeScale < 1f)
+            Time.timeScale += Time.deltaTime;
     }
 
     public void SetValue(float speed)

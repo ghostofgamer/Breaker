@@ -35,10 +35,9 @@ public class BonusTarget : Modification
         for (int i = 0; i < _bricks.childCount; i++)
             bricksList.Add(_bricks.GetChild(i));
 
-
         _filtredBrick = bricksList
-            .Where(p => p.gameObject.activeSelf == true && !p.gameObject.GetComponent<Brick>().IsEternal).ToList();
-
+            .Where(p => p.gameObject.GetComponent<Brick>() && !p.gameObject.GetComponent<Brick>().IsEternal &&
+                        p.gameObject.activeSelf == true).ToList();
 
         if (_filtredBrick.Count > 0)
         {
@@ -67,7 +66,7 @@ public class BonusTarget : Modification
             _buffCounter.IncreaseBuffCount();
         }
 
-        _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_effects[_randomEffectIndex],true);
+        _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_effects[_randomEffectIndex], true);
         _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _newMaterial;
     }
 
@@ -81,7 +80,7 @@ public class BonusTarget : Modification
     {
         SetActive(false);
 
-        _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_startEffect,false);
+        _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_startEffect, false);
         _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _startMaterial;
 
         if (_filtredBrick[_randomIndex].gameObject.activeSelf != false && _startEffect == null)

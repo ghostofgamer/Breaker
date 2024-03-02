@@ -174,7 +174,7 @@ Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
     {
         GetComponent<MeshRenderer>().enabled = false;
         Vector3 platformUp = hit.transform.forward;
-        Debug.Log("PlatformUP " + platformUp);
+        // Debug.Log("PlatformUP " + platformUp);
         Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
         // transform.position = newPosition;
         GetComponent<MeshRenderer>().enabled = true;
@@ -188,24 +188,24 @@ Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
             Debug.Log("Z " + New.z);
             _ballMover.SetDirection(new Vector3(Reflect.x, Reflect.y, Reflect.z + New.z).normalized);
             Vector3 direction = new Vector3(Reflect.x, Reflect.y, NEWREFLECT.z + New.z).normalized;
-            Debug.Log("DirectionZZZ " + direction);
+            // Debug.Log("DirectionZZZ " + direction);
             ;
             _ballMover.FastSpeed();
         }
         else
         {
-            Debug.Log("ELSE - Z " + NEWREFLECT);
+            // Debug.Log("ELSE - Z " + NEWREFLECT);
             _ballMover.SetDirection(NEWREFLECT);
         }
 
         if (New.x > 0.3 || New.x < -0.3)
         {
-            Debug.Log("X");
+            // Debug.Log("X");
             _ballMover.SetDirection(new Vector3(Reflect.x + New.x, Reflect.y, NEWREFLECT.z).normalized);
         }
         else
         {
-            Debug.Log("ELSE - X " + NEWREFLECT);
+            // Debug.Log("ELSE - X " + NEWREFLECT);
             _ballMover.SetDirection(NEWREFLECT);
         }
     }

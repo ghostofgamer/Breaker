@@ -61,21 +61,21 @@ public class BallMover : MonoBehaviour
 
             if (_direction.z == 0)
             {
-                Debug.Log("ZERO " + _direction.z);
+                // Debug.Log("ZERO " + _direction.z);
                 _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.5f, 0.5f))
                     .normalized;
             }
 
             if (_direction.z < 0 && _direction.z > -0.3)
             {
-                Debug.Log("DIREC " + _direction.z);
+                // Debug.Log("DIREC " + _direction.z);
                 _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.3f, -0.5f))
                     .normalized;
             }
 
             if (_direction.z > 0 && _direction.z < 0.3)
             {
-                Debug.Log("DIREC БОЛЬШЕ " + _direction.z);
+                // Debug.Log("DIREC БОЛЬШЕ " + _direction.z);
                 _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(0.3f, 0.5f))
                     .normalized;
             }
@@ -229,13 +229,13 @@ public class BallMover : MonoBehaviour
 
     public void SetDirection(Vector3 direction)
     {
-        Debug.Log("SETDIRECTION" + direction);
+        // Debug.Log("SETDIRECTION" + direction);
         _direction = direction;
     }
 
     public void FastSpeed()
     {
-        speed = Mathf.Clamp((speed * 2), _maxSpeed, _ultraSpeed);
+        speed = Mathf.Clamp((speed * 1.5f), _maxSpeed, _ultraSpeed);
     }
 
     private void CheckBehindWall()
@@ -316,21 +316,21 @@ public class BallMover : MonoBehaviour
     {
         if (_direction.z == 0)
         {
-            Debug.Log("ZERO " + _direction.z);
+            // Debug.Log("ZERO " + _direction.z);
             _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.5f, 0.5f))
                 .normalized;
         }
 
         if (_direction.z < 0 && _direction.z > -0.3)
         {
-            Debug.Log("DIREC " + _direction.z);
+            // Debug.Log("DIREC " + _direction.z);
             _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.3f, -0.5f))
                 .normalized;
         }
 
         if (_direction.z > 0 && _direction.z < 0.3)
         {
-            Debug.Log("DIREC БОЛЬШЕ " + _direction.z);
+            // Debug.Log("DIREC БОЛЬШЕ " + _direction.z);
             _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(0.3f, 0.5f))
                 .normalized;
         }
