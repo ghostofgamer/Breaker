@@ -12,7 +12,8 @@ public enum LevelState
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] private GameObject _screen;
+    [SerializeField] private LevelInfo _levelInfo;
+    [SerializeField] private LevelInfo[] _levelsInfo;
     [SerializeField] private ParticleSystem _dontSelectedCircle;
     [SerializeField] private ParticleSystem _selectedCircle;
     [SerializeField] private ParticleSystem[] _effectsSelect;
@@ -96,7 +97,14 @@ public class Level : MonoBehaviour
         // _dontSelectedCircle.Stop();
         _selectedCircle.Play();
         _cameraDistance.MoveCameraToTarget(transform);
-        _screen.SetActive(true);
+        /*_levelInfo.SetActive(true);
+        _levelInfo.GetComponent<Animator>().Play("LevelCubeInfoScreenUp");*/
+        foreach (LevelInfo levelInfo in _levelsInfo)
+        {
+            levelInfo.Close();
+        }
+        
+        _levelInfo.Open();
     }
 
     public void StopParticles()
