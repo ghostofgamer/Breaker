@@ -24,6 +24,7 @@ public class BonusTarget : Modification
                 StopCoroutine(Coroutine);
 
             StartCoroutine(OnBonusTargetActivated());
+            ShowNameEffect();
         }
     }
 

@@ -18,10 +18,10 @@ public class BuffDistributor : MonoBehaviour
         {
             int index = Random.Range(0, _effects.Length);
 
-            if (_effects[index].GetComponent<Buff>())
+            if (_effects[3].GetComponent<Buff>())
                 _buffCounter.IncreaseBuffCount();
                     
-            return _effects[index];
+            return _effects[3];
         }
 
         return null;

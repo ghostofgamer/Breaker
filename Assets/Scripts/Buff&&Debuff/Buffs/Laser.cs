@@ -36,6 +36,7 @@ public class Laser : Modification
                 StopCoroutine(Coroutine);
 
             Coroutine = StartCoroutine(OnShoot());
+            ShowNameEffect();
         }
     }
 

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public abstract class Modification : MonoBehaviour
     [SerializeField] protected BallMover _ballMover;
     [SerializeField] protected Player Player;
     [SerializeField] protected float Duration;
+    [SerializeField] protected NameEffectAnimation NameEffect;
 
     [SerializeField] private BuffUIFade _buffUI;
     [SerializeField] private BuffType _buffType;
@@ -31,6 +33,11 @@ public abstract class Modification : MonoBehaviour
     {
         // _buffUI.Init(Duration);
         _buffUI.gameObject.SetActive(isActive);
+    }
+
+    protected void ShowNameEffect()
+    {
+        NameEffect.Show();
     }
 
     public abstract void ApplyModification();

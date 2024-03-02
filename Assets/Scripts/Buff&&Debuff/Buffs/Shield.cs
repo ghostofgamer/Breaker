@@ -13,6 +13,7 @@ public class Shield : Modification
                 StopCoroutine(Coroutine); 
             
             Coroutine = StartCoroutine(OnShieldActivated());
+            ShowNameEffect();
         }
     }
 

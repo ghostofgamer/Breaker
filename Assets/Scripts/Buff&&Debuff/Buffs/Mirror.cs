@@ -17,6 +17,7 @@ public class Mirror : Modification
                 StopCoroutine(Coroutine);
 
             Coroutine = StartCoroutine(OnGetMirrorPlatform());
+            ShowNameEffect();
         }
     }
 

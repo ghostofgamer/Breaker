@@ -12,6 +12,7 @@ public class BallGrow : BallSizeChanger
                 StopCoroutine(Coroutine);
 
             StartCoroutine(OnBallChangeSize(_ballMover));
+            ShowNameEffect();
         }
     }
 

@@ -12,6 +12,7 @@ public class PaddleGrowBuff : PaddleChanger
                 StopCoroutine(Coroutine);
             
             Coroutine = StartCoroutine(OnPaddleSizeChanger());
+            ShowNameEffect();
         }
     }
 

@@ -14,6 +14,7 @@ public class Portal : Modification
                 StopCoroutine(Coroutine);
 
             Coroutine = StartCoroutine(OnPortalActivated());
+            ShowNameEffect();
         }
     }
 
