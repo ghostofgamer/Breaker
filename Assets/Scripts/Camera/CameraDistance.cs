@@ -37,7 +37,7 @@ public class CameraDistance : MonoBehaviour
     {
         _targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z - _distance);
         _cameraMover.SetTargetPosition(_targetPosition);
-        Debug.Log("Target   " + _targetPosition);
+        // Debug.Log("Target   " + _targetPosition);
         _initialPosition = transform.position;
         _timeElapsed = 0f;
         _isLerping = true;
