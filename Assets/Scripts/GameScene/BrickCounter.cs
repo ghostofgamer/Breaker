@@ -15,23 +15,26 @@ public class BrickCounter : MonoBehaviour
 
     private int _bricksSmashedCount;
     private List<Brick> _bricks;
-    private int _brickCount = 0;
+
     private int _score = 5;
-    private int _remainingAmountHelp = 3;
+
     private bool _isRemainingActivated;
 
     public event UnityAction AllBrickDestory;
     public event UnityAction BricksDestructionHelp;
 
+    public int RemainingAmountHelp { get; private set; } = 3;
+    public int BrickCount { get; private set; }
+
     public void ChangeValue(int reward)
     {
-        _brickCount--;
+        BrickCount--;
         _bricksSmashedCount++;
         _bonusCounter.AddBonus(reward);
         ShowInfo();
         _scoreCounter.IncreaseScore(_score);
 
-        if (_brickCount <= _remainingAmountHelp)
+        if (BrickCount <= RemainingAmountHelp)
         {
             if (!_isRemainingActivated)
             {
@@ -40,7 +43,7 @@ public class BrickCounter : MonoBehaviour
             }
         }
 
-        if (_brickCount <= 0)
+        if (BrickCount <= 0)
         {
             Debug.Log("Victory");
             AllBrickDestory?.Invoke();
@@ -49,13 +52,13 @@ public class BrickCounter : MonoBehaviour
 
     public void AddBricks(int bricksCount)
     {
-        _brickCount++;
+        BrickCount++;
         ShowInfo();
     }
 
     private void ShowInfo()
     {
-        _brickCountTxt.text = _brickCount.ToString();
+        _brickCountTxt.text = BrickCount.ToString();
         _brickSmashedTxt.text = _bricksSmashedCount.ToString();
     }
 

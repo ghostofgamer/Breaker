@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ReviveScreen : EndScreen
@@ -14,7 +15,10 @@ public class ReviveScreen : EndScreen
     private float _duration = 3f;
     private float _elapsedTime;
     private Coroutine _coroutine;
+    
     public bool IsLose { get; private set; }
+
+    public event UnityAction Revive; 
 
     private void OnEnable()
     {
@@ -66,6 +70,7 @@ public class ReviveScreen : EndScreen
     public void ChooseRevive()
     {
         IsLose = false;
+        Revive?.Invoke();
         StopCoroutine(_coroutine);
         Close();
     }
