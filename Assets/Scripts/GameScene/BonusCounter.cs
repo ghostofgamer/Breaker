@@ -11,7 +11,7 @@ public class BonusCounter : MonoBehaviour
     private int _amountBonuses = 0;
     private bool _isReset;
     private float _elapsedTime;
-    private float _duration = 1;
+    private float _duration = 0.65f;
 
     private void Start()
     {

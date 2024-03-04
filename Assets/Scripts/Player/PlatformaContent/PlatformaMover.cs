@@ -16,32 +16,18 @@ public class PlatformaMover : MonoBehaviour
 
     private bool isMousePressed = false;
     private bool _isReverse = false;
+    private bool _isFirstThrow = true;
 
     public float Speed => moveSpeed;
 
 
     private Vector2 mouseDirection;
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
     private Coroutine _coroutine;
 
     void Update()
     {
         float mouse = Input.GetAxis("Mouse X") * 2;
-        /*Debug.Log("Mouse Direction: " + mouse);
-        Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
-
-        /*if (Input.GetMouseButton(0))
-        {
-            // Получаем значения движения мыши по осям X и Y
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
-
-            // Сохраняем значения в Vector2
-            mouseDirection = new Vector2(mouseX, mouseY);
-
-            // Выводим значения на экран для отладки
-            // Debug.Log("Mouse Direction: " + mouseDirection);
-        }*/
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -57,10 +43,15 @@ public class PlatformaMover : MonoBehaviour
 
             _positionMouse.SetActive(false);
             isMousePressed = false;
-            
-            if(_coroutine!=null)
+
+            if (_coroutine != null)
                 StopCoroutine(_coroutine);
-            StartCoroutine(TimeScaleChanged());
+
+            if (!_isFirstThrow)
+                StartCoroutine(TimeScaleChanged());
+
+            if (_isFirstThrow)
+                _isFirstThrow = false;
         }
 
         if (isMousePressed)
@@ -73,7 +64,7 @@ public class PlatformaMover : MonoBehaviour
     {
         Time.timeScale = 0.35f;
         yield return _waitForSeconds;
-        
+
         while (Time.timeScale < 1f)
             Time.timeScale += Time.deltaTime;
     }
@@ -116,5 +107,11 @@ public class PlatformaMover : MonoBehaviour
             transform.position =
                 Vector3.MoveTowards(transform.position, clampedTargetPosition, moveSpeed * Time.deltaTime);
         }
+    }
+
+    public void Revive()
+    {
+        _isFirstThrow = true;
+        gameObject.SetActive(true);
     }
 }
