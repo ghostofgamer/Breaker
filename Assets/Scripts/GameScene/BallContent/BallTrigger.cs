@@ -25,6 +25,7 @@ public class BallTrigger : MonoBehaviour
             Dying?.Invoke();
             gameObject.SetActive(false);
             GetComponent<Ball>().StopMove();
+            Time.timeScale = 1;
             // transform.parent = _enviropment;
         }
     }

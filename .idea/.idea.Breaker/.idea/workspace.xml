@@ -21,13 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/BuffDistributor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/BuffDistributor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Modification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Modification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/PanelMoving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/PanelMoving.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/ReviveScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/ReviveScreen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,8 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaRevive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/RestartButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallRevive.cs" />
@@ -174,7 +170,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseChangeLevelScreenButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/BrickMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlatformaContent/PlatformaMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/ReviveScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BrickCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AdditionalLaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/BallSizeChanger.cs" />
@@ -201,12 +196,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BuyUpgradeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/SpeedUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Buffs/Laser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Modification.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/BuffDistributor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/Debuffs/Immune.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/ReviveScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buff&amp;&amp;Debuff/BuffDistributor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BonusCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/PanelMoving.cs" />
       </list>
     </option>
   </component>
@@ -295,7 +293,7 @@
       <workItem from="1709364711231" duration="23722000" />
       <workItem from="1709446826823" duration="3327000" />
       <workItem from="1709474540149" duration="7731000" />
-      <workItem from="1709543731790" duration="13091000" />
+      <workItem from="1709543731790" duration="17991000" />
     </task>
     <servers />
   </component>
@@ -344,10 +342,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1709393554533" />
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1709393587243">
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1709567413343">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1709393587243" />
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1709567413343" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
