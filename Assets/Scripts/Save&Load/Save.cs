@@ -8,6 +8,7 @@ public class Save : MonoBehaviour
     public const string Money = "Money";
     public const string Volume = "Volume";
     [Header("SelectedSkins")]
+    public const string SkinBall = "SkinBall";
     public const string SelectedHeavy = "SelectedHeavy";
     public const string SelectedFaster = "SelectedFaster";
     public const string SelectedBouncy = "SelectedBouncy";

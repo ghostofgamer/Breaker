@@ -14,8 +14,10 @@ public class ChangeSkinButton : AbstractButton
     [SerializeField] private Load _load;
     [SerializeField] private Save _save;
     [SerializeField] private int _startIndex;
+    [SerializeField] private int _colorIndex;
 
     private int _selectedSkinIndex = 1;
+    private int _unSelectedSkinIndex = 0;
 
     private void Start()
     {
@@ -40,11 +42,13 @@ public class ChangeSkinButton : AbstractButton
         _image.sprite = _newSprite;
         _selected.gameObject.SetActive(true);
         _save.SetData(_selectedSkin.ToString(), _selectedSkinIndex);
+        _save.SetData(Save.SkinBall,_colorIndex);
     }
 
     private void ChangeSkin()
     {
         _image.sprite = _oldSprite;
         _selected.gameObject.SetActive(false);
+        _save.SetData(_selectedSkin.ToString(), _unSelectedSkinIndex);
     }
 }
