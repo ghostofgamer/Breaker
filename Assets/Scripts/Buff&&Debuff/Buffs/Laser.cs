@@ -30,8 +30,6 @@ public class Laser : Modification
 
     public override void ApplyModification()
     {
-        Debug.Log("Durations " + Duration);
-
         if (Player.TryApplyEffect(this))
         {
             if (Coroutine != null)

@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class BallTrigger : MonoBehaviour
 {
     [SerializeField] private BallMover _ballMover;
+
     // [SerializeField] private Transform _enviropment;
     public float platformOffset = 3f;
     public float sphereRadius = 0.5f;
@@ -185,7 +186,6 @@ Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
         // Debug.Log("Reflect " + Reflect);
         if (New.z > 0.5)
         {
-
             _ballMover.SetDirection(new Vector3(Reflect.x, Reflect.y, Reflect.z + New.z).normalized);
             Vector3 direction = new Vector3(Reflect.x, Reflect.y, NEWREFLECT.z + New.z).normalized;
             // Debug.Log("DirectionZZZ " + direction);

@@ -12,8 +12,7 @@ public abstract class Modification : MonoBehaviour
     [SerializeField] protected Player Player;
     [SerializeField] protected float Duration;
     [SerializeField] protected NameEffectAnimation NameEffect;
-
-    // [SerializeField] private Buffs _buffs;
+    
     [SerializeField] private Load _load;
     [SerializeField] private bool _isImproving;
     [SerializeField] private BuffUIFade _buffUI;
@@ -32,8 +31,7 @@ public abstract class Modification : MonoBehaviour
 
             if (number > _startIndex)
             {
-                Duration *= 10.5f;
-                Debug.Log(Duration);
+                Duration *= 1.5f;
             }
         }
         
@@ -44,12 +42,10 @@ public abstract class Modification : MonoBehaviour
     protected virtual void Start()
     {
         WaitForSeconds = new WaitForSeconds(Duration);
-        // Debug.Log(Duration);
     }
 
     protected void SetActive(bool isActive)
     {
-        // _buffUI.Init(Duration);
         _buffUI.gameObject.SetActive(isActive);
     }
 
