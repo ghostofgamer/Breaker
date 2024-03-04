@@ -93,7 +93,6 @@ public class WaveMotion : MonoBehaviour
         if (Input.GetKeyDown(_flyBackKey))
         {
             FlyBackAllCubes();
-            Debug.Log(_cubeList.Count);
         }
     }
 
@@ -103,7 +102,7 @@ public class WaveMotion : MonoBehaviour
         {
             if (cube != null)
             {
-                float flySpeed = UnityEngine.Random.Range(1, 5);
+                float flySpeed = Random.Range(1, 5);
                 StartCoroutine(FlyBackCube(cube, flySpeed));
             }
         }
