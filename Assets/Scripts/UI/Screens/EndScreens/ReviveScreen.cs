@@ -95,6 +95,7 @@ public class ReviveScreen : EndScreen
         StopCoroutine(_coroutine);
         Close(); 
         _walletAnimator.Play("WalletReviveClose");
+        _bonusCounter.BringToZero();
         yield return _waitForSeconds;
         _gameOverScreen.Open();
          

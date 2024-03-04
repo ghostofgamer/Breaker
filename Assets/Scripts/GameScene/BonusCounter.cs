@@ -24,8 +24,9 @@ public class BonusCounter : MonoBehaviour
         ShowInfo();
     }
 
-    public void GetBonus()
+    public int GetBonus()
     {
+        return _amountBonuses;
     }
 
     public void BringToZero()
