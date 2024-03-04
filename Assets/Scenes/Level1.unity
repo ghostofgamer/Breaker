@@ -9544,6 +9544,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269613915}
   m_CullTransparentMesh: 1
+--- !u!1 &280613365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5046227226496367749, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+  m_PrefabInstance: {fileID: 1102296127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &293203871
 GameObject:
   m_ObjectHideFlags: 0
@@ -9804,6 +9809,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 0
   NameEffect: {fileID: 329152669}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 0}
   _buffType: 0
   _ball: {fileID: 621576501}
@@ -9826,6 +9833,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 0
   NameEffect: {fileID: 0}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 0}
   _buffType: 0
   _modifications:
@@ -19207,6 +19216,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1078918506}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 269613917}
   _buffType: 12
   _sizeChange: -1
@@ -19228,6 +19239,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 135602457}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 1035477782}
   _buffType: 7
   _sizeChange: -0.5
@@ -19250,6 +19263,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1566657529}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 83966169}
   _buffType: 8
 --- !u!114 &588720370
@@ -19270,6 +19285,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 552869724}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 1985887996}
   _buffType: 11
   _speedChanger: 2
@@ -19291,6 +19308,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 888609643}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 461413891}
   _buffType: 9
   _bricksContainer: {fileID: 1867502213}
@@ -19312,6 +19331,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 0
   NameEffect: {fileID: 2006832706}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 1212017579}
   _buffType: 10
   _bricksContainer: {fileID: 1867502213}
@@ -19340,6 +19361,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1828871852}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 251216602}
   _buffType: 13
 --- !u!1 &590184258
@@ -23508,8 +23531,10 @@ MonoBehaviour:
   _shootPosition:
   - {fileID: 1298765554}
   - {fileID: 1969926579}
+  - {fileID: 1575753949}
   _bullet: {fileID: 293641943206414805, guid: e52bbf074c80fd240b3c09478b903171, type: 3}
   _container: {fileID: 868505456}
+  _load: {fileID: 293203873}
 --- !u!114 &824722465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28616,7 +28641,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5046227226496367749, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1834239100}
   m_SourcePrefab: {fileID: 100100000, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
 --- !u!1 &1103209204
 GameObject:
@@ -67205,6 +67233,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1268009493}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 43661148}
   _buffType: 0
   _sizeChange: 1
@@ -67226,6 +67256,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1880181940}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 995245763}
   _buffType: 2
   _sizeChange: 0.5
@@ -67248,6 +67280,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 5114243}
+  _load: {fileID: 293203873}
+  _isImproving: 1
   _buffUI: {fileID: 2147159733}
   _buffType: 1
   _weapon: {fileID: 824722464}
@@ -67270,6 +67304,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1012552105}
+  _load: {fileID: 293203873}
+  _isImproving: 1
   _buffUI: {fileID: 1817876812}
   _buffType: 6
   _shield: {fileID: 6407520182894253067}
@@ -67291,6 +67327,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1861724819}
+  _load: {fileID: 293203873}
+  _isImproving: 1
   _buffUI: {fileID: 1627439416}
   _buffType: 4
   _mirrorPlatformaPrefab: {fileID: 1752382998}
@@ -67312,6 +67350,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 435159929}
+  _load: {fileID: 293203873}
+  _isImproving: 1
   _buffUI: {fileID: 145541605}
   _buffType: 5
   _portal: {fileID: 493529902}
@@ -67341,6 +67381,8 @@ MonoBehaviour:
   Player: {fileID: 824722463}
   Duration: 10
   NameEffect: {fileID: 431769926}
+  _load: {fileID: 0}
+  _isImproving: 0
   _buffUI: {fileID: 534093401}
   _buffType: 3
   _bricks: {fileID: 1867502213}
@@ -68909,7 +68951,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1939733840446481045, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
   m_PrefabInstance: {fileID: 1102296127}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 280613365}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe49b8fe2118a2d4187db2fdd6707b0d, type: 3}
@@ -75014,6 +75056,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 859035171741001445, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
   m_PrefabInstance: {fileID: 1102296127}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1834239100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280613365}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288645275c1249b4ba49477a84979731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionMouse: {fileID: 0}
+  _ball: {fileID: 0}
+  moveSpeed: 5
+  offset: 1
+  minX: -5
+  maxX: 5
+  minZ: -5
+  maxZ: 5
 --- !u!1 &1838807148
 GameObject:
   m_ObjectHideFlags: 0

@@ -185,7 +185,7 @@ Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
         // Debug.Log("Reflect " + Reflect);
         if (New.z > 0.5)
         {
-            Debug.Log("Z " + New.z);
+
             _ballMover.SetDirection(new Vector3(Reflect.x, Reflect.y, Reflect.z + New.z).normalized);
             Vector3 direction = new Vector3(Reflect.x, Reflect.y, NEWREFLECT.z + New.z).normalized;
             // Debug.Log("DirectionZZZ " + direction);

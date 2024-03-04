@@ -14,13 +14,17 @@ public class BallMover : MonoBehaviour
     [SerializeField] private bool _isPortal = false;
     [SerializeField] private BallTrigger _ballTrigger;
 
-    private float _maxSpeed = 30f;
-    private float _ultraSpeed = 60f;
+    // private float _maxSpeed = 45f;
+    public float MinSpeed { get; private set; } = 30;
+    private float _mediumSpeed = 45;
+    private float _maxSpeed = 60f;
 
-    public float speed = 10.0f;
+    public float speed;
+
     public LayerMask wallLayer;
     private Vector3 _direction;
     public float _radius;
+    private bool _isSpeedUp;
 
     public float Speed => speed;
     public Vector3 Direction => _direction;
@@ -33,17 +37,21 @@ public class BallMover : MonoBehaviour
         /*Debug.Log("StartDirection " + _direction);
         Debug.Log("MouseX " + Input.GetAxis("Mouse X"));*/
         _radius = GetComponent<SphereCollider>().radius;
+        Debug.Log("@" + speed);
     }
 
     void Update()
     {
         // Debug.Log("Скорость " + speed);
-        if (speed > _maxSpeed)
+        if (speed > MinSpeed && !_isSpeedUp)
         {
-            speed = Mathf.MoveTowards(speed, _maxSpeed, 6f * Time.deltaTime);
-            // Debug.Log("Скорость " + speed);
+            speed = Mathf.MoveTowards(speed, MinSpeed, 6f * Time.deltaTime);
         }
 
+        if (speed < MinSpeed)
+        {
+            speed = MinSpeed;
+        }
 
         transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
         // _ballTrigger.Checkplatform();
@@ -99,7 +107,7 @@ public class BallMover : MonoBehaviour
     {
         _direction = direction;
     }
-    
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.TryGetComponent(out Brick brick))
@@ -109,9 +117,10 @@ public class BallMover : MonoBehaviour
         }
     }
 
-    public void SetValue(float speed)
+    public void SetValue(float speed, bool flag)
     {
-        this.speed = speed;
+        _isSpeedUp = flag;
+        this.speed = Mathf.Clamp(speed, MinSpeed, _maxSpeed);
     }
 
     [SerializeField] private float _rayLength = 10f;
@@ -235,7 +244,8 @@ public class BallMover : MonoBehaviour
 
     public void FastSpeed()
     {
-        speed = Mathf.Clamp((speed * 1.5f), _maxSpeed, _ultraSpeed);
+        if (!_isSpeedUp)
+            speed = Mathf.Clamp((speed * 1.5f), MinSpeed, _mediumSpeed);
     }
 
     private void CheckBehindWall()
@@ -261,8 +271,8 @@ public class BallMover : MonoBehaviour
             CheckAngle();
             // Debug.Log("Ушел с лева " + _direction);
         }
-        
-        if (transform.position.z> _zMaxPosition)
+
+        if (transform.position.z > _zMaxPosition)
         {
             Vector3 normal = new Vector3(0, 0, -1);
             var position = transform.position;
@@ -272,7 +282,7 @@ public class BallMover : MonoBehaviour
             CheckAngle();
             // Debug.Log("Ушел с лева " + _direction);
         }
-        
+
         /*if (transform.position.z< _zMinPosition)
         {
             Vector3 normal = new Vector3(0, 0, 1);
@@ -335,7 +345,7 @@ public class BallMover : MonoBehaviour
                 .normalized;
         }
     }
-    
+
     public void SetValue(bool portalActivated)
     {
         _isPortal = portalActivated;

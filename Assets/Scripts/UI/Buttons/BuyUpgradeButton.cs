@@ -22,7 +22,8 @@ public class BuyUpgradeButton : AbstractButton
 
     private void MakeDeal()
     {
-        _save.SetData(_buffElement.ToString(), 1);
+        Debug.Log(_buffElement.ToString());
+        _save.SetData(_buffElement.ToString(), 3);
         _buff.ChangeValue();
         _closeInfoButton.ScreenClose();
         _wallet.RemoveMoney(_price);

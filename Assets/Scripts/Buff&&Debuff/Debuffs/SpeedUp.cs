@@ -26,14 +26,14 @@ public class SpeedUp : Modification
     private void Stop()
     {
         SetActive(false);
-        _ballMover.SetValue(_startSpeed);
+        _ballMover.SetValue(_startSpeed,false);
     }
 
     private IEnumerator OnSpeedUpActivated()
     {
         SetActive(true);
-        _startSpeed = _ballMover.Speed;
-        _ballMover.SetValue(_startSpeed * 2);
+        _startSpeed = _ballMover.MinSpeed;
+        _ballMover.SetValue(_startSpeed * 2,true);
         yield return WaitForSeconds;
         Stop();
         Player.DeleteEffect(this);
