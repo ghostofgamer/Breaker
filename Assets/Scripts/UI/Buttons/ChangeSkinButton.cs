@@ -37,7 +37,7 @@ public class ChangeSkinButton : AbstractButton
     private void ChooseSkin()
     {
         foreach (ChangeSkinButton button in _buttons)
-            button.ChangeSkin();
+            button.UnSelectedSkin();
 
         _image.sprite = _newSprite;
         _selected.gameObject.SetActive(true);
@@ -45,7 +45,7 @@ public class ChangeSkinButton : AbstractButton
         _save.SetData(Save.SkinBall,_colorIndex);
     }
 
-    private void ChangeSkin()
+    private void UnSelectedSkin()
     {
         _image.sprite = _oldSprite;
         _selected.gameObject.SetActive(false);

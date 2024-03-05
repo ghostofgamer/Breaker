@@ -50,35 +50,50 @@ public class BallMover : MonoBehaviour
             speed = MinSpeed;
         }
 
-        transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
+        if (transform.position.y != 5.1f)
+        {
+            Debug.Log("По Y не то");
+            transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
+        }
+        // transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
+        
         _ballTrigger.CheckPlatformCollision();
         Vector3 predictedPosition = transform.position + _direction * speed * Time.deltaTime;
 
-        if (Physics.SphereCast(transform.position, _radius, _direction, out RaycastHit hit,
-            (predictedPosition - transform.position).magnitude, wallLayer))
-        {
+        // if (Physics.SphereCast(transform.position, _radius, _direction, out RaycastHit hit,
+        //     (predictedPosition - transform.position).magnitude, wallLayer))
+        // {
+        //
+        //     _direction = Vector3.Reflect(_direction, hit.normal);
+        //
+        //     if (_direction.z == 0)
+        //     {
+        //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(-0.5f, 0.5f))
+        //             .normalized;
+        //     }
+        //
+        //     if (_direction.z < 0 && _direction.z > -0.3)
+        //     {
+        //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(-0.3f, -0.5f))
+        //             .normalized;
+        //     }
+        //
+        //     if (_direction.z > 0 && _direction.z < 0.3)
+        //     {
+        //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(0.3f, 0.5f))
+        //             .normalized;
+        //     }
+        // }
+        
+        if (_isPortal)
+            _portalTeleporterBall.TeleportBall();
 
-            _direction = Vector3.Reflect(_direction, hit.normal);
-
-            if (_direction.z == 0)
-            {
-                _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.5f, 0.5f))
-                    .normalized;
-            }
-
-            if (_direction.z < 0 && _direction.z > -0.3)
-            {
-                _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.3f, -0.5f))
-                    .normalized;
-            }
-
-            if (_direction.z > 0 && _direction.z < 0.3)
-            {
-                _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(0.3f, 0.5f))
-                    .normalized;
-            }
-        }
         else
+            CheckBehindWall();
+
+        transform.position += _direction * speed * Time.deltaTime;
+        
+        /*else
         {
             if (_isPortal)
                 _portalTeleporterBall.TeleportBall();
@@ -87,7 +102,7 @@ public class BallMover : MonoBehaviour
                 CheckBehindWall();
 
             transform.position += _direction * speed * Time.deltaTime;
-        }
+        }*/
     }
 
     public void SetStartDirection(Vector3 direction)
@@ -99,7 +114,14 @@ public class BallMover : MonoBehaviour
     {
         if (other.collider.TryGetComponent(out Brick brick))
         {
-            _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
+            Vector3 Reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
+            // Debug.Log("Reflect " + Reflect);
+            Vector3 NEWREFLECT = new Vector3(Reflect.x, 0, Reflect.z).normalized;
+// Debug.Log("Newreflect " + NEWREFLECT);
+            _direction = NEWREFLECT;
+            
+            
+            // _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
             brick.Die();
         }
     }
@@ -127,7 +149,8 @@ public class BallMover : MonoBehaviour
         {
             Vector3 normal = new Vector3(-1, 0, 0);
             var position = transform.position;
-            position = new Vector3(_xMaxPosition, position.y, position.z);
+            // position = new Vector3(_xMaxPosition, position.y, position.z);
+            position = new Vector3(_xMaxPosition, 5.1f, position.z);
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
@@ -137,7 +160,8 @@ public class BallMover : MonoBehaviour
         {
             Vector3 normal = new Vector3(1, 0, 0);
             var position = transform.position;
-            position = new Vector3(_xMinPosition, position.y, position.z);
+            // position = new Vector3(_xMinPosition, position.y, position.z);
+            position = new Vector3(_xMinPosition, 5.1f, position.z);
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
@@ -147,7 +171,8 @@ public class BallMover : MonoBehaviour
         {
             Vector3 normal = new Vector3(0, 0, -1);
             var position = transform.position;
-            position = new Vector3(position.x, position.y, _zMaxPosition);
+            // position = new Vector3(position.x, position.y, _zMaxPosition);
+            position = new Vector3(position.x, 5.1f, _zMaxPosition);
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();

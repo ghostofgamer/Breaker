@@ -45,7 +45,7 @@ public class BrickCounter : MonoBehaviour
 
         if (BrickCount <= 0)
         {
-            Debug.Log("Victory");
+            // Debug.Log("Victory");
             AllBrickDestory?.Invoke();
         }
     }

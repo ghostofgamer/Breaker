@@ -12,7 +12,8 @@ public class VictoryScreen : EndScreen
     [SerializeField] private FragmentsCounter _fragmentsCounter;
     [SerializeField] private ScoreCounter _scoreCounter;
     [SerializeField] private GameObject[] _statistics;
-    
+    [SerializeField] private Save _save;
+
     [Header("StatisticTMP")] [SerializeField]
     private TMP_Text _timer;
 
@@ -25,7 +26,7 @@ public class VictoryScreen : EndScreen
     private int _credits = 0;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private WaitForSeconds _waitForSecondsStatistics = new WaitForSeconds(0.365f);
-    
+
     private void Start()
     {
         foreach (var statistic in _statistics)
@@ -36,25 +37,31 @@ public class VictoryScreen : EndScreen
 
     public override void Open()
     {
-        StartCoroutine(OnScreenMove());
+        // StartCoroutine(OnScreenMove(credits));
     }
 
-    private void SetValue()
+    public void OpenScreen(int credits)
+    {
+        StartCoroutine(OnScreenMove(credits));
+    }
+
+    private void SetValue(int credits)
     {
         _buffCollected.text = _buffCounter.GetStatistic();
         _timer.text = _levelTimer.GetTime();
         _brickSmashed.text = _brickCounter.GetAmountSmashed();
         _fragmentsCollected.text = _fragmentsCounter.GetAmountFragmentsCollect();
-        _credits = _scoreCounter.GetScore() / 10;
+        _credits = credits;
         _creditsTxt.text = _credits.ToString();
+        _save.SetData(Save.TemporaryMoney, _credits);
     }
 
-    private IEnumerator OnScreenMove()
+    private IEnumerator OnScreenMove(int credits)
     {
         yield return _waitForSeconds;
         base.Open();
         yield return _waitForSeconds;
-        SetValue();
+        SetValue(credits);
 
         for (int i = 0; i < _statistics.Length; i++)
         {
@@ -76,8 +83,10 @@ public class VictoryScreen : EndScreen
                     yield return null;
                 }
             }
-            
+
             yield return _waitForSecondsStatistics;
         }
+
+        _save.SetData(Save.TemporaryMoney, _credits);
     }
 }

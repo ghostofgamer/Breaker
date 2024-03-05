@@ -23,7 +23,7 @@ public class LevelComplite : MonoBehaviour
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
     private WaitForSeconds _waitForSeconds1 = new WaitForSeconds(1f);
     private Coroutine _coroutine;
-    
+
     private void OnEnable()
     {
         _brickCounter.AllBrickDestory += Victory;
@@ -44,11 +44,11 @@ public class LevelComplite : MonoBehaviour
     {
         if (_reviveScreen.IsLose)
             return;
-        
-        if(_coroutine!=null)
+
+        if (_coroutine != null)
             StopCoroutine(_coroutine);
-        
-        _coroutine =   StartCoroutine(_OnVictory());
+
+        _coroutine = StartCoroutine(_OnVictory());
     }
 
     private IEnumerator _OnVictory()
@@ -59,6 +59,8 @@ public class LevelComplite : MonoBehaviour
         _claimButton.gameObject.SetActive(true);
         _animatorEnviropment.Play("EnviropmentRotate");
         _spawnBonusLevelComplite.StartFlightBonuses();
+        /*yield return new WaitForSeconds(0.3f);
+        _claimButton.SetActive();*/
         _claimButton.SetValue(_scoreCounter.GetScore() / 10);
     }
 }
