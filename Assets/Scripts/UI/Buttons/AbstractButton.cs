@@ -17,12 +17,12 @@ public abstract class AbstractButton : MonoBehaviour
         _canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         _button.onClick.AddListener(OnClick);
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         _button.onClick.RemoveListener(OnClick);
     }

@@ -2,18 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PanelMoving : MonoBehaviour
 {
-    [SerializeField] private Vector3 _direction;
-    [SerializeField] private float _speed;
     [SerializeField] private BrickCounter _brickCounter;
     [SerializeField] private ReviveScreen _reviveScreen;
     [SerializeField] private Animator _animator;
-
+    [SerializeField] private Button _button;
+    
     private bool _isMove = false;
 
-    private void OnEnable()
+    private void OnEnable() 
     {
         _reviveScreen.Lose += PanelMover;
         _brickCounter.AllBrickDestory += PanelMover;
@@ -27,14 +27,10 @@ public class PanelMoving : MonoBehaviour
 
     private void PanelMover()
     {
-        Debug.Log("ваыыаыаыаыа");
-        _animator.Play("BonusCounterMover");
-    }
-    
-    private void Update()
-    {
-        // if (_isMove)
-        //     transform.position += _direction * _speed * Time.deltaTime;
+        // if(_button!=null)
+        //     _button.interactable = false;
+        
+        _animator.Play("Move");
     }
 
     private void GoOffScreen()

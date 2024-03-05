@@ -1013,10 +1013,13 @@
           <e p="Levels" t="Include" />
           <e p="MainScene" t="Include" />
           <e p="Screen" t="Include">
+            <e p="CountDown" t="Include" />
             <e p="EndScreens" t="Include">
               <e p="Victory" t="Include" />
             </e>
+            <e p="Settings" t="Include" />
           </e>
+          <e p="Wallet" t="Include" />
         </e>
         <e p="Graphy - Ultimate Stats Monitor" t="Include">
           <e p="Changelog.txt" t="Include" />
@@ -1615,13 +1618,19 @@
               <e p="CloseReviveScreen.cs" t="Include" />
               <e p="CloseShopButton.cs" t="Include" />
               <e p="ContinueButton.cs" t="Include" />
+              <e p="CountDown.cs" t="Include" />
               <e p="InfoButton.cs" t="Include" />
               <e p="PauseButton.cs" t="Include" />
               <e p="PlayButton.cs" t="Include" />
+              <e p="QuitButton.cs" t="Include" />
               <e p="RestartButton.cs" t="Include" />
+              <e p="ResumeButton.cs" t="Include" />
               <e p="ReviveButton.cs" t="Include" />
               <e p="SelectLevelButton.cs" t="Include" />
-              <e p="SettingsButton.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="SettingsButton.cs" t="Include" />
+                <e p="SettingsButtonGameLevel.cs" t="Include" />
+              </e>
               <e p="ShopButton.cs" t="Include" />
               <e p="TryAgainButton.cs" t="Include" />
             </e>
