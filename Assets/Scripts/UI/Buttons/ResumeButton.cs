@@ -8,7 +8,7 @@ public class ResumeButton : AbstractButton
     [SerializeField] private SettingsScreen _settingsScreen;
     [SerializeField] private CountDown _countDown;
 
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
+    private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
     
     protected override void OnClick()
     {
@@ -25,6 +25,6 @@ public class ResumeButton : AbstractButton
         _settingsScreen.Close();
         yield return _waitForSeconds;
         _countDown.GoResume();
-        // Time.timeScale = 1;
+
     }
 }

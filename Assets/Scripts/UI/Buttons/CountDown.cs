@@ -8,9 +8,8 @@ public class CountDown : MonoBehaviour
 {
     [SerializeField] private TMP_Text[] _numbersText;
     [SerializeField] private PlatformaMover _platformaMover;
-    [SerializeField] private BallMover _ballMover;
-    
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
+
+    private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
     
     public void GoResume()
     {
@@ -28,8 +27,6 @@ public class CountDown : MonoBehaviour
         }
         
         _platformaMover.enabled = true;
-        _ballMover.enabled = true;
-        _ballMover.GetComponent<Rigidbody>().isKinematic = true;
-        // Time.timeScale = 1;
+        Time.timeScale = 1;
     }
 }

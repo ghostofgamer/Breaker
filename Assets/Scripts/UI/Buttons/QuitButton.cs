@@ -7,7 +7,7 @@ public class QuitButton : AbstractButton
 {
     [SerializeField] private SettingsScreen _settingsScreen;
     
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
+    private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
     private const string SceneName = "MainScene";
     
     protected override void OnClick()

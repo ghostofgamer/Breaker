@@ -59,7 +59,6 @@ public class LevelComplite : MonoBehaviour
         _claimButton.gameObject.SetActive(true);
         _animatorEnviropment.Play("EnviropmentRotate");
         _spawnBonusLevelComplite.StartFlightBonuses();
-        // yield return _waitForSeconds1;
         _claimButton.SetValue(_scoreCounter.GetScore() / 10);
     }
 }

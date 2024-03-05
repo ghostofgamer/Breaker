@@ -20,7 +20,8 @@ public class SettingsScreen : MonoBehaviour
     {
         Setvalue(1, true);
         _animator.Play("Open");
-        // Time.timeScale = 0;
+        Time.timeScale = 0;
+        Debug.Log("TimeScale " + Time.timeScale);
     }
 
     public void Close()
@@ -32,6 +33,7 @@ public class SettingsScreen : MonoBehaviour
     {
         _animator.Play("Close");
         yield return _waitForSeconds;
+        Debug.Log("выкл");
         Setvalue(0, false);
     }
 
