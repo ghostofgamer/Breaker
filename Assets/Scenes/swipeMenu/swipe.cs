@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class swipe : MonoBehaviour
 {
+    [SerializeField]private PlatformaSkinShop _platfromaSkinShop;
     public Color[] colors;
     public GameObject scrollbar, imageContent;
     private float scroll_pos = 0;
@@ -90,6 +91,10 @@ public class swipe : MonoBehaviour
                 Transform targetElement = _layoutGroup.transform.GetChild(i);
                 // targetElement.position = new Vector3( targetElement.position.x,  targetElement.position.y, targetElement.position.z - 1f);
                 transform.GetChild(i).localScale = Vector3.Lerp(transform.GetChild(i).localScale, new Vector3(1.65f, 1.65f,1.65f), 0.1f);
+                // Debug.Log(i);
+                
+                _platfromaSkinShop.UpdateButtons(i);
+                
                 // transform.GetChild(i).localPosition = _newPosition[i];
                 // Vector3 targetposition = new Vector3(transform.GetChild(i).localPosition.x, transform.GetChild(i).localPosition.y, transform.GetChild(i).localPosition.z);
                 // Vector3 targetposition = new Vector3(transform.GetChild(i).position.x, transform.GetChild(i).position.y, -300f);
@@ -140,7 +145,6 @@ public class swipe : MonoBehaviour
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
             {
                 scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[btnNumber], 1f * Time.deltaTime);
-
             }
         }
 
@@ -164,8 +168,5 @@ public class swipe : MonoBehaviour
                 runIt = true;
             }
         }
-
-       
     }
-
 }

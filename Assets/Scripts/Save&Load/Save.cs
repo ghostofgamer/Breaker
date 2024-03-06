@@ -51,13 +51,35 @@ public class Save : MonoBehaviour
     public const string six = "six";
     public const string seven = "seven";
     public const string eight = "eight";
-    
-    
+
     [Header("Buffs")]
     public const string Mirror = "Mirror";
     public const string Laser = "Laser";
     public const string Shield = "Shield";
     public const string Portal = "Portal";
+
+    [Header("SystemSavePlatforms")] 
+    public const string ActiveCapsuleIndex = "ActiveCapsuleIndex";
+    public const string CapsuleSkinBought0  = "CapsuleSkinBought0";
+    public const string CapsuleSkinBought1  = "CapsuleSkinBought1";
+    public const string CapsuleSkinBought2  = "CapsuleSkinBought2";
+    public const string CapsuleSkinBought3  = "CapsuleSkinBought3";
+    public const string CapsuleSkinBought4  = "CapsuleSkinBought4";
+    public const string CapsuleSkinBought5  = "CapsuleSkinBought5";
+    public const string CapsuleSkinBought6  = "CapsuleSkinBought6";
+    public const string CapsuleSkinBought7  = "CapsuleSkinBought7";
+    public const string CapsuleSkinBought8  = "CapsuleSkinBought8";
+    
+    public const string CapsuleSkinActive0  = "CapsuleSkinActive0";
+    public const string CapsuleSkinActive1  = "CapsuleSkinActive1";
+    public const string CapsuleSkinActive2  = "CapsuleSkinActive2";
+    public const string CapsuleSkinActive3  = "CapsuleSkinActive3";
+    public const string CapsuleSkinActive4  = "CapsuleSkinActive4";
+    public const string CapsuleSkinActive5  = "CapsuleSkinActive5";
+    public const string CapsuleSkinActive6  = "CapsuleSkinActive6";
+    public const string CapsuleSkinActive7  = "CapsuleSkinActive7";
+    public const string CapsuleSkinActive8  = "CapsuleSkinActive8";
+    
     
     private void Start()
     {

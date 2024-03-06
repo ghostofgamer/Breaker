@@ -68937,6 +68937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560343510}
   - component: {fileID: 1560343511}
+  - component: {fileID: 1560343512}
   m_Layer: 0
   m_Name: SkinManager
   m_TagString: Untagged
@@ -68982,6 +68983,29 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ae443e127ceb44e47952a0932f8776dd, type: 2}
   - {fileID: 2100000, guid: 59a979f52b5020541aa05cbdadaba673, type: 2}
   - {fileID: 2100000, guid: f7119e22ff08dd94caed1ae51a78940c, type: 2}
+  _load: {fileID: 293203873}
+--- !u!114 &1560343512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560343509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7efa610513bb134486f2e74330493e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _platforma: {fileID: 824722463}
+  _materials:
+  - {fileID: 2100000, guid: 802393d0f4a5a3b4fa729af0584047a7, type: 2}
+  - {fileID: 2100000, guid: a1d949c69df4d7144b5e81654606c7c9, type: 2}
+  - {fileID: 2100000, guid: b149ac7eafdff5449a96ac90f2a28f27, type: 2}
+  - {fileID: 2100000, guid: 72b84e92e3e7228498aad7e009736ffb, type: 2}
+  - {fileID: 2100000, guid: 001872c35f010de4abbf8d6efd308fc8, type: 2}
+  - {fileID: 2100000, guid: 9fbea5703d0d5764ebe74413a1b22c89, type: 2}
+  - {fileID: 2100000, guid: 0d844a4040b47754aaf94f99db89a6bb, type: 2}
+  - {fileID: 2100000, guid: 25a4c1612ed2369419dad14b5ffc1531, type: 2}
   _load: {fileID: 293203873}
 --- !u!4 &1561480520 stripped
 Transform:

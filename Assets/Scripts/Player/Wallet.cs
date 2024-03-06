@@ -45,7 +45,6 @@ public class Wallet : MonoBehaviour
     {
         int target = _money - price;
         Calculate(target, _duration);
-
     }
 
     private void ShowInfo()

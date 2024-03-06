@@ -1594,7 +1594,12 @@
             <e p="SdkInitialization.cs" t="Include" />
           </e>
           <e p="Skins" t="Include">
+            <e p="Platforms" t="Include">
+              <e p="PlatformaSkinData.cs" t="Include" />
+              <e p="PlatformaSkinShop.cs" t="Include" />
+            </e>
             <e p="SkinLoader.cs" t="Include" />
+            <e p="SkinPlatformLoader.cs" t="Include" />
           </e>
           <e p="Statistics" t="Include">
             <e p="BuffCounter.cs" t="Include" />
@@ -1612,6 +1617,7 @@
             <e p="Buttons" t="Include">
               <e p="AbstractButton.cs" t="Include" />
               <e p="ActivatedButton.cs" t="Include" />
+              <e p="ActivatedPlatformSkinButton.cs" t="Include" />
               <e p="BackButton.cs" t="Include" />
               <e p="BuyPlatformaSkinButton.cs" t="Include" />
               <e p="BuySkinBallButton.cs" t="Include" />
