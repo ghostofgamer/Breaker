@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -16,6 +17,11 @@ public class BackToMenuButton : AbstractButton
     private float _elapsedTime;
     private float _duration = 1;
 
+    private void Start()
+    {
+        StartCoroutine(Fade(1,0));
+    }
+
     protected override void OnClick()
     {
         GoMainMenu();
@@ -24,7 +30,7 @@ public class BackToMenuButton : AbstractButton
     private void GoMainMenu()
     {
         StartCoroutine(GoMainScene());
-        StartCoroutine(Fade());
+        StartCoroutine(Fade(0,1));
     }
 
     private IEnumerator GoMainScene()
@@ -38,7 +44,7 @@ public class BackToMenuButton : AbstractButton
         SceneManager.LoadScene(NameScene);
     }
 
-    private IEnumerator Fade()
+    private IEnumerator Fade(int startAlpha, int targetAlpha)
     {
         _elapsedTime = 0;
         float startTime = 0;
@@ -46,8 +52,7 @@ public class BackToMenuButton : AbstractButton
         while (_elapsedTime < _duration)
         {
             _elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(0, 1, _elapsedTime/_duration);
-            Debug.Log(alpha);
+            float alpha = Mathf.Lerp(startAlpha, targetAlpha, _elapsedTime/_duration);
             _fadeImage.color = new Color(_fadeImage.color.r, _fadeImage.color.g, _fadeImage.color.b, alpha);
             yield return null;
         }

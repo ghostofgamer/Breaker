@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Capsula : MonoBehaviour
 {
+    [SerializeField] private GameObject _gameObject;
+    
     private Quaternion originalRotation;
     private Vector3 originalLocalRotation;
     private bool _isSelected = false;
@@ -30,16 +32,40 @@ public class Capsula : MonoBehaviour
             {
                 transform.rotation = Quaternion.Euler(0, 0, 35);
                 _rotate = true;
+
+
+                if (Camera.main != null)
+                {
+                    float initialCapsuleAngleY = 30f;
+                    float cameraAngle = Camera.main.transform.eulerAngles.x;
+                    float capsuleAngle = cameraAngle - cameraAngle;
+                    transform.eulerAngles = new Vector3(cameraAngle, capsuleAngle, 35f); 
+                }
+               
+                
+                
+                
+                
+                
+                
+                
+                /*// Получаем текущий угол поворота камеры вокруг оси X
+                float cameraAngle = Camera.main.transform.eulerAngles.x;
+
+                // Вычисляем угол поворота капсулы вокруг оси Y в соответствии с углом поворота камеры
+                float capsuleAngle = cameraAngle;
+
+                // Устанавливаем начальное положение капсулы
+                transform.eulerAngles = new Vector3(0f, capsuleAngle, 0f);*/
             }
 
-            Quaternion targetRotation = Quaternion.Euler(0, 0, 35);
+    
+    
+    // transform.Rotate(0, 65 * Time.deltaTime, 0, Space.World);
 
-            /*if (transform.rotation != targetRotation)
-            {
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 30f);
-            }*/
-
-            transform.Rotate(0, 65 * Time.deltaTime, 0, Space.World);
+            
+            
+            _gameObject.GetComponent<RectTransform>().Rotate(Vector3.up * 65 * Time.deltaTime);
         }
         else
         {

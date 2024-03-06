@@ -11,7 +11,8 @@ public class CameraMover : MonoBehaviour
     [SerializeField] private float _maxX;
     [SerializeField] private float _minZ;
     [SerializeField] private float _maxZ;
-
+    [SerializeField] private Animator _animator;
+    
     private Vector3 _mouseStartPos;
     private Vector3 _cameraStartPos;
     private Vector3 _newCameraPos;
@@ -19,9 +20,11 @@ public class CameraMover : MonoBehaviour
     /*private float _elapsedTime;
     private float _duration = 3f;*/
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.1f);
+    private WaitForSeconds _waitForMove = new WaitForSeconds(1f);
 
     private void Start()
     {
+        StartCoroutine(PlayAnimations());
         _mouseStartPos = Input.mousePosition;
         _cameraStartPos = transform.position;
         _newCameraPos = _cameraStartPos;
@@ -93,4 +96,11 @@ public class CameraMover : MonoBehaviour
     //         // Debug.Log("CurentPosition " + transform.position);
     //     }
     // }
+
+    private IEnumerator PlayAnimations()
+    {
+        _animator.Play("ChooseLvlMainCameraMoverStart");
+        yield return _waitForMove;
+        _animator.enabled = false;
+    }
 }
