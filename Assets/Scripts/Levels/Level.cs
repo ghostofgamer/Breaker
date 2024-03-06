@@ -25,7 +25,7 @@ public class Level : MonoBehaviour
     [SerializeField] private Level[] _nextLevel;
     [SerializeField] private Level _previousLevel;
     [SerializeField] private Level[] _allLevels;
-[SerializeField]private LevelCubeJumping _levelCubeJumping;
+    [SerializeField] private LevelCubeJumping _levelCubeJumping;
     [SerializeField] private CameraDistance _cameraDistance;
 
     [SerializeField] private bool _isPassed = false;
@@ -103,17 +103,17 @@ public class Level : MonoBehaviour
         {
             levelInfo.Close();
         }
-        
+
         _levelInfo.Open();
     }
 
     public void StopParticles()
     {
         _selectedCircle.Stop();
-        
+
         for (int i = 0; i < _effectsSelect.Length; i++)
         {
-          _effectsSelect[i].Stop();
+            _effectsSelect[i].Stop();
         }
     }
 
