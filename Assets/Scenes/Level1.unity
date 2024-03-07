@@ -3537,7 +3537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &179693025
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21776,7 +21776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &594468657
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24431,6 +24431,7 @@ GameObject:
   - component: {fileID: 680821721}
   - component: {fileID: 680821720}
   - component: {fileID: 680821719}
+  - component: {fileID: 680821722}
   m_Layer: 5
   m_Name: SfxButton
   m_TagString: Untagged
@@ -24505,7 +24506,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 582070894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 680821722}
+        m_TargetAssemblyTypeName: MixerController, Assembly-CSharp
+        m_MethodName: ReduceGroupVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &680821720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24544,6 +24557,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680821717}
   m_CullTransparentMesh: 1
+--- !u!114 &680821722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680821717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602fb9a3dc36b8746bd86d373bfb18d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parametrs: SFX
+  _outputGroup: {fileID: -651264264134895713, guid: 5ec26dc0ffb6fa34fb28c6bae18d9978, type: 2}
+  _onSound: {fileID: 1337504503}
+  _offSound: {fileID: 594468658}
+  _soundMixer: 1
+  _load: {fileID: 293203873}
+  _save: {fileID: 293203874}
 --- !u!1 &683683477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -25865,8 +25897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.980011, y: -0.23000336}
-  m_SizeDelta: {x: -90.97, y: -58.97}
+  m_AnchoredPosition: {x: -0.64001465, y: -2.1500015}
+  m_SizeDelta: {x: -108.09, y: -62.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759275503
 MonoBehaviour:
@@ -73867,7 +73899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 91.44995, y: -146.66003}
+  m_AnchoredPosition: {x: 91.44997, y: -146.66003}
   m_SizeDelta: {x: 182.9, y: 81.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1600189075
@@ -84710,6 +84742,7 @@ GameObject:
   - component: {fileID: 1876518923}
   - component: {fileID: 1876518922}
   - component: {fileID: 1876518921}
+  - component: {fileID: 1876518924}
   m_Layer: 5
   m_Name: MusicButton
   m_TagString: Untagged
@@ -84784,7 +84817,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1158052088}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1876518924}
+        m_TargetAssemblyTypeName: MixerController, Assembly-CSharp
+        m_MethodName: ReduceGroupVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1876518922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84823,6 +84868,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876518919}
   m_CullTransparentMesh: 1
+--- !u!114 &1876518924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876518919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602fb9a3dc36b8746bd86d373bfb18d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parametrs: music
+  _outputGroup: {fileID: 2218152950074571843, guid: 5ec26dc0ffb6fa34fb28c6bae18d9978, type: 2}
+  _onSound: {fileID: 1720532041}
+  _offSound: {fileID: 179693026}
+  _soundMixer: 0
+  _load: {fileID: 293203873}
+  _save: {fileID: 293203874}
 --- !u!1 &1878438494
 GameObject:
   m_ObjectHideFlags: 0
@@ -86011,7 +86075,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896885703}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86019,8 +86083,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.980011, y: -0.23000336}
-  m_SizeDelta: {x: -90.97, y: -58.97}
+  m_AnchoredPosition: {x: 0.730011, y: -1.3099976}
+  m_SizeDelta: {x: -108.19, y: -64.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896885705
 MonoBehaviour:

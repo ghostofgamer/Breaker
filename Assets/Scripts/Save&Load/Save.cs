@@ -9,6 +9,10 @@ public class Save : MonoBehaviour
     public const string TemporaryMoney = "TemporaryMoney";
     public const string Score = "Score";
     public const string Volume = "Volume";
+    public const string Music = "Music";
+    public const string SFX = "SFX";
+    // public const string IsMuted = "IsMuted";
+
     [Header("SelectedSkins")]
     public const string SkinBall = "SkinBall";
     public const string SelectedHeavy = "SelectedHeavy";

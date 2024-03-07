@@ -27,7 +27,6 @@ public class FadeObject : MonoBehaviour
             elapsedTime += Time.deltaTime;    
             float newWight = Mathf.Lerp(originalWidth, 0f, elapsedTime / _fadeDuration);
             _rectTransform.sizeDelta = new Vector2(newWight, _rectTransform.sizeDelta.y);
-            Debug.Log(_rectTransform.sizeDelta);
             yield return null;
         }
     }

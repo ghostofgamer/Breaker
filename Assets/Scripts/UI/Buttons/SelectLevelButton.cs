@@ -25,7 +25,7 @@ public class SelectLevelButton : AbstractButton
     {
         if (_isMove)
         {
-            _cameraMover.transform.LookAt(_target);
+            // _cameraMover.transform.LookAt(_target);
             _cameraMover.transform.position = Vector3.MoveTowards(_cameraMover.transform.position,
                 _target.transform.position, 10 * Time.deltaTime);
         }

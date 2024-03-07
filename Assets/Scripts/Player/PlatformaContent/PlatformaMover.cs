@@ -19,8 +19,7 @@ public class PlatformaMover : MonoBehaviour
     private bool _isFirstThrow = true;
 
     public float Speed => moveSpeed;
-
-
+    
     private Vector2 mouseDirection;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
     private Coroutine _coroutine;
@@ -79,6 +78,11 @@ public class PlatformaMover : MonoBehaviour
         _isReverse = reverse;
     }
 
+    public void SetPressed(bool flag)
+    {
+        isMousePressed = flag;
+    }
+    
     void MovePlatformWithMouse()
     {
         // Определяем целевую позицию в мировых координатах с учетом оффсета

@@ -30,6 +30,7 @@ public class SettingsButtonGameLevel : AbstractButton
     protected override void OnClick()
     {
         _platformaMover.enabled = false;
+        _platformaMover.SetPressed(false); 
         _settingsScreen.Open();
     }
 
