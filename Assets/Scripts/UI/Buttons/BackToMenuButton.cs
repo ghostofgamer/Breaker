@@ -19,7 +19,7 @@ public class BackToMenuButton : AbstractButton
 
     private void Start()
     {
-        StartCoroutine(Fade(1,0));
+        StartCoroutine(Fade(1, 0));
     }
 
     protected override void OnClick()
@@ -30,7 +30,7 @@ public class BackToMenuButton : AbstractButton
     private void GoMainMenu()
     {
         StartCoroutine(GoMainScene());
-        StartCoroutine(Fade(0,1));
+        StartCoroutine(Fade(0, 1));
     }
 
     private IEnumerator GoMainScene()
@@ -44,6 +44,11 @@ public class BackToMenuButton : AbstractButton
         SceneManager.LoadScene(NameScene);
     }
 
+    public void FadeBackGround()
+    {
+        StartCoroutine(Fade(0, 1));
+    }
+    
     private IEnumerator Fade(int startAlpha, int targetAlpha)
     {
         _elapsedTime = 0;
@@ -52,7 +57,7 @@ public class BackToMenuButton : AbstractButton
         while (_elapsedTime < _duration)
         {
             _elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(startAlpha, targetAlpha, _elapsedTime/_duration);
+            float alpha = Mathf.Lerp(startAlpha, targetAlpha, _elapsedTime / _duration);
             _fadeImage.color = new Color(_fadeImage.color.r, _fadeImage.color.g, _fadeImage.color.b, alpha);
             yield return null;
         }

@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class ScoreCounter : MonoBehaviour
 {
     [SerializeField] private BonusCounter _bonusCounter;
+    [SerializeField] private Save _save;
 
     private int _score;
 
@@ -16,6 +17,8 @@ public class ScoreCounter : MonoBehaviour
 
     public int GetScore()
     {
-        return _score + _bonusCounter.GetBonus();
+        int scoreAmount = _score + _bonusCounter.GetBonus();
+        _save.SetData(Save.Score, scoreAmount);
+        return scoreAmount;
     }
 }

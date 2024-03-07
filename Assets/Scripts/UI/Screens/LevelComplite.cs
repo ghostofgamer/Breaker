@@ -61,6 +61,7 @@ public class LevelComplite : MonoBehaviour
         _spawnBonusLevelComplite.StartFlightBonuses();
         /*yield return new WaitForSeconds(0.3f);
         _claimButton.SetActive();*/
+        Debug.Log("10 делим " + _scoreCounter.GetScore() / 10);
         _claimButton.SetValue(_scoreCounter.GetScore() / 10);
     }
 }

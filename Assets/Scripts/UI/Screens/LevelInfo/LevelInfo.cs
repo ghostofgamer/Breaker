@@ -8,7 +8,7 @@ public class LevelInfo : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private CanvasGroup _canvasGroup;
     [SerializeField] private GameObject _cubePositionInfo;
-    
+
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
     private Coroutine _coroutineOpen;
     private Coroutine _coroutineClose;
@@ -20,24 +20,24 @@ public class LevelInfo : MonoBehaviour
 
     public void Open()
     {
-        if(_coroutineOpen!=null)
+        if (_coroutineOpen != null)
             StopCoroutine(_coroutineOpen);
-        
+
         StartCoroutine(OpenScreen());
     }
 
     public void Close()
     {
-        if(_coroutineClose!=null)
+        if (_coroutineClose != null)
             StopCoroutine(_coroutineClose);
-        
+
         StartCoroutine(CloseScreen());
     }
 
     private IEnumerator OpenScreen()
     {
         yield return _waitForSeconds;
-        SetActive(1,true);
+        SetActive(1, true);
         _animator.Play("LevelCubeInfoScreenUp");
     }
 
@@ -47,8 +47,8 @@ public class LevelInfo : MonoBehaviour
         yield return _waitForSeconds;
         SetActive(0, false);
     }
-    
-    private void SetActive(int alpha,bool flag)
+
+    private void SetActive(int alpha, bool flag)
     {
         _cubePositionInfo.SetActive(flag);
         _canvasGroup.alpha = alpha;

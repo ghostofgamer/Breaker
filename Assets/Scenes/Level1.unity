@@ -31256,6 +31256,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5046227226496367749, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1834239100}
+    - targetCorrespondingSourceObject: {fileID: 5046227226496367749, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1834239106}
   m_SourcePrefab: {fileID: 100100000, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
 --- !u!1 &1103209204
 GameObject:
@@ -68996,7 +68999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7efa610513bb134486f2e74330493e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _platforma: {fileID: 824722463}
+  _platforms:
+  - {fileID: 824722463}
+  - {fileID: 1834239106}
   _materials:
   - {fileID: 2100000, guid: 802393d0f4a5a3b4fa729af0584047a7, type: 2}
   - {fileID: 2100000, guid: a1d949c69df4d7144b5e81654606c7c9, type: 2}
@@ -78391,6 +78396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bonusCounter: {fileID: 1580274398}
+  _save: {fileID: 293203874}
 --- !u!4 &1771528541
 Transform:
   m_ObjectHideFlags: 0
@@ -79450,6 +79456,18 @@ MonoBehaviour:
   maxX: 5
   minZ: -5
   maxZ: 5
+--- !u!114 &1834239106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280613365}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8666c28649e124993f5d24fd745635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1838807148
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SkinPlatformLoader : MonoBehaviour
 {
-    [SerializeField] private Platforma _platforma;
+    [SerializeField] private Platforma[] _platforms;
     [SerializeField] private Material[] _materials;
     [SerializeField] private Load _load;
 
@@ -15,6 +15,10 @@ public class SkinPlatformLoader : MonoBehaviour
     private void Start()
     {
         int index = _load.Get(Save.ActiveCapsuleIndex, _startIndex);
-        _platforma.GetComponent<MeshRenderer>().material = _materials[index];
+
+        for (int i = 0; i < _platforms.Length; i++)
+        {
+            _platforms[i].GetComponent<MeshRenderer>().material = _materials[index];
+        }
     }
 }

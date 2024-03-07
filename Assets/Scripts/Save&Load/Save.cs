@@ -7,6 +7,7 @@ public class Save : MonoBehaviour
     public const string SceneNumber = "SceneNumber";
     public const string Money = "Money";
     public const string TemporaryMoney = "TemporaryMoney";
+    public const string Score = "Score";
     public const string Volume = "Volume";
     [Header("SelectedSkins")]
     public const string SkinBall = "SkinBall";

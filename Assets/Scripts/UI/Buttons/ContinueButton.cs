@@ -33,7 +33,7 @@ public class ContinueButton : AbstractButton
         }
 
         _fadePanel.color = endColor;
-        SceneManager.LoadScene("MainScene");
-        // SceneManager.LoadScene("ChooseLvlScene");
+        // SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("ChooseLvlScene");
     }
 }
