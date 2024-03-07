@@ -111,6 +111,7 @@ public class PlatformaMover : MonoBehaviour
 
     public void Revive()
     {
+        isMousePressed = false;
         _isFirstThrow = true;
         gameObject.SetActive(true);
     }

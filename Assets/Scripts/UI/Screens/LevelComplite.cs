@@ -42,6 +42,8 @@ public class LevelComplite : MonoBehaviour
 
     private void Victory()
     {
+        Time.timeScale = 1;
+        
         if (_reviveScreen.IsLose)
             return;
 

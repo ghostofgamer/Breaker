@@ -34,7 +34,7 @@ public class SelectLevelButton : AbstractButton
     private IEnumerator SelectLevel()
     {
         _cameraMover.enabled = false;
-        _isMove=true;
+        _isMove = true;
         _canvasAnimator.Close();
         _backToMenuButton.FadeBackGround();
         yield return _waitForSeconds;

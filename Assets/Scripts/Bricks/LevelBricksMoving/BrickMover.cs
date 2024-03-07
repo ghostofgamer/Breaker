@@ -23,6 +23,11 @@ public class BrickMover : MonoBehaviour
         _initialPosition = transform.position;
         _waitForSeconds = new WaitForSeconds(_duration);
         _targetPosition = new Vector3(_initialPosition.x + _moveDistance, _initialPosition.y, _initialPosition.z);
+
+        foreach (var brick in _bricks)
+        {
+            brick.GetComponent<Rigidbody>().isKinematic = true;
+        }
     }
 
     void Update()
@@ -36,7 +41,15 @@ public class BrickMover : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out BallMover ballMover))
-            this.enabled = false;
+        {
+            foreach (var brick in _bricks)
+            {
+                brick.GetComponent<Rigidbody>().isKinematic = false;
+            }
+            
+             this.enabled = false;
+        }
+           
     }
 
     private void BricksMove()
@@ -49,7 +62,6 @@ public class BrickMover : MonoBehaviour
             {
                 brick.transform.position = new Vector3(transform.position.x, brick.transform.position.y,
                     brick.transform.position.z);
-                ;
             }
 
             if (transform.position == _targetPosition)

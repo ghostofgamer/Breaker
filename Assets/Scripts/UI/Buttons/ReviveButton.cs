@@ -7,6 +7,8 @@ public class ReviveButton : AbstractButton
     [SerializeField] private BallRevive _ballRevive;
     [SerializeField] private PlatformaRevive _platformaRevive;
     [SerializeField] private ReviveScreen _reviveScreen;
+    [SerializeField] private SceneLoader _sceneLoader;
+    [SerializeField] private BrickCounter _brickCounter;
     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private Coroutine _coroutine;
@@ -24,6 +26,8 @@ public class ReviveButton : AbstractButton
         _reviveScreen.ChooseRevive();
         yield return _waitForSeconds;
         _ballRevive.Revive();
-        _platformaRevive.Revive();
+        _sceneLoader.RevivePlatform();
+        _brickCounter.TryVictory();
+        // _platformaRevive.Revive();
     }
 }

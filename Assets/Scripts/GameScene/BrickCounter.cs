@@ -43,11 +43,7 @@ public class BrickCounter : MonoBehaviour
             }
         }
 
-        if (BrickCount <= 0)
-        {
-            // Debug.Log("Victory");
-            AllBrickDestory?.Invoke();
-        }
+        TryVictory();
     }
 
     public void AddBricks(int bricksCount)
@@ -60,6 +56,14 @@ public class BrickCounter : MonoBehaviour
     {
         _brickCountTxt.text = BrickCount.ToString();
         _brickSmashedTxt.text = _bricksSmashedCount.ToString();
+    }
+
+    public void TryVictory()
+    {
+        if (BrickCount <= 0)
+        {
+            AllBrickDestory?.Invoke();
+        }
     }
 
     public string GetAmountSmashed()

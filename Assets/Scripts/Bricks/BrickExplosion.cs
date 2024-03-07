@@ -48,10 +48,10 @@ public class BrickExplosion : Brick
                 brick.GetComponent<Rigidbody>().AddExplosionForce(_force, transform.position, _radius);
             }
 
-            if (overlappingColliders[i].TryGetComponent(out BrickExplosion brickExplosion))
-            {
-                brickExplosion.Die();
-            }
+            // if (overlappingColliders[i].TryGetComponent(out BrickExplosion brickExplosion))
+            // {
+            //     brickExplosion.Die();
+            // }
         }
 
         _explodeEffect.transform.parent = null;
