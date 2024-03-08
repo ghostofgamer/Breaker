@@ -7,7 +7,6 @@ public class BrickMover : MonoBehaviour
 {
     [SerializeField] private float _moveDistance;
     [SerializeField] private float _moveSpeed;
-    [SerializeField] private bool _movingLeft;
     [SerializeField] private float _duration;
     [SerializeField] private Brick[] _bricks;
 
@@ -46,10 +45,9 @@ public class BrickMover : MonoBehaviour
             {
                 brick.GetComponent<Rigidbody>().isKinematic = false;
             }
-            
-             this.enabled = false;
+
+            this.enabled = false;
         }
-           
     }
 
     private void BricksMove()
@@ -87,29 +85,6 @@ public class BrickMover : MonoBehaviour
                 ActivatedPause();
             }
         }
-
-        /*if (_movingLeft)
-        {
-            transform.position = Vector3.MoveTowards(transform.position,
-                _initialPosition - Vector3.right * _moveDistance,
-                _moveSpeed * Time.deltaTime);
-            if (transform.position == _initialPosition - Vector3.right * _moveDistance)
-            {
-                _movingLeft = false;
-                ActivatedPause();
-            }
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position,
-                _initialPosition + Vector3.right * _moveDistance,
-                _moveSpeed * Time.deltaTime);
-            if (transform.position == _initialPosition + Vector3.right * _moveDistance)
-            {
-                _movingLeft = true;
-                ActivatedPause();
-            }
-        }*/
     }
 
     private void ActivatedPause()

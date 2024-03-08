@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,11 @@ public class swipe : MonoBehaviour
     [Range(0, 1000), SerializeField] private float _offset;
     private RectTransform[] _children;
     private Vector3[] _newPosition;
+    private Image _knobOff;
+    private Image _knobOn;
+    [SerializeField ] private Sprite _off;
+    [SerializeField ] private Sprite _on;
+    
     private void Start()
     {
         _layoutGroup = GetComponent<HorizontalLayoutGroup>();
@@ -101,17 +107,19 @@ public class swipe : MonoBehaviour
                 // transform.GetChild(i).position = Vector3.Lerp(transform.GetChild(i).position, targetposition, 0.1f);
                 // transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).position, targetposition, 0.1f);
                 transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).localPosition, new Vector3(transform.GetChild(i).localPosition.x,transform.GetChild(i).localPosition.y,-70f), 0.1f);
-                imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
-                imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
+                // imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
+                // imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
+                imageContent.transform.GetChild(i).GetComponent<Image>().sprite = _on;
                 RotateCapsula(transform.GetChild(i),true);
                 for (int j = 0; j < pos.Length; j++)
                 {
                     if (j != i)
                     {
-                        imageContent.transform.GetChild(j).GetComponent<Image>().color = colors[0];
+                        // imageContent.transform.GetChild(j).GetComponent<Image>().color = colors[0];
+                        imageContent.transform.GetChild(j).GetComponent<Image>().sprite = _off;
                         imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                         transform.GetChild(j).localScale = Vector3.Lerp(transform.GetChild(j).localScale, new Vector3(0.8f, 0.8f,0.8f), 0.1f);
-                        transform.GetChild(j).localPosition = Vector3.Lerp(transform.GetChild(j).localPosition,new Vector3( transform.GetChild(j).localPosition.x, transform.GetChild(j).localPosition.y,10f),0.1f);
+                        transform.GetChild(j).localPosition = Vector3.Lerp(transform.GetChild(j).localPosition,new Vector3( transform.GetChild(j).localPosition.x, transform.GetChild(j).localPosition.y,0f),0.1f);
                         RotateCapsula(transform.GetChild(j), false);
                         // transform.GetChild(j).localPosition = Vector3.Lerp(transform.GetChild(j).localPosition, new Vector3(transform.GetChild(j).localPosition.x,transform.GetChild(j).localPosition.y,-216f), 0.1f);
                         // transform.GetChild(i).position = _startPosition[i];

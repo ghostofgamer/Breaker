@@ -11,11 +11,18 @@ public class ShopButton : AbstractButton
     [SerializeField] private Image[] _backgroundImage;
     [SerializeField] private Color _newColor;
     [SerializeField] private GameObject[] _tabs;
+    [SerializeField] private GameObject _platformTabPc;
 
     private Color _currentColor;
+    private int _indexPlatformTab = 1;
 
     private void Start()
     {
+        if (!Application.isMobilePlatform)
+        {
+            _tabs[_indexPlatformTab] = _platformTabPc;
+        }
+        
         _currentColor = _backgroundImage[_tabIndex].color;
     }
 
