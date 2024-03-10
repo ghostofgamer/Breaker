@@ -39,7 +39,7 @@ public class BrickMover : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out BallMover ballMover))
+        if (other.TryGetComponent(out BallMover ballMover)||other.TryGetComponent(out Bullet bullet))
         {
             foreach (var brick in _bricks)
             {

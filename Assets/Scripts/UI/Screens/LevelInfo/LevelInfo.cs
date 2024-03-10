@@ -8,15 +8,27 @@ public class LevelInfo : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private CanvasGroup _canvasGroup;
     [SerializeField] private GameObject _cubePositionInfo;
-    [SerializeField] private GameObject _panelComplited;
+    [SerializeField] private GameObject[] _cubePositionsInfo;
+    [SerializeField] private GameObject _panelCompleted;
+    [SerializeField] private GameObject _lockedPanel;
+    [SerializeField] private GameObject _unLockedPanel;
+    [SerializeField] private int _index;
+    [SerializeField] private Load _load;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
     private Coroutine _coroutineOpen;
     private Coroutine _coroutineClose;
 
+    private bool information;
+
     private void Start()
     {
+        information = _load.Get("LevelStatus" + _index, 0) > 0;
+        _panelCompleted.SetActive((LevelState) _load.Get("LevelStatus" + _index, 0) == LevelState.Completed);
         SetActive(0, false);
+        _cubePositionInfo = _cubePositionsInfo[information ? 0 : 1];
+        _unLockedPanel.SetActive(information ? true : false);
+        _lockedPanel.SetActive(!information);
     }
 
     public void Open()
@@ -57,8 +69,9 @@ public class LevelInfo : MonoBehaviour
         _canvasGroup.blocksRaycasts = flag;
     }
 
+    /*
     public void SelectComplitedInfo()
     {
         _panelComplited.SetActive(true);
-    }
+    }*/
 }

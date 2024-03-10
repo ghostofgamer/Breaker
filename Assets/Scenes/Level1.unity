@@ -39040,6 +39040,55 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1753160706}
   m_SourcePrefab: {fileID: 100100000, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
+--- !u!1 &1328941997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328941998}
+  - component: {fileID: 1328941999}
+  m_Layer: 0
+  m_Name: ProgressManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1328941998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328941997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1601127288}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1328941999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328941997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a84489d2416164b862c980bcd80dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levels: []
+  _levelStates: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  _levelsInfo: []
+  _load: {fileID: 293203873}
+  _save: {fileID: 293203874}
 --- !u!1 &1329596479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -73911,7 +73960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 91.45001, y: -146.66003}
+  m_AnchoredPosition: {x: 91.45003, y: -146.66003}
   m_SizeDelta: {x: 182.9, y: 81.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1600189075
@@ -74020,6 +74069,7 @@ Transform:
   m_Children:
   - {fileID: 1560343510}
   - {fileID: 293203872}
+  - {fileID: 1328941998}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1601685885
@@ -86503,6 +86553,9 @@ MonoBehaviour:
   _animatorEnviropment: {fileID: 978041178}
   _animatorText: {fileID: 1611757590}
   _reviveScreen: {fileID: 752029864}
+  _progressManager: {fileID: 1328941999}
+  _indexLevel: 1
+  _save: {fileID: 293203874}
 --- !u!114 &1926115618
 MonoBehaviour:
   m_ObjectHideFlags: 0

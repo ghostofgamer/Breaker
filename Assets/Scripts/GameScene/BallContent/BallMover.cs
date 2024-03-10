@@ -124,6 +124,13 @@ public class BallMover : MonoBehaviour
             // _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
             brick.Die();
         }
+
+        if (other.collider.TryGetComponent(out Wall wall))
+        {
+            Vector3 Reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
+            Vector3 NEWREFLECT = new Vector3(Reflect.x, 0, Reflect.z).normalized;
+            _direction = NEWREFLECT;
+        }
     }
 
     public void SetValue(float speed, bool flag)
