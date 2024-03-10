@@ -16,6 +16,8 @@ public class LevelComplite : MonoBehaviour
     [SerializeField] private Animator _animatorEnviropment;
     [SerializeField] private Animator _animatorText;
     [SerializeField] private ReviveScreen _reviveScreen;
+    [SerializeField] private ProgressManager _progressManager; 
+    [SerializeField]private int _indexLevel;
 
     private Vector3 _target;
     private bool _isVictory = false;
@@ -55,6 +57,7 @@ public class LevelComplite : MonoBehaviour
 
     private IEnumerator _OnVictory()
     {
+        _progressManager.Complited(_indexLevel);
         SetValue();
         _animatorText.Play("LevelCompliteTextMove");
         yield return _waitForSeconds;

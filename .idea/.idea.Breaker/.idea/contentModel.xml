@@ -1423,7 +1423,11 @@
           </e>
           <e p="Bullet" t="Include" />
           <e p="Button" t="Include" />
-          <e p="MainMenu" t="Include" />
+          <e p="MainMenu" t="Include">
+            <e p="Canvas" t="Include">
+              <e p="CanvasInfo" t="Include" />
+            </e>
+          </e>
           <e p="Mirror" t="Include" />
           <e p="MirrorPlatforma" t="Include" />
           <e p="Particles" t="Include" />
@@ -1479,6 +1483,7 @@
             <e p="LevelBricksMoving" t="Include">
               <e p="BrickMover.cs" t="Include" />
               <e p="Level2BrickMover.cs" t="Include" />
+              <e p="Level3MoveBricks.cs" t="Include" />
             </e>
           </e>
           <e p="Buff&amp;&amp;Debuff" t="Include">
@@ -1537,6 +1542,7 @@
             <e p="BallSkins.cs" t="Include" />
             <e p="Buffs.cs" t="Include" />
             <e p="BuffType.cs" t="Include" />
+            <e p="LevelState.cs" t="Include" />
             <e p="PlatformSkins.cs" t="Include" />
             <e p="SelectedPlatform.cs" t="Include" />
             <e p="SelectedSkins.cs" t="Include" />
@@ -1590,6 +1596,10 @@
               <e p="PlatformController.cs" t="Include" />
             </e>
             <e p="Wallet.cs" t="Include" />
+          </e>
+          <e p="Progress" t="Include">
+            <e p="LevelData.cs" t="Include" />
+            <e p="ProgressManager.cs" t="Include" />
           </e>
           <e p="RotateBonusTarget.cs" t="Include" />
           <e p="Save&amp;Load" t="Include">
