@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LevelInfo : MonoBehaviour
@@ -14,6 +15,7 @@ public class LevelInfo : MonoBehaviour
     [SerializeField] private GameObject _unLockedPanel;
     [SerializeField] private int _index;
     [SerializeField] private Load _load;
+    [SerializeField] private TMP_Text _score;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
     private Coroutine _coroutineOpen;
@@ -25,6 +27,7 @@ public class LevelInfo : MonoBehaviour
     {
         information = _load.Get("LevelStatus" + _index, 0) > 0;
         _panelCompleted.SetActive((LevelState) _load.Get("LevelStatus" + _index, 0) == LevelState.Completed);
+        _score.text = _load.Get(Save.Score + _index, 0).ToString();
         SetActive(0, false);
         _cubePositionInfo = _cubePositionsInfo[information ? 0 : 1];
         _unLockedPanel.SetActive(information ? true : false);
