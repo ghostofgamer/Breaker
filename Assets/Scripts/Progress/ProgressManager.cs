@@ -7,23 +7,13 @@ public class ProgressManager : MonoBehaviour
 {
     [SerializeField] private Level[] _levels;
     [SerializeField] private LevelState[] _levelStates;
+    [SerializeField] private LevelInfo[] _levelsInfo;
     [SerializeField] private Load _load;
     [SerializeField] private Save _save;
 
     private void Awake()
     {
         LoadProgress();
-
-        /*
-        for (int i = 0; i < _levels.Length; i++)
-        {
-            _levels[i].Init(_levelStates[i]);
-        }
-
-        for (int i = 0; i < _levels.Length; i++)
-        {
-            _levels[i].SetLevels();
-        }*/
     }
 
     private void TestProgressLoad()
@@ -41,29 +31,24 @@ public class ProgressManager : MonoBehaviour
         }
     }
 
-    /*
-    public void CheckLevelStatuses()
+    private void SetLevelInfo()
     {
-        for (int i = 0; i < _levelStates.Length - 1; i++)
+        for (int i = 0; i < _levelsInfo.Length; i++)
         {
-            if (_levelStates[i] == LevelState.Completed && _levelStates[i + 1] == LevelState.Locked)
+            if (_levelStates[i] == LevelState.Completed)
             {
-                _levelStates[i + 1] = LevelState.Unlocked;
+                Debug.Log(i);
+                _levelsInfo[i].SelectComplitedInfo();
             }
+                
         }
     }
-
-    public void SetValue(int index)
-    {
-    }
-    */
-
+    
     public void SaveProgress()
     {
         for (int i = 0; i < _levelStates.Length; i++)
         {
             _save.SetData("LevelStatus" + i + 1, (int) _levelStates[i]);
-            Debug.Log(_levelStates[i]);
         }
     }
 
@@ -86,6 +71,8 @@ public class ProgressManager : MonoBehaviour
 
         foreach (var level in _levels)
             level.SetLevels();
+
+        SetLevelInfo();
     }
 
     public void Complited(int index)

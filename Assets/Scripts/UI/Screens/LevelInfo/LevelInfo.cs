@@ -8,6 +8,7 @@ public class LevelInfo : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private CanvasGroup _canvasGroup;
     [SerializeField] private GameObject _cubePositionInfo;
+    [SerializeField] private GameObject _panelComplited;
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
     private Coroutine _coroutineOpen;
@@ -54,5 +55,10 @@ public class LevelInfo : MonoBehaviour
         _canvasGroup.alpha = alpha;
         _canvasGroup.interactable = flag;
         _canvasGroup.blocksRaycasts = flag;
+    }
+
+    public void SelectComplitedInfo()
+    {
+        _panelComplited.SetActive(true);
     }
 }
