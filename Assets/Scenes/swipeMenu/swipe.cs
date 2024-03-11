@@ -106,7 +106,7 @@ public class swipe : MonoBehaviour
                 // Vector3 targetposition = new Vector3(transform.GetChild(i).position.x, transform.GetChild(i).position.y, -300f);
                 // transform.GetChild(i).position = Vector3.Lerp(transform.GetChild(i).position, targetposition, 0.1f);
                 // transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).position, targetposition, 0.1f);
-                transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).localPosition, new Vector3(transform.GetChild(i).localPosition.x,transform.GetChild(i).localPosition.y,-90f), 0.1f);
+                transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).localPosition, new Vector3(transform.GetChild(i).localPosition.x,transform.GetChild(i).localPosition.y,-150f), 0.1f);
                 // imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 // imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
                 imageContent.transform.GetChild(i).GetComponent<Image>().sprite = _on;

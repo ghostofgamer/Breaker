@@ -34,13 +34,13 @@ public class Capsula : MonoBehaviour
                 _rotate = true;
 
 
-                if (Camera.main != null)
-                {
-                    float initialCapsuleAngleY = 30f;
-                    float cameraAngle = Camera.main.transform.eulerAngles.x;
-                    float capsuleAngle = cameraAngle - cameraAngle;
-                    transform.eulerAngles = new Vector3(cameraAngle, capsuleAngle, 35f); 
-                }
+                // if (Camera.main != null)
+                // {
+                //     float initialCapsuleAngleY = 30f;
+                //     float cameraAngle = Camera.main.transform.eulerAngles.x;
+                //     float capsuleAngle = cameraAngle - cameraAngle;
+                //     transform.eulerAngles = new Vector3(cameraAngle, capsuleAngle, 35f); 
+                // }
                
                 
                 
