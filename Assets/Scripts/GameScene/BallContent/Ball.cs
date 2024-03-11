@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -38,6 +39,14 @@ public class Ball : Player
         _brickCounter.AllBrickDestory -= SetParent;
     }
 
+    private void Update()
+    {
+        if (!IsMoving)
+        {
+            transform.position = new Vector3(_platformaMover.transform.position.x,_platformaMover.transform.position.y,_platformaMover.transform.position.z+3f);
+        }
+    }
+
     public void StopMove()
     {
         IsMoving = false;
@@ -56,7 +65,7 @@ public class Ball : Player
         IsMoving = flag;
         _ballMover.enabled = flag;
         GetComponent<Rigidbody>().isKinematic = !flag;
-        gameObject.transform.parent = null;
+        // gameObject.transform.parent = null;
         _ballMover.SetStartDirection(new Vector3(DirectionX,0,1).normalized);
         // Debug.Log("STARTDIRECTMOVE   " + new Vector3(DirectionX,0,1).normalized);
     }

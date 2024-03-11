@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     private void Start()
     {
         _shootPositionsAmount = _load.Get(Save.Laser,_startShootPositions);
-        Debug.Log(_shootPositionsAmount);
+        // Debug.Log(_shootPositionsAmount);
     }
 
     public void Shoot()
@@ -25,6 +25,5 @@ public class Weapon : MonoBehaviour
         int index = Random.Range(0, _shootPositionsAmount);
         Instantiate(_bullet, _shootPosition[index].position, Quaternion.identity, _container);
     }
-    
     
 }

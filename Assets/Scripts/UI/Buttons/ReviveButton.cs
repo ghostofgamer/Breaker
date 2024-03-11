@@ -25,7 +25,7 @@ public class ReviveButton : AbstractButton
     {
         _reviveScreen.ChooseRevive();
         yield return _waitForSeconds;
-        _ballRevive.Revive();
+        // _ballRevive.Revive();
         _sceneLoader.RevivePlatform();
         _brickCounter.TryVictory();
         // _platformaRevive.Revive();

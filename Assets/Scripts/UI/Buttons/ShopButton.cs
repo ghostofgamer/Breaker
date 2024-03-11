@@ -20,7 +20,7 @@ public class ShopButton : AbstractButton
     {
         if (!Application.isMobilePlatform)
         {
-            _tabs[_indexPlatformTab] = _platformTabPc;
+            // _tabs[_indexPlatformTab] = _platformTabPc;
         }
         
         _currentColor = _backgroundImage[_tabIndex].color;

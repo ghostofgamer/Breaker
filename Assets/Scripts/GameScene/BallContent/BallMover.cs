@@ -93,6 +93,11 @@ public class BallMover : MonoBehaviour
 
         transform.position += _direction * speed * Time.deltaTime;
         
+        // transform.Rotate(0,1,1);
+        transform.Rotate(_direction);
+
+
+        
         /*else
         {
             if (_isPortal)

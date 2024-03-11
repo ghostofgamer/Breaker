@@ -29,6 +29,7 @@ public class SceneLoader : MonoBehaviour
         _startEffect.Play();
         yield return new WaitForSeconds(1f);
         _platforma.gameObject.SetActive(true);
+        _ball.gameObject.SetActive(true);
     }
 
     public void RevivePlatform()
@@ -41,5 +42,6 @@ public class SceneLoader : MonoBehaviour
         _startEffect.Play();
         yield return new WaitForSeconds(1f);
         _platforma.GetComponent<PlatformaRevive>().Revive();
+        _ball.GetComponent<BallRevive>().Revive();
     }
 }

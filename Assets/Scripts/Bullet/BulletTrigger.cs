@@ -19,7 +19,7 @@ public class BulletTrigger : MonoBehaviour
             gameObject.SetActive(false);
         }
         
-        if (other.TryGetComponent(out Wall wall))
+        if (other.TryGetComponent(out WallTrigger wallTrigger))
         {
             Instantiate(_explosion, transform.position, Quaternion.identity);
             gameObject.SetActive(false);

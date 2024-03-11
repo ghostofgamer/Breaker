@@ -106,11 +106,12 @@ public class swipe : MonoBehaviour
                 // Vector3 targetposition = new Vector3(transform.GetChild(i).position.x, transform.GetChild(i).position.y, -300f);
                 // transform.GetChild(i).position = Vector3.Lerp(transform.GetChild(i).position, targetposition, 0.1f);
                 // transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).position, targetposition, 0.1f);
-                transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).localPosition, new Vector3(transform.GetChild(i).localPosition.x,transform.GetChild(i).localPosition.y,-70f), 0.1f);
+                transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).localPosition, new Vector3(transform.GetChild(i).localPosition.x,transform.GetChild(i).localPosition.y,-90f), 0.1f);
                 // imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 // imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
                 imageContent.transform.GetChild(i).GetComponent<Image>().sprite = _on;
                 RotateCapsula(transform.GetChild(i),true);
+                
                 for (int j = 0; j < pos.Length; j++)
                 {
                     if (j != i)
@@ -119,7 +120,13 @@ public class swipe : MonoBehaviour
                         imageContent.transform.GetChild(j).GetComponent<Image>().sprite = _off;
                         imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                         transform.GetChild(j).localScale = Vector3.Lerp(transform.GetChild(j).localScale, new Vector3(0.8f, 0.8f,0.8f), 0.1f);
-                        transform.GetChild(j).localPosition = Vector3.Lerp(transform.GetChild(j).localPosition,new Vector3( transform.GetChild(j).localPosition.x, transform.GetChild(j).localPosition.y,0f),0.1f);
+                        
+                        
+                        
+                        transform.GetChild(j).localPosition = Vector3.Lerp(transform.GetChild(j).localPosition,new Vector3( transform.GetChild(j).localPosition.x, transform.GetChild(j).localPosition.y,-15f),0.1f);
+                        
+                        
+                        
                         RotateCapsula(transform.GetChild(j), false);
                         // transform.GetChild(j).localPosition = Vector3.Lerp(transform.GetChild(j).localPosition, new Vector3(transform.GetChild(j).localPosition.x,transform.GetChild(j).localPosition.y,-216f), 0.1f);
                         // transform.GetChild(i).position = _startPosition[i];

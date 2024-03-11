@@ -7,17 +7,23 @@ using UnityEngine.Events;
 public class BallTrigger : MonoBehaviour
 {
     [SerializeField] private BallMover _ballMover;
-
+    
+private MeshRenderer _meshRenderer;
     // [SerializeField] private Transform _enviropment;
     public float platformOffset = 3f;
     public float sphereRadius = 0.5f;
     public LayerMask platformLayer;
+    
     public event UnityAction Dying;
 
     private bool _isHit;
     private bool _isBackHit;
 
-
+    public void Init(MeshRenderer meshRenderer)
+    {
+        _meshRenderer = meshRenderer;
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.TryGetComponent(out Bourder bourder))
@@ -168,12 +174,14 @@ public class BallTrigger : MonoBehaviour
 
     private void ChangeDirection(Vector3 New, RaycastHit hit)
     {
-        GetComponent<MeshRenderer>().enabled = false;
+        // GetComponent<MeshRenderer>().enabled = false;
+        _meshRenderer.enabled = false;
         Vector3 platformUp = hit.transform.forward;
         // Debug.Log("PlatformUP " + platformUp);
         Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
         // transform.position = newPosition;
-        GetComponent<MeshRenderer>().enabled = true;
+        // GetComponent<MeshRenderer>().enabled = true;
+        _meshRenderer.enabled = true;
 // _direction = Vector3.Reflect(_direction, hit.normal);
 
         Vector3 Reflect = Vector3.Reflect(_ballMover.Direction, hit.normal);
