@@ -37,13 +37,13 @@ public class Level2BrickMover : MonoBehaviour
             brick.GetComponent<Rigidbody>().isKinematic = true;
         }
 
-        _coroutine =   StartCoroutine(MoveBetweenTargetsCoroutine());
+        _coroutine = StartCoroutine(MoveBetweenTargetsCoroutine());
     }
 
     private IEnumerator MoveBetweenTargetsCoroutine()
     {
         yield return _waitForSeconds;
-        
+
         while (true)
         {
             if (isMovingToTarget1)
@@ -63,11 +63,12 @@ public class Level2BrickMover : MonoBehaviour
     {
         float startTime = Time.time;
         Vector3 startPosition = transform.position;
-        Debug.Log(targetPosition);
+
         while (Time.time < startTime + duration)
         {
             float t = (Time.time - startTime) / duration;
             transform.position = Vector3.Lerp(startPosition, targetPosition, t);
+
             foreach (Brick brick in _bricks)
             {
                 brick.transform.position = new Vector3(brick.transform.position.x, brick.transform.position.y,
@@ -78,6 +79,7 @@ public class Level2BrickMover : MonoBehaviour
         }
 
         transform.position = targetPosition;
+
         foreach (Brick brick in _bricks)
         {
             brick.transform.position = new Vector3(brick.transform.position.x, brick.transform.position.y,
@@ -106,11 +108,12 @@ public class Level2BrickMover : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out BallMover ballMover)||other.TryGetComponent(out Bullet bullet))
+        if (other.TryGetComponent(out BallMover ballMover) || other.TryGetComponent(out Bullet bullet))
         {
             foreach (var brick in _bricks)
             {
                 brick.GetComponent<Rigidbody>().isKinematic = false;
+                brick.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(5f, 10f), ForceMode.Impulse);
                 // StopCoroutine(_coroutine);
             }
 

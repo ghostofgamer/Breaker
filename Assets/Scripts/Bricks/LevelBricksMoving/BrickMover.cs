@@ -35,9 +35,14 @@ public class BrickMover : MonoBehaviour
         {
             BricksMove();
         }
+
+        if (_bricks[0].gameObject.activeSelf == false)
+        {
+            Over();
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out BallMover ballMover)||other.TryGetComponent(out Bullet bullet))
         {
@@ -48,8 +53,18 @@ public class BrickMover : MonoBehaviour
 
             this.enabled = false;
         }
-    }
+    }*/
 
+    private void Over()
+    {
+        foreach (var brick in _bricks)
+        {
+            brick.GetComponent<Rigidbody>().isKinematic = false;
+        }
+
+        this.enabled = false;
+    }
+    
     private void BricksMove()
     {
         if (!_isTargetPosition)
