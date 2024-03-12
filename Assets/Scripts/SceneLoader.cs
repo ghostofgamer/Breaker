@@ -21,8 +21,8 @@ public class SceneLoader : MonoBehaviour
     {
         foreach (var brick in _bricks)
         {
-            brick.GetComponent<BrickActivator>().Activate();
             yield return new WaitForSeconds(0.05f);
+            brick.GetComponent<BrickActivator>().Activate();
         }
         
         yield return new WaitForSeconds(0.05f);
