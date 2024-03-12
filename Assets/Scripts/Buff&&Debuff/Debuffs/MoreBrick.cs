@@ -38,7 +38,8 @@ public class MoreBrick : Modification
             GameObject cube = Instantiate(_brickPrefab, _bricksContainer);
             cube.GetComponent<Brick>().Init(_brickCounter,_buffDistributor,_fragmentsCounter);
             cube.transform.position = spawnPosition;
-            cube.transform.localScale = Vector3.one;
+            // cube.transform.localScale = Vector3.one;
+            cube.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
             // _brickCounter.AddBricks(_amountBricks);
             yield return WaitForSeconds;
         }

@@ -7,7 +7,7 @@ public class CameraDistance : MonoBehaviour
 {
     [SerializeField] private CameraMover _cameraMover;
     
-    private float _distance = 15f;
+    private float _distance = 60f;
     private float _lerpDuration = 1f;
     private Vector3 _targetPosition;
     private bool _isLerping = false;

@@ -34,7 +34,7 @@ public class CameraMover : MonoBehaviour
     {
         if (transform.position != _newCameraPos && !Input.GetMouseButton(0))
         {
-            // Debug.Log(transform.position);
+            Debug.Log("transform.position двигаемся");
             transform.position = Vector3.MoveTowards(transform.position, _newCameraPos, _overSpeed * Time.deltaTime);
         }
 
@@ -57,6 +57,7 @@ public class CameraMover : MonoBehaviour
 
     public void SetTargetPosition(Vector3 position)
     {
+        Debug.Log("position" + position);
         StartCoroutine(SetTarget(position));
         _newCameraPos = position;
     }
