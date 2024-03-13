@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Enum;
+using Levels;
+using SaveAndLoad;
 using UnityEngine;
 
 public class ProgressManager : MonoBehaviour

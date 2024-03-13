@@ -1,13 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlatformRotate : MonoBehaviour
+namespace MainMenu.Shop
 {
-    private void Update()
+    public class PlatformRotate : MonoBehaviour
     {
-        transform.Rotate(Vector3.up * 30f * Time.deltaTime);
+        private void Update()
+        {
+            transform.Rotate(Vector3.up * (30f * Time.deltaTime));
+        }
     }
 }

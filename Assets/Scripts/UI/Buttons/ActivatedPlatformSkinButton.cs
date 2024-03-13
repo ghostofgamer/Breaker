@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MainMenu.Shop.Platforms;
 using UnityEngine;
 
 public class ActivatedPlatformSkinButton : AbstractButton

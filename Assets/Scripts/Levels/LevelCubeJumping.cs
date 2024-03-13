@@ -1,37 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelCubeJumping : MonoBehaviour
+namespace Levels
 {
-    public float speed = 2.0f; // Скорость перемещения
-    public float maxHeight = 5.0f; // Максимальная высота, до которой объект должен подниматься
-
-    private Vector3 startPosition; // Начальная позиция объекта
-    private bool movingUp = true; // Флаг направления движения
-
-    void Start()
+    public class LevelCubeJumping : MonoBehaviour
     {
-        startPosition = transform.position;
-    }
+        private float _speed = 3;
+        private float _maxHeight = 1f;
+        private Vector3 _startPosition;
+        private bool _movingUp = true;
 
-    void Update()
-    {
-        // Вычисляем новую позицию объекта
-        float newY = transform.position.y + (movingUp ? 1 : -1) * speed * Time.deltaTime;
-
-        // Проверяем, достиг ли объект максимальной высоты
-        if (movingUp && newY >= startPosition.y + maxHeight)
+        void Start()
         {
-            movingUp = false; // Меняем направление движения
-        }
-        // Проверяем, достиг ли объект исходной высоты
-        else if (!movingUp && newY <= startPosition.y)
-        {
-            movingUp = true; // Меняем направление движения
+            _startPosition = transform.position;
         }
 
-        // Обновляем позицию объекта
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        void Update()
+        {
+            float newY = transform.position.y + (_movingUp ? 1 : -1) * _speed * Time.deltaTime;
+
+            if (_movingUp && newY >= _startPosition.y + _maxHeight)
+            {
+                _movingUp = false;
+            }
+
+            else if (!_movingUp && newY <= _startPosition.y)
+            {
+                _movingUp = true;
+            }
+
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        }
     }
 }

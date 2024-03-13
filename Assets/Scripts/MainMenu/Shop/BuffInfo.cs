@@ -1,33 +1,34 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Enum;
+using SaveAndLoad;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BuffInfo : MonoBehaviour
+namespace MainMenu.Shop
 {
-    [SerializeField] private Load _load;
-    [SerializeField] private Buffs _buff;
-    [SerializeField] private GameObject _infoButton;
-    [SerializeField] private GameObject _buyUpgradeButton;
-    [SerializeField] private Image _upgradeUpLevel;
-    [SerializeField] private Color _color;
-
-    private int _startLevel = 0;
-
-    private void Start()
+    public class BuffInfo : MonoBehaviour
     {
-        var level = _load.Get(_buff.ToString(), _startLevel);
+        [SerializeField] private Load _load;
+        [SerializeField] private Enum.Buffs _buff;
+        [SerializeField] private GameObject _infoButton;
+        [SerializeField] private GameObject _buyUpgradeButton;
+        [SerializeField] private Image _upgradeUpLevel;
+        [SerializeField] private Color _color;
 
-        if (level > _startLevel)
-            ChangeValue();
-    }
+        private int _startLevel = 0;
 
-    public void ChangeValue()
-    {
-        _infoButton.SetActive(true);
-        _buyUpgradeButton.SetActive(false);
-        _upgradeUpLevel.color = _color;
+        private void Start()
+        {
+            var level = _load.Get(_buff.ToString(), _startLevel);
+
+            if (level > _startLevel)
+                ChangeValue();
+        }
+
+        public void ChangeValue()
+        {
+            _infoButton.SetActive(true);
+            _buyUpgradeButton.SetActive(false);
+            _upgradeUpLevel.color = _color;
+        }
     }
 }

@@ -167,6 +167,7 @@ namespace GameScene.BallContent
 
             if (transform.position.z > _zMaxPosition)
             {
+                Debug.Log("МАКСИМУМ");
                 SetDirection(new Vector3(0, 0, -1),new Vector3(transform.position.x, 5.1f, _zMaxPosition));
             }
         }
@@ -175,8 +176,8 @@ namespace GameScene.BallContent
         {
             Vector3 normal = vectorNormal;
             var position = transform.position;
-            position = newVector;
-            transform.position = position;
+            // position = newVector;
+            // transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
             Debug.Log(_direction);
@@ -186,20 +187,26 @@ namespace GameScene.BallContent
         {
             if (_direction.z == 0)
             {
+                Debug.Log("В ноль");
                 _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.5f, 0.5f))
                     .normalized;
+                Debug.Log("В ноль " + _direction );
             }
 
-            if (_direction.z < 0 && _direction.z > -0.3)
+            if (_direction.z < 0 && _direction.z > -0.35)
             {
+                Debug.Log("В минус");
                 _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.3f, -0.5f))
                     .normalized;
+                Debug.Log("В минус" + _direction);
             }
 
-            if (_direction.z > 0 && _direction.z < 0.3)
+            if (_direction.z > 0 && _direction.z < 0.35)
             {
+                Debug.Log("В плюс");
                 _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(0.3f, 0.5f))
                     .normalized;
+                Debug.Log("В плюс " + _direction);
             }
         }
 
