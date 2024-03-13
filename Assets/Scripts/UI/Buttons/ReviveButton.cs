@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using GameScene;
+using GameScene.BallContent;
 using UnityEngine;
 
 public class ReviveButton : AbstractButton

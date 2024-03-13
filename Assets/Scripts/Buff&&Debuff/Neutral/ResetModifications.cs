@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameScene.BallContent;
 using UnityEngine;
 
 public class ResetModifications : Modification

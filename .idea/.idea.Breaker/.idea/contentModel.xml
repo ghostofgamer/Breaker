@@ -1514,7 +1514,6 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AdditionalLaser.cs" t="Include" />
           <e p="Bonus" t="Include">
             <e p="BonusDeath.cs" t="Include" />
             <e p="BonusMover.cs" t="Include" />
@@ -1529,8 +1528,10 @@
               <e p="Level2BrickMover.cs" t="Include" />
               <e p="Level3MoveBricks.cs" t="Include" />
             </e>
+            <e p="ShaderChanger.cs" t="Include" />
           </e>
           <e p="Buff&amp;&amp;Debuff" t="Include">
+            <e p="AdditionalLaser.cs" t="Include" />
             <e p="BallSizeChanger.cs" t="Include" />
             <e p="Buff.cs" t="Include" />
             <e p="BuffDistributor.cs" t="Include" />
@@ -1564,19 +1565,21 @@
             </e>
             <e p="EffectTrigger.cs" t="Include" />
             <e p="Modification.cs" t="Include" />
+            <e p="NameEffectAnimation.cs" t="Include" />
             <e p="Neutral" t="Include">
               <e p="RandomEffect.cs" t="Include" />
               <e p="ResetModifications.cs" t="Include" />
             </e>
             <e p="Neutral.cs" t="Include" />
             <e p="PaddleChanger.cs" t="Include" />
+            <e p="RotateBonusTarget.cs" t="Include" />
           </e>
-          <e p="Bullet" t="Include">
+          <e p="BulletFiles" t="Include">
             <e p="Bullet.cs" t="Include" />
             <e p="BulletMover.cs" t="Include" />
             <e p="Bullettrigger.cs" t="Include" />
           </e>
-          <e p="Camera" t="Include">
+          <e p="CameraFiles" t="Include">
             <e p="CameraDistance.cs" t="Include" />
             <e p="CameraMover.cs" t="Include" />
             <e p="CameraVictoryMover.cs" t="Include" />
@@ -1601,12 +1604,12 @@
               <e p="BallTrigger.cs" t="Include" />
               <e p="PortalTeleporterBall.cs" t="Include" />
             </e>
-            <e p="BonusCounter.cs" t="Include" />
             <e p="Bourder.cs" t="Include" />
-            <e p="BrickCounter.cs" t="Include" />
             <e p="FlyBonus.cs" t="Include" />
             <e p="PanelMoving.cs" t="Include" />
+            <e p="SceneLoader.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
+            <e p="Walltrigger.cs" t="Include" />
           </e>
           <e p="Levels" t="Include">
             <e p="Level.cs" t="Include" />
@@ -1624,7 +1627,6 @@
             </e>
             <e p="WaveMotion.cs" t="Include" />
           </e>
-          <e p="NameEffectAnimation.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="MousePositionController.cs" t="Include" />
             <e p="PlatformaContent" t="Include">
@@ -1645,17 +1647,14 @@
             <e p="LevelData.cs" t="Include" />
             <e p="ProgressManager.cs" t="Include" />
           </e>
-          <e p="RotateBonusTarget.cs" t="Include" />
           <e p="Save&amp;Load" t="Include">
             <e p="Load.cs" t="Include" />
             <e p="Save.cs" t="Include" />
           </e>
-          <e p="SceneLoader.cs" t="Include" />
           <e p="SDK" t="Include">
             <e p="GameReady.cs" t="Include" />
             <e p="SdkInitialization.cs" t="Include" />
           </e>
-          <e p="ShaderChanger.cs" t="Include" />
           <e p="Skins" t="Include">
             <e p="Platforms" t="Include">
               <e p="PlatformaSkinData.cs" t="Include" />
@@ -1668,6 +1667,8 @@
             <e p="MixerController.cs" t="Include" />
           </e>
           <e p="Statistics" t="Include">
+            <e p="BonusCounter.cs" t="Include" />
+            <e p="BrickCounter.cs" t="Include" />
             <e p="BuffCounter.cs" t="Include" />
             <e p="FragmentsCounter.cs" t="Include" />
             <e p="LevelTimer.cs" t="Include" />
@@ -1741,8 +1742,7 @@
             <e p="Swipe.cs" t="Include" />
             <e p="SwipeLayout.cs" t="Include" />
           </e>
-          <e p="Walltrigger.cs" t="Include" />
-          <e p="Weapon" t="Include">
+          <e p="WeaponFiles" t="Include">
             <e p="Weapon.cs" t="Include" />
           </e>
         </e>

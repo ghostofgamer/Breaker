@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Random = UnityEngine.Random;
-
-public class BrickDestroy : Brick
+namespace Bricks
 {
-    public override void Die()
+    public class BrickDestroy : Brick
     {
-        Destroy();
+        public override void Die()
+        {
+            Destroy();
+        }
     }
 }

@@ -1,104 +1,104 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Bricks;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class BallMover : MonoBehaviour
+namespace GameScene.BallContent
 {
-    [SerializeField] private PortalTeleporterBall _portalTeleporterBall;
-    [SerializeField] private float _xMinPosition;
-    [SerializeField] private float _xMaxPosition;
-    [SerializeField] private float _zMaxPosition;
-    [SerializeField] private float _zMinPosition;
-    [SerializeField] private bool _isPortal = false;
-    [SerializeField] private BallTrigger _ballTrigger;
-    
-    public float MinSpeed { get; private set; } = 30;
-    private float _mediumSpeed = 45;
-    private float _maxSpeed = 60f;
-
-    public float speed;
-
-    public LayerMask wallLayer;
-    private Vector3 _direction;
-    public float _radius;
-    private bool _isSpeedUp;
-
-    public float Speed => speed;
-    public Vector3 Direction => _direction;
-
-    [SerializeField] private float _rayLength = 10f;
-    public float RayLength => _rayLength;
-    public float platformOffset = 3f;
-    
-
-    void Start()
+    public class BallMover : MonoBehaviour
     {
-        _radius = GetComponent<SphereCollider>().radius;
-    }
+        [SerializeField] private PortalTeleporterBall _portalTeleporterBall;
+        [SerializeField] private float _xMinPosition;
+        [SerializeField] private float _xMaxPosition;
+        [SerializeField] private float _zMaxPosition;
+        [SerializeField] private float _zMinPosition;
+        [SerializeField] private bool _isPortal = false;
+        [SerializeField] private BallTrigger _ballTrigger;
+        [SerializeField] private float _rayLength = 10f;
 
-    void Update()
-    {
-        if (speed > MinSpeed && !_isSpeedUp)
+        private float _mediumSpeed = 45;
+        private float _maxSpeed = 60f;
+        private Vector3 _direction;
+        private float _maxY = 5.1f;
+
+        private float _speed = 30f;
+
+        // public LayerMask _wallLayer;
+        public float _radius;
+        private bool _isSpeedUp;
+
+        public float MinSpeed { get; private set; } = 30;
+
+        public float Speed => _speed;
+        public Vector3 Direction => _direction;
+
+
+        // public float RayLength => _rayLength;
+        // public float _platformOffset = 3f;
+
+
+        void Start()
         {
-            speed = Mathf.MoveTowards(speed, MinSpeed, 6f * Time.deltaTime);
+            _radius = GetComponent<SphereCollider>().radius;
         }
 
-        if (speed < MinSpeed)
+        void Update()
         {
-            speed = MinSpeed;
-        }
+            if (_speed > MinSpeed && !_isSpeedUp)
+            {
+                _speed = Mathf.MoveTowards(_speed, MinSpeed, 6f * Time.deltaTime);
+            }
 
-        if (transform.position.y != 5.1f)
-        {
-            Debug.Log("По Y не то");
-            transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
-        }
-        // transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
-        
-        _ballTrigger.CheckPlatformCollision();
-        Vector3 predictedPosition = transform.position + _direction * speed * Time.deltaTime;
+            if (_speed < MinSpeed)
+            {
+                _speed = MinSpeed;
+            }
 
-        // if (Physics.SphereCast(transform.position, _radius, _direction, out RaycastHit hit,
-        //     (predictedPosition - transform.position).magnitude, wallLayer))
-        // {
-        //
-        //     _direction = Vector3.Reflect(_direction, hit.normal);
-        //
-        //     if (_direction.z == 0)
-        //     {
-        //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(-0.5f, 0.5f))
-        //             .normalized;
-        //     }
-        //
-        //     if (_direction.z < 0 && _direction.z > -0.3)
-        //     {
-        //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(-0.3f, -0.5f))
-        //             .normalized;
-        //     }
-        //
-        //     if (_direction.z > 0 && _direction.z < 0.3)
-        //     {
-        //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(0.3f, 0.5f))
-        //             .normalized;
-        //     }
-        // }
-        
-        if (_isPortal)
-            _portalTeleporterBall.TeleportBall();
+            if (transform.position.y != _maxY)
+            {
+                transform.position = new Vector3(transform.position.x, 5.1f, transform.position.z);
+            }
 
-        else
-            CheckBehindWall();
+            _ballTrigger.CheckPlatformCollision();
+            Vector3 predictedPosition = transform.position + _direction * _speed * Time.deltaTime;
 
-        transform.position += _direction * speed * Time.deltaTime;
-        
-        // transform.Rotate(0,1,1);
-        transform.Rotate(_direction);
+            // if (Physics.SphereCast(transform.position, _radius, _direction, out RaycastHit hit,
+            //     (predictedPosition - transform.position).magnitude, wallLayer))
+            // {
+            //
+            //     _direction = Vector3.Reflect(_direction, hit.normal);
+            //
+            //     if (_direction.z == 0)
+            //     {
+            //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(-0.5f, 0.5f))
+            //             .normalized;
+            //     }
+            //
+            //     if (_direction.z < 0 && _direction.z > -0.3)
+            //     {
+            //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(-0.3f, -0.5f))
+            //             .normalized;
+            //     }
+            //
+            //     if (_direction.z > 0 && _direction.z < 0.3)
+            //     {
+            //         _direction = new Vector3(_direction.x, 5.1f, _direction.z + Random.Range(0.3f, 0.5f))
+            //             .normalized;
+            //     }
+            // }
+
+            if (_isPortal)
+                _portalTeleporterBall.TeleportBall();
+
+            else
+                CheckBehindWall();
+
+            transform.position += _direction * _speed * Time.deltaTime;
+
+            // transform.Rotate(0,1,1);
+            transform.Rotate(_direction);
 
 
-        
-        /*else
+            /*else
         {
             if (_isPortal)
                 _portalTeleporterBall.TeleportBall();
@@ -108,112 +108,104 @@ public class BallMover : MonoBehaviour
 
             transform.position += _direction * speed * Time.deltaTime;
         }*/
-    }
-
-    public void SetStartDirection(Vector3 direction)
-    {
-        _direction = direction;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.TryGetComponent(out Brick brick))
-        {
-            Vector3 Reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
-            // Debug.Log("Reflect " + Reflect);
-            Vector3 NEWREFLECT = new Vector3(Reflect.x, 0, Reflect.z).normalized;
-// Debug.Log("Newreflect " + NEWREFLECT);
-            _direction = NEWREFLECT;
-            
-            
-            // _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
-            brick.Die();
         }
 
-        if (other.collider.TryGetComponent(out Wall wall))
+        public void SetStartDirection(Vector3 direction)
         {
-            Vector3 Reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
-            Vector3 NEWREFLECT = new Vector3(Reflect.x, 0, Reflect.z).normalized;
-            _direction = NEWREFLECT;
+            _direction = direction;
         }
-    }
 
-    public void SetValue(float speed, bool flag)
-    {
-        _isSpeedUp = flag;
-        this.speed = Mathf.Clamp(speed, MinSpeed, _maxSpeed);
-    }
-
-    public void SetDirection(Vector3 direction)
-    {
-        _direction = direction;
-    }
-
-    public void FastSpeed()
-    {
-        if (!_isSpeedUp)
-            speed = Mathf.Clamp((speed * 1.5f), MinSpeed, _mediumSpeed);
-    }
-
-    private void CheckBehindWall()
-    {
-        if (transform.position.x > _xMaxPosition)
+        private void OnCollisionEnter(Collision other)
         {
-            Vector3 normal = new Vector3(-1, 0, 0);
+            if (other.collider.TryGetComponent(out Brick brick))
+            {
+                Vector3 reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
+                Vector3 newReflect = new Vector3(reflect.x, 0, reflect.z).normalized;
+                _direction = newReflect;
+
+
+                // _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
+                brick.Die();
+            }
+
+            if (other.collider.TryGetComponent(out Wall wall))
+            {
+                Vector3 reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
+                Vector3 newReflect = new Vector3(reflect.x, 0, reflect.z).normalized;
+                _direction = newReflect;
+            }
+        }
+
+        public void SetValue(float speed, bool flag)
+        {
+            _isSpeedUp = flag;
+            this._speed = Mathf.Clamp(speed, MinSpeed, _maxSpeed);
+        }
+
+        public void SetDirection(Vector3 direction)
+        {
+            _direction = direction;
+        }
+
+        public void FastSpeed()
+        {
+            if (!_isSpeedUp)
+                _speed = Mathf.Clamp((_speed * 1.5f), MinSpeed, _mediumSpeed);
+        }
+
+        private void CheckBehindWall()
+        {
+            if (transform.position.x > _xMaxPosition)
+            {
+                SetDirection(new Vector3(-1, 0, 0),new Vector3(_xMaxPosition, 5.1f, transform.position.z));
+            }
+
+            if (transform.position.x < _xMinPosition)
+            {
+                SetDirection(new Vector3(1, 0, 0),new Vector3(_xMinPosition, 5.1f, transform.position.z));
+            }
+
+            if (transform.position.z > _zMaxPosition)
+            {
+                SetDirection(new Vector3(0, 0, -1),new Vector3(transform.position.x, 5.1f, _zMaxPosition));
+            }
+        }
+
+        private void SetDirection(Vector3 vectorNormal,Vector3 newVector )
+        {
+            Vector3 normal = vectorNormal;
             var position = transform.position;
-            // position = new Vector3(_xMaxPosition, position.y, position.z);
-            position = new Vector3(_xMaxPosition, 5.1f, position.z);
+            position = newVector;
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
+            Debug.Log(_direction);
         }
-
-        if (transform.position.x < _xMinPosition)
+        
+        private void CheckAngle()
         {
-            Vector3 normal = new Vector3(1, 0, 0);
-            var position = transform.position;
-            // position = new Vector3(_xMinPosition, position.y, position.z);
-            position = new Vector3(_xMinPosition, 5.1f, position.z);
-            transform.position = position;
-            _direction = Vector3.Reflect(_direction, normal);
-            CheckAngle();
+            if (_direction.z == 0)
+            {
+                _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.5f, 0.5f))
+                    .normalized;
+            }
+
+            if (_direction.z < 0 && _direction.z > -0.3)
+            {
+                _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.3f, -0.5f))
+                    .normalized;
+            }
+
+            if (_direction.z > 0 && _direction.z < 0.3)
+            {
+                _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(0.3f, 0.5f))
+                    .normalized;
+            }
         }
 
-        if (transform.position.z > _zMaxPosition)
+        public void SetValue(bool portalActivated)
         {
-            Vector3 normal = new Vector3(0, 0, -1);
-            var position = transform.position;
-            // position = new Vector3(position.x, position.y, _zMaxPosition);
-            position = new Vector3(position.x, 5.1f, _zMaxPosition);
-            transform.position = position;
-            _direction = Vector3.Reflect(_direction, normal);
-            CheckAngle();
+            _isPortal = portalActivated;
         }
-    }
-
-    private void CheckAngle()
-    {
-        if (_direction.z == 0)
-        {
-            _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.5f, 0.5f))
-                .normalized;
-        }
-
-        if (_direction.z < 0 && _direction.z > -0.3)
-        {
-            _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.3f, -0.5f))
-                .normalized;
-        }
-
-        if (_direction.z > 0 && _direction.z < 0.3)
-        {
-            _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(0.3f, 0.5f))
-                .normalized;
-        }
-    }
-
-    public void SetValue(bool portalActivated)
-    {
-        _isPortal = portalActivated;
     }
 }

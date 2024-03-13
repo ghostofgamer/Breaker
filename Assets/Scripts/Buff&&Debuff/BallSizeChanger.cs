@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameScene.BallContent;
 using UnityEngine;
 
 public abstract class BallSizeChanger : Modification
@@ -21,12 +22,12 @@ public abstract class BallSizeChanger : Modification
     {
         Vector3 target = new Vector3(_standardScale.x + _sizeChange, _standardScale.y + _sizeChange,
             _standardScale.z + _sizeChange);
-        _ballMover.transform.localScale = target;
+        BallMover.transform.localScale = target;
     }
 
     protected void Reset()
     {
         SetActive(false);
-        _ballMover.transform.localScale = _standardScale;
+        BallMover.transform.localScale = _standardScale;
     }
 }

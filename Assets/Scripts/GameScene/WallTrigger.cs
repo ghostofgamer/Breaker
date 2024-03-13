@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GameScene
 {
-    public class Bourder : MonoBehaviour
+    public class WallTrigger : MonoBehaviour
     {
     }
 }

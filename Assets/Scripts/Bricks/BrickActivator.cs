@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BrickActivator : MonoBehaviour
+namespace Bricks
 {
-    [SerializeField] private GameObject _fadeObject;
-    [SerializeField]private MeshRenderer _meshRenderer;
-
-    public void Activate()
+    public class BrickActivator : MonoBehaviour
     {
-        _fadeObject.SetActive(false);
-        _meshRenderer.enabled = true;
+        [SerializeField] private GameObject _fadeObject;
+        [SerializeField]private MeshRenderer _meshRenderer;
+
+        public void Activate()
+        {
+            _fadeObject.SetActive(false);
+            _meshRenderer.enabled = true;
+        }
     }
 }

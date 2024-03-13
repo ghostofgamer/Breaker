@@ -1,50 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalTeleporterBall : MonoBehaviour
+namespace GameScene.BallContent
 {
-    [SerializeField] private ParticleSystem _particleSystem;
-    [SerializeField] private ParticleSystem _missileEffect;
-    [SerializeField] private float _xMinPosition;
-    [SerializeField] private float _xMaxPosition;
-    [SerializeField] private float _zMaxPosition;
-    [SerializeField] private float _zMinPosition;
-    
-    public void TeleportBall()
+    public class PortalTeleporterBall : MonoBehaviour
     {
-        if (transform.position.x > _xMaxPosition)
+        [SerializeField] private ParticleSystem _particleSystem;
+        [SerializeField] private ParticleSystem _missileEffect;
+        [SerializeField] private float _xMinPosition;
+        [SerializeField] private float _xMaxPosition;
+        [SerializeField] private float _zMaxPosition;
+        [SerializeField] private float _zMinPosition;
+
+        public void TeleportBall()
         {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            _missileEffect.gameObject.SetActive(false);
-            transform.position = new Vector3(_xMinPosition, transform.position.y, transform.position.z);
-            _missileEffect.gameObject.SetActive(true);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
+            if (transform.position.x > _xMaxPosition)
+            {
+                Teleport(new Vector3(_xMinPosition, transform.position.y, transform.position.z));
+            }
+
+            if (transform.position.x < _xMinPosition)
+            {
+                Teleport(new Vector3(_xMaxPosition, transform.position.y, transform.position.z));
+            }
+
+            if (transform.position.z < _zMinPosition)
+            {
+                Teleport(new Vector3(transform.position.x, transform.position.y, _zMaxPosition));
+            }
+
+            if (transform.position.z > _zMaxPosition)
+            {
+                Teleport(new Vector3(transform.position.x, transform.position.y, _zMinPosition));
+            }
         }
 
-        if (transform.position.x < _xMinPosition)
+        private void Teleport(Vector3 position)
         {
             Instantiate(_particleSystem, transform.position, Quaternion.identity);
             _missileEffect.gameObject.SetActive(false);
-            transform.position = new Vector3(_xMaxPosition, transform.position.y, transform.position.z); 
-            _missileEffect.gameObject.SetActive(true);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-        }
-
-        if (transform.position.z < _zMinPosition)
-        {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            _missileEffect.gameObject.SetActive(false);
-            transform.position = new Vector3(transform.position.x, transform.position.y, _zMaxPosition);
-            _missileEffect.gameObject.SetActive(true);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-        }
-
-        if (transform.position.z > _zMaxPosition)
-        {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            _missileEffect.gameObject.SetActive(false);
-            transform.position = new Vector3(transform.position.x, transform.position.y, _zMinPosition);
+            transform.position = position;
             _missileEffect.gameObject.SetActive(true);
             Instantiate(_particleSystem, transform.position, Quaternion.identity);
         }

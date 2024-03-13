@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum SoundMixer
+namespace Enum
 {
-Music,
-SFX
+    public enum SoundMixer
+    {
+        Music,
+        SFX
+    }
 }

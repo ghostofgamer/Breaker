@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bonus;
 using UnityEngine;
 
 public class PlatformaTrigger : MonoBehaviour

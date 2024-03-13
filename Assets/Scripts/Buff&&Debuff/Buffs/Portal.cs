@@ -38,7 +38,7 @@ public class Portal : Modification
         foreach (var wall in _walls)
             wall.GetComponent<BoxCollider>().enabled = !value;
 
-        _ballMover.SetValue(value);
+        BallMover.SetValue(value);
         _portal.SetActive(value);
     }
 }

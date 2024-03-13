@@ -1,116 +1,71 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using Unity.VisualScripting;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 
-public class Level3MoveBricks : MonoBehaviour
+namespace Bricks.LevelBricksMoving
 {
-    /*
-    public Transform pointA; // точка A
-    public Transform pointB; // точка B
-    public Transform center; // центр
-    public float duration; // длительность движения
-
-    private bool movingToPointA = true; // флаг для определения направления движения
-
-    private void Start()
+    public class Level3MoveBricks : MonoBehaviour
     {
-        StartCoroutine(MoveOverTime());
-    }
+        [SerializeField] private Transform _pointA;
+        [SerializeField] private Transform _pointB;
+        [SerializeField] private Transform _center;
+        [SerializeField] private float _rotationStart;
+        [SerializeField] private float _endRotation;
 
-    private IEnumerator MoveOverTime()
-    {
-        while (true)
+        private Coroutine _coroutine;
+        private float _minValue = 0.1f;
+        private float _maxValue = 0.5f;
+        private float _elapsedTime;
+        private float _duration = 5;
+        private bool _isMovingToTarget = true;
+        private bool _name;
+
+        private void Start()
         {
-            float elapsedTime = 0;
-            Vector3 startPosition = transform.position;
-            Vector3 endPosition = movingToPointA ? pointA.position : pointB.position;
-
-            while (elapsedTime < duration)
-            {
-                float progress = elapsedTime / duration;
-                transform.position = Vector3.Lerp(startPosition, endPosition, progress);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-
-            transform.position = endPosition;
-            movingToPointA = !movingToPointA;
-
-            yield return new WaitForSeconds(1f); // пауза перед движением в обратном направлении
-
-            elapsedTime = 0;
-            startPosition = transform.position;
-            endPosition = movingToPointA ? pointB.position : pointA.position;
-
-            while (elapsedTime < duration)
-            {
-                float progress = elapsedTime / duration;
-                transform.position = Vector3.Lerp(startPosition, endPosition, progress);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-
-            transform.position = endPosition;
-            movingToPointA = !movingToPointA;
-        }
-    }*/
-    
-    [SerializeField] private  Transform _pointA;
-    [SerializeField] private  Transform _pointB;
-    [SerializeField] private Transform _center;
-    [SerializeField] private float _rotationStart;
-    [SerializeField] private float _endRotation;
-    
-    private bool _movingToPointB = true;
-    private float _progress = 0.0f;
-
-    private void Start()
-    {
-        StartCoroutine(Slerping());
-    }
-
-    private IEnumerator Slerping()
-    {
-        while (true)
-        {
-            float _elapsedTime = 0;
-            float duration = 5;
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
             
-            while (_elapsedTime < duration)
-            {
-                _elapsedTime += Time.deltaTime;
-                float progress = _elapsedTime / duration;
-                transform.position = Vector3.Slerp(_pointA.position - _center.position,
-                    _pointB.position - _center.position,
-                    progress) + _center.position;
-                transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, _rotationStart, 0),
-                    Quaternion.Euler(0, _endRotation, 0), progress);
-                yield return null;
-            }
+            _coroutine = StartCoroutine(MoveCubes());
+        }
 
-            float randomPause = Random.Range(0.1f, 0.5f);
+        private IEnumerator MoveCubes()
+        {
+            while (true)
+            {
+                if (_isMovingToTarget)
+                    yield return Slerping(_pointA.position, _pointB.position, _rotationStart, _endRotation);
+
+                else
+                    yield return Slerping(_pointB.position, _pointA.position, _endRotation, _rotationStart);
+
+                _isMovingToTarget = !_isMovingToTarget;
+            }
+        }
+
+        private IEnumerator Slerping(Vector3 pointA, Vector3 pointB, float rotationA, float rotationB)
+        {
+            _elapsedTime = 0;
+            float randomPause = Random.Range(_minValue, _maxValue);
             yield return new WaitForSeconds(randomPause);
 
-            float elapsedTime = 0;
-            float _duration = 5;
-
-            while (elapsedTime < _duration)
+            while (_elapsedTime < _duration)
             {
-                elapsedTime += Time.deltaTime;
-                float progress = elapsedTime / _duration;
-                transform.position = Vector3.Slerp(_pointB.position - _center.position,
-                    _pointA.position - _center.position,
-                    progress) + _center.position;
-                transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, _endRotation, 0),
-                    Quaternion.Euler(0, _rotationStart, 0), progress);
+                CubeLerping(pointA, pointB, rotationA, rotationB);
                 yield return null;
             }
+        }
+
+        private void CubeLerping(Vector3 pointA, Vector3 pointB, float rotationA, float rotationB)
+        {
+            _elapsedTime += Time.deltaTime;
+            float progress = _elapsedTime / _duration;
+            transform.position = Vector3.Slerp(pointA - _center.position,
+                pointB - _center.position,
+                progress) + _center.position;
+            transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, rotationA, 0),
+                Quaternion.Euler(0, rotationB, 0), progress);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using Enum;
+using GameScene.BallContent;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,8 +8,7 @@ using UnityEngine.UI;
 public abstract class Modification : MonoBehaviour
 {
     [SerializeField] protected PlatformaMover PlatformaMover;
-    [SerializeField] protected BallController BallController;
-    [SerializeField] protected BallMover _ballMover;
+    [SerializeField] protected BallMover BallMover;
     [SerializeField] protected Player Player;
     [SerializeField] protected float Duration;
     [SerializeField] protected NameEffectAnimation NameEffect;

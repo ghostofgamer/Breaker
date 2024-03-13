@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum LevelState
+namespace Enum
 {
-    Locked,
-    Unlocked,
-    Completed
+    public enum LevelState
+    {
+        Locked,
+        Unlocked,
+        Completed
+    }
 }

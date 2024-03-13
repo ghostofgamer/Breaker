@@ -9,6 +9,9 @@ public class NameEffectAnimation : MonoBehaviour
 
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private Coroutine _coroutine;
+    private int _alphaFull = 1;
+    private int _alphaZero = 0;
+    private string EffectNameAnimation = "EffectNameAnimation";
 
     public void Show()
     {
@@ -20,10 +23,10 @@ public class NameEffectAnimation : MonoBehaviour
 
     private IEnumerator ShowAnimation()
     {
-        SetValue(1);
-        _animator.Play("EffectNameAnimation");
+        SetValue(_alphaFull);
+        _animator.Play(EffectNameAnimation);
         yield return _waitForSeconds;
-        SetValue(0);
+        SetValue(_alphaZero);
     }
 
     private void SetValue(int alpha)

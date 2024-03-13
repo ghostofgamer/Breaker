@@ -1,121 +1,64 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BallTrigger : MonoBehaviour
+namespace GameScene.BallContent
 {
-    [SerializeField] private BallMover _ballMover;
-    
-private MeshRenderer _meshRenderer;
-    // [SerializeField] private Transform _enviropment;
-    public float platformOffset = 3f;
-    public float sphereRadius = 0.5f;
-    public LayerMask platformLayer;
-    
-    public event UnityAction Dying;
-
-    private bool _isHit;
-    private bool _isBackHit;
-
-    public void Init(MeshRenderer meshRenderer)
+    public class BallTrigger : MonoBehaviour
     {
-        _meshRenderer = meshRenderer;
-    }
-    
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.TryGetComponent(out Bourder bourder))
+        [SerializeField] private BallMover _ballMover;
+        [SerializeField] private LayerMask _platformLayer;
+
+        private MeshRenderer _meshRenderer;
+        private bool _isHit;
+        private bool _isBackHit;
+        private float _platformOffset = 3f;
+        private float _sphereRadius = 0.5f;
+        
+        public event UnityAction Dying;
+        
+        public void Init(MeshRenderer meshRenderer)
         {
-            Dying?.Invoke();
-            gameObject.SetActive(false);
-            GetComponent<Ball>().StopMove();
-            Time.timeScale = 1;
-            // transform.parent = _enviropment;
+            _meshRenderer = meshRenderer;
         }
-    }
 
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.collider.TryGetComponent(out Bourder bourder))
+            {
+                Dying?.Invoke();
+                gameObject.SetActive(false);
+                GetComponent<Ball>().StopMove();
+                Time.timeScale = 1;
+            }
+        }
 
-     private void OnDrawGizmos()
-     {
-         float maxDistance = 2.1f;
-         RaycastHit hit;
+        public void CheckPlatformCollision()
+        {
+            float mouse = Input.GetAxis("Mouse X") * 2;
+            float mouseY = Input.GetAxis("Mouse Y");
+            Vector3 newVector = new Vector3(mouse, 0, mouseY).normalized;
+            float maxDistance = 2.1f;
+            RaycastHit hit;
 
-         Vector3 predictedPosition = transform.position + _ballMover.Direction * _ballMover.speed * Time.deltaTime;
+            // Vector3 predictedPosition = transform.position + _ballMover.Direction * (_ballMover.Speed * Time.deltaTime);
 
-         bool isHit = Physics.SphereCast(transform.position, transform.lossyScale.x / 2, _ballMover.Direction, out hit,
-             maxDistance, platformLayer);
-
-         bool isBackHit = Physics.SphereCast(transform.position, transform.lossyScale.x / 2, -_ballMover.Direction,
-             out hit,
-             maxDistance, platformLayer);
-
-
-         if (isHit)
-         {
-             Gizmos.color = Color.blue;
-             // Debug.Log("Расстояние " + hit.distance);
-
-
-             Vector3 Reflect = Vector3.Reflect(_ballMover.Direction, hit.normal);
-             // _ballMover.SetDirection(Reflect);
-             // Debug.Log("толкаемся");
-
-             Gizmos.DrawRay(transform.position, _ballMover.Direction * hit.distance);
-             Gizmos.DrawWireSphere(transform.position + _ballMover.Direction * hit.distance, transform.lossyScale.x / 2);
-         }
-         else
-         {
-             Gizmos.color = Color.yellow;
-             Gizmos.DrawRay(transform.position, _ballMover.Direction * maxDistance);
-         }
-
-
-         if (isBackHit)
-         {
-             Gizmos.color = Color.red;
-             Vector3 Reflect = Vector3.Reflect(-_ballMover.Direction, hit.normal);
-             Gizmos.DrawRay(transform.position, -_ballMover.Direction * hit.distance);
-             Gizmos.DrawWireSphere(transform.position + -_ballMover.Direction * hit.distance,
-                 transform.lossyScale.x / 2);
-         }
-         else
-         {
-             Gizmos.color = Color.green;
-             Gizmos.DrawRay(transform.position, -_ballMover.Direction * maxDistance);
-         }
-     }
-
-    public void CheckPlatformCollision()
-    {
-        float mouse = Input.GetAxis("Mouse X") * 2;
-        float mouseY = Input.GetAxis("Mouse Y");
-        Vector3 New = new Vector3(mouse, 0, mouseY).normalized;
-
-        float maxDistance = 2.1f;
-        RaycastHit hit;
-
-        Vector3 predictedPosition = transform.position + _ballMover.Direction * _ballMover.speed * Time.deltaTime;
-
-        bool isHit = Physics.SphereCast(transform.position, transform.lossyScale.x / 2, _ballMover.Direction, out hit,
+            /*bool isHit = Physics.SphereCast(transform.position, transform.lossyScale.x / 2, _ballMover.Direction, out hit,
             maxDistance, platformLayer);
 
         bool isBackHit = Physics.SphereCast(transform.position, transform.lossyScale.x / 2, -_ballMover.Direction,
             out hit,
-            maxDistance, platformLayer);
+            maxDistance, platformLayer);*/
 
-        if (Physics.SphereCast(transform.position, transform.lossyScale.x / 2, _ballMover.Direction, out hit,
-            maxDistance, platformLayer))
-        {
-            if (hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover PlatformaMover))
+            if (Physics.SphereCast(transform.position, transform.lossyScale.x / 2, _ballMover.Direction, out hit,
+                maxDistance, _platformLayer))
             {
-                // Debug.Log("HIT");
-                ChangeDirection(New, hit);
+                if (hit.collider.gameObject.TryGetComponent(out PlatformaMover platformaMover))
+                {
+                    ChangeDirection(newVector, hit);
+                }
             }
-        }
 
-        /*if (Physics.SphereCast(transform.position, transform.lossyScale.x / 2, -_ballMover.Direction, out hit,
+            /*if (Physics.SphereCast(transform.position, transform.lossyScale.x / 2, -_ballMover.Direction, out hit,
             maxDistance, platformLayer))
         {
             if (hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover зlatformaMover))
@@ -127,89 +70,38 @@ private MeshRenderer _meshRenderer;
         }*/
 
 
-        // ChangeDirection(New,hitColliders[i]);
-    }
-
-//     public void Checkplatform()
-//     {
-//         Ray ray = new Ray(transform.position, transform.forward);
-//         Ray backray = new Ray(transform.position, -transform.forward);
-//         RaycastHit hit;
-//         float mouse = Input.GetAxis("Mouse X") * 2;
-//
-//         float mouseY = Input.GetAxis("Mouse Y");
-// /*if (Input.GetAxis("Mouse Y") * 2 > 0.3)
-//     Debug.Log("Удвоение" + Input.GetAxis("Mouse Y") * 2);*/
-//
-// /*
-// if (Input.GetAxis("Mouse Y") > 0.3)
-//     Debug.Log("Просто " + Input.GetAxis("Mouse Y"));*/
-//
-// /*Debug.Log("Mouse Direction: " + mouse);
-// Debug.Log("Mouse Direction: " + new Vector3(mouse, 0, 0).normalized);*/
-//         Vector3 New = new Vector3(mouse, 0, mouseY).normalized;
-//         /*if (Physics.Raycast(ray, out hit, _ballMover.RayLength))
-//         {
-//             if (hit.collider.gameObject.TryGetComponent<PlatformController>(out var platformController) ||
-//                 hit.collider.gameObject.TryGetComponent<PlatformaMover>(out PlatformaMover testPlatformaMover) ||
-//                 hit.collider.gameObject.TryGetComponent<MirrorPlatformaMover>(
-//                     out MirrorPlatformaMover mirrorPlatformaMover))
-//             {
-//                 ChangeDirection(New, hit);
-//             }
-//         }*/
-//
-//         if (Physics.Raycast(backray, out hit, _ballMover.RayLength))
-//         {
-//             if (hit.collider.gameObject.TryGetComponent(out PlatformController platformController) ||
-//                 hit.collider.gameObject.TryGetComponent(out PlatformaMover testPlatformaMover))
-//             {
-//                 ChangeDirection(New, hit);
-//             }
-//         }
-//
-//         Debug.DrawRay(ray.origin, ray.direction * _ballMover.RayLength, Color.red);
-//         Debug.DrawRay(backray.origin, backray.direction * _ballMover.RayLength, Color.green);
-//     }
-
-    private void ChangeDirection(Vector3 New, RaycastHit hit)
-    {
-        // GetComponent<MeshRenderer>().enabled = false;
-        _meshRenderer.enabled = false;
-        Vector3 platformUp = hit.transform.forward;
-        // Debug.Log("PlatformUP " + platformUp);
-        Vector3 newPosition = hit.point + platformUp * platformOffset; // Новая позиция над платформой
-        // transform.position = newPosition;
-        // GetComponent<MeshRenderer>().enabled = true;
-        _meshRenderer.enabled = true;
-// _direction = Vector3.Reflect(_direction, hit.normal);
-
-        Vector3 Reflect = Vector3.Reflect(_ballMover.Direction, hit.normal);
-        Vector3 NEWREFLECT = new Vector3(Reflect.x, Reflect.y, 1).normalized;
-        // Debug.Log("Reflect " + Reflect);
-        if (New.z > 0.5)
-        {
-            _ballMover.SetDirection(new Vector3(Reflect.x, Reflect.y, Reflect.z + New.z).normalized);
-            Vector3 direction = new Vector3(Reflect.x, Reflect.y, NEWREFLECT.z + New.z).normalized;
-            // Debug.Log("DirectionZZZ " + direction);
-            ;
-            _ballMover.FastSpeed();
-        }
-        else
-        {
-            // Debug.Log("ELSE - Z " + NEWREFLECT);
-            _ballMover.SetDirection(NEWREFLECT);
+            // ChangeDirection(New,hitColliders[i]);
         }
 
-        if (New.x > 0.3 || New.x < -0.3)
+        private void ChangeDirection(Vector3 vector, RaycastHit hit)
         {
-            // Debug.Log("X");
-            _ballMover.SetDirection(new Vector3(Reflect.x + New.x, Reflect.y, NEWREFLECT.z).normalized);
-        }
-        else
-        {
-            // Debug.Log("ELSE - X " + NEWREFLECT);
-            _ballMover.SetDirection(NEWREFLECT);
+            _meshRenderer.enabled = false;
+            Vector3 platformUp = hit.transform.forward;
+            Vector3 newPosition = hit.point + platformUp * _platformOffset;
+            _meshRenderer.enabled = true;
+
+            Vector3 reflect = Vector3.Reflect(_ballMover.Direction, hit.normal);
+            Vector3 newReflect = new Vector3(reflect.x, reflect.y, 1).normalized;
+
+            if (vector.z > 0.5)
+            {
+                _ballMover.SetDirection(new Vector3(reflect.x, reflect.y, reflect.z + vector.z).normalized);
+                // Vector3 direction = new Vector3(reflect.x, reflect.y, newReflect.z + vector.z).normalized;
+                _ballMover.FastSpeed();
+            }
+            else
+            {
+                _ballMover.SetDirection(newReflect);
+            }
+
+            if (vector.x > 0.3 || vector.x < -0.3)
+            {
+                _ballMover.SetDirection(new Vector3(reflect.x + vector.x, reflect.y, newReflect.z).normalized);
+            }
+            else
+            {
+                _ballMover.SetDirection(newReflect);
+            }
         }
     }
 }

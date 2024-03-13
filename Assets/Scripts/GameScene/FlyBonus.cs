@@ -1,19 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyBonus : MonoBehaviour
+namespace GameScene
 {
-    private float _timeFlying = 1;
-    private float _elapsedTime = 0;
-
-    private void Update()
+    public class FlyBonus : MonoBehaviour
     {
-        if (_elapsedTime >= _timeFlying)
-            gameObject.SetActive(false);
+        private float _timeFlying = 1;
+        private float _elapsedTime = 0;
 
-        _elapsedTime += Time.deltaTime;
-        transform.Translate(-Vector3.forward * 10 * Time.deltaTime);
+        private void Update()
+        {
+            if (_elapsedTime >= _timeFlying)
+                gameObject.SetActive(false);
+
+            _elapsedTime += Time.deltaTime;
+            transform.Translate(-Vector3.forward * (10 * Time.deltaTime));
+        }
     }
 }

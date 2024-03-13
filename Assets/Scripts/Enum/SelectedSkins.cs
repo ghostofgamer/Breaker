@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum SelectedSkins
+namespace Enum
 {
-    SelectedHeavy,
-    SelectedFaster,
-    SelectedBouncy,
-    SelectedSteel,
-    SelectedNimble,
-    SelectedBright,
-    SelectedLucky,
-    SelectedSteep,
-    SelectedImportant
+    public enum SelectedSkins
+    {
+        SelectedHeavy,
+        SelectedFaster,
+        SelectedBouncy,
+        SelectedSteel,
+        SelectedNimble,
+        SelectedBright,
+        SelectedLucky,
+        SelectedSteep,
+        SelectedImportant
+    }
 }

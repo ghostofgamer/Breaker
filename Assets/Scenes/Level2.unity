@@ -291,14 +291,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: -7
   _moveDistanceBack: -1
-  _moveSpeed: 5.36
   _duration: 0
   _bricks:
   - {fileID: 900909246}
   - {fileID: 1179837067}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!65 &2992126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11195,8 +11191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 2100933965}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 0
   NameEffect: {fileID: 329152669}
@@ -11219,8 +11214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 2100933965}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 0
   NameEffect: {fileID: 0}
@@ -12771,14 +12765,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: 7
   _moveDistanceBack: 1
-  _moveSpeed: 5.36
   _duration: 0
   _bricks:
   - {fileID: 976295556}
   - {fileID: 1963186742}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!65 &370103450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21520,8 +21510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1078918506}
@@ -21543,8 +21532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 135602457}
@@ -21567,8 +21555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1566657529}
@@ -21589,8 +21576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 552869724}
@@ -21612,8 +21598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 888609643}
@@ -21635,8 +21620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 0
   NameEffect: {fileID: 2006832706}
@@ -21665,8 +21649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 2100933965}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1828871852}
@@ -22019,7 +22002,6 @@ MonoBehaviour:
   _brickCounter: {fileID: 980526520}
   _reviveScreen: {fileID: 752029864}
   _animator: {fileID: 0}
-  _button: {fileID: 0}
 --- !u!1 &602771181
 GameObject:
   m_ObjectHideFlags: 0
@@ -22659,7 +22641,7 @@ GameObject:
   - component: {fileID: 621576502}
   - component: {fileID: 621576503}
   m_Layer: 0
-  m_Name: Sphere (9)
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22684,13 +22666,8 @@ MonoBehaviour:
   _zMinPosition: -10.65
   _isPortal: 0
   _ballTrigger: {fileID: 621576501}
-  speed: 30
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  _radius: 0.5
   _rayLength: 1
-  platformOffset: 3
+  _radius: 0.5
 --- !u!114 &621576494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22864,9 +22841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ballMover: {fileID: 621576493}
-  platformOffset: 3
-  sphereRadius: 0.5
-  platformLayer:
+  _platformLayer:
     serializedVersion: 2
     m_Bits: 128
 --- !u!114 &621576502
@@ -26016,13 +25991,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: -1
   _moveDistanceBack: -1
-  _moveSpeed: 1.4
   _duration: 0
   _bricks:
   - {fileID: 242218105}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!65 &793900980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26647,7 +26618,7 @@ GameObject:
   - component: {fileID: 824722466}
   - component: {fileID: 824722467}
   m_Layer: 7
-  m_Name: Platform (3)
+  m_Name: Platform
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26964,7 +26935,6 @@ MonoBehaviour:
   _brickCounter: {fileID: 980526520}
   _reviveScreen: {fileID: 752029864}
   _animator: {fileID: 825715469}
-  _button: {fileID: 825715466}
 --- !u!114 &825715466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33288,13 +33258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: -4
   _moveDistanceBack: -1
-  _moveSpeed: 3.5
   _duration: 0
   _bricks:
   - {fileID: 1934404187}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!65 &1130621414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39324,15 +39290,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: 10
   _moveDistanceBack: 1
-  _moveSpeed: 7.6
   _duration: 0
   _bricks:
   - {fileID: 1564970129}
   - {fileID: 1340936509}
   - {fileID: 2051291233}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!65 &1423593722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71583,7 +71545,6 @@ MonoBehaviour:
   _brickCounter: {fileID: 980526520}
   _reviveScreen: {fileID: 752029864}
   _animator: {fileID: 1580274400}
-  _button: {fileID: 0}
 --- !u!95 &1580274400
 Animator:
   serializedVersion: 5
@@ -71942,7 +71903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 91.45001, y: -146.66003}
+  m_AnchoredPosition: {x: 91.450005, y: -146.66003}
   m_SizeDelta: {x: 182.9, y: 81.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1600189075
@@ -73222,8 +73183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1268009493}
@@ -73245,8 +73205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1880181940}
@@ -73269,8 +73228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 5114243}
@@ -73293,8 +73251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1012552105}
@@ -73316,8 +73273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 1861724819}
@@ -73339,8 +73295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 3
   NameEffect: {fileID: 435159929}
@@ -73370,8 +73325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 0}
-  _ballMover: {fileID: 621576493}
+  BallMover: {fileID: 621576493}
   Player: {fileID: 824722463}
   Duration: 10
   NameEffect: {fileID: 431769926}
@@ -81843,13 +81797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: 4
   _moveDistanceBack: 1
-  _moveSpeed: 3.5
   _duration: 0
   _bricks:
   - {fileID: 369446876}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!65 &1841567451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85130,15 +85080,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: -10
   _moveDistanceBack: -1
-  _moveSpeed: 7.6
   _duration: 0
   _bricks:
   - {fileID: 166374401}
   - {fileID: 721212849}
   - {fileID: 629600082}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!65 &1985452286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85482,7 +85428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78abbac5822c32643a8610d0739cab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bricksContainer: {fileID: 1867502213}
   _bricks:
   - {fileID: 2050606720}
   - {fileID: 1023539998}
@@ -94300,13 +94245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveDistanceForward: 1
   _moveDistanceBack: 1
-  _moveSpeed: 1.4
   _duration: 0
   _bricks:
   - {fileID: 1023539998}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  moveDuration: 1.5
 --- !u!1 &6407520182894253067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1338142451016001923, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
