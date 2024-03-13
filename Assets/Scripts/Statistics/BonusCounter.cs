@@ -1,58 +1,59 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class BonusCounter : MonoBehaviour
+namespace Statistics
 {
-    [SerializeField] private TMP_Text _bonusTxt;
-
-    private int _amountBonuses = 0;
-    private bool _isReset;
-    private float _elapsedTime;
-    private float _duration = 0.65f;
-
-    private void Start()
+    public class BonusCounter : MonoBehaviour
     {
-        ShowInfo();
-    }
+        [SerializeField] private TMP_Text _bonusTxt;
 
-    public void AddBonus(int reward)
-    {
-        _amountBonuses += reward;
-        ShowInfo();
-    }
+        private int _amountBonuses = 0;
+        private bool _isReset;
+        private float _elapsedTime;
+        private float _duration = 0.65f;
 
-    public int GetBonus()
-    {
-        return _amountBonuses;
-    }
-
-    public void BringToZero()
-    {
-        StartCoroutine(GoBringToZero());
-    }
-
-    private IEnumerator GoBringToZero()
-    {
-        _elapsedTime = 0;
-        int currentBonuses = _amountBonuses;
-
-        while (_elapsedTime < _duration)
+        private void Start()
         {
-            _elapsedTime += Time.deltaTime;
-            _amountBonuses = (int)Mathf.Lerp(currentBonuses, 0, _elapsedTime / _duration);
-            _bonusTxt.text = _amountBonuses.ToString();
-            yield return null;
+            ShowInfo();
         }
 
-        _amountBonuses = 0;
-        _bonusTxt.text = _amountBonuses.ToString();
-    }
+        public void AddBonus(int reward)
+        {
+            _amountBonuses += reward;
+            ShowInfo();
+        }
 
-    private void ShowInfo()
-    {
-        _bonusTxt.text = _amountBonuses.ToString();
+        public int GetBonus()
+        {
+            return _amountBonuses;
+        }
+
+        public void BringToZero()
+        {
+            StartCoroutine(GoBringToZero());
+        }
+
+        private IEnumerator GoBringToZero()
+        {
+            _elapsedTime = 0;
+            int currentBonuses = _amountBonuses;
+
+            while (_elapsedTime < _duration)
+            {
+                _elapsedTime += Time.deltaTime;
+                _amountBonuses = (int)Mathf.Lerp(currentBonuses, 0, _elapsedTime / _duration);
+                _bonusTxt.text = _amountBonuses.ToString();
+                yield return null;
+            }
+
+            _amountBonuses = 0;
+            _bonusTxt.text = _amountBonuses.ToString();
+        }
+
+        private void ShowInfo()
+        {
+            _bonusTxt.text = _amountBonuses.ToString();
+        }
     }
 }

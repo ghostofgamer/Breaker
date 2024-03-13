@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MainScreen : MonoBehaviour
+namespace UI.Screens
 {
+    public class MainScreen : MonoBehaviour
+    {
 
+    }
 }

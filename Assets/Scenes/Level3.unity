@@ -23703,7 +23703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602fb9a3dc36b8746bd86d373bfb18d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parametrs: SFX
+  _options: SFX
   _outputGroup: {fileID: -651264264134895713, guid: 5ec26dc0ffb6fa34fb28c6bae18d9978, type: 2}
   _onSound: {fileID: 1337504503}
   _offSound: {fileID: 594468658}
@@ -26314,12 +26314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positionMouse: {fileID: 1893911884}
   _ball: {fileID: 621576494}
-  moveSpeed: 50
-  offset: 3
-  minX: -11
-  maxX: 11
-  minZ: -10
-  maxZ: 11
 --- !u!23 &824722459
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80839,12 +80833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positionMouse: {fileID: 0}
   _ball: {fileID: 0}
-  moveSpeed: 5
-  offset: 1
-  minX: -5
-  maxX: 5
-  minZ: -5
-  maxZ: 5
 --- !u!114 &1834239106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81800,7 +81788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602fb9a3dc36b8746bd86d373bfb18d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parametrs: music
+  _options: music
   _outputGroup: {fileID: 2218152950074571843, guid: 5ec26dc0ffb6fa34fb28c6bae18d9978, type: 2}
   _onSound: {fileID: 1720532041}
   _offSound: {fileID: 179693026}

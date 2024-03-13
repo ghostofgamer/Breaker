@@ -1,45 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class BuffCounter : MonoBehaviour
+namespace Statistics
 {
-    [SerializeField] private TMP_Text _statText;
-    [SerializeField] private ScoreCounter _scoreCounter;
-
-    private int _buffCount;
-    private int _buffsCollected;
-    private int _score = 15;
-
-    public void CollectBuff()
+    public class BuffCounter : MonoBehaviour
     {
-        _buffsCollected++;
-        _scoreCounter.IncreaseScore(_score);
-        Show();
-    }
+        [SerializeField] private TMP_Text _statText;
+        [SerializeField] private ScoreCounter _scoreCounter;
 
-    public void IncreaseBuffCount()
-    {
-        _buffCount++;
-        Show();
-    }
+        private int _buffCount;
+        private int _buffsCollected;
+        private int _score = 15;
 
-    public void DecreaseBuffCount()
-    {
-        _buffCount--;
-        Show();
-    }
+        public void CollectBuff()
+        {
+            _buffsCollected++;
+            _scoreCounter.IncreaseScore(_score);
+            Show();
+        }
 
-    public string GetStatistic()
-    {
-        return _buffsCollected + "/" + _buffCount;
-    }
+        public void IncreaseBuffCount()
+        {
+            _buffCount++;
+            Show();
+        }
 
-    private void Show()
-    {
-        string statistic = _buffsCollected + "/" + _buffCount;
-        _statText.text = statistic;
+        public void DecreaseBuffCount()
+        {
+            _buffCount--;
+            Show();
+        }
+
+        public string GetStatistic()
+        {
+            return _buffsCollected + "/" + _buffCount;
+        }
+
+        private void Show()
+        {
+            string statistic = _buffsCollected + "/" + _buffCount;
+            _statText.text = statistic;
+        }
     }
 }

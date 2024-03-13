@@ -1,17 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GameOverScreen : EndScreen
+namespace UI.Screens.EndScreens
 {
+    public class GameOverScreen : EndScreen
+    {
 
-    public override void Open()
-    {
-        base.Open();
-        // StartCoroutine(OnScreenMove());
-    }
+        public override void Open()
+        {
+            base.Open();
+            // StartCoroutine(OnScreenMove());
+        }
     
-    private void ScreenMover()
-    {
+        private void ScreenMover()
+        {
+        }
     }
 }

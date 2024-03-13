@@ -1,49 +1,50 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingsScreen : MonoBehaviour
+namespace UI.Screens
 {
-    [SerializeField] private Animator _animator;
-
-    private CanvasGroup _canvasGroup;
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
-
-    private void Start()
+    public class SettingsScreen : MonoBehaviour
     {
-        _canvasGroup = GetComponent<CanvasGroup>();
-        Setvalue(0, false);
-    }
+        [SerializeField] private Animator _animator;
 
-    public void Open()
-    {
-        Setvalue(1, true);
-        _animator.Play("Open");
-        Time.timeScale = 0;
-        Debug.Log("TimeScale " + Time.timeScale);
-    }
+        private CanvasGroup _canvasGroup;
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
 
-    public void Close()
-    {
-        StartCoroutine(CloseScreen());
-    }
-
-    private IEnumerator CloseScreen()
-    {
-        _animator.Play("Close");
-        yield return _waitForSeconds;
-        Debug.Log("выкл");
-        Setvalue(0, false);
-    }
-
-    private void Setvalue(int alpha, bool flag)
-    {
-        if (_canvasGroup != null)
+        private void Start()
         {
-            _canvasGroup.alpha = alpha;
-            _canvasGroup.interactable = flag;
-            _canvasGroup.blocksRaycasts = flag;
+            _canvasGroup = GetComponent<CanvasGroup>();
+            Setvalue(0, false);
+        }
+
+        public void Open()
+        {
+            Setvalue(1, true);
+            _animator.Play("Open");
+            Time.timeScale = 0;
+            Debug.Log("TimeScale " + Time.timeScale);
+        }
+
+        public void Close()
+        {
+            StartCoroutine(CloseScreen());
+        }
+
+        private IEnumerator CloseScreen()
+        {
+            _animator.Play("Close");
+            yield return _waitForSeconds;
+            Debug.Log("выкл");
+            Setvalue(0, false);
+        }
+
+        private void Setvalue(int alpha, bool flag)
+        {
+            if (_canvasGroup != null)
+            {
+                _canvasGroup.alpha = alpha;
+                _canvasGroup.interactable = flag;
+                _canvasGroup.blocksRaycasts = flag;
+            }
         }
     }
 }

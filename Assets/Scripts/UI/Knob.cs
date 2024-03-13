@@ -1,15 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Knob : MonoBehaviour
+namespace UI
 {
-    [SerializeField] private SwipeLayout _swipeLayout;
-
-    public void OnKnobClicked(Button button)
+    public class Knob : MonoBehaviour
     {
-        _swipeLayout.OnKnobClicked(button);
+        [SerializeField] private SwipeLayout _swipeLayout;
+
+        public void OnKnobClicked(Button button)
+        {
+            _swipeLayout.OnKnobClicked(button);
+        }
     }
 }

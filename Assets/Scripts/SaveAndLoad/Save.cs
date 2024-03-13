@@ -45,19 +45,7 @@ namespace SaveAndLoad
         public const string CapsuleSkinActive = "CapsuleSkinActive";
 
         [Header("ProgressLevel")] 
-        public const string LevelStatus1 = "LevelStatus1";
-        public const string LevelStatus2 = "LevelStatus2";
-        public const string LevelStatus3 = "LevelStatus3";
-        public const string LevelStatus4 = "LevelStatus4";
-        public const string LevelStatus5 = "LevelStatus5";
-        public const string LevelStatus6 = "LevelStatus6";
-        public const string LevelStatus7 = "LevelStatus7";
-        public const string LevelStatus8 = "LevelStatus8";
-        public const string LevelStatus9 = "LevelStatus9";
-        public const string LevelStatus10 = "LevelStatus10";
-        public const string LevelStatus11 = "LevelStatus11";
-        public const string LevelStatus12 = "LevelStatus12";
-        public const string LevelStatus13 = "LevelStatus13";
+        public const string LevelStatus = "LevelStatus";
 
         private void Start()
         {

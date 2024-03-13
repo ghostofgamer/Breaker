@@ -1,39 +1,40 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 
-public class LevelTimer : MonoBehaviour
+namespace Statistics
 {
-    [SerializeField] private TMP_Text _timer;
-
-    private Stopwatch stopwatch;
-    private float _startTime;
-    private string _timeString;
-    private bool _levelComplite = false;
-
-    void Start()
+    public class LevelTimer : MonoBehaviour
     {
-        stopwatch = new Stopwatch();
-        stopwatch.Start();
-    }
+        [SerializeField] private TMP_Text _timer;
 
-    private void Update()
-    {
-        if (_levelComplite)
-            return;
+        private Stopwatch _stopWatch;
+        private float _startTime;
+        private string _timeString;
+        private bool _levelComplite = false;
 
-        float elapsedTime = Time.time - _startTime;
-        TimeSpan timeSpan = TimeSpan.FromSeconds(elapsedTime);
-        _timeString = string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
-        _timer.text = "Time: " + _timeString;
-    }
+        void Start()
+        {
+            _stopWatch = new Stopwatch();
+            _stopWatch.Start();
+        }
 
-    public string GetTime()
-    {
-        _levelComplite = true;
-        return _timeString;
+        private void Update()
+        {
+            if (_levelComplite)
+                return;
+
+            float elapsedTime = Time.time - _startTime;
+            TimeSpan timeSpan = TimeSpan.FromSeconds(elapsedTime);
+            _timeString = string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
+            _timer.text = "Time: " + _timeString;
+        }
+
+        public string GetTime()
+        {
+            _levelComplite = true;
+            return _timeString;
+        }
     }
 }

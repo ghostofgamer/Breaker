@@ -1,25 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using SaveAndLoad;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
-public class ScoreCounter : MonoBehaviour
+namespace Statistics
 {
-    [SerializeField] private BonusCounter _bonusCounter;
-    [SerializeField] private Save _save;
-
-    private int _score;
-
-    public void IncreaseScore(int score)
+    public class ScoreCounter : MonoBehaviour
     {
-        _score += score;
-    }
+        [SerializeField] private BonusCounter _bonusCounter;
+        [SerializeField] private Save _save;
 
-    public int GetScore()
-    {
-        int scoreAmount = _score + _bonusCounter.GetBonus();
-        _save.SetData(Save.Score, scoreAmount);
-        return scoreAmount;
+        private int _score;
+
+        public void IncreaseScore(int score)
+        {
+            _score += score;
+        }
+
+        public int GetScore()
+        {
+            int scoreAmount = _score + _bonusCounter.GetBonus();
+            _save.SetData(Save.Score, scoreAmount);
+            return scoreAmount;
+        }
     }
 }

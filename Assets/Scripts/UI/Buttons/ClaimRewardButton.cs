@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UI.Screens;
+using UI.Screens.EndScreens;
 using UnityEngine;
 
 public class ClaimRewardButton : AbstractButton

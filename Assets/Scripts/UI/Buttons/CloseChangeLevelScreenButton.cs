@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UI.Screens.LevelInfo;
 using UnityEngine;
 
 public class CloseChangeLevelScreenButton : AbstractButton

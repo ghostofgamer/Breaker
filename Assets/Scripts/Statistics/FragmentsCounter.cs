@@ -1,37 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class FragmentsCounter : MonoBehaviour
+namespace Statistics
 {
-    [SerializeField] private TMP_Text _fragmentsTxt;
-    [SerializeField] private ScoreCounter _scoreCounter;
-
-    private float _fragmentsCount;
-    private float _fragmentsCollect;
-    private int _score = 10;
-
-    public void SetAmountFragments(int fragmentsCount)
+    public class FragmentsCounter : MonoBehaviour
     {
-        _fragmentsCount += fragmentsCount;
-        Show();
-    }
+        [SerializeField] private TMP_Text _fragmentsTxt;
+        [SerializeField] private ScoreCounter _scoreCounter;
 
-    public void FragmentsCollect()
-    {
-        _fragmentsCollect++;
-        _scoreCounter.IncreaseScore(_score);
-        Show();
-    }
+        private float _fragmentsCount;
+        private float _fragmentsCollect;
+        private int _score = 10;
 
-    private void Show()
-    {
-        _fragmentsTxt.text = _fragmentsCollect.ToString() + " / " + _fragmentsCount.ToString();
-    }
+        public void SetAmountFragments(int fragmentsCount)
+        {
+            _fragmentsCount += fragmentsCount;
+            Show();
+        }
 
-    public string GetAmountFragmentsCollect()
-    {
-        return ((_fragmentsCollect / _fragmentsCount) * 100).ToString("0") + "%";
+        public void FragmentsCollect()
+        {
+            _fragmentsCollect++;
+            _scoreCounter.IncreaseScore(_score);
+            Show();
+        }
+
+        private void Show()
+        {
+            _fragmentsTxt.text = _fragmentsCollect.ToString() + " / " + _fragmentsCount.ToString();
+        }
+
+        public string GetAmountFragmentsCollect()
+        {
+            return ((_fragmentsCollect / _fragmentsCount) * 100).ToString("0") + "%";
+        }
     }
 }

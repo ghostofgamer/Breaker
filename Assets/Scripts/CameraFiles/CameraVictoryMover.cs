@@ -1,4 +1,6 @@
 using System.Collections;
+using Statistics;
+using UI.Screens.EndScreens;
 using UnityEngine;
 
 namespace CameraFiles

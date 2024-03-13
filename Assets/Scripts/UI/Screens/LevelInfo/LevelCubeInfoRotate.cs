@@ -1,12 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelCubeInfoRotate : MonoBehaviour
+namespace UI.Screens.LevelInfo
 {
+    public class LevelCubeInfoRotate : MonoBehaviour
+    {
     
-    /*
+        /*
     public float speed = 10.0f;
     private RectTransform rectTransform;
 
@@ -22,10 +21,11 @@ public class LevelCubeInfoRotate : MonoBehaviour
         position.x += speed * Time.deltaTime;
         rectTransform.anchoredPosition = position;
     }*/
-    [SerializeField] private float _speed;
+        [SerializeField] private float _speed;
     
-    private void Update()
-    {
-        transform.Rotate(Vector3.right*_speed*Time.deltaTime);
+        private void Update()
+        {
+            transform.Rotate(Vector3.right*_speed*Time.deltaTime);
+        }
     }
 }

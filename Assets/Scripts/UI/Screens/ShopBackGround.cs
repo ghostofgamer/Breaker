@@ -1,34 +1,35 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopBackGround : MonoBehaviour
+namespace UI.Screens
 {
-    private float _duration = 0.165f;
-    private Coroutine _coroutine;
-
-    public void BackGroundAlphaChange(int start, int end)
+    public class ShopBackGround : MonoBehaviour
     {
-        if(_coroutine!= null)
-            StopCoroutine(_coroutine);
-        
-        _coroutine = StartCoroutine(Fade(start,end));
-    }
+        private float _duration = 0.165f;
+        private Coroutine _coroutine;
 
-    private IEnumerator Fade(int startAlpha,int needAlpha)
-    {
-        float elapsedTime = 0f;
-        CanvasGroup canvas = GetComponent<CanvasGroup>();
-
-        if (canvas.alpha != needAlpha)
+        public void BackGroundAlphaChange(int start, int end)
         {
-            while (elapsedTime < _duration)
+            if(_coroutine!= null)
+                StopCoroutine(_coroutine);
+        
+            _coroutine = StartCoroutine(Fade(start,end));
+        }
+
+        private IEnumerator Fade(int startAlpha,int needAlpha)
+        {
+            float elapsedTime = 0f;
+            CanvasGroup canvas = GetComponent<CanvasGroup>();
+
+            if (canvas.alpha != needAlpha)
             {
-                elapsedTime += Time.deltaTime;
-                float alpha = Mathf.Lerp(startAlpha, needAlpha, elapsedTime / _duration);
-                canvas.alpha = alpha;
-                yield return null;
+                while (elapsedTime < _duration)
+                {
+                    elapsedTime += Time.deltaTime;
+                    float alpha = Mathf.Lerp(startAlpha, needAlpha, elapsedTime / _duration);
+                    canvas.alpha = alpha;
+                    yield return null;
+                }
             }
         }
     }

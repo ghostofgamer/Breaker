@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UI.Screens;
+using UI.Screens.EndScreens;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
