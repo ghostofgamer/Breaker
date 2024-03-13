@@ -21,7 +21,7 @@ public class Level2BrickMover : MonoBehaviour
     public Transform target1;
     public Transform target2;
     public float moveDuration = 1.0f; // Длительность движения между точками (в секундах)
-
+    private Vector3 _direction;
     private bool isMovingToTarget1 = true;
 
     private void Start()
@@ -68,6 +68,9 @@ public class Level2BrickMover : MonoBehaviour
         {
             float t = (Time.time - startTime) / duration;
             transform.position = Vector3.Lerp(startPosition, targetPosition, t);
+            
+            _direction = startPosition - targetPosition;
+            // Debug.Log( "Направление " + _direction);
 
             foreach (Brick brick in _bricks)
             {
@@ -113,7 +116,7 @@ public class Level2BrickMover : MonoBehaviour
             foreach (var brick in _bricks)
             {
                 brick.GetComponent<Rigidbody>().isKinematic = false;
-                brick.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(5f, 10f), ForceMode.Impulse);
+                brick.GetComponent<Rigidbody>().AddForce(-_direction.normalized * Random.Range(6f, 15f), ForceMode.Impulse);
                 // StopCoroutine(_coroutine);
             }
 
