@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ADS;
 using GameScene;
 using GameScene.BallContent;
 using PlayerFiles.PlatformaContent;
@@ -14,6 +15,7 @@ public class ReviveButton : AbstractButton
     [SerializeField] private ReviveScreen _reviveScreen;
     [SerializeField] private SceneLoader _sceneLoader;
     [SerializeField] private BrickCounter _brickCounter;
+    // [SerializeField] private FullAds _fullAds;
     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private Coroutine _coroutine;

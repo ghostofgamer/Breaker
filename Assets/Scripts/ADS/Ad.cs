@@ -25,7 +25,8 @@ namespace ADS
         protected virtual void OnClose(bool isClosed)
         {
             Time.timeScale = 1;
-            AudioListener.volume = _volumeValue;
+            // AudioListener.volume = _volumeValue;
+            AudioListener.volume = 1;
             SceneManager.LoadScene(MainScene);
         }
         

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ADS;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,7 +10,8 @@ public class ContinueButton : AbstractButton
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private Image _fadePanel;
-    
+    [SerializeField] private FullAds _fullAds;
+
     private float _elapsedTime;
     private float _duration = 1f;
 
@@ -33,6 +35,11 @@ public class ContinueButton : AbstractButton
         }
 
         _fadePanel.color = endColor;
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+               _fullAds.Show();   
+#endif
+      
         // SceneManager.LoadScene("MainScene");
         SceneManager.LoadScene("ChooseLvlScene");
     }
