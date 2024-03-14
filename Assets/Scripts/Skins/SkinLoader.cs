@@ -1,5 +1,6 @@
 using GameScene.BallContent;
 using SaveAndLoad;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Skins
@@ -11,6 +12,7 @@ namespace Skins
         [SerializeField] private Load _load;
         [SerializeField] private GameObject[] _skins;
         [SerializeField] private BallTrigger _ballTrigger;
+        [SerializeField] private PortalTeleporterBall _portalTeleporterBall;
 
         private MeshRenderer _meshRenderer;
         private int _skinBallIndex;
@@ -21,6 +23,7 @@ namespace Skins
             // _meshRenderer = _ball.GetComponent<MeshRenderer>();
             _skinBallIndex = _load.Get(Save.SkinBall, _startIndex);
             _skins[_skinBallIndex].SetActive(true);
+            _portalTeleporterBall.Init(_skins[_skinBallIndex].GetComponentInChildren<ParticleSystem>()) ;
             _ballTrigger.Init(_skins[_skinBallIndex].GetComponent<MeshRenderer>());
             // LoadSkin();
         }

@@ -11,6 +11,11 @@ namespace GameScene.BallContent
         [SerializeField] private float _zMaxPosition;
         [SerializeField] private float _zMinPosition;
 
+        public void Init(ParticleSystem missileEffect)
+        {
+            _missileEffect = missileEffect;
+        }
+        
         public void TeleportBall()
         {
             if (transform.position.x > _xMaxPosition)
