@@ -15,6 +15,7 @@ public class ClaimButton : AbstractButton
     [SerializeField] private TMP_Text _creditsTxt;
     [SerializeField] private Image _creditIcon;
     [SerializeField] private ClaimRewardButton _claimRewardButton;
+    [SerializeField] private TMP_Text _claimTxt;
 
     private int _credits = 0;
     private float _endTime = 1f;
@@ -39,7 +40,8 @@ public class ClaimButton : AbstractButton
         yield return _waitForSeconds;
         _creditsTxt.enabled = true;
         _creditIcon.enabled = true;
-
+        _claimTxt.enabled = true;
+        
         while (_elapsedTime < _endTime)
         {
             _elapsedTime += Time.deltaTime;

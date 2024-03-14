@@ -11,6 +11,7 @@ public class ClaimRewardButton : AbstractButton
     [SerializeField] private TMP_Text _creditsTxt;
     [SerializeField] private LevelComplite _levelComplite;
     [SerializeField] private VictoryScreen _victoryScreen;
+    // [SerializeField] private TMP_Text _claimTripleCreditTxt;
     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
     private int _credits = 0;
@@ -20,7 +21,7 @@ public class ClaimRewardButton : AbstractButton
         _levelComplite.gameObject.SetActive(false);
         // _victoryScreen.Open();
         _victoryScreen.OpenScreen(_credits);
-        Debug.Log("Передали в экран " + _credits);
+        // Debug.Log("Передали в экран " + _credits);
     }
 
     public void SetActive(int credits)

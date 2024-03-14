@@ -176,8 +176,8 @@ namespace GameScene.BallContent
         {
             Vector3 normal = vectorNormal;
             var position = transform.position;
-            // position = newVector;
-            // transform.position = position;
+            position = newVector;
+            transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
             Debug.Log(_direction);
