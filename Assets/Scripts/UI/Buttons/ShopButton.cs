@@ -1,3 +1,5 @@
+using CameraFiles;
+using Levels;
 using UI.Screens;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +15,9 @@ public class ShopButton : AbstractButton
     [SerializeField] private Color _newColor;
     [SerializeField] private GameObject[] _tabs;
     [SerializeField] private GameObject _platformTabPc;
-
+    [SerializeField] private CameraMover _cameraMover;
+    [SerializeField] private Level[] _levels;
+    
     private Color _currentColor;
     private int _indexPlatformTab = 1;
 
@@ -29,6 +33,16 @@ public class ShopButton : AbstractButton
 
     protected override void OnClick()
     {
+        if (_cameraMover != null && _cameraMover.enabled)
+            _cameraMover.enabled = false;
+
+        if (_levels.Length > 0)
+        {
+            foreach (var level in _levels)
+                level.GetComponent<BoxCollider>().enabled = false;
+
+        }
+        
         _screen.GetComponent<Animator>().Play("ShopScreenOpen");
         _shopBackGround.BackGroundAlphaChange(0, 1);
         
