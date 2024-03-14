@@ -128,11 +128,13 @@ namespace GameScene.BallContent
                 brick.Die();
             }
 
-            if (other.collider.TryGetComponent(out Wall wall))
+            if (other.collider.TryGetComponent(out Wall wall)||other.collider.TryGetComponent(out WallTrigger wallTrigger))
             {
                 Vector3 reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
                 Vector3 newReflect = new Vector3(reflect.x, 0, reflect.z).normalized;
                 _direction = newReflect;
+                CheckAngle();
+                Debug.Log("Удар");
             }
         }
 
@@ -174,6 +176,7 @@ namespace GameScene.BallContent
 
         private void SetDirection(Vector3 vectorNormal,Vector3 newVector )
         {
+            Debug.Log("Гран");
             Vector3 normal = vectorNormal;
             var position = transform.position;
             position = newVector;

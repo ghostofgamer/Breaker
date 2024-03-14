@@ -10,6 +10,7 @@ namespace GameScene.BallContent
         [SerializeField] private float _xMaxPosition;
         [SerializeField] private float _zMaxPosition;
         [SerializeField] private float _zMinPosition;
+        [SerializeField] private WallTrigger[] _wallTrigger;
 
         public void Init(ParticleSystem missileEffect)
         {
