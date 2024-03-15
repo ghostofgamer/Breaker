@@ -1466,6 +1466,8 @@
           </e>
           <e p="Bullet" t="Include" />
           <e p="Button" t="Include" />
+          <e p="LevelGameScenes" t="Include" />
+          <e p="Localization" t="Include" />
           <e p="MainMenu" t="Include">
             <e p="Canvas" t="Include">
               <e p="CanvasInfo" t="Include" />
@@ -1514,6 +1516,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ADS" t="Include">
+            <e p="Ad.cs" t="Include" />
+            <e p="FullAds.cs" t="Include" />
+          </e>
           <e p="Bonus" t="Include">
             <e p="BonusDeath.cs" t="Include" />
             <e p="BonusMover.cs" t="Include" />
@@ -1571,6 +1577,9 @@
             <e p="Level.cs" t="Include" />
             <e p="LevelCubeJumping.cs" t="Include" />
             <e p="LineLevel.cs" t="Include" />
+          </e>
+          <e p="LocalizationFiles" t="Include">
+            <e p="Localization.cs" t="Include" />
           </e>
           <e p="MainMenu" t="Include">
             <e p="Capsula.cs" t="Include" />
@@ -1678,6 +1687,8 @@
           <e p="Test" t="Include">
             <e p="BEZIE.cs" t="Include" />
             <e p="BonusForWinnerFlying.cs" t="Include" />
+            <e p="LockFence.cs" t="Include" />
+            <e p="LockLevel.cs" t="Include" />
             <e p="SwipeTest.cs" t="Include" />
             <e p="TestBallLose.cs" t="Include" />
           </e>
@@ -1801,7 +1812,9 @@
             <e p="TestBallMover.cs" t="Include" />
           </e>
           <e p="BallMov.cs" t="Include" />
+          <e p="ColliderController.cs" t="Include" />
           <e p="Forward.cs" t="Include" />
+          <e p="LevelChoose.cs" t="Include" />
           <e p="Mask.shader" t="Include" />
           <e p="MaskObject.cs" t="Include" />
           <e p="MissileMove.cs" t="Include" />

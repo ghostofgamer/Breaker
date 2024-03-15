@@ -1,4 +1,5 @@
 using System.Collections;
+using CameraFiles;
 using Enum;
 using SaveAndLoad;
 using TMPro;
@@ -18,6 +19,9 @@ namespace UI.Screens.LevelInfo
         [SerializeField] private int _index;
         [SerializeField] private Load _load;
         [SerializeField] private TMP_Text _score;
+        [SerializeField] private ColliderController _colliderController;
+        [SerializeField] private CloseChangeLevelScreenButton[] _closeChangeLevelScreenButton;
+        [SerializeField] private CloseChangeLevelScreenButton _closeChangeLevelScreenButtonOne;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
         private Coroutine _coroutineOpen;
@@ -38,6 +42,16 @@ namespace UI.Screens.LevelInfo
 
         public void Open()
         {
+            Debug.Log("OPEN" + this.name);
+            /*Debug.Log("OPEN");
+            _closeChangeLevelScreenButton.Init(this);
+            _closeChangeLevelScreenButton.gameObject.SetActive(true);*/
+
+            /*foreach (var closeChangeLevelScreenButton in _closeChangeLevelScreenButton)
+            {
+                closeChangeLevelScreenButton.gameObject.SetActive(true);
+            }*/
+            
             if (_coroutineOpen != null)
                 StopCoroutine(_coroutineOpen);
 
@@ -46,6 +60,7 @@ namespace UI.Screens.LevelInfo
 
         public void Close()
         {
+            Debug.Log("CLOSE"+this.name);
             if (_coroutineClose != null)
                 StopCoroutine(_coroutineClose);
 
@@ -57,10 +72,14 @@ namespace UI.Screens.LevelInfo
             yield return _waitForSeconds;
             SetActive(1, true);
             _animator.Play("LevelCubeInfoScreenUp");
+            // _colliderController.SetValue(false);
+            // _colliderController.SetValueEnabled(false);
         }
 
         private IEnumerator CloseScreen()
         {
+            // _colliderController.SetValue(true);
+            // _colliderController.SetValueEnabled(true);
             _animator.Play("LevelCubeInfoScreenDown");
             yield return _waitForSeconds;
             SetActive(0, false);
@@ -68,6 +87,7 @@ namespace UI.Screens.LevelInfo
 
         private void SetActive(int alpha, bool flag)
         {
+            _closeChangeLevelScreenButtonOne.gameObject.SetActive(flag);
             _cubePositionInfo.SetActive(flag);
             _canvasGroup.alpha = alpha;
             _canvasGroup.interactable = flag;

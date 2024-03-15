@@ -12,6 +12,7 @@ public class BackToMenuButton : AbstractButton
 {
     [SerializeField] private CanvasAnimator _canvasAnimator;
     [SerializeField] private Level[] _levels;
+    [SerializeField] private ColliderController _colliderController;
     [SerializeField] private Image _fadeImage;
 
     private const string NameScene = "MainScene";
@@ -39,8 +40,9 @@ public class BackToMenuButton : AbstractButton
     {
         _canvasAnimator.Close();
 
-        foreach (var level in _levels)
-            level.GetComponent<BoxCollider>().enabled = false;
+        // foreach (var level in _levels)
+        //     level.GetComponent<BoxCollider>().enabled = false;
+        _colliderController.SetValue(false);
 
         yield return _waitForSeconds;
         SceneManager.LoadScene(NameScene);

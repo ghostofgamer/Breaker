@@ -1,3 +1,4 @@
+using System;
 using CameraFiles;
 using Enum;
 using SaveAndLoad;
@@ -23,7 +24,7 @@ namespace Levels
         [SerializeField] private Level[] _allLevels;
         [SerializeField] private LevelCubeJumping _levelCubeJumping;
         [SerializeField] private CameraDistance _cameraDistance;
-
+        [SerializeField] private ColliderController _colliderController;
         [SerializeField] private bool _isPassed = false;
         [SerializeField] private bool _isOpen = false;
         [SerializeField] private Load _load;
@@ -38,29 +39,10 @@ namespace Levels
 
         private Color _currentColor;
 
-        /*private void Awake()
-    {
-        var module = _dontSelectedCircle.main;
-      
-        switch (state)
+        private void Start()
         {
-            case LevelState.Locked:
-                ColorChanger(_notOpenColor);
-                break;
-            case LevelState.Unlocked:
-                _levelCubeJumping.enabled = true;
-                ColorChanger(_notPassedColor);
-                break;
-            case LevelState.Completed:
-                ColorChanger(_passedColor);
-                break;
+            
         }
-
-        foreach (var level in _nextLevel)
-        {
-            SetLevels(this, level);
-        }
-    }*/
 
         public void Init(LevelState levelState)
         {
@@ -79,12 +61,6 @@ namespace Levels
                     ColorChanger(_passedColor);
                     break;
             }
-
-            /*
-        foreach (var level in _nextLevel)
-        {
-            SetLevels(this, level);
-        }*/
         }
 
         public void SetLevels()
@@ -94,30 +70,7 @@ namespace Levels
                 SetLevels(this, level);
             }
         }
-        /*private void Start()
-    {
-        var module = _dontSelectedCircle.main;
-
-        switch (state)
-        {
-            case LevelState.Locked:
-                ColorChanger(_notOpenColor);
-                break;
-            case LevelState.Unlocked:
-                _levelCubeJumping.enabled = true;
-                ColorChanger(_notPassedColor);
-                break;
-            case LevelState.Completed:
-                ColorChanger(_passedColor);
-                break;
-        }
-
-        foreach (var level in _nextLevel)
-        {
-            SetLevels(this, level);
-        }
-    }*/
-
+        
         private void OnMouseDown()
         {
             foreach (Level level in _allLevels)
@@ -139,7 +92,32 @@ namespace Levels
             }
 
             _levelInfo.Open();
+            // _colliderController.SetValue(false);
         }
+
+        /*public void SelectLevel()
+        {
+            foreach (Level level in _allLevels)
+            {
+                level.StopParticles();
+            }
+
+            foreach (ParticleSystem effect in _effectsSelect)
+                effect.Play();
+
+            // _dontSelectedCircle.Stop();
+            _selectedCircle.Play();
+            _cameraDistance.MoveCameraToTarget(transform);
+            /*_levelInfo.SetActive(true);
+        _levelInfo.GetComponent<Animator>().Play("LevelCubeInfoScreenUp");#1#
+            foreach (LevelInfo levelInfo in _levelsInfo)
+            {
+                levelInfo.Close();
+            }
+
+            _levelInfo.Open();
+            // _colliderController.SetValue(false);
+        }*/
 
         public void StopParticles()
         {

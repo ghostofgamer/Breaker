@@ -11,8 +11,8 @@ public class CloseChangeLevelScreenButton : AbstractButton
     private RaycastHit _hit;
     
     private void Update()
-    {
-        if (Input.GetMouseButtonUp(0))
+         {
+        /*if (Input.GetMouseButtonUp(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -20,14 +20,21 @@ public class CloseChangeLevelScreenButton : AbstractButton
             {
                 if (_hit.collider.TryGetComponent(out MirrorScript mirrorScript))
                 {
+                    Debug.Log("MirrorScript");
                     _levelInfo.Close();
                 }
             }
-        }
+        }*/
     }
 
     protected override void OnClick()
     {
         _levelInfo.Close();
+        // gameObject.SetActive(false);
+    }
+
+    public void Init(LevelInfo levelInfo)
+    {
+        _levelInfo = levelInfo;
     }
 }
