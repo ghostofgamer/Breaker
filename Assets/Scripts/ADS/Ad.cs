@@ -27,13 +27,14 @@ namespace ADS
             Time.timeScale = 1;
             // AudioListener.volume = _volumeValue;
             AudioListener.volume = 1;
-            SceneManager.LoadScene(MainScene);
+            // SceneManager.LoadScene(MainScene);
         }
         
         protected virtual void OnClose()
         {
             Time.timeScale = 1;
-            AudioListener.volume = _volumeValue;
+            AudioListener.volume = 1;
+            // AudioListener.volume = _volumeValue;
         }
     }
 }

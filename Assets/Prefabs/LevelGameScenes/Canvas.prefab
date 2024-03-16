@@ -2714,7 +2714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u0420\u0430\u0441\u0442\u0435\u0442"
+  m_text: "\u0411\u0430\u0437\u0430 \u0420\u0430\u0441\u0442\u0435\u0442"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -5422,7 +5422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 71.631836, y: -60.636}
+  m_AnchoredPosition: {x: 71.631836, y: -60.635986}
   m_SizeDelta: {x: 143.264, y: -121.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &27669557911205612
@@ -10448,7 +10448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u0421\u0436\u0438\u043C\u0430\u0435\u0442\u0441\u044F"
+  m_text: "\u0411\u0430\u0437\u0430 \u0421\u0436\u0438\u043C\u0430\u0435\u0442\u0441\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -10475,7 +10475,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 92.25
+  m_fontSize: 95.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14843,7 +14843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -207, y: 119.48001}
+  m_AnchoredPosition: {x: -207, y: 119.47998}
   m_SizeDelta: {x: 300, y: 42.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1292574740958822892
@@ -15649,7 +15649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u041C\u0435\u0434\u043B\u0438\u0442"
+  m_text: "\u0411\u0430\u0437\u0430 \u041C\u0435\u0434\u043B\u0438\u0442"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -15792,6 +15792,7 @@ GameObject:
   - component: {fileID: 776143299362794686}
   - component: {fileID: 9005935555804778324}
   - component: {fileID: 610392267134657893}
+  - component: {fileID: 6425250502005817480}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -15916,6 +15917,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 2202307521725180600}
   _fadePanel: {fileID: 4955766127971592645}
+  _fullAds: {fileID: 6425250502005817480}
+--- !u!114 &6425250502005817480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572624786582967462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef6d534aaf924a448542761571f9567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5597942294192704799
 GameObject:
   m_ObjectHideFlags: 0
@@ -19827,6 +19841,7 @@ GameObject:
   - component: {fileID: 4225071841306260316}
   - component: {fileID: 2588456182221094371}
   - component: {fileID: 5781244721472948345}
+  - component: {fileID: 6006459169210579227}
   m_Layer: 5
   m_Name: ClaimRewardButton
   m_TagString: Untagged
@@ -19977,6 +19992,22 @@ MonoBehaviour:
   - {fileID: 5836244541357468286}
   - {fileID: 7366054433576524891}
   _creditsTxt: {fileID: 1113379301155435782}
+  _levelComplite: {fileID: 1284111574594062255}
+  _victoryScreen: {fileID: 674575301682081545}
+  _rewardTripleCredit: {fileID: 6006459169210579227}
+--- !u!114 &6006459169210579227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059865683942360948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4772d4127531a094c9c848cf38a191db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _claimRewardButton: {fileID: 5781244721472948345}
   _levelComplite: {fileID: 1284111574594062255}
   _victoryScreen: {fileID: 674575301682081545}
 --- !u!1 &7074927895533718900
@@ -24564,6 +24595,7 @@ GameObject:
   - component: {fileID: 2919441286152532873}
   - component: {fileID: 5690151871173188800}
   - component: {fileID: 1187455724046253645}
+  - component: {fileID: 1041149232831946882}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -24688,6 +24720,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 5682920103252028793}
   _fadePanel: {fileID: 4955766127971592645}
+  _fullAds: {fileID: 1041149232831946882}
+--- !u!114 &1041149232831946882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8780508438688066078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6284d2eeb92e382468a7f8ea2ef26bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8826069475268223933
 GameObject:
   m_ObjectHideFlags: 0
@@ -25067,6 +25112,7 @@ GameObject:
   - component: {fileID: 8334323647115499791}
   - component: {fileID: 9184684735961166815}
   - component: {fileID: 7836851171216775016}
+  - component: {fileID: 301338926255387493}
   m_Layer: 5
   m_Name: AdButton
   m_TagString: Untagged
@@ -25192,6 +25238,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ballRevive: {fileID: 0}
   _platformaRevive: {fileID: 0}
+  _reviveScreen: {fileID: 4753488500654358166}
+  _sceneLoader: {fileID: 0}
+  _brickCounter: {fileID: 0}
+  _rewardRevive: {fileID: 301338926255387493}
+--- !u!114 &301338926255387493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877538111234052343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751bce2735cffbf4bbf5784c75e37d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _reviveButton: {fileID: 7836851171216775016}
   _reviveScreen: {fileID: 4753488500654358166}
   _sceneLoader: {fileID: 0}
   _brickCounter: {fileID: 0}

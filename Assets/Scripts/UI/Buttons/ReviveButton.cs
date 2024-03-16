@@ -15,6 +15,7 @@ public class ReviveButton : AbstractButton
     [SerializeField] private ReviveScreen _reviveScreen;
     [SerializeField] private SceneLoader _sceneLoader;
     [SerializeField] private BrickCounter _brickCounter;
+    [SerializeField] private RewardRevive _rewardRevive;
     // [SerializeField] private FullAds _fullAds;
     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
@@ -22,10 +23,13 @@ public class ReviveButton : AbstractButton
     
     protected override void OnClick()
     {
-        if(_coroutine!=null)
+        Button.interactable = false;
+        _rewardRevive.Show();
+        
+        /*if(_coroutine!=null)
             StopCoroutine(_coroutine);
         
-        _coroutine = StartCoroutine(Revive());
+        _coroutine = StartCoroutine(Revive());*/
     }
 
     private IEnumerator Revive()

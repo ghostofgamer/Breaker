@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CameraFiles;
 using UI;
+using UI.Screens.LevelInfo;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -14,12 +15,14 @@ public class SelectLevelButton : AbstractButton
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private CanvasAnimator _canvasAnimator;
     [SerializeField] private BackToMenuButton _backToMenuButton;
+    [SerializeField]private LevelInfo _levelInfo;
     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private bool _isMove;
     
     protected override void OnClick()
     {
+        _levelInfo.Close();
         StartCoroutine(SelectLevel());
     }
 
