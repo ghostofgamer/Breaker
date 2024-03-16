@@ -16,6 +16,8 @@ public class BuySkinBallButton : AbstractButton
     [SerializeField] private Skin _skin;
     [SerializeField] private BallSkins _ballSkins;
     [SerializeField] private Save _save;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _audioClip;
 
     private bool _isBuyed;
     private int _purchased = 1;
@@ -30,7 +32,10 @@ public class BuySkinBallButton : AbstractButton
         if (TryBuySkin())
             ChangeValue();
         else
+        {
+            _audioSource.PlayOneShot(_audioClip);
             return;
+        }
     }
 
     private bool TryBuySkin()
@@ -43,6 +48,7 @@ public class BuySkinBallButton : AbstractButton
 
     private void ChangeValue()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         _save.SetData(_ballSkins.ToString(), _purchased);
         _wallet.RemoveMoney(_price);
         _closeInfoButton.ScreenClose();

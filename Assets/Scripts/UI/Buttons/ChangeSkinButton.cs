@@ -16,6 +16,8 @@ public class ChangeSkinButton : AbstractButton
     [SerializeField] private Save _save;
     [SerializeField] private int _startIndex;
     [SerializeField] private int _colorIndex;
+    [SerializeField]private AudioSource _audioSource;
+    [SerializeField]private AudioClip _audioClip;
 
     private int _selectedSkinIndex = 1;
     private int _unSelectedSkinIndex = 0;
@@ -37,6 +39,9 @@ public class ChangeSkinButton : AbstractButton
 
     private void ChooseSkin()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
+        _audioSource.PlayOneShot(_audioClip);
+
         foreach (ChangeSkinButton button in _buttons)
             button.UnSelectedSkin();
 

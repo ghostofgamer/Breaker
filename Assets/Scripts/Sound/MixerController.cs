@@ -15,6 +15,7 @@ namespace Sound
         [SerializeField] private SoundMixer _soundMixer;
         [SerializeField] private Load _load;
         [SerializeField] private Save  _save;
+        [SerializeField] private AudioSource _audioSource;
 
         private bool _isMuted;
         private float _startVolume=0;
@@ -27,6 +28,7 @@ namespace Sound
 
         public void ReduceGroupVolume()
         {
+            _audioSource.PlayOneShot(_audioSource.clip);
             float currentVolume;
             bool success = _outputGroup.audioMixer.GetFloat(_options, out currentVolume);
             /*_onSound.enabled = !_onSound.enabled;

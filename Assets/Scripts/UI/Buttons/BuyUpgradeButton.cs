@@ -16,15 +16,20 @@ public class BuyUpgradeButton : AbstractButton
     [SerializeField] private Save _save;
     [SerializeField] private Enum.Buffs _buffElement;
     [SerializeField] private BuffInfo _buff;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _audioClip;
 
     protected override void OnClick()
     {
         if (_wallet.Money >= _price)
             MakeDeal();
+        else
+            _audioSource.PlayOneShot(_audioClip);
     }
 
     private void MakeDeal()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         Debug.Log(_buffElement.ToString());
         _save.SetData(_buffElement.ToString(), 3);
         _buff.ChangeValue();

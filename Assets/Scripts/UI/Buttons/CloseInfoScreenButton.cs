@@ -7,6 +7,7 @@ public class CloseInfoScreenButton : AbstractButton
 {
     [SerializeField] private GameObject _infoScreen;
     [SerializeField] private ShopBackGround _shopBackGround;
+    [SerializeField] private AudioSource _audioSource;
 
     private Coroutine _coroutine;
 
@@ -17,6 +18,9 @@ public class CloseInfoScreenButton : AbstractButton
 
     public void ScreenClose()
     {
+        if (_audioSource != null)
+            _audioSource.PlayOneShot(_audioSource.clip);
+
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
