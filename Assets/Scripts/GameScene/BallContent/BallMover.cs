@@ -15,6 +15,7 @@ namespace GameScene.BallContent
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private float _rayLength = 10f;
         [SerializeField]private AudioSource _audioSource;
+        [SerializeField]private AudioClip _audioClip;
 
         private float _mediumSpeed = 45;
         private float _maxSpeed = 60f;
@@ -126,6 +127,7 @@ namespace GameScene.BallContent
 
 
                 // _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
+                _audioSource.PlayOneShot(_audioClip);
                 brick.Die();
             }
 

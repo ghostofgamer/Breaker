@@ -11,6 +11,7 @@ namespace WeaponFiles
         [SerializeField] private Bullet _bullet;
         [SerializeField] private Transform _container;
         [SerializeField] private Load _load;
+        [SerializeField]private AudioSource _audioSource;
 
         private int _shootPositionsAmount;
         private int _startShootPositions = 2;
@@ -23,6 +24,7 @@ namespace WeaponFiles
 
         public void Shoot()
         {
+            _audioSource.PlayOneShot(_audioSource.clip);
             _index = Random.Range(0, _shootPositionsAmount);
             Instantiate(_bullet, _shootPosition[_index].position, Quaternion.identity, _container);
         }
