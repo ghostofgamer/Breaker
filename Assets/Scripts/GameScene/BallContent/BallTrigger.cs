@@ -8,6 +8,7 @@ namespace GameScene.BallContent
     {
         [SerializeField] private BallMover _ballMover;
         [SerializeField] private LayerMask _platformLayer;
+        [SerializeField]private AudioSource _audioSource;
 
         private MeshRenderer _meshRenderer;
         private bool _isHit;
@@ -55,6 +56,7 @@ namespace GameScene.BallContent
             {
                 if (hit.collider.gameObject.TryGetComponent(out PlatformaMover platformaMover))
                 {
+                    _audioSource.PlayOneShot(_audioSource.clip);
                     ChangeDirection(newVector, hit);
                 }
             }

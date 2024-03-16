@@ -466,9 +466,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8285908, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+      propertyPath: m_Volume
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285908, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285908, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8285908, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -651264264134895713, guid: 5ec26dc0ffb6fa34fb28c6bae18d9978, type: 2}
     - target: {fileID: 19845456, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -514,6 +526,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+--- !u!82 &3692803457315067134 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8285908, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  m_PrefabInstance: {fileID: 3692803457320172074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3692803457319715164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 490358, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
@@ -745,6 +762,7 @@ MonoBehaviour:
   _force: 150
   _explodeEffect: {fileID: 3692803457335024266}
   _bombFuseEffect: {fileID: 6283134925485200980}
+  _audioSource: {fileID: 3692803457315067134}
 --- !u!114 &3297982495796260773
 MonoBehaviour:
   m_ObjectHideFlags: 0
