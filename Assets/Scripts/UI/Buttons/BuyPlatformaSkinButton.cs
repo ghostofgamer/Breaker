@@ -14,7 +14,9 @@ public class BuyPlatformaSkinButton : AbstractButton
     [SerializeField]private CloseInfoScreenButton _closeInfoScreen;
     [SerializeField] private Load _load;
     [SerializeField] private Save _save;
-
+    [SerializeField]private AudioSource _audioSource;
+    [SerializeField]private AudioClip _audioClip;
+    
     protected override void OnClick()
     {
         BuySkin();
@@ -24,9 +26,14 @@ public class BuyPlatformaSkinButton : AbstractButton
     {
         if (_wallet.Money >= _price)
         {
+            _audioSource.PlayOneShot(_audioSource.clip);
             _wallet.RemoveMoney(_price);
             _platformaSkinShop.BuyCapsuleSkin(_index);
             _closeInfoScreen.ScreenClose();
+        }
+        else
+        {
+            _audioSource.PlayOneShot(_audioClip);
         }
     }
 }

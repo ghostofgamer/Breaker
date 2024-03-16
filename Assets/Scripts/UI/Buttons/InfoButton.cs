@@ -7,8 +7,8 @@ public class InfoButton : AbstractButton
 {
     [SerializeField] private GameObject _screenInfo;
     [SerializeField] private ShopBackGround _shopBackGround;
-    [SerializeField]private AudioSource _audioSource;
-    
+    [SerializeField] private AudioSource _audioSource;
+
     protected override void OnClick()
     {
         _audioSource.PlayOneShot(_audioSource.clip);

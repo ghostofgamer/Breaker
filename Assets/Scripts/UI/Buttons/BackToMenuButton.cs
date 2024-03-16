@@ -14,6 +14,7 @@ public class BackToMenuButton : AbstractButton
     [SerializeField] private Level[] _levels;
     [SerializeField] private ColliderController _colliderController;
     [SerializeField] private Image _fadeImage;
+    [SerializeField]private AudioSource _audioSource;
 
     private const string NameScene = "MainScene";
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
@@ -27,6 +28,7 @@ public class BackToMenuButton : AbstractButton
 
     protected override void OnClick()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         GoMainMenu();
     }
 

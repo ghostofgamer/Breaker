@@ -7,6 +7,7 @@ public class ActivatedPlatformSkinButton : AbstractButton
 {
     [SerializeField] private PlatformaSkinShop _platformaSkinShop;
     [SerializeField] private int _index;
+    [SerializeField]private AudioSource _audioSource;
     
     protected override void OnClick()
     {
@@ -15,6 +16,7 @@ public class ActivatedPlatformSkinButton : AbstractButton
 
     private void ActivatedSkin()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         _platformaSkinShop.ActivateCapsuleSkin(_index);
     }
 }

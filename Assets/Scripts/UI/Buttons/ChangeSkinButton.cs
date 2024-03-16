@@ -34,14 +34,13 @@ public class ChangeSkinButton : AbstractButton
 
     protected override void OnClick()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
+        _audioSource.PlayOneShot(_audioClip);
         ChooseSkin();
     }
 
     private void ChooseSkin()
     {
-        _audioSource.PlayOneShot(_audioSource.clip);
-        _audioSource.PlayOneShot(_audioClip);
-
         foreach (ChangeSkinButton button in _buttons)
             button.UnSelectedSkin();
 
