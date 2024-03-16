@@ -14,6 +14,7 @@ namespace GameScene.BallContent
         [SerializeField] private bool _isPortal = false;
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private float _rayLength = 10f;
+        [SerializeField]private AudioSource _audioSource;
 
         private float _mediumSpeed = 45;
         private float _maxSpeed = 60f;
@@ -176,6 +177,7 @@ namespace GameScene.BallContent
 
         private void SetDirection(Vector3 vectorNormal,Vector3 newVector )
         {
+            _audioSource.PlayOneShot(_audioSource.clip);
             Debug.Log("Гран");
             Vector3 normal = vectorNormal;
             var position = transform.position;
@@ -187,7 +189,9 @@ namespace GameScene.BallContent
         }
         
         private void CheckAngle()
-        {
+        { 
+            _audioSource.PlayOneShot(_audioSource.clip);
+            
             if (_direction.z == 0)
             {
                 Debug.Log("В ноль");

@@ -16,12 +16,14 @@ public class SelectLevelButton : AbstractButton
     [SerializeField] private CanvasAnimator _canvasAnimator;
     [SerializeField] private BackToMenuButton _backToMenuButton;
     [SerializeField]private LevelInfo _levelInfo;
+    [SerializeField]private AudioSource _audioSource;
     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private bool _isMove;
     
     protected override void OnClick()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         _levelInfo.Close();
         StartCoroutine(SelectLevel());
     }

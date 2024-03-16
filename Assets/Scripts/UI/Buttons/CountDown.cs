@@ -9,6 +9,7 @@ public class CountDown : MonoBehaviour
 {
     [SerializeField] private TMP_Text[] _numbersText;
     [SerializeField] private PlatformaMover _platformaMover;
+    [SerializeField]private AudioSource _audioSource;
 
     private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
     
@@ -22,6 +23,7 @@ public class CountDown : MonoBehaviour
         foreach (TMP_Text txt in _numbersText)
         {
             txt.gameObject.SetActive(true);
+            _audioSource.PlayOneShot(_audioSource.clip);
             txt.GetComponent<Animator>().Play("Play");
             yield return _waitForSeconds;
             txt.gameObject.SetActive(false);

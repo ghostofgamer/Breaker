@@ -20,6 +20,7 @@ namespace Bricks
         [SerializeField] private GameObject _targetVisual;
         [SerializeField] private FragmentsCounter _fragmentsCounter;
         [SerializeField] private bool _isEternal = false;
+        [SerializeField] private AudioSource _audioSource;
 
         private int _minBonus = 1;
         private int _maxBonus = 3;
@@ -93,6 +94,7 @@ namespace Bricks
             if (IsImmortal)
                 return;
         
+            _audioSource.PlayOneShot(_audioSource.clip);
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;
             GetBuff();

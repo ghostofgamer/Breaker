@@ -22,27 +22,31 @@ namespace UI.Screens.LevelInfo
         [SerializeField] private ColliderController _colliderController;
         [SerializeField] private CloseChangeLevelScreenButton[] _closeChangeLevelScreenButton;
         [SerializeField] private CloseChangeLevelScreenButton _closeChangeLevelScreenButtonOne;
+        [SerializeField] private AudioSource _audioSource;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
         private Coroutine _coroutineOpen;
         private Coroutine _coroutineClose;
 
-        private bool information;
+        private bool _information;
+
+        public bool IsOpen { get; private set; }
 
         private void Start()
         {
-            information = _load.Get("LevelStatus" + _index, 0) > 0;
+            _information = _load.Get("LevelStatus" + _index, 0) > 0;
             _panelCompleted.SetActive((LevelState) _load.Get("LevelStatus" + _index, 0) == LevelState.Completed);
             _score.text = _load.Get(Save.Score + _index, 0).ToString();
             SetActive(0, false);
-            _cubePositionInfo = _cubePositionsInfo[information ? 0 : 1];
-            _unLockedPanel.SetActive(information ? true : false);
-            _lockedPanel.SetActive(!information);
+            _cubePositionInfo = _cubePositionsInfo[_information ? 0 : 1];
+            _unLockedPanel.SetActive(_information ? true : false);
+            _lockedPanel.SetActive(!_information);
         }
 
         public void Open()
         {
             Debug.Log("OPEN" + this.name);
+     
             /*Debug.Log("OPEN");
             _closeChangeLevelScreenButton.Init(this);
             _closeChangeLevelScreenButton.gameObject.SetActive(true);*/
@@ -51,7 +55,7 @@ namespace UI.Screens.LevelInfo
             {
                 closeChangeLevelScreenButton.gameObject.SetActive(true);
             }*/
-            
+
             if (_coroutineOpen != null)
                 StopCoroutine(_coroutineOpen);
 
@@ -60,7 +64,7 @@ namespace UI.Screens.LevelInfo
 
         public void Close()
         {
-            Debug.Log("CLOSE"+this.name);
+            Debug.Log("CLOSE" + this.name);
             if (_coroutineClose != null)
                 StopCoroutine(_coroutineClose);
 
@@ -70,8 +74,11 @@ namespace UI.Screens.LevelInfo
         private IEnumerator OpenScreen()
         {
             yield return _waitForSeconds;
+            IsOpen = true;
             SetActive(1, true);
+            _audioSource.PlayOneShot(_audioSource.clip);
             _animator.Play("LevelCubeInfoScreenUp");
+            Debug.Log("IsOpen" + IsOpen + this.name);
             // _colliderController.SetValue(false);
             // _colliderController.SetValueEnabled(false);
         }
@@ -81,6 +88,9 @@ namespace UI.Screens.LevelInfo
             // _colliderController.SetValue(true);
             // _colliderController.SetValueEnabled(true);
             _animator.Play("LevelCubeInfoScreenDown");
+            _audioSource.PlayOneShot(_audioSource.clip);
+            IsOpen = false;
+            Debug.Log("IsClose" + IsOpen + this.name);
             yield return _waitForSeconds;
             SetActive(0, false);
         }

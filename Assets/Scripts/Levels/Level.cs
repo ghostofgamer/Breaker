@@ -41,7 +41,6 @@ namespace Levels
 
         private void Start()
         {
-            
         }
 
         public void Init(LevelState levelState)
@@ -70,7 +69,7 @@ namespace Levels
                 SetLevels(this, level);
             }
         }
-        
+
         private void OnMouseDown()
         {
             foreach (Level level in _allLevels)
@@ -88,7 +87,8 @@ namespace Levels
         _levelInfo.GetComponent<Animator>().Play("LevelCubeInfoScreenUp");*/
             foreach (LevelInfo levelInfo in _levelsInfo)
             {
-                levelInfo.Close();
+                if (levelInfo.IsOpen)
+                    levelInfo.Close();
             }
 
             _levelInfo.Open();
