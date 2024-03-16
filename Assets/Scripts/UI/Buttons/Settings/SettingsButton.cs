@@ -9,7 +9,9 @@ namespace UI.Buttons
         [SerializeField]private MainScreen _mainScreen;
         [SerializeField]private SettingsScreen  _settingsScreen;
         [SerializeField] private GameObject _backButton;
-
+        [SerializeField] private AudioSource _audioSource;
+        // [SerializeField] private AudioClip _audioClip;
+        
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.16f);
 
         protected override void OnClick()
@@ -19,6 +21,8 @@ namespace UI.Buttons
 
         private IEnumerator ChangeOpenMenu()
         {
+            // _audioSource.PlayOneShot(_audioClip);
+            // _audioSource.PlayOneShot(_audioSource.clip);
             _mainScreen.GetComponent<FadeObject>().FadeOn();
             yield return _waitForSeconds;
             _backButton.SetActive(true);

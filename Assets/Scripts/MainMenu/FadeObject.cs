@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(RectTransform))]
 public class FadeObject : MonoBehaviour
 {
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _audioClip;
     private RectTransform _rectTransform;
     private float _fadeDuration = 0.16f;
 
@@ -19,6 +21,7 @@ public class FadeObject : MonoBehaviour
     
     private IEnumerator Fade()
     {
+        _audioSource.PlayOneShot(_audioClip);
         float elapsedTime = 0f;
         float originalWidth = _rectTransform.sizeDelta.x;
 
@@ -38,6 +41,7 @@ public class FadeObject : MonoBehaviour
     
     private IEnumerator OnFadeOut()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         float elapsedTime = 0f;
         float originalWidth = _rectTransform.sizeDelta.x;
 

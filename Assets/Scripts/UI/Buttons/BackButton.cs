@@ -10,7 +10,8 @@ public class BackButton : AbstractButton
     [SerializeField] private MainScreen _mainScreen;
     [SerializeField] private SettingsScreen _settingsScreen;
     [SerializeField] private GameObject _settingsButton;
-
+    [SerializeField] private AudioSource _audioSource;
+    
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.16f);
 
     private void Start()
@@ -25,6 +26,7 @@ public class BackButton : AbstractButton
 
     private IEnumerator ChangeOpenMenu()
     {
+        // _audioSource.PlayOneShot(_audioSource.clip);
         CanvasValue(0);
         _settingsScreen.GetComponent<FadeObject>().FadeOn();
         yield return _waitForSeconds;

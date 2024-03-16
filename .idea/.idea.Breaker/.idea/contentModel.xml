@@ -1755,6 +1755,7 @@
               <e p="MainScreen.cs" t="Include" />
               <e p="SettingsScreen.cs" t="Include" />
               <e p="ShopBackGround.cs" t="Include" />
+              <e p="ShopScreen.cs" t="Include" />
             </e>
             <e p="Swipe.cs" t="Include" />
             <e p="SwipeLayout.cs" t="Include" />
@@ -1775,7 +1776,13 @@
           <e p="NewSurfaceShader.shader" t="Include" />
           <e p="Stencil.shader" t="Include" />
         </e>
-        <e p="Sounds" t="Include" />
+        <e p="Sounds" t="Include">
+          <e p="BackGroundMusic" t="Include" />
+          <e p="Buttons" t="Include" />
+          <e p="Screens" t="Include">
+            <e p="Settings" t="Include" />
+          </e>
+        </e>
         <e p="Sprites" t="Include">
           <e p="Bricks" t="Include" />
           <e p="Buff&amp;DebaffGameScene" t="Include">

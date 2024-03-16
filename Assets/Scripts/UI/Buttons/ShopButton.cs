@@ -17,6 +17,8 @@ public class ShopButton : AbstractButton
     [SerializeField] private GameObject _platformTabPc;
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private Level[] _levels;
+    [SerializeField]private AudioSource _audioSource;
+    [SerializeField]private ShopScreen _shopScreen;
     
     private Color _currentColor;
     private int _indexPlatformTab = 1;
@@ -33,6 +35,8 @@ public class ShopButton : AbstractButton
 
     protected override void OnClick()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
+        
         if (_cameraMover != null && _cameraMover.enabled)
             _cameraMover.enabled = false;
 
@@ -40,14 +44,15 @@ public class ShopButton : AbstractButton
         {
             foreach (var level in _levels)
                 level.GetComponent<BoxCollider>().enabled = false;
-
         }
+
+        _shopScreen.Open();
         
-        _screen.GetComponent<Animator>().Play("ShopScreenOpen");
+        /*_screen.GetComponent<Animator>().Play("ShopScreenOpen");
         _shopBackGround.BackGroundAlphaChange(0, 1);
         
         foreach (CloseShopButton close in _closeShopButtons)
-            close.gameObject.SetActive(true);
+            close.gameObject.SetActive(true);*/
         
         ActiveImage();
         ColorChanger();

@@ -17,9 +17,13 @@ public class CloseShopButton : AbstractButton
     [SerializeField] private CloseShopButton[] _closeShopButtons;
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private Level[] _levels;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField]private ShopScreen _shopScreen;
 
     protected override void OnClick()
     {
+        // _audioSource.PlayOneShot(_audioSource.clip);
+        
         if (_cameraMover != null && !_cameraMover.enabled)
             _cameraMover.enabled = true;
         
@@ -28,15 +32,16 @@ public class CloseShopButton : AbstractButton
             foreach (var level in _levels)
                 level.GetComponent<BoxCollider>().enabled = true;
         }
-
-        _screen.GetComponent<Animator>().Play("ShopScreenClose");
+        
+        _shopScreen.Close();
+        /*_screen.GetComponent<Animator>().Play("ShopScreenClose");
         _shopBackGround.BackGroundAlphaChange(1, 0);
 
         foreach (CloseShopButton close in _closeShopButtons)
             close.gameObject.SetActive(false);
 
         gameObject.SetActive(false);
-        OffImages();
+        OffImages();*/
     }
 
     private void OffImages()
