@@ -33,9 +33,10 @@ namespace Bricks
         private IEnumerator OnExplode()
         {
             _wickBurning = true;
-            _bombFuseEffect.Play();
+            // _bombFuseEffect.Play();
+            _bombFuseEffect.gameObject.SetActive(true);
             yield return _waitForSeconds;
-            _audioSource.PlayOneShot(_audioSource.clip);
+            // _audioSource.PlayOneShot(_audioSource.clip);
             GetBonus();
             GetBuff();
             BrickCounter.ChangeValue(Reward);
@@ -55,7 +56,8 @@ namespace Bricks
             }
 
             _explodeEffect.transform.parent = null;
-            _explodeEffect.Play();
+            // _explodeEffect.Play();
+            _explodeEffect.gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
     }

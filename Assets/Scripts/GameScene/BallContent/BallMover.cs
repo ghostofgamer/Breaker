@@ -127,7 +127,7 @@ namespace GameScene.BallContent
 
 
                 // _direction = Vector3.Reflect(_direction, other.GetContact(0).normal);
-                _audioSource.PlayOneShot(_audioClip);
+                // _audioSource.PlayOneShot(_audioClip);
                 brick.Die();
             }
 
