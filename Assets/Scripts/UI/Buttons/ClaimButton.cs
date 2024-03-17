@@ -16,6 +16,7 @@ public class ClaimButton : AbstractButton
     [SerializeField] private Image _creditIcon;
     [SerializeField] private ClaimRewardButton _claimRewardButton;
     [SerializeField] private TMP_Text _claimTxt;
+    [SerializeField] private AudioSource _audioSource;
 
     private int _credits = 0;
     private float _endTime = 1f;
@@ -24,14 +25,26 @@ public class ClaimButton : AbstractButton
 
     protected override void OnClick()
     {
+        StartCoroutine(ButtonClick()); 
+        
+        /*_audioSource.PlayOneShot(_audioSource.clip);
         _levelComplite.gameObject.SetActive(false);
         // _victoryScreen.Open();
-        _victoryScreen.OpenScreen(_credits);
+        _victoryScreen.OpenScreen(_credits);*/
     }
 
     public void SetValue(int credits)
     {
         StartCoroutine(OnSetValue(credits));
+    }
+
+    private IEnumerator ButtonClick()
+    {
+        _audioSource.PlayOneShot(_audioSource.clip);
+        yield return new WaitForSeconds(0.1f);
+        _levelComplite.gameObject.SetActive(false);
+        // _victoryScreen.Open();
+        _victoryScreen.OpenScreen(_credits);
     }
 
     private IEnumerator OnSetValue(int credits)
@@ -41,7 +54,7 @@ public class ClaimButton : AbstractButton
         _creditsTxt.enabled = true;
         _creditIcon.enabled = true;
         _claimTxt.enabled = true;
-        
+
         while (_elapsedTime < _endTime)
         {
             _elapsedTime += Time.deltaTime;

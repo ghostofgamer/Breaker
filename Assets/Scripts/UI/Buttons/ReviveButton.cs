@@ -16,20 +16,26 @@ public class ReviveButton : AbstractButton
     [SerializeField] private SceneLoader _sceneLoader;
     [SerializeField] private BrickCounter _brickCounter;
     [SerializeField] private RewardRevive _rewardRevive;
-    // [SerializeField] private FullAds _fullAds;
-    
+    [SerializeField] private AudioSource _audioSource;
+
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private Coroutine _coroutine;
-    
+
     protected override void OnClick()
     {
-        Button.interactable = false;
-        _rewardRevive.Show();
+        _audioSource.PlayOneShot(_audioSource.clip);
         
-        /*if(_coroutine!=null)
+#if UNITY_WEBGL && !UNITY_EDITOR
+           Button.interactable = false;
+                   
+                   _rewardRevive.Show();
+#endif
+
+
+        if (_coroutine != null)
             StopCoroutine(_coroutine);
-        
-        _coroutine = StartCoroutine(Revive());*/
+
+        _coroutine = StartCoroutine(Revive());
     }
 
     private IEnumerator Revive()

@@ -7,6 +7,7 @@ namespace UI.Screens.EndScreens
     {
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private Animator _animator;
+        [SerializeField]private AudioSource _audioSource;
     
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
 
@@ -14,6 +15,7 @@ namespace UI.Screens.EndScreens
         {
             ChangeValue(1, true, true);
             _animator.Play("ScreenOpen");
+            _audioSource.PlayOneShot(_audioSource.clip);
         }
 
         public virtual void Close()
@@ -31,6 +33,7 @@ namespace UI.Screens.EndScreens
         private IEnumerator ScreenDeactivation()
         {
             _animator.Play("ScreenClose");
+            _audioSource.PlayOneShot(_audioSource.clip);
             yield return _waitForSeconds;
             ChangeValue(0, false, false);
         }

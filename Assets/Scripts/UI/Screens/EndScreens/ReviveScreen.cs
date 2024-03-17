@@ -36,13 +36,13 @@ namespace UI.Screens.EndScreens
             _ball.Dying -= Open;
         }
 
-        private void Update()
+        /*private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 StopCoroutine(_coroutine);
             }
-        }
+        }*/
 
         public override void Open()
         {
@@ -100,7 +100,6 @@ namespace UI.Screens.EndScreens
             _bonusCounter.BringToZero();
             yield return _waitForSeconds;
             _gameOverScreen.Open();
-         
         }
     }
 }

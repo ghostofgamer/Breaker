@@ -1681,6 +1681,7 @@
           <e p="Sound" t="Include">
             <e p="BackGroundSound.cs" t="Include" />
             <e p="MixerController.cs" t="Include" />
+            <e p="SoundEffect.cs" t="Include" />
           </e>
           <e p="Statistics" t="Include">
             <e p="BonusCounter.cs" t="Include" />
@@ -1778,8 +1779,13 @@
           <e p="Stencil.shader" t="Include" />
         </e>
         <e p="Sounds" t="Include">
-          <e p="BackGroundMusic" t="Include" />
+          <e p="BackGroundMusic" t="Include">
+            <e p="Level1" t="Include" />
+          </e>
+          <e p="Ball" t="Include" />
+          <e p="Brick" t="Include" />
           <e p="Buttons" t="Include" />
+          <e p="Laser" t="Include" />
           <e p="Screens" t="Include">
             <e p="Settings" t="Include" />
           </e>

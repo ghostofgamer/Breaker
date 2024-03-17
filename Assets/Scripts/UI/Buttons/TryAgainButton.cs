@@ -8,12 +8,14 @@ public class TryAgainButton : AbstractButton
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private Image _fadePanel;
-    
+    [SerializeField] private AudioSource _audioSource;
+
     private float _elapsedTime;
     private float _duration = 1f;
-    
+
     protected override void OnClick()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         StartCoroutine(ReturnToMenu());
     }
 

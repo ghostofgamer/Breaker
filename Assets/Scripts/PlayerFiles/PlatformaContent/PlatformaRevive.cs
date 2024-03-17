@@ -6,8 +6,7 @@ namespace PlayerFiles.PlatformaContent
     {
         [SerializeField] private GameObject _mousePosition;
         [SerializeField] private ParticleSystem _loseEffect;
-        [SerializeField] private ParticleSystem _victoryEffect;
-    
+
         private PlatformaMover _platformaMover;
 
         private void Start()
@@ -23,6 +22,5 @@ namespace PlayerFiles.PlatformaContent
             _platformaMover.Revive();
             _mousePosition.SetActive(true);
         }
-    
     }
 }

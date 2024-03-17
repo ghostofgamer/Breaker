@@ -14,7 +14,8 @@ public class ClaimRewardButton : AbstractButton
     [SerializeField] private VictoryScreen _victoryScreen;
     [SerializeField] private RewardTripleCredit _rewardTripleCredit;
     // [SerializeField] private TMP_Text _claimTripleCreditTxt;
-    
+     [SerializeField]private AudioSource _audioSource;
+     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
     private int _credits = 0;
 
@@ -22,13 +23,26 @@ public class ClaimRewardButton : AbstractButton
     
     protected override void OnClick()
     {
+        StartCoroutine(ButtonClick());
+        
+        /*
+        _audioSource.PlayOneShot(_audioSource.clip);
         Button.interactable = false;
         _rewardTripleCredit.Show();
+        */
         
         /*_levelComplite.gameObject.SetActive(false);
         _victoryScreen.OpenScreen(_credits);*/
     }
 
+    private IEnumerator ButtonClick()
+    {
+        _audioSource.PlayOneShot(_audioSource.clip);
+        Button.interactable = false;
+        yield return new WaitForSeconds(0.1f);
+        _rewardTripleCredit.Show();
+    }
+    
     public void SetActive(int credits)
     {
         gameObject.SetActive(true);
