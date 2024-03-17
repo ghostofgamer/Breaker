@@ -93,7 +93,7 @@ namespace Bricks
         {
             if (IsImmortal)
                 return;
-        
+            
             // _audioSource.PlayOneShot(_audioSource.clip);
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;

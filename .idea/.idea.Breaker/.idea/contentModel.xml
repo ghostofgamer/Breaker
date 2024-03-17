@@ -1279,7 +1279,9 @@
             <e p="TestSkins" t="Include" />
           </e>
           <e p="Bonus" t="Include" />
-          <e p="BricksMaterials" t="Include" />
+          <e p="BricksMaterials" t="Include">
+            <e p="Emission" t="Include" />
+          </e>
           <e p="ChooseLvl" t="Include">
             <e p="Materials" t="Include" />
           </e>
@@ -1475,9 +1477,13 @@
           </e>
           <e p="Mirror" t="Include" />
           <e p="MirrorPlatforma" t="Include" />
-          <e p="Particles" t="Include" />
+          <e p="Particles" t="Include">
+            <e p="BrickLight" t="Include" />
+          </e>
           <e p="Platforms" t="Include" />
+          <e p="Player" t="Include" />
           <e p="Shield" t="Include" />
+          <e p="Sound" t="Include" />
         </e>
         <e p="Rays" t="Include">
           <e p="GradientShaders" t="Include">
@@ -1534,6 +1540,9 @@
             <e p="BrickActivator.cs" t="Include" />
             <e p="BrickDestroy.cs" t="Include" />
             <e p="BrickExplosion.cs" t="Include" />
+            <e p="Etertnal" t="Include">
+              <e p="BrickEternal.cs" t="Include" />
+            </e>
             <e p="LevelBricksMoving" t="Include">
               <e p="BrickMover.cs" t="Include" />
               <e p="Level2BrickMover.cs" t="Include" />
@@ -1783,12 +1792,18 @@
             <e p="Level1" t="Include" />
           </e>
           <e p="Ball" t="Include" />
-          <e p="Brick" t="Include" />
+          <e p="Brick" t="Include">
+            <e p="BurnFuse" t="Include" />
+            <e p="Trigger" t="Include" />
+          </e>
           <e p="Buttons" t="Include" />
+          <e p="Credits" t="Include" />
           <e p="Laser" t="Include" />
           <e p="Screens" t="Include">
             <e p="Settings" t="Include" />
           </e>
+          <e p="Statistics" t="Include" />
+          <e p="Victory" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Bricks" t="Include" />
