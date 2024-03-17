@@ -15,7 +15,8 @@ namespace PlayerFiles.PlatformaContent
         [SerializeField] private BuffCounter _buffCounter;
         [SerializeField] private FragmentsCounter _fragmentsCounter;
         [SerializeField]private AudioSource _audioSource;
-        [SerializeField]private AudioClip _audioClip;
+        [SerializeField]private AudioClip _audioClipBonusCatch;
+        [SerializeField]private AudioClip _audioClipModificationCatch;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -33,7 +34,7 @@ namespace PlayerFiles.PlatformaContent
 
             if (other.TryGetComponent(out BonusDeath bonusDeath))
             {
-                _audioSource.PlayOneShot(_audioClip);
+                _audioSource.PlayOneShot(_audioClipBonusCatch);
                 _fragmentsCounter.FragmentsCollect();
                 _bonusCounter.AddBonus(bonusDeath.Reward);
                 bonusDeath.Die();
@@ -49,7 +50,7 @@ namespace PlayerFiles.PlatformaContent
     
         private void CatchEffect(EffectApplier effectApplier, Effect effect)
         {
-            _audioSource.PlayOneShot(_audioClip);
+            _audioSource.PlayOneShot(_audioClipModificationCatch);
             effectApplier.Apply(effect.BuffType);
             effect.Destroy();
         }

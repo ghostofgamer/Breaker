@@ -41,6 +41,10 @@ public class ContinueButton : AbstractButton
 #if UNITY_WEBGL && !UNITY_EDITOR
                _fullAds.Show();   
 #endif
+        
+#if UNITY_EDITOR
+               _fullAds.Show();   
+#endif
       
         // SceneManager.LoadScene("MainScene");
         SceneManager.LoadScene("ChooseLvlScene");

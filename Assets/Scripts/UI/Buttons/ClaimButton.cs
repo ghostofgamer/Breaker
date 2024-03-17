@@ -23,6 +23,11 @@ public class ClaimButton : AbstractButton
     private float _elapsedTime = 0;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.5f);
 
+    private void Start()
+    {
+        Button.interactable = false;
+    }
+
     protected override void OnClick()
     {
         StartCoroutine(ButtonClick()); 
@@ -64,6 +69,7 @@ public class ClaimButton : AbstractButton
             yield return null;
         }
 
+        Button.interactable = true;
         _credits = credits;
         _creditsTxt.text = _credits.ToString();
         _claimRewardButton.SetActive(_credits);
