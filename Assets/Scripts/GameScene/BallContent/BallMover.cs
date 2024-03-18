@@ -137,7 +137,7 @@ namespace GameScene.BallContent
                 Vector3 newReflect = new Vector3(reflect.x, 0, reflect.z).normalized;
                 _direction = newReflect;
                 CheckAngle();
-                Debug.Log("Удар");
+                // Debug.Log("Удар");
             }
         }
 
@@ -180,14 +180,14 @@ namespace GameScene.BallContent
         private void SetDirection(Vector3 vectorNormal,Vector3 newVector )
         {
             _audioSource.PlayOneShot(_audioSource.clip);
-            Debug.Log("Гран");
+            // Debug.Log("Гран");
             Vector3 normal = vectorNormal;
             var position = transform.position;
             position = newVector;
             transform.position = position;
             _direction = Vector3.Reflect(_direction, normal);
             CheckAngle();
-            Debug.Log(_direction);
+            // Debug.Log(_direction);
         }
         
         private void CheckAngle()

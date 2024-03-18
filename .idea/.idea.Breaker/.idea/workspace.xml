@@ -23,10 +23,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skins/SkinPlatformLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skins/SkinPlatformLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/BallSkins.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BuyPlatformaSkinButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/LevelState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ResistanceDebuff.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/BallMov.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/Skin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ADS/FullAdContinue.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,6 +63,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skins/SkinLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/MissileMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ChanceBonus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/BonusEndScreenMoving.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/BuffType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -159,9 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ADS/FullAdContinue.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/Settings/SettingsButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/FadeObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopButton.cs" />
@@ -198,11 +197,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/VictoryScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Etertnal/BrickEternalTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Etertnal/BrickEternal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ContinueButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ClaimButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScreenFocus.cs" />
@@ -210,6 +207,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Skins/SkinPlatformLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ChanceShield.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ResistanceDebuff.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ChanceBonus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaTrigger.cs" />
       </list>
     </option>
   </component>
@@ -316,7 +318,7 @@
       <workItem from="1710499314600" duration="11966000" />
       <workItem from="1710572927551" duration="23108000" />
       <workItem from="1710668561209" duration="12722000" />
-      <workItem from="1710752604060" duration="2586000" />
+      <workItem from="1710752604060" duration="4365000" />
     </task>
     <servers />
   </component>
@@ -361,10 +363,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1032@0.0.1920.1032" timestamp="1706951872337" />
-    <state x="616" y="238" key="run.anything.popup" timestamp="1710344911057">
+    <state x="616" y="238" key="run.anything.popup" timestamp="1710758286686">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1710344911057" />
+    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1710758286686" />
     <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1710323126557">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

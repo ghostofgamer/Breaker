@@ -29,6 +29,12 @@ namespace Bonus
             gameObject.SetActive(false);
         }
 
+        public void SetValue(int reward)
+        {
+            Reward = reward;
+            _bonusCountTxt.text = Reward.ToString();
+        }
+
         private void BonusFlying()
         {
             _bonusFly.transform.parent = null;
