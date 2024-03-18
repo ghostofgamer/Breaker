@@ -6,8 +6,6 @@ namespace Skins
 {
     public class SkinPlatformLoader : MonoBehaviour
     {
-        [SerializeField] private Platforma[] _platforms;
-        [SerializeField] private Material[] _materials;
         [SerializeField] private Load _load;
         [SerializeField] private GameObject[] _skins;
 
@@ -17,12 +15,9 @@ namespace Skins
         {
             int index = _load.Get(Save.ActiveCapsuleIndex, _startIndex);
 
-            /*for (int i = 0; i < _platforms.Length; i++)
-        {
-            _platforms[i].GetComponent<MeshRenderer>().material = _materials[index];
-        }*/
             _skins[index ].SetActive(true);
-        
         }
+        
+        
     }
 }

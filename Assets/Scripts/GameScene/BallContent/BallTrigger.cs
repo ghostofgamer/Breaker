@@ -17,6 +17,7 @@ namespace GameScene.BallContent
         private float _sphereRadius = 0.5f;
         
         public event UnityAction Dying;
+        public event UnityAction Bounce;
         
         public void Init(MeshRenderer meshRenderer)
         {
@@ -56,6 +57,7 @@ namespace GameScene.BallContent
             {
                 if (hit.collider.gameObject.TryGetComponent(out PlatformaMover platformaMover))
                 {
+                    Bounce?.Invoke();
                     _audioSource.PlayOneShot(_audioSource.clip);
                     ChangeDirection(newVector, hit);
                 }
