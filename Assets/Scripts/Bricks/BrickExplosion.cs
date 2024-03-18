@@ -14,6 +14,8 @@ namespace Bricks
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.6f);
         private bool _wickBurning = false;
 
+        public float Radius => _radius;
+        
         public override void Die()
         {
             if (IsImmortal)
@@ -32,6 +34,7 @@ namespace Bricks
 
         private IEnumerator OnExplode()
         {
+            Debug.Log("радиус " + _radius);
             _wickBurning = true;
             // _bombFuseEffect.Play();
             _bombFuseEffect.gameObject.SetActive(true);
@@ -59,6 +62,11 @@ namespace Bricks
             // _explodeEffect.Play();
             _explodeEffect.gameObject.SetActive(true);
             gameObject.SetActive(false);
+        }
+
+        public void SetRadius(float radius)
+        {
+            _radius = radius;
         }
     }
 }

@@ -22,11 +22,7 @@
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +92,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/BEZIE.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseInfoScreenButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/MagnifierRadiusExplosion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ADS/RewardRevive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ActivatedButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameScene/PanelMoving.cs" root0="FORCE_HIGHLIGHTING" />
@@ -161,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/FadeObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CloseShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/ShopScreen.cs" />
@@ -196,7 +192,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/ReviveScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/VictoryScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Etertnal/BrickEternalTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Etertnal/BrickEternal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" />
@@ -207,11 +202,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Skins/SkinPlatformLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ChanceShield.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ResistanceDebuff.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ChanceBonus.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ChanceBonus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/MagnifierRadiusExplosion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
       </list>
     </option>
   </component>
@@ -227,7 +224,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -318,7 +315,7 @@
       <workItem from="1710499314600" duration="11966000" />
       <workItem from="1710572927551" duration="23108000" />
       <workItem from="1710668561209" duration="12722000" />
-      <workItem from="1710752604060" duration="4365000" />
+      <workItem from="1710752604060" duration="5627000" />
     </task>
     <servers />
   </component>
@@ -351,10 +348,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="809" y="237" key="RollbackChangesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1706951875922" />
-    <state x="662" y="313" key="SettingsEditor" timestamp="1706963414558">
+    <state x="662" y="313" key="SettingsEditor" timestamp="1710761133211">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="662" y="313" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1706963414558" />
+    <state x="662" y="313" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1710761133211" />
     <state x="395" y="177" width="1360" height="699" key="VCS.FileHistoryDialog" timestamp="1710057884272">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -367,10 +364,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1710758286686" />
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1710323126557">
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1710761598950">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1710323126557" />
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1710761598950" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
