@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using GameScene;
 using Statistics;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LuckySave : MonoBehaviour
 {
@@ -17,6 +19,11 @@ public class LuckySave : MonoBehaviour
     private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
     private WaitForSecondsRealtime _waitForStart = new WaitForSecondsRealtime(0.3f);
     private Coroutine _coroutine;
+
+    private void Start()
+    {
+        
+    }
 
     public bool TryGetLuckySave()
     {

@@ -102,6 +102,62 @@ MonoBehaviour:
   - Language: Turkish
     Text: "k\xFCrek gecikmesi"
     Object: {fileID: 0}
+--- !u!1 &181386090201522145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5716430581636408947}
+  - component: {fileID: 1762615107483124321}
+  m_Layer: 0
+  m_Name: StrongerExplosion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5716430581636408947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181386090201522145}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7827702990199781519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762615107483124321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181386090201522145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: stronger explosion
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0431\u043E\u043B\u0435\u0435 \u0441\u0438\u043B\u044C\u043D\u044B\u0439
+      \u0432\u0437\u0440\u044B\u0432"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "daha g\xFC\xE7l\xFC patlama"
+    Object: {fileID: 0}
 --- !u!1 &212740614517937493
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +380,63 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: Turkish
     Text: portal
+    Object: {fileID: 0}
+--- !u!1 &387859347972491209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1193700495057122335}
+  - component: {fileID: 1323348847896739337}
+  m_Layer: 0
+  m_Name: ElectricDischarge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1193700495057122335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387859347972491209}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7827702990199781519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1323348847896739337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387859347972491209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Turkish
+    Text: "vuru\u015Fta: elektrik de\u015Farj\u0131 olas\u0131l\u0131\u011F\u0131"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'on hit: chance for electric discharge'
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u043F\u0440\u0438 \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0438:
+      \u0448\u0430\u043D\u0441 \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E
+      \u0440\u0430\u0437\u0440\u044F\u0434\u0430"
     Object: {fileID: 0}
 --- !u!1 &435973655440645828
 GameObject:
@@ -987,6 +1100,62 @@ MonoBehaviour:
   - Language: Turkish
     Text: "\xFC\xE7l\xFC kredi"
     Object: {fileID: 0}
+--- !u!1 &1496176759180524928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8426307213676298993}
+  - component: {fileID: 2366138162343024120}
+  m_Layer: 0
+  m_Name: ResistDebuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8426307213676298993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496176759180524928}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7827702990199781519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2366138162343024120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496176759180524928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: chance to resist debuff
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0448\u0430\u043D\u0441 \u0441\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u0435\u043D\u0438\u044F
+      \u0434\u0435\u0431\u0430\u0444\u0444\u0443"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "debuff'a direnme \u015Fans\u0131"
+    Object: {fileID: 0}
 --- !u!1 &1566504120587115100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1693,62 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: Turkish
     Text: "Bir topu hafif\xE7e k\xFC\xE7\xFClt\xFCr"
+    Object: {fileID: 0}
+--- !u!1 &2255174791283000572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5594618595941794483}
+  - component: {fileID: 8070660420629919036}
+  m_Layer: 0
+  m_Name: DropChance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5594618595941794483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255174791283000572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7827702990199781519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8070660420629919036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255174791283000572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: chance increased drop
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "d\xFC\u015Fme ihtimali artt\u0131"
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0448\u0430\u043D\u0441 \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u043D\u043E\u0433\u043E
+      \u043F\u0430\u0434\u0435\u043D\u0438\u044F"
     Object: {fileID: 0}
 --- !u!1 &2283438322630373630
 GameObject:
@@ -3008,6 +3233,63 @@ MonoBehaviour:
   translationCode: ru
   cultures:
   - ru
+--- !u!1 &4141908284952618295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7038725983303730789}
+  - component: {fileID: 6027783988786989639}
+  m_Layer: 0
+  m_Name: ShieldActivationHit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7038725983303730789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4141908284952618295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7827702990199781519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6027783988786989639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4141908284952618295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'on hit: chance for shield activation'
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u043F\u0440\u0438 \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0438:
+      \u0448\u0430\u043D\u0441 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438
+      \u0449\u0438\u0442\u0430"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "vuru\u015Fta: kalkan\u0131 etkinle\u015Ftirme \u015Fans\u0131"
+    Object: {fileID: 0}
 --- !u!1 &4282441843644529735
 GameObject:
   m_ObjectHideFlags: 0
@@ -5058,6 +5340,12 @@ Transform:
   - {fileID: 4866015582490715053}
   - {fileID: 5494897054303261983}
   - {fileID: 6002524496635422558}
+  - {fileID: 5716430581636408947}
+  - {fileID: 8426307213676298993}
+  - {fileID: 7038725983303730789}
+  - {fileID: 2686706338932884082}
+  - {fileID: 1193700495057122335}
+  - {fileID: 5594618595941794483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5163642248733167183
@@ -6188,6 +6476,62 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: Turkish
     Text: "k\xFCpler k\u0131r\u0131k!"
+    Object: {fileID: 0}
+--- !u!1 &9208697457559957182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2686706338932884082}
+  - component: {fileID: 1361246245050126403}
+  m_Layer: 0
+  m_Name: ChanceLuckySave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2686706338932884082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208697457559957182}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7827702990199781519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361246245050126403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208697457559957182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: chance of lucky save
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0448\u0430\u043D\u0441 \u043D\u0430 \u0443\u0434\u0430\u0447\u043D\u043E\u0435
+      \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0435"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "\u015Fansl\u0131 kurtarma \u015Fans\u0131"
     Object: {fileID: 0}
 --- !u!1 &9212955881964902561
 GameObject:
