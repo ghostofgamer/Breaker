@@ -1,11 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ChanceBonus : MonoBehaviour
 {
     private float _bonusChances = 50;
     private float _randomValue;
+
+    private void Start()
+    {
+        
+    }
 
     public int TryIncreaseBonus(int reward)
     {

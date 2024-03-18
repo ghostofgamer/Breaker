@@ -1,5 +1,6 @@
 using System.Collections;
 using GameScene.BallContent;
+using Sound;
 using Statistics;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +15,8 @@ namespace UI.Screens.EndScreens
         [SerializeField] private BallTrigger _ball;
         [SerializeField] private Animator _walletAnimator;
         [SerializeField] private BonusCounter _bonusCounter;
+        [SerializeField]private LuckySave _luckySave;
+        [SerializeField] private SoundEffect _soundEffect;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private float _duration = 3f;
@@ -46,6 +49,13 @@ namespace UI.Screens.EndScreens
 
         public override void Open()
         {
+            if(_luckySave.TryGetLuckySave())
+            {
+                Debug.Log("оживаем");
+                return;
+                
+            };
+            _soundEffect.PlayCountDownSound();
             IsLose = true;
             _coroutine = StartCoroutine(OnScreenMove());
         }

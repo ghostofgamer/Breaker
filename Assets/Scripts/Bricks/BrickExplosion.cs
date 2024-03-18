@@ -34,7 +34,7 @@ namespace Bricks
 
         private IEnumerator OnExplode()
         {
-            Debug.Log("радиус " + _radius);
+            // Debug.Log("радиус " + _radius);
             _wickBurning = true;
             // _bombFuseEffect.Play();
             _bombFuseEffect.gameObject.SetActive(true);

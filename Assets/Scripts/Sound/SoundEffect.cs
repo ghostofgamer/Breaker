@@ -23,7 +23,7 @@ namespace Sound
         private void OnEnable()
         {
             _ballTrigger.Dying += PlayDieSound;
-            _ballTrigger.Dying +=PlayCountDownSound;
+            // _ballTrigger.Dying +=PlayCountDownSound;
             _reviveScreen.Lose += StopCountDown;
             _reviveScreen.Revive += StopCountDown;
             _brickCounter.AllBrickDestory += PlayVictorySound;
@@ -32,7 +32,7 @@ namespace Sound
         private void OnDisable()
         {
             _ballTrigger.Dying -= PlayDieSound;
-            _ballTrigger.Dying -= PlayCountDownSound;
+            // _ballTrigger.Dying -= PlayCountDownSound;
             _reviveScreen.Lose -= StopCountDown;
             _reviveScreen.Revive -= StopCountDown;
             _brickCounter.AllBrickDestory -= PlayVictorySound;
@@ -43,9 +43,9 @@ namespace Sound
             _audioSource.PlayOneShot(_audioClipDiePlatform);
         }
         
-        private void PlayCountDownSound()
+        public void PlayCountDownSound()
         {
-            _coroutine =   StartCoroutine(CountDown());
+            _coroutine = StartCoroutine(CountDown());
         }
 
         private void StopCountDown()
