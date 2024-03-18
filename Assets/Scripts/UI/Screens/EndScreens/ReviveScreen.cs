@@ -15,20 +15,21 @@ namespace UI.Screens.EndScreens
         [SerializeField] private BallTrigger _ball;
         [SerializeField] private Animator _walletAnimator;
         [SerializeField] private BonusCounter _bonusCounter;
-        [SerializeField]private LuckySave _luckySave;
+        [SerializeField] private LuckySave _luckySave;
         [SerializeField] private SoundEffect _soundEffect;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private float _duration = 3f;
         private float _elapsedTime;
+
         private Coroutine _coroutine;
         // private Animator _walletAnimator;
-    
+
         public bool IsLose { get; private set; }
 
-        public event UnityAction Revive; 
-        public event UnityAction Lose; 
-    
+        public event UnityAction Revive;
+        public event UnityAction Lose;
+
         private void OnEnable()
         {
             _ball.Dying += Open;
@@ -49,12 +50,16 @@ namespace UI.Screens.EndScreens
 
         public override void Open()
         {
-            if(_luckySave.TryGetLuckySave())
+            if (_luckySave.enabled)
             {
-                Debug.Log("оживаем");
-                return;
-                
-            };
+                Debug.Log("111");
+                if (_luckySave.TryGetLuckySave())
+                {
+                    Debug.Log("оживаем");
+                    return;
+                } 
+            }
+
             _soundEffect.PlayCountDownSound();
             IsLose = true;
             _coroutine = StartCoroutine(OnScreenMove());
@@ -105,7 +110,7 @@ namespace UI.Screens.EndScreens
         private IEnumerator SetActiveScreens()
         {
             StopCoroutine(_coroutine);
-            Close(); 
+            Close();
             _walletAnimator.Play("WalletReviveClose");
             _bonusCounter.BringToZero();
             yield return _waitForSeconds;
