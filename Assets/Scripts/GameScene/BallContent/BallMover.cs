@@ -14,8 +14,9 @@ namespace GameScene.BallContent
         [SerializeField] private bool _isPortal = false;
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private float _rayLength = 10f;
-        [SerializeField]private AudioSource _audioSource;
-        [SerializeField]private AudioClip _audioClip;
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClip;
+        [SerializeField] private ElectricBall _electricBall;
 
         private float _mediumSpeed = 45;
         private float _maxSpeed = 60f;
@@ -121,6 +122,13 @@ namespace GameScene.BallContent
         {
             if (other.collider.TryGetComponent(out Brick brick))
             {
+                if (_electricBall.gameObject.activeSelf && !brick.IsEternal)
+                {
+                    _electricBall.DestroyBrick(brick);
+                    return;
+                }
+
+
                 Vector3 reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
                 Vector3 newReflect = new Vector3(reflect.x, 0, reflect.z).normalized;
                 _direction = newReflect;
@@ -131,7 +139,8 @@ namespace GameScene.BallContent
                 brick.Die();
             }
 
-            if (other.collider.TryGetComponent(out Wall wall)||other.collider.TryGetComponent(out WallTrigger wallTrigger))
+            if (other.collider.TryGetComponent(out Wall wall) ||
+                other.collider.TryGetComponent(out WallTrigger wallTrigger))
             {
                 Vector3 reflect = Vector3.Reflect(_direction, other.GetContact(0).normal);
                 Vector3 newReflect = new Vector3(reflect.x, 0, reflect.z).normalized;
@@ -162,22 +171,22 @@ namespace GameScene.BallContent
         {
             if (transform.position.x > _xMaxPosition)
             {
-                SetDirection(new Vector3(-1, 0, 0),new Vector3(_xMaxPosition, 5.1f, transform.position.z));
+                SetDirection(new Vector3(-1, 0, 0), new Vector3(_xMaxPosition, 5.1f, transform.position.z));
             }
 
             if (transform.position.x < _xMinPosition)
             {
-                SetDirection(new Vector3(1, 0, 0),new Vector3(_xMinPosition, 5.1f, transform.position.z));
+                SetDirection(new Vector3(1, 0, 0), new Vector3(_xMinPosition, 5.1f, transform.position.z));
             }
 
             if (transform.position.z > _zMaxPosition)
             {
                 Debug.Log("МАКСИМУМ");
-                SetDirection(new Vector3(0, 0, -1),new Vector3(transform.position.x, 5.1f, _zMaxPosition));
+                SetDirection(new Vector3(0, 0, -1), new Vector3(transform.position.x, 5.1f, _zMaxPosition));
             }
         }
 
-        private void SetDirection(Vector3 vectorNormal,Vector3 newVector )
+        private void SetDirection(Vector3 vectorNormal, Vector3 newVector)
         {
             _audioSource.PlayOneShot(_audioSource.clip);
             // Debug.Log("Гран");
@@ -189,17 +198,17 @@ namespace GameScene.BallContent
             CheckAngle();
             // Debug.Log(_direction);
         }
-        
+
         private void CheckAngle()
-        { 
+        {
             _audioSource.PlayOneShot(_audioSource.clip);
-            
+
             if (_direction.z == 0)
             {
                 Debug.Log("В ноль");
                 _direction = new Vector3(_direction.x, _direction.y, _direction.z + Random.Range(-0.5f, 0.5f))
                     .normalized;
-                Debug.Log("В ноль " + _direction );
+                Debug.Log("В ноль " + _direction);
             }
 
             if (_direction.z < 0 && _direction.z > -0.35)
