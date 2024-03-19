@@ -41,7 +41,7 @@ public class SettingsButtonGameLevel : AbstractButton
         _settingsScreen.Open();
     }
 
-    private void SetValue()
+    public void SetValue()
     {
         Button.interactable = !Button.interactable;
     }

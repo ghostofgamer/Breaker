@@ -24,7 +24,7 @@ public class ReviveButton : AbstractButton
     protected override void OnClick()
     {
         _audioSource.PlayOneShot(_audioSource.clip);
-        
+
 #if UNITY_WEBGL && !UNITY_EDITOR
            Button.interactable = false;
                    
@@ -32,10 +32,12 @@ public class ReviveButton : AbstractButton
 #endif
 
 
+#if UNITY_EDITOR
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
         _coroutine = StartCoroutine(Revive());
+#endif
     }
 
     private IEnumerator Revive()

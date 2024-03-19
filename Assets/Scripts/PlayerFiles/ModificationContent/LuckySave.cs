@@ -12,6 +12,7 @@ public class LuckySave : MonoBehaviour
     [SerializeField] private SceneLoader _sceneLoader;
     [SerializeField] private BrickCounter _brickCounter;
     [SerializeField] private TextLuckySaveMove _LuckySaveText;
+    [SerializeField]private SettingsButtonGameLevel _settingsButtonGameLevel;
 
     private float _bonusChances = 50;
     private float _randomValue;
@@ -50,6 +51,7 @@ public class LuckySave : MonoBehaviour
         _LuckySaveText.gameObject.SetActive(true);
         _LuckySaveText.Play();
         yield return _waitForSeconds;
+        _settingsButtonGameLevel.SetValue();
         _sceneLoader.RevivePlatform();
         _brickCounter.TryVictory();
     }
