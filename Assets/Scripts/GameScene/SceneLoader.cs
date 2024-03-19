@@ -12,12 +12,14 @@ namespace GameScene
         [SerializeField]private ParticleSystem _startEffect;
         [SerializeField] private Platforma _platforma;
         [SerializeField] private Ball _ball;
+        [SerializeField] private float _duration = 0.05f;
 
-        private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.05f);
+        private WaitForSeconds _waitForSeconds;
         private WaitForSeconds _waitForSpawnPlatform = new WaitForSeconds(1f);
     
         private void Start()
         {
+            _waitForSeconds = new WaitForSeconds(_duration);
             StartCoroutine(SetActive());
         }
 

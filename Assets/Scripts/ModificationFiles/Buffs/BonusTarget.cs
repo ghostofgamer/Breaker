@@ -14,6 +14,7 @@ namespace ModificationFiles.Buffs
         [SerializeField] private Effect[] _effects;
         [SerializeField] private BuffCounter _buffCounter;
 
+        private List<Transform> bricksList;
         private List<Transform> _filtredBrick;
         private int _randomIndex;
         private int _randomEffectIndex;
@@ -34,12 +35,22 @@ namespace ModificationFiles.Buffs
 
         private IEnumerator OnBonusTargetActivated()
         {
-            List<Transform> bricksList = new List<Transform>();
+            bricksList = new List<Transform>();
             _filtredBrick = new List<Transform>();
-
-            for (int i = 0; i < _bricks.childCount; i++)
+            Debug.Log("Target ");
+            FindAllChildren(_bricks);
+            /*for (int i = 0; i < _bricks.childCount; i++)
+            {
                 bricksList.Add(_bricks.GetChild(i));
+            }*/
+                
 
+            
+            for (int i = 0; i < _filtredBrick.Count; i++)
+            {
+                Debug.Log("ЛИСТ " + _filtredBrick[i].name);
+            }
+            
             _filtredBrick = bricksList
                 .Where(p => p.gameObject.GetComponent<Brick>() && !p.gameObject.GetComponent<Brick>().IsEternal &&
                             p.gameObject.activeSelf == true).ToList();
@@ -58,6 +69,7 @@ namespace ModificationFiles.Buffs
             }
         }
 
+        
         public override void StopModification()
         {
             Reset();
@@ -79,7 +91,23 @@ namespace ModificationFiles.Buffs
             _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_effects[_randomEffectIndex], true);
             _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _newMaterial;
         }
-
+        private  void FindAllChildren(Transform parent)
+        {
+            
+            for (int i = 0; i < parent.childCount; i++)
+            {
+                Transform child = parent.GetChild(i);
+                bricksList.Add(child);
+                FindAllChildren(child);
+            }
+            /*for (int i = 0; i < parent.childCount; i++)
+            {
+                Transform child = parent.GetChild(i);
+                bricksList.Add(child);
+                FindAllChildren(child);
+            }*/
+        }
+        
         private int GetRandomIndex(int count)
         {
             var random = new System.Random();

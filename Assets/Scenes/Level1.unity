@@ -16850,6 +16850,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1129974471}
     - target: {fileID: 1201441983891836097, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+      propertyPath: _chanceBonus
+      value: 
+      objectReference: {fileID: 7403276223480039398}
+    - target: {fileID: 1201441983891836097, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
       propertyPath: _bonusCounter
       value: 
       objectReference: {fileID: 1580274398}
@@ -16865,6 +16869,10 @@ PrefabInstance:
       propertyPath: _fragmentsCounter
       value: 
       objectReference: {fileID: 2124934855}
+    - target: {fileID: 1201441983891836097, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+      propertyPath: _resistanceDebuff
+      value: 
+      objectReference: {fileID: 7403276223480039396}
     - target: {fileID: 1939733840446481045, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
       propertyPath: _originalPlatform
       value: 
@@ -16881,7 +16889,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8057163003263999677, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 859035171741001445, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
@@ -17305,6 +17314,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
+--- !u!1 &1135963083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135963084}
+  - component: {fileID: 1135963085}
+  m_Layer: 0
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1135963084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135963083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1455671633}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1135963085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135963083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448dedcfaaa1b1d449153f563495b0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreTxt: {fileID: 0}
+  _save: {fileID: 293203874}
+  _load: {fileID: 293203873}
 --- !u!4 &1137872689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4782543229931610, guid: 395a551931a0b5c479c9a0eb8883174e, type: 3}
@@ -21071,6 +21127,7 @@ Transform:
   - {fileID: 2124934854}
   - {fileID: 1771528541}
   - {fileID: 1991885203}
+  - {fileID: 1135963084}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1455671634
@@ -22481,6 +22538,7 @@ MonoBehaviour:
   _luckySave: {fileID: 0}
   _electricBallActivator: {fileID: 0}
   _chanceBonus: {fileID: 0}
+  _isOriginal: 0
 --- !u!4 &1561480520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1246639532634330345, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
@@ -30047,7 +30105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bonusCounter: {fileID: 1580274398}
-  _save: {fileID: 293203874}
 --- !u!4 &1771528541
 Transform:
   m_ObjectHideFlags: 0
@@ -30629,6 +30686,7 @@ MonoBehaviour:
   _luckySave: {fileID: 0}
   _electricBallActivator: {fileID: 0}
   _chanceBonus: {fileID: 0}
+  _isOriginal: 0
 --- !u!4 &1835153964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e62999f8e0c14d4b99956774992d1e2, type: 3}
@@ -32917,6 +32975,7 @@ MonoBehaviour:
   _startEffect: {fileID: 1358634372}
   _platforma: {fileID: 824722463}
   _ball: {fileID: 621576494}
+  _duration: 0.05
 --- !u!1 &1999881544 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
@@ -35677,14 +35736,14 @@ PrefabInstance:
       propertyPath: _fragmentsCounter
       value: 
       objectReference: {fileID: 2124934855}
-    - target: {fileID: 1039872319094519417, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -263.00012
-      objectReference: {fileID: 0}
     - target: {fileID: 1284111574594062255, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: _save
       value: 
       objectReference: {fileID: 293203874}
+    - target: {fileID: 1284111574594062255, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+      propertyPath: _score
+      value: 
+      objectReference: {fileID: 1135963085}
     - target: {fileID: 1284111574594062255, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: _brickCounter
       value: 
@@ -35717,10 +35776,6 @@ PrefabInstance:
       propertyPath: _save
       value: 
       objectReference: {fileID: 293203874}
-    - target: {fileID: 2975735235547945634, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -263.00012
-      objectReference: {fileID: 0}
     - target: {fileID: 3144851141780537265, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -35801,14 +35856,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3301970542757029491, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -263.00012
-      objectReference: {fileID: 0}
-    - target: {fileID: 3535313525142339704, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -263.00012
-      objectReference: {fileID: 0}
     - target: {fileID: 4185385819328727366, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: _platformaMover
       value: 
@@ -35849,18 +35896,6 @@ PrefabInstance:
       propertyPath: _save
       value: 
       objectReference: {fileID: 293203874}
-    - target: {fileID: 7079618363099612870, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -263.00012
-      objectReference: {fileID: 0}
-    - target: {fileID: 7281689045130552109, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633356765897258910, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 91.44983
-      objectReference: {fileID: 0}
     - target: {fileID: 7834768391479354249, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: _brickCounter
       value: 
@@ -35881,21 +35916,9 @@ PrefabInstance:
       propertyPath: _platformaRevive
       value: 
       objectReference: {fileID: 824722466}
-    - target: {fileID: 7907019936775564652, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -474.32874
-      objectReference: {fileID: 0}
     - target: {fileID: 8128252078504996663, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128252078504996663, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.00018310547
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177265313230092445, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -263.00012
       objectReference: {fileID: 0}
     - target: {fileID: 8258700592989479751, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_AnchorMax.x
@@ -36908,6 +36931,10 @@ PrefabInstance:
       propertyPath: _luckySave
       value: 
       objectReference: {fileID: 588357846}
+    - target: {fileID: 8330426738732886309, guid: 13415f14dfcd4a843864b6abceccb1bf, type: 3}
+      propertyPath: _isOriginal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8330426738732886309, guid: 13415f14dfcd4a843864b6abceccb1bf, type: 3}
       propertyPath: _chanceBonus
       value: 

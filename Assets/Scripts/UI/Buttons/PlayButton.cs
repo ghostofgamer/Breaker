@@ -8,6 +8,7 @@ public class PlayButton : AbstractButton
 {
     [SerializeField]private WaveMotion _waveMotion;
     [SerializeField] private CanvasAnimator _canvasAnimator; 
+    [SerializeField]private AudioSource _audioSource;
     
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     private WaitForSeconds _waitFor = new WaitForSeconds(0.16f);
@@ -17,6 +18,7 @@ public class PlayButton : AbstractButton
 
     protected override void OnClick()
     {
+        _audioSource.PlayOneShot(_audioSource.clip);
         // SceneManager.LoadScene(SceneName);
         StartCoroutine(BricksMove());
     }

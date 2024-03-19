@@ -20,6 +20,7 @@ namespace UI.Screens
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private int _indexLevel;
         [SerializeField] private Save _save;
+        [SerializeField] private Score _score;
 
         private Vector3 _target;
         private bool _isVictory = false;
@@ -61,6 +62,7 @@ namespace UI.Screens
         {
             _save.SetData("LevelStatus" + _indexLevel, (int) LevelState.Completed);
             _save.SetData(Save.Score + _indexLevel, _scoreCounter.GetScore());
+            _score.Increase(_scoreCounter.GetScore());
             SetValue();
             _animatorText.Play("LevelCompliteTextMove");
             yield return _waitForSeconds;

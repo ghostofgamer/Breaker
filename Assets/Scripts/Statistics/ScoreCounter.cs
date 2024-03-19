@@ -6,19 +6,17 @@ namespace Statistics
     public class ScoreCounter : MonoBehaviour
     {
         [SerializeField] private BonusCounter _bonusCounter;
-        [SerializeField] private Save _save;
 
-        private int _score;
+        private int _scoreValue;
 
         public void IncreaseScore(int score)
         {
-            _score += score;
+            _scoreValue += score;
         }
 
         public int GetScore()
         {
-            int scoreAmount = _score + _bonusCounter.GetBonus();
-            _save.SetData(Save.Score, scoreAmount);
+            int scoreAmount = _scoreValue + _bonusCounter.GetBonus();
             return scoreAmount;
         }
     }

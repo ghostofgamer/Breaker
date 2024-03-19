@@ -16,7 +16,9 @@ namespace Statistics
         private void Start()
         {
             _score = _load.Get(Save.Score, _startScore);
-            Show();
+
+            if (_scoreTxt != null)
+                Show();
         }
 
         public void Increase(int score)
