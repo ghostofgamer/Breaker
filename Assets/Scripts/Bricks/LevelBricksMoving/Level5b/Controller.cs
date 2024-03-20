@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public GameObject[] objects;
-    public float rotationTime = 5.0f;
-    public float delayBetweenObjects = 1.0f;
+    [SerializeField]private GameObject[] _objects;
+    [SerializeField]private float _rotationTime = 6f;
+    [SerializeField]private float _delayBetweenObjects = 1.65f;
 
-    private WaitForSeconds delay;
+    private WaitForSeconds _delay;
+    private WaitForSeconds _delayRotaion;
 
     private void Start()
     {
-        delay = new WaitForSeconds(delayBetweenObjects);
+        _delay = new WaitForSeconds(_delayBetweenObjects);
+        _delayRotaion = new WaitForSeconds(_rotationTime);
         StartCoroutine(RotateObjects());
     }
 
@@ -20,24 +22,26 @@ public class Controller : MonoBehaviour
     {
         while (true)
         {
-            for (int i = 0; i < objects.Length; i++)
+            yield return _delay;
+            
+            for (int i = 0; i < _objects.Length; i++)
             {
-                objects[i].GetComponent<AccelerateRotate>().StartRotation();
-                yield return delay;
+                _objects[i].GetComponent<AccelerateRotate>().StartRotation();
+                yield return _delay;
             }
 
-            yield return new WaitForSeconds(3f);
+            yield return _delayRotaion;
 
-            for (int i = objects.Length - 1; i >= 0; i--)
+            for (int i = _objects.Length - 1; i >= 0; i--)
             {
-                objects[i].GetComponent<AccelerateRotate>().StopRotation();
-                objects[i].GetComponent<DecelerateStop>()
-                    .StartDeceleration(objects[i].GetComponent<AccelerateRotate>().maxSpeed);
+                _objects[i].GetComponent<AccelerateRotate>().StopRotation();
+                _objects[i].GetComponent<DecelerateStop>()
+                    .StartDeceleration(_objects[i].GetComponent<AccelerateRotate>().MaxSpeed);
                 
-                yield return delay;
+                yield return _delay;
             }
 
-            yield return delay;
+            
             
             /*// Раскручиваем объекты в прямом порядке
             for (int i = 0; i < objects.Length; i++)

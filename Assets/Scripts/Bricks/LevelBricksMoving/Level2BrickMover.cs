@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using BulletFiles;
 using GameScene.BallContent;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Bricks.LevelBricksMoving
 {
@@ -40,6 +42,14 @@ namespace Bricks.LevelBricksMoving
                 StopCoroutine(_coroutine);
 
             _coroutine = StartCoroutine(MoveBetweenTargetsCoroutine());
+        }
+
+        private void Update()
+        {
+            if (_bricks[0].gameObject.activeSelf)
+                return;
+            
+            Over();
         }
 
         private IEnumerator MoveBetweenTargetsCoroutine()
@@ -90,7 +100,7 @@ namespace Bricks.LevelBricksMoving
             }
         }
 
-        private void OnTriggerEnter(Collider other)
+        /*private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out BallMover ballMover) || other.TryGetComponent(out Bullet bullet))
             {
@@ -102,6 +112,17 @@ namespace Bricks.LevelBricksMoving
 
                 gameObject.SetActive(false);
             }
+        }*/
+
+        private void Over()
+        {
+            foreach (var brick in _bricks)
+            {
+                brick.GetComponent<Rigidbody>().isKinematic = false;
+                brick.GetComponent<Rigidbody>().AddForce(-_direction.normalized * Random.Range(_minValue, _maxValue), ForceMode.Impulse);
+            }
+
+            gameObject.SetActive(false);
         }
     }
 }

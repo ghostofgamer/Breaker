@@ -15886,6 +15886,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19892270, guid: e8bb3298d1ff4a44baa4bbd063c83b95, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 19892270, guid: e8bb3298d1ff4a44baa4bbd063c83b95, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.25490198
       objectReference: {fileID: 0}
@@ -35920,6 +35924,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8128252078504996663, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00024414062
+      objectReference: {fileID: 0}
     - target: {fileID: 8258700592989479751, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -37731,7 +37739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6882135241083101429, guid: 82c1669c8802f2c428a417452a5f8478, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.68
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 6882135241083101429, guid: 82c1669c8802f2c428a417452a5f8478, type: 3}
       propertyPath: m_LocalRotation.w

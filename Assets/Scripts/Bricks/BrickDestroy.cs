@@ -6,7 +6,6 @@ namespace Bricks
     {
         public override void Die()
         {
-            Debug.Log("Умер");
             Destroy();
         }
     }

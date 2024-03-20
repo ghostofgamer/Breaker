@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class AccelerateRotate : MonoBehaviour
 {
-    public float maxSpeed = 100.0f;
-    public float accelerationTime = 2.0f;
+    private float _maxSpeed = 100.0f;
+    private float _accelerationTime = 3f;
+    private float _currentSpeed;
+    private float _acceleration;
 
-    private float currentSpeed;
-    private float acceleration;
-
+    public float MaxSpeed => _maxSpeed;
+    
     private void Start()
     {
-        acceleration = maxSpeed / accelerationTime;
+        _acceleration = _maxSpeed / _accelerationTime;
     }
 
     public void StartRotation()
     {
-         currentSpeed = 0;
+         _currentSpeed = 0;
         enabled = true;
     }
 
@@ -28,11 +29,11 @@ public class AccelerateRotate : MonoBehaviour
 
     private void Update()
     {
-        if (currentSpeed < maxSpeed)
+        if (_currentSpeed < _maxSpeed)
         {
-            currentSpeed += acceleration * Time.deltaTime;
+            _currentSpeed += _acceleration * Time.deltaTime;
         }
 
-        transform.Rotate(Vector3.up, currentSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, _currentSpeed * Time.deltaTime);
     }
 }

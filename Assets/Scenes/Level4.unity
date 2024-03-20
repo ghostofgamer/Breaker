@@ -13528,6 +13528,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19892270, guid: e8bb3298d1ff4a44baa4bbd063c83b95, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 19892270, guid: e8bb3298d1ff4a44baa4bbd063c83b95, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.25490198
       objectReference: {fileID: 0}
@@ -29011,6 +29015,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8127033033840559049, guid: 10c610d0aae46094581666f43de41707, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.1792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127033033840559049, guid: 10c610d0aae46094581666f43de41707, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.15810788
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127033033840559049, guid: 10c610d0aae46094581666f43de41707, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.16163078
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29256,13 +29272,17 @@ PrefabInstance:
       propertyPath: _platformaRevive
       value: 
       objectReference: {fileID: 824722466}
+    - target: {fileID: 7907019936775564652, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -474.32874
+      objectReference: {fileID: 0}
     - target: {fileID: 8128252078504996663, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8128252078504996663, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 8258700592989479751, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_AnchorMax.x

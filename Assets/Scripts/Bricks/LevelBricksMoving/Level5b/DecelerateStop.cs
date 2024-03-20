@@ -4,29 +4,28 @@ using UnityEngine;
 
 public class DecelerateStop : MonoBehaviour
 {
-    public float decelerationTime = 2.0f;
-
-    private float currentSpeed;
-    private float deceleration;
+    private float _decelerationTime = 3.0f;
+    private float _currentSpeed;
+    private float _deceleration;
 
     public void StartDeceleration(float startSpeed)
     {
         enabled = true;
-        currentSpeed = startSpeed;
-        deceleration = currentSpeed / decelerationTime;
+        _currentSpeed = startSpeed;
+        _deceleration = _currentSpeed / _decelerationTime;
     }
 
     private void Update()
     {
-        if (currentSpeed > 0.0f)
+        if (_currentSpeed > 0.0f)
         {
-            currentSpeed -= deceleration * Time.deltaTime;
+            _currentSpeed -= _deceleration * Time.deltaTime;
         }
         else
         {
             enabled = false;
         }
 
-        transform.Rotate(Vector3.up, currentSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, _currentSpeed * Time.deltaTime);
     }
 }
