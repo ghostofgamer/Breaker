@@ -14,7 +14,7 @@ namespace PlayerFiles.PlatformaContent
         private float _minX = -11f;
         private float _maxX = 11f;
         private float _minZ = -10f;
-        private float _maxZ = 11f;
+        private float _maxZ = 5f;
         private bool _isMousePressed = false;
         private bool _isReverse = false;
         private bool _isFirstThrow = true;

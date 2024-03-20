@@ -1,6 +1,7 @@
 using ModificationFiles;
 using Statistics;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 
@@ -32,6 +33,8 @@ namespace Bricks
         public bool IsImmortalFlag => IsImmortal;
         public bool IsEternal => _isEternal;
 
+        public event UnityAction Dead;
+        
         private void Start()
         {
             if (!_isEternal)
@@ -95,6 +98,7 @@ namespace Bricks
                 return;
             
             // _audioSource.PlayOneShot(_audioSource.clip);
+            Dead?.Invoke();
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;
             GetBuff();
