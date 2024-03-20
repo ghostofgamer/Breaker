@@ -37,6 +37,8 @@ namespace Levels
 
         private LevelState state;
 
+        public LevelState LevelState => state;
+
         private Color _currentColor;
 
         private void Start()
