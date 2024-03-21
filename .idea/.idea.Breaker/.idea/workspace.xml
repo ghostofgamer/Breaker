@@ -22,7 +22,16 @@
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BricksMaterials/Fiolet 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BricksMaterials/Fiolet 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Localization/LeanLocalization.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Localization/LeanLocalization.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ChooseLvlScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ChooseLvlScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level7/MovingLevel7.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level7/MovingLevel7.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/LevelInfo/LevelInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/LevelInfo/LevelInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +132,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/QuitButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ModificationFiles/RotateBonusTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/TestBallLose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level8b/CyclicalMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skins/SkinPlatformLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameScene/Bourder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -171,10 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ClaimButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScreenFocus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformModification.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ChanceShield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/BonusDeath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/ResistanceDebuff.cs" />
@@ -215,13 +221,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level5b/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level2BrickMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level6/LoopedMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Levels/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Progress/ProgressManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level7/MovingLevel7.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/LevelInfo/LevelInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level8aTriggerPalma.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level8a/Level8aTriggerPalma.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/PlatformaMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level8b/CyclicalMovement.cs" />
       </list>
     </option>
   </component>
@@ -332,7 +342,8 @@
       <workItem from="1710834054709" duration="14818000" />
       <workItem from="1710923223029" duration="6627000" />
       <workItem from="1710930744646" duration="61000" />
-      <workItem from="1710930845483" duration="8878000" />
+      <workItem from="1710930845483" duration="8904000" />
+      <workItem from="1711011224026" duration="6455000" />
     </task>
     <servers />
   </component>
@@ -381,10 +392,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1710758286686" />
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1710761598950">
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup" timestamp="1711025049145">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1710761598950" />
+    <state x="668" y="353" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1711025049145" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

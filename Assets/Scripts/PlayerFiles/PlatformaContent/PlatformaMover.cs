@@ -25,6 +25,8 @@ namespace PlayerFiles.PlatformaContent
         
         public float Speed => _moveSpeed;
         
+        public int DirectionX { get; private set; }
+        
         void Update()
         {
             float mouse = Input.GetAxis(_mouseX) * 2;
@@ -100,9 +102,9 @@ namespace PlayerFiles.PlatformaContent
                 else
                     targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z + _offset);
 
-
                 float clampedX = Mathf.Clamp(targetPosition.x, _minX, _maxX);
                 float clampedZ = Mathf.Clamp(targetPosition.z, _minZ, _maxZ);
+                GetDirection(targetPosition,clampedX);
 
                 Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
                 Vector3 targetPositiomMouse = new Vector3(hit.point.x, 4, hit.point.z);
@@ -119,6 +121,43 @@ namespace PlayerFiles.PlatformaContent
             _isMousePressed = false;
             _isFirstThrow = true;
             gameObject.SetActive(true);
+        }
+
+        public void GetDirection(Vector3 targetPosition,float x)
+        {
+            if (x > transform.position.x)
+            {
+                Debug.Log("1");
+                DirectionX =  1; 
+            }
+            else if (x < transform.position.x)
+            {
+                Debug.Log("-1");
+                DirectionX =  -1; 
+            }
+            else
+            {
+                Debug.Log("0");
+                DirectionX =  0; 
+            }
+            
+            
+            /*
+            if (targetPosition.x > transform.position.x)
+            {
+                Debug.Log("1");
+                DirectionX =  1; 
+            }
+            else if (targetPosition.x < transform.position.x)
+            {
+                Debug.Log("-1");
+                DirectionX =  -1; 
+            }
+            else
+            {
+                Debug.Log("0");
+                DirectionX =  0; 
+            }*/
         }
     }
 }

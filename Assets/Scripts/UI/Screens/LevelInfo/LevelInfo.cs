@@ -79,13 +79,13 @@ namespace UI.Screens.LevelInfo
             _audioSource.PlayOneShot(_audioSource.clip);
             _animator.Play("LevelCubeInfoScreenUp");
             Debug.Log("IsOpen" + IsOpen + this.name);
-            // _colliderController.SetValue(false);
+            _colliderController.SetValue(false);
             // _colliderController.SetValueEnabled(false);
         }
 
         private IEnumerator CloseScreen()
         {
-            // _colliderController.SetValue(true);
+            _colliderController.SetValue(true);
             // _colliderController.SetValueEnabled(true);
             _animator.Play("LevelCubeInfoScreenDown");
             _audioSource.PlayOneShot(_audioSource.clip);
