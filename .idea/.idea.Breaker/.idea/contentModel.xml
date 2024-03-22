@@ -1047,6 +1047,9 @@
           </e>
         </e>
         <e p="Animations" t="Include">
+          <e p="Bricks" t="Include">
+            <e p="Level9b" t="Include" />
+          </e>
           <e p="Buttons" t="Include" />
           <e p="Camera" t="Include" />
           <e p="ChooseLvl" t="Include" />
@@ -1548,6 +1551,9 @@
             <e p="LevelBricksMoving" t="Include">
               <e p="BrickMover.cs" t="Include" />
               <e p="KinematicChangerLevel5a.cs" t="Include" />
+              <e p="Level10" t="Include">
+                <e p="TriangleMovement.cs" t="Include" />
+              </e>
               <e p="Level2BrickMover.cs" t="Include" />
               <e p="Level3MoveBricks.cs" t="Include" />
               <e p="Level5b" t="Include">
@@ -1569,6 +1575,9 @@
                 <e p="CyclicalMovement.cs" t="Include" />
                 <e p="ParentsChanger.cs" t="Include" />
               </e>
+              <e p="Level9b" t="Include">
+                <e p="BrickRingController.cs" t="Include" />
+              </e>
               <e p="SequentialRotationControllerLevel5b.cs" t="Include" />
               <e p="TestLevel5b.cs" t="Include" />
               <e p="WaveBrick4Level.cs" t="Include" />
@@ -1584,6 +1593,7 @@
             <e p="CameraDistance.cs" t="Include" />
             <e p="CameraMover.cs" t="Include" />
             <e p="CameraVictoryMover.cs" t="Include" />
+            <e p="FovChanger.cs" t="Include" />
           </e>
           <e p="ColliderController.cs" t="Include" />
           <e p="EffectDestroyer.cs" t="Include" />

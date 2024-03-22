@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bricks;
 using BulletFiles;
 using GameScene.BallContent;
 using UnityEngine;
@@ -8,6 +9,17 @@ using UnityEngine;
 public class KinematicChangerLevel5a : MonoBehaviour
 {
     [SerializeField] private GameObject[] _bricks;
+    [SerializeField] private Brick _brick;
+
+    private void OnEnable()
+    {
+        _brick.Dead += ChangeKinematic;
+    }
+
+    private void OnDisable()
+    {
+        _brick.Dead -= ChangeKinematic;
+    }
 
     private void Start()
     {
@@ -17,13 +29,13 @@ public class KinematicChangerLevel5a : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    /*private void OnCollisionEnter(Collision other)
     {
         if (other.collider.TryGetComponent(out Ball ball)||other.collider.TryGetComponent(out Bullet bullet))
         {
             ChangeKinematic();
         }
-    }
+    }*/
 
     public void ChangeKinematic()
     {

@@ -2,6 +2,7 @@ using System.Collections;
 using SaveAndLoad;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PlayerFiles
 {
@@ -21,7 +22,9 @@ namespace PlayerFiles
         private Coroutine _coroutine;
 
         public int Money => _money;
-
+        
+        public event UnityAction ValueChanged;
+        
         private void Start()
         {
             _money = _load.Get(Save.Money, _startMoney);
@@ -46,6 +49,7 @@ namespace PlayerFiles
         {
             int target = _money - price;
             Calculate(target, _duration);
+            ValueChanged?.Invoke();
         }
 
         private void ShowInfo()
@@ -82,6 +86,7 @@ namespace PlayerFiles
             _money = target;
             SaveMoney();
             ShowInfo();
+            ValueChanged?.Invoke();
         }
     }
 }

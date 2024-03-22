@@ -15,14 +15,14 @@ namespace ModificationFiles.Debuffs
 
         private List<Transform> _bricks;
         private List<Transform> _filtredBricks;
-    
-    
+
+
         protected override void Start()
         {
             base.Start();
             // _bricks = new List<Brick>();
             // _filtredBricks = new List<Brick>();
-        
+
             // _bricks = new List<Transform>();
             // _filtredBricks = new List<Transform>();
         }
@@ -59,7 +59,7 @@ namespace ModificationFiles.Debuffs
 
             // foreach (Brick brick in _filtredBricks)
             //     brick.GetComponent<Brick>().SetBoolImmortal(immortalBrick);
-        
+
             foreach (Transform brick in _filtredBricks)
                 brick.GetComponent<Brick>().SetBoolImmortal(immortalBrick);
         }
@@ -68,24 +68,26 @@ namespace ModificationFiles.Debuffs
         {
             _bricks = new List<Transform>();
             _filtredBricks = new List<Transform>();
-        
-            for (int i = 0; i < _bricksContainer.childCount; i++)
-                _bricks.Add(_bricksContainer.GetChild(i));
-        
+
+            /*for (int i = 0; i < _bricksContainer.childCount; i++)
+                _bricks.Add(_bricksContainer.GetChild(i));*/
+
+            FindAllChildren(_bricksContainer);
+
             _filtredBricks = _bricks
                 .Where(p => p.gameObject.GetComponent<Brick>() && !p.gameObject.GetComponent<Brick>().IsEternal &&
                             p.gameObject.activeSelf == true).ToList();
-        
-        
+
+
             Debug.Log("ДО");
-        
-        
+
+
             // for (int i = 0; i < _bricksContainer.childCount; i++)
             //     _bricks.Add(_bricksContainer.GetChild(i).GetComponent<Brick>());
             //
             // _filtredBricks = _bricks.Where(p => p.IsImmortalFlag == false).ToList();
             //
-        
+
             Debug.Log(_filtredBricks.Count);
 
             // for (int i = 0; i < _filtredBricks.Count; i++)
@@ -99,5 +101,21 @@ namespace ModificationFiles.Debuffs
     {
         GetBricks(false);
     }*/
+        private void FindAllChildren(Transform parent)
+        {
+            for (int i = 0; i < parent.childCount; i++)
+            {
+                Transform child = parent.GetChild(i);
+                _bricks.Add(child);
+                FindAllChildren(child);
+            }
+
+            /*for (int i = 0; i < parent.childCount; i++)
+            {
+                Transform child = parent.GetChild(i);
+                bricksList.Add(child);
+                FindAllChildren(child);
+            }*/
+        }
     }
 }
