@@ -9,7 +9,7 @@ namespace Bricks
         [SerializeField] private float _force;
         [SerializeField] private ParticleSystem _explodeEffect;
         [SerializeField] private ParticleSystem _bombFuseEffect;
-        [SerializeField] private AudioSource _audioSource;
+        // [SerializeField] private AudioSource _audioSource;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.6f);
         private bool _wickBurning = false;
@@ -19,7 +19,11 @@ namespace Bricks
         public override void Die()
         {
             if (IsImmortal)
+            {
+                AudioSource.PlayOneShot(AudioSource.clip);
                 return;
+            }
+                
 
             if (!_wickBurning && IsTargetBonus)
             {

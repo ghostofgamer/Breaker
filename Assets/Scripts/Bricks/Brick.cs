@@ -22,7 +22,8 @@ namespace Bricks
         [SerializeField] private FragmentsCounter _fragmentsCounter;
         [SerializeField] private bool _isEternal = false;
         // [SerializeField] private AudioSource _audioSource;
-
+        [SerializeField] protected AudioSource AudioSource;
+        
         private int _minBonus = 1;
         private int _maxBonus = 3;
         private float _bonusRadius = 1.65f;
@@ -95,7 +96,11 @@ namespace Bricks
         protected void Destroy()
         {
             if (IsImmortal)
+            {
+                AudioSource.PlayOneShot(AudioSource.clip);
                 return;
+            }
+                
             
             // _audioSource.PlayOneShot(_audioSource.clip);
             Dead?.Invoke();

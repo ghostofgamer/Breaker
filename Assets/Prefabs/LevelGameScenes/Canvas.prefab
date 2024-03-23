@@ -3609,7 +3609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -263, y: -378}
+  m_AnchoredPosition: {x: -263.00012, y: -378}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1430530545801407712
@@ -5912,7 +5912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 71.631836, y: -60.636475}
+  m_AnchoredPosition: {x: 71.631836, y: -60.635498}
   m_SizeDelta: {x: 143.264, y: -121.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &27669557911205612
@@ -7976,7 +7976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -263, y: 446}
+  m_AnchoredPosition: {x: -263.00012, y: 446}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3056166721226996312
@@ -8880,7 +8880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 91.45001, y: -146.66016}
+  m_AnchoredPosition: {x: 91.44946, y: -146.66016}
   m_SizeDelta: {x: 182.9, y: 81.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4179867256733291381
@@ -9199,7 +9199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -263, y: -34}
+  m_AnchoredPosition: {x: -263.00012, y: -34}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3317568733449540867
@@ -9733,7 +9733,6 @@ GameObject:
   - component: {fileID: 54858904630133150}
   - component: {fileID: 5789614551590236592}
   - component: {fileID: 1913458207009093927}
-  - component: {fileID: 7468382192082424125}
   - component: {fileID: 3947878363977640755}
   m_Layer: 5
   m_Name: LuckySaveTxt
@@ -9905,19 +9904,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: LuckySave
   FallbackText: Ball Grow
---- !u!114 &7468382192082424125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3527277828470205029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08247b65269e80e4781614c3526a57c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 54858904630133150}
 --- !u!114 &3947878363977640755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11306,7 +11292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -474.3286, y: 427.66602}
+  m_AnchoredPosition: {x: -474.32874, y: 427.66602}
   m_SizeDelta: {x: -948.657, y: -855.333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7495710928263098839
@@ -14217,7 +14203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.00012207031}
   m_SizeDelta: {x: 149, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2895806843859027471
@@ -15889,7 +15875,6 @@ GameObject:
   - component: {fileID: 4870264600547377544}
   - component: {fileID: 8663470253194474110}
   - component: {fileID: 2670423141451693978}
-  - component: {fileID: 8359789334913466087}
   - component: {fileID: 6238726472007951694}
   m_Layer: 5
   m_Name: GetReadyTxt
@@ -16061,19 +16046,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: GetReady
   FallbackText: Ball Grow
---- !u!114 &8359789334913466087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5163181870536061358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08247b65269e80e4781614c3526a57c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 4870264600547377544}
 --- !u!114 &6238726472007951694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16626,7 +16598,7 @@ MonoBehaviour:
   _animatorEnviropment: {fileID: 0}
   _animatorText: {fileID: 7783891307249121256}
   _reviveScreen: {fileID: 4753488500654358166}
-  _indexLevel: 1
+  _indexLevel: 13
   _save: {fileID: 0}
   _score: {fileID: 0}
 --- !u!114 &7973882327762959765
@@ -17914,7 +17886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -263, y: -174}
+  m_AnchoredPosition: {x: -263.00012, y: -174}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5642185473759247391
@@ -23783,7 +23755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -263, y: 502}
+  m_AnchoredPosition: {x: -263.00012, y: 502}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7857114656115601642
@@ -25965,7 +25937,6 @@ GameObject:
   - component: {fileID: 8663165450831473987}
   - component: {fileID: 6547401085625481055}
   - component: {fileID: 3693604517478217635}
-  - component: {fileID: 552388434293242303}
   - component: {fileID: 8439060634194961036}
   m_Layer: 5
   m_Name: ReviveTxt
@@ -26137,19 +26108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: Revive
   FallbackText: Ball Grow
---- !u!114 &552388434293242303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8373307614973333210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08247b65269e80e4781614c3526a57c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 8663165450831473987}
 --- !u!114 &8439060634194961036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27029,7 +26987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -263, y: -262}
+  m_AnchoredPosition: {x: -263.00012, y: -262}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8773170314503055760
