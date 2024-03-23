@@ -8577,6 +8577,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
   m_PrefabInstance: {fileID: 1050327518}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &380225245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6238726472007951694, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+  m_PrefabInstance: {fileID: 1876216669796287188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &389958851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11814,7 +11825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneLoader: {fileID: 1991885204}
   _brickCounter: {fileID: 980526520}
-  _LuckySaveText: {fileID: 1876676068}
+  _nameEffectAnimation: {fileID: 1876676075}
   _settingsButtonGameLevel: {fileID: 1955701420}
 --- !u!1 &818086220
 GameObject:
@@ -26083,15 +26094,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
---- !u!114 &1876676068 stripped
+--- !u!114 &1876676075 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7468382192082424125, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3947878363977640755, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
   m_PrefabInstance: {fileID: 1876216669796287188}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08247b65269e80e4781614c3526a57c2, type: 3}
+  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1880181940 stripped
@@ -27960,6 +27971,8 @@ MonoBehaviour:
   _platforma: {fileID: 824722463}
   _ball: {fileID: 621576494}
   _duration: 0.01
+  _getReadyAnimation: {fileID: 380225245}
+  _reviveAnimation: {fileID: 2039583938}
 --- !u!1001 &2002503381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28272,6 +28285,17 @@ Transform:
   - {fileID: 1103161815}
   m_Father: {fileID: 1867502213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039583938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8439060634194961036, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+  m_PrefabInstance: {fileID: 1876216669796287188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2046333285
 GameObject:
   m_ObjectHideFlags: 0

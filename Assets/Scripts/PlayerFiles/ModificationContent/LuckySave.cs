@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using GameScene;
+using ModificationFiles;
 using Statistics;
 using TMPro;
 using UnityEngine;
@@ -11,7 +12,8 @@ public class LuckySave : MonoBehaviour
 {
     [SerializeField] private SceneLoader _sceneLoader;
     [SerializeField] private BrickCounter _brickCounter;
-    [SerializeField] private TextLuckySaveMove _LuckySaveText;
+    // [SerializeField] private TextLuckySaveMove _LuckySaveText;
+    [SerializeField] private NameEffectAnimation _nameEffectAnimation;
     [SerializeField]private SettingsButtonGameLevel _settingsButtonGameLevel;
 
     private float _bonusChances = 50;
@@ -48,8 +50,9 @@ public class LuckySave : MonoBehaviour
     private IEnumerator ActivateExtraLife()
     {
         yield return _waitForStart;
-        _LuckySaveText.gameObject.SetActive(true);
-        _LuckySaveText.Play();
+        _nameEffectAnimation.Show();
+        /*_LuckySaveText.gameObject.SetActive(true);
+        _LuckySaveText.Play();*/
         yield return _waitForSeconds;
         _settingsButtonGameLevel.SetValue();
         _sceneLoader.RevivePlatform();

@@ -4213,7 +4213,7 @@ MonoBehaviour:
     Text: 'receive:'
     Object: {fileID: 0}
   - Language: Russian
-    Text: "\u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C:"
+    Text: "\u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C:"
     Object: {fileID: 0}
   - Language: Turkish
     Text: 'almak:'
@@ -4875,6 +4875,61 @@ MonoBehaviour:
   - Language: Turkish
     Text: "K\xFCrek Gecikmesi"
     Object: {fileID: 0}
+--- !u!1 &6848375887715530218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4786984767558445323}
+  - component: {fileID: 1913331204576816905}
+  m_Layer: 0
+  m_Name: GetReady
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4786984767558445323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848375887715530218}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7827702990199781519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913331204576816905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848375887715530218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Get Ready
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "Haz\u0131rlanmak"
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u044C\u0441\u044F"
+    Object: {fileID: 0}
 --- !u!1 &7133868599495325577
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,6 +5400,7 @@ Transform:
   - {fileID: 2686706338932884082}
   - {fileID: 1193700495057122335}
   - {fileID: 5594618595941794483}
+  - {fileID: 4786984767558445323}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5163642248733167183

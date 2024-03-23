@@ -18,18 +18,27 @@ public class ChangeSkinButton : AbstractButton
     [SerializeField] private int _colorIndex;
     [SerializeField]private AudioSource _audioSource;
     [SerializeField]private AudioClip _audioClip;
+    [SerializeField] private int _index;
 
     private int _selectedSkinIndex = 1;
     private int _unSelectedSkinIndex = 0;
+    private int _startSelectedIndex = 0;
 
     private void Start()
     {
-        var index = _load.Get(_selectedSkin.ToString(), _startIndex);
+        /*
+        _activeCapsuleIndex = _load.Get(Save.ActiveCapsuleIndex, 0);
+        _platformaSkinDatas[_activeCapsuleIndex].SetValueActive(true);
+        */
+
+        int indexSelected = _load.Get(Save.SelectedSkinBall, _startSelectedIndex);
+        _buttons[indexSelected].ChooseSkin();
+        /*var index = _load.Get(_selectedSkin.ToString(), _startIndex);
         
         if (index >= _selectedSkinIndex)
         {
             ChooseSkin();
-        }
+        }*/
     }
 
     protected override void OnClick()
@@ -46,14 +55,16 @@ public class ChangeSkinButton : AbstractButton
 
         _image.sprite = _newSprite;
         _selected.gameObject.SetActive(true);
-        _save.SetData(_selectedSkin.ToString(), _selectedSkinIndex);
+        // _save.SetData(_selectedSkin.ToString(), _selectedSkinIndex);
         _save.SetData(Save.SkinBall,_colorIndex);
+        _save.SetData(Save.SelectedSkinBall,_index);
     }
 
     private void UnSelectedSkin()
     {
         _image.sprite = _oldSprite;
         _selected.gameObject.SetActive(false);
-        _save.SetData(_selectedSkin.ToString(), _unSelectedSkinIndex);
+        // _save.SetData(_selectedSkin.ToString(), _unSelectedSkinIndex);
+        
     }
 }

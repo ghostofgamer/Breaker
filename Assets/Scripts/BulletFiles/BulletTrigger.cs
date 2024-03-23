@@ -12,6 +12,7 @@ namespace BulletFiles
         {
             if (other.TryGetComponent(out Brick brick))
             {
+                Instantiate(_explosion, transform.position, Quaternion.identity);
                 brick.Die();
                 gameObject.SetActive(false);
             }
