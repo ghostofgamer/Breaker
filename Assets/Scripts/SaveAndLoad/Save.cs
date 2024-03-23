@@ -14,7 +14,11 @@ namespace SaveAndLoad
 
         // public const string IsMuted = "IsMuted";
         [Header("SelectedSkins")] public const string SkinBall = "SkinBall";
+        
         public const string SelectedHeavy = "SelectedHeavy";
+        
+        public const string SelectedSkinBall = "SelectedSkinBall";
+        
         public const string SelectedFaster = "SelectedFaster";
         public const string SelectedBouncy = "SelectedBouncy";
         public const string SelectedSteel = "SelectedSteel";

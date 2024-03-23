@@ -18,7 +18,10 @@ namespace Bonus
         private Vector3 _direction;
         private float _minAngle = -15f;
         private float _maxAngle = 15f;
-
+        private float _minX = -11f;
+        private float _maxX = 11f; 
+        private float _currentX; 
+        
         void Start()
         {
             _startY = transform.position.y;
@@ -29,6 +32,8 @@ namespace Bonus
         void Update()
         {
             transform.position += _direction * (_speed * Time.deltaTime);
+            _currentX = Mathf.Clamp(transform.position.x, _minX, _maxX);
+            transform.position = new Vector3(_currentX, transform.position.y, transform.position.z);
             Jump();
         }
 
