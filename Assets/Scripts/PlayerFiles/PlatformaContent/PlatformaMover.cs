@@ -22,11 +22,11 @@ namespace PlayerFiles.PlatformaContent
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
         private Coroutine _coroutine;
         private string _mouseX = "Mouse X";
-        
+
         public float Speed => _moveSpeed;
-        
+
         public int DirectionX { get; private set; }
-        
+
         void Update()
         {
             float mouse = Input.GetAxis(_mouseX) * 2;
@@ -85,7 +85,7 @@ namespace PlayerFiles.PlatformaContent
         {
             _isMousePressed = flag;
         }
-    
+
         void MovePlatformWithMouse()
         {
             // Определяем целевую позицию в мировых координатах с учетом оффсета
@@ -104,7 +104,7 @@ namespace PlayerFiles.PlatformaContent
 
                 float clampedX = Mathf.Clamp(targetPosition.x, _minX, _maxX);
                 float clampedZ = Mathf.Clamp(targetPosition.z, _minZ, _maxZ);
-                GetDirection(targetPosition,clampedX);
+                GetDirection(targetPosition, clampedX);
 
                 Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
                 Vector3 targetPositiomMouse = new Vector3(hit.point.x, 4, hit.point.z);
@@ -123,25 +123,22 @@ namespace PlayerFiles.PlatformaContent
             gameObject.SetActive(true);
         }
 
-        public void GetDirection(Vector3 targetPosition,float x)
+        public void GetDirection(Vector3 targetPosition, float x)
         {
             if (x > transform.position.x)
             {
-                Debug.Log("1");
-                DirectionX =  1; 
+                DirectionX = 1;
             }
             else if (x < transform.position.x)
             {
-                Debug.Log("-1");
-                DirectionX =  -1; 
+                DirectionX = -1;
             }
             else
             {
-                Debug.Log("0");
-                DirectionX =  0; 
+                DirectionX = 0;
             }
-            
-            
+
+
             /*
             if (targetPosition.x > transform.position.x)
             {

@@ -33,6 +33,19 @@ namespace GameScene.BallContent
                 GetComponent<Ball>().StopMove();
                 Time.timeScale = 1;
             }
+
+            if (other.collider.TryGetComponent(out PlatformaMover platformaMover))
+            {
+                float mouse = Input.GetAxis("Mouse X") * 2;
+                float mouseY = Input.GetAxis("Mouse Y");
+                Bounce?.Invoke();
+                _audioSource.PlayOneShot(_audioSource.clip);
+                ContactPoint contact = other.contacts[0];
+                Vector3 newVector = new Vector3(mouse, 0, mouseY).normalized;
+                Vector3 platformNormal = contact.normal;
+                ChangeDirection(newVector, platformNormal);
+                Debug.Log("коллизия");
+            }
         }
 
         public void CheckPlatformCollision()
@@ -59,7 +72,7 @@ namespace GameScene.BallContent
                 {
                     Bounce?.Invoke();
                     _audioSource.PlayOneShot(_audioSource.clip);
-                    ChangeDirection(newVector, hit);
+                    ChangeDirection(newVector, hit.normal);
                 }
             }
 
@@ -77,8 +90,37 @@ namespace GameScene.BallContent
 
             // ChangeDirection(New,hitColliders[i]);
         }
+        private void ChangeDirection(Vector3 vector, Vector3 hit)
+        {
+            _meshRenderer.enabled = false;
+            /*Vector3 platformUp = hit.transform.forward;
+            Vector3 newPosition = hit.point + platformUp * _platformOffset;*/
+            _meshRenderer.enabled = true;
 
-        private void ChangeDirection(Vector3 vector, RaycastHit hit)
+            Vector3 reflect = Vector3.Reflect(_ballMover.Direction, hit);
+            Vector3 newReflect = new Vector3(reflect.x, reflect.y, 1).normalized;
+
+            if (vector.z > 0.5)
+            {
+                _ballMover.SetDirection(new Vector3(reflect.x, reflect.y, reflect.z + vector.z).normalized);
+                // Vector3 direction = new Vector3(reflect.x, reflect.y, newReflect.z + vector.z).normalized;
+                _ballMover.FastSpeed();
+            }
+            else
+            {
+                _ballMover.SetDirection(newReflect);
+            }
+
+            if (vector.x > 0.3 || vector.x < -0.3)
+            {
+                _ballMover.SetDirection(new Vector3(reflect.x + vector.x, reflect.y, newReflect.z).normalized);
+            }
+            else
+            {
+                _ballMover.SetDirection(newReflect);
+            }
+        }
+        /*private void ChangeDirection(Vector3 vector, RaycastHit hit)
         {
             _meshRenderer.enabled = false;
             Vector3 platformUp = hit.transform.forward;
@@ -107,6 +149,6 @@ namespace GameScene.BallContent
             {
                 _ballMover.SetDirection(newReflect);
             }
-        }
+        }*/
     }
 }
