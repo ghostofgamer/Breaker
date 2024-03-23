@@ -1,29 +1,22 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Enum;
 using MainMenu.Shop;
-using PlayerFiles;
 using SaveAndLoad;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class BuyUpgradeButton : AbstractButton
+public class BuyUpgradeButton : BuyButton
 {
-    [SerializeField] private Wallet _wallet;
-    [SerializeField] private int _price;
-    [SerializeField] private CloseInfoScreenButton _closeInfoButton;
+    /*[SerializeField] private Wallet _wallet;
+    [SerializeField] private int _price;*/
+    // [SerializeField] private CloseInfoScreenButton _closeInfoButton;
     [SerializeField] private Save _save;
-    [SerializeField] private Enum.Buffs _buffElement;
+    [SerializeField] private Buffs _buffElement;
     [SerializeField] private BuffInfo _buff;
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _audioClip;
-    [SerializeField] private TMP_Text _priceTxt;
-    [SerializeField]private Color _color;
+    /*[SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _audioClip;*/
+    /*[SerializeField] private TMP_Text _priceTxt;
+    [SerializeField]private Color _color;*/
 
-    protected override void OnEnable()
+    /*protected override void OnEnable()
     {
         base.OnEnable();
         _wallet.ValueChanged += CheckSolvency;
@@ -38,29 +31,40 @@ public class BuyUpgradeButton : AbstractButton
     private void Start()
     {
         CheckSolvency();
-    }
+    }*/
 
-    protected override void OnClick()
+
+    /*protected override void OnClick()
     {
         if (_wallet.Money >= _price)
             MakeDeal();
         else
             _audioSource.PlayOneShot(_audioClip);
-    }
+    }*/
 
-    private void MakeDeal()
+    /*private void MakeDeal()
     {
         _audioSource.PlayOneShot(_audioSource.clip);
-        Debug.Log(_buffElement.ToString());
         _save.SetData(_buffElement.ToString(), 3);
         _buff.ChangeValue();
         _closeInfoButton.ScreenClose();
-        _wallet.RemoveMoney(_price);
+        Wallet.RemoveMoney(Price);
+    }*/
+
+    protected override void Buy()
+    {
+        _save.SetData(_buffElement.ToString(), 3);
+        _buff.ChangeValue();
+        
+        /*if (Wallet.Money >= Price)
+            MakeDeal();
+        else
+            _audioSource.PlayOneShot(_audioClip);*/
     }
 
-    private void CheckSolvency()
+    /*private void CheckSolvency()
     {
         if (_wallet.Money < _price)
             _priceTxt.color = _color;
-    }
+    }*/
 }
