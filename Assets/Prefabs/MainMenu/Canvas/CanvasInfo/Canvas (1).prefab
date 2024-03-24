@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7263648840011932761}
   - component: {fileID: 9155323356861388891}
   - component: {fileID: 43487826014861204}
+  - component: {fileID: 7921615947346469352}
   m_Layer: 5
   m_Name: SkinPlatform1 (3)
   m_TagString: Untagged
@@ -99,6 +100,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7921615947346469352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9092643186554685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 43487826014861204}
 --- !u!1 &89648981253168485
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +489,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8421394321726708903}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 5707537420976300102}
+  _uiAnimations: {fileID: 4185310897812727487}
 --- !u!114 &3885362385895941610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,6 +1264,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 3743410524629547014}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 2190598220539533923}
+  _uiAnimations: {fileID: 1393743202751327808}
 --- !u!114 &4584045044762588414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1965,6 +1981,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 801351689072631385}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 7058200740382744382}
 --- !u!114 &7310589944781088181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2021,6 +2038,7 @@ GameObject:
   - component: {fileID: 4754455171880787513}
   - component: {fileID: 5332694081788835123}
   - component: {fileID: 6954895510681457249}
+  - component: {fileID: 7058200740382744382}
   m_Layer: 5
   m_Name: SkinPlatform1 (7)
   m_TagString: Untagged
@@ -2108,6 +2126,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7058200740382744382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801351689072631385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 6954895510681457249}
 --- !u!1 &854302639681559321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,6 +2231,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 9092643186554685}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 7921615947346469352}
 --- !u!114 &1984365647103207747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,6 +3890,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7045978383761426294}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 1842673725190639394}
+  _uiAnimations: {fileID: 4848277827766882012}
 --- !u!114 &7892187816012046782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4192,6 +4225,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 9092643186554685}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 559123457418567119}
+  _uiAnimations: {fileID: 7921615947346469352}
 --- !u!114 &4850378455571345624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4876,6 +4910,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 5564445997154386200}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 8047248995477034503}
 --- !u!114 &2595705000787472471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5168,6 +5203,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8833715587824378668}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 7814308089642977522}
 --- !u!114 &5877202814589074882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6026,6 +6062,7 @@ GameObject:
   - component: {fileID: 5027532142220485102}
   - component: {fileID: 4393433914564955512}
   - component: {fileID: 4857451849507118442}
+  - component: {fileID: 1393743202751327808}
   m_Layer: 5
   m_Name: SkinPlatform1 (1)
   m_TagString: Untagged
@@ -6113,6 +6150,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1393743202751327808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3743410524629547014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 4857451849507118442}
 --- !u!1 &3763905540137044033
 GameObject:
   m_ObjectHideFlags: 0
@@ -7479,6 +7529,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8421394321726708903}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 4185310897812727487}
 --- !u!114 &6653198315319833363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7906,6 +7957,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8833715587824378668}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 2948392146803641926}
+  _uiAnimations: {fileID: 7814308089642977522}
 --- !u!114 &2901354606837674882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8924,6 +8976,7 @@ GameObject:
   - component: {fileID: 6452109677369742905}
   - component: {fileID: 5989654617243863687}
   - component: {fileID: 5108720672883478169}
+  - component: {fileID: 8047248995477034503}
   m_Layer: 5
   m_Name: SkinPlatform1 (2)
   m_TagString: Untagged
@@ -9011,6 +9064,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8047248995477034503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564445997154386200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 5108720672883478169}
 --- !u!1 &5674627382479632192
 GameObject:
   m_ObjectHideFlags: 0
@@ -9524,6 +9590,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 801351689072631385}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 5819444247364256400}
+  _uiAnimations: {fileID: 7058200740382744382}
 --- !u!114 &3403355156222221245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9810,6 +9877,7 @@ GameObject:
   - component: {fileID: 3066145314443536935}
   - component: {fileID: 4262398147641572665}
   - component: {fileID: 8803581276051432566}
+  - component: {fileID: 2445465718719453034}
   m_Layer: 5
   m_Name: SkinPlatform1 (5)
   m_TagString: Untagged
@@ -9897,6 +9965,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2445465718719453034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236546664456544540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 8803581276051432566}
 --- !u!1 &6307371141534679506
 GameObject:
   m_ObjectHideFlags: 0
@@ -10258,6 +10339,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 6236546664456544540}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 4531482159128932114}
+  _uiAnimations: {fileID: 2445465718719453034}
 --- !u!114 &8001125666321708090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10525,6 +10607,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 3743410524629547014}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 1393743202751327808}
 --- !u!114 &8769051813348653010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11362,6 +11445,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7169930978180284596}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 5700375313059864047}
 --- !u!114 &3043971598580773164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11418,6 +11502,7 @@ GameObject:
   - component: {fileID: 7926092349365276097}
   - component: {fileID: 4076129762990578050}
   - component: {fileID: 4688072429526321452}
+  - component: {fileID: 4848277827766882012}
   m_Layer: 5
   m_Name: SkinPlatform1 (6)
   m_TagString: Untagged
@@ -11505,6 +11590,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4848277827766882012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7045978383761426294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 4688072429526321452}
 --- !u!1 &7169930978180284596
 GameObject:
   m_ObjectHideFlags: 0
@@ -11517,6 +11615,7 @@ GameObject:
   - component: {fileID: 8722523618624985713}
   - component: {fileID: 3950337565246388151}
   - component: {fileID: 7781354697714595970}
+  - component: {fileID: 5700375313059864047}
   m_Layer: 5
   m_Name: SkinPlatform1 (4)
   m_TagString: Untagged
@@ -11604,6 +11703,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5700375313059864047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169930978180284596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7781354697714595970}
 --- !u!1 &7178665535479499057
 GameObject:
   m_ObjectHideFlags: 0
@@ -13760,6 +13872,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7045978383761426294}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 4848277827766882012}
 --- !u!114 &1062153856943753016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13897,6 +14010,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7169930978180284596}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 8608512514424669249}
+  _uiAnimations: {fileID: 5700375313059864047}
 --- !u!114 &3476764029814814088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14124,6 +14238,7 @@ GameObject:
   - component: {fileID: 2126142848341066388}
   - component: {fileID: 621342961254675077}
   - component: {fileID: 633765791681968846}
+  - component: {fileID: 4185310897812727487}
   m_Layer: 5
   m_Name: SkinPlatform1
   m_TagString: Untagged
@@ -14211,6 +14326,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4185310897812727487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8421394321726708903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 633765791681968846}
 --- !u!1 &8454291557214685766
 GameObject:
   m_ObjectHideFlags: 0
@@ -14303,6 +14431,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 6236546664456544540}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 2445465718719453034}
 --- !u!114 &6771340863768807606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15058,6 +15187,7 @@ GameObject:
   - component: {fileID: 7814479020145870565}
   - component: {fileID: 8829942233514392870}
   - component: {fileID: 6847787153400672648}
+  - component: {fileID: 7814308089642977522}
   m_Layer: 5
   m_Name: SkinPlatform1 (8)
   m_TagString: Untagged
@@ -15145,6 +15275,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7814308089642977522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833715587824378668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 6847787153400672648}
 --- !u!1 &8835352897783525341
 GameObject:
   m_ObjectHideFlags: 0
@@ -15463,6 +15606,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 5564445997154386200}
   _shopBackGround: {fileID: 2944012449098781242}
   _audioSource: {fileID: 3848317618022802230}
+  _uiAnimations: {fileID: 8047248995477034503}
 --- !u!114 &4976128109151325536
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 1222690447108799005}
   - component: {fileID: 5100807044036780112}
   - component: {fileID: 1816468929971133431}
+  - component: {fileID: 5767668657316827866}
   m_Layer: 5
   m_Name: SkinPlatform1
   m_TagString: Untagged
@@ -536,6 +537,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5767668657316827866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285944412363148637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1816468929971133431}
 --- !u!1 &528772887175392661
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +562,7 @@ GameObject:
   - component: {fileID: 3160049968190693023}
   - component: {fileID: 1362318829771082109}
   - component: {fileID: 177444976039397108}
+  - component: {fileID: 1858570065661386658}
   m_Layer: 5
   m_Name: SkinPlatform1 (6)
   m_TagString: Untagged
@@ -635,6 +650,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1858570065661386658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528772887175392661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 177444976039397108}
 --- !u!1 &566908720405892602
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +959,7 @@ GameObject:
   - component: {fileID: 1514591329340995107}
   - component: {fileID: 8842366281429830474}
   - component: {fileID: 645323614645447163}
+  - component: {fileID: 3462763963645394391}
   m_Layer: 5
   m_Name: SkinPlatform1 (7)
   m_TagString: Untagged
@@ -1018,6 +1047,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3462763963645394391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839135890450127184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 645323614645447163}
 --- !u!1 &875824812544616713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1153,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8347687485687712977}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 6064270677285009477}
+  _uiAnimations: {fileID: 4001482106188716591}
 --- !u!114 &7855965581392237097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,6 +1306,7 @@ GameObject:
   - component: {fileID: 8559161005267053278}
   - component: {fileID: 4676368287363249258}
   - component: {fileID: 8697469640483347676}
+  - component: {fileID: 3953329496249424539}
   m_Layer: 5
   m_Name: SkinPlatform1 (1)
   m_TagString: Untagged
@@ -1350,6 +1394,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3953329496249424539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880181452334144072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 8697469640483347676}
 --- !u!1 &939966288080092894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1900,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 839135890450127184}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 3337444706724373065}
+  _uiAnimations: {fileID: 3462763963645394391}
 --- !u!114 &8264338572403564583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2658,6 +2716,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7113838988524796797}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 7590176322497131137}
 --- !u!114 &3343174378097244288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3570,6 +3629,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 528772887175392661}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 9184754625431297112}
+  _uiAnimations: {fileID: 1858570065661386658}
 --- !u!114 &7763520850386489171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5416,6 +5476,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 285944412363148637}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 5767668657316827866}
 --- !u!114 &2679601500566115689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5871,6 +5932,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7049017472775459304}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 2659291359371000253}
 --- !u!114 &3413465300188650769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7774,6 +7836,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 285944412363148637}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 6903765743116670856}
+  _uiAnimations: {fileID: 5767668657316827866}
 --- !u!114 &1053733206277886722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8398,6 +8461,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 528772887175392661}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 1858570065661386658}
 --- !u!114 &960750032893775795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9018,6 +9082,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7049017472775459304}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 674966373650096082}
+  _uiAnimations: {fileID: 2659291359371000253}
 --- !u!114 &4078569408746741130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10190,6 +10255,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 839135890450127184}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 3462763963645394391}
 --- !u!114 &2631936136681185321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10327,6 +10393,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 880181452334144072}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 6120943548205051451}
+  _uiAnimations: {fileID: 3953329496249424539}
 --- !u!114 &3147850526392914337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11181,6 +11248,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8347687485687712977}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 4001482106188716591}
 --- !u!114 &4655945473561812922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11371,6 +11439,7 @@ GameObject:
   - component: {fileID: 5228086646454540172}
   - component: {fileID: 2373598686730098366}
   - component: {fileID: 2766061939604056922}
+  - component: {fileID: 3756831961797307690}
   m_Layer: 5
   m_Name: SkinPlatform1 (8)
   m_TagString: Untagged
@@ -11458,6 +11527,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3756831961797307690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6925408558926068835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 2766061939604056922}
 --- !u!1 &6992560181011318889
 GameObject:
   m_ObjectHideFlags: 0
@@ -11679,6 +11761,7 @@ GameObject:
   - component: {fileID: 4901909643686121312}
   - component: {fileID: 7779023818672123991}
   - component: {fileID: 5736560332171562918}
+  - component: {fileID: 2659291359371000253}
   m_Layer: 5
   m_Name: SkinPlatform1 (5)
   m_TagString: Untagged
@@ -11766,6 +11849,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2659291359371000253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7049017472775459304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 5736560332171562918}
 --- !u!1 &7087042184840217244
 GameObject:
   m_ObjectHideFlags: 0
@@ -11853,6 +11949,7 @@ GameObject:
   - component: {fileID: 9128675170697993928}
   - component: {fileID: 7387765040298234473}
   - component: {fileID: 9054124432117506257}
+  - component: {fileID: 7590176322497131137}
   m_Layer: 5
   m_Name: SkinPlatform1 (4)
   m_TagString: Untagged
@@ -11940,6 +12037,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7590176322497131137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113838988524796797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 9054124432117506257}
 --- !u!1 &7145864565194415773
 GameObject:
   m_ObjectHideFlags: 0
@@ -12032,6 +12142,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 880181452334144072}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 3953329496249424539}
 --- !u!114 &1020124648389139399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13369,6 +13480,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 6925408558926068835}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 3756831961797307690}
 --- !u!114 &8359183235751798523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13957,6 +14069,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 7113838988524796797}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 7148996248413520709}
+  _uiAnimations: {fileID: 7590176322497131137}
 --- !u!114 &1924300131714436424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14109,6 +14222,7 @@ GameObject:
   - component: {fileID: 6185343456116574773}
   - component: {fileID: 6094468587759962737}
   - component: {fileID: 7424260934626162442}
+  - component: {fileID: 4001482106188716591}
   m_Layer: 5
   m_Name: SkinPlatform1 (2)
   m_TagString: Untagged
@@ -14196,6 +14310,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4001482106188716591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8347687485687712977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7424260934626162442}
 --- !u!1 &8397727772706252914
 GameObject:
   m_ObjectHideFlags: 0
@@ -14525,6 +14652,7 @@ GameObject:
   - component: {fileID: 2668798636156491006}
   - component: {fileID: 7727842996883069262}
   - component: {fileID: 7711001948631270032}
+  - component: {fileID: 294908322817833493}
   m_Layer: 5
   m_Name: SkinPlatform1 (3)
   m_TagString: Untagged
@@ -14612,6 +14740,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &294908322817833493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548349791465575467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7711001948631270032}
 --- !u!1 &8602441830589154557
 GameObject:
   m_ObjectHideFlags: 0
@@ -14913,6 +15054,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8548349791465575467}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 0}
+  _uiAnimations: {fileID: 294908322817833493}
 --- !u!114 &1335247801985508470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15382,6 +15524,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 6925408558926068835}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 8818604297648938701}
+  _uiAnimations: {fileID: 3756831961797307690}
 --- !u!114 &1693357305868352849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15615,6 +15758,7 @@ MonoBehaviour:
   _infoScreen: {fileID: 8548349791465575467}
   _shopBackGround: {fileID: 8805333270224860394}
   _audioSource: {fileID: 3935985248133974780}
+  _uiAnimations: {fileID: 294908322817833493}
 --- !u!114 &6714701691841112992
 MonoBehaviour:
   m_ObjectHideFlags: 0
