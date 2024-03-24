@@ -1,5 +1,4 @@
 using System.Collections;
-using CameraFiles;
 using Enum;
 using SaveAndLoad;
 using TMPro;
@@ -9,7 +8,6 @@ namespace UI.Screens.LevelInfo
 {
     public class LevelInfo : MonoBehaviour
     {
-        [SerializeField] private Animator _animator;
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private GameObject _cubePositionInfo;
         [SerializeField] private GameObject[] _cubePositionsInfo;
@@ -20,42 +18,28 @@ namespace UI.Screens.LevelInfo
         [SerializeField] private Load _load;
         [SerializeField] private TMP_Text _score;
         [SerializeField] private ColliderController _colliderController;
-        [SerializeField] private CloseChangeLevelScreenButton[] _closeChangeLevelScreenButton;
         [SerializeField] private CloseChangeLevelScreenButton _closeChangeLevelScreenButtonOne;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private UIAnimations _uiAnimations;
-        
+
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
         private Coroutine _coroutineOpen;
         private Coroutine _coroutineClose;
-
         private bool _information;
+        private int _zeroAlpha = 0;
+        private int _fullAlpha = 1;
+        private int _defaultValue = 0;
+        private int _indexFalseInformation = 1;
 
         public bool IsOpen { get; private set; }
 
         private void Start()
         {
-            _information = _load.Get("LevelStatus" + _index, 0) > 0;
-            _panelCompleted.SetActive((LevelState) _load.Get("LevelStatus" + _index, 0) == LevelState.Completed);
-            _score.text = _load.Get(Save.Score + _index, 0).ToString();
-            SetActive(0, false);
-            _cubePositionInfo = _cubePositionsInfo[_information ? 0 : 1];
-            _unLockedPanel.SetActive(_information ? true : false);
-            _lockedPanel.SetActive(!_information);
+            Initialization();
         }
 
         public void Open()
         {
-     
-            /*Debug.Log("OPEN");
-            _closeChangeLevelScreenButton.Init(this);
-            _closeChangeLevelScreenButton.gameObject.SetActive(true);*/
-
-            /*foreach (var closeChangeLevelScreenButton in _closeChangeLevelScreenButton)
-            {
-                closeChangeLevelScreenButton.gameObject.SetActive(true);
-            }*/
-
             if (_coroutineOpen != null)
                 StopCoroutine(_coroutineOpen);
 
@@ -70,29 +54,36 @@ namespace UI.Screens.LevelInfo
             StartCoroutine(CloseScreen());
         }
 
+        private void Initialization()
+        {
+            _information = _load.Get(Save.LevelStatus + _index, _defaultValue) > _defaultValue;
+            Debug.Log("XNQ " + Save.LevelStatus + _index);
+            _panelCompleted.SetActive((LevelState) _load.Get(Save.LevelStatus + _index, _defaultValue) == LevelState.Completed);
+            _score.text = _load.Get(Save.Score + _index, _defaultValue).ToString();
+            SetActive(_zeroAlpha, false);
+            _cubePositionInfo = _cubePositionsInfo[_information ? 0 : _indexFalseInformation];
+            _unLockedPanel.SetActive(_information);
+            _lockedPanel.SetActive(!_information);
+        }
+
         private IEnumerator OpenScreen()
         {
             yield return _waitForSeconds;
             IsOpen = true;
-            SetActive(1, true);
+            SetActive(_fullAlpha, true);
             _audioSource.PlayOneShot(_audioSource.clip);
             _uiAnimations.Open();
-            // _animator.Play("Open");
             _colliderController.SetValue(false);
-            // _colliderController.SetValueEnabled(false);
         }
 
         private IEnumerator CloseScreen()
         {
             _colliderController.SetValue(true);
-            // _colliderController.SetValueEnabled(true);
-            // _animator.Play("LevelCubeInfoScreenDown");
             _uiAnimations.Close();
-            // _animator.Play("Close");
             _audioSource.PlayOneShot(_audioSource.clip);
             IsOpen = false;
             yield return _waitForSeconds;
-            SetActive(0, false);
+            SetActive(_zeroAlpha, false);
         }
 
         private void SetActive(int alpha, bool flag)
@@ -103,11 +94,5 @@ namespace UI.Screens.LevelInfo
             _canvasGroup.interactable = flag;
             _canvasGroup.blocksRaycasts = flag;
         }
-
-        /*
-    public void SelectComplitedInfo()
-    {
-        _panelComplited.SetActive(true);
-    }*/
     }
 }

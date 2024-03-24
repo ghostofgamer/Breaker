@@ -5,7 +5,6 @@ namespace UI.Screens
 {
     public class ShopScreen : MonoBehaviour
     {
-        [SerializeField] private Animator _animator;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private ShopBackGround _shopBackGround;
         [SerializeField] private CloseShopButton[] _closeShopButtons;
@@ -21,40 +20,34 @@ namespace UI.Screens
             if (!_isOpen)
             {
                 _uiAnimations.Open();
-                // _animator.Play("ShopScreenOpen");
-                SetValue(0,1,true);
+                SetValue(0, 1, true);
             }
         }
 
         public void Close()
         {
             _uiAnimations.Close();
-            // _animator.Play("ShopScreenClose");
-            SetValue(1,0,false);
+            SetValue(1, 0, false);
             OffImages();
         }
 
         private void OffImages()
         {
             foreach (Image image in _imagesActive)
-            {
                 image.gameObject.SetActive(false);
-            }
 
             foreach (Image image in _backgroundImage)
-            {
                 image.color = _currentColor;
-            }
         }
 
-        private void SetValue(int startAlpha, int endAlpha,bool active)
+        private void SetValue(int startAlpha, int endAlpha, bool active)
         {
             _audioSource.PlayOneShot(_audioSource.clip);
             _shopBackGround.BackGroundAlphaChange(startAlpha, endAlpha);
 
             foreach (CloseShopButton close in _closeShopButtons)
                 close.gameObject.SetActive(active);
-        
+
             _isOpen = active;
         }
     }

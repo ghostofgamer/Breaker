@@ -10,32 +10,28 @@ namespace UI
         [SerializeField] private UIAnimations _uiAnimations;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
-    
+
         private void Start()
         {
             Open();
-        }
-
-        public void Open()
-        {  
-            StartCoroutine(OpenScene());
         }
 
         public void Close()
         {
             SetActive(true);
             _uiAnimations.Close();
-            // _animator.Play("CanvasMainMenuCloseAnimations");
+        }
+
+        private void Open()
+        {
+            StartCoroutine(OpenScene());
         }
 
         private IEnumerator OpenScene()
         {
             _uiAnimations.Open();
-            // _animator .Play("CanvasMainMenuStartAnimations");
             yield return _waitForSeconds;
             SetActive(false);
-            /*_blockPanel.SetActive(false);
-        _animator.enabled = false;*/
         }
 
         private void SetActive(bool flag)

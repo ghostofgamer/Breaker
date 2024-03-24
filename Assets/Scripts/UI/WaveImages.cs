@@ -1,31 +1,35 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WaveImages : MonoBehaviour
+namespace UI
 {
-    public Image[] _images;
-    public float _speed = 1f;
-    public float _amplitude = 1f;
-
-    void Start()
+    public class WaveImages : MonoBehaviour
     {
-        StartCoroutine(Wave());
-    }
+        [SerializeField] private Image[] _images;
+        [SerializeField] private float _speed = 1f;
+        [SerializeField] private float _amplitude = 1f;
 
-    IEnumerator Wave()
-    {
-        while (true)
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.1f);
+
+        private void Start()
         {
-            for (int i = 0; i < _images.Length; i++)
-            {
-                _images[i].rectTransform.anchoredPosition = new Vector2(_images[i].rectTransform.anchoredPosition.x,
-                    Mathf.Sin(Time.time * _speed + i) * _amplitude);
-                yield return null;
-            }
+            StartCoroutine(Wave());
+        }
 
-            yield return new WaitForSeconds(0.1f);
+        private IEnumerator Wave()
+        {
+            while (true)
+            {
+                for (int i = 0; i < _images.Length; i++)
+                {
+                    _images[i].rectTransform.anchoredPosition = new Vector2(_images[i].rectTransform.anchoredPosition.x,
+                        Mathf.Sin(Time.time * _speed + i) * _amplitude);
+                    yield return null;
+                }
+
+                yield return _waitForSeconds;
+            }
         }
     }
 }

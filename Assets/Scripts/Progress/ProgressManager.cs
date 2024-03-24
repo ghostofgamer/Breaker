@@ -98,8 +98,8 @@ namespace Progress
         public void Complited(int index)
         {
             _levelStates[index] = LevelState.Completed;
-            Debug.Log("ЛУВЛ " + _levels[index].name);
-            Debug.Log("ЛУВЛ " + _levels[index].LevelState);
+            /*Debug.Log("ЛУВЛ " + _levels[index].name);
+            Debug.Log("ЛУВЛ " + _levels[index].LevelState);*/
             // _save.SetData("LevelStatus" + index + 1, (int)_levelStates[index]);
 
             if (_levels[index].Nextlevel.Length > 0)
@@ -121,12 +121,12 @@ namespace Progress
         {
             for (int i = 0; i < _levels.Length; i++)
             {
-                Debug.Log(_levelStates[i]);
-                Debug.Log("I " + i +_levels[i].name);
+                /*Debug.Log(_levelStates[i]);
+                Debug.Log("I " + i +_levels[i].name);*/
                 
                 if (_levelStates[i] == LevelState.Completed)
                 {
-                    Debug.Log(i);
+                    // Debug.Log(i);
                     if (_levels[i].Nextlevel.Length > 0)
                     {
                         for (int j = 0; j < _levels[i].Nextlevel.Length; j++)

@@ -5,27 +5,29 @@ namespace UI.Screens
 {
     public class SettingsScreen : MonoBehaviour
     {
-        // [SerializeField] private Animator _animator;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _audioClip;
         [SerializeField] private UIAnimations _uiAnimations;
-        
+
         private CanvasGroup _canvasGroup;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private Coroutine _coroutine;
-        
+        private float _timePauseCloseEnd = 0.15f;
+        private float _timePauseOpenEnd = 0.45f;
+        private int _zeroAlpha = 0;
+        private int _fullAlpha = 1;
+
         private void Start()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
-            Setvalue(0, false);
+            Setvalue(_zeroAlpha, false);
         }
 
         public void Open()
         {
-            Setvalue(1, true);
+            Setvalue(_fullAlpha, true);
             _uiAnimations.Open();
-            // _animator.Play("Open");
-            Play(0,0.45f,_audioClip,_audioSource.clip);
+            Play(0, _timePauseOpenEnd, _audioClip, _audioSource.clip);
             Time.timeScale = 0;
         }
 
@@ -37,10 +39,9 @@ namespace UI.Screens
         private IEnumerator CloseScreen()
         {
             _uiAnimations.Close();
-            // _animator.Play("Close");
-            Play(0,0.15f,_audioSource.clip,_audioClip);
+            Play(0, _timePauseCloseEnd, _audioSource.clip, _audioClip);
             yield return _waitForSeconds;
-            Setvalue(0, false);
+            Setvalue(_zeroAlpha, false);
         }
 
         private void Setvalue(int alpha, bool flag)
@@ -53,19 +54,19 @@ namespace UI.Screens
             }
         }
 
-        private void Play(float start, float end,AudioClip audioClip1,AudioClip audioClip2)
+        private void Play(float start, float end, AudioClip audioClip1, AudioClip audioClip2)
         {
-            if(_coroutine!=null )
+            if (_coroutine != null)
                 StopCoroutine(_coroutine);
-            
-            _coroutine = StartCoroutine(PlaySound(start,end,audioClip1,audioClip2));
+
+            _coroutine = StartCoroutine(PlaySound(start, end, audioClip1, audioClip2));
         }
-        
-        private IEnumerator PlaySound(float startTime,float endTime, AudioClip audioClip1,AudioClip audioClip2)
+
+        private IEnumerator PlaySound(float startTime, float endTime, AudioClip audioClip1, AudioClip audioClip2)
         {
-            yield return  new WaitForSecondsRealtime(startTime);
+            yield return new WaitForSecondsRealtime(startTime);
             _audioSource.PlayOneShot(audioClip1);
-            yield return  new WaitForSecondsRealtime(endTime);
+            yield return new WaitForSecondsRealtime(endTime);
             _audioSource.PlayOneShot(audioClip2);
         }
     }
