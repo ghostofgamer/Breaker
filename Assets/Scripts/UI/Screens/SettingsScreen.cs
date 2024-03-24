@@ -5,9 +5,10 @@ namespace UI.Screens
 {
     public class SettingsScreen : MonoBehaviour
     {
-        [SerializeField] private Animator _animator;
+        // [SerializeField] private Animator _animator;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _audioClip;
+        [SerializeField] private UIAnimations _uiAnimations;
         
         private CanvasGroup _canvasGroup;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
@@ -22,7 +23,8 @@ namespace UI.Screens
         public void Open()
         {
             Setvalue(1, true);
-            _animator.Play("Open");
+            _uiAnimations.Open();
+            // _animator.Play("Open");
             Play(0,0.45f,_audioClip,_audioSource.clip);
             Time.timeScale = 0;
         }
@@ -34,7 +36,8 @@ namespace UI.Screens
 
         private IEnumerator CloseScreen()
         {
-            _animator.Play("Close");
+            _uiAnimations.Close();
+            // _animator.Play("Close");
             Play(0,0.15f,_audioSource.clip,_audioClip);
             yield return _waitForSeconds;
             Setvalue(0, false);
