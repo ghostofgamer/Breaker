@@ -19,10 +19,10 @@ namespace ModificationFiles
             {
                 int index = Random.Range(0, _effects.Length);
 
-                if (_effects[2].GetComponent<Buff>())
+                if (_effects[index].GetComponent<Buff>())
                     _buffCounter.IncreaseBuffCount();
 
-                return _effects[2];
+                return _effects[index];
             }
 
             return null;

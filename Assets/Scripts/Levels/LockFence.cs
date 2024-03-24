@@ -16,9 +16,7 @@ public class LockFence : MonoBehaviour
     private void Start()
     {
         LevelState status = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
-        
-        // Debug.Log("статус " + status);
-        
+
         var effect = _fenceEffect.main;
 
         if (status != LevelState.Locked)

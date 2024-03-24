@@ -23,7 +23,8 @@ namespace UI.Screens.LevelInfo
         [SerializeField] private CloseChangeLevelScreenButton[] _closeChangeLevelScreenButton;
         [SerializeField] private CloseChangeLevelScreenButton _closeChangeLevelScreenButtonOne;
         [SerializeField] private AudioSource _audioSource;
-
+        [SerializeField] private UIAnimations _uiAnimations;
+        
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
         private Coroutine _coroutineOpen;
         private Coroutine _coroutineClose;
@@ -45,7 +46,6 @@ namespace UI.Screens.LevelInfo
 
         public void Open()
         {
-            Debug.Log("OPEN" + this.name);
      
             /*Debug.Log("OPEN");
             _closeChangeLevelScreenButton.Init(this);
@@ -64,7 +64,6 @@ namespace UI.Screens.LevelInfo
 
         public void Close()
         {
-            Debug.Log("CLOSE" + this.name);
             if (_coroutineClose != null)
                 StopCoroutine(_coroutineClose);
 
@@ -77,8 +76,8 @@ namespace UI.Screens.LevelInfo
             IsOpen = true;
             SetActive(1, true);
             _audioSource.PlayOneShot(_audioSource.clip);
-            _animator.Play("LevelCubeInfoScreenUp");
-            Debug.Log("IsOpen" + IsOpen + this.name);
+            _uiAnimations.Open();
+            // _animator.Play("Open");
             _colliderController.SetValue(false);
             // _colliderController.SetValueEnabled(false);
         }
@@ -87,10 +86,11 @@ namespace UI.Screens.LevelInfo
         {
             _colliderController.SetValue(true);
             // _colliderController.SetValueEnabled(true);
-            _animator.Play("LevelCubeInfoScreenDown");
+            // _animator.Play("LevelCubeInfoScreenDown");
+            _uiAnimations.Close();
+            // _animator.Play("Close");
             _audioSource.PlayOneShot(_audioSource.clip);
             IsOpen = false;
-            Debug.Log("IsClose" + IsOpen + this.name);
             yield return _waitForSeconds;
             SetActive(0, false);
         }
