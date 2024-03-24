@@ -4891,6 +4891,7 @@ GameObject:
   - component: {fileID: 5816275710107851362}
   - component: {fileID: 5729798453037057169}
   - component: {fileID: 4575535297217620379}
+  - component: {fileID: -4050675527488083660}
   m_Layer: 0
   m_Name: SpinPortalGold
   m_TagString: Untagged
@@ -9651,6 +9652,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-4050675527488083660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227973557999412207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9407adf297f6bd7418d65aba292865be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effect: {fileID: 5729798453037057169}
 --- !u!1 &8377456141667099683
 GameObject:
   m_ObjectHideFlags: 0

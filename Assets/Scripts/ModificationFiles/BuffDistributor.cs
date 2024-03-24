@@ -10,7 +10,7 @@ namespace ModificationFiles
 
         private float _randomProcent = 0.3f;
         private bool _isEffect = false;
-    
+
         public Effect AssignEffect()
         {
             _isEffect = Random.value < _randomProcent;
@@ -21,7 +21,7 @@ namespace ModificationFiles
 
                 if (_effects[2].GetComponent<Buff>())
                     _buffCounter.IncreaseBuffCount();
-                    
+
                 return _effects[2];
             }
 

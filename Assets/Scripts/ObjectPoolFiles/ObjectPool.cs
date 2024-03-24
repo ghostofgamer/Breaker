@@ -36,6 +36,13 @@ namespace ObjectPoolFiles
             return spawned != null;
         }
 
+        public void GetFirstObject(out T spawned, T prefabs)
+        {
+            T filter = _poolGeneric.FirstOrDefault(p => p.gameObject.activeSelf == false);
+            spawned = filter;
+            // return true;
+        }
+
         public void SetAutoExpand(bool flag)
         {
             AutoExpand = flag;

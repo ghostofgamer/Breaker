@@ -38226,7 +38226,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &3361751570956921044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38279,13 +38279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8295648d7dcc54fa03dcff7b77f809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 5729798453037057169, guid: a3a6123349c0ac04cb251c66c4508aed, type: 3}
+  _effectActivator: {fileID: -4050675527488083660, guid: a3a6123349c0ac04cb251c66c4508aed, type: 3}
   _missileEffect: {fileID: 8290163922226526449}
   _xMinPosition: -13
   _xMaxPosition: 13
   _zMaxPosition: 37
   _zMinPosition: -10.65
-  _wallTrigger: []
+  _container: {fileID: 0}
 --- !u!114 &5845790270848573784
 MonoBehaviour:
   m_ObjectHideFlags: 0

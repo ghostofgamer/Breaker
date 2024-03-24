@@ -1,27 +1,49 @@
+using System;
+using System.Collections;
 using Bricks;
 using GameScene;
+using ObjectPoolFiles;
 using UnityEngine;
 
 namespace BulletFiles
 {
-    public class BulletTrigger : MonoBehaviour
+    public class BulletTrigger : Bullet
     {
-        [SerializeField] private ParticleSystem _explosion;
-    
+        [SerializeField] private ParticleSystem _explosionEffect;
+        
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
+        private Coroutine _coroutine;
+        
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out Brick brick))
             {
-                Instantiate(_explosion, transform.position, Quaternion.identity);
+                Hit();
                 brick.Die();
-                gameObject.SetActive(false);
+                // gameObject.SetActive(false);
             }
-        
+
             if (other.TryGetComponent(out WallTrigger wallTrigger))
             {
-                Instantiate(_explosion, transform.position, Quaternion.identity);
-                gameObject.SetActive(false);
+                Hit();
+                // gameObject.SetActive(false);
             }
+        }
+
+        private void Hit()
+        {
+            if(_coroutine!=null)
+                StopCoroutine(_coroutine);
+            
+            StartCoroutine(HitTarget());
+        }
+
+        private IEnumerator HitTarget()
+        {
+            BulletMover.enabled = false;
+            _explosionEffect.Play();
+            yield return _waitForSeconds;
+            gameObject.SetActive(false);
         }
     }
 }

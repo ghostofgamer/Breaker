@@ -71,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4066900009843206154}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2264734165049399554}
   m_SourcePrefab: {fileID: 100100000, guid: b187f51b0988edb408280133993321b2, type: 3}
 --- !u!1 &1103435951446684337 stripped
 GameObject:
@@ -99,3 +102,28 @@ MonoBehaviour:
   _maxFlySpeed: 0
   _columns: 0
   _rows: 0
+--- !u!114 &-2264734165049399554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103435951446684337}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca90b946c9b7cb541b6e75bcfb8829a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BrickCounter: {fileID: 0}
+  BonusPrefab: {fileID: 0}
+  IsBonus: 0
+  Reward: 0
+  BonusAmount: 0
+  BuffDistributor: {fileID: 0}
+  IsImmortal: 0
+  Effect: {fileID: 0}
+  _hologramEffectDie: {fileID: 0}
+  _targetVisual: {fileID: 0}
+  _fragmentsCounter: {fileID: 0}
+  _isEternal: 0
+  AudioSource: {fileID: 0}

@@ -100,7 +100,6 @@ namespace Bricks
                 AudioSource.PlayOneShot(AudioSource.clip);
                 return;
             }
-                
             
             // _audioSource.PlayOneShot(_audioSource.clip);
             Dead?.Invoke();

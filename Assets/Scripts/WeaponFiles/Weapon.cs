@@ -24,7 +24,7 @@ namespace WeaponFiles
     
         private void Start()
         {
-            _pool = new ObjectPool<Bullet>(_bullet, MaxAmmo, _container);
+            _pool = new ObjectPool<Bullet>(_bullet, MaxAmmo,_container);
             _pool.SetAutoExpand(_autoExpand);
             _shootPositionsAmount = _load.Get(Save.Laser,_startShootPositions);
         }
@@ -39,7 +39,6 @@ namespace WeaponFiles
                 bullet.Init(_shootPosition[_index].position);
                 bullet.gameObject.SetActive(true);
             }
-            // Instantiate(_bullet, _shootPosition[_index].position, Quaternion.identity, _container);
         }
     }
 }

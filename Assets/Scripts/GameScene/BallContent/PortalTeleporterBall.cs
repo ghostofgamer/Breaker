@@ -1,22 +1,37 @@
+using System;
+using ObjectPoolFiles;
 using UnityEngine;
 
 namespace GameScene.BallContent
 {
     public class PortalTeleporterBall : MonoBehaviour
     {
-        [SerializeField] private ParticleSystem _particleSystem;
+        protected readonly int MaxAmmo = 50;
+        
+        // [SerializeField] private ParticleSystem _particleSystem;
+        [SerializeField] private EffectActivator _effectActivator;
         [SerializeField] private ParticleSystem _missileEffect;
         [SerializeField] private float _xMinPosition;
         [SerializeField] private float _xMaxPosition;
         [SerializeField] private float _zMaxPosition;
         [SerializeField] private float _zMinPosition;
-        [SerializeField] private WallTrigger[] _wallTrigger;
+        // [SerializeField] private WallTrigger[] _wallTrigger;
+        [SerializeField] private Transform _container;
+        
+        private ObjectPool<EffectActivator> _pool;
+        private bool _autoExpand = true;
+
+        private void Start()
+        {
+            _pool = new ObjectPool<EffectActivator>(_effectActivator, MaxAmmo, _container);
+            _pool.SetAutoExpand(_autoExpand);
+        }
 
         public void Init(ParticleSystem missileEffect)
         {
             _missileEffect = missileEffect;
         }
-        
+
         public void TeleportBall()
         {
             if (transform.position.x > _xMaxPosition)
@@ -42,11 +57,23 @@ namespace GameScene.BallContent
 
         private void Teleport(Vector3 position)
         {
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
+            // Instantiate(_particleSystem, transform.position, Quaternion.identity);
+            ActivationEffect();
             _missileEffect.gameObject.SetActive(false);
             transform.position = position;
             _missileEffect.gameObject.SetActive(true);
-            Instantiate(_particleSystem, transform.position, Quaternion.identity);
+            ActivationEffect();
+            // Instantiate(_particleSystem, transform.position, Quaternion.identity);
+        }
+
+        private void ActivationEffect()
+        {
+            if (_pool.TryGetObject(out EffectActivator portalEffect, _effectActivator))
+            {
+                portalEffect.Init(transform.position);
+                portalEffect.gameObject.SetActive(true);
+                portalEffect.Play();
+            }
         }
     }
 }
