@@ -1595,8 +1595,6 @@
             <e p="CameraVictoryMover.cs" t="Include" />
             <e p="FovChanger.cs" t="Include" />
           </e>
-          <e p="ColliderController.cs" t="Include" />
-          <e p="EffectActivator.cs" t="Include" />
           <e p="Enum" t="Include">
             <e p="BallSkins.cs" t="Include" />
             <e p="Buffs.cs" t="Include" />
@@ -1606,6 +1604,9 @@
             <e p="SelectedPlatform.cs" t="Include" />
             <e p="SelectedSkins.cs" t="Include" />
             <e p="SoundMixer.cs" t="Include" />
+          </e>
+          <e p="Focus" t="Include">
+            <e p="ScreenFocus.cs" t="Include" />
           </e>
           <e p="GameScene" t="Include">
             <e p="BallContent" t="Include">
@@ -1617,6 +1618,7 @@
               <e p="PortalTeleporterBall.cs" t="Include" />
             </e>
             <e p="Bourder.cs" t="Include" />
+            <e p="EffectActivator.cs" t="Include" />
             <e p="FlyBonus.cs" t="Include" />
             <e p="PanelMoving.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
@@ -1624,9 +1626,12 @@
             <e p="Walltrigger.cs" t="Include" />
           </e>
           <e p="Levels" t="Include">
+            <e p="ColliderController.cs" t="Include" />
             <e p="Level.cs" t="Include" />
             <e p="LevelCubeJumping.cs" t="Include" />
             <e p="LineLevel.cs" t="Include" />
+            <e p="LockFence.cs" t="Include" />
+            <e p="LockLevel.cs" t="Include" />
           </e>
           <e p="LocalizationFiles" t="Include">
             <e p="Localization.cs" t="Include" />
@@ -1727,7 +1732,6 @@
             <e p="Load.cs" t="Include" />
             <e p="Save.cs" t="Include" />
           </e>
-          <e p="ScreenFocus.cs" t="Include" />
           <e p="SDK" t="Include">
             <e p="GameReady.cs" t="Include" />
             <e p="SdkInitialization.cs" t="Include" />
@@ -1753,9 +1757,6 @@
           <e p="Test" t="Include">
             <e p="BEZIE.cs" t="Include" />
             <e p="BonusForWinnerFlying.cs" t="Include" />
-            <e p="LockFence.cs" t="Include" />
-            <e p="LockLevel.cs" t="Include" />
-            <e p="SwipeTest.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Buttons" t="Include">
