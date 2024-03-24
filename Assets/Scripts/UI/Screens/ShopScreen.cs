@@ -12,6 +12,7 @@ namespace UI.Screens
         [SerializeField] private Image[] _imagesActive;
         [SerializeField] private Image[] _backgroundImage;
         [SerializeField] private Color _currentColor;
+        [SerializeField] private UIAnimations _uiAnimations;
 
         private bool _isOpen;
 
@@ -19,14 +20,16 @@ namespace UI.Screens
         {
             if (!_isOpen)
             {
-                _animator.Play("ShopScreenOpen");
+                _uiAnimations.Open();
+                // _animator.Play("ShopScreenOpen");
                 SetValue(0,1,true);
             }
         }
 
         public void Close()
         {
-            _animator.Play("ShopScreenClose");
+            _uiAnimations.Close();
+            // _animator.Play("ShopScreenClose");
             SetValue(1,0,false);
             OffImages();
         }

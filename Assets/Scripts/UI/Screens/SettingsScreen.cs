@@ -25,7 +25,6 @@ namespace UI.Screens
             _animator.Play("Open");
             Play(0,0.45f,_audioClip,_audioSource.clip);
             Time.timeScale = 0;
-            Debug.Log("TimeScale " + Time.timeScale);
         }
 
         public void Close()
@@ -38,7 +37,6 @@ namespace UI.Screens
             _animator.Play("Close");
             Play(0,0.15f,_audioSource.clip,_audioClip);
             yield return _waitForSeconds;
-            Debug.Log("выкл");
             Setvalue(0, false);
         }
 

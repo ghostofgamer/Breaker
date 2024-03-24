@@ -7,7 +7,8 @@ namespace UI
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private GameObject _blockPanel;
-    
+        [SerializeField] private UIAnimations _uiAnimations;
+
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
     
         private void Start()
@@ -23,12 +24,14 @@ namespace UI
         public void Close()
         {
             SetActive(true);
-            _animator.Play("CanvasMainMenuCloseAnimations");
+            _uiAnimations.Close();
+            // _animator.Play("CanvasMainMenuCloseAnimations");
         }
 
         private IEnumerator OpenScene()
         {
-            _animator .Play("CanvasMainMenuStartAnimations");
+            _uiAnimations.Open();
+            // _animator .Play("CanvasMainMenuStartAnimations");
             yield return _waitForSeconds;
             SetActive(false);
             /*_blockPanel.SetActive(false);

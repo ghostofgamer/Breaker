@@ -18,7 +18,6 @@ namespace UI.Screens.EndScreens
 
         [Header("StatisticTMP")] [SerializeField]
         private TMP_Text _timer;
-
         [SerializeField] private TMP_Text _buffCollected;
         [SerializeField] private TMP_Text _brickSmashed;
         [SerializeField] private TMP_Text _fragmentsCollected;

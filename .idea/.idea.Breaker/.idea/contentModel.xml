@@ -1536,7 +1536,6 @@
             <e p="RewardTripleCredit.cs" t="Include" />
             <e p="RewardVideo.cs" t="Include" />
           </e>
-          <e p="BallRotate.cs" t="Include" />
           <e p="Bonus" t="Include">
             <e p="BonusDeath.cs" t="Include" />
             <e p="BonusMover.cs" t="Include" />
@@ -1597,7 +1596,6 @@
             <e p="FovChanger.cs" t="Include" />
           </e>
           <e p="ColliderController.cs" t="Include" />
-          <e p="EffectDestroyer.cs" t="Include" />
           <e p="Enum" t="Include">
             <e p="BallSkins.cs" t="Include" />
             <e p="Buffs.cs" t="Include" />
@@ -1680,6 +1678,7 @@
               <e p="EffectApplier.cs" t="Include" />
               <e p="NeutralApplier.cs" t="Include" />
             </e>
+            <e p="EffectDestroyer.cs" t="Include" />
             <e p="EffectTrigger.cs" t="Include" />
             <e p="Modification.cs" t="Include" />
             <e p="NameEffectAnimation.cs" t="Include" />
@@ -1753,31 +1752,25 @@
             <e p="LockFence.cs" t="Include" />
             <e p="LockLevel.cs" t="Include" />
             <e p="SwipeTest.cs" t="Include" />
-            <e p="TestBallLose.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Buttons" t="Include">
               <e p="AbstractButton.cs" t="Include" />
-              <e p="ActivatedButton.cs" t="Include" />
-              <e p="ActivatedPlatformSkinButton.cs" t="Include" />
               <e p="BackButton.cs" t="Include" />
               <e p="BackToMenuButton.cs" t="Include" />
-              <e p="BuyButton.cs" t="Include" />
-              <e p="BuyPlatformaSkinButton.cs" t="Include" />
-              <e p="BuySkinBallButton.cs" t="Include" />
-              <e p="BuyUpgradeButton.cs" t="Include" />
-              <e p="ChangeSkinButton.cs" t="Include" />
-              <e p="ChangeSkinPlatformButton.cs" t="Include" />
+              <e p="BuyButtonsContent" t="Include">
+                <e p="BuyButton.cs" t="Include" />
+                <e p="BuyPlatformaSkinButton.cs" t="Include" />
+                <e p="BuySkinBallButton.cs" t="Include" />
+                <e p="BuyUpgradeButton.cs" t="Include" />
+              </e>
               <e p="ClaimButton.cs" t="Include" />
               <e p="ClaimRewardButton.cs" t="Include" />
               <e p="CloseButton.cs" t="Include" />
               <e p="CloseChangeLevelScreenButton.cs" t="Include" />
-              <e p="CloseInfoScreenButton.cs" t="Include" />
               <e p="CloseReviveScreen.cs" t="Include" />
-              <e p="CloseShopButton.cs" t="Include" />
               <e p="ContinueButton.cs" t="Include" />
               <e p="CountDown.cs" t="Include" />
-              <e p="InfoButton.cs" t="Include" />
               <e p="PauseButton.cs" t="Include" />
               <e p="PlayButton.cs" t="Include" />
               <e p="QuitButton.cs" t="Include" />
@@ -1789,7 +1782,16 @@
                 <e p="SettingsButton.cs" t="Include" />
                 <e p="SettingsButtonGameLevel.cs" t="Include" />
               </e>
-              <e p="ShopButton.cs" t="Include" />
+              <e p="ShopContent" t="Include">
+                <e p="ActivatedButton.cs" t="Include" />
+                <e p="ActivatedPlatformSkinButton.cs" t="Include" />
+                <e p="ChangeSkinButton.cs" t="Include" />
+                <e p="ChangeSkinPlatformButton.cs" t="Include" />
+                <e p="CloseInfoScreenButton.cs" t="Include" />
+                <e p="CloseShopButton.cs" t="Include" />
+                <e p="InfoButton.cs" t="Include" />
+                <e p="ShopButton.cs" t="Include" />
+              </e>
               <e p="TryAgainButton.cs" t="Include" />
             </e>
             <e p="CanvasAnimator.cs" t="Include" />
@@ -1801,11 +1803,11 @@
                 <e p="BonusEndScreenMoving.cs" t="Include" />
                 <e p="EndScreen.cs" t="Include" />
                 <e p="GameOverScreen.cs" t="Include" />
+                <e p="LevelComplite.cs" t="Include" />
                 <e p="ReviveScreen.cs" t="Include" />
                 <e p="SpawnBonusLevelComplite.cs" t="Include" />
                 <e p="VictoryScreen.cs" t="Include" />
               </e>
-              <e p="LevelComplite.cs" t="Include" />
               <e p="LevelInfo" t="Include">
                 <e p="LevelCubeInfoRotate.cs" t="Include" />
                 <e p="LevelInfo.cs" t="Include" />
@@ -1817,6 +1819,7 @@
             </e>
             <e p="Swipe.cs" t="Include" />
             <e p="SwipeLayout.cs" t="Include" />
+            <e p="UIAnimations.cs" t="Include" />
             <e p="WaveImages.cs" t="Include" />
           </e>
           <e p="WeaponFiles" t="Include">
