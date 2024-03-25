@@ -1,4 +1,3 @@
-using PlayerFiles.PlatformaContent;
 using SaveAndLoad;
 using UnityEngine;
 
@@ -28,7 +27,6 @@ namespace Skins
         private void Start()
         {
             int index = _load.Get(Save.ActiveCapsuleIndex, _startIndex);
-
             _skins[index].SetActive(true);
 
             if (_isOriginal)
@@ -40,36 +38,27 @@ namespace Skins
             switch (index)
             {
                 case StrongerExplosion:
-                    Debug.Log("1");
                     _magnifierRadiusExplosion.enabled = true;
                     break;
 
                 case ResistDebuff:
-                    Debug.Log("2");
                     _resistanceDebuff.enabled = true;
                     break;
 
                 case ChanceShield:
-                    Debug.Log("3");
                     _chanceShield.enabled = true;
                     break;
 
                 case LuckySave:
-                    Debug.Log("4");
                     _luckySave.enabled = true;
                     break;
 
                 case ElectricDischarge:
-                    Debug.Log("5");
                     _electricBallActivator.enabled = true;
                     break;
 
                 case IncreaseDrop:
-                    Debug.Log("6");
                     _chanceBonus.enabled = true;
-                    break;
-
-                default:
                     break;
             }
         }

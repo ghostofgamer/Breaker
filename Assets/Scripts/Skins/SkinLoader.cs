@@ -1,14 +1,11 @@
 using GameScene.BallContent;
 using SaveAndLoad;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Skins
 {
     public class SkinLoader : MonoBehaviour
     {
-        [SerializeField] private Ball _ball;
-        [SerializeField] private Material[] _skinsBall;
         [SerializeField] private Load _load;
         [SerializeField] private GameObject[] _skins;
         [SerializeField] private BallTrigger _ballTrigger;
@@ -20,17 +17,10 @@ namespace Skins
 
         private void Start()
         {
-            // _meshRenderer = _ball.GetComponent<MeshRenderer>();
             _skinBallIndex = _load.Get(Save.SkinBall, _startIndex);
             _skins[_skinBallIndex].SetActive(true);
-            _portalTeleporterBall.Init(_skins[_skinBallIndex].GetComponentInChildren<ParticleSystem>()) ;
+            _portalTeleporterBall.Init(_skins[_skinBallIndex].GetComponentInChildren<ParticleSystem>());
             _ballTrigger.Init(_skins[_skinBallIndex].GetComponent<MeshRenderer>());
-            // LoadSkin();
-        }
-
-        public void LoadSkin()
-        {
-            _meshRenderer.material = _skinsBall[_skinBallIndex];
         }
     }
 }
