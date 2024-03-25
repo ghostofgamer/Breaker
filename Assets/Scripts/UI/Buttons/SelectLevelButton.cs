@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CameraFiles;
 using UI;
+using UI.Buttons;
 using UI.Screens.LevelInfo;
 using UnityEngine;
 using UnityEngine.SceneManagement;

@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CloseButton : AbstractButton
+namespace UI.Buttons
 {
-    [SerializeField] private GameObject _screen;
-
-
-    protected override void OnClick()
+    public class CloseButton : AbstractButton
     {
-        _screen.SetActive(false);
+        [SerializeField] private GameObject _screen;
+    
+        protected override void OnClick()
+        {
+            _screen.SetActive(false);
+        }
     }
 }

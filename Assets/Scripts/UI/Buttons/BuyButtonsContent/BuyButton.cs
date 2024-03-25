@@ -1,5 +1,6 @@
 using PlayerFiles;
 using TMPro;
+using UI.Buttons.ShopContent;
 using UnityEngine;
 
 namespace UI.Buttons.BuyButtonsContent
