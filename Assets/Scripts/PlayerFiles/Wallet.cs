@@ -21,10 +21,10 @@ namespace PlayerFiles
         private float _longDuration = 2;
         private Coroutine _coroutine;
 
-        public int Money => _money;
-        
         public event UnityAction ValueChanged;
-        
+
+        public int Money => _money;
+
         private void Start()
         {
             _money = _load.Get(Save.Money, _startMoney);

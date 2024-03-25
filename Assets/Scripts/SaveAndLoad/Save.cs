@@ -12,13 +12,10 @@ namespace SaveAndLoad
         public const string Music = "Music";
         public const string SFX = "SFX";
 
-        // public const string IsMuted = "IsMuted";
         [Header("SelectedSkins")] public const string SkinBall = "SkinBall";
         
         public const string SelectedHeavy = "SelectedHeavy";
-        
         public const string SelectedSkinBall = "SelectedSkinBall";
-        
         public const string SelectedFaster = "SelectedFaster";
         public const string SelectedBouncy = "SelectedBouncy";
         public const string SelectedSteel = "SelectedSteel";
@@ -38,7 +35,8 @@ namespace SaveAndLoad
         public const string Steep = "Steep";
         public const string Important = "Important";
 
-        [Header("Buffs")] public const string Mirror = "Mirror";
+        [Header("Buffs")]
+        public const string Mirror = "Mirror";
         public const string Laser = "Laser";
         public const string Shield = "Shield";
         public const string Portal = "Portal";
