@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using GameScene.BallContent;
 using Statistics;
@@ -17,13 +16,15 @@ namespace Sound
         [SerializeField] private AudioSource _audioBackGroundSound;
         [SerializeField] private AudioClip _audioClipVictory;
         [SerializeField] private BrickCounter _brickCounter;
-        
+
+        private int _countDown = 6;
         private Coroutine _coroutine;
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(2f);
+        private WaitForSeconds _waitForCountDown = new WaitForSeconds(0.5f);
 
         private void OnEnable()
         {
             _ballTrigger.Dying += PlayDieSound;
-            // _ballTrigger.Dying +=PlayCountDownSound;
             _reviveScreen.Lose += StopCountDown;
             _reviveScreen.Revive += StopCountDown;
             _brickCounter.AllBrickDestroy += PlayVictorySound;
@@ -32,45 +33,43 @@ namespace Sound
         private void OnDisable()
         {
             _ballTrigger.Dying -= PlayDieSound;
-            // _ballTrigger.Dying -= PlayCountDownSound;
             _reviveScreen.Lose -= StopCountDown;
             _reviveScreen.Revive -= StopCountDown;
             _brickCounter.AllBrickDestroy -= PlayVictorySound;
+        }
+
+        public void PlayCountDownSound()
+        {
+            _coroutine = StartCoroutine(CountDown());
         }
 
         private void PlayDieSound()
         {
             _audioSource.PlayOneShot(_audioClipDiePlatform);
         }
-        
-        public void PlayCountDownSound()
-        {
-            _coroutine = StartCoroutine(CountDown());
-        }
 
         private void StopCountDown()
         {
             StopCoroutine(_coroutine);
         }
-        
-        
+
+
         private IEnumerator CountDown()
         {
-            yield return new WaitForSeconds(2f);
-            
-            for (int i = 0; i < 6; i++)
+            yield return _waitForSeconds;
+
+            for (int i = 0; i < _countDown; i++)
             {
                 _audioSource.PlayOneShot(_audioClipCountDown);
-                yield return new WaitForSeconds(0.5f);
+                yield return _waitForCountDown;
             }
         }
-        
-        
+
         private void PlayVictorySound()
         {
             if (_reviveScreen.IsLose)
                 return;
-            
+
             _audioBackGroundSound.enabled = false;
             _audioSource.PlayOneShot(_audioClipVictory);
         }
