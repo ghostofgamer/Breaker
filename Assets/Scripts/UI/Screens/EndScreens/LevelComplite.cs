@@ -4,6 +4,7 @@ using Others;
 using SaveAndLoad;
 using Statistics;
 using TMPro;
+using UI.Buttons.EndScreenButtons;
 using UnityEngine;
 
 namespace UI.Screens.EndScreens

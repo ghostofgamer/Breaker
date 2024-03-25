@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CloseButton : AbstractButton
 {
-[SerializeField]private GameObject _screen;
+    [SerializeField] private GameObject _screen;
 
 
-protected override void OnClick()
-{
-    _screen.SetActive(false);
-}
+    protected override void OnClick()
+    {
+        _screen.SetActive(false);
+    }
 }

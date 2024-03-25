@@ -15,9 +15,8 @@ namespace UI.Screens.EndScreens
         [SerializeField] private ScoreCounter _scoreCounter;
         [SerializeField] private GameObject[] _statistics;
         [SerializeField] private Save _save;
-
-        [Header("StatisticTMP")] [SerializeField]
-        private TMP_Text _timer;
+        [Header("StatisticTMP")]
+        [SerializeField] private TMP_Text _timer;
         [SerializeField] private TMP_Text _buffCollected;
         [SerializeField] private TMP_Text _brickSmashed;
         [SerializeField] private TMP_Text _fragmentsCollected;
@@ -31,19 +30,12 @@ namespace UI.Screens.EndScreens
         private void Start()
         {
             foreach (var statistic in _statistics)
-            {
                 statistic.SetActive(false);
-            }
-        }
-
-        public override void Open()
-        {
-            // StartCoroutine(OnScreenMove(credits));
         }
 
         public void OpenScreen(int credits)
         {
-            StartCoroutine(OnScreenMove(credits));
+            StartCoroutine(EnableScreenMove(credits));
         }
 
         private void SetValue(int credits)
@@ -57,7 +49,7 @@ namespace UI.Screens.EndScreens
             _save.SetData(Save.TemporaryMoney, _credits);
         }
 
-        private IEnumerator OnScreenMove(int credits)
+        private IEnumerator EnableScreenMove(int credits)
         {
             yield return _waitForSeconds;
             base.Open();

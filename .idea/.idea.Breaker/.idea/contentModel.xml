@@ -1763,7 +1763,6 @@
           <e p="UI" t="Include">
             <e p="Buttons" t="Include">
               <e p="AbstractButton.cs" t="Include" />
-              <e p="BackButton.cs" t="Include" />
               <e p="BackToMenuButton.cs" t="Include" />
               <e p="BuyButtonsContent" t="Include">
                 <e p="BuyButton.cs" t="Include" />
@@ -1771,21 +1770,25 @@
                 <e p="BuySkinBallButton.cs" t="Include" />
                 <e p="BuyUpgradeButton.cs" t="Include" />
               </e>
-              <e p="ClaimButton.cs" t="Include" />
-              <e p="ClaimRewardButton.cs" t="Include" />
               <e p="CloseButton.cs" t="Include" />
               <e p="CloseChangeLevelScreenButton.cs" t="Include" />
-              <e p="CloseReviveScreen.cs" t="Include" />
-              <e p="ContinueButton.cs" t="Include" />
               <e p="CountDown.cs" t="Include" />
+              <e p="EndScreenButtons" t="Include">
+                <e p="ClaimButton.cs" t="Include" />
+                <e p="ClaimRewardButton.cs" t="Include" />
+                <e p="CloseReviveScreen.cs" t="Include" />
+                <e p="ContinueButton.cs" t="Include" />
+                <e p="ReviveButton.cs" t="Include" />
+                <e p="TryAgainButton.cs" t="Include" />
+              </e>
               <e p="PauseButton.cs" t="Include" />
               <e p="PlayButton.cs" t="Include" />
-              <e p="QuitButton.cs" t="Include" />
               <e p="RestartButton.cs" t="Include" />
-              <e p="ResumeButton.cs" t="Include" />
-              <e p="ReviveButton.cs" t="Include" />
               <e p="SelectLevelButton.cs" t="Include" />
               <e p="Settings" t="Include">
+                <e p="BackButton.cs" t="Include" />
+                <e p="QuitButton.cs" t="Include" />
+                <e p="ResumeButton.cs" t="Include" />
                 <e p="SettingsButton.cs" t="Include" />
                 <e p="SettingsButtonGameLevel.cs" t="Include" />
               </e>
@@ -1799,7 +1802,6 @@
                 <e p="InfoButton.cs" t="Include" />
                 <e p="ShopButton.cs" t="Include" />
               </e>
-              <e p="TryAgainButton.cs" t="Include" />
             </e>
             <e p="CanvasAnimator.cs" t="Include" />
             <e p="FadeStatistics.cs" t="Include" />

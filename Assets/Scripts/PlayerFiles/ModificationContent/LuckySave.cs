@@ -5,6 +5,7 @@ using GameScene;
 using ModificationFiles;
 using Statistics;
 using TMPro;
+using UI.Buttons.Settings;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

@@ -1,18 +1,16 @@
 using System.Collections;
-using UI.Screens;
 using UnityEngine;
 
-namespace UI.Buttons
+namespace UI.Buttons.Settings
 {
     public class SettingsButton : AbstractButton
     {
-        [SerializeField]private MainScreen _mainScreen;
-        [SerializeField]private SettingsScreen  _settingsScreen;
-        [SerializeField] private GameObject _backButton;
-        [SerializeField] private AudioSource _audioSource;
-        // [SerializeField] private AudioClip _audioClip;
-        
+        [SerializeField] private BackButton _backButton;
+        [SerializeField] private FadeObject _mainScreenFade;
+        [SerializeField] private FadeObject _settingsScreenFade;
+
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.16f);
+        private int _alpha = 1;
 
         protected override void OnClick()
         {
@@ -21,14 +19,12 @@ namespace UI.Buttons
 
         private IEnumerator ChangeOpenMenu()
         {
-            // _audioSource.PlayOneShot(_audioClip);
-            // _audioSource.PlayOneShot(_audioSource.clip);
-            _mainScreen.GetComponent<FadeObject>().FadeOn();
+            _mainScreenFade.FadeOn();
             yield return _waitForSeconds;
-            _backButton.SetActive(true);
-            _backButton.GetComponent<BackButton>().CanvasValue(1);
+            _backButton.gameObject.SetActive(true);
+            _backButton.CanvasValue(_alpha);
             transform.gameObject.SetActive(false);
-            _settingsScreen.GetComponent<FadeObject>().FadeOut();
+            _settingsScreenFade.FadeOut();
         }
     }
 }
