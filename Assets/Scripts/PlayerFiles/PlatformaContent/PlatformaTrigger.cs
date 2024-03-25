@@ -1,6 +1,6 @@
 using Bonus;
 using ModificationFiles;
-using ModificationFiles.EffectApplier;
+using ModificationFiles.EffectApplierFiles;
 using PlayerFiles.ModificationContent;
 using Statistics;
 using UnityEngine;

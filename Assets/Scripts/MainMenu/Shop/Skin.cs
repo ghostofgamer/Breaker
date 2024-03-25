@@ -15,17 +15,17 @@ namespace MainMenu.Shop
         [SerializeField] private Image _locked;
         [SerializeField] private BallSkins _ballSkins;
         [SerializeField] private Load _load;
-    
+
         private int _closeSkin = 0;
-    
+
         private void Start()
         {
-            var index = _load.Get(_ballSkins.ToString(), _closeSkin);
+            int index = _load.Get(_ballSkins.ToString(), _closeSkin);
 
             if (index > _closeSkin)
                 ChangeValue();
         }
-    
+
         public void ChangeValue()
         {
             _skinBlock.SetActive(false);

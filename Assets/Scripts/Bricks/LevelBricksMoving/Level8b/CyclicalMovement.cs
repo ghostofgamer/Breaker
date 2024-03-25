@@ -45,53 +45,6 @@ public class CyclicalMovement : MonoBehaviour
 
             yield return null;
         }
-
-
-        while (true)
-        {
-            transform.position =
-                Vector3.MoveTowards(transform.position, _targetPosition, _movementSpeed * Time.deltaTime);
-
-            transform.Rotate(0, 1, 0);
-            // transform.Rotate(0, _directionRotate * _rotateSpeed, 0);
-
-            if (transform.position == _targetPosition)
-            {
-                if (_targetPosition.z == _startZPosition + _movementDistance)
-                {
-                    Debug.Log("_startZPosition");
-                    SetTargetPosition(_startZPosition);
-                }
-
-                else
-                {
-                    Debug.Log("_startZPosition + _movementDistance");
-                    SetTargetPosition(_startZPosition + _movementDistance);
-                }
-            }
-
-            yield return null;
-        }
-
-
-        yield return null;
-
-        /*while (true)
-        {
-            // Движение вперед
-            for (float z = _startZPosition; z < _startZPosition + _movementDistance; z += Time.deltaTime * _movementSpeed)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y, z);
-                yield return null;
-            }
-
-            // Движение назад
-            for (float z = _startZPosition + _movementDistance; z > _startZPosition; z -= Time.deltaTime * _movementSpeed)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y, z);
-                yield return null;
-            }
-        }*/
     }
 
     private void SetTargetPosition(float zPosition)

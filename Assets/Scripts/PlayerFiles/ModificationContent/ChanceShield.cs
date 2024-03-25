@@ -1,5 +1,5 @@
 using GameScene.BallContent;
-using ModificationFiles.Buffs;
+using ModificationFiles.BuffsFiles;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

@@ -5,6 +5,8 @@ namespace ModificationFiles
 {
     public class NameEffectAnimation : MonoBehaviour
     {
+        private const string EffectNameAnimation = "EffectNameAnimation";
+
         [SerializeField] private Animator _animator;
         [SerializeField] private CanvasGroup _canvasGroup;
 
@@ -12,7 +14,6 @@ namespace ModificationFiles
         private Coroutine _coroutine;
         private int _alphaFull = 1;
         private int _alphaZero = 0;
-        private string EffectNameAnimation = "EffectNameAnimation";
 
         public void Show()
         {

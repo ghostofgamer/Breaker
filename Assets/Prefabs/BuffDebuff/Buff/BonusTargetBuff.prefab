@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 274304450475072293}
   - component: {fileID: 4918692249229368493}
   - component: {fileID: 2720848774291880741}
-  - component: {fileID: 3931208906884622884}
   m_Layer: 0
   m_Name: BonusTargetBuff
   m_TagString: Untagged
@@ -120,19 +119,6 @@ MonoBehaviour:
   _duration: 1
   _effect: {fileID: 7222752196106763089}
   _buffType: 3
---- !u!114 &3931208906884622884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359832709976991250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e3c3700f3d51c4a80c9ef127ca28bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effect: {fileID: 7222752196106763089}
 --- !u!1 &1585387656581531444
 GameObject:
   m_ObjectHideFlags: 0

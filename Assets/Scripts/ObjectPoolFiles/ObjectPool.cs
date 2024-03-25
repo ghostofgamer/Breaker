@@ -32,7 +32,6 @@ namespace ObjectPoolFiles
             }
 
             spawned = filter.ElementAt(index);
-            // spawned.gameObject.SetActive(true);
             return spawned != null;
         }
 
@@ -40,7 +39,6 @@ namespace ObjectPoolFiles
         {
             T filter = _poolGeneric.FirstOrDefault(p => p.gameObject.activeSelf == false);
             spawned = filter;
-            // return true;
         }
 
         public void SetAutoExpand(bool flag)

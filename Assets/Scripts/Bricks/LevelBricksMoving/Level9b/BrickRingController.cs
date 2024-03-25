@@ -35,11 +35,9 @@ public class BrickRingController : MonoBehaviour
 
         while (true)
         {
-            // ChangeActivations(false);
             _animator.Play("BrickRing");
             yield return _waitForSeconds;
             _animator.Play("BrickRingEnd");
-            // StartCoroutine(SetValue(true));
             yield return _waitForSeconds;
         }
     }

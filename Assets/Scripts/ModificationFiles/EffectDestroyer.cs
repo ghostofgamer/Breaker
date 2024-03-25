@@ -1,23 +1,24 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EffectDestroyer : MonoBehaviour
+namespace ModificationFiles
 {
-    [SerializeField] private float _delay;
-
-    private WaitForSeconds _waitForSeconds;
-
-    private void Start()
+    public class EffectDestroyer : MonoBehaviour
     {
-        _waitForSeconds = new WaitForSeconds(_delay);
-        StartCoroutine(SetActiveChanged());
-    }
+        [SerializeField] private float _delay;
 
-    private IEnumerator SetActiveChanged()
-    {
-        yield return _waitForSeconds;
-        gameObject.SetActive(false);
+        private WaitForSeconds _waitForSeconds;
+
+        private void Start()
+        {
+            _waitForSeconds = new WaitForSeconds(_delay);
+            StartCoroutine(SetActiveChanged());
+        }
+
+        private IEnumerator SetActiveChanged()
+        {
+            yield return _waitForSeconds;
+            gameObject.SetActive(false);
+        }
     }
 }

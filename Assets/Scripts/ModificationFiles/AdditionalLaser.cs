@@ -43,7 +43,7 @@ namespace ModificationFiles
         {
             if (_brickCounter.BrickCount > _brickCounter.RemainingAmountHelp)
                 return;
-        
+
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
 

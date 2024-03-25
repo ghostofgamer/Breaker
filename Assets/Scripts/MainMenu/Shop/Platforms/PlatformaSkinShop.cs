@@ -21,10 +21,8 @@ namespace MainMenu.Shop.Platforms
         {
             LoadCapsuleSkinData();
             _platformaSkinDatas[0].SetValueBought(true);
-            // _activeCapsuleIndex = PlayerPrefs.GetInt("ActiveCapsuleIndex", 0);
             _activeCapsuleIndex = _load.Get(Save.ActiveCapsuleIndex, 0);
             _platformaSkinDatas[_activeCapsuleIndex].SetValueActive(true);
-            // UpdateButtons();
         }
 
         public void BuyCapsuleSkin(int index)
@@ -66,14 +64,7 @@ namespace MainMenu.Shop.Platforms
         {
             for (int i = 0; i < _platformaSkinDatas.Count; i++)
             {
-                /*
-            PlayerPrefs.SetInt("CapsuleSkinBought" + i, _platformaSkinDatas[i].IsBought ? 1 : 0);
-            PlayerPrefs.SetInt("CapsuleSkinActive" + i, _platformaSkinDatas[i].IsActive ? 1 : 0);
-            */
-
-                // _save.SetData("CapsuleSkinBought" + i, _platformaSkinDatas[i].IsBought ? 1 : 0);
                 _save.SetData(Save.CapsuleSkinBought + i, _platformaSkinDatas[i].IsBought ? 1 : 0);
-                // _save.SetData("CapsuleSkinActive" + i, _platformaSkinDatas[i].IsActive ? 1 : 0);
                 _save.SetData(Save.CapsuleSkinActive + i, _platformaSkinDatas[i].IsActive ? 1 : 0);
             }
         }
@@ -82,9 +73,7 @@ namespace MainMenu.Shop.Platforms
         {
             for (int i = 0; i < _platformaSkinDatas.Count; i++)
             {
-                // _platformaSkinDatas[i].SetValueBought(_load.Get("CapsuleSkinBought" + i, 0) == 1);
                 _platformaSkinDatas[i].SetValueBought(_load.Get(Save.CapsuleSkinBought + i, 0) == 1);
-                // _platformaSkinDatas[i].SetValueActive(_load.Get("CapsuleSkinActive" + i, 0) == 1);
                 _platformaSkinDatas[i].SetValueActive(_load.Get(Save.CapsuleSkinActive + i, 0) == 1);
             }
         }

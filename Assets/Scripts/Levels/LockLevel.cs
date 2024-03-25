@@ -1,44 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Enum;
-using Levels;
 using SaveAndLoad;
 using UnityEngine;
 
-public class LockLevel : MonoBehaviour
+namespace Levels
 {
-    [SerializeField] private int _index;
-    [SerializeField] private Load _load;
-    [SerializeField] private Level _level;
-
-    /*private void Awake()
+    public class LockLevel : MonoBehaviour
     {
-        LevelState status = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
-        Debug.Log("статус " + status);
+        [SerializeField] private int _index;
+        [SerializeField] private Load _load;
+        [SerializeField] private Level _level;
 
-        if (status == LevelState.Locked)
+        private void Start()
         {
-            _level.gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
-    }*/
-    
-    private void Start()
-    {
-        LevelState status = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
-        // Debug.Log("статус " + status);
+            LevelState status = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
 
-        if (status == LevelState.Locked)
-        {
-            _level.gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(false);
+            if (status == LevelState.Locked)
+                _level.gameObject.SetActive(false);
+            else
+                gameObject.SetActive(false);
         }
     }
 }

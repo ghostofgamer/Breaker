@@ -1,89 +1,55 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Capsula : MonoBehaviour
+namespace MainMenu
 {
-    [SerializeField] private GameObject _gameObject;
-    
-    private Quaternion originalRotation;
-    private Vector3 originalLocalRotation;
-    private bool _isSelected = false;
-    private Quaternion targetRotation;
-    private Quaternion _originalRotation;
-
-    private bool _rotate;
-
-    void Start()
+    public class Capsula : MonoBehaviour
     {
-        originalRotation = transform.rotation;
-        // originalLocalRotation = transform.localRotation;
-        // originalLocalRotation = transform.localEulerAngles;
-        // targetRotation = originalRotation * Quaternion.Euler(45, 0, 0);
-    }
+        [SerializeField] private GameObject _gameObject;
 
-    void Update()
-    {
-        if (_isSelected)
+        private Quaternion _originalRotation;
+        private Vector3 _originalLocalRotation;
+        private bool _isSelected = false;
+        private float _speed = 65f;
+        private float _speedBack = 10f;
+        private bool _rotate;
+        private float _angle = 35f;
+
+        private void Start()
         {
-            if (!_rotate)
+            _originalRotation = transform.rotation;
+        }
+
+        private void Update()
+        {
+            if (_isSelected)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 35);
-                _rotate = true;
-
-
-                if (Camera.main != null)
+                if (!_rotate)
                 {
-                    float initialCapsuleAngleY = 30f;
-                    float cameraAngle = Camera.main.transform.eulerAngles.x;
-                    float capsuleAngle = cameraAngle - cameraAngle;
-                    transform.eulerAngles = new Vector3(cameraAngle, capsuleAngle, 35f); 
+                    transform.rotation = Quaternion.Euler(0, 0, _angle);
+                    _rotate = true;
+
+                    if (Camera.main != null)
+                    {
+                        float initialCapsuleAngleY = 30f;
+                        float cameraAngle = Camera.main.transform.eulerAngles.x;
+                        float capsuleAngle = cameraAngle - cameraAngle;
+                        transform.eulerAngles = new Vector3(cameraAngle, capsuleAngle, _angle);
+                    }
                 }
-               
-                
-                
-                
-                
-                
-                
-                
-                /*// Получаем текущий угол поворота камеры вокруг оси X
-                float cameraAngle = Camera.main.transform.eulerAngles.x;
 
-                // Вычисляем угол поворота капсулы вокруг оси Y в соответствии с углом поворота камеры
-                float capsuleAngle = cameraAngle;
-
-                // Устанавливаем начальное положение капсулы
-                transform.eulerAngles = new Vector3(0f, capsuleAngle, 0f);*/
+                _gameObject.GetComponent<RectTransform>().Rotate(Vector3.up * _speed * Time.deltaTime);
             }
-
-    
-    
-    // transform.Rotate(0, 65 * Time.deltaTime, 0, Space.World);
-
-            
-            
-            _gameObject.GetComponent<RectTransform>().Rotate(Vector3.up * 65 * Time.deltaTime);
+            else
+            {
+                transform.rotation =
+                    Quaternion.Slerp(transform.rotation, _originalRotation, Time.deltaTime * _speedBack);
+                _rotate = false;
+            }
         }
-        else
+
+        public void StartRotate(bool selected)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 10f);
-            _rotate = false;
+            _isSelected = selected;
         }
     }
-
-    public void StartRotate(bool selected)
-    {
-        _isSelected = selected;
-    }
-
-    /*
-    private void Update()
-    {
-        // transform.rotation = Quaternion.Euler(0,0f,-45f);
-        transform.Rotate(0, 150 * Time.deltaTime, 0, Space.World);
-    }
-    */
 }

@@ -1,4 +1,3 @@
-using Enum;
 using SaveAndLoad;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +17,7 @@ namespace MainMenu.Shop
 
         private void Start()
         {
-            var level = _load.Get(_buff.ToString(), _startLevel);
+            int level = _load.Get(_buff.ToString(), _startLevel);
 
             if (level > _startLevel)
                 ChangeValue();

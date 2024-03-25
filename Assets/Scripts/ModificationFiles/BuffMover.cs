@@ -18,9 +18,9 @@ namespace ModificationFiles
         private float _reducerJumpHeight = 1f;
 
         private float _minX = -11f;
-        private float _maxX = 11f; 
-        private float _currentX; 
-        
+        private float _maxX = 11f;
+        private float _currentX;
+
         void Start()
         {
             _startY = transform.position.y;
