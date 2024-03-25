@@ -1551,17 +1551,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
---- !u!114 &157478311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7349805414265602613, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &167980352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6507901977716847365, guid: 7e62999f8e0c14d4b99956774992d1e2, type: 3}
@@ -7122,12 +7111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155a6f5b18f9d3a4a9592549d4ad2bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 30
-  _camera: {fileID: 1190493297}
-  yMinLimit: 3
-  yMaxLimit: 16
-  xMinLimit: -17.3
-  xMaxLimit: -10.4
 --- !u!23 &348518952
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10767,6 +10750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21b617201907dc47a17cae724667df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BonusChances: 50
   _sceneLoader: {fileID: 1991885204}
   _brickCounter: {fileID: 980526520}
   _nameEffectAnimation: {fileID: 1876676075}
@@ -13537,7 +13521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af3255e45346d946846e133f0df47c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _statText: {fileID: 1291630506}
   _scoreCounter: {fileID: 1771528540}
 --- !u!114 &1130046068 stripped
 MonoBehaviour:
@@ -14286,7 +14269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 2100933965}
   Player: {fileID: 824722463}
   _paddleGrow: {fileID: 1640829200}
   _ballGrow: {fileID: 1640829201}
@@ -14308,7 +14290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 2100933965}
   Player: {fileID: 824722463}
   _paddleShrink: {fileID: 588720367}
   _ballShrink: {fileID: 588720368}
@@ -14330,7 +14311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformaMover: {fileID: 824722458}
-  BallController: {fileID: 2100933965}
   Player: {fileID: 824722463}
   _randomEffect: {fileID: 306131563}
   _resetModifications: {fileID: 306131562}
@@ -14856,17 +14836,6 @@ Transform:
   - {fileID: 1594841000}
   m_Father: {fileID: 1427506825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1291630506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6866325243040637274, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1303021000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4548817107890004417, guid: a3516fa3cdb460843af3e4dfdebc4ba4, type: 3}
@@ -15853,7 +15822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81fb8a2d0dcd9747af90490d1883822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timer: {fileID: 1547621465}
 --- !u!114 &1463320018 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7573956887916659518, guid: 13415f14dfcd4a843864b6abceccb1bf, type: 3}
@@ -16211,17 +16179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca90b946c9b7cb541b6e75bcfb8829a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1547621465 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2253662827787823216, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1560343509
 GameObject:
   m_ObjectHideFlags: 0
@@ -16267,17 +16224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2796991db4eb7e54e936fcdad3bf75a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ball: {fileID: 621576494}
-  _skinsBall:
-  - {fileID: 2100000, guid: e5fa79498fd4372488f6ca8bc534b2fa, type: 2}
-  - {fileID: 2100000, guid: f037ca73c5acad74497f630f745d9234, type: 2}
-  - {fileID: 2100000, guid: 34e92344c15541b43877d0e118e77b96, type: 2}
-  - {fileID: 2100000, guid: ef650828b411e89439918a213df40983, type: 2}
-  - {fileID: 2100000, guid: 1787836d1bbe1cc4c84f1dbd9e94c044, type: 2}
-  - {fileID: 2100000, guid: 6479b0a46ffd2444cbead01b2e3d52de, type: 2}
-  - {fileID: 2100000, guid: ae443e127ceb44e47952a0932f8776dd, type: 2}
-  - {fileID: 2100000, guid: 59a979f52b5020541aa05cbdadaba673, type: 2}
-  - {fileID: 2100000, guid: f7119e22ff08dd94caed1ae51a78940c, type: 2}
   _load: {fileID: 293203873}
   _skins: []
   _ballTrigger: {fileID: 0}
@@ -17079,12 +17025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6128a6a304fef474bace7fae818fd019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  _rayLength: 1
-  platformOffset: 3
 --- !u!135 &1606335787
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24175,12 +24115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155a6f5b18f9d3a4a9592549d4ad2bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 36
-  _camera: {fileID: 1190493297}
-  yMinLimit: -10
-  yMaxLimit: 11
-  xMinLimit: -11
-  xMaxLimit: 11
 --- !u!23 &1892960507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25926,12 +25860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155a6f5b18f9d3a4a9592549d4ad2bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
-  _camera: {fileID: 1190493297}
-  yMinLimit: 3
-  yMaxLimit: 16
-  xMinLimit: -17.3
-  xMaxLimit: -10.4
 --- !u!23 &2085947129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26079,12 +26007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c515315286562f4882f7c326ddddc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  _rayLength: 1
-  platformOffset: 3
 --- !u!135 &2100933966
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26668,7 +26590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c25f81a7634e0e47b998586efcd8d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fragmentsTxt: {fileID: 157478311}
   _scoreCounter: {fileID: 1771528540}
 --- !u!1 &2130430877
 GameObject:

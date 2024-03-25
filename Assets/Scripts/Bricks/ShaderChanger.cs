@@ -5,10 +5,11 @@ namespace Bricks
 {
     public class ShaderChanger : MonoBehaviour
     {
+        private const string RimPower = "_RimPower";
+        private static readonly int Power = Shader.PropertyToID(RimPower);
+
         [SerializeField] private Material _material;
 
-        private static readonly int Power = Shader.PropertyToID(RimPower);
-        private const string RimPower = "_RimPower";
         private float _duration = 3;
         private float _elapsedTime;
         private float _maxValue = 5f;

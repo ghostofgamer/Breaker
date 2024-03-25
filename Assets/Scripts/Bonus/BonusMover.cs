@@ -19,9 +19,9 @@ namespace Bonus
         private float _minAngle = -15f;
         private float _maxAngle = 15f;
         private float _minX = -11f;
-        private float _maxX = 11f; 
-        private float _currentX; 
-        
+        private float _maxX = 11f;
+        private float _currentX;
+
         void Start()
         {
             _startY = transform.position.y;

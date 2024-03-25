@@ -5,7 +5,7 @@ namespace Bricks
     public class BrickActivator : MonoBehaviour
     {
         [SerializeField] private GameObject _fadeObject;
-        [SerializeField]private MeshRenderer _meshRenderer;
+        [SerializeField] private MeshRenderer _meshRenderer;
 
         public void Activate()
         {

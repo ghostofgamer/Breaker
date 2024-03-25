@@ -31,7 +31,7 @@ namespace CameraFiles
             _newCameraPos = _cameraStartPos;
         }
 
-        void Update()
+        private void Update()
         {
             if (transform.position != _newCameraPos && !Input.GetMouseButton(0))
             {

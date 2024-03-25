@@ -21,20 +21,19 @@ namespace Bricks
         [SerializeField] private GameObject _targetVisual;
         [SerializeField] private FragmentsCounter _fragmentsCounter;
         [SerializeField] private bool _isEternal = false;
-        // [SerializeField] private AudioSource _audioSource;
         [SerializeField] protected AudioSource AudioSource;
         
         private int _minBonus = 1;
         private int _maxBonus = 3;
         private float _bonusRadius = 1.65f;
         private float _randomProcent = 0.5f;
+        private int _factor = 2;
         protected bool IsTargetBonus;
-    
-        public Effect EffectElement => Effect;
-        public bool IsImmortalFlag => IsImmortal;
-        public bool IsEternal => _isEternal;
 
         public event UnityAction Dead;
+        
+        public Effect EffectElement => Effect;
+        public bool IsEternal => _isEternal;
         
         private void Start()
         {
@@ -65,7 +64,7 @@ namespace Bricks
         
             for (int i = 0; i < BonusAmount; i++)
             {
-                float angle = i * Mathf.PI * 2 / BonusAmount;
+                float angle = i * Mathf.PI * _factor / BonusAmount;
                 float x = transform.position.x + Mathf.Cos(angle) * _bonusRadius;
                 float z = transform.position.z + Mathf.Sin(angle) * _bonusRadius;
                 Vector3 bonusPosition = new Vector3(x, transform.position.y, z);
@@ -101,7 +100,6 @@ namespace Bricks
                 return;
             }
             
-            // _audioSource.PlayOneShot(_audioSource.clip);
             Dead?.Invoke();
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;

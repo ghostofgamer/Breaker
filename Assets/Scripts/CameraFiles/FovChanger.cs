@@ -1,20 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FovChanger : MonoBehaviour
+namespace CameraFiles
 {
-    [SerializeField] private Camera _camera;
-
-    private int _fov = 55;
-    
-    private void Start()
+    public class FovChanger : MonoBehaviour
     {
-        if (!Application.isMobilePlatform)
+        [SerializeField] private Camera _camera;
+
+        private int _fov = 55;
+
+        private void Start()
         {
-            Debug.Log("ФОВ");
-            _camera.fieldOfView = _fov;
+            if (!Application.isMobilePlatform)
+                _camera.fieldOfView = _fov;
         }
     }
 }

@@ -8,7 +8,6 @@ namespace BulletFiles
 
         private void Update()
         {
-            // transform.position += transform.forward * (_speed * Time.deltaTime);
             transform.position += transform.up * (_speed * Time.deltaTime);
         }
     }

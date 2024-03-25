@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1541877323833305657}
   - component: {fileID: 9038673692875130135}
   - component: {fileID: 6263432457950491562}
+  - component: {fileID: 2893144430489604420}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -132,6 +133,7 @@ MonoBehaviour:
   _animator: {fileID: 4395478558935932139}
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 0}
+  _animationsController: {fileID: 2893144430489604420}
 --- !u!82 &9038673692875130135
 AudioSource:
   m_ObjectHideFlags: 0
@@ -241,3 +243,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 8127033033840559049}
+--- !u!114 &2893144430489604420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910538691810499632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4747d9285ba3e4798f0015e8ed4643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 4395478558935932139}

@@ -5,7 +5,7 @@ namespace CameraFiles
     public class CameraDistance : MonoBehaviour
     {
         [SerializeField] private CameraMover _cameraMover;
-    
+
         private float _distance = 60f;
         private Vector3 _targetPosition;
 
