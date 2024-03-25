@@ -14,13 +14,13 @@ public class ResetModifications : Modification
     private void OnEnable()
     {
         _ball.Dying += ApplyModification;
-        _brickCounter.AllBrickDestory += ApplyModification;
+        _brickCounter.AllBrickDestroy += ApplyModification;
     }
 
     private void OnDisable()
     {
         _ball.Dying -= ApplyModification;
-        _brickCounter.AllBrickDestory -= ApplyModification;
+        _brickCounter.AllBrickDestroy -= ApplyModification;
     }
 
     public override void ApplyModification()

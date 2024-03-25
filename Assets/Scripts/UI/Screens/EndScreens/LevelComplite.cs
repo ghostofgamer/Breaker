@@ -29,12 +29,12 @@ namespace UI.Screens.EndScreens
 
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestory += Win;
+            _brickCounter.AllBrickDestroy += Win;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestory -= Win;
+            _brickCounter.AllBrickDestroy -= Win;
         }
 
         private void SetValue()

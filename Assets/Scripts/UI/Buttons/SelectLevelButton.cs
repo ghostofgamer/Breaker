@@ -1,51 +1,38 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using CameraFiles;
-using UI;
-using UI.Buttons;
 using UI.Screens.LevelInfo;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
-public class SelectLevelButton : AbstractButton
+namespace UI.Buttons
 {
-    [SerializeField] private int _sceneNumber;
-    [SerializeField] private Transform _target;
-    [SerializeField] private CameraMover _cameraMover;
-    [SerializeField] private CanvasAnimator _canvasAnimator;
-    [SerializeField] private BackToMenuButton _backToMenuButton;
-    [SerializeField]private LevelInfo _levelInfo;
-    [SerializeField]private AudioSource _audioSource;
-    
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
-    private bool _isMove;
-    
-    protected override void OnClick()
+    public class SelectLevelButton : AbstractButton
     {
-        _audioSource.PlayOneShot(_audioSource.clip);
-        _levelInfo.Close();
-        StartCoroutine(SelectLevel());
-    }
+        [SerializeField] private int _sceneNumber;
+        [SerializeField] private Transform _target;
+        [SerializeField] private CameraMover _cameraMover;
+        [SerializeField] private CanvasAnimator _canvasAnimator;
+        [SerializeField] private BackToMenuButton _backToMenuButton;
+        [SerializeField] private LevelInfo _levelInfo;
+        [SerializeField] private AudioSource _audioSource;
 
-    private void Update()
-    {
-        if (_isMove)
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
+
+        protected override void OnClick()
         {
-            // _cameraMover.transform.LookAt(_target);
-            _cameraMover.transform.position = Vector3.MoveTowards(_cameraMover.transform.position,
-                _target.transform.position, 10 * Time.deltaTime);
+            _audioSource.PlayOneShot(_audioSource.clip);
+            _levelInfo.Close();
+            StartCoroutine(SelectLevel());
         }
-    }
 
-    private IEnumerator SelectLevel()
-    {
-        _cameraMover.enabled = false;
-        _isMove = true;
-        _canvasAnimator.Close();
-        _backToMenuButton.FadeBackGround();
-        yield return _waitForSeconds;
-        SceneManager.LoadScene(_sceneNumber);
+        private IEnumerator SelectLevel()
+        {
+            _cameraMover.SetTargetPosition(_target.position);
+            _cameraMover.SpeedUp();
+            _canvasAnimator.Close();
+            _backToMenuButton.FadeBackGround();
+            yield return _waitForSeconds;
+            SceneManager.LoadScene(_sceneNumber);
+        }
     }
 }

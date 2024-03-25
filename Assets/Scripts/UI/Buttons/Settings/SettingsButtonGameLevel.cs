@@ -19,7 +19,7 @@ namespace UI.Buttons.Settings
         private void OnEnable()
         {
             base.OnEnable();
-            _brickCounter.AllBrickDestory += SetValue;
+            _brickCounter.AllBrickDestroy += SetValue;
             _ball.Dying += SetValue;
             _reviveScreen.Revive += SetValue;
         }
@@ -27,7 +27,7 @@ namespace UI.Buttons.Settings
         private void OnDisable()
         {
             base.OnDisable();
-            _brickCounter.AllBrickDestory -= SetValue;
+            _brickCounter.AllBrickDestroy -= SetValue;
             _ball.Dying -= SetValue;
             _reviveScreen.Revive -= SetValue;
         }

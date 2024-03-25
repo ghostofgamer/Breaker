@@ -17,12 +17,12 @@ namespace GameScene
         private void OnEnable()
         {
             _reviveScreen.Lose += PanelMover;
-            _brickCounter.AllBrickDestory += PanelMover;
+            _brickCounter.AllBrickDestroy += PanelMover;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestory -= PanelMover;
+            _brickCounter.AllBrickDestroy -= PanelMover;
             _reviveScreen.Lose -= PanelMover;
         }
 

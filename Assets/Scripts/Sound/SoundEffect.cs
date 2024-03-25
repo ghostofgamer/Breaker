@@ -26,7 +26,7 @@ namespace Sound
             // _ballTrigger.Dying +=PlayCountDownSound;
             _reviveScreen.Lose += StopCountDown;
             _reviveScreen.Revive += StopCountDown;
-            _brickCounter.AllBrickDestory += PlayVictorySound;
+            _brickCounter.AllBrickDestroy += PlayVictorySound;
         }
 
         private void OnDisable()
@@ -35,7 +35,7 @@ namespace Sound
             // _ballTrigger.Dying -= PlayCountDownSound;
             _reviveScreen.Lose -= StopCountDown;
             _reviveScreen.Revive -= StopCountDown;
-            _brickCounter.AllBrickDestory -= PlayVictorySound;
+            _brickCounter.AllBrickDestroy -= PlayVictorySound;
         }
 
         private void PlayDieSound()

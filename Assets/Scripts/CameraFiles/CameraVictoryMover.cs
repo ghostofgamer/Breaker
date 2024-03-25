@@ -16,12 +16,12 @@ namespace CameraFiles
     
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestory += Move;
+            _brickCounter.AllBrickDestroy += Move;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestory -= Move;
+            _brickCounter.AllBrickDestroy -= Move;
         }
 
         private void Move()

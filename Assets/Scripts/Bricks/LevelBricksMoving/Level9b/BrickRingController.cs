@@ -16,12 +16,12 @@ public class BrickRingController : MonoBehaviour
 
     private void OnEnable()
     {
-        _brickCounter.AllBrickDestory += Stop;
+        _brickCounter.AllBrickDestroy += Stop;
     }
 
     private void OnDisable()
     {
-        _brickCounter.AllBrickDestory -= Stop;
+        _brickCounter.AllBrickDestroy -= Stop;
     }
 
     private void Start()

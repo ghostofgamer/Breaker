@@ -21,14 +21,14 @@ namespace ModificationFiles
         {
             _brickCounter.BricksDestructionHelp += SpawnLaser;
             _reviveScreen.Revive += SpawnLaser;
-            _brickCounter.AllBrickDestory += StopCorutine;
+            _brickCounter.AllBrickDestroy += StopCorutine;
             _ballTrigger.Dying += StopCorutine;
         }
 
         private void OnDisable()
         {
             _brickCounter.BricksDestructionHelp -= SpawnLaser;
-            _brickCounter.AllBrickDestory -= StopCorutine;
+            _brickCounter.AllBrickDestroy -= StopCorutine;
             _reviveScreen.Revive -= SpawnLaser;
             _ballTrigger.Dying -= StopCorutine;
         }

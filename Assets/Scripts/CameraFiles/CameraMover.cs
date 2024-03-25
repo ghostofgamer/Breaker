@@ -5,6 +5,8 @@ namespace CameraFiles
 {
     public class CameraMover : MonoBehaviour
     {
+        private const string ChooseLvlMainCameraMoverStart = "ChooseLvlMainCameraMoverStart";
+
         [SerializeField] private float _sensitivity;
         [SerializeField] private float _speed;
         [SerializeField] private float _overSpeed;
@@ -14,8 +16,6 @@ namespace CameraFiles
         [SerializeField] private float _maxZ;
         [SerializeField] private Animator _animator;
 
-        private const string ChooseLvlMainCameraMoverStart = "ChooseLvlMainCameraMoverStart";
-        
         private Vector3 _mouseStartPos;
         private Vector3 _cameraStartPos;
         private Vector3 _newCameraPos;
@@ -35,7 +35,8 @@ namespace CameraFiles
         {
             if (transform.position != _newCameraPos && !Input.GetMouseButton(0))
             {
-                transform.position = Vector3.MoveTowards(transform.position, _newCameraPos, _overSpeed * Time.deltaTime);
+                transform.position =
+                    Vector3.MoveTowards(transform.position, _newCameraPos, _overSpeed * Time.deltaTime);
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -43,7 +44,7 @@ namespace CameraFiles
                 _mouseStartPos = Input.mousePosition;
                 _cameraStartPos = transform.position;
             }
-            
+
             else if (Input.GetMouseButton(0))
             {
                 Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
@@ -61,12 +62,17 @@ namespace CameraFiles
             _newCameraPos = position;
         }
 
+        public void SpeedUp()
+        {
+            _overSpeed *= _overSpeed;
+        }
+
         private IEnumerator SetTarget(Vector3 position)
         {
             yield return _waitForSeconds;
             _newCameraPos = position;
         }
-        
+
         private IEnumerator PlayAnimations()
         {
             _animator.Play(ChooseLvlMainCameraMoverStart);

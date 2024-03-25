@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UI.Buttons;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartButton : AbstractButton
+namespace UI.Buttons
 {
-    protected override void OnClick()
+    public class RestartButton : AbstractButton
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        protected override void OnClick()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

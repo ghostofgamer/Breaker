@@ -32,14 +32,14 @@ namespace GameScene.BallContent
 
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestory += StopMove;
-            _brickCounter.AllBrickDestory += SetParent;
+            _brickCounter.AllBrickDestroy += StopMove;
+            _brickCounter.AllBrickDestroy += SetParent;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestory -= StopMove;
-            _brickCounter.AllBrickDestory -= SetParent;
+            _brickCounter.AllBrickDestroy -= StopMove;
+            _brickCounter.AllBrickDestroy -= SetParent;
         }
 
         private void Update()

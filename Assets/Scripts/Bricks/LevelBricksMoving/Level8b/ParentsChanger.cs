@@ -20,7 +20,7 @@ public class ParentsChanger : MonoBehaviour
             _brick.Dead += ChangeParent;
 
         if (_brickCounter != null)
-            _brickCounter.AllBrickDestory += SetParentEnviropment;
+            _brickCounter.AllBrickDestroy += SetParentEnviropment;
     }
 
     private void OnDisable()
@@ -29,7 +29,7 @@ public class ParentsChanger : MonoBehaviour
             _brick.Dead -= ChangeParent;
 
         if (_brickCounter != null)
-            _brickCounter.AllBrickDestory += SetParentEnviropment;
+            _brickCounter.AllBrickDestroy += SetParentEnviropment;
     }
 
     private void ChangeParent()

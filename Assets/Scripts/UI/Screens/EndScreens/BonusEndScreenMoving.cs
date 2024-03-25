@@ -58,7 +58,7 @@ namespace UI.Screens.EndScreens
             }
         }
 
-        IEnumerator PlusValue()
+        private IEnumerator PlusValue()
         {
             while (_value <= _endValue)
             {
@@ -70,7 +70,7 @@ namespace UI.Screens.EndScreens
             gameObject.SetActive(false);
         }
 
-        void Move()
+        private void Move()
         {
             LerpPosition(_line, transform);
         }

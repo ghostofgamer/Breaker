@@ -15,12 +15,10 @@ namespace Statistics
 
         private int _bricksSmashedCount;
         private List<Brick> _bricks;
-
         private int _score = 5;
-
         private bool _isRemainingActivated;
 
-        public event UnityAction AllBrickDestory;
+        public event UnityAction AllBrickDestroy;
         public event UnityAction BricksDestructionHelp;
 
         public int RemainingAmountHelp { get; private set; } = 3;
@@ -31,7 +29,7 @@ namespace Statistics
             BrickCount--;
             _bricksSmashedCount++;
             _bonusCounter.AddBonus(reward);
-            ShowInfo();
+            // ShowInfo();
             _scoreCounter.IncreaseScore(_score);
 
             if (BrickCount <= RemainingAmountHelp)
@@ -49,20 +47,20 @@ namespace Statistics
         public void AddBricks(int bricksCount)
         {
             BrickCount++;
-            ShowInfo();
+            // ShowInfo();
         }
 
-        private void ShowInfo()
+        /*private void ShowInfo()
         {
             _brickCountTxt.text = BrickCount.ToString();
             _brickSmashedTxt.text = _bricksSmashedCount.ToString();
-        }
+        }*/
 
         public void TryVictory()
         {
             if (BrickCount <= 0)
             {
-                AllBrickDestory?.Invoke();
+                AllBrickDestroy?.Invoke();
             }
         }
 

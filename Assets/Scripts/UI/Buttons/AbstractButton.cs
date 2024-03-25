@@ -26,12 +26,12 @@ namespace UI.Buttons
             _button.onClick.RemoveListener(OnClick);
         }
 
+        protected abstract void OnClick();
+
         public void CanvasValue(int alpha)
         {
             _canvasGroup.alpha = alpha;
             _canvasGroup.interactable = alpha > 0;
         }
-    
-        protected abstract void OnClick();
     }
 }

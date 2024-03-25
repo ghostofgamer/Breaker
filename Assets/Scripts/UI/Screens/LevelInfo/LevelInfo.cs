@@ -2,6 +2,7 @@ using System.Collections;
 using Enum;
 using SaveAndLoad;
 using TMPro;
+using UI.Buttons;
 using UnityEngine;
 
 namespace UI.Screens.LevelInfo

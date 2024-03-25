@@ -31,6 +31,11 @@ namespace UI.Buttons
             GoMainMenu();
         }
 
+        public void FadeBackGround()
+        {
+            StartCoroutine(Fade(_zeroAlpha, _fullAlpha));
+        }
+
         private void GoMainMenu()
         {
             StartCoroutine(GoMainScene());
@@ -43,11 +48,6 @@ namespace UI.Buttons
             _colliderController.SetValue(false);
             yield return _waitForSeconds;
             SceneManager.LoadScene(NameScene);
-        }
-
-        public void FadeBackGround()
-        {
-            StartCoroutine(Fade(_zeroAlpha, _fullAlpha));
         }
 
         private IEnumerator Fade(int startAlpha, int targetAlpha)

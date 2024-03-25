@@ -24,19 +24,19 @@ namespace UI.Buttons.EndScreenButtons
             StartCoroutine(ButtonClick());
         }
 
+        public void SetActive(int credits)
+        {
+            gameObject.SetActive(true);
+            _credits = credits * _factor;
+            StartCoroutine(OpenButton());
+        }
+
         private IEnumerator ButtonClick()
         {
             _audioSource.PlayOneShot(_audioSource.clip);
             Button.interactable = false;
             yield return _waitForSound;
             _rewardTripleCredit.Show();
-        }
-
-        public void SetActive(int credits)
-        {
-            gameObject.SetActive(true);
-            _credits = credits * _factor;
-            StartCoroutine(OpenButton());
         }
 
         private IEnumerator OpenButton()
