@@ -1,20 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Bricks;
 using UnityEngine;
 
-public class ElectricBall : MonoBehaviour
+namespace PlayerFiles.ModificationContent
 {
-    public void DestroyBrick(Brick brick)
+    public class ElectricBall : MonoBehaviour
     {
-        if(brick.GetComponent<BrickExplosion>())
+        public void DestroyBrick(Brick brick)
         {
-            brick.GetComponent<BrickExplosion>().Detonate();
-        }
-        else
-        {
-            brick.Die();
+            if (brick.GetComponent<BrickExplosion>())
+                brick.GetComponent<BrickExplosion>().Detonate();
+            else
+                brick.Die();
         }
     }
 }

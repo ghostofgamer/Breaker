@@ -6,7 +6,6 @@ namespace PlayerFiles.PlatformaContent
 {
     public class PlatformaDestroyer : MonoBehaviour
     {
-        [SerializeField] private BallMover _ballMover;
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private ParticleSystem _victoryEffect;
         [SerializeField] private ParticleSystem _loseEffect;
@@ -28,17 +27,19 @@ namespace PlayerFiles.PlatformaContent
 
         private void OnVictoriousDestruction()
         {
-            _victoryEffect.transform.parent = null;
-            _victoryEffect.Play();
-            gameObject.SetActive(false);
-            _mousePosition.SetActive(false);
+            SetValue(_victoryEffect);
             transform.parent = _enviropment;
         }
-    
+
         private void OnLosingDestruction()
         {
-            _loseEffect.transform.parent = null;
-            _loseEffect.Play();
+            SetValue(_loseEffect);
+        }
+
+        private void SetValue(ParticleSystem effect)
+        {
+            effect.transform.parent = null;
+            effect.Play();
             gameObject.SetActive(false);
             _mousePosition.SetActive(false);
         }

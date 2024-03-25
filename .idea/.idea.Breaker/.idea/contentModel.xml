@@ -1611,7 +1611,6 @@
           <e p="GameScene" t="Include">
             <e p="BallContent" t="Include">
               <e p="Ball.cs" t="Include" />
-              <e p="BallController.cs" t="Include" />
               <e p="BallMover.cs" t="Include" />
               <e p="BallRevive.cs" t="Include" />
               <e p="BallTrigger.cs" t="Include" />
@@ -1709,6 +1708,7 @@
               <e p="ElectricBallActivator.cs" t="Include" />
               <e p="LuckySave.cs" t="Include" />
               <e p="MagnifierRadiusExplosion.cs" t="Include" />
+              <e p="PlatformModification.cs" t="Include" />
               <e p="ResistanceDebuff.cs" t="Include" />
             </e>
             <e p="MousePositionController.cs" t="Include" />
@@ -1721,9 +1721,6 @@
               <e p="PlatformaTrigger.cs" t="Include" />
             </e>
             <e p="Player.cs" t="Include" />
-            <e p="TestPlatformController" t="Include">
-              <e p="PlatformController.cs" t="Include" />
-            </e>
             <e p="Wallet.cs" t="Include" />
           </e>
           <e p="Progress" t="Include">
@@ -1899,7 +1896,6 @@
             <e p="TestBallMover.cs" t="Include" />
           </e>
           <e p="BallMov.cs" t="Include" />
-          <e p="Forward.cs" t="Include" />
           <e p="LevelChoose.cs" t="Include" />
           <e p="Mask.shader" t="Include" />
           <e p="MaskObject.cs" t="Include" />

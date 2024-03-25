@@ -1,6 +1,7 @@
 using Bonus;
 using ModificationFiles;
 using ModificationFiles.EffectApplier;
+using PlayerFiles.ModificationContent;
 using Statistics;
 using UnityEngine;
 
@@ -34,16 +35,13 @@ namespace PlayerFiles.PlatformaContent
                 {
                     if (_resistanceDebuff.TryResiste() && _resistanceDebuff.enabled)
                     {
-                        Debug.Log("Сопротивление");
                         debuff.Destroy();
                         return;
                     }
 
-                    Debug.Log("применение");
                     CatchEffect(_debuffApplier, debuff);
                 }
             }
-
 
             if (other.TryGetComponent(out Neutral neutral))
                 CatchEffect(_neutralApplier, neutral);
@@ -54,20 +52,11 @@ namespace PlayerFiles.PlatformaContent
                 _fragmentsCounter.FragmentsCollect();
 
                 if (_chanceBonus.enabled)
-                {
                     bonusDeath.SetValue(_chanceBonus.TryIncreaseBonus(bonusDeath.Reward));
-                }
 
                 _bonusCounter.AddBonus(bonusDeath.Reward);
                 bonusDeath.Die();
             }
-        }
-
-        public void Init(BuffApplier buffApplier, DebuffApplier debuffApplier, NeutralApplier neutralApplier)
-        {
-            _buffApplier = buffApplier;
-            _debuffApplier = debuffApplier;
-            _neutralApplier = neutralApplier;
         }
 
         private void CatchEffect(EffectApplier effectApplier, Effect effect)

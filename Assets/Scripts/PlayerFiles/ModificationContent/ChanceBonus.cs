@@ -1,27 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ChanceBonus : MonoBehaviour
+namespace PlayerFiles.ModificationContent
 {
-    private float _bonusChances = 50;
-    private float _randomValue;
-
-    private void Start()
+    public class ChanceBonus : PlatformModification
     {
-        
-    }
+        private int _factor = 2;
 
-    public int TryIncreaseBonus(int reward)
-    {
-        _randomValue = Random.Range(0, 100);
+        public int TryIncreaseBonus(int reward)
+        {
+            RandomValue = Random.Range(MinValue, MaxValue);
 
-        if (_randomValue > _bonusChances)
+            if (RandomValue > BonusChances)
+                return reward;
+
+            reward *= _factor;
             return reward;
-
-        reward *= 2;
-        return reward;
+        }
     }
 }

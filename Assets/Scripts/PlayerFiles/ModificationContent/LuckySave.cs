@@ -1,62 +1,51 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using GameScene;
 using ModificationFiles;
 using Statistics;
-using TMPro;
 using UI.Buttons.Settings;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class LuckySave : MonoBehaviour
+namespace PlayerFiles.ModificationContent
 {
-    [SerializeField] private SceneLoader _sceneLoader;
-    [SerializeField] private BrickCounter _brickCounter;
-    // [SerializeField] private TextLuckySaveMove _LuckySaveText;
-    [SerializeField] private NameEffectAnimation _nameEffectAnimation;
-    [SerializeField]private SettingsButtonGameLevel _settingsButtonGameLevel;
-
-    private float _bonusChances = 50;
-    private float _randomValue;
-
-    private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
-    private WaitForSecondsRealtime _waitForStart = new WaitForSecondsRealtime(0.3f);
-    private Coroutine _coroutine;
-
-    private void Start()
+    public class LuckySave : PlatformModification
     {
+        [SerializeField] private SceneLoader _sceneLoader;
+        [SerializeField] private BrickCounter _brickCounter;
+        [SerializeField] private NameEffectAnimation _nameEffectAnimation;
+        [SerializeField] private SettingsButtonGameLevel _settingsButtonGameLevel;
+
+        private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
+        private WaitForSecondsRealtime _waitForStart = new WaitForSecondsRealtime(0.3f);
+        private Coroutine _coroutine;
         
-    }
+        public bool TryGetLuckySave()
+        {
+            RandomValue = Random.Range(MinValue, MaxValue);
 
-    public bool TryGetLuckySave()
-    {
-        _randomValue = Random.Range(0, 100f);
+            if (RandomValue > BonusChances)
+                return false;
 
-        if (_randomValue > _bonusChances)
-            return false;
+            Activated();
+            return true;
+        }
 
-        Activated();
-        return true;
-    }
+        private void Activated()
+        {
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
 
-    private void Activated()
-    {
-        if (_coroutine != null)
-            StopCoroutine(_coroutine);
+            _coroutine = StartCoroutine(ActivateExtraLife());
+        }
 
-        _coroutine = StartCoroutine(ActivateExtraLife());
-    }
-
-    private IEnumerator ActivateExtraLife()
-    {
-        yield return _waitForStart;
-        _nameEffectAnimation.Show();
-        /*_LuckySaveText.gameObject.SetActive(true);
-        _LuckySaveText.Play();*/
-        yield return _waitForSeconds;
-        _settingsButtonGameLevel.SetValue();
-        _sceneLoader.RevivePlatform();
-        _brickCounter.TryVictory();
+        private IEnumerator ActivateExtraLife()
+        {
+            yield return _waitForStart;
+            _nameEffectAnimation.Show();
+            yield return _waitForSeconds;
+            _settingsButtonGameLevel.SetValue();
+            _sceneLoader.RevivePlatform();
+            _brickCounter.TryVictory();
+        }
     }
 }

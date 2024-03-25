@@ -15,6 +15,9 @@ namespace PlayerFiles.PlatformaContent
         private float _maxX = 11f;
         private float _minZ = -10f;
         private float _maxZ = 5f;
+        private float _slowMove = 0.35f;
+        private float _factor = 2f;
+        private int _directionX = 1;
         private bool _isMousePressed = false;
         private bool _isReverse = false;
         private bool _isFirstThrow = true;
@@ -24,12 +27,11 @@ namespace PlayerFiles.PlatformaContent
         private string _mouseX = "Mouse X";
 
         public float Speed => _moveSpeed;
-
         public int DirectionX { get; private set; }
 
         void Update()
         {
-            float mouse = Input.GetAxis(_mouseX) * 2;
+            float mouse = Input.GetAxis(_mouseX) * _factor;
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -62,15 +64,6 @@ namespace PlayerFiles.PlatformaContent
             }
         }
 
-        private IEnumerator TimeScaleChanged()
-        {
-            Time.timeScale = 0.35f;
-            yield return _waitForSeconds;
-
-            while (Time.timeScale < 1f)
-                Time.timeScale += Time.deltaTime;
-        }
-
         public void SetValue(float speed)
         {
             _moveSpeed = speed;
@@ -86,9 +79,34 @@ namespace PlayerFiles.PlatformaContent
             _isMousePressed = flag;
         }
 
-        void MovePlatformWithMouse()
+        public void Revive()
         {
-            // Определяем целевую позицию в мировых координатах с учетом оффсета
+            _isMousePressed = false;
+            _isFirstThrow = true;
+            gameObject.SetActive(true);
+        }
+
+        public void GetDirection(float x)
+        {
+            if (x > transform.position.x)
+                DirectionX = _directionX;
+            else if (x < transform.position.x)
+                DirectionX = -_directionX;
+            else
+                DirectionX = 0;
+        }
+
+        private IEnumerator TimeScaleChanged()
+        {
+            Time.timeScale = _slowMove;
+            yield return _waitForSeconds;
+
+            while (Time.timeScale < 1f)
+                Time.timeScale += Time.deltaTime;
+        }
+
+        private void MovePlatformWithMouse()
+        {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -98,63 +116,18 @@ namespace PlayerFiles.PlatformaContent
 
                 if (_isReverse)
                     targetPosition = new Vector3(-hit.point.x, transform.position.y, -(hit.point.z + _offset));
-
                 else
                     targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z + _offset);
 
                 float clampedX = Mathf.Clamp(targetPosition.x, _minX, _maxX);
                 float clampedZ = Mathf.Clamp(targetPosition.z, _minZ, _maxZ);
-                GetDirection(targetPosition, clampedX);
-
+                GetDirection(clampedX);
                 Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
                 Vector3 targetPositiomMouse = new Vector3(hit.point.x, 4, hit.point.z);
-
                 _positionMouse.transform.position = targetPositiomMouse;
-                // _positionMouse.transform.position = hit.point;
                 transform.position =
                     Vector3.MoveTowards(transform.position, clampedTargetPosition, _moveSpeed * Time.deltaTime);
             }
-        }
-
-        public void Revive()
-        {
-            _isMousePressed = false;
-            _isFirstThrow = true;
-            gameObject.SetActive(true);
-        }
-
-        public void GetDirection(Vector3 targetPosition, float x)
-        {
-            if (x > transform.position.x)
-            {
-                DirectionX = 1;
-            }
-            else if (x < transform.position.x)
-            {
-                DirectionX = -1;
-            }
-            else
-            {
-                DirectionX = 0;
-            }
-
-
-            /*
-            if (targetPosition.x > transform.position.x)
-            {
-                Debug.Log("1");
-                DirectionX =  1; 
-            }
-            else if (targetPosition.x < transform.position.x)
-            {
-                Debug.Log("-1");
-                DirectionX =  -1; 
-            }
-            else
-            {
-                Debug.Log("0");
-                DirectionX =  0; 
-            }*/
         }
     }
 }
