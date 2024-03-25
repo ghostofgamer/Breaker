@@ -1,7 +1,5 @@
-using System;
 using CameraFiles;
 using Enum;
-using SaveAndLoad;
 using UI.Screens.LevelInfo;
 using UnityEngine;
 
@@ -20,34 +18,40 @@ namespace Levels
         [SerializeField] private Color _passedColor;
         [SerializeField] private Color _notOpenColor;
         [SerializeField] private Level[] _nextLevel;
-        [SerializeField] private Level _previousLevel;
         [SerializeField] private Level[] _allLevels;
         [SerializeField] private LevelCubeJumping _levelCubeJumping;
         [SerializeField] private CameraDistance _cameraDistance;
-        [SerializeField] private ColliderController _colliderController;
-        [SerializeField] private bool _isPassed = false;
-        [SerializeField] private bool _isOpen = false;
-        [SerializeField] private Load _load;
         [SerializeField] private int _index;
+
+        private LevelState _state;
+        private Color _currentColor;
 
         public Level[] Nextlevel => _nextLevel;
         public int Index => _index;
-        public bool IsPassed => _isPassed;
-        public bool IsOpen => _isOpen;
 
-        private LevelState state;
-
-        public LevelState LevelState => state;
-
-        private Color _currentColor;
-
-        private void Start()
+        private void OnMouseDown()
         {
+            foreach (Level level in _allLevels)
+                level.StopParticles();
+
+            foreach (ParticleSystem effect in _effectsSelect)
+                effect.Play();
+
+            _selectedCircle.Play();
+            _cameraDistance.MoveCameraToTarget(transform);
+
+            foreach (LevelInfo levelInfo in _levelsInfo)
+            {
+                if (levelInfo.IsOpen)
+                    levelInfo.Close();
+            }
+
+            _levelInfo.Open();
         }
 
         public void Init(LevelState levelState)
         {
-            state = levelState;
+            _state = levelState;
 
             switch (levelState)
             {
@@ -64,70 +68,38 @@ namespace Levels
             }
         }
 
-        public void SetLevels()
-        {
-            foreach (var level in _nextLevel)
-            {
-                SetLevels(this, level);
-            }
-        }
-
-        private void OnMouseDown()
-        {
-            foreach (Level level in _allLevels)
-            {
-                level.StopParticles();
-            }
-
-            foreach (ParticleSystem effect in _effectsSelect)
-                effect.Play();
-
-            // _dontSelectedCircle.Stop();
-            _selectedCircle.Play();
-            _cameraDistance.MoveCameraToTarget(transform);
-            /*_levelInfo.SetActive(true);
-        _levelInfo.GetComponent<Animator>().Play("LevelCubeInfoScreenUp");*/
-            foreach (LevelInfo levelInfo in _levelsInfo)
-            {
-                if (levelInfo.IsOpen)
-                    levelInfo.Close();
-            }
-
-            _levelInfo.Open();
-            // _colliderController.SetValue(false);
-        }
-
-        /*public void SelectLevel()
-        {
-            foreach (Level level in _allLevels)
-            {
-                level.StopParticles();
-            }
-
-            foreach (ParticleSystem effect in _effectsSelect)
-                effect.Play();
-
-            // _dontSelectedCircle.Stop();
-            _selectedCircle.Play();
-            _cameraDistance.MoveCameraToTarget(transform);
-            /*_levelInfo.SetActive(true);
-        _levelInfo.GetComponent<Animator>().Play("LevelCubeInfoScreenUp");#1#
-            foreach (LevelInfo levelInfo in _levelsInfo)
-            {
-                levelInfo.Close();
-            }
-
-            _levelInfo.Open();
-            // _colliderController.SetValue(false);
-        }*/
-
         public void StopParticles()
         {
             _selectedCircle.Stop();
 
             for (int i = 0; i < _effectsSelect.Length; i++)
-            {
                 _effectsSelect[i].Stop();
+        }
+
+        public void SetLevels()
+        {
+            if (_nextLevel.Length > 0)
+            {
+                for (int i = 0; i < _nextLevel.Length; i++)
+                {
+                    var moduleMain = _line[i].main;
+
+                    if (this._state == LevelState.Completed && _nextLevel[i]._state == LevelState.Completed)
+                    {
+                        moduleMain.startColor = _passedColor;
+                        _lineMove[i].Play();
+                    }
+                    else if (this._state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Unlocked ||
+                             this._state == LevelState.Completed && _nextLevel[i]._state == LevelState.Unlocked ||
+                             this._state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Completed)
+                    {
+                        moduleMain.startColor = _notPassedColor;
+                    }
+                    else
+                    {
+                        moduleMain.startColor = _notOpenColor;
+                    }
+                }
             }
         }
 
@@ -136,44 +108,12 @@ namespace Levels
             var module = _dontSelectedCircle.main;
             var selectCircle = _selectedCircle.main;
             module.startColor = color;
-            _currentColor = color;
             selectCircle.startColor = color;
 
             for (int i = 0; i < _effectsSelect.Length; i++)
             {
                 var effectColor = _effectsSelect[i].main;
                 effectColor.startColor = color;
-            }
-        }
-
-        public void SetLevels(Level level1Passed, Level level2Passed)
-        {
-            if (_nextLevel.Length > 0)
-            {
-                for (int i = 0; i < _nextLevel.Length; i++)
-                {
-                    var moduleMain = _line[i].main;
-
-                    // Debug.Log("STATELINE " + state  +" , " + _nextLevel[i].state);
-
-                    if (this.state == LevelState.Completed && _nextLevel[i].state == LevelState.Completed)
-                    {
-                        moduleMain.startColor = _passedColor;
-                        _lineMove[i].Play();
-                    }
-                    else if (this.state == LevelState.Unlocked && _nextLevel[i].state == LevelState.Unlocked ||
-                             this.state == LevelState.Completed && _nextLevel[i].state == LevelState.Unlocked ||
-                             this.state == LevelState.Unlocked && _nextLevel[i].state == LevelState.Completed)
-                    {
-                        // Debug.Log("НЕ Проден");
-                        moduleMain.startColor = _notPassedColor;
-                    }
-                    else
-                    {
-                        // Debug.Log("Не открыт");
-                        moduleMain.startColor = _notOpenColor;
-                    }
-                }
             }
         }
     }

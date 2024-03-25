@@ -1,24 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LineLevel : MonoBehaviour
+namespace Levels
 {
-    public ParticleSystem particleSystem1;
-    public ParticleSystem particleSystem2;
-    private LineRenderer _lineRenderer;
-
-    void Start()
+    public class LineLevel : MonoBehaviour
     {
-        _lineRenderer = GetComponent<LineRenderer>();
-    }
+        public ParticleSystem particleSystem1;
+        public ParticleSystem particleSystem2;
+        private LineRenderer _lineRenderer;
 
-    void Update()
-    {
-        if (particleSystem1 != null && particleSystem2 != null)
+        void Start()
         {
-            _lineRenderer.SetPosition(0, particleSystem1.transform.position);
-            _lineRenderer.SetPosition(1, particleSystem2.transform.position);
+            _lineRenderer = GetComponent<LineRenderer>();
+        }
+
+        void Update()
+        {
+            if (particleSystem1 != null && particleSystem2 != null)
+            {
+                _lineRenderer.SetPosition(0, particleSystem1.transform.position);
+                _lineRenderer.SetPosition(1, particleSystem2.transform.position);
+            }
         }
     }
 }
