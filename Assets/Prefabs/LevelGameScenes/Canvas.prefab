@@ -3349,7 +3349,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 4753488500654358166}
-  _animator: {fileID: 998172604760118437}
   _uiAnimations: {fileID: 2681013385062439723}
 --- !u!95 &998172604760118437
 Animator:
@@ -17208,6 +17207,7 @@ GameObject:
   - component: {fileID: 610392267134657893}
   - component: {fileID: 6425250502005817480}
   - component: {fileID: 4687827242442275243}
+  - component: {fileID: 6555440557526298916}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -17334,6 +17334,8 @@ MonoBehaviour:
   _fadePanel: {fileID: 4955766127971592645}
   _fullAds: {fileID: 6425250502005817480}
   _audioSource: {fileID: 4687827242442275243}
+  _brickCounter: {fileID: 0}
+  _brickSmashedCounter: {fileID: 6555440557526298916}
 --- !u!114 &6425250502005817480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17442,6 +17444,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6555440557526298916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572624786582967462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e546a3269b1704943910f5a82874f9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _amountTxt: {fileID: 0}
+  _load: {fileID: 0}
+  _save: {fileID: 0}
 --- !u!1 &5597942294192704799
 GameObject:
   m_ObjectHideFlags: 0
@@ -19994,7 +20011,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 4753488500654358166}
-  _animator: {fileID: 0}
   _uiAnimations: {fileID: 0}
 --- !u!1 &6389549101865769995
 GameObject:
@@ -22707,7 +22723,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 4753488500654358166}
-  _animator: {fileID: 4688147997304173160}
   _uiAnimations: {fileID: 4666160537004038502}
 --- !u!95 &4688147997304173160
 Animator:
@@ -26865,6 +26880,7 @@ GameObject:
   - component: {fileID: 1187455724046253645}
   - component: {fileID: 1041149232831946882}
   - component: {fileID: 3560328898534547770}
+  - component: {fileID: 8270842514970779010}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -26991,6 +27007,8 @@ MonoBehaviour:
   _fadePanel: {fileID: 4955766127971592645}
   _fullAds: {fileID: 1041149232831946882}
   _audioSource: {fileID: 3560328898534547770}
+  _brickCounter: {fileID: 0}
+  _brickSmashedCounter: {fileID: 8270842514970779010}
 --- !u!114 &1041149232831946882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27099,6 +27117,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8270842514970779010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8780508438688066078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e546a3269b1704943910f5a82874f9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _amountTxt: {fileID: 0}
+  _load: {fileID: 0}
+  _save: {fileID: 0}
 --- !u!1 &8826069475268223933
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,16 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using GameScene.BallContent;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class MissileMove : MonoBehaviour
+namespace Tests
 {
-    [SerializeField] private BallMover _ballMover;
-
-    private void Update()
+    public class MissileMove : MonoBehaviour
     {
-        transform.position = _ballMover.transform.position;
+        [SerializeField] private BallMover _ballMover;
+
+        private void Update()
+        {
+            transform.position = _ballMover.transform.position;
+        }
     }
 }

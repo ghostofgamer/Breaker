@@ -43,9 +43,16 @@ namespace ModificationFiles.BuffsFiles
             _bricksList = new List<Transform>();
             _filtredBrick = new List<Transform>();
             FindAllChildren(_bricks);
+
+
             _filtredBrick = _bricksList
                 .Where(p => p.gameObject.GetComponent<Brick>() && !p.gameObject.GetComponent<Brick>().IsEternal &&
                             p.gameObject.activeSelf == true).ToList();
+
+            foreach (var VARIABLE in _filtredBrick)
+            {
+                Debug.Log(VARIABLE.name);
+            }
 
             if (_filtredBrick.Count > 0)
             {

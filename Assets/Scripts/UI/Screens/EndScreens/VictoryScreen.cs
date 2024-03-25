@@ -42,7 +42,7 @@ namespace UI.Screens.EndScreens
         {
             _buffCollected.text = _buffCounter.GetStatistic();
             _timer.text = _levelTimer.GetTime();
-            _brickSmashed.text = _brickCounter.GetAmountSmashed();
+            _brickSmashed.text = _brickCounter.GetAmountSmashed().ToString();
             _fragmentsCollected.text = _fragmentsCounter.GetAmountFragmentsCollect();
             _credits = credits;
             _creditsTxt.text = _credits.ToString();

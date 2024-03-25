@@ -1,12 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MaskObject : MonoBehaviour
+namespace Tests
 {
-    private void Start()
+    public class MaskObject : MonoBehaviour
     {
-        GetComponent<MeshRenderer>().material.renderQueue = 3002;
+        private void Start()
+        {
+            GetComponent<MeshRenderer>().material.renderQueue = 3002;
+        }
     }
 }

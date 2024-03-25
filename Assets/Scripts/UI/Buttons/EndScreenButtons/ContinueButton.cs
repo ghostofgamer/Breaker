@@ -1,5 +1,7 @@
 using System.Collections;
 using ADS;
+using MainMenu;
+using Statistics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +14,8 @@ namespace UI.Buttons.EndScreenButtons
         [SerializeField] private Image _fadePanel;
         [SerializeField] private FullAds _fullAds;
         [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private BrickCounter _brickCounter;
+        [SerializeField] private BrickSmashedCounter _brickSmashedCounter;
 
         private float _elapsedTime;
         private float _duration = 1f;
@@ -20,6 +24,7 @@ namespace UI.Buttons.EndScreenButtons
         protected override void OnClick()
         {
             _audioSource.PlayOneShot(_audioSource.clip);
+            _brickSmashedCounter.AddValue(_brickCounter.GetAmountSmashed());
             StartCoroutine(ReturnToMenu());
         }
 

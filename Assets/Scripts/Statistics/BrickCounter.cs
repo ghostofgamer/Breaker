@@ -64,9 +64,9 @@ namespace Statistics
             }
         }
 
-        public string GetAmountSmashed()
+        public int GetAmountSmashed()
         {
-            return _bricksSmashedCount.ToString();
+            return _bricksSmashedCount;
         }
     }
 }

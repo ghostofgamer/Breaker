@@ -11,6 +11,7 @@ namespace SaveAndLoad
         public const string Volume = "Volume";
         public const string Music = "Music";
         public const string SFX = "SFX";
+        public const string BrickSmashed = "BrickSmashed";
 
         [Header("SelectedSkins")] public const string SkinBall = "SkinBall";
         
