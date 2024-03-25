@@ -3225,6 +3225,7 @@ GameObject:
   - component: {fileID: 998172604760118437}
   - component: {fileID: 1607232668286733102}
   - component: {fileID: 2574003740480796037}
+  - component: {fileID: 2681013385062439723}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -3349,6 +3350,7 @@ MonoBehaviour:
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 4753488500654358166}
   _animator: {fileID: 998172604760118437}
+  _uiAnimations: {fileID: 2681013385062439723}
 --- !u!95 &998172604760118437
 Animator:
   serializedVersion: 5
@@ -3484,6 +3486,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2681013385062439723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371272128230178085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 998172604760118437}
 --- !u!1 &1389718246895692599
 GameObject:
   m_ObjectHideFlags: 0
@@ -19980,6 +19995,7 @@ MonoBehaviour:
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 4753488500654358166}
   _animator: {fileID: 0}
+  _uiAnimations: {fileID: 0}
 --- !u!1 &6389549101865769995
 GameObject:
   m_ObjectHideFlags: 0
@@ -22598,6 +22614,7 @@ GameObject:
   - component: {fileID: 8525681408704718540}
   - component: {fileID: 6118794789569840558}
   - component: {fileID: 4688147997304173160}
+  - component: {fileID: 4666160537004038502}
   m_Layer: 5
   m_Name: BonusCounter
   m_TagString: Untagged
@@ -22691,6 +22708,7 @@ MonoBehaviour:
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 4753488500654358166}
   _animator: {fileID: 4688147997304173160}
+  _uiAnimations: {fileID: 4666160537004038502}
 --- !u!95 &4688147997304173160
 Animator:
   serializedVersion: 5
@@ -22712,6 +22730,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4666160537004038502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527091137169752451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 4688147997304173160}
 --- !u!1 &7567835730025814227
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,31 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EffectActivator : MonoBehaviour
+namespace GameScene
 {
-    [SerializeField] private ParticleSystem _effect;
-
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.5f);
-    private Coroutine _coroutine;
-    
-    public void Play()
+    public class EffectActivator : MonoBehaviour
     {
-        if(_coroutine!=null)
-            StopCoroutine(_coroutine);
-        
-        _coroutine = StartCoroutine(TemporarilyEnable());
-    }
+        [SerializeField] private ParticleSystem _effect;
 
-    public void Init(Vector3 position)
-    {
-        transform.position = position;
-    }
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.5f);
+        private Coroutine _coroutine;
 
-    private IEnumerator TemporarilyEnable()
-    {
-        _effect.Play();
-        yield return _waitForSeconds;
-        gameObject.SetActive(false);
+        public void Play()
+        {
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _coroutine = StartCoroutine(TemporarilyEnable());
+        }
+
+        public void Init(Vector3 position)
+        {
+            transform.position = position;
+        }
+
+        private IEnumerator TemporarilyEnable()
+        {
+            _effect.Play();
+            yield return _waitForSeconds;
+            gameObject.SetActive(false);
+        }
     }
 }

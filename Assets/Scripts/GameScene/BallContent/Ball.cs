@@ -2,26 +2,22 @@ using PlayerFiles;
 using PlayerFiles.PlatformaContent;
 using Statistics;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace GameScene.BallContent
 {
     public class Ball : Player
     {
         [SerializeField] private BrickCounter _brickCounter;
-        [SerializeField] private Transform _startPosition;
         [SerializeField] private PlatformaMover _platformaMover;
         [SerializeField] private Transform _enviropment;
 
         private BallMover _ballMover;
         private bool _isWin;
         private Rigidbody _rigidbody;
+        private float _factor = 3f;
+        private float _directionForward = 1;
 
         public bool IsMoving { get; private set; }
-        public Transform StartPosition => _startPosition;
-        public PlatformaMover PlatformaMover => _platformaMover;
-
-        public event UnityAction Die;
 
         private void Start()
         {
@@ -48,7 +44,7 @@ namespace GameScene.BallContent
             {
                 var position = _platformaMover.transform.position;
                 transform.position = new Vector3(position.x, position.y,
-                    position.z + 3f);
+                    position.z + _factor);
             }
         }
 
@@ -59,23 +55,18 @@ namespace GameScene.BallContent
             _rigidbody.isKinematic = true;
         }
 
-        private void SetParent()
-        {
-            _isWin = true;
-            transform.parent = _enviropment;
-        }
-
         public void SetMove(bool flag, float directionX)
         {
             IsMoving = flag;
             _ballMover.enabled = flag;
             _rigidbody.isKinematic = !flag;
-            _ballMover.SetStartDirection(new Vector3(directionX, 0, 1).normalized);
+            _ballMover.SetStartDirection(new Vector3(directionX, 0, _directionForward).normalized);
         }
 
-        protected void Lost()
+        private void SetParent()
         {
-            Die?.Invoke();
+            _isWin = true;
+            transform.parent = _enviropment;
         }
     }
 }

@@ -1,4 +1,5 @@
 using Statistics;
+using UI;
 using UI.Screens.EndScreens;
 using UnityEngine;
 
@@ -8,11 +9,7 @@ namespace GameScene
     {
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private ReviveScreen _reviveScreen;
-        [SerializeField] private Animator _animator;
-
-        private const string Move = "Move";
-
-        private bool _isMove = false;
+        [SerializeField] private UIAnimations _uiAnimations;
 
         private void OnEnable()
         {
@@ -28,12 +25,7 @@ namespace GameScene
 
         private void PanelMover()
         {
-            _animator.Play(Move);
-        }
-
-        private void GoOffScreen()
-        {
-            _isMove = true;
+            _uiAnimations.Close();
         }
     }
 }
