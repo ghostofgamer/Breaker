@@ -29,7 +29,6 @@ namespace ADS
         protected override void OnClose()
         {
             base.OnClose();
-            // OnReward();
             _reviveButton.GetComponent<Button>().interactable = true;
         }
 
@@ -37,10 +36,8 @@ namespace ADS
         {
             _reviveScreen.ChooseRevive();
             yield return _waitForSeconds;
-            // _ballRevive.Revive();
             _sceneLoader.RevivePlatform();
             _brickCounter.TryVictory();
-            // _platformaRevive.Revive();
         }
     }
 }

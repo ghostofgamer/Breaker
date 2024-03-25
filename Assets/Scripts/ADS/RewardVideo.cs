@@ -10,6 +10,8 @@ namespace ADS
                 VideoAd.Show(OnOpen, OnReward, OnClose);
         }
 
-        public virtual void OnReward() { }
+        public virtual void OnReward()
+        {
+        }
     }
 }
