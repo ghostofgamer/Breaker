@@ -1,6 +1,7 @@
 using System.Collections;
 using GameScene;
 using Statistics;
+using UI.Buttons.EndScreenButtons;
 using UI.Screens.EndScreens;
 using UnityEngine;
 using UnityEngine.UI;

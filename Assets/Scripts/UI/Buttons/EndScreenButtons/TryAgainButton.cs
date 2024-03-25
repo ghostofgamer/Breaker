@@ -1,39 +1,42 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TryAgainButton : AbstractButton
+namespace UI.Buttons.EndScreenButtons
 {
-    [SerializeField] private Animator _animator;
-    [SerializeField] private Image _fadePanel;
-    [SerializeField] private AudioSource _audioSource;
-
-    private float _elapsedTime;
-    private float _duration = 1f;
-
-    protected override void OnClick()
+    public class TryAgainButton : AbstractButton
     {
-        _audioSource.PlayOneShot(_audioSource.clip);
-        StartCoroutine(ReturnToMenu());
-    }
+        [SerializeField] private UIAnimations _uiAnimations;
+        [SerializeField] private Image _fadePanel;
+        [SerializeField] private AudioSource _audioSource;
 
-    private IEnumerator ReturnToMenu()
-    {
-        _animator.Play("ScreenClose");
-        _elapsedTime = 0;
-        Color startColor = _fadePanel.color;
-        Color endColor = new Color(startColor.r, startColor.g, startColor.b, 1f);
+        private float _elapsedTime;
+        private float _duration = 1f;
+        private float _alphaFull = 1f;
 
-        while (_elapsedTime < _duration)
+        protected override void OnClick()
         {
-            _elapsedTime += Time.deltaTime;
-            _fadePanel.color = Color.Lerp(startColor, endColor, _elapsedTime / _duration);
-            yield return null;
+            _audioSource.PlayOneShot(_audioSource.clip);
+            StartCoroutine(ReturnToMenu());
         }
 
-        _fadePanel.color = endColor;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        private IEnumerator ReturnToMenu()
+        {
+            _uiAnimations.Close();
+            _elapsedTime = 0;
+            Color startColor = _fadePanel.color;
+            Color endColor = new Color(startColor.r, startColor.g, startColor.b, _alphaFull);
+
+            while (_elapsedTime < _duration)
+            {
+                _elapsedTime += Time.deltaTime;
+                _fadePanel.color = Color.Lerp(startColor, endColor, _elapsedTime / _duration);
+                yield return null;
+            }
+
+            _fadePanel.color = endColor;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
