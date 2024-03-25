@@ -14,20 +14,22 @@ namespace UI.Screens
         [SerializeField] private UIAnimations _uiAnimations;
 
         private bool _isOpen;
+        private int _zeroAlpha = 0;
+        private int _fullAlpha = 1;
 
         public void Open()
         {
             if (!_isOpen)
             {
                 _uiAnimations.Open();
-                SetValue(0, 1, true);
+                SetValue(_zeroAlpha, _fullAlpha, true);
             }
         }
 
         public void Close()
         {
             _uiAnimations.Close();
-            SetValue(1, 0, false);
+            SetValue(_fullAlpha, _zeroAlpha, false);
             OffImages();
         }
 

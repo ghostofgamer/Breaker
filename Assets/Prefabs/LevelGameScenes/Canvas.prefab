@@ -8837,6 +8837,7 @@ GameObject:
   - component: {fileID: 6173380856471703938}
   - component: {fileID: 7060664672634254893}
   - component: {fileID: 7859108328615696387}
+  - component: {fileID: 5736470175901041620}
   m_Layer: 5
   m_Name: Wallet
   m_TagString: Untagged
@@ -8940,6 +8941,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5736470175901041620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139941727556676096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7859108328615696387}
 --- !u!1 &3159994343161023456
 GameObject:
   m_ObjectHideFlags: 0
@@ -10792,6 +10806,7 @@ GameObject:
   - component: {fileID: 3301885764507358812}
   - component: {fileID: 7783891307249121256}
   - component: {fileID: 721455922572444924}
+  - component: {fileID: 6482178082918800650}
   m_Layer: 5
   m_Name: LevelComplitedTxt
   m_TagString: Untagged
@@ -10950,6 +10965,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: LevelComplited
   FallbackText: Level Completed!
+--- !u!114 &6482178082918800650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3906430088612352586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7783891307249121256}
 --- !u!1 &3935161068293529572
 GameObject:
   m_ObjectHideFlags: 0
@@ -16522,13 +16550,13 @@ MonoBehaviour:
   _text: {fileID: 3301885764507358812}
   _claimButton: {fileID: 8001881076973977522}
   _scoreCounter: {fileID: 0}
-  _spawnBonusLevelComplite: {fileID: 7973882327762959765}
-  _animatorEnviropment: {fileID: 0}
-  _animatorText: {fileID: 7783891307249121256}
+  _spawnBonusLevelComplete: {fileID: 7973882327762959765}
   _reviveScreen: {fileID: 4753488500654358166}
-  _indexLevel: 13
+  _indexLevel: 1
   _save: {fileID: 0}
   _score: {fileID: 0}
+  _animationsController: {fileID: 0}
+  _uiAnimationsText: {fileID: 6482178082918800650}
 --- !u!114 &7973882327762959765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17830,6 +17858,7 @@ GameObject:
   - component: {fileID: 454414410466557988}
   - component: {fileID: 908887138359543878}
   - component: {fileID: 534148649670720250}
+  - component: {fileID: 8971680822948268338}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -17903,8 +17932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 454414410466557988}
-  _animator: {fileID: 5682920103252028793}
   _audioSource: {fileID: 534148649670720250}
+  _uiAnimations: {fileID: 8971680822948268338}
 --- !u!82 &534148649670720250
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18001,6 +18030,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8971680822948268338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642185473759247391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 5682920103252028793}
 --- !u!1 &5666181383331532559
 GameObject:
   m_ObjectHideFlags: 0
@@ -20411,6 +20453,7 @@ GameObject:
   - component: {fileID: 4503116163930343172}
   - component: {fileID: 4753488500654358166}
   - component: {fileID: 4619448188218791662}
+  - component: {fileID: 5002106023986955121}
   m_Layer: 5
   m_Name: RevivePanel
   m_TagString: Untagged
@@ -20484,12 +20527,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 4503116163930343172}
-  _animator: {fileID: 7037053710199305654}
   _audioSource: {fileID: 4619448188218791662}
+  _uiAnimations: {fileID: 5002106023986955121}
   _slider: {fileID: 5234960254435917190}
   _gameOverScreen: {fileID: 908887138359543878}
   _ball: {fileID: 0}
-  _walletAnimator: {fileID: 7859108328615696387}
+  _uiAnimationsWallet: {fileID: 5736470175901041620}
   _bonusCounter: {fileID: 8525681408704718540}
   _luckySave: {fileID: 0}
   _soundEffect: {fileID: 0}
@@ -20589,6 +20632,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5002106023986955121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533801087786043587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7037053710199305654}
 --- !u!1 &6578897726080773309
 GameObject:
   m_ObjectHideFlags: 0
@@ -22126,6 +22182,7 @@ GameObject:
   - component: {fileID: 674575301682081545}
   - component: {fileID: 3518703220687585575}
   - component: {fileID: 7699187007369673981}
+  - component: {fileID: 4005236067879352179}
   m_Layer: 5
   m_Name: VictoryPanel
   m_TagString: Untagged
@@ -22187,8 +22244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 3518703220687585575}
-  _animator: {fileID: 2202307521725180600}
   _audioSource: {fileID: 7699187007369673981}
+  _uiAnimations: {fileID: 4005236067879352179}
   _brickCounter: {fileID: 0}
   _buffCounter: {fileID: 0}
   _levelTimer: {fileID: 0}
@@ -22316,6 +22373,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4005236067879352179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257739135820295076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b633b16ee4ac204093b0fe1f21cc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 2202307521725180600}
 --- !u!1 &7345455286609699057
 GameObject:
   m_ObjectHideFlags: 0

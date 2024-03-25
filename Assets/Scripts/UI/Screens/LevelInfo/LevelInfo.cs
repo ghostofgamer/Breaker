@@ -57,7 +57,6 @@ namespace UI.Screens.LevelInfo
         private void Initialization()
         {
             _information = _load.Get(Save.LevelStatus + _index, _defaultValue) > _defaultValue;
-            Debug.Log("XNQ " + Save.LevelStatus + _index);
             _panelCompleted.SetActive((LevelState) _load.Get(Save.LevelStatus + _index, _defaultValue) == LevelState.Completed);
             _score.text = _load.Get(Save.Score + _index, _defaultValue).ToString();
             SetActive(_zeroAlpha, false);

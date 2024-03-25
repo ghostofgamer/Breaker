@@ -1,12 +1,12 @@
 using System.Collections;
 using Enum;
+using Others;
 using SaveAndLoad;
 using Statistics;
 using TMPro;
-using UI.Screens.EndScreens;
 using UnityEngine;
 
-namespace UI.Screens
+namespace UI.Screens.EndScreens
 {
     public class LevelComplite : MonoBehaviour
     {
@@ -14,29 +14,26 @@ namespace UI.Screens
         [SerializeField] private TMP_Text _text;
         [SerializeField] private ClaimButton _claimButton;
         [SerializeField] private ScoreCounter _scoreCounter;
-        [SerializeField] private SpawnBonusLevelComplite _spawnBonusLevelComplite;
-        [SerializeField] private Animator _animatorEnviropment;
-        [SerializeField] private Animator _animatorText;
+        [SerializeField] private SpawnBonusLevelComplete _spawnBonusLevelComplete;
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private int _indexLevel;
         [SerializeField] private Save _save;
         [SerializeField] private Score _score;
+        [SerializeField] private AnimationsController _animationsController;
+        [SerializeField] private UIAnimations _uiAnimationsText;
 
         private Vector3 _target;
-        private bool _isVictory = false;
-        private float _speed = 100f;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
-        private WaitForSeconds _waitForSeconds1 = new WaitForSeconds(1f);
         private Coroutine _coroutine;
 
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestory += Victory;
+            _brickCounter.AllBrickDestory += Win;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestory -= Victory;
+            _brickCounter.AllBrickDestory -= Win;
         }
 
         private void SetValue()
@@ -45,7 +42,7 @@ namespace UI.Screens
             _text.enabled = true;
         }
 
-        private void Victory()
+        private void Win()
         {
             Time.timeScale = 1;
 
@@ -55,23 +52,20 @@ namespace UI.Screens
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
 
-            _coroutine = StartCoroutine(_OnVictory());
+            _coroutine = StartCoroutine(EnableVictory());
         }
 
-        private IEnumerator _OnVictory()
+        private IEnumerator EnableVictory()
         {
-            _save.SetData("LevelStatus" + _indexLevel, (int) LevelState.Completed);
+            _save.SetData(Save.LevelStatus + _indexLevel, (int) LevelState.Completed);
             _save.SetData(Save.Score + _indexLevel, _scoreCounter.GetScore());
             _score.Increase(_scoreCounter.GetScore());
             SetValue();
-            _animatorText.Play("LevelCompliteTextMove");
+            _uiAnimationsText.Open();
             yield return _waitForSeconds;
             _claimButton.gameObject.SetActive(true);
-            _animatorEnviropment.Play("EnviropmentRotate");
-            _spawnBonusLevelComplite.StartFlightBonuses();
-            /*yield return new WaitForSeconds(0.3f);
-        _claimButton.SetActive();*/
-            // Debug.Log("10 делим " + _scoreCounter.GetScore() / 10);
+            _animationsController.PlayRotate();
+            _spawnBonusLevelComplete.StartFlightBonuses();
             _claimButton.SetValue(_scoreCounter.GetScore() * 30 / 100);
         }
     }

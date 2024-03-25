@@ -6,15 +6,17 @@ namespace UI.Screens.EndScreens
     public abstract class EndScreen : MonoBehaviour
     {
         [SerializeField] private CanvasGroup _canvasGroup;
-        [SerializeField] private Animator _animator;
-        [SerializeField]private AudioSource _audioSource;
-    
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private UIAnimations _uiAnimations;
+
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
+        private int _alphaZero = 0;
+        private int _alphaFull = 1;
 
         public virtual void Open()
         {
-            ChangeValue(1, true, true);
-            _animator.Play("ScreenOpen");
+            ChangeValue(_alphaFull, true, true);
+            _uiAnimations.Open();
             _audioSource.PlayOneShot(_audioSource.clip);
         }
 
@@ -32,10 +34,10 @@ namespace UI.Screens.EndScreens
 
         private IEnumerator ScreenDeactivation()
         {
-            _animator.Play("ScreenClose");
+            _uiAnimations.Close();
             _audioSource.PlayOneShot(_audioSource.clip);
             yield return _waitForSeconds;
-            ChangeValue(0, false, false);
+            ChangeValue(_alphaZero, false, false);
         }
     }
 }

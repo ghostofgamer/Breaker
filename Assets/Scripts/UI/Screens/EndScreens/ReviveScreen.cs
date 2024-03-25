@@ -13,7 +13,7 @@ namespace UI.Screens.EndScreens
         [SerializeField] private Slider _slider;
         [SerializeField] private GameOverScreen _gameOverScreen;
         [SerializeField] private BallTrigger _ball;
-        [SerializeField] private Animator _walletAnimator;
+        [SerializeField] private UIAnimations _uiAnimationsWallet;
         [SerializeField] private BonusCounter _bonusCounter;
         [SerializeField] private LuckySave _luckySave;
         [SerializeField] private SoundEffect _soundEffect;
@@ -21,9 +21,7 @@ namespace UI.Screens.EndScreens
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private float _duration = 3f;
         private float _elapsedTime;
-
         private Coroutine _coroutine;
-        // private Animator _walletAnimator;
 
         public bool IsLose { get; private set; }
 
@@ -40,38 +38,41 @@ namespace UI.Screens.EndScreens
             _ball.Dying -= Open;
         }
 
-        /*private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StopCoroutine(_coroutine);
-            }
-        }*/
-
         public override void Open()
         {
             if (_luckySave.enabled)
             {
-                Debug.Log("111");
                 if (_luckySave.TryGetLuckySave())
-                {
-                    Debug.Log("оживаем");
                     return;
-                } 
             }
 
             _soundEffect.PlayCountDownSound();
             IsLose = true;
-            _coroutine = StartCoroutine(OnScreenMove());
+            _coroutine = StartCoroutine(EnableScreenMove());
         }
 
-        private IEnumerator OnScreenMove()
+        public void ChooseRevive()
+        {
+            IsLose = false;
+            Revive?.Invoke();
+            StopCoroutine(_coroutine);
+            Close();
+            _uiAnimationsWallet.Close();
+        }
+
+        public void ChooseLose()
+        {
+            Lose?.Invoke();
+            StartCoroutine(SetActiveScreens());
+        }
+
+        private IEnumerator EnableScreenMove()
         {
             _elapsedTime = 0;
             _slider.value = 1;
             yield return _waitForSeconds;
             base.Open();
-            _walletAnimator.Play("WalletReviveOpen");
+            _uiAnimationsWallet.Open();
             yield return _waitForSeconds;
             float startValue = _slider.value;
             float endValue = 0;
@@ -86,32 +87,17 @@ namespace UI.Screens.EndScreens
             _slider.value = endValue;
             Close();
             Lose?.Invoke();
-            _walletAnimator.Play("WalletReviveClose");
+            _uiAnimationsWallet.Close();
             _bonusCounter.BringToZero();
             yield return _waitForSeconds;
             _gameOverScreen.Open();
-        }
-
-        public void ChooseRevive()
-        {
-            IsLose = false;
-            Revive?.Invoke();
-            StopCoroutine(_coroutine);
-            Close();
-            _walletAnimator.Play("WalletReviveClose");
-        }
-
-        public void ChooseLose()
-        {
-            Lose?.Invoke();
-            StartCoroutine(SetActiveScreens());
         }
 
         private IEnumerator SetActiveScreens()
         {
             StopCoroutine(_coroutine);
             Close();
-            _walletAnimator.Play("WalletReviveClose");
+            _uiAnimationsWallet.Close();
             _bonusCounter.BringToZero();
             yield return _waitForSeconds;
             _gameOverScreen.Open();
