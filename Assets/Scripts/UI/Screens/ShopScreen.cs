@@ -14,13 +14,14 @@ namespace UI.Screens
         [SerializeField] private Color _currentColor;
         [SerializeField] private UIAnimations _uiAnimations;
 
-        private bool _isOpen;
         private int _zeroAlpha = 0;
         private int _fullAlpha = 1;
+        
+        public bool IsOpen { get; private set; }
 
         public void Open()
         {
-            if (!_isOpen)
+            if (!IsOpen)
             {
                 _uiAnimations.Open();
                 SetValue(_zeroAlpha, _fullAlpha, true);
@@ -51,7 +52,7 @@ namespace UI.Screens
             foreach (CloseShopButton close in _closeShopButtons)
                 close.gameObject.SetActive(active);
 
-            _isOpen = active;
+            IsOpen = active;
         }
     }
 }

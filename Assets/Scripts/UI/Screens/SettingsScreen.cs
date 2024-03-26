@@ -18,7 +18,7 @@ namespace UI.Screens
         private int _fullAlpha = 1;
 
         public bool IsOpen { get; private set; }
-        
+
         private void Start()
         {
             _canvasGroup = GetComponent<CanvasGroup>();

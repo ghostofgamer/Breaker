@@ -72,8 +72,8 @@ namespace UI.Screens.LevelInfo
 
         private IEnumerator OpenScreen()
         {
-            yield return _waitForSeconds;
             IsOpen = true;
+            yield return _waitForSeconds;
             SetActive(_fullAlpha, true);
             _audioSource.PlayOneShot(_audioSource.clip);
             _uiAnimations.Open();

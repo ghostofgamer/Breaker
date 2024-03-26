@@ -1,5 +1,6 @@
 using CameraFiles;
 using Enum;
+using UI.Screens;
 using UI.Screens.LevelInfo;
 using UnityEngine;
 
@@ -22,6 +23,7 @@ namespace Levels
         [SerializeField] private LevelCubeJumping _levelCubeJumping;
         [SerializeField] private CameraDistance _cameraDistance;
         [SerializeField] private int _index;
+        [SerializeField] private ShopScreen _shopScreen;
 
         private LevelState _state;
         private Color _currentColor;
@@ -31,6 +33,9 @@ namespace Levels
 
         private void OnMouseDown()
         {
+            if (_shopScreen.IsOpen)
+                return;
+            
             foreach (Level level in _allLevels)
                 level.StopParticles();
 
