@@ -75,7 +75,8 @@ namespace MainMenu
                     {
                         if (_brickGrid[i, j] != null)
                         {
-                            float waveOffset = Mathf.Sin((Time.time + (i + j)) * _waveSpeed) * _waveHeight;
+                            float waveOffset = Mathf.Sin((Time.time + (i + j)) * _waveSpeed * Time.timeScale) *
+                                               _waveHeight;
                             Vector3 newPosition = _brickGrid[i, j].transform.position + new Vector3(0, 0, waveOffset);
                             _brickGrid[i, j].transform.position = newPosition;
                         }

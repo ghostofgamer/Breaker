@@ -1494,7 +1494,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 19.789465, y: 15, z: 2.8950596}
+  m_Size: {x: 19.789465, y: 30, z: 2.8950596}
   m_Center: {x: 0.000004291534, y: 0.3987287, z: 13.447208}
 --- !u!4 &169959864 stripped
 Transform:
@@ -7194,11 +7194,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5156593758394242515, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
   m_PrefabInstance: {fileID: 276405396}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &280613365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5046227226496367749, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
-  m_PrefabInstance: {fileID: 1102296127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &283226093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5156593758394242515, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -8521,6 +8516,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &441070108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441070109}
+  m_Layer: 0
+  m_Name: MirrorContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441070109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441070108}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.134658, y: -10.690578, z: -4.0785627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1240734758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &441840021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
@@ -9724,6 +9750,7 @@ MonoBehaviour:
   _buffUI: {fileID: 269613917}
   _buffType: 12
   _sizeChange: -1
+  _mirrorPlatformaMover: {fileID: 1752382998}
 --- !u!114 &588720368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11636,6 +11663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickEternal
       objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0528
@@ -12371,7 +12402,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.6531, y: 15, z: 30}
+  m_Size: {x: 2.6531, y: 30, z: 30}
   m_Center: {x: -8.968921, y: 0.39872816, z: 0.0005803108}
 --- !u!4 &1052666275 stripped
 Transform:
@@ -12412,6 +12443,10 @@ PrefabInstance:
     - target: {fileID: 7482785744175215736, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_Name
       value: BrickEternal (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12689,6 +12724,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6336633609779015451, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+      propertyPath: _load
+      value: 
+      objectReference: {fileID: 293203873}
+    - target: {fileID: 6336633609779015451, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+      propertyPath: _container
+      value: 
+      objectReference: {fileID: 441070109}
     - target: {fileID: 8057163003263999677, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
       propertyPath: _load
       value: 
@@ -12723,13 +12766,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 859035171741001445, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
       insertIndex: 8
       addedObject: {fileID: 45711349}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5046227226496367749, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1834239100}
-    - targetCorrespondingSourceObject: {fileID: 5046227226496367749, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1834239106}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
 --- !u!4 &1103161815 stripped
 Transform:
@@ -13743,6 +13780,7 @@ Transform:
   m_Children:
   - {fileID: 290867987}
   - {fileID: 868505456}
+  - {fileID: 441070109}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1251599476
@@ -14486,6 +14524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickEternal (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16842501
@@ -14972,6 +15014,18 @@ PrefabInstance:
     - target: {fileID: 7482785744175215736, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_Name
       value: BrickEternal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Size.z
+      value: 4.066714
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Center.y
+      value: 0.50999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Center.z
+      value: -1.5333564
       objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17114,6 +17168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickEternal (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16842501
@@ -17350,6 +17408,7 @@ MonoBehaviour:
   _buffUI: {fileID: 43661148}
   _buffType: 0
   _sizeChange: 1
+  _mirrorPlatformaMover: {fileID: 1752382998}
 --- !u!114 &1640829201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17395,6 +17454,7 @@ MonoBehaviour:
   _buffUI: {fileID: 2147159733}
   _buffType: 1
   _weapon: {fileID: 824722464}
+  _mirrorPlatformWeapon: {fileID: 1834239109}
   _timeBetweenShots: 0.36
 --- !u!114 &1640829203
 MonoBehaviour:
@@ -18431,7 +18491,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1939733840446481045, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
   m_PrefabInstance: {fileID: 1102296127}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280613365}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe49b8fe2118a2d4187db2fdd6707b0d, type: 3}
@@ -23835,30 +23895,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 859035171741001445, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
   m_PrefabInstance: {fileID: 1102296127}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1834239100
+--- !u!114 &1834239109 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6336633609779015451, guid: 284c5fe59dfff404db0f63ee9cb2dc28, type: 3}
+  m_PrefabInstance: {fileID: 1102296127}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280613365}
-  m_Enabled: 0
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288645275c1249b4ba49477a84979731, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionMouse: {fileID: 0}
-  _ball: {fileID: 0}
---- !u!114 &1834239106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280613365}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8666c28649e124993f5d24fd745635, type: 3}
+  m_Script: {fileID: 11500000, guid: d7856762afdb9f443b8ebc2b2a3c7d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1835153964 stripped
@@ -24201,6 +24246,18 @@ PrefabInstance:
     - target: {fileID: 7482785744175215736, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_Name
       value: BrickEternal (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Size.z
+      value: 4.067227
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Center.y
+      value: 0.50999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Center.z
+      value: -1.5336136
       objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24761,6 +24818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickEternal (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0528
@@ -24833,6 +24894,10 @@ PrefabInstance:
     - target: {fileID: 7482785744175215736, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_Name
       value: BrickEternal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791619660721843581, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7823844718791093954, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26357,7 +26422,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.5, y: 15, z: 30}
+  m_Size: {x: 2.5, y: 30, z: 30}
   m_Center: {x: 8.969866, y: 0.3987282, z: -0.00016069412}
 --- !u!1001 &2106695423
 PrefabInstance:
@@ -27342,6 +27407,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6555440557526298916, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+      propertyPath: _load
+      value: 
+      objectReference: {fileID: 293203873}
+    - target: {fileID: 6555440557526298916, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+      propertyPath: _save
+      value: 
+      objectReference: {fileID: 293203874}
     - target: {fileID: 7060664672634254893, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: _load
       value: 
@@ -27402,6 +27475,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8270842514970779010, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+      propertyPath: _load
+      value: 
+      objectReference: {fileID: 293203873}
+    - target: {fileID: 8270842514970779010, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
+      propertyPath: _save
+      value: 
+      objectReference: {fileID: 293203874}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

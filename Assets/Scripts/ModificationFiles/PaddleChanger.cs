@@ -1,4 +1,5 @@
 using System.Collections;
+using PlayerFiles.PlatformaContent;
 using UnityEngine;
 
 namespace ModificationFiles
@@ -6,7 +7,8 @@ namespace ModificationFiles
     public abstract class PaddleChanger : Modification
     {
         [SerializeField] protected int _sizeChange;
-
+        [SerializeField] private MirrorPlatformaMover _mirrorPlatformaMover;
+        
         private Vector3 _standardScale;
 
         protected override void Start()
@@ -28,6 +30,8 @@ namespace ModificationFiles
         {
             SetActive(false);
             PlatformaMover.transform.localScale = _standardScale;
+            _mirrorPlatformaMover.transform.localScale = _standardScale;
+            
         }
 
         private void Change()
@@ -35,6 +39,8 @@ namespace ModificationFiles
             Vector3 target = new Vector3(_standardScale.x , _standardScale.y + _sizeChange,
                 _standardScale.z);
             PlatformaMover.transform.localScale = target;
+            _mirrorPlatformaMover .transform.localScale = target;
+            /*if(_mirrorPlatformaMover)*/
         }
     }
 }

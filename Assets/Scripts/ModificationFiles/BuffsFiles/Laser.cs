@@ -7,6 +7,7 @@ namespace ModificationFiles.BuffsFiles
     public class Laser : Modification
     {
         [SerializeField] private Weapon _weapon;
+        [SerializeField] private Weapon _mirrorPlatformWeapon;
         [SerializeField] private float _timeBetweenShots;
 
         private float _elapsedTime = 0;
@@ -54,6 +55,10 @@ namespace ModificationFiles.BuffsFiles
             while (_isActive)
             {
                 _weapon.Shoot();
+
+                if (_mirrorPlatformWeapon.gameObject.activeSelf)
+                    _mirrorPlatformWeapon.Shoot();
+
                 yield return WaitForSeconds;
             }
 
