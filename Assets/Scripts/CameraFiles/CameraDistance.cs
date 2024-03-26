@@ -6,7 +6,7 @@ namespace CameraFiles
     {
         [SerializeField] private CameraMover _cameraMover;
 
-        private float _distance = 60f;
+        private float _distance = 80f;
         private Vector3 _targetPosition;
 
         public void MoveCameraToTarget(Transform target)

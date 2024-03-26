@@ -23,6 +23,9 @@ namespace CameraFiles
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.1f);
         private WaitForSeconds _waitForMove = new WaitForSeconds(1f);
+        
+        [SerializeField] private Vector3 _cameraVelocity;
+        [SerializeField] private float _smoothing;
 
         private void Start()
         {
@@ -49,12 +52,23 @@ namespace CameraFiles
 
             else if (Input.GetMouseButton(0) && _freeMovement)
             {
+                /*Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
+                Vector3 cameraDelta = new Vector3(mouseDelta.x, 0, mouseDelta.y) * _sensitivity;
+                _newCameraPos = _cameraStartPos - cameraDelta;
+                _newCameraPos.x = Mathf.Clamp(_newCameraPos.x, _minX, _maxX);
+                _newCameraPos.z = Mathf.Clamp(_newCameraPos.z, _minZ, _maxZ);
+                transform.position = Vector3.Lerp(transform.position, _newCameraPos, _speed * Time.deltaTime);*/
+                
+                // transform.position = Vector3.MoveTowards(transform.position, _newCameraPos, _speed * Time.deltaTime);
+                
                 Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
                 Vector3 cameraDelta = new Vector3(mouseDelta.x, 0, mouseDelta.y) * _sensitivity;
                 _newCameraPos = _cameraStartPos - cameraDelta;
                 _newCameraPos.x = Mathf.Clamp(_newCameraPos.x, _minX, _maxX);
                 _newCameraPos.z = Mathf.Clamp(_newCameraPos.z, _minZ, _maxZ);
-                transform.position = Vector3.Lerp(transform.position, _newCameraPos, _speed * Time.deltaTime);
+                
+                _cameraVelocity = Vector3.Lerp(_cameraVelocity, _newCameraPos - transform.position, _smoothing * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, _newCameraPos, _cameraVelocity.magnitude * Time.deltaTime);
             }
         }
 
