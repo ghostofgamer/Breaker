@@ -54,11 +54,16 @@ namespace MainMenu
                 {
                     Vector3 position = _startPosition - new Vector3(i * _cubeSpacing, j * _cubeSpacing, 0);
                     _pool.GetFirstObject(out Brick brick, _cube);
-                    Brick currentBrick = brick;
+                    /*Brick currentBrick = brick;
                     currentBrick.transform.position = position;
                     currentBrick.gameObject.SetActive(true);
-                    _brickGrid[i, j] = currentBrick;
-                    _brickList.Add(currentBrick);
+                    currentBrick.GetComponent<MeshRenderer>().enabled = false;*/
+                    brick.transform.position = position;
+                    brick.gameObject.SetActive(true);
+                    var msw = brick.GetComponent<MeshRenderer>().enabled = false;
+                    Debug.Log(msw);
+                    _brickGrid[i, j] = brick;
+                    _brickList.Add(brick);
                 }
             }
 
@@ -90,6 +95,13 @@ namespace MainMenu
             }
         }
 
+        /*
+        private IEnumerator SpawnCub()
+        {
+            
+        }
+        */
+
         public void FlyBackAllCubes()
         {
             foreach (Brick cube in _brickList)
@@ -111,6 +123,7 @@ namespace MainMenu
                     Vector3 startPosition = _brickGrid[i, j].transform.position;
                     Vector3 endPosition = startPosition - new Vector3(0, 0, _distanceStartFly);
                     float speed = Random.Range(_minFlySpeed, _maxFlySpeed);
+                    // var msw  = _brickGrid[i, j].GetComponent<MeshRenderer>().enabled = true;
                     StartCoroutine(MoveCube(_brickGrid[i, j], endPosition, speed));
                 }
 
@@ -125,6 +138,8 @@ namespace MainMenu
         {
             while (cube.transform.position != target)
             {
+                cube.GetComponent<MeshRenderer>().enabled = true;
+                Debug.Log(cube.GetComponent<MeshRenderer>());
                 cube.transform.position = Vector3.MoveTowards(cube.transform.position, target, speed * Time.deltaTime);
                 yield return null;
             }
