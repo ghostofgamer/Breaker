@@ -17,6 +17,8 @@ namespace UI.Screens
         private int _zeroAlpha = 0;
         private int _fullAlpha = 1;
 
+        public bool IsOpen { get; private set; }
+        
         private void Start()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
@@ -25,6 +27,7 @@ namespace UI.Screens
 
         public void Open()
         {
+            IsOpen = true;
             Setvalue(_fullAlpha, true);
             _uiAnimations.Open();
             Play(0, _timePauseOpenEnd, _audioClip, _audioSource.clip);
@@ -41,6 +44,7 @@ namespace UI.Screens
             _uiAnimations.Close();
             Play(0, _timePauseCloseEnd, _audioSource.clip, _audioClip);
             yield return _waitForSeconds;
+            IsOpen = false;
             Setvalue(_zeroAlpha, false);
         }
 

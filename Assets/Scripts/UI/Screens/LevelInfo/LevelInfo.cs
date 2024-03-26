@@ -1,4 +1,5 @@
 using System.Collections;
+using CameraFiles;
 using Enum;
 using Levels;
 using SaveAndLoad;
@@ -23,6 +24,7 @@ namespace UI.Screens.LevelInfo
         [SerializeField] private CloseChangeLevelScreenButton _closeChangeLevelScreenButtonOne;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private UIAnimations _uiAnimations;
+        [SerializeField] private CameraMover _cameraMover;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.5f);
         private Coroutine _coroutineOpen;
@@ -59,7 +61,8 @@ namespace UI.Screens.LevelInfo
         private void Initialization()
         {
             _information = _load.Get(Save.LevelStatus + _index, _defaultValue) > _defaultValue;
-            _panelCompleted.SetActive((LevelState) _load.Get(Save.LevelStatus + _index, _defaultValue) == LevelState.Completed);
+            _panelCompleted.SetActive((LevelState) _load.Get(Save.LevelStatus + _index, _defaultValue) ==
+                                      LevelState.Completed);
             _score.text = _load.Get(Save.Score + _index, _defaultValue).ToString();
             SetActive(_zeroAlpha, false);
             _cubePositionInfo = _cubePositionsInfo[_information ? 0 : _indexFalseInformation];
@@ -79,6 +82,9 @@ namespace UI.Screens.LevelInfo
 
         private IEnumerator CloseScreen()
         {
+            if (_cameraMover != null)
+                _cameraMover.SetValue(true);
+
             _colliderController.SetValue(true);
             _uiAnimations.Close();
             _audioSource.PlayOneShot(_audioSource.clip);

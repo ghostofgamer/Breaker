@@ -19,6 +19,7 @@ namespace CameraFiles
         private Vector3 _mouseStartPos;
         private Vector3 _cameraStartPos;
         private Vector3 _newCameraPos;
+        private bool _freeMovement = true;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.1f);
         private WaitForSeconds _waitForMove = new WaitForSeconds(1f);
@@ -33,19 +34,20 @@ namespace CameraFiles
 
         private void Update()
         {
-            if (transform.position != _newCameraPos && !Input.GetMouseButton(0))
+            if (transform.position != _newCameraPos && !Input.GetMouseButton(0) ||
+                transform.position != _newCameraPos && !_freeMovement)
             {
                 transform.position =
                     Vector3.MoveTowards(transform.position, _newCameraPos, _overSpeed * Time.deltaTime);
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && _freeMovement)
             {
                 _mouseStartPos = Input.mousePosition;
                 _cameraStartPos = transform.position;
             }
 
-            else if (Input.GetMouseButton(0))
+            else if (Input.GetMouseButton(0) && _freeMovement)
             {
                 Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
                 Vector3 cameraDelta = new Vector3(mouseDelta.x, 0, mouseDelta.y) * _sensitivity;
@@ -59,7 +61,12 @@ namespace CameraFiles
         public void SetTargetPosition(Vector3 position)
         {
             StartCoroutine(SetTarget(position));
-            _newCameraPos = position;
+            // _newCameraPos = position;
+        }
+
+        public void SetValue(bool flag)
+        {
+            _freeMovement = flag;
         }
 
         public void SpeedUp()

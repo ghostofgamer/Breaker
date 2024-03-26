@@ -13,6 +13,7 @@ namespace CameraFiles
         {
             _targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z - _distance);
             _cameraMover.SetTargetPosition(_targetPosition);
+            _cameraMover.SetValue(false);
         }
     }
 }

@@ -1,10 +1,13 @@
 using Agava.WebUtility;
+using UI.Screens;
 using UnityEngine;
 
 namespace Focus
 {
     public class ScreenFocus : MonoBehaviour
     {
+        [SerializeField] private SettingsScreen _settingsScreen;
+
         private int _stop = 0;
         private int _play = 1;
 
@@ -39,6 +42,9 @@ namespace Focus
 
         private void PauseGame(bool value)
         {
+            if (_settingsScreen != null && _settingsScreen.IsOpen)
+                return;
+
             Time.timeScale = value ? _stop : _play;
         }
     }
