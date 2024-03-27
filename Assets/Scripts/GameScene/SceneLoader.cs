@@ -39,6 +39,7 @@ namespace GameScene
             _getReadyAnimation.Show();
             yield return _waitForSpawnPlatform;
             _platforma.gameObject.SetActive(true);
+            _platforma.GetComponent<PlatformaMover>().SetValue(true);
             _ball.gameObject.SetActive(true);
         }
 

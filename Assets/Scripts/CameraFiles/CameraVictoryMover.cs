@@ -11,6 +11,7 @@ namespace CameraFiles
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private AnimationsController _animationsController;
+        [SerializeField] private Animator _animator;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
 
@@ -34,6 +35,7 @@ namespace CameraFiles
 
         private IEnumerator OnMove()
         {
+            _animator.enabled = true;
             yield return _waitForSeconds;
             _animationsController.PlayVictory();
         }

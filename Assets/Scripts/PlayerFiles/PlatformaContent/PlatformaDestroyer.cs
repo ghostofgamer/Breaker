@@ -12,6 +12,13 @@ namespace PlayerFiles.PlatformaContent
         [SerializeField] private GameObject _mousePosition;
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private Transform _enviropment;
+        
+        private PlatformaMover _platformaMover;
+
+        private void Start()
+        {
+            _platformaMover = GetComponent<PlatformaMover>();
+        }
 
         private void OnEnable()
         {
@@ -29,11 +36,13 @@ namespace PlayerFiles.PlatformaContent
         {
             SetValue(_victoryEffect);
             transform.parent = _enviropment;
+            _platformaMover.SetValue(false);
         }
 
         private void OnLosingDestruction()
         {
             SetValue(_loseEffect);
+            _platformaMover.SetValue(false);
         }
 
         private void SetValue(ParticleSystem effect)

@@ -17194,13 +17194,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948748027}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a4c846f85af08d4d98f6c62414add87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 1190493306}
+  sensitivity: 1
+  minRotationZ: -1
+  maxRotationZ: 1
+  _speedRotation: 1
   _platformaMover: {fileID: 824722458}
-  _speed: 3
+  _speed: 0.05
+--- !u!95 &1190493306 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4395478558935932139, guid: 10c610d0aae46094581666f43de41707, type: 3}
+  m_PrefabInstance: {fileID: 1852462536085224638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1202722491
 PrefabInstance:
   m_ObjectHideFlags: 0
