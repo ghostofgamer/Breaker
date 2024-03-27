@@ -3,11 +3,10 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level6
 {
-    public class LoopedMovement : MonoBehaviour
+    public class LoopedMovement : BrickTriggerController
     {
         [SerializeField] private float _speed;
         [SerializeField] private float _delay;
-        [SerializeField]private Brick[] _bricks;
         [SerializeField] private Transform _target;
         [SerializeField] private Transform _start;
 
@@ -15,13 +14,15 @@ namespace Bricks.LevelBricksMoving.Level6
         private Vector3 _startPosition;
         private Rigidbody _rigidbody;
         private Coroutine _coroutine;
+        private bool _isWork = true;
         
-        private void Start()
+        protected override void Start()
         {
-            _rigidbody = GetComponent<Rigidbody>();
+            base.Start();
             _coroutine =   StartCoroutine(MoveCycle());
         }
-
+        
+        /*
         private void OnEnable()
         {
             foreach (var brick in _bricks)
@@ -36,11 +37,11 @@ namespace Bricks.LevelBricksMoving.Level6
             {
                 brick.Dead -= SetValue;
             }
-        }
+        }*/
 
         private IEnumerator MoveCycle()
         {
-            while (true)
+            while (_isWork)
             {
                 yield return MoveToPosition(_target.position);
                 yield return new WaitForSeconds(_delay);
@@ -58,11 +59,19 @@ namespace Bricks.LevelBricksMoving.Level6
             }
         }
 
+        protected override void SetValue()
+        {
+            base.SetValue();
+            _isWork = false;
+            StopCoroutine(_coroutine);
+        }
+
+        /*
         private void SetValue()
         {
             _rigidbody.isKinematic = false;
             StopCoroutine(_coroutine);
             enabled = false;
-        }
+        }*/
     }
 }

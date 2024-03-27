@@ -1,10 +1,9 @@
 using System.Collections;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Bricks.LevelBricksMoving.Level2
 {
-    public class ImpulseMovement : MonoBehaviour
+    public class ImpulseMovement : BrickTriggerController
     {
         [SerializeField] private float _moveDistanceForward;
         [SerializeField] private float _moveDistanceBack;
@@ -21,8 +20,29 @@ namespace Bricks.LevelBricksMoving.Level2
         private bool _isMovingToTarget = true;
         private float _minValue = 6;
         private float _maxValue = 15;
+        private bool _isWork = true;
 
-        private void Start()
+        protected override void Start()
+        {
+            base.Start();
+            _initialPosition = transform.position;
+            _waitForSeconds = new WaitForSeconds(_duration);
+            _targetPosition =
+                new Vector3(_initialPosition.x, _initialPosition.y, _initialPosition.z - _moveDistanceForward);
+            _targetPosition1 = new Vector3(_initialPosition.x, _initialPosition.y,
+                _initialPosition.z + _moveDistanceBack);
+
+            /*foreach (var brick in _bricks)
+                brick.GetComponent<Rigidbody>().isKinematic = true;*/
+
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _coroutine = StartCoroutine(MoveBetweenTargetsCoroutine());
+        }
+
+
+        /*private void Start()
         {
             _initialPosition = transform.position;
             _waitForSeconds = new WaitForSeconds(_duration);
@@ -39,21 +59,21 @@ namespace Bricks.LevelBricksMoving.Level2
                 StopCoroutine(_coroutine);
 
             _coroutine = StartCoroutine(MoveBetweenTargetsCoroutine());
-        }
+        }*/
 
-        private void Update()
+        /*private void Update()
         {
             if (_bricks[0].gameObject.activeSelf)
                 return;
 
             Over();
-        }
+        }*/
 
         private IEnumerator MoveBetweenTargetsCoroutine()
         {
             yield return _waitForSeconds;
 
-            while (true)
+            while (_isWork)
             {
                 if (_isMovingToTarget)
                     yield return MoveToTarget(_targetPosition, _moveDuration);
@@ -94,7 +114,14 @@ namespace Bricks.LevelBricksMoving.Level2
             }
         }
 
-        private void Over()
+        protected override void SetValue()
+        {
+            GiveImpulse(_direction, _minValue, _maxValue);
+            _isWork = false;
+            StopCoroutine(_coroutine);
+        }
+
+        /*private void Over()
         {
             foreach (var brick in _bricks)
             {
@@ -104,6 +131,6 @@ namespace Bricks.LevelBricksMoving.Level2
             }
 
             gameObject.SetActive(false);
-        }
+        }*/
     }
 }

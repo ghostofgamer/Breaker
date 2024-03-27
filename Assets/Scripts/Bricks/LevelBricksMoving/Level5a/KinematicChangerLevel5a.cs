@@ -11,6 +11,7 @@ public class KinematicChangerLevel5a : MonoBehaviour
     [SerializeField] private GameObject[] _bricks;
     [SerializeField] private Brick _brick;
 
+    /*
     private void OnEnable()
     {
         _brick.Dead += ChangeKinematic;
@@ -34,5 +35,5 @@ public class KinematicChangerLevel5a : MonoBehaviour
             if (brick.activeSelf && brick.GetComponent<Rigidbody>().isKinematic)
                 brick.GetComponent<Rigidbody>().isKinematic = false;
         }
-    }
+    }*/
 }

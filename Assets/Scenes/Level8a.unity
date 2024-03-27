@@ -144,6 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8289241}
   - component: {fileID: 8289242}
+  - component: {fileID: 8289243}
   m_Layer: 6
   m_Name: 2 (9)
   m_TagString: Untagged
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8289240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -191,7 +192,28 @@ MonoBehaviour:
   - {fileID: 632110774}
   - {fileID: 2134577237}
   - {fileID: 2033482991}
-  _brickTrigger: {fileID: 301979626}
+  _bricksTrigger: []
+--- !u!114 &8289243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8289240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 301979626}
+  - {fileID: 1024408450}
+  - {fileID: 1670429619}
+  - {fileID: 632110774}
+  - {fileID: 2134577237}
+  - {fileID: 2033482991}
+  _bricksTrigger:
+  - {fileID: 301979626}
 --- !u!1001 &24442679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1413,6 +1435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111462007}
   - component: {fileID: 111462008}
+  - component: {fileID: 111462009}
   m_Layer: 6
   m_Name: 1
   m_TagString: Untagged
@@ -1448,7 +1471,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111462006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -1460,7 +1483,28 @@ MonoBehaviour:
   - {fileID: 1976456314}
   - {fileID: 1372473488}
   - {fileID: 197143784}
-  _brickTrigger: {fileID: 1169243635}
+  _bricksTrigger: []
+--- !u!114 &111462009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111462006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 1169243635}
+  - {fileID: 1683206574}
+  - {fileID: 1981679469}
+  - {fileID: 1976456314}
+  - {fileID: 1372473488}
+  - {fileID: 197143784}
+  _bricksTrigger:
+  - {fileID: 1169243635}
 --- !u!4 &115646160 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5156593758394242515, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -8118,6 +8162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 328412568}
   - component: {fileID: 328412569}
+  - component: {fileID: 328412570}
   m_Layer: 6
   m_Name: 2 (6)
   m_TagString: Untagged
@@ -8153,7 +8198,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328412567}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -8165,7 +8210,28 @@ MonoBehaviour:
   - {fileID: 473870103}
   - {fileID: 1637080561}
   - {fileID: 1013263350}
-  _brickTrigger: {fileID: 1366459627}
+  _bricksTrigger: []
+--- !u!114 &328412570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328412567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 1366459627}
+  - {fileID: 1217561494}
+  - {fileID: 101413893}
+  - {fileID: 473870103}
+  - {fileID: 1637080561}
+  - {fileID: 1013263350}
+  _bricksTrigger:
+  - {fileID: 1366459627}
 --- !u!114 &329152669 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 568329053448572749, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
@@ -8370,6 +8436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 392931274}
   - component: {fileID: 392931275}
+  - component: {fileID: 392931276}
   m_Layer: 6
   m_Name: 2 (3)
   m_TagString: Untagged
@@ -8405,7 +8472,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392931273}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -8417,7 +8484,28 @@ MonoBehaviour:
   - {fileID: 554670619}
   - {fileID: 512326510}
   - {fileID: 1483487800}
-  _brickTrigger: {fileID: 864641449}
+  _bricksTrigger: []
+--- !u!114 &392931276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392931273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 864641449}
+  - {fileID: 1079505247}
+  - {fileID: 1273913811}
+  - {fileID: 554670619}
+  - {fileID: 512326510}
+  - {fileID: 1483487800}
+  _bricksTrigger:
+  - {fileID: 864641449}
 --- !u!1 &398143138
 GameObject:
   m_ObjectHideFlags: 0
@@ -8428,6 +8516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 398143139}
   - component: {fileID: 398143140}
+  - component: {fileID: 398143141}
   m_Layer: 6
   m_Name: 2 (8)
   m_TagString: Untagged
@@ -8463,7 +8552,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398143138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -8475,7 +8564,28 @@ MonoBehaviour:
   - {fileID: 1134115911}
   - {fileID: 938314653}
   - {fileID: 720037036}
-  _brickTrigger: {fileID: 164778522}
+  _bricksTrigger: []
+--- !u!114 &398143141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398143138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 164778522}
+  - {fileID: 1797362144}
+  - {fileID: 776761294}
+  - {fileID: 1134115911}
+  - {fileID: 938314653}
+  - {fileID: 720037036}
+  _bricksTrigger:
+  - {fileID: 164778522}
 --- !u!114 &431769926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1999329508805577759, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
@@ -8530,6 +8640,146 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca90b946c9b7cb541b6e75bcfb8829a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &445981838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445981839}
+  - component: {fileID: 445981844}
+  - component: {fileID: 445981843}
+  - component: {fileID: 445981842}
+  - component: {fileID: 445981841}
+  - component: {fileID: 445981840}
+  m_Layer: 0
+  m_Name: level1 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &445981839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445981838}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.38268322, z: -0, w: 0.9238796}
+  m_LocalPosition: {x: -31.9, y: -45.5, z: 41.4}
+  m_LocalScale: {x: 13, y: 13, z: 13}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1062665560}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+--- !u!95 &445981840
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445981838}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea96c70f8ac2e8341bb0293349b109e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &445981841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445981838}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0a4b272ff5ff5439771972e9f59ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &445981842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445981838}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &445981843
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445981838}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 01f5f661a159b5542be929ec830f05c0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &445981844
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445981838}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &447804403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5156593758394242515, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -12320,6 +12570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861340348}
   - component: {fileID: 861340349}
+  - component: {fileID: 861340350}
   m_Layer: 6
   m_Name: 1 (1)
   m_TagString: Untagged
@@ -12355,7 +12606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861340347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -12367,7 +12618,28 @@ MonoBehaviour:
   - {fileID: 1740282354}
   - {fileID: 197372235}
   - {fileID: 705890636}
-  _brickTrigger: {fileID: 708798761}
+  _bricksTrigger: []
+--- !u!114 &861340350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861340347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 708798761}
+  - {fileID: 507656276}
+  - {fileID: 2136931190}
+  - {fileID: 1740282354}
+  - {fileID: 197372235}
+  - {fileID: 705890636}
+  _bricksTrigger:
+  - {fileID: 708798761}
 --- !u!4 &864641444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5156593758394242515, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -13961,6 +14233,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1062665559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2965063562220780270, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965063562220780270, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -45.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965063562220780270, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 98.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562077086419907313, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_Name
+      value: BackGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844414929288202475, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01f5f661a159b5542be929ec830f05c0, type: 2}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.9105582
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.232517
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.722652
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315801581000431884, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01f5f661a159b5542be929ec830f05c0, type: 2}
+    - target: {fileID: 6518221778869525519, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518221778869525519, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -29.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518221778869525519, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 74.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996789772028982354, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01f5f661a159b5542be929ec830f05c0, type: 2}
+    - target: {fileID: 7873197487926585578, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01f5f661a159b5542be929ec830f05c0, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 445981839}
+    - targetCorrespondingSourceObject: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1227778089}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+--- !u!4 &1062665560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5986180246263040067, guid: 1803cd406a05fec48a5e0c2070488a3d, type: 3}
+  m_PrefabInstance: {fileID: 1062665559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1078918506 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4213305355707291283, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
@@ -14700,6 +15080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144536445}
   - component: {fileID: 1144536446}
+  - component: {fileID: 1144536447}
   m_Layer: 6
   m_Name: 1 (2)
   m_TagString: Untagged
@@ -14735,7 +15116,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144536444}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -14747,7 +15128,28 @@ MonoBehaviour:
   - {fileID: 217370195}
   - {fileID: 200714217}
   - {fileID: 1510091738}
-  _brickTrigger: {fileID: 729159258}
+  _bricksTrigger: []
+--- !u!114 &1144536447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144536444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 729159258}
+  - {fileID: 2028420529}
+  - {fileID: 1749767522}
+  - {fileID: 217370195}
+  - {fileID: 200714217}
+  - {fileID: 1510091738}
+  _bricksTrigger:
+  - {fileID: 729159258}
 --- !u!4 &1145080330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5156593758394242515, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -15330,6 +15732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1223760654}
   - component: {fileID: 1223760655}
+  - component: {fileID: 1223760656}
   m_Layer: 6
   m_Name: 2
   m_TagString: Untagged
@@ -15365,7 +15768,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223760653}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -15377,7 +15780,28 @@ MonoBehaviour:
   - {fileID: 1300456810}
   - {fileID: 792295476}
   - {fileID: 859059478}
-  _brickTrigger: {fileID: 2056885700}
+  _bricksTrigger: []
+--- !u!114 &1223760656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223760653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 2056885700}
+  - {fileID: 523018602}
+  - {fileID: 189605509}
+  - {fileID: 1300456810}
+  - {fileID: 792295476}
+  - {fileID: 859059478}
+  _bricksTrigger:
+  - {fileID: 2056885700}
 --- !u!1 &1225248639
 GameObject:
   m_ObjectHideFlags: 0
@@ -15514,6 +15938,146 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
+--- !u!1 &1227778088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227778089}
+  - component: {fileID: 1227778094}
+  - component: {fileID: 1227778093}
+  - component: {fileID: 1227778092}
+  - component: {fileID: 1227778091}
+  - component: {fileID: 1227778090}
+  m_Layer: 0
+  m_Name: level1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1227778089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227778088}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.38268322, z: -0, w: 0.9238796}
+  m_LocalPosition: {x: 49.2, y: -25.7, z: 74.1}
+  m_LocalScale: {x: 13, y: 13, z: 13}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1062665560}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+--- !u!95 &1227778090
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227778088}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea96c70f8ac2e8341bb0293349b109e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1227778091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227778088}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0a4b272ff5ff5439771972e9f59ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1227778092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227778088}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1227778093
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227778088}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 01f5f661a159b5542be929ec830f05c0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1227778094
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227778088}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1230888008
 GameObject:
   m_ObjectHideFlags: 0
@@ -17590,6 +18154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1511310919}
   - component: {fileID: 1511310920}
+  - component: {fileID: 1511310921}
   m_Layer: 6
   m_Name: 2 (5)
   m_TagString: Untagged
@@ -17625,7 +18190,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511310918}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -17637,7 +18202,28 @@ MonoBehaviour:
   - {fileID: 1256653507}
   - {fileID: 810809238}
   - {fileID: 837090153}
-  _brickTrigger: {fileID: 237624612}
+  _bricksTrigger: []
+--- !u!114 &1511310921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511310918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 237624612}
+  - {fileID: 1385091115}
+  - {fileID: 1407940453}
+  - {fileID: 1256653507}
+  - {fileID: 810809238}
+  - {fileID: 837090153}
+  _bricksTrigger:
+  - {fileID: 237624612}
 --- !u!1001 &1518622906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18937,6 +19523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644577610}
   - component: {fileID: 1644577611}
+  - component: {fileID: 1644577612}
   m_Layer: 6
   m_Name: 2 (1)
   m_TagString: Untagged
@@ -18972,7 +19559,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644577609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -18984,7 +19571,28 @@ MonoBehaviour:
   - {fileID: 444578319}
   - {fileID: 1253534491}
   - {fileID: 115646165}
-  _brickTrigger: {fileID: 1661214029}
+  _bricksTrigger: []
+--- !u!114 &1644577612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644577609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 1661214029}
+  - {fileID: 1943814108}
+  - {fileID: 447804408}
+  - {fileID: 444578319}
+  - {fileID: 1253534491}
+  - {fileID: 115646165}
+  _bricksTrigger:
+  - {fileID: 1661214029}
 --- !u!1 &1652977944
 GameObject:
   m_ObjectHideFlags: 0
@@ -24759,6 +25367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1779144764}
   - component: {fileID: 1779144765}
+  - component: {fileID: 1779144766}
   m_Layer: 6
   m_Name: 2 (10)
   m_TagString: Untagged
@@ -24794,7 +25403,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779144763}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -24806,7 +25415,28 @@ MonoBehaviour:
   - {fileID: 1877344072}
   - {fileID: 235552235}
   - {fileID: 532416423}
-  _brickTrigger: {fileID: 1817060411}
+  _bricksTrigger: []
+--- !u!114 &1779144766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779144763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 1817060411}
+  - {fileID: 434436763}
+  - {fileID: 1470519968}
+  - {fileID: 1877344072}
+  - {fileID: 235552235}
+  - {fileID: 532416423}
+  _bricksTrigger:
+  - {fileID: 1817060411}
 --- !u!1 &1785841432
 GameObject:
   m_ObjectHideFlags: 0
@@ -24817,6 +25447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785841433}
   - component: {fileID: 1785841434}
+  - component: {fileID: 1785841435}
   m_Layer: 6
   m_Name: 2 (11)
   m_TagString: Untagged
@@ -24852,7 +25483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785841432}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -24864,7 +25495,28 @@ MonoBehaviour:
   - {fileID: 1956902938}
   - {fileID: 1937459864}
   - {fileID: 280322013}
-  _brickTrigger: {fileID: 882967155}
+  _bricksTrigger: []
+--- !u!114 &1785841435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785841432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 882967155}
+  - {fileID: 529358761}
+  - {fileID: 1145080335}
+  - {fileID: 1956902938}
+  - {fileID: 1937459864}
+  - {fileID: 280322013}
+  _bricksTrigger:
+  - {fileID: 882967155}
 --- !u!4 &1797362139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5156593758394242515, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -27127,6 +27779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040271513}
   - component: {fileID: 2040271514}
+  - component: {fileID: 2040271515}
   m_Layer: 6
   m_Name: 2 (4)
   m_TagString: Untagged
@@ -27162,7 +27815,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040271512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -27174,7 +27827,28 @@ MonoBehaviour:
   - {fileID: 1928582622}
   - {fileID: 988943742}
   - {fileID: 1664127294}
-  _brickTrigger: {fileID: 1983105844}
+  _bricksTrigger: []
+--- !u!114 &2040271515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040271512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 1983105844}
+  - {fileID: 1613806955}
+  - {fileID: 216941627}
+  - {fileID: 1928582622}
+  - {fileID: 988943742}
+  - {fileID: 1664127294}
+  _bricksTrigger:
+  - {fileID: 1983105844}
 --- !u!1 &2046333285
 GameObject:
   m_ObjectHideFlags: 0
@@ -27484,6 +28158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2080443277}
   - component: {fileID: 2080443278}
+  - component: {fileID: 2080443279}
   m_Layer: 6
   m_Name: 2 (7)
   m_TagString: Untagged
@@ -27519,7 +28194,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080443276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -27531,7 +28206,28 @@ MonoBehaviour:
   - {fileID: 1487531273}
   - {fileID: 86276957}
   - {fileID: 1284744913}
-  _brickTrigger: {fileID: 1453678261}
+  _bricksTrigger: []
+--- !u!114 &2080443279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080443276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 1453678261}
+  - {fileID: 692807552}
+  - {fileID: 1974358361}
+  - {fileID: 1487531273}
+  - {fileID: 86276957}
+  - {fileID: 1284744913}
+  _bricksTrigger:
+  - {fileID: 1453678261}
 --- !u!1 &2120406063
 GameObject:
   m_ObjectHideFlags: 0
@@ -28087,6 +28783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143892190}
   - component: {fileID: 2143892191}
+  - component: {fileID: 2143892192}
   m_Layer: 6
   m_Name: 2 (2)
   m_TagString: Untagged
@@ -28122,7 +28819,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143892189}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970a2557eb7ffba45a369c3f64c60dcc, type: 3}
   m_Name: 
@@ -28134,7 +28831,28 @@ MonoBehaviour:
   - {fileID: 307254980}
   - {fileID: 1305385400}
   - {fileID: 2028227277}
-  _brickTrigger: {fileID: 478954597}
+  _bricksTrigger: []
+--- !u!114 &2143892192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143892189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff1f1043a35244966015c7da3ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricks:
+  - {fileID: 478954597}
+  - {fileID: 738887823}
+  - {fileID: 939895671}
+  - {fileID: 307254980}
+  - {fileID: 1305385400}
+  - {fileID: 2028227277}
+  _bricksTrigger:
+  - {fileID: 478954597}
 --- !u!1001 &2146613989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29049,6 +29767,7 @@ SceneRoots:
   - {fileID: 1852462536085224638}
   - {fileID: 263687911}
   - {fileID: 1876216669796287188}
+  - {fileID: 1062665559}
   - {fileID: 978041177}
   - {fileID: 9131508302469164859}
   - {fileID: 7403276223480039393}

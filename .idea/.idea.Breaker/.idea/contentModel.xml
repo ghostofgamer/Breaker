@@ -1279,6 +1279,7 @@
           </e>
         </e>
         <e p="Materials" t="Include">
+          <e p="BackGroundBricks" t="Include" />
           <e p="BackGroundMainMenu" t="Include" />
           <e p="Ball" t="Include">
             <e p="TestSkins" t="Include" />
@@ -1476,6 +1477,7 @@
           <e p="Bullet" t="Include" />
           <e p="Button" t="Include" />
           <e p="CameraGameLevel" t="Include" />
+          <e p="CubeBackGround" t="Include" />
           <e p="FeelGrid" t="Include" />
           <e p="LevelGameScenes" t="Include" />
           <e p="Localization" t="Include" />
@@ -1553,6 +1555,7 @@
               <e p="BrickEternal.cs" t="Include" />
             </e>
             <e p="LevelBricksMoving" t="Include">
+              <e p="BrickTriggerController.cs" t="Include" />
               <e p="Level1" t="Include">
                 <e p="BrickMover.cs" t="Include" />
               </e>
@@ -1580,7 +1583,7 @@
                 <e p="LoopedMovement.cs" t="Include" />
               </e>
               <e p="Level7" t="Include">
-                <e p="MovingLevel7.cs" t="Include" />
+                <e p="MovingStairs.cs" t="Include" />
               </e>
               <e p="Level8a" t="Include">
                 <e p="Level8aTriggerPalma.cs" t="Include" />
@@ -1708,6 +1711,7 @@
           <e p="Others" t="Include">
             <e p="AnimationsController.cs" t="Include" />
           </e>
+          <e p="PlatformFollower.cs" t="Include" />
           <e p="PlayerFiles" t="Include">
             <e p="ModificationContent" t="Include">
               <e p="ChanceBonus.cs" t="Include" />
