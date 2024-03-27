@@ -1,24 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using PlayerFiles.PlatformaContent;
 using UnityEngine;
 
-public class TriangleMovement : MonoBehaviour
+namespace Bricks.LevelBricksMoving.Level10
 {
-    [SerializeField] private float _movementSpeed;
-    [SerializeField] private PlatformaMover _platformaMover;
-    [SerializeField] private float _minX;
-    [SerializeField] private float _maxX;
-
-    [SerializeField] private float _moveStep;
-
-    private void Update()
+    public class TriangleMovement : MonoBehaviour
     {
-        float targetX = transform.position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
-        targetX = Mathf.Clamp(targetX, _minX, _maxX);
+        [SerializeField] private float _movementSpeed;
+        [SerializeField] private PlatformaMover _platformaMover;
+        [SerializeField] private float _minX;
+        [SerializeField] private float _maxX;
+        [SerializeField] private float _moveStep;
 
-        transform.position = Vector3.MoveTowards(transform.position,
-            new Vector3(targetX, transform.position.y, transform.position.z), _moveStep * Time.deltaTime);
+        private void Update()
+        {
+            Vector3 position = transform.position;
+            float targetX = position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
+            targetX = Mathf.Clamp(targetX, _minX, _maxX);
+
+            position = Vector3.MoveTowards(position,
+                new Vector3(targetX, position.y, position.z), _moveStep * Time.deltaTime);
+            transform.position = position;
+        }
     }
 }

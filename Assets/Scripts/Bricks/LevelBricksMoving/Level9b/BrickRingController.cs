@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Others;
 using Statistics;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class BrickRingController : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private BrickCounter _brickCounter;
+    [SerializeField] private AnimationsController _animationsController;
     [SerializeField] private GameObject[] _blocks;
 
     private WaitForSeconds _starWait = new WaitForSeconds(1.5f);
@@ -35,9 +37,11 @@ public class BrickRingController : MonoBehaviour
 
         while (true)
         {
-            _animator.Play("BrickRing");
+            _animationsController.RingOpen();
+            // _animator.Play("BrickRing");
             yield return _waitForSeconds;
-            _animator.Play("BrickRingEnd");
+            _animationsController.RingClose();
+            // _animator.Play("BrickRingEnd");
             yield return _waitForSeconds;
         }
     }
@@ -48,6 +52,7 @@ public class BrickRingController : MonoBehaviour
         enabled = false;
     }
 
+    /*
     private IEnumerator SetValue(bool flag)
     {
         yield return new WaitForSeconds(1f);
@@ -60,5 +65,5 @@ public class BrickRingController : MonoBehaviour
         {
             block.GetComponent<BoxCollider>().enabled = flag;
         }
-    }
+    }*/
 }

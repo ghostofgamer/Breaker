@@ -8,6 +8,8 @@ namespace Others
 
         private const string Rotate = "Rotate";
         private const string Victory = "Victory";
+        private const string BrickRingOpen = "BrickRingOpen";
+        private const string BrickRingClose = "BrickRingClose";
         
         public void PlayRotate()
         {
@@ -17,6 +19,16 @@ namespace Others
         public void PlayVictory()
         {
             _animator.SetTrigger(Victory);
+        }
+
+        public void RingOpen()
+        {
+            _animator.Play("BrickRingOpen");
+        }
+
+        public void RingClose()
+        {
+            _animator.Play("BrickRingClose");
         }
     }
 }
