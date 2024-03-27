@@ -1,87 +1,68 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Bricks;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class LoopedMovement : MonoBehaviour
+namespace Bricks.LevelBricksMoving.Level6
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private float _delay;
-    [SerializeField] private float _corrector;
-    [SerializeField] private float _distance;
-    [SerializeField]private Brick[] _bricks;
-
-    private Vector3 _targetPosition;
-    private Vector3 _startPosition;
-    private Rigidbody _rigidbody;
-    private Coroutine _coroutine;
-    
-    [SerializeField] private Transform _target;
-    [SerializeField] private Transform _start;
-    
-    
-    private void Start()
+    public class LoopedMovement : MonoBehaviour
     {
-        // startPosition = transform.position;
-        /*_startPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + _corrector);
-        ;
-        _targetPosition = new Vector3(_startPosition.x, _startPosition.y, _startPosition.z - _distance);*/
-        _rigidbody = GetComponent<Rigidbody>();
-        _coroutine =   StartCoroutine(MoveCycle());
-    }
+        [SerializeField] private float _speed;
+        [SerializeField] private float _delay;
+        [SerializeField]private Brick[] _bricks;
+        [SerializeField] private Transform _target;
+        [SerializeField] private Transform _start;
 
-    private void OnEnable()
-    {
-        foreach (var brick in _bricks)
-        {
-            brick.Dead += SetValue;
-        }
-    }
-
-    private void OnDisable()
-    {
-        foreach (var brick in _bricks)
-        {
-            brick.Dead -= SetValue;
-        }
-    }
-
-    private void Update()
-    {
+        private Vector3 _targetPosition;
+        private Vector3 _startPosition;
+        private Rigidbody _rigidbody;
+        private Coroutine _coroutine;
         
-    }
-
-    private IEnumerator MoveCycle()
-    {
-        while (true)
+        private void Start()
         {
-            // Движение к определенной позиции
-            // yield return MoveToPosition(_targetPosition);
-            yield return MoveToPosition(_target.position);
-            yield return new WaitForSeconds(_delay);
-
-            // Движение к стартовой позиции
-            // yield return MoveToPosition(_startPosition);
-            yield return MoveToPosition(_start.position);
-            yield return new WaitForSeconds(_delay);
+            _rigidbody = GetComponent<Rigidbody>();
+            _coroutine =   StartCoroutine(MoveCycle());
         }
-    }
 
-    private IEnumerator MoveToPosition(Vector3 destination)
-    {
-        while (transform.position != destination)
+        private void OnEnable()
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, _speed * Time.deltaTime);
-            yield return null;
+            foreach (var brick in _bricks)
+            {
+                brick.Dead += SetValue;
+            }
         }
-    }
 
-    private void SetValue()
-    {
-        _rigidbody.isKinematic = false;
-        StopCoroutine(_coroutine);
-        enabled = false;
+        private void OnDisable()
+        {
+            foreach (var brick in _bricks)
+            {
+                brick.Dead -= SetValue;
+            }
+        }
+
+        private IEnumerator MoveCycle()
+        {
+            while (true)
+            {
+                yield return MoveToPosition(_target.position);
+                yield return new WaitForSeconds(_delay);
+                yield return MoveToPosition(_start.position);
+                yield return new WaitForSeconds(_delay);
+            }
+        }
+
+        private IEnumerator MoveToPosition(Vector3 destination)
+        {
+            while (transform.position != destination)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, destination, _speed * Time.deltaTime);
+                yield return null;
+            }
+        }
+
+        private void SetValue()
+        {
+            _rigidbody.isKinematic = false;
+            StopCoroutine(_coroutine);
+            enabled = false;
+        }
     }
 }

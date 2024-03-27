@@ -1,31 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DecelerateStop : MonoBehaviour
+namespace Bricks.LevelBricksMoving.Level5b
 {
-    private float _decelerationTime = 3.0f;
-    private float _currentSpeed;
-    private float _deceleration;
-
-    public void StartDeceleration(float startSpeed)
+    public class DecelerateStop : MonoBehaviour
     {
-        enabled = true;
-        _currentSpeed = startSpeed;
-        _deceleration = _currentSpeed / _decelerationTime;
-    }
+        private float _decelerationTime = 3.0f;
+        private float _currentSpeed;
+        private float _deceleration;
 
-    private void Update()
-    {
-        if (_currentSpeed > 0.0f)
+        public void StartDeceleration(float startSpeed)
         {
-            _currentSpeed -= _deceleration * Time.deltaTime;
-        }
-        else
-        {
-            enabled = false;
+            enabled = true;
+            _currentSpeed = startSpeed;
+            _deceleration = _currentSpeed / _decelerationTime;
         }
 
-        transform.Rotate(Vector3.up, _currentSpeed * Time.deltaTime);
+        private void Update()
+        {
+            if (_currentSpeed > 0.0f)
+                _currentSpeed -= _deceleration * Time.deltaTime;
+
+            else
+                enabled = false;
+
+            transform.Rotate(Vector3.up, _currentSpeed * Time.deltaTime);
+        }
     }
 }

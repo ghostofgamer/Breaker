@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Bricks.LevelBricksMoving
+namespace Bricks.LevelBricksMoving.Level1
 {
     public class BrickMover : MonoBehaviour
     {
@@ -17,19 +17,17 @@ namespace Bricks.LevelBricksMoving
         private WaitForSeconds _waitForSeconds;
         private Coroutine _coroutine;
 
-        void Start()
+        private void Start()
         {
             _initialPosition = transform.position;
             _waitForSeconds = new WaitForSeconds(_duration);
             _targetPosition = new Vector3(_initialPosition.x + _moveDistance, _initialPosition.y, _initialPosition.z);
 
             foreach (var brick in _bricks)
-            {
                 brick.GetComponent<Rigidbody>().isKinematic = true;
-            }
         }
 
-        void Update()
+        private void Update()
         {
             if (!_isPaused)
                 BricksMove();

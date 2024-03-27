@@ -1557,10 +1557,10 @@
                 <e p="TriangleMovement.cs" t="Include" />
               </e>
               <e p="Level2" t="Include">
-                <e p="Level2BrickMover.cs" t="Include" />
+                <e p="ImpulseMovement.cs" t="Include" />
               </e>
               <e p="Level3" t="Include">
-                <e p="Level3MoveBricks.cs" t="Include" />
+                <e p="Gyration.cs" t="Include" />
               </e>
               <e p="Level4" t="Include">
                 <e p="WaveBrickMovement.cs" t="Include" />
@@ -1570,11 +1570,8 @@
               </e>
               <e p="Level5b" t="Include">
                 <e p="AccelerateRotate.cs" t="Include" />
-                <e p="Controller.cs" t="Include" />
+                <e p="CircularAccelerator.cs" t="Include" />
                 <e p="DecelerateStop.cs" t="Include" />
-                <e p="RotationControllerLevel5b.cs" t="Include" />
-                <e p="SequentialRotationControllerLevel5b.cs" t="Include" />
-                <e p="TestLevel5b.cs" t="Include" />
               </e>
               <e p="Level6" t="Include">
                 <e p="LoopedMovement.cs" t="Include" />
@@ -1587,11 +1584,12 @@
               </e>
               <e p="Level8b" t="Include">
                 <e p="CyclicalCircualMovement.cs" t="Include" />
-                <e p="ParentsChanger.cs" t="Include" />
               </e>
               <e p="Level9b" t="Include">
                 <e p="BrickRingController.cs" t="Include" />
               </e>
+              <e p="MotionController.cs" t="Include" />
+              <e p="ParentsChanger.cs" t="Include" />
             </e>
             <e p="ShaderChanger.cs" t="Include" />
           </e>
