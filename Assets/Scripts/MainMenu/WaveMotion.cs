@@ -20,6 +20,7 @@ namespace MainMenu
         [SerializeField] private int _columns;
         [SerializeField] private int _rows;
         [SerializeField] private Transform _container;
+        [SerializeField] private Material[] _materials;
 
         private Brick[,] _brickGrid;
         private List<Brick> _brickList;
@@ -37,6 +38,15 @@ namespace MainMenu
         private int _maxValue = 5;
         private float _factor = 1f;
 
+
+        public int waveCount; // Количество волн
+        private int currentWave; // Текущая волна
+        private List<Vector3> initialCubePositions;
+        [SerializeField] private float _waitBetweenWaves = 0.1f;
+        [SerializeField] private float waveTimer;
+        public float waveAmplitude;
+        [SerializeField] private float _amplitudeDuration  = 3f;
+
         private void Awake()
         {
             _pool = new ObjectPool<Brick>(_cube, _columns * _rows, _container);
@@ -44,6 +54,45 @@ namespace MainMenu
         }
 
         private void Start()
+        {
+            // Создаем и позиционируем кубы
+            _brickList = new List<Brick>();
+            _brickGrid = new Brick[_columns, _rows];
+
+            for (int i = 0; i < _columns; i++)
+            {
+                for (int j = 0; j < _rows; j++)
+                {
+                    Vector3 position = _startPosition - new Vector3(i * _cubeSpacing, j * _cubeSpacing, 0);
+                    _pool.GetFirstObject(out Brick brick, _cube);
+
+                    brick.transform.position = position;
+                    brick.gameObject.SetActive(true);
+                    MeshRenderer meshRederer = brick.GetComponent<MeshRenderer>();
+                    meshRederer.enabled = false;
+                    meshRederer.material = _materials[Random.Range(0, _materials.Length)];
+
+                    _brickGrid[i, j] = brick;
+                    _brickList.Add(brick);
+                }
+            }
+
+            // Сохраняем начальные позиции кубов
+            /*initialCubePositions = new List<Vector3>();
+            for (int i = 0; i < _columns; i++)
+            {
+                for (int j = 0; j < _rows; j++)
+                {
+                    Vector3 relativePosition = _brickGrid[i, j].transform.position - _container.transform.position;
+                    initialCubePositions.Add(relativePosition);
+                }
+            }*/
+
+            currentWave = 0;
+            StartCoroutine(MoveCubes());
+        }
+
+        /*private void Start()
         {
             _brickList = new List<Brick>();
             _brickGrid = new Brick[_columns, _rows];
@@ -57,20 +106,121 @@ namespace MainMenu
                     /*Brick currentBrick = brick;
                     currentBrick.transform.position = position;
                     currentBrick.gameObject.SetActive(true);
-                    currentBrick.GetComponent<MeshRenderer>().enabled = false;*/
+                    currentBrick.GetComponent<MeshRenderer>().enabled = false;#1#
                     brick.transform.position = position;
                     brick.gameObject.SetActive(true);
-                    var msw = brick.GetComponent<MeshRenderer>().enabled = false;
-                    Debug.Log(msw);
+                    MeshRenderer meshRederer = brick.GetComponent<MeshRenderer>();
+                    meshRederer.enabled = false;
+                    meshRederer.material = _materials[Random.Range(0, _materials.Length)];
+                    // brick.GetComponent<MeshRenderer>().enabled = false;
                     _brickGrid[i, j] = brick;
                     _brickList.Add(brick);
                 }
             }
 
             StartCoroutine(MoveCubes());
-        }
+        }*/
 
+        /*private void Update()
+        {
+            if (_isFlyOver)
+            {
+                for (int i = 0; i < _columns; i++)
+                {
+                    for (int j = 0; j < _rows; j++)
+                    {
+                        if (_brickGrid[i, j] != null)
+                        {
+                            float waveOffset = Mathf.Sin((Time.time + (i + j)) * _waveSpeed * Time.timeScale) *
+                                               _waveHeight;
+
+                            int index = i * _rows + j;
+                            Vector3 targetRelativePosition = initialCubePositions[index];
+                            targetRelativePosition.z += waveOffset;
+
+                            // Преобразуем относительную позицию в глобальную позицию
+                            Vector3 targetPosition = _container.transform.position + targetRelativePosition;
+
+                            // Сглаживание движения кубов с помощью линейной интерполяции (Lerp)
+                            float smoothFactor = 10f * Time.deltaTime;
+                            _brickGrid[i, j].transform.position = Vector3.Lerp(_brickGrid[i, j].transform.position, targetPosition, smoothFactor);
+                        }
+                    }
+                }
+            }
+        }*/
+        
+        
+        /*private void Update()
+        {
+            if (_isFlyOver)
+            {
+                waveTimer += Time.deltaTime;
+
+                for (int i = 0; i < _columns; i++)
+                {
+                    for (int j = 0; j < _rows; j++)
+                    {
+                        if (_brickGrid[i, j] != null)
+                        {
+                            float waveOffset = Mathf.Sin((Time.time + (i + j)) * _waveSpeed * Time.timeScale) *
+                                               _waveHeight;
+
+                            int index = i * _rows + j;
+                            Vector3 targetPosition = initialCubePositions[index];
+                            targetPosition.z += waveOffset;
+
+                            // Сглаживание движения кубов с помощью линейной интерполяции (Lerp)
+                            float smoothFactor = 10f * Time.deltaTime;
+                            _brickGrid[i, j].transform.localPosition = Vector3.Lerp(_brickGrid[i, j].transform.localPosition, targetPosition, smoothFactor);
+                        }
+                    }
+                }
+            }
+        }*/
         private void Update()
+        {
+            if (_isFlyOver)
+            {
+                waveTimer += Time.deltaTime;
+
+                // Вычисляем циклическое значение амплитуды волны
+                float amplitudeT = Mathf.PingPong(waveTimer / _amplitudeDuration, 1);
+                float waveAmplitude = Mathf.Lerp(0.1f, 6, amplitudeT);
+Debug.Log(waveAmplitude);
+                for (int i = 0; i < _columns; i++)
+                {
+                    for (int j = 0; j < _rows; j++)
+                    {
+                        int index = i * _rows + j;
+                        Vector3 position = initialCubePositions[index];
+                        position.z += Mathf.Sin(waveTimer + (i * _waitBetweenWaves)) * waveAmplitude;
+                        _brickList[index].transform.localPosition = position;
+                    }
+                }
+            }
+        }
+        /*void Update()
+        {
+            if (_isFlyOver)
+            {
+                waveTimer += Time.deltaTime;
+
+                for (int i = 0; i < _columns; i++)
+                {
+                    for (int j = 0; j < _rows; j++)
+                    {
+                        int index = i * _rows + j;
+                        Vector3 position = initialCubePositions[index];
+                        position.z += Mathf.Sin(waveTimer + (i * _waitBetweenWaves)) * waveAmplitude;
+                        _brickList[index].transform.localPosition = position;
+                    }
+                }
+            }
+        }*/
+        
+     
+        /*private void Update()
         {
             if (_isFlyOver)
             {
@@ -93,14 +243,7 @@ namespace MainMenu
             {
                 FlyBackAllCubes();
             }
-        }
-
-        /*
-        private IEnumerator SpawnCub()
-        {
-            
-        }
-        */
+        }*/
 
         public void FlyBackAllCubes()
         {
@@ -129,8 +272,20 @@ namespace MainMenu
 
                 yield return null;
             }
+            
+            initialCubePositions = new List<Vector3>();
 
-            yield return _waitForSeconds;
+            // yield return _waitForSeconds;
+            yield return new WaitForSeconds(0.6f);
+            for (int i = 0; i < _columns; i++)
+            {
+                for (int j = 0; j < _rows; j++)
+                {
+                    Vector3 relativePosition = _brickGrid[i, j].transform.position - _container.transform.position;
+                    initialCubePositions.Add(relativePosition);
+                }
+            }
+
             _isFlyOver = true;
         }
 
@@ -139,7 +294,6 @@ namespace MainMenu
             while (cube.transform.position != target)
             {
                 cube.GetComponent<MeshRenderer>().enabled = true;
-                Debug.Log(cube.GetComponent<MeshRenderer>());
                 cube.transform.position = Vector3.MoveTowards(cube.transform.position, target, speed * Time.deltaTime);
                 yield return null;
             }
