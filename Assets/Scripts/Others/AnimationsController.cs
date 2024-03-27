@@ -10,6 +10,7 @@ namespace Others
         private const string Victory = "Victory";
         private const string BrickRingOpen = "BrickRingOpen";
         private const string BrickRingClose = "BrickRingClose";
+        private const string WaveMotion = "WaveMotion";
         
         public void PlayRotate()
         {
@@ -23,12 +24,17 @@ namespace Others
 
         public void RingOpen()
         {
-            _animator.Play("BrickRingOpen");
+            _animator.Play(BrickRingOpen);
         }
 
         public void RingClose()
         {
-            _animator.Play("BrickRingClose");
+            _animator.Play(BrickRingClose);
+        }
+        
+        public void PlayWave()
+        {
+            _animator.Play(WaveMotion);
         }
     }
 }

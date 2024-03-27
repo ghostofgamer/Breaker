@@ -29,6 +29,9 @@ namespace CameraFiles
         [SerializeField] private float smoothTime;
         [SerializeField] private float mouseSmoothing;
 
+        
+        public float dragSensitivity = 3f;
+        
         private void Start()
         {
             StartCoroutine(PlayAnimations());
@@ -81,15 +84,22 @@ namespace CameraFiles
                 Vector3 currentVelocity = Vector3.zero;
                 transform.position = Vector3.SmoothDamp(transform.position, _newCameraPos, ref currentVelocity, smoothTime);*/
                 
-                
                 Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
+                Vector3 cameraMovement = new Vector3(-mouseDelta.x, 0, -mouseDelta.y) * dragSensitivity;
+                transform.position = Vector3.Lerp(transform.position, _cameraStartPos + cameraMovement, _speed * Time.deltaTime);
+                _newCameraPos = _cameraStartPos + cameraMovement;
+                _newCameraPos.x = Mathf.Clamp(_newCameraPos.x, _minX, _maxX);
+                _newCameraPos.z = Mathf.Clamp(_newCameraPos.z, _minZ, _maxZ);
+                
+                
+                /*Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
                 Vector3 cameraDelta = new Vector3(mouseDelta.x, 0, mouseDelta.y) * _sensitivity;
                 _newCameraPos = _cameraStartPos - cameraDelta;
                 _newCameraPos.x = Mathf.Clamp(_newCameraPos.x, _minX, _maxX);
                 _newCameraPos.z = Mathf.Clamp(_newCameraPos.z, _minZ, _maxZ);
                 _mouseStartPos = Vector3.Lerp(_mouseStartPos, Input.mousePosition, mouseSmoothing);
                 Vector3 currentVelocity = Vector3.zero;
-                transform.position = Vector3.SmoothDamp(transform.position, _newCameraPos, ref currentVelocity, smoothTime);
+                transform.position = Vector3.SmoothDamp(transform.position, _newCameraPos, ref currentVelocity, smoothTime);*/
             }
         }
 

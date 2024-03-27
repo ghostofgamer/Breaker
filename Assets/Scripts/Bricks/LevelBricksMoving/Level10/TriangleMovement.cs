@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level10
 {
-    public class TriangleMovement : MonoBehaviour
+    public class TriangleMovement : MotionController
     {
         [SerializeField] private float _movementSpeed;
         [SerializeField] private PlatformaMover _platformaMover;
@@ -13,13 +13,16 @@ namespace Bricks.LevelBricksMoving.Level10
 
         private void Update()
         {
-            Vector3 position = transform.position;
-            float targetX = position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
-            targetX = Mathf.Clamp(targetX, _minX, _maxX);
+            if (IsWork)
+            {
+                Vector3 position = transform.position;
+                float targetX = position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
+                targetX = Mathf.Clamp(targetX, _minX, _maxX);
 
-            position = Vector3.MoveTowards(position,
-                new Vector3(targetX, position.y, position.z), _moveStep * Time.deltaTime);
-            transform.position = position;
+                position = Vector3.MoveTowards(position,
+                    new Vector3(targetX, position.y, position.z), _moveStep * Time.deltaTime);
+                transform.position = position;
+            }
         }
     }
 }

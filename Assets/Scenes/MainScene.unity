@@ -157,8 +157,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &4311456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -193,8 +197,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &5411562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -613,8 +621,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &16084973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -649,8 +661,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &18715991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -685,8 +701,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &20520356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -721,8 +741,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &21552731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -821,8 +845,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &26012142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -985,8 +1013,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &30704238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,8 +1160,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &35129411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1228,8 +1264,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &38449949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -1259,8 +1299,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &38449953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -1364,8 +1408,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &41445991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1592,8 +1640,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &48209164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8359899887229925169, guid: f2b972d32738dd240b5e5b801a6a4bd6, type: 3}
@@ -1655,8 +1707,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &50509123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1819,8 +1875,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &53631409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1983,8 +2043,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &62038761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -2019,8 +2083,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &64731728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2119,8 +2187,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &68854221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -2155,8 +2227,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &70392702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2319,8 +2395,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &81556312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2729,8 +2809,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &102390910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2829,8 +2913,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &104001199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -2865,8 +2953,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &104671663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3029,8 +3121,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &105678332 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -3065,8 +3161,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &108620172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -3101,8 +3201,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &111557004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3265,8 +3369,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &116850066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -3296,8 +3404,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &116850070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -3337,8 +3449,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &122637039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -3373,8 +3489,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &123222442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3601,8 +3721,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &132243142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -3637,8 +3761,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &140299772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -3673,8 +3801,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &140820112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -3709,8 +3841,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &142474010 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -3745,8 +3881,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &144337049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3953,8 +4093,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &151458094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -3989,8 +4133,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &155186088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -4025,8 +4173,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &156135138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -4061,8 +4213,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &157398130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4205,8 +4361,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &162144879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4305,8 +4465,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &170701144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4533,8 +4697,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &176345486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4633,8 +4801,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &182159750 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -4669,8 +4841,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &183910123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4908,8 +5084,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &194429672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -4944,8 +5124,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &200805680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -4980,8 +5164,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &200883623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5208,8 +5396,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &209099164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -5244,8 +5436,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &210317034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5344,8 +5540,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &216099717 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -5380,8 +5580,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &216403757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -5416,8 +5620,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &216875335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -5452,8 +5660,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &220662234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -5488,8 +5700,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &221547300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5588,8 +5804,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &223757104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5816,8 +6036,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &226902415 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -5852,8 +6076,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &227014448 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -5888,8 +6116,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &230820097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -5924,8 +6156,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &231368546 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -5960,8 +6196,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &233297563
 GameObject:
   m_ObjectHideFlags: 0
@@ -5987,28 +6227,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233297563}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aae1dcbbb9ab0846b40400de29aa854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cube: {fileID: -2264734165049399554, guid: 5cba36a304bfeb848a26a6e3a288e705, type: 3}
-  _waveSpeed: 0.6
-  _waveHeight: 0.006
+  _waveSpeed: 1
+  _waveHeight: 1.6
   _cubeSpacing: 1.965
   _startPosition: {x: 55, y: 25, z: 45}
   _flyBackKey: 32
   _minFlySpeed: 16
   _maxFlySpeed: 60
   _columns: 65
-  _rows: 30
+  _rows: 65
   _container: {fileID: 1141089146}
   _materials:
   - {fileID: 2100000, guid: f7cf24917a6c39f44b621b298f718812, type: 2}
   - {fileID: 2100000, guid: 6860507c480b2bb47adfe87633457f24, type: 2}
   - {fileID: 2100000, guid: 5d7cdbe4456d5d24aa16e44ccdb3288c, type: 2}
-  waveCount: 10
-  _waitBetweenWaves: 0.001
+  _animationsController: {fileID: 1141089148}
+  waveCount: 6
+  _waitBetweenWaves: 0.5
+  waveTimer: 0
+  waveAmplitude: 6
+  _amplitudeDuration: 10
 --- !u!4 &233297565
 Transform:
   m_ObjectHideFlags: 0
@@ -6031,7 +6275,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233297563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32c8e2f28307058409d78d178ed14d23, type: 3}
   m_Name: 
@@ -6078,8 +6322,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &239887431 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -6114,8 +6362,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &241283686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6214,8 +6466,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &245564568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -6250,8 +6506,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &246575668 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -6286,8 +6546,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &247926746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8833715587824378668, guid: df9c6d63480d47343ac00941dbc335ee, type: 3}
@@ -6530,8 +6794,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &253940239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6630,8 +6898,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &255498512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -6666,8 +6938,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &255570772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -6702,8 +6978,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &262293513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6866,8 +7146,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &271836497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -6902,8 +7186,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &273882600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -6938,8 +7226,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &275489814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7097,8 +7389,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &277812357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -7138,8 +7434,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &279985014 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4065153992573143666, guid: 6dbe886d15579cd499037b24f04b19b7, type: 3}
@@ -7347,8 +7647,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &287246848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -7383,8 +7687,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &291201802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -7419,8 +7727,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &292997165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -7455,8 +7767,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &293673840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -7491,8 +7807,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &296908521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7655,8 +7975,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &302543598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7819,8 +8143,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &310238592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8063,8 +8391,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &319593065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8291,8 +8623,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &328413123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -8327,8 +8663,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &330030462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8427,8 +8767,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &334372440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8671,8 +9015,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &340938162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -8707,8 +9055,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &343281131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8807,8 +9159,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &345853286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -8843,8 +9199,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &346003155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9007,8 +9367,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &349755604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -9043,8 +9407,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &350202711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9335,8 +9703,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &353217154 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -9371,8 +9743,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &354656223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9471,8 +9847,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &360427268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9571,8 +9951,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &363324061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9671,8 +10055,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &365123724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9814,8 +10202,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &370713894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -9850,8 +10242,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &372178321 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -9886,8 +10282,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &373411588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10149,8 +10549,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &382663739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10377,8 +10781,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &392748408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10557,8 +10965,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &403974151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -10593,8 +11005,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &404719923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -10629,8 +11045,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &406077960
 GameObject:
   m_ObjectHideFlags: 0
@@ -10918,8 +11338,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &422305491
 GameObject:
   m_ObjectHideFlags: 0
@@ -10997,8 +11421,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &424554709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -11033,8 +11461,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &425066472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -11064,8 +11496,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &425066476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -11361,8 +11797,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &452110508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -11397,8 +11837,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &455042355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -11433,8 +11877,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &456057207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11597,8 +12045,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &463423870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11697,8 +12149,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &470426277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -11733,8 +12189,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &471978888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11833,8 +12293,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &472696217 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -11869,8 +12333,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &473144556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -11905,8 +12373,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &475753861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -11941,8 +12413,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &478616100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12277,8 +12753,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &490055473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12377,8 +12857,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &493231240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12477,8 +12961,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &495036073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -12513,8 +13001,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &495190704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12677,8 +13169,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &500122713 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -12713,8 +13209,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &501175666 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -12749,8 +13249,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &501282708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12849,8 +13353,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &506177627 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -12885,8 +13393,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &507456121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13049,8 +13561,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &513628083 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -13085,8 +13601,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &514311964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13678,8 +14198,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &528084906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13778,8 +14302,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &530964934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -13814,8 +14342,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &533418615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13978,8 +14510,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &539808966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14142,8 +14678,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &545376909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14242,8 +14782,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &547159327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -14278,8 +14822,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &549452804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -14314,8 +14862,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &550852590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -14350,8 +14902,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &551030034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -14386,8 +14942,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &551275329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14785,8 +15345,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &561640656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14885,8 +15449,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &563959519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14985,8 +15553,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &565036702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15085,8 +15657,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &567885307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15185,8 +15761,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &572011001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -15221,8 +15801,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &572587610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15321,8 +15905,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &574211040 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -15357,8 +15945,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &574415530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15703,8 +16295,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &581855603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15867,8 +16463,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &586799123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15967,8 +16567,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &587418541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -16003,8 +16607,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &589901402
 GameObject:
   m_ObjectHideFlags: 0
@@ -16252,8 +16860,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &600450075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16357,8 +16969,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &603135234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16521,8 +17137,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &622331198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -16557,8 +17177,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &623851424 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -16593,8 +17217,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &624110239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16693,8 +17321,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &627272405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16901,8 +17533,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &637111403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17065,8 +17701,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &638799900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17165,8 +17805,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &641650991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17265,8 +17909,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!114 &645484673 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8805333270224860394, guid: e85f736c4101ec044b39c94bb0cf86a4, type: 3}
@@ -17312,8 +17960,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &648246586 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -17348,8 +18000,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &653340096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17448,8 +18104,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &657427537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17612,8 +18272,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &660241053
 GameObject:
   m_ObjectHideFlags: 0
@@ -17697,8 +18361,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &662557828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17797,8 +18465,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &666943313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -17833,8 +18505,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &667991079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17997,8 +18673,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &676323386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -18033,8 +18713,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &677822700
 GameObject:
   m_ObjectHideFlags: 0
@@ -18113,8 +18797,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &684386359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18256,8 +18944,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &684874386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18356,8 +19048,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &687340003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -18392,8 +19088,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &688578577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18779,8 +19479,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &701345305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18879,8 +19583,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &706169953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -18915,8 +19623,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &706989104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -18951,8 +19663,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &710559486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19051,8 +19767,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &715537561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19295,8 +20015,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &720956093 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -19331,8 +20055,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &722606813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19495,8 +20223,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &726782358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19595,8 +20327,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &729930710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -19631,8 +20367,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &731541891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -19667,8 +20407,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &731751430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19767,8 +20511,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &733793325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -19803,8 +20551,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &737324963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -19839,8 +20591,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &737371088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -19875,8 +20631,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &737936198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -19911,8 +20671,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &738144378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20075,8 +20839,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &749393567
 GameObject:
   m_ObjectHideFlags: 0
@@ -20316,8 +21084,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &749863652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -20352,8 +21124,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &751082517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20452,8 +21228,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &754279145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -20488,8 +21268,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &754336594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20588,8 +21372,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &760205372 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -20624,8 +21412,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &761423563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20788,8 +21580,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &763549770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -20824,8 +21620,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &764607123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -20860,8 +21660,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &765548530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21024,8 +21828,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &768744756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21124,8 +21932,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &775007883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21224,8 +22036,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &783584918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -21260,8 +22076,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &783783894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -21296,8 +22116,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &783828979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -21332,8 +22156,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &784168091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -21368,8 +22196,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &784487182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -21404,8 +22236,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &784799405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -21440,8 +22276,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &785029723
 GameObject:
   m_ObjectHideFlags: 0
@@ -21569,8 +22409,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &791768557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21733,8 +22577,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &802307340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -21769,8 +22617,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &802901097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21869,8 +22721,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &806160895 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -21905,8 +22761,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &807695725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -21941,8 +22801,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &808454402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22041,8 +22905,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &811751623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22141,8 +23009,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &813078822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22241,8 +23113,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &817759935 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -22277,8 +23153,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &819497775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22441,8 +23321,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &825236099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -22477,8 +23361,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &827488648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -22513,8 +23401,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &828215056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22613,8 +23505,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &831630169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22881,8 +23777,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &844949800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23237,8 +24137,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &850862638
 GameObject:
   m_ObjectHideFlags: 0
@@ -23384,8 +24288,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &857305277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -23420,8 +24328,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &858905839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23520,8 +24432,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &863131069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23776,8 +24692,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &867826560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23876,8 +24796,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &876406743 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -23912,8 +24836,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &878093827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -23943,8 +24871,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &878093831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -23984,8 +24916,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &880156167 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -24020,8 +24956,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &880966513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -24056,8 +24996,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &882068596 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -24092,8 +25036,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &886390319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24221,8 +25169,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &889352267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -24257,8 +25209,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &899796963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24357,8 +25313,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &901620284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -24393,8 +25353,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &901771620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24557,8 +25521,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &903889017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24657,8 +25625,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &911653490 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -24693,8 +25665,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &912657235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -24729,8 +25705,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &914115247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -24765,8 +25745,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &914581018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24865,8 +25849,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &915605156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -24901,8 +25889,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &918706788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25065,8 +26057,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &923188455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25165,8 +26161,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &927938729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25265,8 +26265,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &929635419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3259043322771230281, guid: 6dbe886d15579cd499037b24f04b19b7, type: 3}
@@ -25599,8 +26603,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &954334198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25699,8 +26707,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &955306339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -25735,8 +26747,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &961306830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25835,8 +26851,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &963024215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26063,8 +27083,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &979057734
 GameObject:
   m_ObjectHideFlags: 0
@@ -26143,8 +27167,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &987177491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -26179,8 +27207,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &991225183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26343,8 +27375,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &999833613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26507,8 +27543,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1006397133 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -26543,8 +27583,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1007356429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -26579,8 +27623,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1009241172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -26615,8 +27663,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1011088259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26715,8 +27767,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1014372258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -26751,8 +27807,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1015824034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26915,8 +27975,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1018496356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27143,8 +28207,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1026964532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -27179,8 +28247,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1027151989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -27215,8 +28287,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1031217779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27315,8 +28391,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1036731127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27415,8 +28495,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1039122416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -27446,8 +28530,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &1039122420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -27487,8 +28575,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1050429837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27779,8 +28871,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1056133873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -27815,8 +28911,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1058378222 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -27851,8 +28951,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1062780309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27951,8 +29055,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1063211068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -27987,8 +29095,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1065396188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28236,8 +29348,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1075383303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7113838988524796797, guid: e85f736c4101ec044b39c94bb0cf86a4, type: 3}
@@ -28288,8 +29404,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1076734493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28452,8 +29572,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1084140809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 801351689072631385, guid: df9c6d63480d47343ac00941dbc335ee, type: 3}
@@ -28568,8 +29692,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1093627984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -28604,8 +29732,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1093946331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -28640,8 +29772,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1094751541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28740,8 +29876,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1097490418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29032,8 +30172,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1106552310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29175,8 +30319,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1110671841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -29211,8 +30359,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1112867544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29675,8 +30827,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1132698989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29775,8 +30931,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1137619464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -29811,8 +30971,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1140114451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -29847,8 +31011,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1141089145
 GameObject:
   m_ObjectHideFlags: 0
@@ -29858,6 +31026,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1141089146}
+  - component: {fileID: 1141089147}
+  - component: {fileID: 1141089148}
   m_Layer: 0
   m_Name: Container
   m_TagString: Untagged
@@ -29880,6 +31050,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1141089147
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141089145}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd936aa6778e2ce43b4a1696fb21ca0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1141089148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141089145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4747d9285ba3e4798f0015e8ed4643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1141089147}
 --- !u!1001 &1145606238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30297,8 +31501,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1165751681 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -30333,8 +31541,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1168591804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30561,8 +31773,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1170712765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -30597,8 +31813,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1171664282 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -30633,8 +31853,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1174016457 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -30669,8 +31893,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1175603181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30769,8 +31997,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1182808144 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -30805,8 +32037,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1183248991
 GameObject:
   m_ObjectHideFlags: 0
@@ -31012,8 +32248,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1190995076
 GameObject:
   m_ObjectHideFlags: 0
@@ -31156,8 +32396,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1196647018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31256,8 +32500,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1203777157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -31292,8 +32540,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1204465163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31500,8 +32752,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1214469216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31600,8 +32856,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1220238378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31700,8 +32960,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1229679157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31864,8 +33128,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1243393611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32007,8 +33275,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1246323497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -32043,8 +33315,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1248058687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32143,8 +33419,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1256623671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32371,8 +33651,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1267071746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32471,8 +33755,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1269394399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32635,8 +33923,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1276530481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32735,8 +34027,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1280770694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32835,8 +34131,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1285086503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32999,8 +34299,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1288659349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -33035,8 +34339,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1288959879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33135,8 +34443,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1291295916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33235,8 +34547,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1293032035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -33271,8 +34587,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1294223630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33499,8 +34819,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1303462974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -33535,8 +34859,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1305587124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -33571,8 +34899,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1308088970
 GameObject:
   m_ObjectHideFlags: 0
@@ -33778,8 +35110,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1316692740 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -33814,8 +35150,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1318055176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -33850,8 +35190,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1319756696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -33886,8 +35230,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1324780845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34050,8 +35398,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1327427427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34150,8 +35502,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1329924451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34314,8 +35670,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1339355276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -34350,8 +35710,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1340049247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34509,8 +35873,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &1341632174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -34550,8 +35918,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1345830964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34650,8 +36022,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1348098265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34814,8 +36190,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1366510565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35170,8 +36550,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1376641729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -35206,8 +36590,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1380698063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -35242,8 +36630,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1384097322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35406,8 +36798,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1389672958
 GameObject:
   m_ObjectHideFlags: 0
@@ -35566,8 +36962,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1399608217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35888,8 +37288,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1409469398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35988,8 +37392,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1411012866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -36024,8 +37432,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1411269738 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -36060,8 +37472,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1413808842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36160,8 +37576,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1415194912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36260,8 +37680,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1416375817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36360,8 +37784,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1420253851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -36396,8 +37824,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1422971870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -36432,8 +37864,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1426920657 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7169930978180284596, guid: df9c6d63480d47343ac00941dbc335ee, type: 3}
@@ -36484,8 +37920,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1428709736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -36520,8 +37960,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1430262571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36620,8 +38064,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1437562738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36848,8 +38296,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1439989483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -36884,8 +38336,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1441245549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36984,8 +38440,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1443888532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37084,8 +38544,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1447284174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37184,8 +38648,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1452260311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37284,8 +38752,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1454792961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37704,8 +39176,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1460385238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -37740,8 +39216,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1462411962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37840,8 +39320,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1462812953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38068,8 +39552,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1473419396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38168,8 +39656,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1475921513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -38204,8 +39696,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1479827325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -38240,8 +39736,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1481257157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38404,8 +39904,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1486451372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38504,8 +40008,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1488144018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -38540,8 +40048,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1488484463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38704,8 +40216,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1492375794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -38740,8 +40256,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1493522109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -38776,8 +40296,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1496065967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38940,8 +40464,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1499353584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39296,8 +40824,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1510900599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -39332,8 +40864,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1512559311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8489475322163209942, guid: 6dbe886d15579cd499037b24f04b19b7, type: 3}
@@ -39501,8 +41037,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1523544980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -39537,8 +41077,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1523993990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -39573,8 +41117,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1529214736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -39609,8 +41157,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1531486696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39709,8 +41261,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1532032781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -39745,8 +41301,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1532604988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -39781,8 +41341,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1534340534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39881,8 +41445,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1538662994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -39917,8 +41485,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1539401223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40017,8 +41589,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1542586048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -40053,8 +41629,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1542709756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40281,8 +41861,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1548150085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7049017472775459304, guid: e85f736c4101ec044b39c94bb0cf86a4, type: 3}
@@ -40440,8 +42024,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1555265105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40604,8 +42192,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1564332506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -40640,8 +42232,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1568116558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -40676,8 +42272,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1570249147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40776,8 +42376,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1572181035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -40812,8 +42416,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1572846180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41296,8 +42904,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1586640668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41460,8 +43072,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1590323310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41816,8 +43432,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1606753140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -41852,8 +43472,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1606932595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41952,8 +43576,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1609700259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -41988,8 +43616,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1609740380 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -42024,8 +43656,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1613518845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 839135890450127184, guid: e85f736c4101ec044b39c94bb0cf86a4, type: 3}
@@ -42076,8 +43712,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1618255199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -42112,8 +43752,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1618293541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -42148,8 +43792,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1620540209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -42184,8 +43832,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1620663977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42583,8 +44235,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1635083776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -42619,8 +44275,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1635230298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42783,8 +44443,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1641158560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -42819,8 +44483,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!114 &1643718193 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2125698393975822685, guid: 6dbe886d15579cd499037b24f04b19b7, type: 3}
@@ -43037,8 +44705,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1656801056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -43073,8 +44745,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1658718826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43493,8 +45169,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1674241003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43593,8 +45273,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1684997856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43821,8 +45505,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1691419114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43921,8 +45609,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1701798699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44021,8 +45713,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1704875290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -44057,8 +45753,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1706695350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44690,8 +46390,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1720031447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -44726,8 +46430,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1725953501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -44762,8 +46470,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1726190400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -44798,8 +46510,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1726951072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44962,8 +46678,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1736062957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45126,8 +46846,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1741741605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -45162,8 +46886,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1742679593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45262,8 +46990,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1748718794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45362,8 +47094,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1753209009 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -45398,8 +47134,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1754059398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -45434,8 +47174,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1754446384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45534,8 +47278,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1757225778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45698,8 +47446,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1771334252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -45734,8 +47486,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1776917698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45834,8 +47590,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1779158581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45934,8 +47694,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1779401323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -45970,8 +47734,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1780061889 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -46006,8 +47774,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1780138291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -46042,8 +47814,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1780984097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -46078,8 +47854,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1781069004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46178,8 +47958,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1784514032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46342,8 +48126,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1791677581 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -46378,8 +48166,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1793856203 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -46414,8 +48206,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1795039916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -46450,8 +48246,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1800921292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46550,8 +48350,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1805624411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47034,8 +48838,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1814535261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47262,8 +49070,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1821972834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47426,8 +49238,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1826673906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -47462,8 +49278,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1831695624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -47498,8 +49318,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1832241565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -47534,8 +49358,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1834346076 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -47570,8 +49398,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1838373055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -47606,8 +49438,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1838981446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6925408558926068835, guid: e85f736c4101ec044b39c94bb0cf86a4, type: 3}
@@ -47893,8 +49729,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1847118640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48057,8 +49897,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1849039719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48221,8 +50065,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1850368911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48385,8 +50233,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1853918193
 GameObject:
   m_ObjectHideFlags: 0
@@ -48528,8 +50380,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1856547373 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -48564,8 +50420,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1857028978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -48600,8 +50460,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1857715417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -48636,8 +50500,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1857953256 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8548349791465575467, guid: e85f736c4101ec044b39c94bb0cf86a4, type: 3}
@@ -48849,8 +50717,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1866404285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49121,8 +50993,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1872680803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49264,8 +51140,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1880854880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49364,8 +51244,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &1882309272 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 296078184769628171, guid: 5cba36a304bfeb848a26a6e3a288e705, type: 3}
@@ -49405,8 +51289,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1883463666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49505,8 +51393,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1885731561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49797,8 +51689,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1898691841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49961,8 +51857,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1918354265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -49997,8 +51897,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1918610321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50097,8 +52001,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1920816128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50197,8 +52105,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1922938485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50361,8 +52273,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1927851238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -50397,8 +52313,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1928828436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -50433,8 +52353,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1930483576 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -50469,8 +52393,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1931090156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50569,8 +52497,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1931809874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50733,8 +52665,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1941688164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50828,8 +52764,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!4 &1946591050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -50869,8 +52809,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1949297101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -50905,8 +52849,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1949312895 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -50941,8 +52889,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1951603426 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -50977,8 +52929,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1953293916
 GameObject:
   m_ObjectHideFlags: 0
@@ -51249,8 +53205,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1972327464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51349,8 +53309,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1977371988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -51385,8 +53349,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1980781657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51485,8 +53453,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &1983257640 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -51521,8 +53493,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1983968340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51621,8 +53597,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1986103834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51721,8 +53701,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1988778525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51949,8 +53933,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1996314851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52049,8 +54037,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &1998889316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52149,8 +54141,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2003129690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52505,8 +54501,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2014011797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -52541,8 +54541,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2014480252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -52577,8 +54581,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2015355597
 GameObject:
   m_ObjectHideFlags: 0
@@ -52657,8 +54665,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2022917450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52885,8 +54897,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2025359673 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -52921,8 +54937,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2025791912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -52957,8 +54977,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2030244359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53165,8 +55189,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2033974426
 GameObject:
   m_ObjectHideFlags: 0
@@ -53298,8 +55326,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2037378595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -53334,8 +55366,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2038090354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53434,8 +55470,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2040959684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53786,8 +55826,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2062608387 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -53822,8 +55866,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2063285935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53986,8 +56034,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2069300035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -54022,8 +56074,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2073674711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54122,8 +56178,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2077817350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54670,8 +56730,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2094960475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54834,8 +56898,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2097896921 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -54870,8 +56938,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2099948506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -54906,8 +56978,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!114 &2100337411 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7739505131371494346, guid: 6dbe886d15579cd499037b24f04b19b7, type: 3}
@@ -54953,8 +57029,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2100827303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55117,8 +57197,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2103373500 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -55153,8 +57237,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2104676626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55381,8 +57469,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2112348375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55569,8 +57661,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2130445887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -55605,8 +57701,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2135711845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b187f51b0988edb408280133993321b2, type: 3}
@@ -55641,8 +57741,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1 &2138539836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}
@@ -55677,8 +57781,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2139597105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55777,8 +57885,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2141906496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55877,8 +57989,12 @@ MonoBehaviour:
   _rows: 0
   _container: {fileID: 0}
   _materials: []
+  _animationsController: {fileID: 0}
   waveCount: 0
   _waitBetweenWaves: 0.1
+  waveTimer: 0
+  waveAmplitude: 0
+  _amplitudeDuration: 3
 --- !u!1001 &2144467784
 PrefabInstance:
   m_ObjectHideFlags: 0

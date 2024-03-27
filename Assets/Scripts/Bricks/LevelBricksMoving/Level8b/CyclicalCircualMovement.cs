@@ -1,34 +1,21 @@
 using System.Collections;
 using PlayerFiles.PlatformaContent;
-using Statistics;
 using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level8b
 {
-    public class CyclicalCircualMovement : MonoBehaviour
+    public class CyclicalCircualMovement : MotionController
     {
         [SerializeField] private float _movementSpeed;
         [SerializeField] private float _rotateSpeed;
         [SerializeField] private float _movementDistance;
         [SerializeField] private PlatformaMover _platformaMover;
-        [SerializeField] private BrickCounter _brickCounter;
 
         private float _startZPosition;
-        private bool _isWork = true;
         private Vector3 _targetPosition;
         private float _directionRotate;
         private bool _movingToStartPosition;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.1f);
-
-        private void OnEnable()
-        {
-            _brickCounter.AllBrickDestroy += Stop;
-        }
-
-        private void OnDisable()
-        {
-            _brickCounter.AllBrickDestroy -= Stop;
-        }
 
         private void Start()
         {
@@ -39,7 +26,7 @@ namespace Bricks.LevelBricksMoving.Level8b
 
         private IEnumerator MoveCyclically()
         {
-            while (_isWork)
+            while (IsWork)
             {
                 var position = transform.position;
                 Vector3 targetPosition = _movingToStartPosition
@@ -60,17 +47,6 @@ namespace Bricks.LevelBricksMoving.Level8b
 
                 yield return null;
             }
-        }
-
-        /*private void SetTargetPosition(float zPosition)
-    {
-        _targetPosition = new Vector3(transform.position.x, transform.position.y, zPosition);
-        Debug.Log(_targetPosition);
-    }*/
-
-        private void Stop()
-        {
-            _isWork = false;
         }
     }
 }

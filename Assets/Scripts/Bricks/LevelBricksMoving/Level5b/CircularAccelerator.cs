@@ -1,29 +1,16 @@
 using System.Collections;
-using Statistics;
 using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level5b
 {
-    public class CircularAccelerator : MonoBehaviour
+    public class CircularAccelerator : MotionController
     {
         [SerializeField] private GameObject[] _objects;
         [SerializeField] private float _rotationTime = 6f;
         [SerializeField] private float _delayBetweenObjects = 1.65f;
-        [SerializeField] private BrickCounter _brickCounter;
-
-        private bool _isWork = true;
+        
         private WaitForSeconds _delay;
         private WaitForSeconds _delayRotaion;
-
-        private void OnEnable()
-        {
-            _brickCounter.AllBrickDestroy += Stop;
-        }
-
-        private void OnDisable()
-        {
-            _brickCounter.AllBrickDestroy -= Stop;
-        }
 
         private void Start()
         {
@@ -34,7 +21,7 @@ namespace Bricks.LevelBricksMoving.Level5b
 
         private IEnumerator RotateObjects()
         {
-            while (_isWork)
+            while (IsWork)
             {
                 yield return _delay;
 
@@ -55,11 +42,6 @@ namespace Bricks.LevelBricksMoving.Level5b
                     yield return _delay;
                 }
             }
-        }
-
-        private void Stop()
-        {
-            _isWork = false;
         }
     }
 }

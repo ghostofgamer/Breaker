@@ -6,7 +6,7 @@ using Vector3 = UnityEngine.Vector3;
 
 namespace Bricks.LevelBricksMoving
 {
-    public class Gyration : MonoBehaviour
+    public class Gyration : MotionController
     {
         [SerializeField] private Transform _pointA;
         [SerializeField] private Transform _pointB;
@@ -32,8 +32,9 @@ namespace Bricks.LevelBricksMoving
 
         private IEnumerator MoveCubes()
         {
-            while (true)
+            while (IsWork)
             {
+                Debug.Log("фффвфывфвфвфвфв");
                 if (_isMovingToTarget)
                     yield return Slerping(_pointA.position, _pointB.position, _rotationStart, _endRotation);
 

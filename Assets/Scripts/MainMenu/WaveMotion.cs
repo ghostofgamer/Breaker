@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Bricks;
 using ObjectPoolFiles;
+using Others;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -21,6 +22,7 @@ namespace MainMenu
         [SerializeField] private int _rows;
         [SerializeField] private Transform _container;
         [SerializeField] private Material[] _materials;
+        [SerializeField] private AnimationsController _animationsController;
 
         private Brick[,] _brickGrid;
         private List<Brick> _brickList;
@@ -186,8 +188,8 @@ namespace MainMenu
 
                 // Вычисляем циклическое значение амплитуды волны
                 float amplitudeT = Mathf.PingPong(waveTimer / _amplitudeDuration, 1);
-                float waveAmplitude = Mathf.Lerp(0.1f, 6, amplitudeT);
-Debug.Log(waveAmplitude);
+                float waveAmplitude = Mathf.Lerp(0.1f, 5, amplitudeT);
+
                 for (int i = 0; i < _columns; i++)
                 {
                     for (int j = 0; j < _rows; j++)
@@ -277,6 +279,7 @@ Debug.Log(waveAmplitude);
 
             // yield return _waitForSeconds;
             yield return new WaitForSeconds(0.6f);
+            
             for (int i = 0; i < _columns; i++)
             {
                 for (int j = 0; j < _rows; j++)
@@ -285,7 +288,7 @@ Debug.Log(waveAmplitude);
                     initialCubePositions.Add(relativePosition);
                 }
             }
-
+            _animationsController.PlayWave();
             _isFlyOver = true;
         }
 

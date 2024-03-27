@@ -7,6 +7,8 @@ namespace Bricks.LevelBricksMoving
     {
         [SerializeField] private BrickCounter _brickCounter;
 
+        protected bool IsWork = true;
+        
         private void OnEnable()
         {
             _brickCounter.AllBrickDestroy += ChangeMotion;
@@ -17,8 +19,10 @@ namespace Bricks.LevelBricksMoving
             _brickCounter.AllBrickDestroy -= ChangeMotion;
         }
 
-        protected void ChangeMotion()
+        private void ChangeMotion()
         {
+            Debug.Log("Work");
+            IsWork = false;
         }
     }
 }
