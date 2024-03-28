@@ -86,10 +86,16 @@ namespace CameraFiles
                 
                 Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
                 Vector3 cameraMovement = new Vector3(-mouseDelta.x, 0, -mouseDelta.y) * dragSensitivity;
-                transform.position = Vector3.Lerp(transform.position, _cameraStartPos + cameraMovement, _speed * Time.deltaTime);
-                _newCameraPos = _cameraStartPos + cameraMovement;
-                _newCameraPos.x = Mathf.Clamp(_newCameraPos.x, _minX, _maxX);
-                _newCameraPos.z = Mathf.Clamp(_newCameraPos.z, _minZ, _maxZ);
+                Vector3 targetPosition = _cameraStartPos + cameraMovement;
+                targetPosition.x = Mathf.Clamp(targetPosition.x, _minX, _maxX);
+                // targetPosition.y = Mathf.Clamp(targetPosition.y, minBounds.y, maxBounds.y);
+                targetPosition.z = Mathf.Clamp(targetPosition.z, _minZ, _maxZ);
+                    
+                transform.position = Vector3.Lerp(transform.position, targetPosition, _speed * Time.deltaTime);
+                // _newCameraPos = _cameraStartPos + cameraMovement;
+                _newCameraPos = targetPosition;
+                /*_newCameraPos.x = Mathf.Clamp(_newCameraPos.x, _minX, _maxX);
+                _newCameraPos.z = Mathf.Clamp(_newCameraPos.z, _minZ, _maxZ);*/
                 
                 
                 /*Vector3 mouseDelta = Input.mousePosition - _mouseStartPos;
