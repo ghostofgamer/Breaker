@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level1
 {
-    public class BrickMover : MonoBehaviour
+    public class BrickMover : BrickTriggerController
     {
         [SerializeField] private float _moveDistance;
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _duration;
-        [SerializeField] private Brick[] _bricks;
+        [SerializeField] private Brick[] _brickObjects;
 
         private Vector3 _initialPosition;
         private Vector3 _targetPosition;
@@ -17,32 +17,20 @@ namespace Bricks.LevelBricksMoving.Level1
         private WaitForSeconds _waitForSeconds;
         private Coroutine _coroutine;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             _initialPosition = transform.position;
             _waitForSeconds = new WaitForSeconds(_duration);
             _targetPosition = new Vector3(_initialPosition.x + _moveDistance, _initialPosition.y, _initialPosition.z);
-
-            foreach (var brick in _bricks)
-                brick.GetComponent<Rigidbody>().isKinematic = true;
         }
 
         private void Update()
         {
             if (!_isPaused)
                 BricksMove();
-
-            if (_bricks[0].gameObject.activeSelf == false)
-                Over();
         }
 
-        private void Over()
-        {
-            foreach (var brick in _bricks)
-                brick.GetComponent<Rigidbody>().isKinematic = false;
-
-            this.enabled = false;
-        }
 
         private void BricksMove()
         {
@@ -56,7 +44,7 @@ namespace Bricks.LevelBricksMoving.Level1
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, _moveSpeed * Time.deltaTime);
 
-            foreach (Brick brick in _bricks)
+            foreach (Brick brick in _brickObjects)
             {
                 brick.transform.position = new Vector3(transform.position.x, brick.transform.position.y,
                     brick.transform.position.z);

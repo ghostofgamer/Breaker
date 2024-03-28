@@ -25,27 +25,20 @@ namespace Bricks.LevelBricksMoving
         protected virtual void Start()
         {
             _rigidbodys = new List<Rigidbody>();
-            
+
             foreach (Brick brick in _bricks)
                 _rigidbodys.Add(brick.GetComponent<Rigidbody>());
-
-            foreach (var rigidb in _rigidbodys)
-            {
-             Debug.Log(rigidb.gameObject.name);   
-            }
         }
 
         protected virtual void SetValue()
         {
-            Debug.Log("111");
-            
             foreach (Rigidbody rigidbodyValue in _rigidbodys)
                 rigidbodyValue.isKinematic = false;
 
             enabled = false;
         }
 
-        protected void GiveImpulse(Vector3 direction,float minValue,float maxValue)
+        protected void GiveImpulse(Vector3 direction, float minValue, float maxValue)
         {
             foreach (var brick in _bricks)
             {
@@ -53,14 +46,6 @@ namespace Bricks.LevelBricksMoving
                 brick.GetComponent<Rigidbody>().AddForce(-direction.normalized * Random.Range(minValue, maxValue),
                     ForceMode.Impulse);
             }
-            
-            // enabled = false;
-            // gameObject.SetActive(false);
-            
-            
-            
-            /*foreach (Rigidbody rigidbodyValue in _rigidbodys)
-                rigidbodyValue.isKinematic = false;*/
         }
     }
 }

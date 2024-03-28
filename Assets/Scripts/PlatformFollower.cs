@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlatformFollower : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    public float sensitivity = 3.0f; // Чувствительность мыши
-    public float minRotationZ = -45.0f; // Минимальный угол поворота по оси Z
-    public float maxRotationZ = 45.0f; // Максимальный угол поворота по оси Z
-    public float _speedRotation; // Максимальный угол поворота по оси Z
+    [SerializeField] private float sensitivity = 3.0f; // Чувствительность мыши
+    [SerializeField] private float minRotationZ = -45.0f; // Минимальный угол поворота по оси Z
+    [SerializeField] private float maxRotationZ = 45.0f; // Максимальный угол поворота по оси Z
+    [SerializeField] private float _maxRotationY; // Максимальный угол поворота по оси Z
+    [SerializeField] private float _minRotationY; // Максимальный угол поворота по оси Z
+    [SerializeField] private float _speedRotation; // Максимальный угол поворота по оси Z
 
     private Vector3 rotation;
+    private Vector3 _position;
     private Vector3 targetRotation;
     private bool _isWork = false;
     private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
@@ -19,6 +22,7 @@ public class PlatformFollower : MonoBehaviour
     {
         rotation = transform.eulerAngles;
         targetRotation = rotation;
+        _position = transform.position;
         StartCoroutine(SetActive());
     }
 
@@ -30,12 +34,15 @@ public class PlatformFollower : MonoBehaviour
         if (Input.GetMouseButton(0) && _platformaMover.IsAlive && _platformaMover.DirectionX != 0)
         {
             float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-            targetRotation.z += mouseX;
+            // targetRotation.z += mouseX;
+            targetRotation.y += -mouseX;
+            _position.x += mouseX;
 
-            targetRotation.z = Mathf.Clamp(targetRotation.z, minRotationZ, maxRotationZ);
-            targetRotation.y = Mathf.Clamp(targetRotation.z, minRotationZ, maxRotationZ);
-
-
+            // targetRotation.z = Mathf.Clamp(targetRotation.z, 0, 0);
+            targetRotation.y = Mathf.Clamp( targetRotation.y, _minRotationY, _maxRotationY);
+            _position.x = Mathf.Clamp(  _position.x, _minRotationY, _maxRotationY);
+            
+            transform.position = Vector3.Lerp(transform.position, _position, Time.deltaTime * _speedRotation);
             rotation = Vector3.Lerp(rotation, targetRotation, Time.deltaTime * _speedRotation);
 
             transform.eulerAngles = rotation;

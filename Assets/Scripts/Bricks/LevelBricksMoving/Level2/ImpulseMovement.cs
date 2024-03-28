@@ -8,7 +8,7 @@ namespace Bricks.LevelBricksMoving.Level2
         [SerializeField] private float _moveDistanceForward;
         [SerializeField] private float _moveDistanceBack;
         [SerializeField] private float _duration;
-        [SerializeField] private Brick[] _bricks;
+        [SerializeField] private Brick[] _brickObjects;
 
         private Vector3 _initialPosition;
         private Vector3 _targetPosition;
@@ -32,42 +32,18 @@ namespace Bricks.LevelBricksMoving.Level2
             _targetPosition1 = new Vector3(_initialPosition.x, _initialPosition.y,
                 _initialPosition.z + _moveDistanceBack);
 
-            /*foreach (var brick in _bricks)
-                brick.GetComponent<Rigidbody>().isKinematic = true;*/
-
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
 
             _coroutine = StartCoroutine(MoveBetweenTargetsCoroutine());
         }
 
-
-        /*private void Start()
+        protected override void SetValue()
         {
-            _initialPosition = transform.position;
-            _waitForSeconds = new WaitForSeconds(_duration);
-            _targetPosition =
-                new Vector3(_initialPosition.x, _initialPosition.y, _initialPosition.z - _moveDistanceForward);
-            _targetPosition1 = new Vector3(_initialPosition.x, _initialPosition.y,
-                _initialPosition.z + _moveDistanceBack);
-
-            foreach (var brick in _bricks)
-                brick.GetComponent<Rigidbody>().isKinematic = true;
-
-
-            if (_coroutine != null)
-                StopCoroutine(_coroutine);
-
-            _coroutine = StartCoroutine(MoveBetweenTargetsCoroutine());
-        }*/
-
-        /*private void Update()
-        {
-            if (_bricks[0].gameObject.activeSelf)
-                return;
-
-            Over();
-        }*/
+            GiveImpulse(_direction, _minValue, _maxValue);
+            _isWork = false;
+            StopCoroutine(_coroutine);
+        }
 
         private IEnumerator MoveBetweenTargetsCoroutine()
         {
@@ -95,42 +71,21 @@ namespace Bricks.LevelBricksMoving.Level2
                 float t = (Time.time - startTime) / duration;
                 transform.position = Vector3.Lerp(startPosition, targetPosition, t);
                 _direction = startPosition - targetPosition;
-
-                foreach (Brick brick in _bricks)
-                {
-                    brick.transform.position = new Vector3(brick.transform.position.x, brick.transform.position.y,
-                        transform.position.z);
-                }
-
+                SetPosition();
                 yield return null;
             }
 
             transform.position = targetPosition;
+            SetPosition();
+        }
 
-            foreach (Brick brick in _bricks)
+        private void SetPosition()
+        {
+            foreach (Brick brick in _brickObjects)
             {
                 brick.transform.position = new Vector3(brick.transform.position.x, brick.transform.position.y,
                     transform.position.z);
             }
         }
-
-        protected override void SetValue()
-        {
-            GiveImpulse(_direction, _minValue, _maxValue);
-            _isWork = false;
-            StopCoroutine(_coroutine);
-        }
-
-        /*private void Over()
-        {
-            foreach (var brick in _bricks)
-            {
-                brick.GetComponent<Rigidbody>().isKinematic = false;
-                brick.GetComponent<Rigidbody>().AddForce(-_direction.normalized * Random.Range(_minValue, _maxValue),
-                    ForceMode.Impulse);
-            }
-
-            gameObject.SetActive(false);
-        }*/
     }
 }

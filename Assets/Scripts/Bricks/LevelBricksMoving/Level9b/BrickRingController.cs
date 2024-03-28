@@ -8,7 +8,7 @@ namespace Bricks.LevelBricksMoving.Level9b
     {
         [SerializeField] private AnimationsController _animationsController;
 
-        private WaitForSeconds _starWait = new WaitForSeconds(1.5f);
+        private WaitForSeconds _startWait = new WaitForSeconds(1.5f);
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
         
         private void Start()
@@ -18,7 +18,7 @@ namespace Bricks.LevelBricksMoving.Level9b
 
         private IEnumerator PlayAnimation()
         {
-            yield return _starWait;
+            yield return _startWait;
 
             while (IsWork)
             {

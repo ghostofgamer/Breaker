@@ -4,8 +4,6 @@ namespace Bricks.LevelBricksMoving.Level7
 {
     public class MovingStairs : BrickTriggerController
     {
-        /*[SerializeField] private Brick[] _bricks;
-        [SerializeField] private Brick[] _bricksTrigger;*/
         [SerializeField] private Transform _targetA;
         [SerializeField] private Transform _targetB;
         [SerializeField] private float _moveDuration = 1f;
@@ -13,36 +11,12 @@ namespace Bricks.LevelBricksMoving.Level7
         private Vector3 _startPosition;
         private bool _isMovingToTargetA = true;
         private float _moveTimer;
-
-        /*
-    private void OnEnable()
-    {
-        foreach (var brick in _bricksTrigger)
-        {
-            brick.Dead += ActivationPhysics;
-        }
-    }
-
-    private void OnDisable()
-    {
-        foreach (var brick in _bricksTrigger)
-        {
-            brick.Dead -= ActivationPhysics;
-        }
-    }*/
+        
         protected override void Start()
         {
             base.Start();
             _startPosition = transform.position;
         }
-
-        /*override Start
-        
-        private override void Start()
-        { 
-            base.Start();
-            _startPosition = transform.position;
-        }*/
 
         private void Update()
         {
@@ -60,14 +34,5 @@ namespace Bricks.LevelBricksMoving.Level7
                 _startPosition = transform.position;
             }
         }
-
-        /*private void ActivationPhysics()
-    {
-        foreach (var brick in _bricks)
-        {
-            brick.GetComponent<Rigidbody>().isKinematic = false;
-            enabled = false;
-        }
-    }*/
     }
 }

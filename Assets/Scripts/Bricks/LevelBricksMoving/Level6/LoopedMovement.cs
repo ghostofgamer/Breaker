@@ -21,23 +21,6 @@ namespace Bricks.LevelBricksMoving.Level6
             base.Start();
             _coroutine =   StartCoroutine(MoveCycle());
         }
-        
-        /*
-        private void OnEnable()
-        {
-            foreach (var brick in _bricks)
-            {
-                brick.Dead += SetValue;
-            }
-        }
-
-        private void OnDisable()
-        {
-            foreach (var brick in _bricks)
-            {
-                brick.Dead -= SetValue;
-            }
-        }*/
 
         private IEnumerator MoveCycle()
         {
@@ -65,13 +48,5 @@ namespace Bricks.LevelBricksMoving.Level6
             _isWork = false;
             StopCoroutine(_coroutine);
         }
-
-        /*
-        private void SetValue()
-        {
-            _rigidbody.isKinematic = false;
-            StopCoroutine(_coroutine);
-            enabled = false;
-        }*/
     }
 }

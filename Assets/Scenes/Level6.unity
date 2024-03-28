@@ -1598,6 +1598,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36198c491d36d4648982ea06ca682afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &163260704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6910538691810499632, guid: 10c610d0aae46094581666f43de41707, type: 3}
+  m_PrefabInstance: {fileID: 1852462536085224638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &167980352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6507901977716847365, guid: 7e62999f8e0c14d4b99956774992d1e2, type: 3}
@@ -13706,6 +13711,30 @@ Camera:
 --- !u!82 &1190493301 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 9038673692875130135, guid: 10c610d0aae46094581666f43de41707, type: 3}
+  m_PrefabInstance: {fileID: 1852462536085224638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1190493302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163260704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043756f416a91d5458dcf3e29a856928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 0.5
+  _magnitude: 0.5
+  _brickExplosions:
+  - {fileID: 1183605658}
+  - {fileID: 555330688}
+  - {fileID: 1469481818}
+  - {fileID: 1483008247}
+--- !u!95 &1190493303 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4395478558935932139, guid: 10c610d0aae46094581666f43de41707, type: 3}
   m_PrefabInstance: {fileID: 1852462536085224638}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1204078396
@@ -27749,6 +27778,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5539566334658380056, guid: 10c610d0aae46094581666f43de41707, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1190493303}
+    - target: {fileID: 5539566334658380056, guid: 10c610d0aae46094581666f43de41707, type: 3}
+      propertyPath: _platformaMover
+      value: 
+      objectReference: {fileID: 824722458}
     - target: {fileID: 6910538691810499632, guid: 10c610d0aae46094581666f43de41707, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -27768,7 +27805,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6910538691810499632, guid: 10c610d0aae46094581666f43de41707, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1190493302}
   m_SourcePrefab: {fileID: 100100000, guid: 10c610d0aae46094581666f43de41707, type: 3}
 --- !u!1001 &1876216669796287188
 PrefabInstance:
@@ -28112,6 +28152,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1338142451016001923, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788700776074217969, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212762647125200705, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928928750172522146, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928928750172522146, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.92549026
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928928750172522146, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928928750172522146, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8403808440414013693, guid: c81690519f82b884b8eaa64d0eaee6b8, type: 3}

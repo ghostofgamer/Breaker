@@ -99,14 +99,19 @@ namespace Bricks
                 AudioSource.PlayOneShot(AudioSource.clip);
                 return;
             }
-            
-            Dead?.Invoke();
+
+            BrickDie();
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;
             GetBuff();
             BrickCounter.ChangeValue(Reward);
             GetBonus();
             gameObject.SetActive(false);
+        }
+
+        protected void BrickDie()
+        {
+            Dead?.Invoke();
         }
     }
 }

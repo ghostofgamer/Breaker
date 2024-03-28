@@ -44,6 +44,7 @@ namespace Bricks
 
         public void Detonate()
         {
+            BrickDie();
             GetBonus();
             GetBuff();
             BrickCounter.ChangeValue(Reward);

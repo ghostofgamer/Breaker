@@ -21,7 +21,6 @@ namespace Bricks.LevelBricksMoving
 
         private void ChangeMotion()
         {
-            Debug.Log("Work");
             IsWork = false;
         }
     }

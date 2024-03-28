@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 9038673692875130135}
   - component: {fileID: 6263432457950491562}
   - component: {fileID: 2893144430489604420}
+  - component: {fileID: 5539566334658380056}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -130,10 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7e479e030c9d04896dc0c9c70861a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 4395478558935932139}
   _brickCounter: {fileID: 0}
   _reviveScreen: {fileID: 0}
   _animationsController: {fileID: 2893144430489604420}
+  _animator: {fileID: 4395478558935932139}
 --- !u!82 &9038673692875130135
 AudioSource:
   m_ObjectHideFlags: 0
@@ -256,3 +257,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 4395478558935932139}
+--- !u!114 &5539566334658380056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910538691810499632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4c846f85af08d4d98f6c62414add87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 4395478558935932139}
+  sensitivity: 1
+  minRotationZ: -1
+  maxRotationZ: 1
+  _maxRotationY: 3
+  _minRotationY: -3
+  _speedRotation: 1
+  _platformaMover: {fileID: 0}
+  _speed: 0.3
