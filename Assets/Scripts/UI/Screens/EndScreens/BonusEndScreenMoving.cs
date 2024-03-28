@@ -13,6 +13,7 @@ namespace UI.Screens.EndScreens
         private float _sumValue = 0.01f;
         private List<Transform> _line;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.01f);
+        private float _factor = 2;
 
         private void Start()
         {
@@ -41,7 +42,7 @@ namespace UI.Screens.EndScreens
 
         private void LerpNext(List<Vector3> listStart, Transform objectMove)
         {
-            if (listStart.Count > 2)
+            if (listStart.Count > _factor)
             {
                 List<Vector3> list = new List<Vector3>();
 

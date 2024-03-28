@@ -13,6 +13,10 @@ namespace UI
 
         private float _elapsedTime;
         private float _duration = 0.365f;
+        private Color _startBackGroundColor;
+        private Color _startTextColor;
+        private Color _endBackGroundColor;
+        private Color _endTextColor;
 
         private void OnEnable()
         {
@@ -22,20 +26,22 @@ namespace UI
         private IEnumerator OnFadeStatistic()
         {
             _elapsedTime = 0;
-            Color startBackGroundColor = _backGroundImage.color;
-            Color startTextColor = _textLabel.color;
-            Color endBackGroundColor = new Color(startBackGroundColor.r, startBackGroundColor.g, startBackGroundColor.b, 0f);
-            Color endTextColor = new Color(startTextColor.r, startTextColor.g, startTextColor.b, _alpha);
+            _startBackGroundColor = _backGroundImage.color;
+            _startTextColor = _textLabel.color;
+            _endBackGroundColor =
+                new Color(_startBackGroundColor.r, _startBackGroundColor.g, _startBackGroundColor.b, 0f);
+            _endTextColor = new Color(_startTextColor.r, _startTextColor.g, _startTextColor.b, _alpha);
 
             while (_elapsedTime < _duration)
             {
                 _elapsedTime += Time.deltaTime;
-                _backGroundImage.color = Color.Lerp(startBackGroundColor, endBackGroundColor, _elapsedTime / _duration);
-                _textLabel.color = Color.Lerp(startTextColor, endTextColor, _elapsedTime / _duration);
+                _backGroundImage.color =
+                    Color.Lerp(_startBackGroundColor, _endBackGroundColor, _elapsedTime / _duration);
+                _textLabel.color = Color.Lerp(_startTextColor, _endTextColor, _elapsedTime / _duration);
                 yield return null;
             }
 
-            _backGroundImage.color = endBackGroundColor;
+            _backGroundImage.color = _endBackGroundColor;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace PlayerFiles.PlatformaContent
         [SerializeField] private GameObject _mousePosition;
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private Transform _enviropment;
-        
+
         private PlatformaMover _platformaMover;
 
         private void Start()

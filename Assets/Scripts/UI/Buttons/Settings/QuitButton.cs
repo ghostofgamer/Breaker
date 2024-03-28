@@ -7,11 +7,12 @@ namespace UI.Buttons.Settings
 {
     public class QuitButton : AbstractButton
     {
+        private const string SceneName = "MainScene";
+
         [SerializeField] private SettingsScreen _settingsScreen;
         [SerializeField] private AudioSource _audioSource;
 
         private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
-        private const string SceneName = "MainScene";
 
         protected override void OnClick()
         {

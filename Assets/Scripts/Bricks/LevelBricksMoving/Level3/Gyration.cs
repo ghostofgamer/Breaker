@@ -13,7 +13,7 @@ namespace Bricks.LevelBricksMoving.Level3
         [SerializeField] private Transform _center;
         [SerializeField] private float _rotationStart;
         [SerializeField] private float _endRotation;
-        
+
         private Coroutine _coroutine;
         private float _minValue = 0.1f;
         private float _maxValue = 0.5f;
@@ -26,7 +26,7 @@ namespace Bricks.LevelBricksMoving.Level3
         {
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
-            
+
             _coroutine = StartCoroutine(MoveCubes());
         }
 

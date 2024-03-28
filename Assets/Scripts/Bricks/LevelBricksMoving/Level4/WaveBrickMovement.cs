@@ -9,15 +9,16 @@ namespace Bricks.LevelBricksMoving.Level4
         private float _frequency = 3f;
         private Vector3 _initialPosition;
         private float _zPosition;
-        
-        void Start()
+
+        private void Start()
         {
             _initialPosition = transform.position;
         }
 
-        void Update()
+        private void Update()
         {
-            _zPosition = _initialPosition.z + Mathf.Sin(Time.time * _speed + transform.position.x * _frequency) * _amplitude;
+            _zPosition = _initialPosition.z +
+                         Mathf.Sin(Time.time * _speed + transform.position.x * _frequency) * _amplitude;
             transform.position = new Vector3(transform.position.x, transform.position.y, _zPosition);
         }
     }

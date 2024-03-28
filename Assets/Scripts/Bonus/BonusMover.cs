@@ -22,14 +22,14 @@ namespace Bonus
         private float _maxX = 11f;
         private float _currentX;
 
-        void Start()
+        private void Start()
         {
             _startY = transform.position.y;
             float angle = Random.Range(_minAngle, _maxAngle);
             _direction = Quaternion.AngleAxis(angle, Vector3.up) * -Vector3.forward;
         }
 
-        void Update()
+        private void Update()
         {
             transform.position += _direction * (_speed * Time.deltaTime);
             _currentX = Mathf.Clamp(transform.position.x, _minX, _maxX);

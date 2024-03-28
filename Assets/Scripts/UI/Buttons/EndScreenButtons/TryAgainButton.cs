@@ -14,6 +14,8 @@ namespace UI.Buttons.EndScreenButtons
         private float _elapsedTime;
         private float _duration = 1f;
         private float _alphaFull = 1f;
+        private Color _startColor;
+        private Color _endColor;
 
         protected override void OnClick()
         {
@@ -25,17 +27,17 @@ namespace UI.Buttons.EndScreenButtons
         {
             _uiAnimations.Close();
             _elapsedTime = 0;
-            Color startColor = _fadePanel.color;
-            Color endColor = new Color(startColor.r, startColor.g, startColor.b, _alphaFull);
+            _startColor = _fadePanel.color;
+            _endColor = new Color(_startColor.r, _startColor.g, _startColor.b, _alphaFull);
 
             while (_elapsedTime < _duration)
             {
                 _elapsedTime += Time.deltaTime;
-                _fadePanel.color = Color.Lerp(startColor, endColor, _elapsedTime / _duration);
+                _fadePanel.color = Color.Lerp(_startColor, _endColor, _elapsedTime / _duration);
                 yield return null;
             }
 
-            _fadePanel.color = endColor;
+            _fadePanel.color = _endColor;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

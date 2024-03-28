@@ -8,7 +8,7 @@ namespace WeaponFiles
 {
     public class Weapon : MonoBehaviour
     {
-        protected readonly int MaxAmmo = 50;
+        private readonly int MaxAmmo = 50;
 
         [SerializeField] private Transform[] _shootPosition;
         [SerializeField] private Bullet _bullet;

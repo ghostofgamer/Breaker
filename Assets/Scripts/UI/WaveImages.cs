@@ -14,10 +14,10 @@ namespace UI
 
         private void Start()
         {
-            StartCoroutine(Wave());
+            StartCoroutine(WaveMove());
         }
 
-        private IEnumerator Wave()
+        private IEnumerator WaveMove()
         {
             while (true)
             {

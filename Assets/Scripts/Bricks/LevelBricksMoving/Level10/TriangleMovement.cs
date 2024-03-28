@@ -11,17 +11,20 @@ namespace Bricks.LevelBricksMoving.Level10
         [SerializeField] private float _maxX;
         [SerializeField] private float _moveStep;
 
+        private Vector3 _position;
+        private float _targetX;
+
         private void Update()
         {
             if (IsWork)
             {
-                Vector3 position = transform.position;
-                float targetX = position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
-                targetX = Mathf.Clamp(targetX, _minX, _maxX);
+                _position = transform.position;
+                _targetX = _position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
+                _targetX = Mathf.Clamp(_targetX, _minX, _maxX);
 
-                position = Vector3.MoveTowards(position,
-                    new Vector3(targetX, position.y, position.z), _moveStep * Time.deltaTime);
-                transform.position = position;
+                _position = Vector3.MoveTowards(_position,
+                    new Vector3(_targetX, _position.y, _position.z), _moveStep * Time.deltaTime);
+                transform.position = _position;
             }
         }
     }

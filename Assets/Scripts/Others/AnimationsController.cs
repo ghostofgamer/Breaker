@@ -11,12 +11,12 @@ namespace Others
         private const string BrickRingOpen = "BrickRingOpen";
         private const string BrickRingClose = "BrickRingClose";
         private const string WaveMotion = "WaveMotion";
-        
+
         public void PlayRotate()
         {
             _animator.Play(Rotate);
         }
-        
+
         public void PlayVictory()
         {
             _animator.SetTrigger(Victory);
@@ -31,7 +31,7 @@ namespace Others
         {
             _animator.Play(BrickRingClose);
         }
-        
+
         public void PlayWave()
         {
             _animator.Play(WaveMotion);

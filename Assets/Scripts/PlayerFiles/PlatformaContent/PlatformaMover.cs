@@ -25,7 +25,7 @@ namespace PlayerFiles.PlatformaContent
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
         private Coroutine _coroutine;
         private string _mouseX = "Mouse X";
-        
+
         public bool IsAlive { get; private set; }
         public float Speed => _moveSpeed;
         public int DirectionX { get; private set; }
@@ -88,7 +88,12 @@ namespace PlayerFiles.PlatformaContent
             SetValue(true);
         }
 
-        public void GetDirection(float x)
+        public void SetValue(bool flag)
+        {
+            IsAlive = flag;
+        }
+
+        private void GetDirection(float x)
         {
             if (x > transform.position.x)
                 DirectionX = _directionX;
@@ -98,11 +103,6 @@ namespace PlayerFiles.PlatformaContent
                 DirectionX = 0;
         }
 
-        public void SetValue(bool flag)
-        {
-            IsAlive = flag;
-        }
-        
         private IEnumerator TimeScaleChanged()
         {
             Time.timeScale = _slowMove;

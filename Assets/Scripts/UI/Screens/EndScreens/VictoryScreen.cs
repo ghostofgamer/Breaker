@@ -15,7 +15,7 @@ namespace UI.Screens.EndScreens
         [SerializeField] private ScoreCounter _scoreCounter;
         [SerializeField] private GameObject[] _statistics;
         [SerializeField] private Save _save;
-        [Header("StatisticTMP")]
+        [Header("StatisticTMP")] 
         [SerializeField] private TMP_Text _timer;
         [SerializeField] private TMP_Text _buffCollected;
         [SerializeField] private TMP_Text _brickSmashed;

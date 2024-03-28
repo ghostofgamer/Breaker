@@ -1,7 +1,7 @@
 using GameScene.BallContent;
 using UnityEngine;
 
-namespace Bricks.Etertnal
+namespace Bricks.Eternal
 {
     public class BrickEternal : Brick
     {
@@ -10,9 +10,7 @@ namespace Bricks.Etertnal
         private void OnCollisionEnter(Collision other)
         {
             if (other.collider.TryGetComponent(out Ball ball))
-            {
                 _audioSource.PlayOneShot(_audioSource.clip);
-            }
         }
 
         public override void Die()

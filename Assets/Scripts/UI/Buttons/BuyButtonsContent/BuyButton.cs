@@ -47,7 +47,9 @@ namespace UI.Buttons.BuyButtonsContent
             }
         }
 
-        protected virtual void Buy() { }
+        protected virtual void Buy()
+        {
+        }
 
         private void CheckSolvency()
         {

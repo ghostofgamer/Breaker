@@ -58,20 +58,20 @@ namespace UI.Screens
             }
         }
 
-        private void Play(float start, float end, AudioClip audioClip1, AudioClip audioClip2)
+        private void Play(float start, float end, AudioClip audioClipStart, AudioClip audioClipEnd)
         {
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
 
-            _coroutine = StartCoroutine(PlaySound(start, end, audioClip1, audioClip2));
+            _coroutine = StartCoroutine(PlaySound(start, end, audioClipStart, audioClipEnd));
         }
 
-        private IEnumerator PlaySound(float startTime, float endTime, AudioClip audioClip1, AudioClip audioClip2)
+        private IEnumerator PlaySound(float startTime, float endTime, AudioClip audioClipStart, AudioClip audioClipEnd)
         {
             yield return new WaitForSecondsRealtime(startTime);
-            _audioSource.PlayOneShot(audioClip1);
+            _audioSource.PlayOneShot(audioClipStart);
             yield return new WaitForSecondsRealtime(endTime);
-            _audioSource.PlayOneShot(audioClip2);
+            _audioSource.PlayOneShot(audioClipEnd);
         }
     }
 }

@@ -15,11 +15,18 @@ namespace Bricks.LevelBricksMoving.Level6
         private Rigidbody _rigidbody;
         private Coroutine _coroutine;
         private bool _isWork = true;
-        
+
         protected override void Start()
         {
             base.Start();
-            _coroutine =   StartCoroutine(MoveCycle());
+            _coroutine = StartCoroutine(MoveCycle());
+        }
+
+        protected override void SetValue()
+        {
+            base.SetValue();
+            _isWork = false;
+            StopCoroutine(_coroutine);
         }
 
         private IEnumerator MoveCycle()
@@ -40,13 +47,6 @@ namespace Bricks.LevelBricksMoving.Level6
                 transform.position = Vector3.MoveTowards(transform.position, destination, _speed * Time.deltaTime);
                 yield return null;
             }
-        }
-
-        protected override void SetValue()
-        {
-            base.SetValue();
-            _isWork = false;
-            StopCoroutine(_coroutine);
         }
     }
 }

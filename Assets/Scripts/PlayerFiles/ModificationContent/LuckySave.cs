@@ -18,7 +18,7 @@ namespace PlayerFiles.ModificationContent
         private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
         private WaitForSecondsRealtime _waitForStart = new WaitForSecondsRealtime(0.3f);
         private Coroutine _coroutine;
-        
+
         public bool TryGetLuckySave()
         {
             RandomValue = Random.Range(MinValue, MaxValue);

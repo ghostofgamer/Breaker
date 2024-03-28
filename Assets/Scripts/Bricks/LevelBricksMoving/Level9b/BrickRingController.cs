@@ -10,7 +10,7 @@ namespace Bricks.LevelBricksMoving.Level9b
 
         private WaitForSeconds _startWait = new WaitForSeconds(1.5f);
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(3f);
-        
+
         private void Start()
         {
             StartCoroutine(PlayAnimation());

@@ -8,11 +8,11 @@ namespace PlayerFiles
 {
     public class Wallet : MonoBehaviour
     {
-        [Range(0, 50000)] [SerializeField] private int _startMoney;
         [SerializeField] private TMP_Text _moneyText;
         [SerializeField] private Save _save;
         [SerializeField] private Load _load;
 
+        private int _startMoney = 0;
         private int _money;
         private int _temporaryMoney;
         private int _zero = 0;
@@ -37,12 +37,6 @@ namespace PlayerFiles
                 Calculate(target, _longDuration);
                 _save.SetData(Save.TemporaryMoney, _zero);
             }
-        }
-
-        public void AddMoney(int credit)
-        {
-            int target = _money + credit;
-            Calculate(target, _duration);
         }
 
         public void RemoveMoney(int price)

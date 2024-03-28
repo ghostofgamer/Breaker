@@ -6212,7 +6212,6 @@ GameObject:
   m_Component:
   - component: {fileID: 233297565}
   - component: {fileID: 233297564}
-  - component: {fileID: 233297566}
   m_Layer: 0
   m_Name: SpawnBricks
   m_TagString: Untagged
@@ -6268,26 +6267,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &233297566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233297563}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c8e2f28307058409d78d178ed14d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  columns: 0
-  rows: 0
-  waveSpeed: 0
-  waveAmplitude: 0
-  waveCount: 0
-  waitBetweenWaves: 0
-  _container: {fileID: 0}
-  _cube: {fileID: 0}
 --- !u!1 &234042814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa7c5686b9ad9d4a9f5512d02844aa6, type: 3}

@@ -15,11 +15,9 @@ namespace UI.Buttons.ShopContent
         [SerializeField] private GameObject[] _tabs;
         [SerializeField] private GameObject _platformTabPc;
         [SerializeField] private CameraMover _cameraMover;
-        [SerializeField] private Level[] _levels;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private ShopScreen _shopScreen;
         [SerializeField] private InfoLevelCloser _infoLevelCloser;
-        [SerializeField] private ColliderController _colliderController;
 
         private Color _currentColor;
         private int _indexPlatformTab = 1;
@@ -34,9 +32,6 @@ namespace UI.Buttons.ShopContent
 
         protected override void OnClick()
         {
-            /*if (_colliderController != null)
-                _colliderController.SetValue(false);*/
-            
             if (_infoLevelCloser != null)
                 _infoLevelCloser.CloseAllScreen();
 
@@ -44,12 +39,6 @@ namespace UI.Buttons.ShopContent
 
             if (_cameraMover != null && _cameraMover.enabled)
                 _cameraMover.enabled = false;
-
-            /*if (_levels.Length > 0)
-            {
-                foreach (var level in _levels)
-                    level.GetComponent<BoxCollider>().enabled = false;
-            }*/
 
             _shopScreen.Open();
 

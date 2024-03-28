@@ -11,7 +11,7 @@ namespace Bricks.LevelBricksMoving.Level7
         private Vector3 _startPosition;
         private bool _isMovingToTargetA = true;
         private float _moveTimer;
-        
+
         protected override void Start()
         {
             base.Start();

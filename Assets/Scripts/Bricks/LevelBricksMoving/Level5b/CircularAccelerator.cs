@@ -8,7 +8,7 @@ namespace Bricks.LevelBricksMoving.Level5b
         [SerializeField] private GameObject[] _objects;
         [SerializeField] private float _rotationTime = 6f;
         [SerializeField] private float _delayBetweenObjects = 1.65f;
-        
+
         private WaitForSeconds _delay;
         private WaitForSeconds _delayRotaion;
 
