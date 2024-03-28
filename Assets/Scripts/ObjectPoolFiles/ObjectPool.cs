@@ -23,7 +23,7 @@ namespace ObjectPoolFiles
         public bool TryGetObject(out T spawned, T prefabs)
         {
             var filter = _poolGeneric.Where(p => p.gameObject.activeSelf == false);
-            var index = Random.Range(0, filter.Count());
+            int index = Random.Range(0, filter.Count());
 
             if (filter.Count() == 0 && AutoExpand)
             {

@@ -11,12 +11,15 @@ namespace Levels
         [SerializeField] private Color _colorUnLock;
         [SerializeField] private ParticleSystem _fenceEffect;
 
+        private LevelState _levelState;
+
         private void Start()
         {
-            LevelState status = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
-            var effect = _fenceEffect.main;
+            _levelState = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
+            ParticleSystem.MainModule effect;
+            effect = _fenceEffect.main;
 
-            if (status != LevelState.Locked)
+            if (_levelState != LevelState.Locked)
             {
                 effect.startColor = _colorUnLock;
                 _fenceEffect.Play();

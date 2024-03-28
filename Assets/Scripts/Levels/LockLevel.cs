@@ -10,11 +10,13 @@ namespace Levels
         [SerializeField] private Load _load;
         [SerializeField] private Level _level;
 
+        private LevelState _levelState;
+
         private void Start()
         {
-            LevelState status = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
+            _levelState = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
 
-            if (status == LevelState.Locked)
+            if (_levelState == LevelState.Locked)
                 _level.gameObject.SetActive(false);
             else
                 gameObject.SetActive(false);

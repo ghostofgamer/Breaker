@@ -1,4 +1,3 @@
-using System;
 using SaveAndLoad;
 using TMPro;
 using UnityEngine;
@@ -22,15 +21,15 @@ namespace MainMenu
                 ShowInfo();
         }
 
-        private void ShowInfo()
-        {
-            _amountTxt.text = _brickSmashedCount.ToString();
-        }
-
         public void AddValue(int value)
         {
             _brickSmashedCount += value;
             _save.SetData(Save.BrickSmashed, _brickSmashedCount);
+        }
+
+        private void ShowInfo()
+        {
+            _amountTxt.text = _brickSmashedCount.ToString();
         }
     }
 }

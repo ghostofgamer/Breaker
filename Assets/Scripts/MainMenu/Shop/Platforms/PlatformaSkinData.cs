@@ -6,7 +6,7 @@ namespace MainMenu.Shop.Platforms
     {
         [SerializeField] private bool _isBought;
         [SerializeField] private bool _isActive;
-        
+
         public bool IsBought => _isBought;
         public bool IsActive => _isActive;
 
@@ -14,7 +14,7 @@ namespace MainMenu.Shop.Platforms
         {
             _isBought = isBought;
         }
-    
+
         public void SetValueActive(bool isActive)
         {
             _isActive = isActive;

@@ -12,9 +12,7 @@ namespace Levels
             foreach (var levelInfo in _levelInfos)
             {
                 if (levelInfo.IsOpen)
-                {
                     levelInfo.Close();
-                }
             }
         }
     }

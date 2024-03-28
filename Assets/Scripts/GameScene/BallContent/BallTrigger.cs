@@ -13,7 +13,6 @@ namespace GameScene.BallContent
         [SerializeField] private LayerMask _platformLayer;
         [SerializeField] private AudioSource _audioSource;
 
-        private MeshRenderer _meshRenderer;
         private bool _isHit;
         private bool _isBackHit;
         private int _factor = 2;
@@ -22,11 +21,6 @@ namespace GameScene.BallContent
 
         public event UnityAction Dying;
         public event UnityAction Bounce;
-
-        public void Init(MeshRenderer meshRenderer)
-        {
-            _meshRenderer = meshRenderer;
-        }
 
         private void OnCollisionEnter(Collision other)
         {

@@ -37,7 +37,7 @@ namespace ModificationFiles.BuffsFiles
         {
             SetActive(value);
 
-            foreach (var wall in _walls)
+            foreach (GameObject wall in _walls)
                 wall.GetComponent<BoxCollider>().enabled = !value;
 
             BallMover.SetValue(value);

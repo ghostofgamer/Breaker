@@ -10,29 +10,30 @@ namespace ModificationFiles
         [SerializeField] private float _duration;
 
         private int _fullFillAmount = 1;
+        private float _elapsedTime;
 
         private void OnEnable()
         {
             StartCoroutine(FillOverTime(_duration));
         }
 
+        public void Init(float duration)
+        {
+            _duration = duration;
+        }
+
         private IEnumerator FillOverTime(float time)
         {
-            float currentTime = 0f;
+            _elapsedTime = 0f;
 
-            while (currentTime < time)
+            while (_elapsedTime < time)
             {
-                currentTime += Time.deltaTime;
-                _image.fillAmount = Mathf.Lerp(0, _fullFillAmount, currentTime / time);
+                _elapsedTime += Time.deltaTime;
+                _image.fillAmount = Mathf.Lerp(0, _fullFillAmount, _elapsedTime / time);
                 yield return null;
             }
 
             _image.fillAmount = _fullFillAmount;
-        }
-
-        public void Init(float duration)
-        {
-            _duration = duration;
         }
     }
 }

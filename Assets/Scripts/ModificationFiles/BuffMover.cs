@@ -16,17 +16,16 @@ namespace ModificationFiles
         private float _startTime;
         private float _maxJumpProgress = 1f;
         private float _reducerJumpHeight = 1f;
-
         private float _minX = -11f;
         private float _maxX = 11f;
         private float _currentX;
 
-        void Start()
+        private void Start()
         {
             _startY = transform.position.y;
         }
 
-        void Update()
+        private void Update()
         {
             transform.Translate(-Vector3.forward * _speed * Time.deltaTime);
             _currentX = Mathf.Clamp(transform.position.x, _minX, _maxX);

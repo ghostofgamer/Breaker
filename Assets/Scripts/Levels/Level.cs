@@ -8,7 +8,8 @@ namespace Levels
 {
     public class Level : MonoBehaviour
     {
-        [Header("Particles")] [SerializeField] private ParticleSystem _dontSelectedCircle;
+        [Header("Particles")] 
+        [SerializeField] private ParticleSystem _dontSelectedCircle;
         [SerializeField] private ParticleSystem _selectedCircle;
         [SerializeField] private ParticleSystem[] _effectsSelect;
         [SerializeField] private ParticleSystem[] _line;
@@ -35,7 +36,7 @@ namespace Levels
         {
             if (_shopScreen.IsOpen)
                 return;
-            
+
             foreach (Level level in _allLevels)
                 level.StopParticles();
 

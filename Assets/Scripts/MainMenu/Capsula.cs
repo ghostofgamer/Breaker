@@ -13,6 +13,8 @@ namespace MainMenu
         private float _speedBack = 10f;
         private bool _rotate;
         private float _angle = 35f;
+        private float _cameraAngle;
+        private float _capsulaAngle;
 
         private void Start()
         {
@@ -30,10 +32,9 @@ namespace MainMenu
 
                     if (Camera.main != null)
                     {
-                        float initialCapsuleAngleY = 30f;
-                        float cameraAngle = Camera.main.transform.eulerAngles.x;
-                        float capsuleAngle = cameraAngle - cameraAngle;
-                        transform.eulerAngles = new Vector3(cameraAngle, capsuleAngle, _angle);
+                        _cameraAngle = Camera.main.transform.eulerAngles.x;
+                        _capsulaAngle = _cameraAngle - _cameraAngle;
+                        transform.eulerAngles = new Vector3(_cameraAngle, _capsulaAngle, _angle);
                     }
                 }
 

@@ -12,6 +12,8 @@ namespace MainMenu
         private RectTransform _rectTransform;
         private float _fadeDuration = 0.16f;
         private float _wight = 599.63f;
+        private float _elapsedTime;
+        private float _originalWight;
 
         private void Start()
         {
@@ -31,13 +33,13 @@ namespace MainMenu
         private IEnumerator EnableFade(float target, AudioClip audioClip)
         {
             _audioSource.PlayOneShot(audioClip);
-            float elapsedTime = 0f;
-            float originalWidth = _rectTransform.sizeDelta.x;
+            _elapsedTime = 0f;
+            _originalWight = _rectTransform.sizeDelta.x;
 
-            while (elapsedTime < _fadeDuration)
+            while (_elapsedTime < _fadeDuration)
             {
-                elapsedTime += Time.deltaTime;
-                float newWight = Mathf.Lerp(originalWidth, target, elapsedTime / _fadeDuration);
+                _elapsedTime += Time.deltaTime;
+                float newWight = Mathf.Lerp(_originalWight, target, _elapsedTime / _fadeDuration);
                 _rectTransform.sizeDelta = new Vector2(newWight, _rectTransform.sizeDelta.y);
                 yield return null;
             }

@@ -33,7 +33,7 @@ namespace ModificationFiles.NeutralFiles
 
                 Player.ClearList();
             }
-        
+
             ShowNameEffect();
         }
 
