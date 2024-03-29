@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 namespace ADS
 {
+    [RequireComponent(typeof(Button))]
     public class RewardTripleCredit : RewardVideo
     {
         [SerializeField] private ClaimRewardButton _claimRewardButton;
         [SerializeField] private LevelComplite _levelComplite;
         [SerializeField] private VictoryScreen _victoryScreen;
 
-        public override void OnReward()
+        protected override void OnReward()
         {
             _levelComplite.gameObject.SetActive(false);
             _victoryScreen.OpenScreen(_claimRewardButton.Credits);

@@ -8,7 +8,8 @@ namespace Levels
 {
     public class Level : MonoBehaviour
     {
-        [Header("Particles")] [SerializeField] private ParticleSystem _dontSelectedCircle;
+        [Header("Particles")]
+        [SerializeField] private ParticleSystem _dontSelectedCircle;
         [SerializeField] private ParticleSystem _selectedCircle;
         [SerializeField] private ParticleSystem[] _effectsSelect;
         [SerializeField] private ParticleSystem[] _line;
@@ -26,7 +27,6 @@ namespace Levels
         [SerializeField] private ShopScreen _shopScreen;
 
         private LevelState _state;
-        private Color _currentColor;
 
         public Level[] Nextlevel => _nextLevel;
 

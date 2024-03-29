@@ -52,7 +52,7 @@ namespace PlayerFiles.PlatformaContent
                 _fragmentsCounter.FragmentsCollect();
 
                 if (_chanceBonus.enabled)
-                    bonusDeath.SetValue(_chanceBonus.TryIncreaseBonus(bonusDeath.Reward));
+                    bonusDeath.SetValue(_chanceBonus.GetBonus(bonusDeath.Reward));
 
                 _bonusCounter.AddBonus(bonusDeath.Reward);
                 bonusDeath.Die();

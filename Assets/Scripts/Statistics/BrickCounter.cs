@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using Bricks;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,16 +9,15 @@ namespace Statistics
         [SerializeField] private ScoreCounter _scoreCounter;
 
         private int _bricksSmashedCount;
-        private List<Brick> _bricks;
         private int _score = 5;
         private bool _isRemainingActivated;
 
         public event UnityAction AllBrickDestroy;
-        
+
         public event UnityAction BricksDestructionHelp;
 
         public int RemainingAmountHelp { get; private set; } = 3;
-        
+
         public int BrickCount { get; private set; }
 
         public void ChangeValue(int reward)
@@ -39,7 +36,7 @@ namespace Statistics
                 }
             }
 
-            TryVictory();
+            CheckAliveBrickCount();
         }
 
         public void AddBricks(int bricksCount)
@@ -47,7 +44,7 @@ namespace Statistics
             BrickCount++;
         }
 
-        public void TryVictory()
+        public void CheckAliveBrickCount()
         {
             if (BrickCount <= 0)
                 AllBrickDestroy?.Invoke();

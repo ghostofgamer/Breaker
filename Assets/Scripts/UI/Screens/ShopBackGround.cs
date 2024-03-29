@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace UI.Screens
 {
+    [RequireComponent(typeof(CanvasGroup))]
     public class ShopBackGround : MonoBehaviour
     {
         private float _duration = 0.165f;

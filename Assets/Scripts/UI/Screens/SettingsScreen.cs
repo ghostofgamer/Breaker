@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace UI.Screens
 {
+    [RequireComponent(typeof(CanvasGroup))]
     public class SettingsScreen : MonoBehaviour
     {
         [SerializeField] private AudioSource _audioSource;

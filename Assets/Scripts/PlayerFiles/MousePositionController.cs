@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace PlayerFiles
 {
+    [RequireComponent(typeof(SpriteRenderer))]
     public class MousePositionController : MonoBehaviour
     {
         [SerializeField] private float _minX;

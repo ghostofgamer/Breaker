@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace GameScene.BallContent
 {
+    [RequireComponent(typeof(BallMover),typeof(Rigidbody))]
     public class Ball : Player
     {
         [SerializeField] private BrickCounter _brickCounter;

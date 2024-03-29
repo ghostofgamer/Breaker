@@ -26,6 +26,7 @@ namespace UI.Screens.EndScreens
         private int _credits = 0;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private WaitForSeconds _waitForSecondsStatistics = new WaitForSeconds(0.365f);
+        private int _indexScoreStatistic = 4;
 
         private void Start()
         {
@@ -60,7 +61,7 @@ namespace UI.Screens.EndScreens
             {
                 _statistics[i].SetActive(true);
 
-                if (i == 4)
+                if (i == _indexScoreStatistic)
                 {
                     float score = 0;
                     int creditsWin = _scoreCounter.GetScore();
@@ -71,7 +72,7 @@ namespace UI.Screens.EndScreens
                     {
                         elapsedTime += Time.deltaTime;
                         float time = elapsedTime / endTime;
-                        score = (int)Mathf.Lerp(score, creditsWin, time);
+                        score = (int) Mathf.Lerp(score, creditsWin, time);
                         _score.text = score.ToString();
                         yield return null;
                     }

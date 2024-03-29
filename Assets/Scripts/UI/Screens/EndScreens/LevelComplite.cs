@@ -26,6 +26,8 @@ namespace UI.Screens.EndScreens
         private Vector3 _target;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
         private Coroutine _coroutine;
+        private int _factor = 30;
+        private int _divider = 100;
 
         private void OnEnable()
         {
@@ -58,7 +60,7 @@ namespace UI.Screens.EndScreens
 
         private IEnumerator EnableVictory()
         {
-            _save.SetData(Save.LevelStatus + _indexLevel, (int)LevelState.Completed);
+            _save.SetData(Save.LevelStatus + _indexLevel, (int) LevelState.Completed);
             _save.SetData(Save.Score + _indexLevel, _scoreCounter.GetScore());
             _score.Increase(_scoreCounter.GetScore());
             SetValue();
@@ -67,7 +69,7 @@ namespace UI.Screens.EndScreens
             _claimButton.gameObject.SetActive(true);
             _animationsController.PlayRotate();
             _spawnBonusLevelComplete.StartFlightBonuses();
-            _claimButton.SetValue(_scoreCounter.GetScore() * 30 / 100);
+            _claimButton.SetValue((_scoreCounter.GetScore() * _factor) / _divider);
         }
     }
 }

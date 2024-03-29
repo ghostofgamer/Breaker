@@ -6,6 +6,7 @@ namespace GameScene
     {
         private float _timeFlying = 1;
         private float _elapsedTime = 0;
+        private float _speed = 10f;
 
         private void Update()
         {
@@ -13,7 +14,7 @@ namespace GameScene
                 gameObject.SetActive(false);
 
             _elapsedTime += Time.deltaTime;
-            transform.Translate(-Vector3.forward * (10 * Time.deltaTime));
+            transform.Translate(-Vector3.forward * (_speed * Time.deltaTime));
         }
     }
 }

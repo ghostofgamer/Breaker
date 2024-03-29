@@ -10,7 +10,6 @@ namespace Skins
         [SerializeField] private GameObject[] _skins;
         [SerializeField] private PortalTeleporterBall _portalTeleporterBall;
 
-        private MeshRenderer _meshRenderer;
         private int _skinBallIndex;
         private int _startIndex = 0;
 

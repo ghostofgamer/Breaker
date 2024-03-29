@@ -10,30 +10,23 @@ namespace PlayerFiles.ModificationContent
 
         private void OnEnable()
         {
-            _ballTrigger.Bounce += TryActivatedElectricEffect;
+            _ballTrigger.Bounce += OnSetValue;
         }
 
         private void OnDisable()
         {
-            _ballTrigger.Bounce -= TryActivatedElectricEffect;
+            _ballTrigger.Bounce -= OnSetValue;
         }
 
-        private void TryActivatedElectricEffect()
+        private bool TryActivatedElectricEffect()
         {
             RandomValue = Random.Range(MinValue, MaxValue);
-
-            if (RandomValue > BonusChances)
-            {
-                Activator(false);
-                return;
-            }
-
-            Activator(true);
+            return RandomValue > BonusChances;
         }
 
-        private void Activator(bool flag)
+        private void OnSetValue()
         {
-            _electricBall.gameObject.SetActive(flag);
+            _electricBall.gameObject.SetActive(TryActivatedElectricEffect());
         }
     }
 }

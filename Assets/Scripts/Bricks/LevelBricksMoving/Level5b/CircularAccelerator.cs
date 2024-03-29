@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level5b
 {
+    [RequireComponent(typeof(AccelerateRotate), typeof(DecelerateStop))]
     public class CircularAccelerator : MotionController
     {
         [SerializeField] private GameObject[] _objects;

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 namespace ADS
 {
+    [RequireComponent(typeof(Button))]
     public class RewardRevive : RewardVideo
     {
         [SerializeField] private ReviveButton _reviveButton;
@@ -18,7 +19,7 @@ namespace ADS
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private Coroutine _coroutine;
 
-        public override void OnReward()
+        protected override void OnReward()
         {
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
@@ -37,7 +38,7 @@ namespace ADS
             _reviveScreen.ChooseRevive();
             yield return _waitForSeconds;
             _sceneLoader.RevivePlatform();
-            _brickCounter.TryVictory();
+            _brickCounter.CheckAliveBrickCount();
         }
     }
 }

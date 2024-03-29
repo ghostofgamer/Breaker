@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace PlayerFiles.PlatformaContent
 {
+    [RequireComponent(typeof(PlatformaMover))]
     public class PlatformaRevive : MonoBehaviour
     {
         [SerializeField] private GameObject _mousePosition;

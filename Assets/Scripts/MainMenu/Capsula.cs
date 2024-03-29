@@ -7,7 +7,6 @@ namespace MainMenu
         [SerializeField] private GameObject _gameObject;
 
         private Quaternion _originalRotation;
-        private Vector3 _originalLocalRotation;
         private bool _isSelected = false;
         private float _speed = 65f;
         private float _speedBack = 10f;

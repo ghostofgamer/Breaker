@@ -2,7 +2,7 @@ using Agava.YandexGames;
 
 namespace ADS
 {
-    public class RewardVideo : Ad
+    public abstract class RewardVideo : Ad
     {
         public override void Show()
         {
@@ -10,8 +10,6 @@ namespace ADS
                 VideoAd.Show(OnOpen, OnReward, OnClose);
         }
 
-        public virtual void OnReward()
-        {
-        }
+        protected abstract void OnReward();
     }
 }

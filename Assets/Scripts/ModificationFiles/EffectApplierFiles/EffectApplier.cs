@@ -1,6 +1,4 @@
 using Enum;
-using PlayerFiles;
-using PlayerFiles.PlatformaContent;
 using UnityEngine;
 
 namespace ModificationFiles.EffectApplierFiles

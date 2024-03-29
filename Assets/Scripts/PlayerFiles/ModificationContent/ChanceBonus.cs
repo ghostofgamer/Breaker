@@ -6,15 +6,23 @@ namespace PlayerFiles.ModificationContent
     {
         private int _factor = 2;
 
-        public int TryIncreaseBonus(int reward)
+        public int GetBonus(int reward)
+        {
+            if (TryIncreaseBonus(ref reward))
+                return reward;
+
+            return reward;
+        }
+
+        private bool TryIncreaseBonus(ref int reward)
         {
             RandomValue = Random.Range(MinValue, MaxValue);
 
             if (RandomValue > BonusChances)
-                return reward;
+                return false;
 
             reward *= _factor;
-            return reward;
+            return true;
         }
     }
 }

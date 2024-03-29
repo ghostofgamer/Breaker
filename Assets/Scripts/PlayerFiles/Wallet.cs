@@ -12,7 +12,7 @@ namespace PlayerFiles
         [SerializeField] private Save _save;
         [SerializeField] private Load _load;
 
-        private int _startMoney = 0;
+        private int _startMoney = 10000;
         private int _money;
         private int _temporaryMoney;
         private int _zero = 0;

@@ -20,7 +20,6 @@ namespace Bricks.LevelBricksMoving.Level3
         private float _elapsedTime;
         private float _duration = 5;
         private bool _isMovingToTarget = true;
-        private bool _name;
 
         private void Start()
         {

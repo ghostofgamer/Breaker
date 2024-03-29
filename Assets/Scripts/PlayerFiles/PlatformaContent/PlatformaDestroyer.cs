@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PlayerFiles.PlatformaContent
 {
+    [RequireComponent(typeof(PlatformaMover))]
     public class PlatformaDestroyer : MonoBehaviour
     {
         [SerializeField] private BrickCounter _brickCounter;

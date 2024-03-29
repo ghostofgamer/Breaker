@@ -45,7 +45,7 @@ namespace PlayerFiles.ModificationContent
             yield return _waitForSeconds;
             _settingsButtonGameLevel.SetValue();
             _sceneLoader.RevivePlatform();
-            _brickCounter.TryVictory();
+            _brickCounter.CheckAliveBrickCount();
         }
     }
 }

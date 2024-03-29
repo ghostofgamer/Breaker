@@ -21,7 +21,6 @@ namespace PlayerFiles.PlatformaContent
         private bool _isMousePressed = false;
         private bool _isReverse = false;
         private bool _isFirstThrow = true;
-        private Vector2 _mouseDirection;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
         private Coroutine _coroutine;
         private string _mouseX = "Mouse X";
@@ -136,8 +135,9 @@ namespace PlayerFiles.PlatformaContent
                 Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
                 Vector3 targetPositiomMouse = new Vector3(hit.point.x, 4, hit.point.z);
                 _positionMouse.transform.position = targetPositiomMouse;
-                transform.position =
-                    Vector3.MoveTowards(transform.position, clampedTargetPosition, _moveSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(
+                    transform.position, clampedTargetPosition,
+                    _moveSpeed * Time.deltaTime);
             }
         }
     }

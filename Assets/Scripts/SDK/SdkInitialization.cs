@@ -1,5 +1,6 @@
 using System.Collections;
 using Agava.YandexGames;
+using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,8 @@ namespace SDK
     public class SdkInitialization : MonoBehaviour
     {
         private const string MainScene = "MainScene";
+
+        [SerializeField] private WaveImages _waveImages;
 
         private void Awake()
         {
@@ -21,6 +24,7 @@ namespace SDK
 
         private void OnInitialized()
         {
+            _waveImages.StopWave();
             SceneManager.LoadScene(MainScene);
         }
     }

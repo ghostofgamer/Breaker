@@ -14209,8 +14209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bonusCounter: {fileID: 1580274398}
-  _brickCountTxt: {fileID: 1492183286}
-  _brickSmashedTxt: {fileID: 1130046068}
   _scoreCounter: {fileID: 1771528540}
 --- !u!4 &980526521
 Transform:
@@ -15409,17 +15407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreCounter: {fileID: 1771528540}
---- !u!114 &1130046068 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1612445073190884313, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1134459630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5531605750409170793, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -19947,17 +19934,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 704823490460ecc45bf6c2c78394a238, type: 3}
---- !u!114 &1492183286 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1282171189935638894, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1499806260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20328,7 +20304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _load: {fileID: 293203873}
   _skins: []
-  _ballTrigger: {fileID: 0}
   _portalTeleporterBall: {fileID: 0}
 --- !u!114 &1560343512
 MonoBehaviour:
@@ -30352,7 +30327,7 @@ PrefabInstance:
       objectReference: {fileID: 293203874}
     - target: {fileID: 2416426427411925119, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60.635742
+      value: -60.635727
       objectReference: {fileID: 0}
     - target: {fileID: 2975735235547945634, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -30500,7 +30475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7633356765897258910, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 91.44997
+      value: 91.44995
       objectReference: {fileID: 0}
     - target: {fileID: 7834768391479354249, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
       propertyPath: _brickCounter

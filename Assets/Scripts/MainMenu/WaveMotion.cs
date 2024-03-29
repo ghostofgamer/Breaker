@@ -26,10 +26,6 @@ namespace MainMenu
         private float _waveTimer = 0;
         private Brick[,] _brickGrid;
         private List<Brick> _brickList;
-        private GameObject[,] _cubes;
-        private Vector3[,] _startPositions;
-        private Vector3[,] _endPositions;
-        private float _time;
         private bool _isFlyOver = false;
         private ObjectPool<Brick> _pool;
         private bool _autoExpand = true;

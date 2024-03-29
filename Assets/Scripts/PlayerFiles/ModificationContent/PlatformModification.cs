@@ -9,9 +9,5 @@ namespace PlayerFiles.ModificationContent
         protected int MinValue = 0;
         protected int MaxValue = 100;
         protected float RandomValue;
-
-        private void Start()
-        {
-        }
     }
 }

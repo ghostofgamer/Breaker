@@ -16,25 +16,28 @@ namespace ModificationFiles
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(10f);
         private Coroutine _coroutine;
-
+        private bool _isWork = true;
+        
         private void OnEnable()
         {
             _brickCounter.BricksDestructionHelp += SpawnLaser;
             _reviveScreen.Revive += SpawnLaser;
-            _brickCounter.AllBrickDestroy += StopCorutine;
-            _ballTrigger.Dying += StopCorutine;
+            _brickCounter.AllBrickDestroy += SpawnOver;
+            _ballTrigger.Dying += SpawnOver;
         }
 
         private void OnDisable()
         {
             _brickCounter.BricksDestructionHelp -= SpawnLaser;
-            _brickCounter.AllBrickDestroy -= StopCorutine;
+            _brickCounter.AllBrickDestroy -= SpawnOver;
             _reviveScreen.Revive -= SpawnLaser;
-            _ballTrigger.Dying -= StopCorutine;
+            _ballTrigger.Dying -= SpawnOver;
         }
 
-        private void StopCorutine()
+        private void SpawnOver()
         {
+            _isWork = false;
+            
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
         }
@@ -52,7 +55,7 @@ namespace ModificationFiles
 
         private IEnumerator StartSpawnlaser()
         {
-            while (true)
+            while (_isWork)
             {
                 Instantiate(_effect, transform);
                 _buffCounter.IncreaseBuffCount();

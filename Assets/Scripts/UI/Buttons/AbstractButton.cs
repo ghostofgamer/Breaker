@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 namespace UI.Buttons
 {
+    [RequireComponent(typeof(Button), typeof(CanvasGroup))]
     public abstract class AbstractButton : MonoBehaviour
     {
         private Button _button;

@@ -10,9 +10,6 @@ namespace Bricks.LevelBricksMoving.Level6
         [SerializeField] private Transform _target;
         [SerializeField] private Transform _start;
 
-        private Vector3 _targetPosition;
-        private Vector3 _startPosition;
-        private Rigidbody _rigidbody;
         private Coroutine _coroutine;
         private bool _isWork = true;
 

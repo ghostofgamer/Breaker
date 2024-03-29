@@ -8,8 +8,6 @@ namespace ModificationFiles.BuffsFiles
     {
         [SerializeField] private MirrorPlatformaMover _mirrorPlatformaPrefab;
 
-        private MirrorPlatformaMover _mirrorPlatforma;
-
         public override void ApplyModification()
         {
             if (Player.TryApplyEffect(this))

@@ -13,14 +13,12 @@ namespace GameScene.BallContent
         [SerializeField] private LayerMask _platformLayer;
         [SerializeField] private AudioSource _audioSource;
 
-        private bool _isHit;
-        private bool _isBackHit;
         private int _factor = 2;
         private float _valueEnableFastSpeed = 0.5f;
         private float _valuePush = 0.3f;
 
         public event UnityAction Dying;
-        
+
         public event UnityAction Bounce;
 
         private void OnCollisionEnter(Collision other)
@@ -54,7 +52,8 @@ namespace GameScene.BallContent
             float maxDistance = 2.1f;
             RaycastHit hit;
 
-            if (Physics.SphereCast(transform.position, transform.lossyScale.x / _factor, _ballMover.Direction, out hit, maxDistance, _platformLayer))
+            if (Physics.SphereCast(transform.position, transform.lossyScale.x / _factor, _ballMover.Direction, out hit,
+                maxDistance, _platformLayer))
             {
                 if (hit.collider.gameObject.TryGetComponent(out PlatformaMover platformaMover))
                 {

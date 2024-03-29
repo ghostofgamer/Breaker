@@ -12,8 +12,8 @@ namespace Bricks.LevelBricksMoving.Level8b
         [SerializeField] private PlatformaMover _platformaMover;
 
         private float _startZPosition;
+        private Vector3 _position;
         private Vector3 _targetPosition;
-        private float _directionRotate;
         private bool _movingToStartPosition;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.1f);
 
@@ -28,18 +28,18 @@ namespace Bricks.LevelBricksMoving.Level8b
         {
             while (IsWork)
             {
-                var position = transform.position;
-                Vector3 targetPosition = _movingToStartPosition
-                    ? new Vector3(position.x, position.y, _startZPosition)
-                    : new Vector3(position.x, position.y, _startZPosition + _movementDistance);
+                _position = transform.position;
+                _targetPosition = _movingToStartPosition
+                    ? new Vector3(_position.x, _position.y, _startZPosition)
+                    : new Vector3(_position.x, _position.y, _startZPosition + _movementDistance);
 
-                position = Vector3.MoveTowards(position, targetPosition, _movementSpeed * Time.deltaTime);
-                transform.position = position;
+                _position = Vector3.MoveTowards(_position, _targetPosition, _movementSpeed * Time.deltaTime);
+                transform.position = _position;
 
                 if (_platformaMover != null)
                     transform.Rotate(0, -_platformaMover.DirectionX * _rotateSpeed, 0);
 
-                if (transform.position == targetPosition)
+                if (transform.position == _targetPosition)
                 {
                     yield return _waitForSeconds;
                     _movingToStartPosition = !_movingToStartPosition;
