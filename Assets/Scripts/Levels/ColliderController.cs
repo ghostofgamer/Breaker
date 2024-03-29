@@ -9,7 +9,7 @@ namespace Levels
         public void SetValue(bool enabledValue)
         {
             foreach (var level in _levels)
-                level.GetComponent<BoxCollider>().enabled = enabledValue;
+                level.SetValueCollider(enabledValue);
         }
     }
 }

@@ -14,11 +14,11 @@ namespace ModificationFiles.EffectApplierFiles
             switch (buffType)
             {
                 case BuffType.Random:
-                    _randomEffect.ApplyModification();
+                    _randomEffect.OnApplyModification();
                     break;
 
                 case BuffType.Reset:
-                    _resetModifications.ApplyModification();
+                    _resetModifications.OnApplyModification();
                     break;
             }
         }

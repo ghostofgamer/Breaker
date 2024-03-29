@@ -1,15 +1,12 @@
-using UnityEngine.SceneManagement;
-
 namespace ADS
 {
-    public class FullAdContinue : FullAds
+    public class FullAdContinue : FullAdOverScene
     {
-        private const string MainScene = "ChooseLvlScene";
+        private const string ChooseLvlScene = "ChooseLvlScene";
 
-        protected override void OnClose(bool isClosed)
+        protected override string GetScenenameToLoad()
         {
-            base.OnClose(isClosed);
-            SceneManager.LoadScene(MainScene);
+            return ChooseLvlScene;
         }
     }
 }

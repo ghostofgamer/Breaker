@@ -20,21 +20,21 @@ namespace ModificationFiles
         
         private void OnEnable()
         {
-            _brickCounter.BricksDestructionHelp += SpawnLaser;
-            _reviveScreen.Revive += SpawnLaser;
-            _brickCounter.AllBrickDestroy += SpawnOver;
-            _ballTrigger.Dying += SpawnOver;
+            _brickCounter.BricksDestructionHelping += OnSpawnLaser;
+            _reviveScreen.Reviving += OnSpawnLaser;
+            _brickCounter.AllBrickDestroyed += OnSpawnOver;
+            _ballTrigger.Dying += OnSpawnOver;
         }
 
         private void OnDisable()
         {
-            _brickCounter.BricksDestructionHelp -= SpawnLaser;
-            _brickCounter.AllBrickDestroy -= SpawnOver;
-            _reviveScreen.Revive -= SpawnLaser;
-            _ballTrigger.Dying -= SpawnOver;
+            _brickCounter.BricksDestructionHelping -= OnSpawnLaser;
+            _brickCounter.AllBrickDestroyed -= OnSpawnOver;
+            _reviveScreen.Reviving -= OnSpawnLaser;
+            _ballTrigger.Dying -= OnSpawnOver;
         }
 
-        private void SpawnOver()
+        private void OnSpawnOver()
         {
             _isWork = false;
             
@@ -42,7 +42,7 @@ namespace ModificationFiles
                 StopCoroutine(_coroutine);
         }
 
-        private void SpawnLaser()
+        private void OnSpawnLaser()
         {
             if (_brickCounter.BrickCount > _brickCounter.RemainingAmountHelp)
                 return;

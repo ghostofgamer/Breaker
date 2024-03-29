@@ -1,15 +1,12 @@
-using UnityEngine.SceneManagement;
-
 namespace ADS
 {
-    public class FullAdExit : FullAds
+    public class FullAdExit : FullAdOverScene
     {
         private const string MainScene = "MainScene";
 
-        protected override void OnClose(bool isClosed)
+        protected override string GetScenenameToLoad()
         {
-            base.OnClose(isClosed);
-            SceneManager.LoadScene(MainScene);
+            return MainScene;
         }
     }
 }

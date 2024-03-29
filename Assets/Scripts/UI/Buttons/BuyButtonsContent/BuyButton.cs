@@ -18,18 +18,18 @@ namespace UI.Buttons.BuyButtonsContent
         protected override void OnEnable()
         {
             base.OnEnable();
-            _wallet.ValueChanged += CheckSolvency;
+            _wallet.ValueChanged += OnCheckSolvency;
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
-            _wallet.ValueChanged += CheckSolvency;
+            _wallet.ValueChanged += OnCheckSolvency;
         }
 
         private void Start()
         {
-            CheckSolvency();
+            OnCheckSolvency();
         }
 
         protected override void OnClick()
@@ -51,7 +51,7 @@ namespace UI.Buttons.BuyButtonsContent
         {
         }
 
-        private void CheckSolvency()
+        private void OnCheckSolvency()
         {
             if (_wallet.Money < _price)
                 _priceTxt.color = _color;

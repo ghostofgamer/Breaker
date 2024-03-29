@@ -10,12 +10,12 @@ namespace PlayerFiles.ModificationContent
 
         private void OnEnable()
         {
-            _ballTrigger.Bounce += OnSetValue;
+            _ballTrigger.Bounced += OnSetValue;
         }
 
         private void OnDisable()
         {
-            _ballTrigger.Bounce -= OnSetValue;
+            _ballTrigger.Bounced -= OnSetValue;
         }
 
         private bool TryActivatedElectricEffect()

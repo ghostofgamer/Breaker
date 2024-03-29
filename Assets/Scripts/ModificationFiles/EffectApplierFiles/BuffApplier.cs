@@ -19,31 +19,31 @@ namespace ModificationFiles.EffectApplierFiles
             switch (buffType)
             {
                 case BuffType.PaddleGrow:
-                    _paddleGrow.ApplyModification();
+                    _paddleGrow.OnApplyModification();
                     break;
 
                 case BuffType.BallGrow:
-                    _ballGrow.ApplyModification();
+                    _ballGrow.OnApplyModification();
                     break;
 
                 case BuffType.Laser:
-                    _laser.ApplyModification();
+                    _laser.OnApplyModification();
                     break;
 
                 case BuffType.Shield:
-                    _shield.ApplyModification();
+                    _shield.OnApplyModification();
                     break;
 
                 case BuffType.Mirror:
-                    _mirror.ApplyModification();
+                    _mirror.OnApplyModification();
                     break;
 
                 case BuffType.Portal:
-                    _portal.ApplyModification();
+                    _portal.OnApplyModification();
                     break;
 
                 case BuffType.BonusTarget:
-                    _bonusTarget.ApplyModification();
+                    _bonusTarget.OnApplyModification();
                     break;
             }
         }

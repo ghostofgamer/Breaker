@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level2
 {
-    public class ImpulseMovement : BrickTriggerController
+    public class ImpulseMovement : BrickTrigger
     {
         [SerializeField] private float _moveDistanceForward;
         [SerializeField] private float _moveDistanceBack;
@@ -36,7 +36,7 @@ namespace Bricks.LevelBricksMoving.Level2
             _coroutine = StartCoroutine(MoveBetweenTargetsCoroutine());
         }
 
-        protected override void SetValue()
+        protected override void OnShutdown()
         {
             GiveImpulse(_direction, _minValue, _maxValue);
             _isWork = false;

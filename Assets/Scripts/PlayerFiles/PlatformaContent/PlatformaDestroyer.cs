@@ -23,13 +23,13 @@ namespace PlayerFiles.PlatformaContent
 
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestroy += OnVictoriousDestruction;
+            _brickCounter.AllBrickDestroyed += OnVictoriousDestruction;
             _ballTrigger.Dying += OnLosingDestruction;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestroy -= OnVictoriousDestruction;
+            _brickCounter.AllBrickDestroyed -= OnVictoriousDestruction;
             _ballTrigger.Dying -= OnLosingDestruction;
         }
 

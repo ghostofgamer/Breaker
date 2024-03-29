@@ -4,7 +4,7 @@ namespace ModificationFiles.DebuffsFiles
 {
     public class Reverse : Modification
     {
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {

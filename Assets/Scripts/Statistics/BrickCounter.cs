@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Statistics
 {
@@ -12,9 +12,9 @@ namespace Statistics
         private int _score = 5;
         private bool _isRemainingActivated;
 
-        public event UnityAction AllBrickDestroy;
+        public event Action AllBrickDestroyed;
 
-        public event UnityAction BricksDestructionHelp;
+        public event Action BricksDestructionHelping;
 
         public int RemainingAmountHelp { get; private set; } = 3;
 
@@ -31,7 +31,7 @@ namespace Statistics
             {
                 if (!_isRemainingActivated)
                 {
-                    BricksDestructionHelp?.Invoke();
+                    BricksDestructionHelping?.Invoke();
                     _isRemainingActivated = true;
                 }
             }
@@ -47,7 +47,7 @@ namespace Statistics
         public void CheckAliveBrickCount()
         {
             if (BrickCount <= 0)
-                AllBrickDestroy?.Invoke();
+                AllBrickDestroyed?.Invoke();
         }
 
         public int GetAmountSmashed()

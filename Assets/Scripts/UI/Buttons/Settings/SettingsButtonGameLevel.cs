@@ -19,17 +19,17 @@ namespace UI.Buttons.Settings
         protected override void OnEnable()
         {
             base.OnEnable();
-            _brickCounter.AllBrickDestroy += SetValue;
+            _brickCounter.AllBrickDestroyed += SetValue;
             _ball.Dying += SetValue;
-            _reviveScreen.Revive += SetValue;
+            _reviveScreen.Reviving += SetValue;
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
-            _brickCounter.AllBrickDestroy -= SetValue;
+            _brickCounter.AllBrickDestroyed -= SetValue;
             _ball.Dying -= SetValue;
-            _reviveScreen.Revive -= SetValue;
+            _reviveScreen.Reviving -= SetValue;
         }
 
         public void SetValue()

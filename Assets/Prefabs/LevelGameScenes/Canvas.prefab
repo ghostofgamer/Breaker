@@ -3226,6 +3226,7 @@ GameObject:
   - component: {fileID: 1607232668286733102}
   - component: {fileID: 2574003740480796037}
   - component: {fileID: 2681013385062439723}
+  - component: {fileID: 319167446600915122}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -3498,6 +3499,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 998172604760118437}
+--- !u!225 &319167446600915122
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371272128230178085}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1389718246895692599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,6 +3675,7 @@ GameObject:
   - component: {fileID: 8001881076973977522}
   - component: {fileID: 2053137642196416551}
   - component: {fileID: 8061361962831673524}
+  - component: {fileID: 5715089509495846979}
   m_Layer: 5
   m_Name: ClaimButton
   m_TagString: Untagged
@@ -3907,6 +3921,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &5715089509495846979
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470304794576753997}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1477083728043370527
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,6 +7432,7 @@ GameObject:
   - component: {fileID: 897855500484535551}
   - component: {fileID: 7097918835049674122}
   - component: {fileID: 8071904641522231261}
+  - component: {fileID: 8078554202982911264}
   m_Layer: 5
   m_Name: TryAgainButton
   m_TagString: Untagged
@@ -7627,6 +7654,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &8078554202982911264
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904981611017204117}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2984266576443116135
 GameObject:
   m_ObjectHideFlags: 0
@@ -7716,6 +7755,7 @@ GameObject:
   - component: {fileID: 1045195854352135938}
   - component: {fileID: 4105164336978114130}
   - component: {fileID: 3353818370313618983}
+  - component: {fileID: 2729928987031201352}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -7940,6 +7980,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &2729928987031201352
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3013022067898472972}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3042497514718927574
 GameObject:
   m_ObjectHideFlags: 0
@@ -8064,6 +8116,7 @@ GameObject:
   - component: {fileID: 1429902041884169674}
   - component: {fileID: 3529353558983341134}
   - component: {fileID: 197978665532730324}
+  - component: {fileID: 7297190567382026677}
   m_Layer: 5
   m_Name: EndPosition
   m_TagString: Untagged
@@ -8212,6 +8265,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &7297190567382026677
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070826715450003280}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3079210174044098738
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,7 +8995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd0d99d80087ab4e885c36b08daa3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startMoney: 50000
   _moneyText: {fileID: 813641883895592263}
   _save: {fileID: 0}
   _load: {fileID: 0}
@@ -12721,6 +12785,7 @@ GameObject:
   - component: {fileID: 7836207135192941531}
   - component: {fileID: 1830965437910760901}
   - component: {fileID: 6832873772439158380}
+  - component: {fileID: 4660379400652583721}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -12939,6 +13004,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &4660379400652583721
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464760180141829377}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4481957704547655856
 GameObject:
   m_ObjectHideFlags: 0
@@ -14733,6 +14810,7 @@ GameObject:
   - component: {fileID: 8374158338755737095}
   - component: {fileID: 7241631801024066654}
   - component: {fileID: 1523960365520843853}
+  - component: {fileID: 537924287324531026}
   m_Layer: 5
   m_Name: EndPosition
   m_TagString: Untagged
@@ -14881,6 +14959,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &537924287324531026
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5033161801140855930}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5059493466243190757
 GameObject:
   m_ObjectHideFlags: 0
@@ -15476,6 +15566,7 @@ GameObject:
   - component: {fileID: 3042867757950347644}
   - component: {fileID: 8528168358429714132}
   - component: {fileID: 6520338372960363499}
+  - component: {fileID: 7220964929416660649}
   m_Layer: 5
   m_Name: TryAgainButton
   m_TagString: Untagged
@@ -15697,6 +15788,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &7220964929416660649
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130362904096942848}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5150449143692265835
 GameObject:
   m_ObjectHideFlags: 0
@@ -16711,6 +16814,7 @@ GameObject:
   - component: {fileID: 2882469316990701265}
   - component: {fileID: 9102288591606688444}
   - component: {fileID: 3302836249093360764}
+  - component: {fileID: 7055781599621133493}
   m_Layer: 5
   m_Name: EndPosition
   m_TagString: Untagged
@@ -16859,6 +16963,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &7055781599621133493
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512635973875147849}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5532140318679337995
 GameObject:
   m_ObjectHideFlags: 0
@@ -17208,6 +17324,7 @@ GameObject:
   - component: {fileID: 6425250502005817480}
   - component: {fileID: 4687827242442275243}
   - component: {fileID: 6555440557526298916}
+  - component: {fileID: 4646096722057769556}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -17459,6 +17576,18 @@ MonoBehaviour:
   _amountTxt: {fileID: 0}
   _load: {fileID: 0}
   _save: {fileID: 0}
+--- !u!225 &4646096722057769556
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572624786582967462}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5597942294192704799
 GameObject:
   m_ObjectHideFlags: 0
@@ -18648,6 +18777,7 @@ GameObject:
   - component: {fileID: 3365989629476220052}
   - component: {fileID: 329079315626470286}
   - component: {fileID: 4854341996589445664}
+  - component: {fileID: 2605748468638168481}
   m_Layer: 5
   m_Name: EndPosition
   m_TagString: Untagged
@@ -18796,6 +18926,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &2605748468638168481
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053705654138763920}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6127142905740468696
 GameObject:
   m_ObjectHideFlags: 0
@@ -19233,6 +19375,7 @@ GameObject:
   - component: {fileID: 3674066964573251463}
   - component: {fileID: 4163196199194104052}
   - component: {fileID: 7120843071829036041}
+  - component: {fileID: 6518212056434110247}
   m_Layer: 5
   m_Name: EndPosition
   m_TagString: Untagged
@@ -19381,6 +19524,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &6518212056434110247
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223464993023705251}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6250867860891247158
 GameObject:
   m_ObjectHideFlags: 0
@@ -21681,6 +21836,7 @@ GameObject:
   - component: {fileID: 5781244721472948345}
   - component: {fileID: 6006459169210579227}
   - component: {fileID: 8887920522377767798}
+  - component: {fileID: 7787560307405772587}
   m_Layer: 5
   m_Name: ClaimRewardButton
   m_TagString: Untagged
@@ -21848,6 +22004,7 @@ MonoBehaviour:
   _claimRewardButton: {fileID: 5781244721472948345}
   _levelComplite: {fileID: 1284111574594062255}
   _victoryScreen: {fileID: 674575301682081545}
+  _button: {fileID: 4225071841306260316}
 --- !u!82 &8887920522377767798
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21944,6 +22101,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &7787560307405772587
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059865683942360948}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7074927895533718900
 GameObject:
   m_ObjectHideFlags: 0
@@ -24954,6 +25123,7 @@ GameObject:
   - component: {fileID: 6552075497991523768}
   - component: {fileID: 4184514840733917710}
   - component: {fileID: 593993744671176731}
+  - component: {fileID: 1131426994312006103}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -25075,6 +25245,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fccc3e0de092845b18fcc3f88ec44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1131426994312006103
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8274748448498133662}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8289401566879070850
 GameObject:
   m_ObjectHideFlags: 0
@@ -26881,6 +27063,7 @@ GameObject:
   - component: {fileID: 1041149232831946882}
   - component: {fileID: 3560328898534547770}
   - component: {fileID: 8270842514970779010}
+  - component: {fileID: 3548000446438541563}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -27132,6 +27315,18 @@ MonoBehaviour:
   _amountTxt: {fileID: 0}
   _load: {fileID: 0}
   _save: {fileID: 0}
+--- !u!225 &3548000446438541563
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8780508438688066078}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8826069475268223933
 GameObject:
   m_ObjectHideFlags: 0
@@ -27513,6 +27708,7 @@ GameObject:
   - component: {fileID: 7836851171216775016}
   - component: {fileID: 301338926255387493}
   - component: {fileID: 4643872283273265954}
+  - component: {fileID: 6050288159496126294}
   m_Layer: 5
   m_Name: AdButton
   m_TagString: Untagged
@@ -27636,11 +27832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5564c28b1a9cbe74eae2cb6084a66997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reviveScreen: {fileID: 4753488500654358166}
-  _sceneLoader: {fileID: 0}
-  _brickCounter: {fileID: 0}
-  _rewardRevive: {fileID: 301338926255387493}
   _audioSource: {fileID: 4643872283273265954}
+  _rewardRevive: {fileID: 301338926255387493}
 --- !u!114 &301338926255387493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27653,10 +27846,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751bce2735cffbf4bbf5784c75e37d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reviveButton: {fileID: 7836851171216775016}
   _reviveScreen: {fileID: 4753488500654358166}
   _sceneLoader: {fileID: 0}
   _brickCounter: {fileID: 0}
+  _button: {fileID: 9184684735961166815}
 --- !u!82 &4643872283273265954
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27753,6 +27946,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &6050288159496126294
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877538111234052343}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8890734727961635408
 GameObject:
   m_ObjectHideFlags: 0
@@ -28100,6 +28305,7 @@ GameObject:
   - component: {fileID: 1219281071810942813}
   - component: {fileID: 4797859436867005562}
   - component: {fileID: 8400173564411999251}
+  - component: {fileID: 396226649207102825}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -28323,6 +28529,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &396226649207102825
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8917577903418062067}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8960542244002701968
 GameObject:
   m_ObjectHideFlags: 0
@@ -28412,6 +28630,7 @@ GameObject:
   - component: {fileID: 6364924652976475511}
   - component: {fileID: 4415539368141064212}
   - component: {fileID: 6300088563306161924}
+  - component: {fileID: 3679643422636670151}
   m_Layer: 5
   m_Name: EndPosition
   m_TagString: Untagged
@@ -28560,6 +28779,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &3679643422636670151
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8972084485114227293}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9039948097283219116
 GameObject:
   m_ObjectHideFlags: 0

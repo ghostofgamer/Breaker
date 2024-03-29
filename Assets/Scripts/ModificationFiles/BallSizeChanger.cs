@@ -10,7 +10,7 @@ namespace ModificationFiles
         
         [SerializeField] private Vector3 _standardScale;
 
-        protected IEnumerator OnBallChangeSize(BallMover ballMover)
+        protected IEnumerator Resize(BallMover ballMover)
         {
             SetActive(true);
             Change();

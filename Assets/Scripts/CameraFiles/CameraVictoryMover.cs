@@ -10,34 +10,34 @@ namespace CameraFiles
     {
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private ReviveScreen _reviveScreen;
-        [SerializeField] private AnimationsController _animationsController;
+        [SerializeField] private AnimationsActivator _animationsActivator;
         [SerializeField] private Animator _animator;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
 
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestroy += Move;
+            _brickCounter.AllBrickDestroyed += OnMove;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestroy -= Move;
+            _brickCounter.AllBrickDestroyed -= OnMove;
         }
 
-        private void Move()
+        private void OnMove()
         {
             if (_reviveScreen.IsLose)
                 return;
 
-            StartCoroutine(OnMove());
+            StartCoroutine(Move());
         }
 
-        private IEnumerator OnMove()
+        private IEnumerator Move()
         {
             _animator.enabled = true;
             yield return _waitForSeconds;
-            _animationsController.PlayVictory();
+            _animationsActivator.PlayVictory();
         }
     }
 }

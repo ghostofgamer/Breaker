@@ -2,14 +2,14 @@ namespace ModificationFiles.DebuffsFiles
 {
     public class PaddleShrinkBuff : PaddleChanger
     {
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                Coroutine = StartCoroutine(OnPaddleSizeChanger());
+                Coroutine = StartCoroutine(Resize());
                 ShowNameEffect();
             }
         }

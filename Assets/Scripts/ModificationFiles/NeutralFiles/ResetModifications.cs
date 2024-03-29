@@ -12,17 +12,17 @@ namespace ModificationFiles.NeutralFiles
 
         private void OnEnable()
         {
-            _ball.Dying += ApplyModification;
-            _brickCounter.AllBrickDestroy += ApplyModification;
+            _ball.Dying += OnApplyModification;
+            _brickCounter.AllBrickDestroyed += OnApplyModification;
         }
 
         private void OnDisable()
         {
-            _ball.Dying -= ApplyModification;
-            _brickCounter.AllBrickDestroy -= ApplyModification;
+            _ball.Dying -= OnApplyModification;
+            _brickCounter.AllBrickDestroyed -= OnApplyModification;
         }
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             List<Modification> modifications = Player.Modifications;
 

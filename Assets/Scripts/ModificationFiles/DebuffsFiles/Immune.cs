@@ -13,7 +13,7 @@ namespace ModificationFiles.DebuffsFiles
         private List<Transform> _bricks;
         private List<Transform> _filtredBricks;
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {

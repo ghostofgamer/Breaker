@@ -1,7 +1,7 @@
+using System;
 using ModificationFiles;
 using Statistics;
 using UnityEngine;
-using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace Bricks
@@ -29,10 +29,10 @@ namespace Bricks
         private int _factor = 2;
         protected bool IsTargetBonus;
 
-        public event UnityAction Dead;
+        public event Action Dead;
 
         public Effect EffectElement => Effect;
-        
+
         public bool IsEternal => _isEternal;
 
         private void Start()
@@ -55,7 +55,7 @@ namespace Bricks
             _fragmentsCounter = fragmentsCounter;
         }
 
-        public void GetBonus()
+        public void DropBonus()
         {
             if (!IsBonus)
                 return;
@@ -84,7 +84,7 @@ namespace Bricks
             IsTargetBonus = activation;
         }
 
-        protected void GetBuff()
+        protected void DropBuff()
         {
             if (Effect == null)
                 return;
@@ -103,9 +103,9 @@ namespace Bricks
             BrickDie();
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;
-            GetBuff();
+            DropBuff();
             BrickCounter.ChangeValue(Reward);
-            GetBonus();
+            DropBonus();
             gameObject.SetActive(false);
         }
 

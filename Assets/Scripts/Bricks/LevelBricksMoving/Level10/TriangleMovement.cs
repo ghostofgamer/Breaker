@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level10
 {
-    public class TriangleMovement : MotionController
+    public class TriangleMovement : WorkChanger
     {
         [SerializeField] private float _movementSpeed;
         [SerializeField] private PlatformaMover _platformaMover;

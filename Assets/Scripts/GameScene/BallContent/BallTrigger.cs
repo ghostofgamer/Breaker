@@ -1,6 +1,6 @@
+using System;
 using PlayerFiles.PlatformaContent;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace GameScene.BallContent
 {
@@ -17,9 +17,9 @@ namespace GameScene.BallContent
         private float _valueEnableFastSpeed = 0.5f;
         private float _valuePush = 0.3f;
 
-        public event UnityAction Dying;
+        public event Action Dying;
 
-        public event UnityAction Bounce;
+        public event Action Bounced;
 
         private void OnCollisionEnter(Collision other)
         {
@@ -27,7 +27,7 @@ namespace GameScene.BallContent
             {
                 Dying?.Invoke();
                 gameObject.SetActive(false);
-                GetComponent<Ball>().StopMove();
+                GetComponent<Ball>().OnStopMove();
                 Time.timeScale = 1;
             }
 
@@ -35,7 +35,7 @@ namespace GameScene.BallContent
             {
                 float mouse = Input.GetAxis(MouseX) * _factor;
                 float mouseY = Input.GetAxis(MouseY);
-                Bounce?.Invoke();
+                Bounced?.Invoke();
                 _audioSource.PlayOneShot(_audioSource.clip);
                 ContactPoint contact = other.contacts[0];
                 Vector3 newVector = new Vector3(mouse, 0, mouseY).normalized;
@@ -57,7 +57,7 @@ namespace GameScene.BallContent
             {
                 if (hit.collider.gameObject.TryGetComponent(out PlatformaMover platformaMover))
                 {
-                    Bounce?.Invoke();
+                    Bounced?.Invoke();
                     _audioSource.PlayOneShot(_audioSource.clip);
                     ChangeDirection(newVector, hit.normal);
                 }
@@ -72,7 +72,7 @@ namespace GameScene.BallContent
             if (vector.z > _valueEnableFastSpeed)
             {
                 _ballMover.SetDirection(new Vector3(reflect.x, reflect.y, reflect.z + vector.z).normalized);
-                _ballMover.FastSpeed();
+                _ballMover.IncreaseSpeed();
             }
             else
             {

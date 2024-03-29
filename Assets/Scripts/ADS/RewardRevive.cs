@@ -8,14 +8,13 @@ using UnityEngine.UI;
 
 namespace ADS
 {
-    [RequireComponent(typeof(Button))]
     public class RewardRevive : RewardVideo
     {
-        [SerializeField] private ReviveButton _reviveButton;
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private SceneLoader _sceneLoader;
         [SerializeField] private BrickCounter _brickCounter;
-
+        [SerializeField] private Button _button;
+        
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private Coroutine _coroutine;
 
@@ -30,7 +29,7 @@ namespace ADS
         protected override void OnClose()
         {
             base.OnClose();
-            _reviveButton.GetComponent<Button>().interactable = true;
+            _button.interactable = true;
         }
 
         private IEnumerator Revive()

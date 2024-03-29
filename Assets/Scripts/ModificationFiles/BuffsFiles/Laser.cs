@@ -29,7 +29,7 @@ namespace ModificationFiles.BuffsFiles
             }
         }
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {

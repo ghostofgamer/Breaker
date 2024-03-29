@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level8b
 {
-    public class CyclicalCircualMovement : MotionController
+    public class CyclicalCircualMovement : WorkChanger
     {
         [SerializeField] private float _movementSpeed;
         [SerializeField] private float _rotateSpeed;

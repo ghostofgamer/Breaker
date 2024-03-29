@@ -17,7 +17,7 @@ namespace PlayerFiles.PlatformaContent
             _platformaMover = GetComponent<PlatformaMover>();
         }
 
-        public void Revive()
+        public void GetLife()
         {
             transform.position = new Vector3(0, _positionY, _positionZ);
             _loseEffect.transform.parent = gameObject.transform;

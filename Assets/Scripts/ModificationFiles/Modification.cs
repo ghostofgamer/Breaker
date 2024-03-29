@@ -47,7 +47,7 @@ namespace ModificationFiles
             WaitForSeconds = new WaitForSeconds(Duration);
         }
 
-        public abstract void ApplyModification();
+        public abstract void OnApplyModification();
 
         public abstract void StopModification();
 

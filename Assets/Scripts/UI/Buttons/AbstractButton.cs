@@ -27,7 +27,7 @@ namespace UI.Buttons
             _button.onClick.RemoveListener(OnClick);
         }
 
-        public void CanvasValue(int alpha)
+        public void SetCanvasValue(int alpha)
         {
             _canvasGroup.alpha = alpha;
             _canvasGroup.interactable = alpha > 0;

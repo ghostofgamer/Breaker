@@ -18,7 +18,7 @@ namespace ModificationFiles.DebuffsFiles
 
         private float _localScale = 0.02f;
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {

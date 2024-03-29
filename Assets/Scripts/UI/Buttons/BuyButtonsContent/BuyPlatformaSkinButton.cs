@@ -6,11 +6,11 @@ namespace UI.Buttons.BuyButtonsContent
     public class BuyPlatformaSkinButton : BuyButton
     {
         [SerializeField] private int _index;
-        [SerializeField] private PlatformaSkinShop _platformaSkinShop;
+        [SerializeField] private PlatformStore _platformStore;
 
         protected override void Buy()
         {
-            _platformaSkinShop.BuyCapsuleSkin(_index);
+            _platformStore.BuyCapsuleSkin(_index);
         }
     }
 }

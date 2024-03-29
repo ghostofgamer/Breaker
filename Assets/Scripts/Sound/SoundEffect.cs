@@ -24,18 +24,18 @@ namespace Sound
 
         private void OnEnable()
         {
-            _ballTrigger.Dying += PlayDieSound;
-            _reviveScreen.Lose += StopCountDown;
-            _reviveScreen.Revive += StopCountDown;
-            _brickCounter.AllBrickDestroy += PlayVictorySound;
+            _ballTrigger.Dying += OnPlayDieSound;
+            _reviveScreen.Losed += OnStopCountDown;
+            _reviveScreen.Reviving += OnStopCountDown;
+            _brickCounter.AllBrickDestroyed += OnPlayVictorySound;
         }
 
         private void OnDisable()
         {
-            _ballTrigger.Dying -= PlayDieSound;
-            _reviveScreen.Lose -= StopCountDown;
-            _reviveScreen.Revive -= StopCountDown;
-            _brickCounter.AllBrickDestroy -= PlayVictorySound;
+            _ballTrigger.Dying -= OnPlayDieSound;
+            _reviveScreen.Losed -= OnStopCountDown;
+            _reviveScreen.Reviving -= OnStopCountDown;
+            _brickCounter.AllBrickDestroyed -= OnPlayVictorySound;
         }
 
         public void PlayCountDownSound()
@@ -43,12 +43,12 @@ namespace Sound
             _coroutine = StartCoroutine(CountDown());
         }
 
-        private void PlayDieSound()
+        private void OnPlayDieSound()
         {
             _audioSource.PlayOneShot(_audioClipDiePlatform);
         }
 
-        private void StopCountDown()
+        private void OnStopCountDown()
         {
             StopCoroutine(_coroutine);
         }
@@ -64,7 +64,7 @@ namespace Sound
             }
         }
 
-        private void PlayVictorySound()
+        private void OnPlayVictorySound()
         {
             if (_reviveScreen.IsLose)
                 return;

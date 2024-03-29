@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using GameScene.BallContent;
 using PlayerFiles.ModificationContent;
 using Sound;
 using Statistics;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace UI.Screens.EndScreens
@@ -24,23 +24,23 @@ namespace UI.Screens.EndScreens
         private float _elapsedTime;
         private Coroutine _coroutine;
 
-        public event UnityAction Revive;
+        public event Action Reviving;
         
-        public event UnityAction Lose;
+        public event Action Losed;
 
         public bool IsLose { get; private set; }
 
         private void OnEnable()
         {
-            _ball.Dying += Open;
+            _ball.Dying += OnOpen;
         }
 
         private void OnDisable()
         {
-            _ball.Dying -= Open;
+            _ball.Dying -= OnOpen;
         }
 
-        public override void Open()
+        public override void OnOpen()
         {
             if (_luckySave.enabled)
             {
@@ -56,7 +56,7 @@ namespace UI.Screens.EndScreens
         public void ChooseRevive()
         {
             IsLose = false;
-            Revive?.Invoke();
+            Reviving?.Invoke();
             StopCoroutine(_coroutine);
             Close();
             _uiAnimationsWallet.Close();
@@ -64,7 +64,7 @@ namespace UI.Screens.EndScreens
 
         public void ChooseLose()
         {
-            Lose?.Invoke();
+            Losed?.Invoke();
             StartCoroutine(SetActiveScreens());
         }
 
@@ -73,7 +73,7 @@ namespace UI.Screens.EndScreens
             _elapsedTime = 0;
             _slider.value = 1;
             yield return _waitForSeconds;
-            base.Open();
+            base.OnOpen();
             _uiAnimationsWallet.Open();
             yield return _waitForSeconds;
             float startValue = _slider.value;
@@ -88,11 +88,11 @@ namespace UI.Screens.EndScreens
 
             _slider.value = endValue;
             Close();
-            Lose?.Invoke();
+            Losed?.Invoke();
             _uiAnimationsWallet.Close();
             _bonusCounter.BringToZero();
             yield return _waitForSeconds;
-            _gameOverScreen.Open();
+            _gameOverScreen.OnOpen();
         }
 
         private IEnumerator SetActiveScreens()
@@ -102,7 +102,7 @@ namespace UI.Screens.EndScreens
             _uiAnimationsWallet.Close();
             _bonusCounter.BringToZero();
             yield return _waitForSeconds;
-            _gameOverScreen.Open();
+            _gameOverScreen.OnOpen();
         }
     }
 }

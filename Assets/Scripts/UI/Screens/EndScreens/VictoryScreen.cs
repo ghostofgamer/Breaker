@@ -53,7 +53,7 @@ namespace UI.Screens.EndScreens
         private IEnumerator EnableScreenMove(int credits)
         {
             yield return _waitForSeconds;
-            Open();
+            OnOpen();
             yield return _waitForSeconds;
             SetValue(credits);
 

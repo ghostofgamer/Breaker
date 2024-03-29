@@ -6,10 +6,10 @@ using UnityEngine;
 
 namespace Levels
 {
+    [RequireComponent(typeof(BoxCollider))]
     public class Level : MonoBehaviour
     {
-        [Header("Particles")]
-        [SerializeField] private ParticleSystem _dontSelectedCircle;
+        [Header("Particles")] [SerializeField] private ParticleSystem _dontSelectedCircle;
         [SerializeField] private ParticleSystem _selectedCircle;
         [SerializeField] private ParticleSystem[] _effectsSelect;
         [SerializeField] private ParticleSystem[] _line;
@@ -27,10 +27,16 @@ namespace Levels
         [SerializeField] private ShopScreen _shopScreen;
 
         private LevelState _state;
+        private BoxCollider _boxCollider;
 
         public Level[] Nextlevel => _nextLevel;
 
         public int Index => _index;
+
+        private void Start()
+        {
+            _boxCollider = GetComponent<BoxCollider>();
+        }
 
         private void OnMouseDown()
         {
@@ -74,6 +80,11 @@ namespace Levels
             }
         }
 
+        public void SetValueCollider(bool flag)
+        {
+            _boxCollider.enabled = flag;
+        }
+        
         public void StopParticles()
         {
             _selectedCircle.Stop();

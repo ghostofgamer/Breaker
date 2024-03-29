@@ -1,40 +1,43 @@
 using System.Collections;
 using ModificationFiles;
 
-public class SpeedUp : Modification
+namespace ModificationFiles.DebuffsFiles
 {
-    private float _startSpeed;
-
-    public override void ApplyModification()
+    public class SpeedUp : Modification
     {
-        if (Player.TryApplyEffect(this))
+        private float _startSpeed;
+
+        public override void ApplyModification()
         {
-            if (Coroutine != null)
-                StopCoroutine(Coroutine);
+            if (Player.TryApplyEffect(this))
+            {
+                if (Coroutine != null)
+                    StopCoroutine(Coroutine);
 
-            StartCoroutine(OnSpeedUpActivated());
-            ShowNameEffect();
+                StartCoroutine(OnSpeedUpActivated());
+                ShowNameEffect();
+            }
         }
-    }
 
-    public override void StopModification()
-    {
-        Stop();
-    }
+        public override void StopModification()
+        {
+            Stop();
+        }
 
-    private void Stop()
-    {
-        SetActive(false);
-        BallMover.SetValue(_startSpeed,false);
-    }
+        private void Stop()
+        {
+            SetActive(false);
+            BallMover.SetValue(_startSpeed, false);
+        }
 
-    private IEnumerator OnSpeedUpActivated()
-    {
-        SetActive(true);
-        _startSpeed = BallMover.MinSpeed;
-        BallMover.SetValue(_startSpeed * 2,true);
-        yield return WaitForSeconds;
-        Stop();
-        Player.DeleteEffect(this);
+        private IEnumerator OnSpeedUpActivated()
+        {
+            SetActive(true);
+            _startSpeed = BallMover.MinSpeed;
+            BallMover.SetValue(_startSpeed * 2, true);
+            yield return WaitForSeconds;
+            Stop();
+            Player.DeleteEffect(this);
+        }
     }
 }

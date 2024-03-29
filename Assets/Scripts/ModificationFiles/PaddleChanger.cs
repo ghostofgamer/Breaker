@@ -17,7 +17,7 @@ namespace ModificationFiles
             _standardScale = PlatformaMover.transform.localScale;
         }
 
-        protected IEnumerator OnPaddleSizeChanger()
+        protected IEnumerator Resize()
         {
             SetActive(true);
             Change();

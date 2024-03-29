@@ -20,7 +20,7 @@ namespace CameraFiles
         {
             foreach (var brick in _brickExplosions)
             {
-                brick.Dead += Shake;
+                brick.Dead += OnShake;
             }
         }
 
@@ -28,7 +28,7 @@ namespace CameraFiles
         {
             foreach (var brick in _brickExplosions)
             {
-                brick.Dead -= Shake;
+                brick.Dead -= OnShake;
             }
         }
 
@@ -37,7 +37,7 @@ namespace CameraFiles
             _originalPosition = transform.localPosition;
         }
 
-        public void Shake()
+        public void OnShake()
         {
             StartCoroutine(ShakeCoroutine());
         }

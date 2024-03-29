@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 namespace ADS
 {
-    [RequireComponent(typeof(Button))]
     public class RewardTripleCredit : RewardVideo
     {
         [SerializeField] private ClaimRewardButton _claimRewardButton;
         [SerializeField] private LevelComplite _levelComplite;
         [SerializeField] private VictoryScreen _victoryScreen;
+        [SerializeField] private Button _button;
 
         protected override void OnReward()
         {
@@ -21,7 +21,7 @@ namespace ADS
         protected override void OnClose()
         {
             base.OnClose();
-            _claimRewardButton.GetComponent<Button>().interactable = true;
+            _button.interactable = true;
         }
     }
 }

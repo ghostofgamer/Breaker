@@ -6,9 +6,9 @@ namespace ModificationFiles.BuffsFiles
     public class Portal : Modification
     {
         [SerializeField] private GameObject _portal;
-        [SerializeField] private GameObject[] _walls;
+        [SerializeField] private BoxCollider[] _walls;
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {
@@ -37,8 +37,8 @@ namespace ModificationFiles.BuffsFiles
         {
             SetActive(value);
 
-            foreach (GameObject wall in _walls)
-                wall.GetComponent<BoxCollider>().enabled = !value;
+            foreach (BoxCollider wall in _walls)
+                wall.enabled = !value;
 
             BallMover.SetValue(value);
             _portal.SetActive(value);

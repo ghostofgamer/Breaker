@@ -12,22 +12,22 @@ namespace PlayerFiles.ModificationContent
 
         private void OnEnable()
         {
-            _ballTrigger.Bounce += TryGetShield;
+            _ballTrigger.Bounced += OnTryGetShield;
         }
 
         private void OnDisable()
         {
-            _ballTrigger.Bounce -= TryGetShield;
+            _ballTrigger.Bounced -= OnTryGetShield;
         }
 
-        private void TryGetShield()
+        private void OnTryGetShield()
         {
             RandomValue = Random.Range(MinValue, MaxValue);
 
             if (RandomValue > BonusChances)
                 return;
 
-            _shield.ApplyModification();
+            _shield.OnApplyModification();
         }
     }
 }

@@ -9,10 +9,10 @@ namespace ModificationFiles.NeutralFiles
 
         private int _index;
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             _index = Random.Range(0, _modifications.Length);
-            _modifications[_index].ApplyModification();
+            _modifications[_index].OnApplyModification();
         }
 
         public override void StopModification()

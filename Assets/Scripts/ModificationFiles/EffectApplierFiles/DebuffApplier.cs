@@ -19,31 +19,31 @@ namespace ModificationFiles.EffectApplierFiles
             switch (buffType)
             {
                 case BuffType.PaddleShrink:
-                    _paddleShrink.ApplyModification();
+                    _paddleShrink.OnApplyModification();
                     break;
 
                 case BuffType.ShrinkBall:
-                    _ballShrink.ApplyModification();
+                    _ballShrink.OnApplyModification();
                     break;
 
                 case BuffType.SpeedUp:
-                    _speedUp.ApplyModification();
+                    _speedUp.OnApplyModification();
                     break;
 
                 case BuffType.PaddleLag:
-                    _paddleLag.ApplyModification();
+                    _paddleLag.OnApplyModification();
                     break;
 
                 case BuffType.Immune:
-                    _immune.ApplyModification();
+                    _immune.OnApplyModification();
                     break;
 
                 case BuffType.MoreBrick:
-                    _moreBrick.ApplyModification();
+                    _moreBrick.OnApplyModification();
                     break;
 
                 case BuffType.Reverse:
-                    _reverse.ApplyModification();
+                    _reverse.OnApplyModification();
                     break;
             }
         }

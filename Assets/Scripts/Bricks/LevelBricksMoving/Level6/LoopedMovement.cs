@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level6
 {
-    public class LoopedMovement : BrickTriggerController
+    public class LoopedMovement : BrickTrigger
     {
         [SerializeField] private float _speed;
         [SerializeField] private float _delay;
@@ -19,9 +19,9 @@ namespace Bricks.LevelBricksMoving.Level6
             _coroutine = StartCoroutine(MoveCycle());
         }
 
-        protected override void SetValue()
+        protected override void OnShutdown()
         {
-            base.SetValue();
+            base.OnShutdown();
             _isWork = false;
             StopCoroutine(_coroutine);
         }

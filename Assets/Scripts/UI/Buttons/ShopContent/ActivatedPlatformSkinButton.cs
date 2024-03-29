@@ -5,7 +5,7 @@ namespace UI.Buttons.ShopContent
 {
     public class ActivatedPlatformSkinButton : AbstractButton
     {
-        [SerializeField] private PlatformaSkinShop _platformaSkinShop;
+        [SerializeField] private PlatformStore _platformStore;
         [SerializeField] private int _index;
         [SerializeField] private AudioSource _audioSource;
 
@@ -17,7 +17,7 @@ namespace UI.Buttons.ShopContent
         private void ActivatedSkin()
         {
             _audioSource.PlayOneShot(_audioSource.clip);
-            _platformaSkinShop.ActivateCapsuleSkin(_index);
+            _platformStore.ActivateCapsuleSkin(_index);
         }
     }
 }

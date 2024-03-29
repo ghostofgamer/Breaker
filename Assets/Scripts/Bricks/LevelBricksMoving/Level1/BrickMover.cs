@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level1
 {
-    public class BrickMover : BrickTriggerController
+    public class BrickMover : BrickTrigger
     {
         [SerializeField] private float _moveDistance;
         [SerializeField] private float _moveSpeed;

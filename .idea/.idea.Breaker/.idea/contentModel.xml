@@ -1537,6 +1537,7 @@
             <e p="Ad.cs" t="Include" />
             <e p="FullAdContinue.cs" t="Include" />
             <e p="FullAdExit.cs" t="Include" />
+            <e p="FullAdOverScene.cs" t="Include" />
             <e p="FullAds.cs" t="Include" />
             <e p="RewardRevive.cs" t="Include" />
             <e p="RewardTripleCredit.cs" t="Include" />
@@ -1555,7 +1556,7 @@
               <e p="BrickEternal.cs" t="Include" />
             </e>
             <e p="LevelBricksMoving" t="Include">
-              <e p="BrickTriggerController.cs" t="Include" />
+              <e p="BrickTrigger.cs" t="Include" />
               <e p="Level1" t="Include">
                 <e p="BrickMover.cs" t="Include" />
               </e>
@@ -1586,10 +1587,10 @@
                 <e p="CyclicalCircualMovement.cs" t="Include" />
               </e>
               <e p="Level9b" t="Include">
-                <e p="BrickRingController.cs" t="Include" />
+                <e p="RingAnimation.cs" t="Include" />
               </e>
-              <e p="MotionController.cs" t="Include" />
               <e p="ParentsChanger.cs" t="Include" />
+              <e p="WorkChanger.cs" t="Include" />
             </e>
             <e p="ShaderChanger.cs" t="Include" />
           </e>
@@ -1627,6 +1628,7 @@
             <e p="Bourder.cs" t="Include" />
             <e p="EffectActivator.cs" t="Include" />
             <e p="FlyBonus.cs" t="Include" />
+            <e p="Mover.cs" t="Include" />
             <e p="PanelMoving.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
@@ -1637,7 +1639,6 @@
             <e p="InfoLevelCloser.cs" t="Include" />
             <e p="Level.cs" t="Include" />
             <e p="LevelCubeJumping.cs" t="Include" />
-            <e p="LockFence.cs" t="Include" />
             <e p="LockLevel.cs" t="Include" />
           </e>
           <e p="LocalizationFiles" t="Include">
@@ -1645,13 +1646,13 @@
           </e>
           <e p="MainMenu" t="Include">
             <e p="BrickSmashedCounter.cs" t="Include" />
-            <e p="Capsula.cs" t="Include" />
-            <e p="FadeObject.cs" t="Include" />
+            <e p="PlatformRotator.cs" t="Include" />
+            <e p="ScreenFader.cs" t="Include" />
             <e p="Shop" t="Include">
               <e p="BuffInfo.cs" t="Include" />
               <e p="Platforms" t="Include">
-                <e p="PlatformaSkinData.cs" t="Include" />
-                <e p="PlatformaSkinShop.cs" t="Include" />
+                <e p="PlatformaSkin.cs" t="Include" />
+                <e p="PlatformStore.cs" t="Include" />
               </e>
               <e p="Skin.cs" t="Include" />
             </e>
@@ -1690,7 +1691,7 @@
               <e p="EffectApplier.cs" t="Include" />
               <e p="NeutralApplier.cs" t="Include" />
             </e>
-            <e p="EffectDestroyer.cs" t="Include" />
+            <e p="EffectDeactivator.cs" t="Include" />
             <e p="Modification.cs" t="Include" />
             <e p="NameEffectAnimation.cs" t="Include" />
             <e p="Neutral.cs" t="Include" />
@@ -1705,7 +1706,7 @@
             <e p="ObjectPool.cs" t="Include" />
           </e>
           <e p="Others" t="Include">
-            <e p="AnimationsController.cs" t="Include" />
+            <e p="AnimationsActivator.cs" t="Include" />
           </e>
           <e p="PlayerFiles" t="Include">
             <e p="ModificationContent" t="Include">

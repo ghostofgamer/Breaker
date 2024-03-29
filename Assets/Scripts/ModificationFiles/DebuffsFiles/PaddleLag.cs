@@ -9,7 +9,7 @@ namespace ModificationFiles.DebuffsFiles
 
         private float _startSpeed;
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {

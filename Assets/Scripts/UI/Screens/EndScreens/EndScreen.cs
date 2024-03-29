@@ -13,7 +13,7 @@ namespace UI.Screens.EndScreens
         private int _alphaZero = 0;
         private int _alphaFull = 1;
 
-        public virtual void Open()
+        public virtual void OnOpen()
         {
             ChangeValue(_alphaFull, true, true);
             _uiAnimations.Open();

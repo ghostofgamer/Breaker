@@ -19,7 +19,7 @@ namespace MainMenu
         [SerializeField] private int _rows;
         [SerializeField] private Transform _container;
         [SerializeField] private Material[] _materials;
-        [SerializeField] private AnimationsController _animationsController;
+        [SerializeField] private AnimationsActivator _animationsActivator;
         [SerializeField] private float _waitBetweenWaves = 0.1f;
         [SerializeField] private float _amplitudeDuration = 3f;
 
@@ -57,7 +57,7 @@ namespace MainMenu
                 for (int j = 0; j < _rows; j++)
                 {
                     Vector3 position = _startPosition - new Vector3(i * _cubeSpacing, j * _cubeSpacing, 0);
-                    _pool.GetFirstObject(out Brick brick, _cube);
+                    Brick brick = _pool.GetFirstObject();
                     brick.transform.position = position;
                     brick.gameObject.SetActive(true);
                     MeshRenderer meshRederer = brick.GetComponent<MeshRenderer>();
@@ -131,7 +131,7 @@ namespace MainMenu
                 }
             }
 
-            _animationsController.PlayWave();
+            _animationsActivator.PlayWave();
             _isFlyOver = true;
         }
 

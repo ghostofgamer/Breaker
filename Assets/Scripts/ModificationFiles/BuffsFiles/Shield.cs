@@ -7,7 +7,7 @@ namespace ModificationFiles.BuffsFiles
     {
         [SerializeField] private GameObject _shield;
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {

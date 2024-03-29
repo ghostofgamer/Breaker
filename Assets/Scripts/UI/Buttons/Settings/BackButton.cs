@@ -7,14 +7,14 @@ namespace UI.Buttons.Settings
     public class BackButton : AbstractButton
     {
         [SerializeField] private GameObject _settingsButton;
-        [SerializeField] private FadeObject _mainScreenFade;
-        [SerializeField] private FadeObject _settingsScreenFade;
+        [SerializeField] private ScreenFader _mainScreenFade;
+        [SerializeField] private ScreenFader _settingsScreenFade;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.16f);
 
         private void Start()
         {
-            CanvasValue(0);
+            SetCanvasValue(0);
         }
 
         protected override void OnClick()
@@ -24,7 +24,7 @@ namespace UI.Buttons.Settings
 
         private IEnumerator ChangeOpenMenu()
         {
-            CanvasValue(0);
+            SetCanvasValue(0);
             _settingsScreenFade.FadeOn();
             yield return _waitForSeconds;
             _settingsButton.SetActive(true);

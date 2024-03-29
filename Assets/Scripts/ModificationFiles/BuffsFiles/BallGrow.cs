@@ -2,14 +2,14 @@ namespace ModificationFiles.BuffsFiles
 {
     public class BallGrow : BallSizeChanger
     {
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                StartCoroutine(OnBallChangeSize(BallMover));
+                StartCoroutine(Resize(BallMover));
                 ShowNameEffect();
             }
         }

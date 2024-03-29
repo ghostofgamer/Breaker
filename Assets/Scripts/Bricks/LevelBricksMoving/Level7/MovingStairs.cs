@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Bricks.LevelBricksMoving.Level7
 {
-    public class MovingStairs : BrickTriggerController
+    public class MovingStairs : BrickTrigger
     {
         [SerializeField] private Transform _targetA;
         [SerializeField] private Transform _targetB;

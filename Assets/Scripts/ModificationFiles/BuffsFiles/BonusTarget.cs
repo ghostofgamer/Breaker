@@ -21,7 +21,7 @@ namespace ModificationFiles.BuffsFiles
         private Effect _startEffect;
         private Material _startMaterial;
 
-        public override void ApplyModification()
+        public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))
             {

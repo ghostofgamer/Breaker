@@ -9,10 +9,11 @@ namespace GameScene
 {
     public class SceneLoader : MonoBehaviour
     {
-        [SerializeField] private Brick[] _bricks;
+        [SerializeField] private BrickActivator[] _bricksActivator;
         [SerializeField] private ParticleSystem _startEffect;
-        [SerializeField] private Platforma _platforma;
-        [SerializeField] private Ball _ball;
+        [SerializeField] private PlatformaMover _platformaMover;
+        [SerializeField] private PlatformaRevive _platformaRevive;
+        [SerializeField] private BallRevive _ballRevive;
         [SerializeField] private float _duration = 0.05f;
         [SerializeField] private NameEffectAnimation _getReadyAnimation;
         [SerializeField] private NameEffectAnimation _reviveAnimation;
@@ -33,19 +34,19 @@ namespace GameScene
 
         private IEnumerator SetActive()
         {
-            foreach (var brick in _bricks)
+            foreach (var brick in _bricksActivator)
             {
                 yield return _waitForSeconds;
-                brick.GetComponent<BrickActivator>().Activate();
+                brick.Activate();
             }
 
             yield return _waitForSeconds;
             _startEffect.Play();
             _getReadyAnimation.Show();
             yield return _waitForSpawnPlatform;
-            _platforma.gameObject.SetActive(true);
-            _platforma.GetComponent<PlatformaMover>().SetValue(true);
-            _ball.gameObject.SetActive(true);
+            _platformaMover.gameObject.SetActive(true);
+            _platformaMover.SetValue(true);
+            _ballRevive.gameObject.SetActive(true);
         }
 
         private IEnumerator ComeLife()
@@ -55,8 +56,8 @@ namespace GameScene
             _startEffect.Play();
             _getReadyAnimation.Show();
             yield return _waitForSpawnPlatform;
-            _platforma.GetComponent<PlatformaRevive>().Revive();
-            _ball.GetComponent<BallRevive>().Revive();
+            _platformaRevive.GetLife();
+            _ballRevive.Revive();
         }
     }
 }

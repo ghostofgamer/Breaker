@@ -15,7 +15,7 @@ namespace ObjectPoolFiles
         {
             _prefab = prefab;
             _container = container;
-            GetInitialization(count, prefab);
+            Initialize(count, prefab);
         }
 
         public bool AutoExpand { get; private set; }
@@ -35,10 +35,10 @@ namespace ObjectPoolFiles
             return spawned != null;
         }
 
-        public void GetFirstObject(out T spawned, T prefabs)
+        public T GetFirstObject()
         {
             T filter = _poolGeneric.FirstOrDefault(p => p.gameObject.activeSelf == false);
-            spawned = filter;
+            return filter;
         }
 
         public void SetAutoExpand(bool flag)
@@ -52,7 +52,7 @@ namespace ObjectPoolFiles
                 item.gameObject.SetActive(false);
         }
 
-        private void GetInitialization(int count, T prefabs)
+        private void Initialize(int count, T prefabs)
         {
             _poolGeneric = new List<T>();
 

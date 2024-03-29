@@ -20,7 +20,7 @@ namespace UI.Screens.EndScreens
         [SerializeField] private int _indexLevel;
         [SerializeField] private Save _save;
         [SerializeField] private Score _score;
-        [SerializeField] private AnimationsController _animationsController;
+        [SerializeField] private AnimationsActivator _animationsActivator;
         [SerializeField] private UIAnimations _uiAnimationsText;
 
         private Vector3 _target;
@@ -31,12 +31,12 @@ namespace UI.Screens.EndScreens
 
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestroy += Win;
+            _brickCounter.AllBrickDestroyed += OnWin;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestroy -= Win;
+            _brickCounter.AllBrickDestroyed -= OnWin;
         }
 
         private void SetValue()
@@ -45,7 +45,7 @@ namespace UI.Screens.EndScreens
             _text.enabled = true;
         }
 
-        private void Win()
+        private void OnWin()
         {
             Time.timeScale = 1;
 
@@ -67,7 +67,7 @@ namespace UI.Screens.EndScreens
             _uiAnimationsText.Open();
             yield return _waitForSeconds;
             _claimButton.gameObject.SetActive(true);
-            _animationsController.PlayRotate();
+            _animationsActivator.PlayRotate();
             _spawnBonusLevelComplete.StartFlightBonuses();
             _claimButton.SetValue((_scoreCounter.GetScore() * _factor) / _divider);
         }

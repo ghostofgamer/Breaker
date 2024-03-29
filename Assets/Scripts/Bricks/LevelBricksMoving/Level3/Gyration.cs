@@ -6,7 +6,7 @@ using Vector3 = UnityEngine.Vector3;
 
 namespace Bricks.LevelBricksMoving.Level3
 {
-    public class Gyration : MotionController
+    public class Gyration : WorkChanger
     {
         [SerializeField] private Transform _pointA;
         [SerializeField] private Transform _pointB;

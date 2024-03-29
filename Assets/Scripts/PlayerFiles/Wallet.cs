@@ -1,8 +1,8 @@
+using System;
 using System.Collections;
 using SaveAndLoad;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace PlayerFiles
 {
@@ -21,7 +21,7 @@ namespace PlayerFiles
         private float _longDuration = 2;
         private Coroutine _coroutine;
 
-        public event UnityAction ValueChanged;
+        public event Action ValueChanged;
 
         public int Money => _money;
 

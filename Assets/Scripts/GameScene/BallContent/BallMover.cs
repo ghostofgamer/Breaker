@@ -97,7 +97,7 @@ namespace GameScene.BallContent
             _direction = direction;
         }
 
-        public void FastSpeed()
+        public void IncreaseSpeed()
         {
             if (!_isSpeedUp)
                 _speed = Mathf.Clamp(_speed * _speedUpValue, MinSpeed, _mediumSpeed);

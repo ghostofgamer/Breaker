@@ -18,7 +18,7 @@ namespace Bricks.LevelBricksMoving
                 _brick.Dead += ChangeParent;
 
             if (_brickCounter != null)
-                _brickCounter.AllBrickDestroy += SetParentEnviropment;
+                _brickCounter.AllBrickDestroyed += OnSetParentEnviropment;
         }
 
         private void OnDisable()
@@ -27,7 +27,7 @@ namespace Bricks.LevelBricksMoving
                 _brick.Dead -= ChangeParent;
 
             if (_brickCounter != null)
-                _brickCounter.AllBrickDestroy += SetParentEnviropment;
+                _brickCounter.AllBrickDestroyed += OnSetParentEnviropment;
         }
 
         private void ChangeParent()
@@ -39,7 +39,7 @@ namespace Bricks.LevelBricksMoving
             }
         }
 
-        private void SetParentEnviropment()
+        private void OnSetParentEnviropment()
         {
             if (_bricksEternal.Length <= 0)
                 return;

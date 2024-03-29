@@ -24,19 +24,19 @@ namespace GameScene.BallContent
         {
             _ballMover = GetComponent<BallMover>();
             _rigidbody = GetComponent<Rigidbody>();
-            StopMove();
+            OnStopMove();
         }
 
         private void OnEnable()
         {
-            _brickCounter.AllBrickDestroy += StopMove;
-            _brickCounter.AllBrickDestroy += SetParent;
+            _brickCounter.AllBrickDestroyed += OnStopMove;
+            _brickCounter.AllBrickDestroyed += OnSetParent;
         }
 
         private void OnDisable()
         {
-            _brickCounter.AllBrickDestroy -= StopMove;
-            _brickCounter.AllBrickDestroy -= SetParent;
+            _brickCounter.AllBrickDestroyed -= OnStopMove;
+            _brickCounter.AllBrickDestroyed -= OnSetParent;
         }
 
         private void Update()
@@ -48,7 +48,7 @@ namespace GameScene.BallContent
             }
         }
 
-        public void StopMove()
+        public void OnStopMove()
         {
             IsMoving = false;
             _ballMover.enabled = false;
@@ -63,7 +63,7 @@ namespace GameScene.BallContent
             _ballMover.SetStartDirection(new Vector3(directionX, 0, _directionForward).normalized);
         }
 
-        private void SetParent()
+        private void OnSetParent()
         {
             _isWin = true;
             transform.parent = _enviropment;
