@@ -8,7 +8,7 @@ namespace UI.Buttons.EndScreenButtons
 {
     public class ClaimButton : AbstractButton
     {
-        [SerializeField] private LevelComplite _levelComplite;
+        [SerializeField] private LevelCompleteScreen _levelCompleteScreen;
         [SerializeField] private VictoryScreen _victoryScreen;
         [SerializeField] private TMP_Text _creditsTxt;
         [SerializeField] private Image _creditIcon;
@@ -41,7 +41,7 @@ namespace UI.Buttons.EndScreenButtons
         {
             _audioSource.PlayOneShot(_audioSource.clip);
             yield return _waitForSound;
-            _levelComplite.gameObject.SetActive(false);
+            _levelCompleteScreen.gameObject.SetActive(false);
             _victoryScreen.OpenScreen(_credits);
         }
 

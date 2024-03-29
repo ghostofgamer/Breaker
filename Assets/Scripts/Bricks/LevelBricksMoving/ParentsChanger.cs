@@ -6,7 +6,7 @@ namespace Bricks.LevelBricksMoving
     public class ParentsChanger : MonoBehaviour
     {
         [SerializeField] private Transform _parentTarget;
-        [SerializeField] private Transform _enviropment;
+        [SerializeField] private Transform _environment;
         [SerializeField] private Brick[] _bricks;
         [SerializeField] private Brick[] _bricksEternal;
         [SerializeField] private Brick _brick;
@@ -45,7 +45,7 @@ namespace Bricks.LevelBricksMoving
                 return;
 
             foreach (var brick in _bricksEternal)
-                brick.transform.parent = _enviropment;
+                brick.transform.parent = _environment;
         }
     }
 }

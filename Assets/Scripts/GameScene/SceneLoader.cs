@@ -11,12 +11,10 @@ namespace GameScene
     {
         [SerializeField] private BrickActivator[] _bricksActivator;
         [SerializeField] private ParticleSystem _startEffect;
-        [SerializeField] private PlatformaMover _platformaMover;
-        [SerializeField] private PlatformaRevive _platformaRevive;
+        [SerializeField] private PlatformaMovement _platformaMovement;
         [SerializeField] private BallRevive _ballRevive;
         [SerializeField] private float _duration = 0.05f;
         [SerializeField] private NameEffectAnimation _getReadyAnimation;
-        [SerializeField] private NameEffectAnimation _reviveAnimation;
 
         private WaitForSeconds _waitForSeconds;
         private WaitForSeconds _waitForSpawnPlatform = new WaitForSeconds(1f);
@@ -27,9 +25,10 @@ namespace GameScene
             StartCoroutine(SetActive());
         }
 
-        public void RevivePlatform()
+        public void ShowActivation()
         {
-            StartCoroutine(ComeLife());
+            _startEffect.Play();
+            _getReadyAnimation.Show();
         }
 
         private IEnumerator SetActive()
@@ -41,23 +40,11 @@ namespace GameScene
             }
 
             yield return _waitForSeconds;
-            _startEffect.Play();
-            _getReadyAnimation.Show();
+            ShowActivation();
             yield return _waitForSpawnPlatform;
-            _platformaMover.gameObject.SetActive(true);
-            _platformaMover.SetValue(true);
+            _platformaMovement.gameObject.SetActive(true);
+            _platformaMovement.SetValue(true);
             _ballRevive.gameObject.SetActive(true);
-        }
-
-        private IEnumerator ComeLife()
-        {
-            _reviveAnimation.Show();
-            yield return _waitForSpawnPlatform;
-            _startEffect.Play();
-            _getReadyAnimation.Show();
-            yield return _waitForSpawnPlatform;
-            _platformaRevive.GetLife();
-            _ballRevive.Revive();
         }
     }
 }

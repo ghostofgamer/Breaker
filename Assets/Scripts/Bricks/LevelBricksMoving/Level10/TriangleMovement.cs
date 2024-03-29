@@ -6,7 +6,7 @@ namespace Bricks.LevelBricksMoving.Level10
     public class TriangleMovement : WorkChanger
     {
         [SerializeField] private float _movementSpeed;
-        [SerializeField] private PlatformaMover _platformaMover;
+        [SerializeField] private PlatformaMovement _platformaMovement;
         [SerializeField] private float _minX;
         [SerializeField] private float _maxX;
         [SerializeField] private float _moveStep;
@@ -19,7 +19,7 @@ namespace Bricks.LevelBricksMoving.Level10
             if (IsWork)
             {
                 _position = transform.position;
-                _targetX = _position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
+                _targetX = _position.x + (_platformaMovement.DirectionX * _movementSpeed * Time.deltaTime);
                 _targetX = Mathf.Clamp(_targetX, _minX, _maxX);
 
                 _position = Vector3.MoveTowards(

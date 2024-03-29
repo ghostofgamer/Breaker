@@ -1,7 +1,5 @@
 using System.Collections;
-using GameScene;
 using Statistics;
-using UI.Buttons.EndScreenButtons;
 using UI.Screens.EndScreens;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,10 +9,10 @@ namespace ADS
     public class RewardRevive : RewardVideo
     {
         [SerializeField] private ReviveScreen _reviveScreen;
-        [SerializeField] private SceneLoader _sceneLoader;
+        [SerializeField] private Reviver _reviver;
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private Button _button;
-        
+
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
         private Coroutine _coroutine;
 
@@ -36,7 +34,7 @@ namespace ADS
         {
             _reviveScreen.ChooseRevive();
             yield return _waitForSeconds;
-            _sceneLoader.RevivePlatform();
+            _reviver.RevivePlatform();
             _brickCounter.CheckAliveBrickCount();
         }
     }

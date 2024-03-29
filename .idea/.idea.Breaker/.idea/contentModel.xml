@@ -1592,6 +1592,7 @@
               <e p="ParentsChanger.cs" t="Include" />
               <e p="WorkChanger.cs" t="Include" />
             </e>
+            <e p="LootDropper.cs" t="Include" />
             <e p="ShaderChanger.cs" t="Include" />
           </e>
           <e p="BulletFiles" t="Include">
@@ -1630,12 +1631,14 @@
             <e p="FlyBonus.cs" t="Include" />
             <e p="Mover.cs" t="Include" />
             <e p="PanelMoving.cs" t="Include" />
+            <e p="Reviver.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
             <e p="Walltrigger.cs" t="Include" />
           </e>
           <e p="Levels" t="Include">
             <e p="ColliderController.cs" t="Include" />
+            <e p="EffectInstaller.cs" t="Include" />
             <e p="InfoLevelCloser.cs" t="Include" />
             <e p="Level.cs" t="Include" />
             <e p="LevelCubeJumping.cs" t="Include" />
@@ -1719,12 +1722,12 @@
               <e p="PlatformModification.cs" t="Include" />
               <e p="ResistanceDebuff.cs" t="Include" />
             </e>
-            <e p="MousePositionController.cs" t="Include" />
+            <e p="MousePositionActivator.cs" t="Include" />
             <e p="PlatformaContent" t="Include">
-              <e p="MirrorPlatformaMover.cs" t="Include" />
+              <e p="MirrorMovement.cs" t="Include" />
               <e p="Platforma.cs" t="Include" />
-              <e p="PlatformaDestroyer.cs" t="Include" />
-              <e p="PlatformaMover.cs" t="Include" />
+              <e p="PlatformaDisabler.cs" t="Include" />
+              <e p="PlatformaMovement.cs" t="Include" />
               <e p="PlatformaRevive.cs" t="Include" />
               <e p="PlatformaTrigger.cs" t="Include" />
             </e>
@@ -1732,7 +1735,7 @@
             <e p="Wallet.cs" t="Include" />
           </e>
           <e p="Progress" t="Include">
-            <e p="ProgressManager.cs" t="Include" />
+            <e p="ProgressGame.cs" t="Include" />
           </e>
           <e p="SaveAndLoad" t="Include">
             <e p="Load.cs" t="Include" />
@@ -1748,7 +1751,7 @@
           </e>
           <e p="Sound" t="Include">
             <e p="BackGroundSound.cs" t="Include" />
-            <e p="MixerController.cs" t="Include" />
+            <e p="Mixer.cs" t="Include" />
             <e p="SoundEffect.cs" t="Include" />
           </e>
           <e p="Statistics" t="Include">
@@ -1806,7 +1809,7 @@
                 <e p="BonusEndScreenMoving.cs" t="Include" />
                 <e p="EndScreen.cs" t="Include" />
                 <e p="GameOverScreen.cs" t="Include" />
-                <e p="LevelComplite.cs" t="Include" />
+                <e p="LevelCompleteScreen.cs" t="Include" />
                 <e p="ReviveScreen.cs" t="Include" />
                 <e p="SpawnBonusLevelComplete.cs" t="Include" />
                 <e p="VictoryScreen.cs" t="Include" />

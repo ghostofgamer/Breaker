@@ -9,12 +9,11 @@ namespace ModificationFiles
 {
     public abstract class Modification : MonoBehaviour
     {
-        [SerializeField] protected PlatformaMover PlatformaMover;
-        [SerializeField] protected BallMover BallMover;
-        [SerializeField] protected Player Player;
-        [SerializeField] protected float Duration;
-        [SerializeField] protected NameEffectAnimation NameEffect;
-
+        [SerializeField] private PlatformaMovement _platformaMovement;
+        [SerializeField] private BallMover _ballMover;
+        [SerializeField] private Player _player;
+        [SerializeField] private float _duration;
+        [SerializeField] private NameEffectAnimation _nameEffect;
         [SerializeField] private Load _load;
         [SerializeField] private bool _isImproving;
         [SerializeField] private BuffUIFade _buffUI;
@@ -26,6 +25,14 @@ namespace ModificationFiles
         private int _startIndex = 0;
         private float _factor = 1.5f;
 
+        protected Player Player => _player;
+
+        protected float Duration => _duration;
+
+        protected BallMover BallMover => _ballMover;
+
+        protected PlatformaMovement PlatformaMovement => _platformaMovement;
+
         private void Awake()
         {
             if (_isImproving)
@@ -34,7 +41,7 @@ namespace ModificationFiles
 
                 if (number > _startIndex)
                 {
-                    Duration *= _factor;
+                    _duration *= _factor;
                 }
             }
 
@@ -58,7 +65,7 @@ namespace ModificationFiles
 
         protected void ShowNameEffect()
         {
-            NameEffect.Show();
+            _nameEffect.Show();
         }
     }
 }

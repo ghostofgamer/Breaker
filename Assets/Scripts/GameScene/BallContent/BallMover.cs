@@ -1,3 +1,4 @@
+using System;
 using Bricks;
 using PlayerFiles.ModificationContent;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace GameScene.BallContent
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private ElectricBall _electricBall;
+        [SerializeField] private Ball _ball;
 
         private float _mediumSpeed = 45;
         private float _maxSpeed = 60f;
@@ -28,6 +30,9 @@ namespace GameScene.BallContent
         private float _maxAngleValue = 0.5f;
         private float _minAngleValue = 0.3f;
         private float _minValueZ = 0.35f;
+        private float _factor = 3f;
+        private float _valueEnableFastSpeed = 0.5f;
+        private float _valuePush = 0.3f;
 
         public float MinSpeed { get; private set; } = 30;
 
@@ -35,24 +40,33 @@ namespace GameScene.BallContent
 
         private void Update()
         {
-            if (_speed > MinSpeed && !_isSpeedUp)
-                _speed = Mathf.MoveTowards(_speed, MinSpeed, _stoppingSpeed * Time.deltaTime);
+            if (!_ball.IsMoving && !_ball.IsWin)
+            {
+                var position = _ball.PlatformaMovement.transform.position;
+                transform.position = new Vector3(position.x, position.y, position.z + _factor);
+            }
 
-            if (_speed < MinSpeed)
-                _speed = MinSpeed;
+            if (_ball.IsMoving)
+            {
+                if (_speed > MinSpeed && !_isSpeedUp)
+                    _speed = Mathf.MoveTowards(_speed, MinSpeed, _stoppingSpeed * Time.deltaTime);
 
-            if (transform.position.y != _maxY)
-                transform.position = new Vector3(transform.position.x, _maxY, transform.position.z);
+                if (_speed < MinSpeed)
+                    _speed = MinSpeed;
 
-            _ballTrigger.CheckPlatformCollision();
+                if (transform.position.y != _maxY)
+                    transform.position = new Vector3(transform.position.x, _maxY, transform.position.z);
 
-            if (_isPortal)
-                _portalTeleporterBall.TeleportBall();
-            else
-                CheckBehindWall();
+                _ballTrigger.CheckPlatformCollision();
 
-            transform.position += _direction * _speed * Time.deltaTime;
-            transform.Rotate(_direction);
+                if (_isPortal)
+                    _portalTeleporterBall.TeleportBall();
+                else
+                    CheckBehindWall();
+
+                transform.position += _direction * _speed * Time.deltaTime;
+                transform.Rotate(_direction);
+            }
         }
 
         private void OnCollisionEnter(Collision other)
@@ -108,6 +122,31 @@ namespace GameScene.BallContent
             _isPortal = portalActivated;
         }
 
+        public void ChangeDirection(Vector3 vector, Vector3 hit)
+        {
+            Vector3 reflect = Vector3.Reflect(Direction, hit);
+            Vector3 newReflect = new Vector3(reflect.x, reflect.y, 1).normalized;
+
+            if (vector.z > _valueEnableFastSpeed)
+            {
+                SetDirection(new Vector3(reflect.x, reflect.y, reflect.z + vector.z).normalized);
+                IncreaseSpeed();
+            }
+            else
+            {
+                SetDirection(newReflect);
+            }
+
+            if (vector.x > _valuePush || vector.x < -_valuePush)
+            {
+                SetDirection(new Vector3(reflect.x + vector.x, reflect.y, newReflect.z).normalized);
+            }
+            else
+            {
+                SetDirection(newReflect);
+            }
+        }
+
         private void CheckBehindWall()
         {
             if (transform.position.x > _xMaxPosition)
@@ -120,14 +159,14 @@ namespace GameScene.BallContent
             if (transform.position.x < _xMinPosition)
             {
                 SetDirection(
-                    new Vector3(_directionMove, 0, 0), 
+                    new Vector3(_directionMove, 0, 0),
                     new Vector3(_xMinPosition, _maxY, transform.position.z));
             }
 
             if (transform.position.z > _zMaxPosition)
             {
                 SetDirection(
-                    new Vector3(0, 0, -_directionMove), 
+                    new Vector3(0, 0, -_directionMove),
                     new Vector3(transform.position.x, _maxY, _zMaxPosition));
             }
         }

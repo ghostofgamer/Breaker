@@ -24,13 +24,13 @@ namespace ModificationFiles.DebuffsFiles
         private void Stop()
         {
             SetActive(false);
-            PlatformaMover.SetReverse(false);
+            PlatformaMovement.SetReverse(false);
         }
 
         private IEnumerator OnReversePaddleActivated()
         {
             SetActive(true);
-            PlatformaMover.SetReverse(true);
+            PlatformaMovement.SetReverse(true);
             yield return WaitForSeconds;
             Stop();
             Player.DeleteEffect(this);

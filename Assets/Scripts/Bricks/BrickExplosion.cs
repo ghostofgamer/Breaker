@@ -37,8 +37,8 @@ namespace Bricks
         public void Detonate()
         {
             BrickDie();
-            DropBonus();
-            DropBuff();
+            LootDropper.DropBonus();
+            LootDropper.DropBuff(EffectElement);
             BrickCounter.ChangeValue(Reward);
             Collider[] overlappingColliders = Physics.OverlapSphere(transform.position, _radius);
 

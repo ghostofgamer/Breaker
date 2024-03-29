@@ -8,104 +8,106 @@ namespace Bricks
 {
     public abstract class Brick : MonoBehaviour
     {
-        [SerializeField] protected BrickCounter BrickCounter;
-        [SerializeField] protected GameObject BonusPrefab;
-        [SerializeField] protected bool IsBonus;
-        [SerializeField] protected int Reward;
-        [SerializeField] protected int BonusAmount;
-        [SerializeField] protected BuffDistributor BuffDistributor;
-        [SerializeField] protected bool IsImmortal = false;
-        [SerializeField] protected Effect Effect;
+        [SerializeField] private BrickCounter _brickCounter;
+        [SerializeField] private bool _isBonus;
+        [SerializeField] private int _reward;
+        [SerializeField] private int _bonusAmount;
+        [SerializeField] private BuffDistributor _buffDistributor;
+        [SerializeField] private bool _isImmortal = false;
+        [SerializeField] private Effect _effect;
         [SerializeField] private GameObject _hologramEffectDie;
         [SerializeField] private GameObject _targetVisual;
-        [SerializeField] private FragmentsCounter _fragmentsCounter;
         [SerializeField] private bool _isEternal = false;
-        [SerializeField] protected AudioSource AudioSource;
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private LootDropper _lootDropper;
 
         private int _minBonus = 1;
         private int _maxBonus = 3;
-        private float _bonusRadius = 1.65f;
         private float _randomProcent = 0.5f;
-        private int _factor = 2;
         protected bool IsTargetBonus;
 
         public event Action Dead;
 
-        public Effect EffectElement => Effect;
+        public bool IsBonus => _isBonus;
+
+        public Effect EffectElement => _effect;
 
         public bool IsEternal => _isEternal;
+
+        public int BonusAmount => _bonusAmount;
+        protected LootDropper LootDropper => _lootDropper;
+
+        protected AudioSource AudioSource => _audioSource;
+
+        protected int Reward => _reward;
+
+        protected BrickCounter BrickCounter => _brickCounter;
+
+        protected bool IsImmortal => _isImmortal;
 
         private void Start()
         {
             if (!_isEternal)
             {
-                IsBonus = Random.value > _randomProcent;
-                Effect = BuffDistributor.AssignEffect();
-                BonusAmount = Random.Range(_minBonus, _maxBonus);
-                BrickCounter.AddBricks(0);
+                _isBonus = Random.value > _randomProcent;
+                _effect = _buffDistributor.AssignEffect();
+                _bonusAmount = Random.Range(_minBonus, _maxBonus);
+                _brickCounter.AddBricks();
             }
         }
 
         public abstract void Die();
 
-        public void Init(BrickCounter brickCounter, BuffDistributor buffDistributor, FragmentsCounter fragmentsCounter)
+        public void Init(BrickCounter brickCounter, BuffDistributor buffDistributor)
         {
-            BrickCounter = brickCounter;
-            BuffDistributor = buffDistributor;
-            _fragmentsCounter = fragmentsCounter;
-        }
-
-        public void DropBonus()
-        {
-            if (!IsBonus)
-                return;
-
-            _fragmentsCounter.SetAmountFragments(BonusAmount);
-
-            for (int i = 0; i < BonusAmount; i++)
-            {
-                float angle = (i * Mathf.PI * _factor) / BonusAmount;
-                float x = transform.position.x + (Mathf.Cos(angle) * _bonusRadius);
-                float z = transform.position.z + (Mathf.Sin(angle) * _bonusRadius);
-                Vector3 bonusPosition = new Vector3(x, transform.position.y, z);
-                Instantiate(BonusPrefab, bonusPosition, Quaternion.identity);
-            }
+            _brickCounter = brickCounter;
+            _buffDistributor = buffDistributor;
         }
 
         public void SetBoolImmortal(bool immortal)
         {
-            IsImmortal = immortal;
+            _isImmortal = immortal;
         }
 
         public void SetEffect(Effect effect, bool activation)
         {
-            Effect = effect;
+            _effect = effect;
             _targetVisual.SetActive(activation);
             IsTargetBonus = activation;
         }
 
-        protected void DropBuff()
+        /*protected void DropBonus()
         {
-            if (Effect == null)
+            if (!_isBonus)
                 return;
 
-            Instantiate(Effect, transform.position, Quaternion.identity);
+            _fragmentsCounter.SetAmountFragments(_bonusAmount);
+
+            for (int i = 0; i < _bonusAmount; i++)
+            {
+                float angle = (i * Mathf.PI * _factor) / _bonusAmount;
+                float x = transform.position.x + (Mathf.Cos(angle) * _bonusRadius);
+                float z = transform.position.z + (Mathf.Sin(angle) * _bonusRadius);
+                Vector3 bonusPosition = new Vector3(x, transform.position.y, z);
+                Instantiate(_bonusPrefab, bonusPosition, Quaternion.identity);
+            }
         }
+        */
 
         protected void Destroy()
         {
-            if (IsImmortal)
+            if (_isImmortal)
             {
-                AudioSource.PlayOneShot(AudioSource.clip);
+                _audioSource.PlayOneShot(_audioSource.clip);
                 return;
             }
 
             BrickDie();
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;
-            DropBuff();
-            BrickCounter.ChangeValue(Reward);
-            DropBonus();
+            _lootDropper.DropBuff(_effect);
+            _brickCounter.ChangeValue(_reward);
+            _lootDropper.DropBonus();
             gameObject.SetActive(false);
         }
 

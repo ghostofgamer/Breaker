@@ -10,7 +10,7 @@ namespace UI
         private const string Play = "Play";
 
         [SerializeField] private TMP_Text[] _numbersText;
-        [SerializeField] private PlatformaMover _platformaMover;
+        [SerializeField] private PlatformaMovement _platformaMovement;
         [SerializeField] private AudioSource _audioSource;
 
         private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
@@ -26,16 +26,16 @@ namespace UI
 
         private IEnumerator Resume()
         {
-            foreach (TMP_Text txt in _numbersText)
+            foreach (TMP_Text numberText in _numbersText)
             {
-                txt.gameObject.SetActive(true);
+                numberText.gameObject.SetActive(true);
                 _audioSource.PlayOneShot(_audioSource.clip);
-                txt.GetComponent<Animator>().Play(Play);
+                numberText.GetComponent<Animator>().Play(Play);
                 yield return _waitForSeconds;
-                txt.gameObject.SetActive(false);
+                numberText.gameObject.SetActive(false);
             }
 
-            _platformaMover.enabled = true;
+            _platformaMovement.enabled = true;
             Time.timeScale = 1;
         }
     }

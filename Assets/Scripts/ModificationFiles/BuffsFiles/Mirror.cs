@@ -6,7 +6,7 @@ namespace ModificationFiles.BuffsFiles
 {
     public class Mirror : Modification
     {
-        [SerializeField] private MirrorPlatformaMover _mirrorPlatformaPrefab;
+        [SerializeField] private MirrorMovement _mirrorPlatformaPrefab;
 
         public override void OnApplyModification()
         {

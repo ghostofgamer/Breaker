@@ -16,9 +16,7 @@ namespace PlayerFiles.ModificationContent
 
         private bool TryIncreaseBonus(ref int reward)
         {
-            RandomValue = Random.Range(MinValue, MaxValue);
-
-            if (RandomValue > BonusChances)
+            if (Random.Range(MinValue, MaxValue) > BonusChances)
                 return false;
 
             reward *= _factor;

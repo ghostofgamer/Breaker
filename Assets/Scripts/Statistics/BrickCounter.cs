@@ -39,7 +39,7 @@ namespace Statistics
             CheckAliveBrickCount();
         }
 
-        public void AddBricks(int bricksCount)
+        public void AddBricks()
         {
             BrickCount++;
         }

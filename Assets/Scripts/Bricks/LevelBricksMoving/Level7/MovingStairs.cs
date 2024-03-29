@@ -23,9 +23,9 @@ namespace Bricks.LevelBricksMoving.Level7
             if (_moveTimer < _moveDuration)
             {
                 _moveTimer += Time.deltaTime;
-                float t = _moveTimer / _moveDuration;
+                float progress = _moveTimer / _moveDuration;
                 Vector3 targetPosition = _isMovingToTargetA ? _targetA.position : _targetB.position;
-                transform.position = Vector3.Lerp(_startPosition, targetPosition, t);
+                transform.position = Vector3.Lerp(_startPosition, targetPosition, progress);
             }
             else
             {

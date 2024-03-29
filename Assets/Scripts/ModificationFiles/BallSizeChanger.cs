@@ -6,8 +6,7 @@ namespace ModificationFiles
 {
     public abstract class BallSizeChanger : Modification
     {
-        [SerializeField] protected float _sizeChange;
-        
+        [SerializeField] private float _sizeChange;
         [SerializeField] private Vector3 _standardScale;
 
         protected IEnumerator Resize(BallMover ballMover)

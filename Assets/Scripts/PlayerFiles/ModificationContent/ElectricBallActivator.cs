@@ -20,8 +20,7 @@ namespace PlayerFiles.ModificationContent
 
         private bool TryActivatedElectricEffect()
         {
-            RandomValue = Random.Range(MinValue, MaxValue);
-            return RandomValue > BonusChances;
+            return Random.Range(MinValue, MaxValue) > BonusChances;
         }
 
         private void OnSetValue()

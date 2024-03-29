@@ -22,9 +22,7 @@ namespace PlayerFiles.ModificationContent
 
         private void OnTryGetShield()
         {
-            RandomValue = Random.Range(MinValue, MaxValue);
-
-            if (RandomValue > BonusChances)
+            if (Random.Range(MinValue, MaxValue) > BonusChances)
                 return;
 
             _shield.OnApplyModification();

@@ -10,7 +10,7 @@ namespace PlayerFiles.ModificationContent
 {
     public class LuckySave : PlatformModification
     {
-        [SerializeField] private SceneLoader _sceneLoader;
+        [SerializeField] private Reviver _reviver;
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private NameEffectAnimation _nameEffectAnimation;
         [SerializeField] private SettingsButtonGameLevel _settingsButtonGameLevel;
@@ -21,9 +21,7 @@ namespace PlayerFiles.ModificationContent
 
         public bool TryGetLuckySave()
         {
-            RandomValue = Random.Range(MinValue, MaxValue);
-
-            if (RandomValue > BonusChances)
+            if (Random.Range(MinValue, MaxValue) > BonusChances)
                 return false;
 
             Activated();
@@ -44,7 +42,7 @@ namespace PlayerFiles.ModificationContent
             _nameEffectAnimation.Show();
             yield return _waitForSeconds;
             _settingsButtonGameLevel.SetValue();
-            _sceneLoader.RevivePlatform();
+            _reviver.RevivePlatform();
             _brickCounter.CheckAliveBrickCount();
         }
     }

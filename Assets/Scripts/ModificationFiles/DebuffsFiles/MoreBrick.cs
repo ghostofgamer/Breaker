@@ -15,6 +15,7 @@ namespace ModificationFiles.DebuffsFiles
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private BuffDistributor _buffDistributor;
         [SerializeField] private FragmentsCounter _fragmentsCounter;
+        [SerializeField] private LootDropper _lootDropper;
 
         private float _localScale = 0.02f;
 
@@ -41,7 +42,8 @@ namespace ModificationFiles.DebuffsFiles
                 Vector3 randomPoint = Random.insideUnitCircle * _spawnRadius;
                 Vector3 spawnPosition = _spawnPosition.position + new Vector3(randomPoint.x, 0, randomPoint.y);
                 GameObject cube = Instantiate(_brickPrefab, _bricksContainer);
-                cube.GetComponent<Brick>().Init(_brickCounter, _buffDistributor, _fragmentsCounter);
+                cube.GetComponent<Brick>().Init(_brickCounter, _buffDistributor);
+                _lootDropper.Init(_fragmentsCounter);
                 cube.transform.position = spawnPosition;
                 cube.transform.localScale = new Vector3(_localScale, _localScale, _localScale);
                 yield return WaitForSeconds;

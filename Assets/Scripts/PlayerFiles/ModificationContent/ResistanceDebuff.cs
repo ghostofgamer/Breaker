@@ -6,8 +6,7 @@ namespace PlayerFiles.ModificationContent
     {
         public bool TryResiste()
         {
-            RandomValue = Random.Range(MinValue, MaxValue);
-            return RandomValue > BonusChances;
+            return Random.Range(MinValue, MaxValue) > BonusChances;
         }
     }
 }

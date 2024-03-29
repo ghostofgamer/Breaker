@@ -4,10 +4,12 @@ namespace PlayerFiles.ModificationContent
 {
     public class PlatformModification : MonoBehaviour
     {
-        [SerializeField] protected float BonusChances = 50;
+        [SerializeField] private float _bonusChances = 50;
 
-        protected int MinValue = 0;
-        protected int MaxValue = 100;
-        protected float RandomValue;
+        protected float BonusChances => _bonusChances;
+        
+        protected int MinValue { get; private set; } = 0;
+        
+        protected int MaxValue { get; private set; } = 100;
     }
 }

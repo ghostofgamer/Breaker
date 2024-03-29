@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &5114243 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6011793518753412271, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &9497945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1638,17 +1627,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1269868211066450785, guid: b16dd2d86462efc48917e77102b62a2c, type: 3}
   m_PrefabInstance: {fileID: 131172714}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &135602457 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2086600362255991342, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &136969625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8364,11 +8342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2cf1fedf656b94479baf4daf626cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 0
-  NameEffect: {fileID: 329152669}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 0}
@@ -8387,11 +8365,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19b766e3a638124ead94a01a6928841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 0
-  NameEffect: {fileID: 0}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 0}
@@ -8496,17 +8474,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
---- !u!114 &329152669 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 568329053448572749, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &337969690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6992826888135340152, guid: 13415f14dfcd4a843864b6abceccb1bf, type: 3}
@@ -9178,28 +9145,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
---- !u!114 &431769926 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1999329508805577759, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &435159929 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9221905787232751966, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &435815676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11475,17 +11420,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
   m_PrefabInstance: {fileID: 2107945749}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &552869724 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3942121835390491971, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &553185020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1246639532634330345, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
@@ -11931,7 +11865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21b617201907dc47a17cae724667df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BonusChances: 50
+  _bonusChances: 50
   _sceneLoader: {fileID: 1991885204}
   _brickCounter: {fileID: 980526520}
   _nameEffectAnimation: {fileID: 1876216669796287189}
@@ -11986,17 +11920,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd7bd1520ec39949b42202d323df999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 1078918506}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 269613917}
   _buffType: 12
   _sizeChange: -1
-  _mirrorPlatformaMover: {fileID: 1752382998}
+  _mirrorMovement: {fileID: 0}
 --- !u!114 &588720368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12009,11 +11943,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4ab2eb7bfb6f4ab442515b1845823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 135602457}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 1035477782}
@@ -12032,11 +11966,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b15a9805690e348be36d87e8f7b650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 1566657529}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 83966169}
@@ -12053,11 +11987,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2103bb205125a9044a69548dcb6e2c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 552869724}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 1985887996}
@@ -12075,11 +12009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e34c367cfee8e49a59a783c17c9bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 888609643}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 461413891}
@@ -12097,11 +12031,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ec440e48c48ca44b209fe9b39289d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 0
-  NameEffect: {fileID: 2006832706}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 1212017579}
@@ -12126,11 +12060,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1888b0be09fecbe49b7d4b710104c98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 1828871852}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 251216602}
@@ -12275,19 +12209,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7388c4a46dd774a804ebec5e871d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrickCounter: {fileID: 980526520}
-  BonusPrefab: {fileID: 604276215291435035, guid: e36766bd7e49cb54d8252530060a7a53, type: 3}
-  IsBonus: 0
-  Reward: 1
-  BonusAmount: 0
-  BuffDistributor: {fileID: 2046333286}
-  IsImmortal: 0
-  Effect: {fileID: 0}
+  _brickCounter: {fileID: 0}
+  _bonusPrefab: {fileID: 0}
+  _isBonus: 0
+  _reward: 0
+  _bonusAmount: 0
+  _buffDistributor: {fileID: 0}
+  _isImmortal: 0
+  _effect: {fileID: 0}
   _hologramEffectDie: {fileID: 2035083365}
   _targetVisual: {fileID: 1310736673}
   _fragmentsCounter: {fileID: 2124934855}
   _isEternal: 0
-  AudioSource: {fileID: 0}
+  _audioSource: {fileID: 0}
   _radius: 5
   _force: 150
   _explodeEffect: {fileID: 1009178395}
@@ -12653,17 +12587,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 459995463}
   m_SourcePrefab: {fileID: 100100000, guid: b187f51b0988edb408280133993321b2, type: 3}
---- !u!114 &621576493 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6026973674224796074, guid: 82c1669c8802f2c428a417452a5f8478, type: 3}
-  m_PrefabInstance: {fileID: 9131508302469164859}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5b7899c0277a8418eb0fb83495dbb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &621576494 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3361751570956921044, guid: 82c1669c8802f2c428a417452a5f8478, type: 3}
@@ -14996,17 +14919,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6162137347578817178, guid: 13415f14dfcd4a843864b6abceccb1bf, type: 3}
   m_PrefabInstance: {fileID: 7403276223480039393}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &824722463 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5381057536399619066, guid: 13415f14dfcd4a843864b6abceccb1bf, type: 3}
-  m_PrefabInstance: {fileID: 7403276223480039393}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8666c28649e124993f5d24fd745635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &824722464 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6970566592706954858, guid: 13415f14dfcd4a843864b6abceccb1bf, type: 3}
@@ -15339,17 +15251,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
   m_PrefabInstance: {fileID: 9497945}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &888609643 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 258226291648767219, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &895984702
 GameObject:
   m_ObjectHideFlags: 0
@@ -16334,19 +16235,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7388c4a46dd774a804ebec5e871d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrickCounter: {fileID: 980526520}
-  BonusPrefab: {fileID: 604276215291435035, guid: e36766bd7e49cb54d8252530060a7a53, type: 3}
-  IsBonus: 0
-  Reward: 1
-  BonusAmount: 0
-  BuffDistributor: {fileID: 2046333286}
-  IsImmortal: 0
-  Effect: {fileID: 0}
+  _brickCounter: {fileID: 0}
+  _bonusPrefab: {fileID: 0}
+  _isBonus: 0
+  _reward: 0
+  _bonusAmount: 0
+  _buffDistributor: {fileID: 0}
+  _isImmortal: 0
+  _effect: {fileID: 0}
   _hologramEffectDie: {fileID: 764868658}
   _targetVisual: {fileID: 2081205558}
   _fragmentsCounter: {fileID: 2124934855}
   _isEternal: 0
-  AudioSource: {fileID: 0}
+  _audioSource: {fileID: 0}
   _radius: 5
   _force: 150
   _explodeEffect: {fileID: 1223065900}
@@ -17074,17 +16975,6 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
   m_PrefabInstance: {fileID: 1611283253}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1012552105 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6854708832491720909, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1013589408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17951,19 +17841,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7388c4a46dd774a804ebec5e871d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrickCounter: {fileID: 980526520}
-  BonusPrefab: {fileID: 604276215291435035, guid: e36766bd7e49cb54d8252530060a7a53, type: 3}
-  IsBonus: 0
-  Reward: 1
-  BonusAmount: 0
-  BuffDistributor: {fileID: 2046333286}
-  IsImmortal: 0
-  Effect: {fileID: 0}
+  _brickCounter: {fileID: 0}
+  _bonusPrefab: {fileID: 0}
+  _isBonus: 0
+  _reward: 0
+  _bonusAmount: 0
+  _buffDistributor: {fileID: 0}
+  _isImmortal: 0
+  _effect: {fileID: 0}
   _hologramEffectDie: {fileID: 1787648481}
   _targetVisual: {fileID: 1488116293}
   _fragmentsCounter: {fileID: 2124934855}
   _isEternal: 0
-  AudioSource: {fileID: 0}
+  _audioSource: {fileID: 0}
   _radius: 5
   _force: 150
   _explodeEffect: {fileID: 1446784232}
@@ -18172,17 +18062,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
---- !u!114 &1078918506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4213305355707291283, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1083070917
 GameObject:
   m_ObjectHideFlags: 0
@@ -20607,17 +20486,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2040940232}
   m_SourcePrefab: {fileID: 100100000, guid: b187f51b0988edb408280133993321b2, type: 3}
---- !u!114 &1268009493 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3301431971788403192, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1269025104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1875508040830062163, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
@@ -23005,19 +22873,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7388c4a46dd774a804ebec5e871d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrickCounter: {fileID: 980526520}
-  BonusPrefab: {fileID: 604276215291435035, guid: e36766bd7e49cb54d8252530060a7a53, type: 3}
-  IsBonus: 0
-  Reward: 1
-  BonusAmount: 0
-  BuffDistributor: {fileID: 2046333286}
-  IsImmortal: 0
-  Effect: {fileID: 0}
+  _brickCounter: {fileID: 0}
+  _bonusPrefab: {fileID: 0}
+  _isBonus: 0
+  _reward: 0
+  _bonusAmount: 0
+  _buffDistributor: {fileID: 0}
+  _isImmortal: 0
+  _effect: {fileID: 0}
   _hologramEffectDie: {fileID: 1861034954}
   _targetVisual: {fileID: 1900295913}
   _fragmentsCounter: {fileID: 2124934855}
   _isEternal: 0
-  AudioSource: {fileID: 0}
+  _audioSource: {fileID: 0}
   _radius: 5
   _force: 150
   _explodeEffect: {fileID: 1667595556}
@@ -24547,17 +24415,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 233453437}
   m_SourcePrefab: {fileID: 100100000, guid: b187f51b0988edb408280133993321b2, type: 3}
---- !u!114 &1566657529 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6162931163741748942, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1579834782
 GameObject:
   m_ObjectHideFlags: 0
@@ -25724,17 +25581,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ada581e4ee87bf4fad08f2300545df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 1268009493}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 43661148}
   _buffType: 0
   _sizeChange: 1
-  _mirrorPlatformaMover: {fileID: 1752382998}
+  _mirrorMovement: {fileID: 0}
 --- !u!114 &1640829201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25747,11 +25604,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d927357769cdfa54bbfcfebd07a7ebed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 1880181940}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 995245763}
@@ -25770,11 +25627,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489dacee4b99cc4478a8e4258a14c1ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 5114243}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 293203873}
   _isImproving: 1
   _buffUI: {fileID: 2147159733}
@@ -25794,11 +25651,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1f1bb862aa5624ab47283e0057dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 1012552105}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 293203873}
   _isImproving: 1
   _buffUI: {fileID: 1817876812}
@@ -25816,11 +25673,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279c557012588c643903a59a2b47b390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 1861724819}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 293203873}
   _isImproving: 1
   _buffUI: {fileID: 1627439416}
@@ -25838,28 +25695,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd1a78b732073541882795a80704c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 3
-  NameEffect: {fileID: 435159929}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 293203873}
   _isImproving: 1
   _buffUI: {fileID: 145541605}
   _buffType: 5
   _portal: {fileID: 493529902}
   _walls:
-  - {fileID: 1154188038}
-  - {fileID: 590184258}
-  - {fileID: 502896936}
-  - {fileID: 642183510}
-  - {fileID: 895984702}
-  - {fileID: 1204078396}
-  - {fileID: 1594840999}
-  - {fileID: 1089898198}
-  - {fileID: 167980352}
-  - {fileID: 1049423166}
-  - {fileID: 2077703310}
+  - {fileID: 167980357}
+  - {fileID: 1049423171}
+  - {fileID: 2077703315}
 --- !u!114 &1640829206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25872,11 +25721,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 528eb063b7cb7c74bb552eceb69eb889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformaMover: {fileID: 824722458}
-  BallMover: {fileID: 621576493}
-  Player: {fileID: 824722463}
-  Duration: 10
-  NameEffect: {fileID: 431769926}
+  _platformaMovement: {fileID: 0}
+  _ballMover: {fileID: 0}
+  _player: {fileID: 0}
+  _duration: 0
+  _nameEffect: {fileID: 0}
   _load: {fileID: 0}
   _isImproving: 0
   _buffUI: {fileID: 534093401}
@@ -26261,19 +26110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7388c4a46dd774a804ebec5e871d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrickCounter: {fileID: 980526520}
-  BonusPrefab: {fileID: 604276215291435035, guid: e36766bd7e49cb54d8252530060a7a53, type: 3}
-  IsBonus: 0
-  Reward: 1
-  BonusAmount: 0
-  BuffDistributor: {fileID: 2046333286}
-  IsImmortal: 0
-  Effect: {fileID: 0}
+  _brickCounter: {fileID: 0}
+  _bonusPrefab: {fileID: 0}
+  _isBonus: 0
+  _reward: 0
+  _bonusAmount: 0
+  _buffDistributor: {fileID: 0}
+  _isImmortal: 0
+  _effect: {fileID: 0}
   _hologramEffectDie: {fileID: 1249213565}
   _targetVisual: {fileID: 1103209204}
   _fragmentsCounter: {fileID: 2124934855}
   _isEternal: 0
-  AudioSource: {fileID: 0}
+  _audioSource: {fileID: 0}
   _radius: 5
   _force: 150
   _explodeEffect: {fileID: 2021382387}
@@ -32805,17 +32654,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
---- !u!114 &1828871852 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1242895374862404490, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1830765452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1246639532634330345, guid: 93e7a1f178422b14c968e1e865f4141d, type: 3}
@@ -33269,17 +33107,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8966654220980506173, guid: 95529ef378acee74cbb9cba50e4045ca, type: 3}
   m_PrefabInstance: {fileID: 1556684217}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1861724819 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2399824438945452803, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1864792679
 GameObject:
   m_ObjectHideFlags: 0
@@ -33613,17 +33440,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f860859e884dcd498a2afcd4cfb9399, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1880181940 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1817410441866668647, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1880307329
@@ -35017,37 +34833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78abbac5822c32643a8610d0739cab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bricks:
-  - {fileID: 1634998339}
-  - {fileID: 4778260662885261065}
-  - {fileID: 709684528}
-  - {fileID: 1959603362}
-  - {fileID: 1492934563}
-  - {fileID: 1203934636}
-  - {fileID: 980214021}
-  - {fileID: 1143498705}
-  - {fileID: 826601520}
-  - {fileID: 748690158}
-  - {fileID: 2069147559}
-  - {fileID: 1153692712}
-  - {fileID: 1375589980}
-  - {fileID: 260747986}
-  - {fileID: 1557610046}
-  - {fileID: 1123233967}
-  - {fileID: 1299524661}
-  - {fileID: 1608977123}
-  - {fileID: 1641810593}
-  - {fileID: 992569146}
-  - {fileID: 470904560}
-  - {fileID: 915689709}
-  - {fileID: 678693670}
-  - {fileID: 1927236175}
-  - {fileID: 276065464}
-  - {fileID: 2117970433}
-  - {fileID: 1246834083}
-  - {fileID: 1940824146}
-  - {fileID: 1141545032}
-  - {fileID: 1515456236}
   _bricksActivator:
   - {fileID: 1634998341}
   - {fileID: 2012406119}
@@ -35080,11 +34865,9 @@ MonoBehaviour:
   - {fileID: 1141545034}
   - {fileID: 1877503387}
   _startEffect: {fileID: 1358634372}
-  _platforma: {fileID: 824722463}
-  _platformaMover: {fileID: 824722458}
+  _platformaMovement: {fileID: 0}
   _platformaRevive: {fileID: 824722466}
   _ballRevive: {fileID: 621576502}
-  _ball: {fileID: 621576494}
   _duration: 0.05
   _getReadyAnimation: {fileID: 1876216669796287198}
   _reviveAnimation: {fileID: 1876216669796287197}
@@ -35123,17 +34906,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeObject: {fileID: 691230918}
   _meshRenderer: {fileID: 1999881547}
---- !u!114 &2006832706 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 313629770278431391, guid: 292056bd22e5d23478c22cb76b87d4ae, type: 3}
-  m_PrefabInstance: {fileID: 1876216669796287188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d143cc2d70b8167479105adde2f79186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2012406119 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3723969530257656065, guid: 68a8df740fdb00541af1f671dada3ff8, type: 3}
@@ -35457,19 +35229,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7388c4a46dd774a804ebec5e871d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrickCounter: {fileID: 980526520}
-  BonusPrefab: {fileID: 604276215291435035, guid: e36766bd7e49cb54d8252530060a7a53, type: 3}
-  IsBonus: 0
-  Reward: 1
-  BonusAmount: 0
-  BuffDistributor: {fileID: 2046333286}
-  IsImmortal: 0
-  Effect: {fileID: 0}
+  _brickCounter: {fileID: 0}
+  _bonusPrefab: {fileID: 0}
+  _isBonus: 0
+  _reward: 0
+  _bonusAmount: 0
+  _buffDistributor: {fileID: 0}
+  _isImmortal: 0
+  _effect: {fileID: 0}
   _hologramEffectDie: {fileID: 1106038313}
   _targetVisual: {fileID: 758228269}
   _fragmentsCounter: {fileID: 2124934855}
   _isEternal: 0
-  AudioSource: {fileID: 0}
+  _audioSource: {fileID: 0}
   _radius: 5
   _force: 150
   _explodeEffect: {fileID: 1594428737}

@@ -9,7 +9,7 @@ namespace CameraFiles
         private const string MouseX = "Mouse X";
 
         [SerializeField] private Animator _animator;
-        [SerializeField] private PlatformaMover _platformaMover;
+        [SerializeField] private PlatformaMovement _platformaMovement;
 
         private float _sensitivity = 1;
         private float _maxRotationY = 3;
@@ -35,7 +35,7 @@ namespace CameraFiles
             if (!_isWork)
                 return;
 
-            if (Input.GetMouseButton(0) && _platformaMover.IsAlive && _platformaMover.DirectionX != 0)
+            if (Input.GetMouseButton(0) && _platformaMovement.IsAlive && _platformaMovement.DirectionX != 0)
             {
                 _mouseX = Input.GetAxis(MouseX) * _sensitivity;
                 _targetRotation.y += -_mouseX;

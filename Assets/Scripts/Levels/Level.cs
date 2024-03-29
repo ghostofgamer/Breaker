@@ -9,11 +9,8 @@ namespace Levels
     [RequireComponent(typeof(BoxCollider))]
     public class Level : MonoBehaviour
     {
-        [Header("Particles")] [SerializeField] private ParticleSystem _dontSelectedCircle;
-        [SerializeField] private ParticleSystem _selectedCircle;
-        [SerializeField] private ParticleSystem[] _effectsSelect;
+        [SerializeField] private EffectInstaller _effectInstaller;
         [SerializeField] private ParticleSystem[] _line;
-        [SerializeField] private ParticleSystem[] _lineMove;
         [SerializeField] private LevelInfo _levelInfo;
         [SerializeField] private LevelInfo[] _levelsInfo;
         [SerializeField] private Color _notPassedColor;
@@ -44,12 +41,10 @@ namespace Levels
                 return;
 
             foreach (Level level in _allLevels)
-                level.StopParticles();
+                level.GetComponent<EffectInstaller>().StopParticles();
 
-            foreach (ParticleSystem effect in _effectsSelect)
-                effect.Play();
-
-            _selectedCircle.Play();
+            _effectInstaller.ActivationEffects();
+            _effectInstaller.SelectedEffectPlay();
             _cameraDistance.MoveCameraToTarget(transform);
 
             foreach (LevelInfo levelInfo in _levelsInfo)
@@ -68,14 +63,14 @@ namespace Levels
             switch (levelState)
             {
                 case LevelState.Locked:
-                    ColorChanger(_notOpenColor);
+                    _effectInstaller.ColorChanger(_notOpenColor);
                     break;
                 case LevelState.Unlocked:
                     _levelCubeJumping.enabled = true;
-                    ColorChanger(_notPassedColor);
+                    _effectInstaller. ColorChanger(_notPassedColor);
                     break;
                 case LevelState.Completed:
-                    ColorChanger(_passedColor);
+                    _effectInstaller. ColorChanger(_passedColor);
                     break;
             }
         }
@@ -83,14 +78,6 @@ namespace Levels
         public void SetValueCollider(bool flag)
         {
             _boxCollider.enabled = flag;
-        }
-        
-        public void StopParticles()
-        {
-            _selectedCircle.Stop();
-
-            for (int i = 0; i < _effectsSelect.Length; i++)
-                _effectsSelect[i].Stop();
         }
 
         public void SetLevels()
@@ -104,7 +91,7 @@ namespace Levels
                     if (_state == LevelState.Completed && _nextLevel[i]._state == LevelState.Completed)
                     {
                         moduleMain.startColor = _passedColor;
-                        _lineMove[i].Play();
+                        _effectInstaller.LineMoveActivation(i);
                     }
                     else if ((_state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Unlocked) ||
                              (_state == LevelState.Completed && _nextLevel[i]._state == LevelState.Unlocked) ||
@@ -117,20 +104,6 @@ namespace Levels
                         moduleMain.startColor = _notOpenColor;
                     }
                 }
-            }
-        }
-
-        private void ColorChanger(Color color)
-        {
-            var module = _dontSelectedCircle.main;
-            var selectCircle = _selectedCircle.main;
-            module.startColor = color;
-            selectCircle.startColor = color;
-
-            for (int i = 0; i < _effectsSelect.Length; i++)
-            {
-                var effectColor = _effectsSelect[i].main;
-                effectColor.startColor = color;
             }
         }
     }

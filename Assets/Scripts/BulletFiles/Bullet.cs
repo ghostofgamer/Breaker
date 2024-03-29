@@ -4,12 +4,17 @@ namespace BulletFiles
 {
     public class Bullet : MonoBehaviour
     {
-        [SerializeField] protected BulletMover BulletMover;
+        [SerializeField] private BulletMover _bulletMover;
 
         public void Init(Vector3 shootPosition)
         {
             transform.position = shootPosition;
-            BulletMover.enabled = true;
+            _bulletMover.enabled = true;
+        }
+
+        protected void StopBullet()
+        {
+            _bulletMover.enabled = false;
         }
     }
 }

@@ -36,7 +36,7 @@ namespace BulletFiles
 
         private IEnumerator HitTarget()
         {
-            BulletMover.enabled = false;
+            StopBullet();
             _explosionEffect.Play();
             yield return _waitForSeconds;
             gameObject.SetActive(false);

@@ -5,7 +5,7 @@ namespace GameScene.BallContent
 {
     public class PortalTeleporterBall : MonoBehaviour
     {
-        protected readonly int MaxValue = 50;
+        private readonly int MaxValue = 50;
 
         [SerializeField] private EffectActivator _effectActivator;
         [SerializeField] private ParticleSystem _missileEffect;

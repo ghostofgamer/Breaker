@@ -8,13 +8,13 @@ namespace ADS
     public class RewardTripleCredit : RewardVideo
     {
         [SerializeField] private ClaimRewardButton _claimRewardButton;
-        [SerializeField] private LevelComplite _levelComplite;
+        [SerializeField] private LevelCompleteScreen _levelCompleteScreen;
         [SerializeField] private VictoryScreen _victoryScreen;
         [SerializeField] private Button _button;
 
         protected override void OnReward()
         {
-            _levelComplite.gameObject.SetActive(false);
+            _levelCompleteScreen.gameObject.SetActive(false);
             _victoryScreen.OpenScreen(_claimRewardButton.Credits);
         }
 
