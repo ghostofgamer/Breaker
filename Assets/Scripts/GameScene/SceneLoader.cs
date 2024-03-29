@@ -26,6 +26,11 @@ namespace GameScene
             StartCoroutine(SetActive());
         }
 
+        public void RevivePlatform()
+        {
+            StartCoroutine(ComeLife());
+        }
+
         private IEnumerator SetActive()
         {
             foreach (var brick in _bricks)
@@ -41,11 +46,6 @@ namespace GameScene
             _platforma.gameObject.SetActive(true);
             _platforma.GetComponent<PlatformaMover>().SetValue(true);
             _ball.gameObject.SetActive(true);
-        }
-
-        public void RevivePlatform()
-        {
-            StartCoroutine(ComeLife());
         }
 
         private IEnumerator ComeLife()

@@ -19,16 +19,16 @@ namespace UI.Buttons.EndScreenButtons
 
         public int Credits => _credits;
 
-        protected override void OnClick()
-        {
-            StartCoroutine(ButtonClick());
-        }
-
         public void SetActive(int credits)
         {
             gameObject.SetActive(true);
             _credits = credits * _factor;
             StartCoroutine(OpenButton());
+        }
+
+        protected override void OnClick()
+        {
+            StartCoroutine(ButtonClick());
         }
 
         private IEnumerator ButtonClick()

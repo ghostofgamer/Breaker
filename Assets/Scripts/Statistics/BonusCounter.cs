@@ -42,7 +42,7 @@ namespace Statistics
             while (_elapsedTime < _duration)
             {
                 _elapsedTime += Time.deltaTime;
-                _amountBonuses = (int) Mathf.Lerp(currentBonuses, 0, _elapsedTime / _duration);
+                _amountBonuses = (int)Mathf.Lerp(currentBonuses, 0, _elapsedTime / _duration);
                 _bonusTxt.text = _amountBonuses.ToString();
                 yield return null;
             }

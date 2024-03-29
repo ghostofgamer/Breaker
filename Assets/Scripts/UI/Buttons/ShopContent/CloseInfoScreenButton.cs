@@ -16,11 +16,6 @@ namespace UI.Buttons.ShopContent
         private int _startAlpha = 1;
         private int _endAlpha = 0;
 
-        protected override void OnClick()
-        {
-            ScreenClose();
-        }
-
         public void ScreenClose()
         {
             if (_audioSource != null)
@@ -30,6 +25,11 @@ namespace UI.Buttons.ShopContent
                 StopCoroutine(_coroutine);
 
             _coroutine = StartCoroutine(InfoScreenClose());
+        }
+
+        protected override void OnClick()
+        {
+            ScreenClose();
         }
 
         private IEnumerator InfoScreenClose()

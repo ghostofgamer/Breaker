@@ -56,7 +56,7 @@ namespace Bonus
 
                 if (jumpProgress < _maxJumpProgress)
                 {
-                    float newY = _startY + Mathf.Sin(jumpProgress * Mathf.PI) * _jumpHeight;
+                    float newY = _startY + (Mathf.Sin(jumpProgress * Mathf.PI) * _jumpHeight);
                     transform.position = new Vector3(transform.position.x, newY, transform.position.z);
                 }
                 else

@@ -23,8 +23,9 @@ namespace UI
             {
                 for (int i = 0; i < _images.Length; i++)
                 {
-                    _images[i].rectTransform.anchoredPosition = new Vector2(_images[i].rectTransform.anchoredPosition.x,
-                        Mathf.Sin(Time.time * _speed + i) * _amplitude);
+                    _images[i].rectTransform.anchoredPosition = new Vector2(
+                        _images[i].rectTransform.anchoredPosition.x, 
+                        Mathf.Sin((Time.time * _speed) + i) * _amplitude);
                     yield return null;
                 }
 

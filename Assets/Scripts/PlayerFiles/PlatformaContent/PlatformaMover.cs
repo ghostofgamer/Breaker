@@ -27,10 +27,12 @@ namespace PlayerFiles.PlatformaContent
         private string _mouseX = "Mouse X";
 
         public bool IsAlive { get; private set; }
+
         public float Speed => _moveSpeed;
+
         public int DirectionX { get; private set; }
 
-        void Update()
+        private void Update()
         {
             float mouse = Input.GetAxis(_mouseX) * _factor;
 
@@ -117,7 +119,6 @@ namespace PlayerFiles.PlatformaContent
             Vector3 mouseScreenPosition = Input.mousePosition;
             mouseScreenPosition.z = Camera.main.nearClipPlane;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            // Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit))

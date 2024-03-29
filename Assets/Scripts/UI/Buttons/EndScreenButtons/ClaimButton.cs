@@ -27,14 +27,14 @@ namespace UI.Buttons.EndScreenButtons
             Button.interactable = false;
         }
 
-        protected override void OnClick()
-        {
-            StartCoroutine(ButtonClick());
-        }
-
         public void SetValue(int credits)
         {
             StartCoroutine(EnableSetValue(credits));
+        }
+
+        protected override void OnClick()
+        {
+            StartCoroutine(ButtonClick());
         }
 
         private IEnumerator ButtonClick()
@@ -57,7 +57,7 @@ namespace UI.Buttons.EndScreenButtons
             {
                 _elapsedTime += Time.deltaTime;
                 float time = _elapsedTime / _endTime;
-                _credits = (int) Mathf.Lerp(_credits, credits, time);
+                _credits = (int)Mathf.Lerp(_credits, credits, time);
                 _creditsTxt.text = _credits.ToString();
                 yield return null;
             }

@@ -87,7 +87,7 @@ namespace MainMenu
                 {
                     for (int j = 0; j < _rows; j++)
                     {
-                        int index = i * _rows + j;
+                        int index = (i * _rows) + j;
                         Vector3 position = _initialCubePositions[index];
                         position.z += Mathf.Sin(_waveTimer + (i * _waitBetweenWaves)) * _waveAmplitude;
                         _brickList[index].transform.localPosition = position;
@@ -158,7 +158,7 @@ namespace MainMenu
 
             while (elapsedTime < flyTime)
             {
-                cube.transform.position = Vector3.Lerp(startPosition, endPosition, (elapsedTime / flyTime));
+                cube.transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / flyTime);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }

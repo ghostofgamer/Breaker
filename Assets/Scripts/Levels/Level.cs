@@ -8,8 +8,7 @@ namespace Levels
 {
     public class Level : MonoBehaviour
     {
-        [Header("Particles")] 
-        [SerializeField] private ParticleSystem _dontSelectedCircle;
+        [Header("Particles")] [SerializeField] private ParticleSystem _dontSelectedCircle;
         [SerializeField] private ParticleSystem _selectedCircle;
         [SerializeField] private ParticleSystem[] _effectsSelect;
         [SerializeField] private ParticleSystem[] _line;
@@ -30,6 +29,7 @@ namespace Levels
         private Color _currentColor;
 
         public Level[] Nextlevel => _nextLevel;
+
         public int Index => _index;
 
         private void OnMouseDown()
@@ -90,14 +90,14 @@ namespace Levels
                 {
                     var moduleMain = _line[i].main;
 
-                    if (this._state == LevelState.Completed && _nextLevel[i]._state == LevelState.Completed)
+                    if (_state == LevelState.Completed && _nextLevel[i]._state == LevelState.Completed)
                     {
                         moduleMain.startColor = _passedColor;
                         _lineMove[i].Play();
                     }
-                    else if (this._state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Unlocked ||
-                             this._state == LevelState.Completed && _nextLevel[i]._state == LevelState.Unlocked ||
-                             this._state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Completed)
+                    else if ((_state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Unlocked) ||
+                             (_state == LevelState.Completed && _nextLevel[i]._state == LevelState.Unlocked) ||
+                             (_state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Completed))
                     {
                         moduleMain.startColor = _notPassedColor;
                     }

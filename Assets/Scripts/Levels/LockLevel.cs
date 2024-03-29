@@ -14,7 +14,7 @@ namespace Levels
 
         private void Start()
         {
-            _levelState = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
+            _levelState = (LevelState)_load.Get(Save.LevelStatus + _index, 0);
 
             if (_levelState == LevelState.Locked)
                 _level.gameObject.SetActive(false);

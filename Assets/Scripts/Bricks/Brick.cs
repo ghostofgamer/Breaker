@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-
 namespace Bricks
 {
     public abstract class Brick : MonoBehaviour
@@ -22,7 +21,7 @@ namespace Bricks
         [SerializeField] private FragmentsCounter _fragmentsCounter;
         [SerializeField] private bool _isEternal = false;
         [SerializeField] protected AudioSource AudioSource;
-        
+
         private int _minBonus = 1;
         private int _maxBonus = 3;
         private float _bonusRadius = 1.65f;
@@ -31,10 +30,11 @@ namespace Bricks
         protected bool IsTargetBonus;
 
         public event UnityAction Dead;
-        
+
         public Effect EffectElement => Effect;
-        public bool IsEternal => _isEternal;
         
+        public bool IsEternal => _isEternal;
+
         private void Start()
         {
             if (!_isEternal)
@@ -48,7 +48,7 @@ namespace Bricks
 
         public abstract void Die();
 
-        public void Init(BrickCounter brickCounter, BuffDistributor buffDistributor,FragmentsCounter fragmentsCounter)
+        public void Init(BrickCounter brickCounter, BuffDistributor buffDistributor, FragmentsCounter fragmentsCounter)
         {
             BrickCounter = brickCounter;
             BuffDistributor = buffDistributor;
@@ -61,12 +61,12 @@ namespace Bricks
                 return;
 
             _fragmentsCounter.SetAmountFragments(BonusAmount);
-        
+
             for (int i = 0; i < BonusAmount; i++)
             {
-                float angle = i * Mathf.PI * _factor / BonusAmount;
-                float x = transform.position.x + Mathf.Cos(angle) * _bonusRadius;
-                float z = transform.position.z + Mathf.Sin(angle) * _bonusRadius;
+                float angle = (i * Mathf.PI * _factor) / BonusAmount;
+                float x = transform.position.x + (Mathf.Cos(angle) * _bonusRadius);
+                float z = transform.position.z + (Mathf.Sin(angle) * _bonusRadius);
                 Vector3 bonusPosition = new Vector3(x, transform.position.y, z);
                 Instantiate(BonusPrefab, bonusPosition, Quaternion.identity);
             }
@@ -91,7 +91,7 @@ namespace Bricks
 
             Instantiate(Effect, transform.position, Quaternion.identity);
         }
-    
+
         protected void Destroy()
         {
             if (IsImmortal)

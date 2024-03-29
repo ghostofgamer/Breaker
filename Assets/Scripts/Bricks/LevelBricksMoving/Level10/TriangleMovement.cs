@@ -22,8 +22,10 @@ namespace Bricks.LevelBricksMoving.Level10
                 _targetX = _position.x + (_platformaMover.DirectionX * _movementSpeed * Time.deltaTime);
                 _targetX = Mathf.Clamp(_targetX, _minX, _maxX);
 
-                _position = Vector3.MoveTowards(_position,
-                    new Vector3(_targetX, _position.y, _position.z), _moveStep * Time.deltaTime);
+                _position = Vector3.MoveTowards(
+                    _position, 
+                    new Vector3(_targetX, _position.y, _position.z), 
+                    _moveStep * Time.deltaTime);
                 transform.position = _position;
             }
         }

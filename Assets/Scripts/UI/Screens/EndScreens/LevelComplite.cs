@@ -58,7 +58,7 @@ namespace UI.Screens.EndScreens
 
         private IEnumerator EnableVictory()
         {
-            _save.SetData(Save.LevelStatus + _indexLevel, (int) LevelState.Completed);
+            _save.SetData(Save.LevelStatus + _indexLevel, (int)LevelState.Completed);
             _save.SetData(Save.Score + _indexLevel, _scoreCounter.GetScore());
             _score.Increase(_scoreCounter.GetScore());
             SetValue();

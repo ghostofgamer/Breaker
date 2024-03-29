@@ -36,7 +36,6 @@ namespace Bricks.LevelBricksMoving.Level3
             {
                 if (_isMovingToTarget)
                     yield return Slerping(_pointA.position, _pointB.position, _rotationStart, _endRotation);
-
                 else
                     yield return Slerping(_pointB.position, _pointA.position, _endRotation, _rotationStart);
 
@@ -61,10 +60,12 @@ namespace Bricks.LevelBricksMoving.Level3
         {
             _elapsedTime += Time.deltaTime;
             float progress = _elapsedTime / _duration;
-            transform.position = Vector3.Slerp(pointA - _center.position,
+            transform.position = Vector3.Slerp(
+                pointA - _center.position,
                 pointB - _center.position,
                 progress) + _center.position;
-            transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, rotationA, 0),
+            transform.rotation = Quaternion.Lerp(
+                Quaternion.Euler(0, rotationA, 0),
                 Quaternion.Euler(0, rotationB, 0), progress);
         }
     }

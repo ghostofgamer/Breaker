@@ -27,7 +27,7 @@ namespace ModificationFiles
 
         private void Update()
         {
-            transform.Translate(-Vector3.forward * _speed * Time.deltaTime);
+            transform.Translate((-Vector3.forward * _speed) * Time.deltaTime);
             _currentX = Mathf.Clamp(transform.position.x, _minX, _maxX);
             transform.position = new Vector3(_currentX, transform.position.y, transform.position.z);
             Jump();

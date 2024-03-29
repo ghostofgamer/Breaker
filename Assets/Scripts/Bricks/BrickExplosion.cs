@@ -34,14 +34,6 @@ namespace Bricks
             }
         }
 
-        private IEnumerator EnableExplode()
-        {
-            _wickBurning = true;
-            _bombFuseEffect.gameObject.SetActive(true);
-            yield return _waitForSeconds;
-            Detonate();
-        }
-
         public void Detonate()
         {
             BrickDie();
@@ -66,6 +58,14 @@ namespace Bricks
         public void SetRadius(float radius)
         {
             _radius = radius;
+        }
+
+        private IEnumerator EnableExplode()
+        {
+            _wickBurning = true;
+            _bombFuseEffect.gameObject.SetActive(true);
+            yield return _waitForSeconds;
+            Detonate();
         }
     }
 }

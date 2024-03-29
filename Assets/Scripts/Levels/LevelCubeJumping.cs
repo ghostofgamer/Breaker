@@ -18,11 +18,10 @@ namespace Levels
 
         private void Update()
         {
-            _positionY = transform.position.y + (_movingUp ? _value : -_value) * _speed * Time.deltaTime;
+            _positionY = transform.position.y + (((_movingUp ? _value : -_value) * _speed) * Time.deltaTime);
 
             if (_movingUp && _positionY >= _startPosition.y + _maxHeight)
                 _movingUp = false;
-
             else if (!_movingUp && _positionY <= _startPosition.y)
                 _movingUp = true;
 

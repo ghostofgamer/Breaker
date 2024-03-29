@@ -30,6 +30,7 @@ namespace GameScene.BallContent
         private float _minValueZ = 0.35f;
 
         public float MinSpeed { get; private set; } = 30;
+
         public Vector3 Direction => _direction;
 
         private void Update()
@@ -99,7 +100,7 @@ namespace GameScene.BallContent
         public void FastSpeed()
         {
             if (!_isSpeedUp)
-                _speed = Mathf.Clamp((_speed * _speedUpValue), MinSpeed, _mediumSpeed);
+                _speed = Mathf.Clamp(_speed * _speedUpValue, MinSpeed, _mediumSpeed);
         }
 
         public void SetValue(bool portalActivated)
@@ -111,19 +112,22 @@ namespace GameScene.BallContent
         {
             if (transform.position.x > _xMaxPosition)
             {
-                SetDirection(new Vector3(-_directionMove, 0, 0),
+                SetDirection(
+                    new Vector3(-_directionMove, 0, 0),
                     new Vector3(_xMaxPosition, _maxY, transform.position.z));
             }
 
             if (transform.position.x < _xMinPosition)
             {
-                SetDirection(new Vector3(_directionMove, 0, 0),
+                SetDirection(
+                    new Vector3(_directionMove, 0, 0), 
                     new Vector3(_xMinPosition, _maxY, transform.position.z));
             }
 
             if (transform.position.z > _zMaxPosition)
             {
-                SetDirection(new Vector3(0, 0, -_directionMove),
+                SetDirection(
+                    new Vector3(0, 0, -_directionMove), 
                     new Vector3(transform.position.x, _maxY, _zMaxPosition));
             }
         }

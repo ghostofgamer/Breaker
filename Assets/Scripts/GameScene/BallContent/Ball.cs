@@ -43,8 +43,7 @@ namespace GameScene.BallContent
             if (!IsMoving && !_isWin)
             {
                 var position = _platformaMover.transform.position;
-                transform.position = new Vector3(position.x, position.y,
-                    position.z + _factor);
+                transform.position = new Vector3(position.x, position.y, position.z + _factor);
             }
         }
 

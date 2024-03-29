@@ -43,8 +43,7 @@ namespace Bricks.LevelBricksMoving
             foreach (var brick in _bricks)
             {
                 brick.GetComponent<Rigidbody>().isKinematic = false;
-                brick.GetComponent<Rigidbody>().AddForce(-direction.normalized * Random.Range(minValue, maxValue),
-                    ForceMode.Impulse);
+                brick.GetComponent<Rigidbody>().AddForce(-direction.normalized * Random.Range(minValue, maxValue), ForceMode.Impulse);
             }
         }
     }

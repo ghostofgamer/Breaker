@@ -4,6 +4,6 @@ namespace Enum
     {
         Locked,
         Unlocked,
-        Completed
+        Completed,
     }
 }

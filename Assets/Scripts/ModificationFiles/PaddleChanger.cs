@@ -35,8 +35,7 @@ namespace ModificationFiles
 
         private void Change()
         {
-            Vector3 target = new Vector3(_standardScale.x, _standardScale.y + _sizeChange,
-                _standardScale.z);
+            Vector3 target = new Vector3(_standardScale.x, _standardScale.y + _sizeChange, _standardScale.z);
             PlatformaMover.transform.localScale = target;
             _mirrorPlatformaMover.transform.localScale = target;
         }

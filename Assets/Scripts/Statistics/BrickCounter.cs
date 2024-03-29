@@ -16,9 +16,11 @@ namespace Statistics
         private bool _isRemainingActivated;
 
         public event UnityAction AllBrickDestroy;
+        
         public event UnityAction BricksDestructionHelp;
 
         public int RemainingAmountHelp { get; private set; } = 3;
+        
         public int BrickCount { get; private set; }
 
         public void ChangeValue(int reward)

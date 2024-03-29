@@ -17,6 +17,6 @@ namespace Enum
         PaddleShrink,
         Reverse,
         Random,
-        Reset
+        Reset,
     }
 }

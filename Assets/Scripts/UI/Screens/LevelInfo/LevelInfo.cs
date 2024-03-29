@@ -61,8 +61,7 @@ namespace UI.Screens.LevelInfo
         private void Initialization()
         {
             _information = _load.Get(Save.LevelStatus + _index, _defaultValue) > _defaultValue;
-            _panelCompleted.SetActive((LevelState) _load.Get(Save.LevelStatus + _index, _defaultValue) ==
-                                      LevelState.Completed);
+            _panelCompleted.SetActive((LevelState)_load.Get(Save.LevelStatus + _index, _defaultValue) == LevelState.Completed);
             _score.text = _load.Get(Save.Score + _index, _defaultValue).ToString();
             SetActive(_zeroAlpha, false);
             _cubePositionInfo = _cubePositionsInfo[_information ? 0 : _indexFalseInformation];

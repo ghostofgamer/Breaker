@@ -4,13 +4,13 @@ namespace Others
 {
     public class AnimationsController : MonoBehaviour
     {
-        [SerializeField] private Animator _animator;
-
         private const string Rotate = "Rotate";
         private const string Victory = "Victory";
         private const string BrickRingOpen = "BrickRingOpen";
         private const string BrickRingClose = "BrickRingClose";
         private const string WaveMotion = "WaveMotion";
+
+        [SerializeField] private Animator _animator;
 
         public void PlayRotate()
         {

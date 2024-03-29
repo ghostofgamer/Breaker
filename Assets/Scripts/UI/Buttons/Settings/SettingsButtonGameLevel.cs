@@ -16,7 +16,7 @@ namespace UI.Buttons.Settings
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private AudioSource _audioSource;
 
-        private void OnEnable()
+        protected override void OnEnable()
         {
             base.OnEnable();
             _brickCounter.AllBrickDestroy += SetValue;
@@ -24,12 +24,17 @@ namespace UI.Buttons.Settings
             _reviveScreen.Revive += SetValue;
         }
 
-        private void OnDisable()
+        protected override void OnDisable()
         {
             base.OnDisable();
             _brickCounter.AllBrickDestroy -= SetValue;
             _ball.Dying -= SetValue;
             _reviveScreen.Revive -= SetValue;
+        }
+
+        public void SetValue()
+        {
+            Button.interactable = !Button.interactable;
         }
 
         protected override void OnClick()
@@ -38,11 +43,6 @@ namespace UI.Buttons.Settings
             _platformaMover.enabled = false;
             _platformaMover.SetPressed(false);
             _settingsScreen.Open();
-        }
-
-        public void SetValue()
-        {
-            Button.interactable = !Button.interactable;
         }
     }
 }

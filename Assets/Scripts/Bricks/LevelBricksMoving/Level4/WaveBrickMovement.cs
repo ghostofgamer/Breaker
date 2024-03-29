@@ -18,7 +18,7 @@ namespace Bricks.LevelBricksMoving.Level4
         private void Update()
         {
             _zPosition = _initialPosition.z +
-                         Mathf.Sin(Time.time * _speed + transform.position.x * _frequency) * _amplitude;
+                         Mathf.Sin((Time.time * _speed) + (transform.position.x * _frequency)) * _amplitude;
             transform.position = new Vector3(transform.position.x, transform.position.y, _zPosition);
         }
     }

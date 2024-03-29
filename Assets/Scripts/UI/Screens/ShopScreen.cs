@@ -16,7 +16,7 @@ namespace UI.Screens
 
         private int _zeroAlpha = 0;
         private int _fullAlpha = 1;
-        
+
         public bool IsOpen { get; private set; }
 
         public void Open()

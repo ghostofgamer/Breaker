@@ -47,6 +47,10 @@ namespace ModificationFiles
             WaitForSeconds = new WaitForSeconds(Duration);
         }
 
+        public abstract void ApplyModification();
+
+        public abstract void StopModification();
+
         protected void SetActive(bool isActive)
         {
             _buffUI.gameObject.SetActive(isActive);
@@ -56,9 +60,5 @@ namespace ModificationFiles
         {
             NameEffect.Show();
         }
-
-        public abstract void ApplyModification();
-
-        public abstract void StopModification();
     }
 }

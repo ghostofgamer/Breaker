@@ -26,15 +26,15 @@ namespace UI.Buttons
             StartCoroutine(Fade(_fullAlpha, _zeroAlpha));
         }
 
+        public void FadeBackGround()
+        {
+            StartCoroutine(Fade(_zeroAlpha, _fullAlpha));
+        }
+
         protected override void OnClick()
         {
             _audioSource.PlayOneShot(_audioSource.clip);
             GoMainMenu();
-        }
-
-        public void FadeBackGround()
-        {
-            StartCoroutine(Fade(_zeroAlpha, _fullAlpha));
         }
 
         private void GoMainMenu()

@@ -36,8 +36,8 @@ namespace CameraFiles
 
         private void Update()
         {
-            if (transform.position != _newCameraPos && !Input.GetMouseButton(0) ||
-                transform.position != _newCameraPos && !_freeMovement)
+            if ((transform.position != _newCameraPos && !Input.GetMouseButton(0)) ||
+                (transform.position != _newCameraPos && !_freeMovement))
             {
                 transform.position =
                     Vector3.MoveTowards(transform.position, _newCameraPos, _overSpeed * Time.deltaTime);
@@ -48,7 +48,6 @@ namespace CameraFiles
                 _mouseStartPos = Input.mousePosition;
                 _cameraStartPos = transform.position;
             }
-
             else if (Input.GetMouseButton(0) && _freeMovement)
             {
                 _mouseDelta = Input.mousePosition - _mouseStartPos;

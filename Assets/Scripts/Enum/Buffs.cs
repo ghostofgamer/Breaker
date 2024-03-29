@@ -5,6 +5,6 @@ namespace Enum
         Mirror,
         Laser,
         Shield,
-        Portal
+        Portal,
     }
 }

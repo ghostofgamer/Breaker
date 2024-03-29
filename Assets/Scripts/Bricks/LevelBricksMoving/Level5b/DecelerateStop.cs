@@ -19,7 +19,6 @@ namespace Bricks.LevelBricksMoving.Level5b
         {
             if (_currentSpeed > 0.0f)
                 _currentSpeed -= _deceleration * Time.deltaTime;
-
             else
                 enabled = false;
 

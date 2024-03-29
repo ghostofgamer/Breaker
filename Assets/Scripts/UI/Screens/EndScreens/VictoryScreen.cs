@@ -15,7 +15,7 @@ namespace UI.Screens.EndScreens
         [SerializeField] private ScoreCounter _scoreCounter;
         [SerializeField] private GameObject[] _statistics;
         [SerializeField] private Save _save;
-        [Header("StatisticTMP")] 
+        [Header("StatisticTMP")]
         [SerializeField] private TMP_Text _timer;
         [SerializeField] private TMP_Text _buffCollected;
         [SerializeField] private TMP_Text _brickSmashed;
@@ -52,7 +52,7 @@ namespace UI.Screens.EndScreens
         private IEnumerator EnableScreenMove(int credits)
         {
             yield return _waitForSeconds;
-            base.Open();
+            Open();
             yield return _waitForSeconds;
             SetValue(credits);
 
@@ -71,7 +71,7 @@ namespace UI.Screens.EndScreens
                     {
                         elapsedTime += Time.deltaTime;
                         float time = elapsedTime / endTime;
-                        score = (int) Mathf.Lerp(score, creditsWin, time);
+                        score = (int)Mathf.Lerp(score, creditsWin, time);
                         _score.text = score.ToString();
                         yield return null;
                     }

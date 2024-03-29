@@ -8,7 +8,7 @@ namespace SaveAndLoad
         public const string TemporaryMoney = "TemporaryMoney";
         public const string Score = "Score";
         public const string BrickSmashed = "BrickSmashed";
-        [Header("SelectedSkins")] 
+        [Header("SelectedSkins")]
         public const string SkinBall = "SkinBall";
         public const string SelectedSkinBall = "SelectedSkinBall";
         [Header("Buffs")]
@@ -17,7 +17,7 @@ namespace SaveAndLoad
         public const string ActiveCapsuleIndex = "ActiveCapsuleIndex";
         public const string CapsuleSkinBought = "CapsuleSkinBought";
         public const string CapsuleSkinActive = "CapsuleSkinActive";
-        [Header("ProgressLevel")] 
+        [Header("ProgressLevel")]
         public const string LevelStatus = "LevelStatus";
 
         private void Start()

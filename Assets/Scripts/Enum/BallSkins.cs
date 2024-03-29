@@ -10,6 +10,6 @@ namespace Enum
         Bright,
         Lucky,
         Steep,
-        Important
+        Important,
     }
 }

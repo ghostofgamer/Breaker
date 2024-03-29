@@ -32,7 +32,6 @@ namespace PlayerFiles
 
                 _spriteRenderer.enabled = false;
             }
-
             else
             {
                 if (_spriteRenderer.enabled)

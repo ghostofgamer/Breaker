@@ -24,10 +24,11 @@ namespace UI.Screens.EndScreens
         private float _elapsedTime;
         private Coroutine _coroutine;
 
-        public bool IsLose { get; private set; }
-
         public event UnityAction Revive;
+        
         public event UnityAction Lose;
+
+        public bool IsLose { get; private set; }
 
         private void OnEnable()
         {
