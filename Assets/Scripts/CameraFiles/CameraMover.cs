@@ -67,22 +67,17 @@ namespace CameraFiles
 
         public void EnableFreeMovement()
         {
-            SetValue(true);
+            _freeMovement = true;
         }
 
         public void DisableFreeMovement()
         {
-            SetValue(false);
+            _freeMovement = false;
         }
 
         public void SpeedUp()
         {
             _overSpeed *= _overSpeed;
-        }
-
-        private void SetValue(bool flag)
-        {
-            _freeMovement = flag;
         }
 
         private IEnumerator SetTarget(Vector3 position)

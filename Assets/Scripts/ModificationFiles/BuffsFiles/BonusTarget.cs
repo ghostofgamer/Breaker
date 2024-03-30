@@ -62,7 +62,7 @@ namespace ModificationFiles.BuffsFiles
 
         private void Change()
         {
-            SetActive(true);
+            EnableBuffUI();
             _randomIndex = GetRandomIndex(_filtredBrick.Count);
             _randomEffectIndex = GetRandomIndex(_effects.Length);
             _startMaterial = _renderers[_randomIndex].material;
@@ -71,7 +71,8 @@ namespace ModificationFiles.BuffsFiles
             if (_startEffect == null)
                 _buffCounter.IncreaseBuffCount();
 
-            _filtredBrick[_randomIndex].SetEffect(_effects[_randomEffectIndex], true);
+            _filtredBrick[_randomIndex].SetEffect(_effects[_randomEffectIndex]);
+            _filtredBrick[_randomIndex].EnableTargetBonus();
             _renderers[_randomIndex].material = _newMaterial;
         }
 
@@ -102,8 +103,9 @@ namespace ModificationFiles.BuffsFiles
 
         private void Reset()
         {
-            SetActive(false);
-            _filtredBrick[_randomIndex].SetEffect(_startEffect, false);
+            DisableBuffUI();
+            _filtredBrick[_randomIndex].SetEffect(_startEffect);
+            _filtredBrick[_randomIndex].DisableTargetBonus();
             _renderers[_randomIndex].material = _startMaterial;
 
             if (_filtredBrick[_randomIndex].gameObject.activeSelf != false && _startEffect == null)

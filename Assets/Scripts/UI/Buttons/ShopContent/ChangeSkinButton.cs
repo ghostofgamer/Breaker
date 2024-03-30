@@ -6,6 +6,9 @@ namespace UI.Buttons.ShopContent
 {
     public class ChangeSkinButton : AbstractButton
     {
+        private const string SkinBall = "SkinBall";
+        private const string SelectedSkinBall = "SelectedSkinBall";
+
         [SerializeField] private Image _image;
         [SerializeField] private Image _selected;
         [SerializeField] private Sprite _newSprite;
@@ -22,7 +25,7 @@ namespace UI.Buttons.ShopContent
 
         private void Start()
         {
-            int indexSelected = _load.Get(Save.SelectedSkinBall, _startSelectedIndex);
+            int indexSelected = _load.Get(SelectedSkinBall, _startSelectedIndex);
             _buttons[indexSelected].ChooseSkin();
         }
 
@@ -40,8 +43,8 @@ namespace UI.Buttons.ShopContent
 
             _image.sprite = _newSprite;
             _selected.gameObject.SetActive(true);
-            _save.SetData(Save.SkinBall, _colorIndex);
-            _save.SetData(Save.SelectedSkinBall, _index);
+            _save.SetData(SkinBall, _colorIndex);
+            _save.SetData(SelectedSkinBall, _index);
         }
 
         private void UnSelectedSkin()

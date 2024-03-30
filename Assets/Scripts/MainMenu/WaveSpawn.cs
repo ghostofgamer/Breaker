@@ -17,14 +17,13 @@ namespace MainMenu
         [SerializeField]private WaveMotion _waveMotion;
 
         private ObjectPool<Brick> _pool;
-        private bool _autoExpand = true;
         private Brick[,] _brickGrid;
         private List<Brick> _brickList;
 
         private void Awake()
         {
             _pool = new ObjectPool<Brick>(_cube, _columns * _rows, _container);
-            _pool.SetAutoExpand(_autoExpand);
+            _pool.EnableAutoExpand();
         }
 
         private void Start()

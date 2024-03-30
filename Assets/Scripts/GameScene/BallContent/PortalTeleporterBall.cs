@@ -16,12 +16,11 @@ namespace GameScene.BallContent
         [SerializeField] private Transform _container;
 
         private ObjectPool<EffectActivator> _pool;
-        private bool _autoExpand = true;
 
         private void Start()
         {
             _pool = new ObjectPool<EffectActivator>(_effectActivator, MaxValue, _container);
-            _pool.SetAutoExpand(_autoExpand);
+            _pool.EnableAutoExpand();
         }
 
         public void Init(ParticleSystem missileEffect)

@@ -15,7 +15,7 @@ namespace UI.Screens.EndScreens
 
         public virtual void OnOpen()
         {
-            ChangeValue(_alphaFull, true, true);
+            EnableScreen();
             _uiAnimations.Open();
             _audioSource.PlayOneShot(_audioSource.clip);
         }
@@ -25,11 +25,18 @@ namespace UI.Screens.EndScreens
             StartCoroutine(ScreenDeactivation());
         }
 
-        private void ChangeValue(int alpha, bool interactable, bool blockRaycast)
+        private void EnableScreen()
         {
-            _canvasGroup.alpha = alpha;
-            _canvasGroup.interactable = interactable;
-            _canvasGroup.blocksRaycasts = blockRaycast;
+            _canvasGroup.alpha = _alphaFull;
+            _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
+        }
+
+        private void DisableScreen()
+        {
+            _canvasGroup.alpha = _alphaZero;
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
         }
 
         private IEnumerator ScreenDeactivation()
@@ -37,7 +44,7 @@ namespace UI.Screens.EndScreens
             _uiAnimations.Close();
             _audioSource.PlayOneShot(_audioSource.clip);
             yield return _waitForSeconds;
-            ChangeValue(_alphaZero, false, false);
+            DisableScreen();
         }
     }
 }

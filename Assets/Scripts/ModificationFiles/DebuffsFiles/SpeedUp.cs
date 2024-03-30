@@ -4,7 +4,6 @@ namespace ModificationFiles.DebuffsFiles
 {
     public class SpeedUp : Modification
     {
-        private float _startSpeed;
 
         public override void OnApplyModification()
         {
@@ -25,15 +24,14 @@ namespace ModificationFiles.DebuffsFiles
 
         private void Stop()
         {
-            SetActive(false);
-            BallMover.SetValue(_startSpeed, false);
+            DisableBuffUI();
+            BallMover.DisableSpeedUpEffect();
         }
 
         private IEnumerator OnSpeedUpActivated()
         {
-            SetActive(true);
-            _startSpeed = BallMover.MinSpeed;
-            BallMover.SetValue(_startSpeed * 2, true);
+            EnableBuffUI();
+            BallMover.EnableSpeedUpEffect();
             yield return WaitForSeconds;
             Stop();
             Player.DeleteEffect(this);

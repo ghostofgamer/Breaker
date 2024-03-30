@@ -35,26 +35,34 @@ namespace ModificationFiles.DebuffsFiles
 
         public override void StopModification()
         {
-            ChangeBricksImmortal(false);
+            DisableBricksImmortal();
         }
 
         private IEnumerator OnImmuneBricksActivated()
         {
             _filtredBricks = _bricks
                 .Where(p => p.gameObject.activeSelf == true).ToList();
-            
-            ChangeBricksImmortal(true);
+
+            EnableBricksImmortal();
             yield return WaitForSeconds;
-            ChangeBricksImmortal(false);
+            DisableBricksImmortal();
             Player.DeleteEffect(this);
         }
 
-        private void ChangeBricksImmortal(bool immortalBrick)
+        private void EnableBricksImmortal()
         {
-            SetActive(immortalBrick);
+            EnableBuffUI();
 
             foreach (Brick brick in _filtredBricks)
-                brick.SetBoolImmortal(immortalBrick);
+                brick.EnableImmortalEffect();
+        }
+
+        private void DisableBricksImmortal()
+        {
+            DisableBuffUI();
+
+            foreach (Brick brick in _filtredBricks)
+                brick.DisableImmortalEffect();
         }
 
         private void FindAllChildren(Transform parent)

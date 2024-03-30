@@ -26,7 +26,7 @@ namespace ModificationFiles.BuffsFiles
 
         private IEnumerator OnShieldActivated()
         {
-            SetActive(true);
+            EnableBuffUI();
             _shield.SetActive(true);
             yield return WaitForSeconds;
             Stop();
@@ -35,7 +35,7 @@ namespace ModificationFiles.BuffsFiles
 
         private void Stop()
         {
-            SetActive(false);
+            DisableBuffUI();
             _shield.SetActive(false);
         }
     }

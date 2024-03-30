@@ -24,13 +24,13 @@ namespace UI.Screens
         private void Start()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
-            Setvalue(_zeroAlpha, false);
+            SetValue(_zeroAlpha, false);
         }
 
         public void Open()
         {
             IsOpen = true;
-            Setvalue(_fullAlpha, true);
+            SetValue(_fullAlpha, true);
             _uiAnimations.Open();
             _settingsScreenSound.Play(0, _timePauseOpenEnd, _audioClip, _audioSource.clip);
             Time.timeScale = 0;
@@ -47,10 +47,10 @@ namespace UI.Screens
             _settingsScreenSound.Play(0, _timePauseCloseEnd, _audioSource.clip, _audioClip);
             yield return _waitForSeconds;
             IsOpen = false;
-            Setvalue(_zeroAlpha, false);
+            SetValue(_zeroAlpha, false);
         }
 
-        private void Setvalue(int alpha, bool flag)
+        private void SetValue(int alpha, bool flag)
         {
             if (_canvasGroup != null)
             {

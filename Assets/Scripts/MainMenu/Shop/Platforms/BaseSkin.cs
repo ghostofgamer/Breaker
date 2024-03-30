@@ -11,14 +11,24 @@ namespace MainMenu.Shop.Platforms
 
         public bool IsActive => _isActive;
 
-        public void SetValueBought(bool isBought)
+        public void EnableBought()
         {
-            _isBought = isBought;
+            _isBought = true;
+        }
+        
+        public void DisableBought()
+        {
+            _isBought = false;
         }
 
-        public void SetValueActive(bool isActive)
+        public void EnableActive()
         {
-            _isActive = isActive;
+            _isActive = true;
+        }
+        
+        public void DisableActive()
+        {
+            _isActive = false;
         }
     }
 }

@@ -11,6 +11,9 @@ namespace UI.Screens.LevelInfo
 {
     public class LevelInfo : MonoBehaviour
     {
+        private const string ScoreValue = "Score";
+        private const string LevelStatus = "LevelStatus";
+
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private GameObject _cubePositionInfo;
         [SerializeField] private GameObject[] _cubePositionsInfo;
@@ -60,9 +63,9 @@ namespace UI.Screens.LevelInfo
 
         private void Initialization()
         {
-            _information = _load.Get(Save.LevelStatus + _index, _defaultValue) > _defaultValue;
-            _panelCompleted.SetActive((LevelState)_load.Get(Save.LevelStatus + _index, _defaultValue) == LevelState.Completed);
-            _score.text = _load.Get(Save.Score + _index, _defaultValue).ToString();
+            _information = _load.Get(LevelStatus + _index, _defaultValue) > _defaultValue;
+            _panelCompleted.SetActive((LevelState)_load.Get(LevelStatus + _index, _defaultValue) == LevelState.Completed);
+            _score.text = _load.Get(ScoreValue + _index, _defaultValue).ToString();
             SetActive(_zeroAlpha, false);
             _cubePositionInfo = _cubePositionsInfo[_information ? 0 : _indexFalseInformation];
             _unLockedPanel.SetActive(_information);

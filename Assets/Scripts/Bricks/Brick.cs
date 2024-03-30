@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using ModificationFiles;
 using Statistics;
 using UnityEngine;
@@ -65,16 +66,31 @@ namespace Bricks
             _buffDistributor = buffDistributor;
         }
 
-        public void SetBoolImmortal(bool immortal)
+        public void EnableImmortalEffect()
         {
-            _isImmortal = immortal;
+            _isImmortal = true;
         }
 
-        public void SetEffect(Effect effect, bool activation)
+        public void DisableImmortalEffect()
+        {
+            _isImmortal = false;
+        }
+
+        public void SetEffect(Effect effect)
         {
             _effect = effect;
-            _targetVisual.SetActive(activation);
-            IsTargetBonus = activation;
+        }
+
+        public void EnableTargetBonus()
+        {
+            _targetVisual.SetActive(true);
+            IsTargetBonus = true;
+        }
+
+        public void DisableTargetBonus()
+        {
+            _targetVisual.SetActive(false);
+            IsTargetBonus = false;
         }
 
         protected void Destroy()

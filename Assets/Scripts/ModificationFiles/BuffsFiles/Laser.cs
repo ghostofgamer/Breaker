@@ -49,7 +49,7 @@ namespace ModificationFiles.BuffsFiles
         private IEnumerator OnShoot()
         {
             _elapsedTime = 0;
-            SetActive(true);
+            EnableBuffUI();
             _isActive = true;
 
             while (_isActive)
@@ -68,7 +68,7 @@ namespace ModificationFiles.BuffsFiles
 
         private void Stop()
         {
-            SetActive(false);
+            DisableBuffUI();
             _isActive = false;
         }
     }

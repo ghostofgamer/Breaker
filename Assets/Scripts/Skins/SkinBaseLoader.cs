@@ -6,6 +6,8 @@ namespace Skins
 {
     public class SkinBaseLoader : MonoBehaviour
     {
+        private const string ActiveCapsuleIndex = "ActiveCapsuleIndex";
+
         private const int StrongerExplosion = 1;
         private const int ResistDebuff = 2;
         private const int ChanceShield = 3;
@@ -27,7 +29,7 @@ namespace Skins
 
         private void Start()
         {
-            int index = _load.Get(Save.ActiveCapsuleIndex, _startIndex);
+            int index = _load.Get(ActiveCapsuleIndex, _startIndex);
             _skins[index].SetActive(true);
 
             if (_isOriginal)

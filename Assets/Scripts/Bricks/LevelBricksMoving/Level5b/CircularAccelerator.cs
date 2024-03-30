@@ -13,9 +13,9 @@ namespace Bricks.LevelBricksMoving.Level5b
         private WaitForSeconds _delay;
         private WaitForSeconds _delayRotaion;
         private AccelerateRotate[] _accelerateRotateComponents;
-                                    private DecelerateStop[] _decelerateStopComponents;
-                            
-                                    private void Start()
+        private DecelerateStop[] _decelerateStopComponents;
+
+        private void Start()
         {
             _delay = new WaitForSeconds(_delayBetweenObjects);
             _delayRotaion = new WaitForSeconds(_rotationTime);

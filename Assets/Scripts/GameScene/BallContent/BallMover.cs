@@ -99,15 +99,26 @@ namespace GameScene.BallContent
             _direction = direction;
         }
 
-        public void SetValue(float speed, bool flag)
+        public void EnableSpeedUpEffect()
         {
-            _isSpeedUp = flag;
-            this._speed = Mathf.Clamp(speed, MinSpeed, _maxSpeed);
+            _isSpeedUp = true;
+            _speed = _maxSpeed;
+        }
+        
+        public void DisableSpeedUpEffect()
+        {
+            _isSpeedUp = false;
+            _speed = MinSpeed;
         }
 
-        public void SetValue(bool portalActivated)
+        public void PortalActivated()
         {
-            _isPortal = portalActivated;
+            _isPortal = true;
+        }
+
+        public void PortalDeactivation()
+        {
+            _isPortal = false;
         }
 
         public void ChangeDirection(Vector3 vector, Vector3 hit)

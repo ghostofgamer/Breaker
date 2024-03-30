@@ -67,6 +67,16 @@ namespace ModificationFiles
             _buffUI.gameObject.SetActive(isActive);
         }
 
+        protected void EnableBuffUI()
+        {
+            _buffUI.gameObject.SetActive(true);
+        }
+
+        protected void DisableBuffUI()
+        {
+            _buffUI.gameObject.SetActive(false);
+        }
+        
         protected void ShowNameEffect()
         {
             _nameEffect.Show();

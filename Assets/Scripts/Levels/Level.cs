@@ -84,17 +84,12 @@ namespace Levels
 
         public void Activation()
         {
-            SetValueCollider(true);
+            _boxCollider.enabled = true;
         }
 
         public void Deactivation()
         {
-            SetValueCollider(false);
-        }
-
-        private void SetValueCollider(bool flag)
-        {
-            _boxCollider.enabled = flag;
+            _boxCollider.enabled = false;
         }
     }
 }

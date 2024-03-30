@@ -9,9 +9,9 @@ namespace ModificationFiles
         [SerializeField] private float _sizeChange;
         [SerializeField] private Vector3 _standardScale;
 
-        protected IEnumerator Resize(BallMover ballMover)
+        protected IEnumerator Resize()
         {
-            SetActive(true);
+            EnableBuffUI();
             Change();
             yield return WaitForSeconds;
             Reset();
@@ -20,7 +20,7 @@ namespace ModificationFiles
 
         protected void Reset()
         {
-            SetActive(false);
+            DisableBuffUI();
             BallMover.transform.localScale = _standardScale;
         }
 

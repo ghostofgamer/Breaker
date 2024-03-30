@@ -8,6 +8,7 @@ namespace WeaponFiles
 {
     public class Weapon : MonoBehaviour
     {
+        private const string Laser = "Laser";
         private readonly int MaxAmmo = 50;
 
         [SerializeField] private Transform[] _shootPosition;
@@ -17,7 +18,6 @@ namespace WeaponFiles
         [SerializeField] private AudioSource _audioSource;
 
         private ObjectPool<Bullet> _pool;
-        private bool _autoExpand = true;
         private int _shootPositionsAmount;
         private int _startShootPositions = 2;
         private int _index;
@@ -25,8 +25,8 @@ namespace WeaponFiles
         private void Start()
         {
             _pool = new ObjectPool<Bullet>(_bullet, MaxAmmo, _container);
-            _pool.SetAutoExpand(_autoExpand);
-            _shootPositionsAmount = _load.Get(Save.Laser, _startShootPositions);
+            _pool.EnableAutoExpand();
+            _shootPositionsAmount = _load.Get(Laser, _startShootPositions);
         }
 
         public void Shoot()

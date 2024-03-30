@@ -39,11 +39,16 @@ namespace ObjectPoolFiles
             return filter;
         }
 
-        public void SetAutoExpand(bool flag)
+        public void EnableAutoExpand()
         {
-            AutoExpand = flag;
+            AutoExpand = true;
         }
-
+        
+        public void DisableAutoExpand()
+        {
+            AutoExpand = false;
+        }
+        
         public void Reset()
         {
             foreach (var item in _poolGeneric)

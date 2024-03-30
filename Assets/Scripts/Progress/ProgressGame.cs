@@ -7,6 +7,8 @@ namespace Progress
 {
     public class ProgressGame : MonoBehaviour
     {
+        private const string LevelStatus = "LevelStatus";
+
         [SerializeField] private Level[] _levels;
         [SerializeField] private LevelState[] _levelStates;
         [SerializeField] private Load _load;
@@ -21,13 +23,13 @@ namespace Progress
         private void SaveProgress()
         {
             for (int i = 0; i < _levelStates.Length; i++)
-                _save.SetData(Save.LevelStatus + (i + 1), (int)_levelStates[i]);
+                _save.SetData(LevelStatus + (i + 1), (int)_levelStates[i]);
         }
 
         private void LoadProgress()
         {
             for (int i = 0; i < _levelStates.Length; i++)
-                _levelStates[i] = (LevelState)_load.Get(Save.LevelStatus + (i + 1), 0);
+                _levelStates[i] = (LevelState)_load.Get(LevelStatus + (i + 1), 0);
 
             if (_levelStates[0] != LevelState.Completed)
             {

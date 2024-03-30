@@ -11,6 +11,9 @@ namespace UI.Screens.EndScreens
 {
     public class LevelCompleteScreen : MonoBehaviour
     {
+        private const string ScoreValue = "Score";
+        private const string LevelStatus = "LevelStatus";
+
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private TMP_Text _text;
         [SerializeField] private ClaimButton _claimButton;
@@ -52,8 +55,8 @@ namespace UI.Screens.EndScreens
 
         private IEnumerator EnableVictory()
         {
-            _save.SetData(Save.LevelStatus + _indexLevel, (int)LevelState.Completed);
-            _save.SetData(Save.Score + _indexLevel, _scoreCounter.GetScore());
+            _save.SetData(LevelStatus + _indexLevel, (int)LevelState.Completed);
+            _save.SetData(ScoreValue + _indexLevel, _scoreCounter.GetScore());
             _score.Increase(_scoreCounter.GetScore());
             _text.enabled = true;
             _uiAnimationsText.Open();

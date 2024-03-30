@@ -19,7 +19,7 @@ namespace ModificationFiles
 
         protected IEnumerator Resize()
         {
-            SetActive(true);
+            EnableBuffUI();
             Change();
             yield return WaitForSeconds;
             Reset();
@@ -28,7 +28,7 @@ namespace ModificationFiles
 
         protected void Reset()
         {
-            SetActive(false);
+            DisableBuffUI();
             BaseMovement.transform.localScale = _standardScale;
             _mirrorMovement.transform.localScale = _standardScale;
         }

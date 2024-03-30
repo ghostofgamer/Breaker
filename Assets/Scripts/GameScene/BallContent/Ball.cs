@@ -48,10 +48,10 @@ namespace GameScene.BallContent
             _rigidbody.isKinematic = true;
         }
 
-        public void SetMove(bool flag, float directionX)
+        public void SetMove(float directionX)
         {
-            IsMoving = flag;
-            _rigidbody.isKinematic = !flag;
+            IsMoving = true;
+            _rigidbody.isKinematic = false;
             _ballMover.SetStartDirection(new Vector3(directionX, 0, _directionForward).normalized);
         }
 

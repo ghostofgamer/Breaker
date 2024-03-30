@@ -8,6 +8,9 @@ namespace PlayerFiles
 {
     public class Wallet : MonoBehaviour
     {
+        private const string MoneyValue = "Money";
+        private const string TemporaryMoney = "TemporaryMoney";
+
         [SerializeField] private TMP_Text _moneyText;
         [SerializeField] private Save _save;
         [SerializeField] private Load _load;
@@ -27,15 +30,15 @@ namespace PlayerFiles
 
         private void Start()
         {
-            _money = _load.Get(Save.Money, _startMoney);
-            _temporaryMoney = _load.Get(Save.TemporaryMoney, _zero);
+            _money = _load.Get(MoneyValue, _startMoney);
+            _temporaryMoney = _load.Get(TemporaryMoney, _zero);
             ShowInfo();
 
             if (_temporaryMoney > _zero)
             {
                 int target = _money + _temporaryMoney;
                 Calculate(target, _longDuration);
-                _save.SetData(Save.TemporaryMoney, _zero);
+                _save.SetData(TemporaryMoney, _zero);
             }
         }
 
@@ -53,7 +56,7 @@ namespace PlayerFiles
 
         private void SaveMoney()
         {
-            _save.SetData(Save.Money, _money);
+            _save.SetData(MoneyValue, _money);
         }
 
         private void Calculate(int target, float duration)

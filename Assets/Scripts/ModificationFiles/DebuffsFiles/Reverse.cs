@@ -23,13 +23,13 @@ namespace ModificationFiles.DebuffsFiles
 
         private void Stop()
         {
-            SetActive(false);
+            DisableBuffUI();
             BaseMovement.DisableReverse();
         }
 
         private IEnumerator OnReversePaddleActivated()
         {
-            SetActive(true);
+            EnableBuffUI();
             BaseMovement.EnableReverse();
             yield return WaitForSeconds;
             Stop();

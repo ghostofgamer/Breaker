@@ -6,6 +6,8 @@ namespace Levels
 {
     public class LockLevel : MonoBehaviour
     {
+        private const string LevelStatus = "LevelStatus";
+
         [SerializeField] private int _index;
         [SerializeField] private Load _load;
         [SerializeField] private Level _level;
@@ -17,7 +19,7 @@ namespace Levels
 
         private void Start()
         {
-            _levelState = (LevelState)_load.Get(Save.LevelStatus + _index, 0);
+            _levelState = (LevelState)_load.Get(LevelStatus + _index, 0);
             _effects = new ParticleSystem.MainModule[_fenceEffects.Length];
 
             for (int i = 0; i < _effects.Length; i++)

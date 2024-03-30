@@ -18,10 +18,10 @@ namespace UI.Screens
 
             _waitForStart.waitTime = start;
             _waitForEnd.waitTime = end;
-            _coroutine = StartCoroutine(PlaySound(start, end, audioClipStart, audioClipEnd));
+            _coroutine = StartCoroutine(PlaySound(audioClipStart, audioClipEnd));
         }
 
-        private IEnumerator PlaySound(float startTime, float endTime, AudioClip audioClipStart, AudioClip audioClipEnd)
+        private IEnumerator PlaySound(AudioClip audioClipStart, AudioClip audioClipEnd)
         {
             yield return _waitForStart;
             _audioSource.PlayOneShot(audioClipStart);

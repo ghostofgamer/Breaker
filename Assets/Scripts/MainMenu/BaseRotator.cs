@@ -47,9 +47,14 @@ namespace MainMenu
             }
         }
 
-        public void StartRotate(bool selected)
+        public void EnableRotate()
         {
-            _isSelected = selected;
+            _isSelected = true;
+        }
+
+        public void DisableRotate()
+        {
+            _isSelected = false;
         }
     }
 }

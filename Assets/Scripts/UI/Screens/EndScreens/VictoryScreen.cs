@@ -8,6 +8,8 @@ namespace UI.Screens.EndScreens
 {
     public class VictoryScreen : EndScreen
     {
+        private const string TemporaryMoney = "TemporaryMoney";
+
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private BuffCounter _buffCounter;
         [SerializeField] private LevelTimer _levelTimer;
@@ -47,7 +49,7 @@ namespace UI.Screens.EndScreens
             _fragmentsCollected.text = _fragmentsCounter.GetAmountFragmentsCollect();
             _credits = credits;
             _creditsTxt.text = _credits.ToString();
-            _save.SetData(Save.TemporaryMoney, _credits);
+            _save.SetData(TemporaryMoney, _credits);
         }
 
         private IEnumerator EnableScreenMove(int credits)
@@ -81,7 +83,7 @@ namespace UI.Screens.EndScreens
                 yield return _waitForSecondsStatistics;
             }
 
-            _save.SetData(Save.TemporaryMoney, _credits);
+            _save.SetData(TemporaryMoney, _credits);
         }
     }
 }

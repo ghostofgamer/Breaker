@@ -28,13 +28,13 @@ namespace ModificationFiles.DebuffsFiles
 
         private void Stop()
         {
-            SetActive(false);
+            DisableBuffUI();
             BaseMovement.SetValue(_startSpeed);
         }
 
         private IEnumerator OnPaddleLagActivated()
         {
-            SetActive(true);
+            EnableBuffUI();
             _startSpeed = BaseMovement.Speed;
             BaseMovement.SetValue(_startSpeed / _speedChanger);
             yield return WaitForSeconds;

@@ -22,26 +22,37 @@ namespace ModificationFiles.BuffsFiles
 
         public override void StopModification()
         {
-            SetValue(false);
+            DisablePortalEffect();
         }
 
         private IEnumerator OnPortalActivated()
         {
-            SetValue(true);
+            EnablePortalEffect();
             yield return WaitForSeconds;
-            SetValue(false);
+            DisablePortalEffect();
             Player.DeleteEffect(this);
         }
-
-        private void SetValue(bool value)
+        
+        private void EnablePortalEffect()
         {
-            SetActive(value);
-
+            EnableBuffUI();
+            
             foreach (BoxCollider wall in _walls)
-                wall.enabled = !value;
+                wall.enabled = false;
+            
+            BallMover.PortalActivated();
+            _portal.SetActive(true);
+        }
 
-            BallMover.SetValue(value);
-            _portal.SetActive(value);
+        private void DisablePortalEffect()
+        {
+            DisableBuffUI();
+            
+            foreach (BoxCollider wall in _walls)
+                wall.enabled = true;
+            
+            BallMover.PortalDeactivation();
+            _portal.SetActive(false);
         }
     }
 }

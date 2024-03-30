@@ -27,7 +27,7 @@ namespace ModificationFiles.BuffsFiles
 
         private IEnumerator OnGetMirrorPlatform()
         {
-            SetActive(true);
+            EnableBuffUI();
             _mirrorPlatformaPrefab.gameObject.SetActive(true);
             yield return WaitForSeconds;
             Stop();
@@ -36,7 +36,7 @@ namespace ModificationFiles.BuffsFiles
 
         private void Stop()
         {
-            SetActive(false);
+            DisableBuffUI();
             _mirrorPlatformaPrefab.gameObject.SetActive(false);
         }
     }

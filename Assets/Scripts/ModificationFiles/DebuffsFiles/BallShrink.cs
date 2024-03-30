@@ -9,7 +9,7 @@ namespace ModificationFiles.DebuffsFiles
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                StartCoroutine(Resize(BallMover));
+                StartCoroutine(Resize());
                 ShowNameEffect();
             }
         }

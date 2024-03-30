@@ -31,7 +31,7 @@ namespace PlayerFiles.PlatformaContent
                 _isMousePressed = false;
 
                 if (!_ball.IsMoving)
-                    _ball.SetMove(true, mouse);
+                    _ball.SetMove(mouse);
 
                 _positionMouse.SetActive(false);
 
