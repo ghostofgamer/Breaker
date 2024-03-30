@@ -6,7 +6,7 @@ namespace MainMenu
 {
     public class BrickSmashedCounter : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _amountTxt;
+        [SerializeField] private TMP_Text _amountText;
         [SerializeField] private Load _load;
         [SerializeField] private Save _save;
 
@@ -17,7 +17,7 @@ namespace MainMenu
         {
             _brickSmashedCount = _load.Get(Save.BrickSmashed, _startAmount);
 
-            if (_amountTxt != null)
+            if (_amountText != null)
                 ShowInfo();
         }
 
@@ -29,7 +29,7 @@ namespace MainMenu
 
         private void ShowInfo()
         {
-            _amountTxt.text = _brickSmashedCount.ToString();
+            _amountText.text = _brickSmashedCount.ToString();
         }
     }
 }

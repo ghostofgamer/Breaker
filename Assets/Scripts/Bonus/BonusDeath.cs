@@ -8,7 +8,7 @@ namespace Bonus
     {
         [SerializeField] private ParticleSystem _effectDie;
         [SerializeField] private GameObject _bonusFly;
-        [SerializeField] private TMP_Text _bonusCountTxt;
+        [SerializeField] private TMP_Text _bonusCountText;
 
         private int _minValue = 1;
         private int _maxValue = 3;
@@ -18,7 +18,7 @@ namespace Bonus
         private void Start()
         {
             Reward = Random.Range(_minValue, _maxValue);
-            _bonusCountTxt.text = Reward.ToString();
+            _bonusCountText.text = Reward.ToString();
         }
 
         public void Die()
@@ -32,7 +32,7 @@ namespace Bonus
         public void SetValue(int reward)
         {
             Reward = reward;
-            _bonusCountTxt.text = Reward.ToString();
+            _bonusCountText.text = Reward.ToString();
         }
 
         private void BonusFlying()

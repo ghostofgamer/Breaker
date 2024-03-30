@@ -6,7 +6,7 @@ namespace Statistics
 {
     public class Score : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _scoreTxt;
+        [SerializeField] private TMP_Text _scoreText;
         [SerializeField] private Save _save;
         [SerializeField] private Load _load;
 
@@ -17,7 +17,7 @@ namespace Statistics
         {
             _score = _load.Get(Save.Score, _startScore);
 
-            if (_scoreTxt != null)
+            if (_scoreText != null)
                 Show();
         }
 
@@ -29,7 +29,7 @@ namespace Statistics
 
         private void Show()
         {
-            _scoreTxt.text = _score.ToString();
+            _scoreText.text = _score.ToString();
         }
     }
 }
