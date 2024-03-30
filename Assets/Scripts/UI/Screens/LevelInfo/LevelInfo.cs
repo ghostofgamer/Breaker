@@ -76,15 +76,15 @@ namespace UI.Screens.LevelInfo
             SetActive(_fullAlpha, true);
             _audioSource.PlayOneShot(_audioSource.clip);
             _uiAnimations.Open();
-            _colliderController.SetValue(false);
+            _colliderController.ColliderDeactivation();
         }
 
         private IEnumerator CloseScreen()
         {
             if (_cameraMover != null)
-                _cameraMover.SetValue(true);
+                _cameraMover.EnableFreeMovement();
 
-            _colliderController.SetValue(true);
+            _colliderController.ColliderActivation();
             _uiAnimations.Close();
             _audioSource.PlayOneShot(_audioSource.clip);
             IsOpen = false;

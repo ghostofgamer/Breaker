@@ -11,7 +11,7 @@ namespace GameScene
     {
         [SerializeField] private BrickActivator[] _bricksActivator;
         [SerializeField] private ParticleSystem _startEffect;
-        [SerializeField] private PlatformaMovement _platformaMovement;
+        [SerializeField] private BaseMovement _baseMovement;
         [SerializeField] private BallRevive _ballRevive;
         [SerializeField] private float _duration = 0.05f;
         [SerializeField] private NameEffectAnimation _getReadyAnimation;
@@ -22,7 +22,7 @@ namespace GameScene
         private void Start()
         {
             _waitForSeconds = new WaitForSeconds(_duration);
-            StartCoroutine(SetActive());
+            StartCoroutine(Activation());
         }
 
         public void ShowActivation()
@@ -31,7 +31,7 @@ namespace GameScene
             _getReadyAnimation.Show();
         }
 
-        private IEnumerator SetActive()
+        private IEnumerator Activation()
         {
             foreach (var brick in _bricksActivator)
             {
@@ -42,8 +42,8 @@ namespace GameScene
             yield return _waitForSeconds;
             ShowActivation();
             yield return _waitForSpawnPlatform;
-            _platformaMovement.gameObject.SetActive(true);
-            _platformaMovement.SetValue(true);
+            _baseMovement.gameObject.SetActive(true);
+            _baseMovement.Live();
             _ballRevive.gameObject.SetActive(true);
         }
     }

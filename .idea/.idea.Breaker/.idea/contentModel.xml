@@ -1601,12 +1601,12 @@
             <e p="Bullettrigger.cs" t="Include" />
           </e>
           <e p="CameraFiles" t="Include">
+            <e p="BaseFollower.cs" t="Include" />
             <e p="CameraDistance.cs" t="Include" />
             <e p="CameraMover.cs" t="Include" />
             <e p="CameraShake.cs" t="Include" />
             <e p="CameraVictoryMover.cs" t="Include" />
             <e p="FovChanger.cs" t="Include" />
-            <e p="PlatformFollower.cs" t="Include" />
           </e>
           <e p="Enum" t="Include">
             <e p="BallSkins.cs" t="Include" />
@@ -1642,24 +1642,26 @@
             <e p="InfoLevelCloser.cs" t="Include" />
             <e p="Level.cs" t="Include" />
             <e p="LevelCubeJumping.cs" t="Include" />
+            <e p="LevelProgress.cs" t="Include" />
             <e p="LockLevel.cs" t="Include" />
           </e>
           <e p="LocalizationFiles" t="Include">
             <e p="Localization.cs" t="Include" />
           </e>
           <e p="MainMenu" t="Include">
+            <e p="BaseRotator.cs" t="Include" />
             <e p="BrickSmashedCounter.cs" t="Include" />
-            <e p="PlatformRotator.cs" t="Include" />
             <e p="ScreenFader.cs" t="Include" />
             <e p="Shop" t="Include">
               <e p="BuffInfo.cs" t="Include" />
               <e p="Platforms" t="Include">
-                <e p="PlatformaSkin.cs" t="Include" />
-                <e p="PlatformStore.cs" t="Include" />
+                <e p="BaseSkin.cs" t="Include" />
+                <e p="BaseStore.cs" t="Include" />
               </e>
               <e p="Skin.cs" t="Include" />
             </e>
             <e p="WaveMotion.cs" t="Include" />
+            <e p="WaveSpawn.cs" t="Include" />
           </e>
           <e p="ModificationFiles" t="Include">
             <e p="AdditionalLaser.cs" t="Include" />
@@ -1694,7 +1696,7 @@
               <e p="EffectApplier.cs" t="Include" />
               <e p="NeutralApplier.cs" t="Include" />
             </e>
-            <e p="EffectDeactivator.cs" t="Include" />
+            <e p="EffectDisabler.cs" t="Include" />
             <e p="Modification.cs" t="Include" />
             <e p="NameEffectAnimation.cs" t="Include" />
             <e p="Neutral.cs" t="Include" />
@@ -1713,25 +1715,27 @@
           </e>
           <e p="PlayerFiles" t="Include">
             <e p="ModificationContent" t="Include">
+              <e p="BaseModification.cs" t="Include" />
               <e p="ChanceBonus.cs" t="Include" />
               <e p="ChanceShield.cs" t="Include" />
               <e p="ElectricBall.cs" t="Include" />
               <e p="ElectricBallActivator.cs" t="Include" />
               <e p="LuckySave.cs" t="Include" />
               <e p="MagnifierRadiusExplosion.cs" t="Include" />
-              <e p="PlatformModification.cs" t="Include" />
               <e p="ResistanceDebuff.cs" t="Include" />
             </e>
             <e p="MousePositionActivator.cs" t="Include" />
             <e p="PlatformaContent" t="Include">
+              <e p="Base.cs" t="Include" />
+              <e p="BaseDisabler.cs" t="Include" />
+              <e p="BaseInput.cs" t="Include" />
+              <e p="BaseMovement.cs" t="Include" />
+              <e p="BaseRevive.cs" t="Include" />
+              <e p="BaseTrigger.cs" t="Include" />
               <e p="MirrorMovement.cs" t="Include" />
-              <e p="Platforma.cs" t="Include" />
-              <e p="PlatformaDisabler.cs" t="Include" />
-              <e p="PlatformaMovement.cs" t="Include" />
-              <e p="PlatformaRevive.cs" t="Include" />
-              <e p="PlatformaTrigger.cs" t="Include" />
             </e>
             <e p="Player.cs" t="Include" />
+            <e p="SlowMo.cs" t="Include" />
             <e p="Wallet.cs" t="Include" />
           </e>
           <e p="Progress" t="Include">
@@ -1746,8 +1750,8 @@
             <e p="SdkInitialization.cs" t="Include" />
           </e>
           <e p="Skins" t="Include">
+            <e p="SkinBaseLoader.cs" t="Include" />
             <e p="SkinLoader.cs" t="Include" />
-            <e p="SkinPlatformLoader.cs" t="Include" />
           </e>
           <e p="Sound" t="Include">
             <e p="BackGroundSound.cs" t="Include" />
@@ -1768,8 +1772,8 @@
               <e p="AbstractButton.cs" t="Include" />
               <e p="BackToMenuButton.cs" t="Include" />
               <e p="BuyButtonsContent" t="Include">
+                <e p="BuyBaseSkinButton.cs" t="Include" />
                 <e p="BuyButton.cs" t="Include" />
-                <e p="BuyPlatformaSkinButton.cs" t="Include" />
                 <e p="BuySkinBallButton.cs" t="Include" />
                 <e p="BuyUpgradeButton.cs" t="Include" />
               </e>
@@ -1793,7 +1797,7 @@
                 <e p="SettingsButtonGameLevel.cs" t="Include" />
               </e>
               <e p="ShopContent" t="Include">
-                <e p="ActivatedPlatformSkinButton.cs" t="Include" />
+                <e p="ActivatedBaseSkinButton.cs" t="Include" />
                 <e p="ChangeSkinButton.cs" t="Include" />
                 <e p="CloseInfoScreenButton.cs" t="Include" />
                 <e p="CloseShopButton.cs" t="Include" />
@@ -1820,6 +1824,7 @@
               </e>
               <e p="MainScreen.cs" t="Include" />
               <e p="SettingsScreen.cs" t="Include" />
+              <e p="SettingsScreenSound.cs" t="Include" />
               <e p="ShopBackGround.cs" t="Include" />
               <e p="ShopScreen.cs" t="Include" />
             </e>

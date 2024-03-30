@@ -2,7 +2,7 @@ using Random = UnityEngine.Random;
 
 namespace PlayerFiles.ModificationContent
 {
-    public class ChanceBonus : PlatformModification
+    public class ChanceBonus : BaseModification
     {
         private int _factor = 2;
 

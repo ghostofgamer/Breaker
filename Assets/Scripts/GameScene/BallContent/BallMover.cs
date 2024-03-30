@@ -42,7 +42,7 @@ namespace GameScene.BallContent
         {
             if (!_ball.IsMoving && !_ball.IsWin)
             {
-                var position = _ball.PlatformaMovement.transform.position;
+                var position = _ball.BaseMovement.transform.position;
                 transform.position = new Vector3(position.x, position.y, position.z + _factor);
             }
 

@@ -9,6 +9,7 @@ namespace UI.Screens
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _audioClip;
         [SerializeField] private UIAnimations _uiAnimations;
+        [SerializeField] private SettingsScreenSound _settingsScreenSound;
 
         private CanvasGroup _canvasGroup;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
@@ -31,7 +32,7 @@ namespace UI.Screens
             IsOpen = true;
             Setvalue(_fullAlpha, true);
             _uiAnimations.Open();
-            Play(0, _timePauseOpenEnd, _audioClip, _audioSource.clip);
+            _settingsScreenSound.Play(0, _timePauseOpenEnd, _audioClip, _audioSource.clip);
             Time.timeScale = 0;
         }
 
@@ -43,7 +44,7 @@ namespace UI.Screens
         private IEnumerator CloseScreen()
         {
             _uiAnimations.Close();
-            Play(0, _timePauseCloseEnd, _audioSource.clip, _audioClip);
+            _settingsScreenSound.Play(0, _timePauseCloseEnd, _audioSource.clip, _audioClip);
             yield return _waitForSeconds;
             IsOpen = false;
             Setvalue(_zeroAlpha, false);
@@ -57,22 +58,6 @@ namespace UI.Screens
                 _canvasGroup.interactable = flag;
                 _canvasGroup.blocksRaycasts = flag;
             }
-        }
-
-        private void Play(float start, float end, AudioClip audioClipStart, AudioClip audioClipEnd)
-        {
-            if (_coroutine != null)
-                StopCoroutine(_coroutine);
-
-            _coroutine = StartCoroutine(PlaySound(start, end, audioClipStart, audioClipEnd));
-        }
-
-        private IEnumerator PlaySound(float startTime, float endTime, AudioClip audioClipStart, AudioClip audioClipEnd)
-        {
-            yield return new WaitForSecondsRealtime(startTime);
-            _audioSource.PlayOneShot(audioClipStart);
-            yield return new WaitForSecondsRealtime(endTime);
-            _audioSource.PlayOneShot(audioClipEnd);
         }
     }
 }

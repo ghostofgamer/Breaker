@@ -47,8 +47,6 @@ namespace UI.Screens.EndScreens
 
         private void OnWin()
         {
-            Time.timeScale = 1;
-
             if (_reviveScreen.IsLose)
                 return;
 

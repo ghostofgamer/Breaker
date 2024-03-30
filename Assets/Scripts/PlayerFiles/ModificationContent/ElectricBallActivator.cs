@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PlayerFiles.ModificationContent
 {
-    public class ElectricBallActivator : PlatformModification
+    public class ElectricBallActivator : BaseModification
     {
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private ElectricBall _electricBall;

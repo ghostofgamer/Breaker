@@ -10,7 +10,6 @@ namespace BulletFiles
         [SerializeField] private ParticleSystem _explosionEffect;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);
-        private Coroutine _coroutine;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -28,9 +27,6 @@ namespace BulletFiles
 
         private void Hit()
         {
-            if (_coroutine != null)
-                StopCoroutine(_coroutine);
-
             StartCoroutine(HitTarget());
         }
 

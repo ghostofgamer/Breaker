@@ -65,14 +65,24 @@ namespace CameraFiles
             StartCoroutine(SetTarget(position));
         }
 
-        public void SetValue(bool flag)
+        public void EnableFreeMovement()
         {
-            _freeMovement = flag;
+            SetValue(true);
         }
 
+        public void DisableFreeMovement()
+        {
+            SetValue(false);
+        }
+        
         public void SpeedUp()
         {
             _overSpeed *= _overSpeed;
+        }
+
+        private void SetValue(bool flag)
+        {
+            _freeMovement = flag;
         }
 
         private IEnumerator SetTarget(Vector3 position)

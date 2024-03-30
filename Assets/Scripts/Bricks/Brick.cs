@@ -35,6 +35,7 @@ namespace Bricks
         public bool IsEternal => _isEternal;
 
         public int BonusAmount => _bonusAmount;
+
         protected LootDropper LootDropper => _lootDropper;
 
         protected AudioSource AudioSource => _audioSource;
@@ -50,7 +51,7 @@ namespace Bricks
             if (!_isEternal)
             {
                 _isBonus = Random.value > _randomProcent;
-                _effect = _buffDistributor.AssignEffect();
+                _effect = _buffDistributor.GetAssignEffect();
                 _bonusAmount = Random.Range(_minBonus, _maxBonus);
                 _brickCounter.AddBricks();
             }
@@ -75,24 +76,6 @@ namespace Bricks
             _targetVisual.SetActive(activation);
             IsTargetBonus = activation;
         }
-
-        /*protected void DropBonus()
-        {
-            if (!_isBonus)
-                return;
-
-            _fragmentsCounter.SetAmountFragments(_bonusAmount);
-
-            for (int i = 0; i < _bonusAmount; i++)
-            {
-                float angle = (i * Mathf.PI * _factor) / _bonusAmount;
-                float x = transform.position.x + (Mathf.Cos(angle) * _bonusRadius);
-                float z = transform.position.z + (Mathf.Sin(angle) * _bonusRadius);
-                Vector3 bonusPosition = new Vector3(x, transform.position.y, z);
-                Instantiate(_bonusPrefab, bonusPosition, Quaternion.identity);
-            }
-        }
-        */
 
         protected void Destroy()
         {

@@ -10,11 +10,12 @@ namespace UI.Buttons.Settings
     public class SettingsButtonGameLevel : AbstractButton
     {
         [SerializeField] private SettingsScreen _settingsScreen;
-        [SerializeField] private PlatformaMovement _platformaMovement;
+        [SerializeField] private BaseMovement _baseMovement;
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private BallTrigger _ball;
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private BaseInput _baseInput;
 
         protected override void OnEnable()
         {
@@ -40,8 +41,8 @@ namespace UI.Buttons.Settings
         protected override void OnClick()
         {
             _audioSource.PlayOneShot(_audioSource.clip);
-            _platformaMovement.enabled = false;
-            _platformaMovement.SetPressed(false);
+            _baseMovement.enabled = false;
+            _baseInput.DisablePressed();
             _settingsScreen.Open();
         }
     }

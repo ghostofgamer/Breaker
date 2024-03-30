@@ -11,7 +11,7 @@ namespace ModificationFiles
         private float _randomProcent = 0.3f;
         private bool _isEffect = false;
 
-        public Effect AssignEffect()
+        public Effect GetAssignEffect()
         {
             _isEffect = Random.value < _randomProcent;
 

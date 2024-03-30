@@ -9,7 +9,7 @@ namespace ModificationFiles
 {
     public abstract class Modification : MonoBehaviour
     {
-        [SerializeField] private PlatformaMovement _platformaMovement;
+        [SerializeField] private BaseMovement _baseMovement;
         [SerializeField] private BallMover _ballMover;
         [SerializeField] private Player _player;
         [SerializeField] private float _duration;
@@ -31,7 +31,7 @@ namespace ModificationFiles
 
         protected BallMover BallMover => _ballMover;
 
-        protected PlatformaMovement PlatformaMovement => _platformaMovement;
+        protected BaseMovement BaseMovement => _baseMovement;
 
         private void Awake()
         {

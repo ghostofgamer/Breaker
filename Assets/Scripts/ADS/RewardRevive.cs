@@ -1,4 +1,5 @@
 using System.Collections;
+using GameScene;
 using Statistics;
 using UI.Screens.EndScreens;
 using UnityEngine;
@@ -14,14 +15,10 @@ namespace ADS
         [SerializeField] private Button _button;
 
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
-        private Coroutine _coroutine;
 
         protected override void OnReward()
         {
-            if (_coroutine != null)
-                StopCoroutine(_coroutine);
-
-            _coroutine = StartCoroutine(Revive());
+            StartCoroutine(Revive());
         }
 
         protected override void OnClose()

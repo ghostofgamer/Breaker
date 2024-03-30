@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 namespace PlayerFiles.ModificationContent
 {
-    public class ChanceShield : PlatformModification
+    public class ChanceShield : BaseModification
     {
         [SerializeField] private BallTrigger _ballTrigger;
         [SerializeField] private Shield _shield;

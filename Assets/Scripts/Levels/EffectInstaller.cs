@@ -8,7 +8,8 @@ namespace Levels
         [SerializeField] private ParticleSystem _selectedCircle;
         [SerializeField] private ParticleSystem[] _effectsSelect;
         [SerializeField] private ParticleSystem[] _lineMove;
-
+        [SerializeField] private ParticleSystem[] _line;
+        
         public void ColorChanger(Color color)
         {
             var module = _dontSelectedCircle.main;
@@ -23,6 +24,12 @@ namespace Levels
             }
         }
 
+        public void SetLine(int index, Color color)
+        {
+            ParticleSystem.MainModule moduleMain = _line[index].main;
+            moduleMain.startColor = color;
+        }
+        
         public void ActivationEffects()
         {
             foreach (ParticleSystem effect in _effectsSelect)
@@ -32,11 +39,6 @@ namespace Levels
         public void SelectedEffectPlay()
         {
             _selectedCircle.Play();
-        }
-
-        public void SelectedEffectStop()
-        {
-            _selectedCircle.Stop();
         }
 
         public void StopParticles()
@@ -50,6 +52,11 @@ namespace Levels
         public void LineMoveActivation(int index)
         {
             _lineMove[index].Play();
+        }
+
+        private void SelectedEffectStop()
+        {
+            _selectedCircle.Stop();
         }
     }
 }

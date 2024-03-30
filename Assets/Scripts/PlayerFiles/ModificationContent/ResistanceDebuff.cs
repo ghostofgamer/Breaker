@@ -2,7 +2,7 @@ using Random = UnityEngine.Random;
 
 namespace PlayerFiles.ModificationContent
 {
-    public class ResistanceDebuff : PlatformModification
+    public class ResistanceDebuff : BaseModification
     {
         public bool TryResiste()
         {

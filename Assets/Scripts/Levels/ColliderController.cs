@@ -6,10 +6,16 @@ namespace Levels
     {
         [SerializeField] private Level[] _levels;
 
-        public void SetValue(bool enabledValue)
+        public void ColliderActivation()
         {
             foreach (var level in _levels)
-                level.SetValueCollider(enabledValue);
+                level.Activation();
+        }
+
+        public void ColliderDeactivation()
+        {
+            foreach (var level in _levels)
+                level.Deactivation();
         }
     }
 }

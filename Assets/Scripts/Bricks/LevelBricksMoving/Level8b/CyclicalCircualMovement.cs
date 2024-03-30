@@ -9,7 +9,7 @@ namespace Bricks.LevelBricksMoving.Level8b
         [SerializeField] private float _movementSpeed;
         [SerializeField] private float _rotateSpeed;
         [SerializeField] private float _movementDistance;
-        [SerializeField] private PlatformaMovement _platformaMovement;
+        [SerializeField] private BaseMovement _baseMovement;
 
         private float _startZPosition;
         private Vector3 _position;
@@ -36,8 +36,8 @@ namespace Bricks.LevelBricksMoving.Level8b
                 _position = Vector3.MoveTowards(_position, _targetPosition, _movementSpeed * Time.deltaTime);
                 transform.position = _position;
 
-                if (_platformaMovement != null)
-                    transform.Rotate(0, -_platformaMovement.DirectionX * _rotateSpeed, 0);
+                if (_baseMovement != null)
+                    transform.Rotate(0, -_baseMovement.DirectionX * _rotateSpeed, 0);
 
                 if (transform.position == _targetPosition)
                 {

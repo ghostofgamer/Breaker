@@ -29,7 +29,7 @@ namespace GameScene.BallContent
                 Time.timeScale = 1;
             }
 
-            if (other.collider.TryGetComponent(out PlatformaMovement platformaMover))
+            if (other.collider.TryGetComponent(out BaseMovement platformaMover))
             {
                 float mouse = Input.GetAxis(MouseX) * _factor;
                 float mouseY = Input.GetAxis(MouseY);
@@ -53,7 +53,7 @@ namespace GameScene.BallContent
             if (Physics.SphereCast(transform.position, transform.lossyScale.x / _factor, _ballMover.Direction, out hit,
                 maxDistance, _platformLayer))
             {
-                if (hit.collider.gameObject.TryGetComponent(out PlatformaMovement platformaMover))
+                if (hit.collider.gameObject.TryGetComponent(out BaseMovement platformaMover))
                 {
                     Bounced?.Invoke();
                     _audioSource.PlayOneShot(_audioSource.clip);

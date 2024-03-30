@@ -10,7 +10,6 @@ namespace Levels
     public class Level : MonoBehaviour
     {
         [SerializeField] private EffectInstaller _effectInstaller;
-        [SerializeField] private ParticleSystem[] _line;
         [SerializeField] private LevelInfo _levelInfo;
         [SerializeField] private LevelInfo[] _levelsInfo;
         [SerializeField] private Color _notPassedColor;
@@ -26,9 +25,18 @@ namespace Levels
         private LevelState _state;
         private BoxCollider _boxCollider;
 
-        public Level[] Nextlevel => _nextLevel;
+        public LevelState State => _state;
+
+        public Level[] NextLevel => _nextLevel;
 
         public int Index => _index;
+        
+        protected Color NotPassedColor => _notPassedColor;
+
+        protected Color PassedColor => _passedColor;
+
+        protected Color NotOpenColor => _notOpenColor;
+
 
         private void Start()
         {
@@ -67,44 +75,27 @@ namespace Levels
                     break;
                 case LevelState.Unlocked:
                     _levelCubeJumping.enabled = true;
-                    _effectInstaller. ColorChanger(_notPassedColor);
+                    _effectInstaller.ColorChanger(_notPassedColor);
                     break;
                 case LevelState.Completed:
-                    _effectInstaller. ColorChanger(_passedColor);
+                    _effectInstaller.ColorChanger(_passedColor);
                     break;
             }
         }
 
-        public void SetValueCollider(bool flag)
+        public void Activation()
         {
-            _boxCollider.enabled = flag;
+            SetValueCollider(true);
         }
 
-        public void SetLevels()
+        public void Deactivation()
         {
-            if (_nextLevel.Length > 0)
-            {
-                for (int i = 0; i < _nextLevel.Length; i++)
-                {
-                    var moduleMain = _line[i].main;
+            SetValueCollider(false);
+        }
 
-                    if (_state == LevelState.Completed && _nextLevel[i]._state == LevelState.Completed)
-                    {
-                        moduleMain.startColor = _passedColor;
-                        _effectInstaller.LineMoveActivation(i);
-                    }
-                    else if ((_state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Unlocked) ||
-                             (_state == LevelState.Completed && _nextLevel[i]._state == LevelState.Unlocked) ||
-                             (_state == LevelState.Unlocked && _nextLevel[i]._state == LevelState.Completed))
-                    {
-                        moduleMain.startColor = _notPassedColor;
-                    }
-                    else
-                    {
-                        moduleMain.startColor = _notOpenColor;
-                    }
-                }
-            }
+        private void SetValueCollider(bool flag)
+        {
+            _boxCollider.enabled = flag;
         }
     }
 }

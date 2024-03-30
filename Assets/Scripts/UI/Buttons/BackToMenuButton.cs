@@ -46,7 +46,7 @@ namespace UI.Buttons
         private IEnumerator GoMainScene()
         {
             _canvasAnimator.Close();
-            _colliderController.SetValue(false);
+            _colliderController.ColliderDeactivation();
             yield return _waitForSeconds;
             SceneManager.LoadScene(NameScene);
         }

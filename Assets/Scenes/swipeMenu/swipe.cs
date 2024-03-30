@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class swipe : MonoBehaviour
 {
-    [SerializeField]private PlatformStore _platfromaSkinShop;
+    [SerializeField]private BaseStore _platfromaSkinShop;
     public Color[] colors;
     public GameObject scrollbar, imageContent;
     private float scroll_pos = 0;
@@ -144,7 +144,7 @@ public class swipe : MonoBehaviour
 
     private void RotateCapsula(Transform capsula,bool selected)
     {
-        var platforma = capsula.GetComponentInChildren<PlatformRotator>();
+        var platforma = capsula.GetComponentInChildren<BaseRotator>();
         platforma.StartRotate(selected);
         // platforma.transform.rotation = Quaternion.Euler(0,0f,-45f);
         /*platforma.transform.rotation = Quaternion.Euler(0,1f,0);

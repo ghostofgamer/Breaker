@@ -15,7 +15,7 @@ namespace UI.Buttons.ShopContent
         protected override void OnClick()
         {
             if (_colliderController != null)
-                _colliderController.SetValue(true);
+                _colliderController.ColliderActivation();
 
             if (_cameraMover != null && !_cameraMover.enabled)
                 _cameraMover.enabled = true;

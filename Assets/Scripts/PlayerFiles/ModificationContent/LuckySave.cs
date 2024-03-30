@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 namespace PlayerFiles.ModificationContent
 {
-    public class LuckySave : PlatformModification
+    public class LuckySave : BaseModification
     {
         [SerializeField] private Reviver _reviver;
         [SerializeField] private BrickCounter _brickCounter;

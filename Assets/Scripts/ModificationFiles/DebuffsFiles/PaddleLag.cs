@@ -29,14 +29,14 @@ namespace ModificationFiles.DebuffsFiles
         private void Stop()
         {
             SetActive(false);
-            PlatformaMovement.SetValue(_startSpeed);
+            BaseMovement.SetValue(_startSpeed);
         }
 
         private IEnumerator OnPaddleLagActivated()
         {
             SetActive(true);
-            _startSpeed = PlatformaMovement.Speed;
-            PlatformaMovement.SetValue(_startSpeed / _speedChanger);
+            _startSpeed = BaseMovement.Speed;
+            BaseMovement.SetValue(_startSpeed / _speedChanger);
             yield return WaitForSeconds;
             Stop();
             Player.DeleteEffect(this);
