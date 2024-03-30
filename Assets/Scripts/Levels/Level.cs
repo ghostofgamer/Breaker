@@ -30,13 +30,12 @@ namespace Levels
         public Level[] NextLevel => _nextLevel;
 
         public int Index => _index;
-        
+
         protected Color NotPassedColor => _notPassedColor;
 
         protected Color PassedColor => _passedColor;
 
         protected Color NotOpenColor => _notOpenColor;
-
 
         private void Start()
         {

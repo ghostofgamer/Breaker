@@ -8,7 +8,7 @@ namespace PlayerFiles.PlatformaContent
         {
             IsAlive = false;
         }
-        
+
         public void Live()
         {
             IsAlive = true;

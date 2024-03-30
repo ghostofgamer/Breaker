@@ -25,7 +25,7 @@ namespace UI.Screens.EndScreens
         private Coroutine _coroutine;
 
         public event Action Reviving;
-        
+
         public event Action Losed;
 
         public bool IsLose { get; private set; }

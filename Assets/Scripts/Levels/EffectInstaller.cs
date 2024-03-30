@@ -9,7 +9,7 @@ namespace Levels
         [SerializeField] private ParticleSystem[] _effectsSelect;
         [SerializeField] private ParticleSystem[] _lineMove;
         [SerializeField] private ParticleSystem[] _line;
-        
+
         public void ColorChanger(Color color)
         {
             var module = _dontSelectedCircle.main;
@@ -29,7 +29,7 @@ namespace Levels
             ParticleSystem.MainModule moduleMain = _line[index].main;
             moduleMain.startColor = color;
         }
-        
+
         public void ActivationEffects()
         {
             foreach (ParticleSystem effect in _effectsSelect)

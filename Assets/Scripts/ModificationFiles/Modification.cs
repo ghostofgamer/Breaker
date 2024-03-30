@@ -19,12 +19,16 @@ namespace ModificationFiles
         [SerializeField] private BuffUIFade _buffUI;
         [SerializeField] private BuffType _buffType;
 
-        protected Coroutine Coroutine;
-        protected WaitForSeconds WaitForSeconds;
+        private Coroutine _coroutine;
+        private WaitForSeconds _waitForSeconds;
 
         private int _startIndex = 0;
         private float _factor = 1.5f;
 
+        protected WaitForSeconds WaitForSeconds => _waitForSeconds;
+        
+        protected Coroutine Coroutine => _coroutine;
+        
         protected Player Player => _player;
 
         protected float Duration => _duration;
@@ -51,7 +55,7 @@ namespace ModificationFiles
 
         protected virtual void Start()
         {
-            WaitForSeconds = new WaitForSeconds(Duration);
+            SetValue(Duration);
         }
 
         public abstract void OnApplyModification();
@@ -66,6 +70,16 @@ namespace ModificationFiles
         protected void ShowNameEffect()
         {
             _nameEffect.Show();
+        }
+
+        protected void SetValue(float value)
+        {
+            _waitForSeconds = new WaitForSeconds(value);
+        }
+        
+        protected void SetCoroutine(Coroutine coroutine)
+        {
+            _coroutine = coroutine;
         }
     }
 }

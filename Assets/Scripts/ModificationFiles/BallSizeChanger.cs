@@ -28,7 +28,7 @@ namespace ModificationFiles
         {
             Vector3 target = new Vector3(
                 _standardScale.x + _sizeChange,
-                _standardScale.y + _sizeChange, 
+                _standardScale.y + _sizeChange,
                 _standardScale.z + _sizeChange);
             BallMover.transform.localScale = target;
         }

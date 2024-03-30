@@ -20,12 +20,12 @@ namespace GameScene
         private float _maxX = 11f;
 
         protected float Speed => _speed;
-    
+
         protected virtual void Start()
         {
             _startY = transform.position.y;
         }
-    
+
         protected virtual void Update()
         {
             _currentX = Mathf.Clamp(transform.position.x, _minX, _maxX);
@@ -55,7 +55,7 @@ namespace GameScene
 
                 if (jumpProgress < _maxJumpProgress)
                 {
-                    float newY = _startY + Mathf.Sin(jumpProgress * Mathf.PI) * _jumpHeight;
+                    float newY = _startY + (Mathf.Sin(jumpProgress * Mathf.PI) * _jumpHeight);
                     transform.position = new Vector3(transform.position.x, newY, transform.position.z);
                 }
                 else

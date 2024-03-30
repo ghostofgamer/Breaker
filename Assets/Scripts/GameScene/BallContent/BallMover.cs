@@ -105,17 +105,6 @@ namespace GameScene.BallContent
             this._speed = Mathf.Clamp(speed, MinSpeed, _maxSpeed);
         }
 
-        private void SetDirection(Vector3 direction)
-        {
-            _direction = direction;
-        }
-
-        private void IncreaseSpeed()
-        {
-            if (!_isSpeedUp)
-                _speed = Mathf.Clamp(_speed * _speedUpValue, MinSpeed, _mediumSpeed);
-        }
-
         public void SetValue(bool portalActivated)
         {
             _isPortal = portalActivated;
@@ -144,6 +133,17 @@ namespace GameScene.BallContent
             {
                 SetDirection(newReflect);
             }
+        }
+
+        private void SetDirection(Vector3 direction)
+        {
+            _direction = direction;
+        }
+
+        private void IncreaseSpeed()
+        {
+            if (!_isSpeedUp)
+                _speed = Mathf.Clamp(_speed * _speedUpValue, MinSpeed, _mediumSpeed);
         }
 
         private void CheckBehindWall()

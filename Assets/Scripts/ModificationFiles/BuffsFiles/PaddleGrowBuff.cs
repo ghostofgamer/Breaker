@@ -9,7 +9,7 @@ namespace ModificationFiles.BuffsFiles
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                Coroutine = StartCoroutine(Resize());
+                SetCoroutine(StartCoroutine(Resize()));
                 ShowNameEffect();
             }
         }

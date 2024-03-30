@@ -8,7 +8,7 @@ namespace UI.Screens
         [SerializeField] private AudioSource _audioSource;
 
         private Coroutine _coroutine;
-        
+
         public void Play(float start, float end, AudioClip audioClipStart, AudioClip audioClipEnd)
         {
             if (_coroutine != null)

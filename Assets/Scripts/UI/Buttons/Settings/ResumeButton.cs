@@ -11,7 +11,7 @@ namespace UI.Buttons.Settings
         [SerializeField] private CountDown _countDown;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private BaseMovement _baseMovement;
-        
+
         private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
 
         protected override void OnClick()

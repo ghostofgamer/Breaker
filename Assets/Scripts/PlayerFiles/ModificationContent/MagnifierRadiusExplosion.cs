@@ -19,7 +19,7 @@ namespace PlayerFiles.ModificationContent
 
             for (int i = 0; i < _bricksContainer.childCount; i++)
                 bricksList.Add(_bricksContainer.GetChild(i));
-            
+
             _filtredBrick = bricksList
                 .Where(p => p.gameObject.GetComponent<BrickExplosion>() &&
                             !p.gameObject.GetComponent<Brick>().IsEternal &&

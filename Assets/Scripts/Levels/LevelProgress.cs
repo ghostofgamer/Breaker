@@ -16,18 +16,18 @@ namespace Levels
                 {
                     if (State == LevelState.Completed && _nextLevel[i].State == LevelState.Completed)
                     {
-                        _effectInstaller.SetLine(i,PassedColor);
+                        _effectInstaller.SetLine(i, PassedColor);
                         _effectInstaller.LineMoveActivation(i);
                     }
                     else if ((State == LevelState.Unlocked && _nextLevel[i].State == LevelState.Unlocked) ||
                              (State == LevelState.Completed && _nextLevel[i].State == LevelState.Unlocked) ||
                              (State == LevelState.Unlocked && _nextLevel[i].State == LevelState.Completed))
                     {
-                        _effectInstaller.SetLine(i,NotPassedColor);
+                        _effectInstaller.SetLine(i, NotPassedColor);
                     }
                     else
                     {
-                        _effectInstaller.SetLine(i,NotOpenColor);
+                        _effectInstaller.SetLine(i, NotOpenColor);
                     }
                 }
             }

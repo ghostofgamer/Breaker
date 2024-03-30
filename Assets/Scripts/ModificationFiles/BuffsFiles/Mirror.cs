@@ -15,7 +15,7 @@ namespace ModificationFiles.BuffsFiles
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                Coroutine = StartCoroutine(OnGetMirrorPlatform());
+                SetCoroutine(StartCoroutine(OnGetMirrorPlatform()));
                 ShowNameEffect();
             }
         }

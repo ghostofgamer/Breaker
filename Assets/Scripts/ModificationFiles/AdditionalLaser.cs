@@ -17,7 +17,7 @@ namespace ModificationFiles
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(10f);
         private Coroutine _coroutine;
         private bool _isWork = true;
-        
+
         private void OnEnable()
         {
             _brickCounter.BricksDestructionHelping += OnSpawnLaser;
@@ -37,7 +37,7 @@ namespace ModificationFiles
         private void OnSpawnOver()
         {
             _isWork = false;
-            
+
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
         }

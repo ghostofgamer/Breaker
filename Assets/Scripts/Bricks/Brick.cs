@@ -21,10 +21,10 @@ namespace Bricks
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private LootDropper _lootDropper;
 
+        protected bool IsTargetBonus;
         private int _minBonus = 1;
         private int _maxBonus = 3;
         private float _randomProcent = 0.5f;
-        protected bool IsTargetBonus;
 
         public event Action Dead;
 

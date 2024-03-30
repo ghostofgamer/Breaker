@@ -52,7 +52,7 @@ namespace Sound
         {
             StopCoroutine(_coroutine);
         }
-        
+
         private IEnumerator CountDown()
         {
             yield return _waitForSeconds;

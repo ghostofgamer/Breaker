@@ -17,12 +17,12 @@ namespace Levels
 
         private void Start()
         {
-            _levelState = (LevelState) _load.Get(Save.LevelStatus + _index, 0);
+            _levelState = (LevelState)_load.Get(Save.LevelStatus + _index, 0);
             _effects = new ParticleSystem.MainModule[_fenceEffects.Length];
 
             for (int i = 0; i < _effects.Length; i++)
                 _effects[i] = _fenceEffects[i].main;
-            
+
             if (_levelState == LevelState.Locked)
             {
                 _level.gameObject.SetActive(false);

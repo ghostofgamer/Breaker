@@ -12,12 +12,12 @@ namespace PlayerFiles
         {
             Time.timeScale = 1f;
         }
-        
+
         public void EnableSlowMotionEffect()
         {
             StartCoroutine(TimeScaleChanged());
         }
-    
+
         private IEnumerator TimeScaleChanged()
         {
             Time.timeScale = _slowMove;

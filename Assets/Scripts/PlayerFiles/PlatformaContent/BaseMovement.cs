@@ -58,7 +58,8 @@ namespace PlayerFiles.PlatformaContent
                 Vector3 targetPositiomMouse = new Vector3(hit.point.x, 4, hit.point.z);
                 _positionMouse.transform.position = targetPositiomMouse;
                 transform.position = Vector3.MoveTowards(
-                    transform.position, clampedTargetPosition,
+                    transform.position,
+                    clampedTargetPosition,
                     _moveSpeed * Time.deltaTime);
             }
         }

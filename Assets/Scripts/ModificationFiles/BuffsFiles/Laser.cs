@@ -15,7 +15,7 @@ namespace ModificationFiles.BuffsFiles
 
         protected override void Start()
         {
-            WaitForSeconds = new WaitForSeconds(_timeBetweenShots);
+            SetValue(_timeBetweenShots);
         }
 
         private void Update()
@@ -36,7 +36,7 @@ namespace ModificationFiles.BuffsFiles
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                Coroutine = StartCoroutine(OnShoot());
+                SetCoroutine(StartCoroutine(OnShoot()));
                 ShowNameEffect();
             }
         }

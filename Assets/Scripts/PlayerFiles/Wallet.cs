@@ -72,7 +72,7 @@ namespace PlayerFiles
             while (_elapsedTime < duration)
             {
                 _elapsedTime += Time.deltaTime;
-                _money = (int) Mathf.Lerp(currentMoney, target, _elapsedTime / duration);
+                _money = (int)Mathf.Lerp(currentMoney, target, _elapsedTime / duration);
                 ShowInfo();
                 yield return null;
             }

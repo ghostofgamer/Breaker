@@ -19,7 +19,7 @@ namespace SaveAndLoad
         public const string CapsuleSkinActive = "CapsuleSkinActive";
         [Header("ProgressLevel")]
         public const string LevelStatus = "LevelStatus";
-        
+
         public void SetData(string name, int number)
         {
             PlayerPrefs.SetInt(name, number);

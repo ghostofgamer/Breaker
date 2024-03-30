@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GameScene.BallContent
 {
-    [RequireComponent(typeof(BallMover),typeof(Rigidbody))]
+    [RequireComponent(typeof(BallMover), typeof(Rigidbody))]
     public class Ball : Player
     {
         [SerializeField] private BrickCounter _brickCounter;
@@ -22,7 +22,7 @@ namespace GameScene.BallContent
         public BaseMovement BaseMovement => _baseMovement;
 
         public bool IsWin => _isWin;
-        
+
         private void Start()
         {
             _ballMover = GetComponent<BallMover>();

@@ -65,7 +65,8 @@ namespace Bricks.LevelBricksMoving.Level3
                 progress) + _center.position;
             transform.rotation = Quaternion.Lerp(
                 Quaternion.Euler(0, rotationA, 0),
-                Quaternion.Euler(0, rotationB, 0), progress);
+                Quaternion.Euler(0, rotationB, 0),
+                progress);
         }
     }
 }

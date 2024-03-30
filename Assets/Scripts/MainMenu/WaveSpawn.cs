@@ -15,7 +15,7 @@ namespace MainMenu
         [SerializeField] private float _cubeSpacing;
         [SerializeField] private Material[] _materials;
         [SerializeField]private WaveMotion _waveMotion;
-        
+
         private ObjectPool<Brick> _pool;
         private bool _autoExpand = true;
         private Brick[,] _brickGrid;

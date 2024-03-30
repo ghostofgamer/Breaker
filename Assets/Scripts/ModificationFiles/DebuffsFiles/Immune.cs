@@ -20,7 +20,7 @@ namespace ModificationFiles.DebuffsFiles
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                Coroutine = StartCoroutine(OnImmuneBricksActivated());
+                SetCoroutine(StartCoroutine(OnImmuneBricksActivated())); 
                 ShowNameEffect();
             }
         }

@@ -74,7 +74,7 @@ namespace CameraFiles
         {
             SetValue(false);
         }
-        
+
         public void SpeedUp()
         {
             _overSpeed *= _overSpeed;

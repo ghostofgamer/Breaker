@@ -72,7 +72,7 @@ namespace UI.Screens.EndScreens
                     {
                         elapsedTime += Time.deltaTime;
                         float time = elapsedTime / endTime;
-                        score = (int) Mathf.Lerp(score, creditsWin, time);
+                        score = (int)Mathf.Lerp(score, creditsWin, time);
                         _score.text = score.ToString();
                         yield return null;
                     }

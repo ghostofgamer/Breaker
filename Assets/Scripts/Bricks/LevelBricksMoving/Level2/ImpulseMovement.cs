@@ -27,9 +27,13 @@ namespace Bricks.LevelBricksMoving.Level2
             base.Start();
             _initialPosition = transform.position;
             _waitForSeconds = new WaitForSeconds(_duration);
-            _targetPosition = new Vector3(_initialPosition.x, _initialPosition.y,
+            _targetPosition = new Vector3(
+                _initialPosition.x,
+                _initialPosition.y,
                 _initialPosition.z - _moveDistanceForward);
-            _targetPosition1 = new Vector3(_initialPosition.x, _initialPosition.y,
+            _targetPosition1 = new Vector3(
+                _initialPosition.x,
+                _initialPosition.y,
                 _initialPosition.z + _moveDistanceBack);
 
             if (_coroutine != null)
@@ -82,7 +86,9 @@ namespace Bricks.LevelBricksMoving.Level2
         {
             foreach (Brick brick in _brickObjects)
             {
-                brick.transform.position = new Vector3(brick.transform.position.x, brick.transform.position.y,
+                brick.transform.position = new Vector3(
+                    brick.transform.position.x,
+                    brick.transform.position.y,
                     transform.position.z);
             }
         }

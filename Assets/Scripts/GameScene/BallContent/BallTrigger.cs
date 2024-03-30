@@ -50,7 +50,11 @@ namespace GameScene.BallContent
             float maxDistance = 2.1f;
             RaycastHit hit;
 
-            if (Physics.SphereCast(transform.position, transform.lossyScale.x / _factor, _ballMover.Direction, out hit,
+            if (Physics.SphereCast(
+                transform.position,
+                transform.lossyScale.x / _factor,
+                _ballMover.Direction,
+                out hit,
                 maxDistance, _platformLayer))
             {
                 if (hit.collider.gameObject.TryGetComponent(out BaseMovement platformaMover))

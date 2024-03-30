@@ -12,7 +12,7 @@ namespace UI.Buttons.BuyButtonsContent
         [SerializeField] private BuffInfo _buff;
 
         private int _buyValue = 3;
-        
+
         protected override void Buy()
         {
             _save.SetData(_buffElement.ToString(), _buyValue);
