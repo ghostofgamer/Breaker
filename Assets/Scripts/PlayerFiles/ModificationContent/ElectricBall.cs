@@ -7,8 +7,10 @@ namespace PlayerFiles.ModificationContent
     {
         public void DestroyBrick(Brick brick)
         {
-            if (brick.GetComponent<BrickExplosion>())
-                brick.GetComponent<BrickExplosion>().Detonate();
+            BrickExplosion brickExplosion = brick.GetComponent<BrickExplosion>();
+
+            if (brickExplosion != null)
+                brickExplosion.Detonate();
             else
                 brick.Die();
         }

@@ -8,12 +8,10 @@ namespace ObjectPoolFiles
         where T : MonoBehaviour
     {
         private Transform _container;
-        private T _prefab;
         private List<T> _poolGeneric;
 
         public ObjectPool(T prefab, int count, Transform container)
         {
-            _prefab = prefab;
             _container = container;
             Initialize(count, prefab);
         }

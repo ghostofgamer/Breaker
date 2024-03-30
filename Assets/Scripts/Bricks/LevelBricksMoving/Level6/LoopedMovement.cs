@@ -12,10 +12,12 @@ namespace Bricks.LevelBricksMoving.Level6
 
         private Coroutine _coroutine;
         private bool _isWork = true;
+        private WaitForSeconds _waitForSeconds;
 
         protected override void Start()
         {
             base.Start();
+            _waitForSeconds = new WaitForSeconds(_delay);
             _coroutine = StartCoroutine(MoveCycle());
         }
 
@@ -31,9 +33,9 @@ namespace Bricks.LevelBricksMoving.Level6
             while (_isWork)
             {
                 yield return MoveToPosition(_target.position);
-                yield return new WaitForSeconds(_delay);
+                yield return _waitForSeconds;
                 yield return MoveToPosition(_start.position);
-                yield return new WaitForSeconds(_delay);
+                yield return _waitForSeconds;
             }
         }
 
