@@ -60,7 +60,7 @@ namespace MainMenu.Shop.Platforms
             _activeTexts[index].gameObject.SetActive(_platformaSkins[index].IsActive);
         }
 
-        public void SaveCapsuleSkinData()
+        private void SaveCapsuleSkinData()
         {
             for (int i = 0; i < _platformaSkins.Count; i++)
             {
@@ -69,7 +69,7 @@ namespace MainMenu.Shop.Platforms
             }
         }
 
-        public void LoadCapsuleSkinData()
+        private void LoadCapsuleSkinData()
         {
             for (int i = 0; i < _platformaSkins.Count; i++)
             {

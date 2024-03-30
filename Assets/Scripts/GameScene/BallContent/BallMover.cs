@@ -1,4 +1,3 @@
-using System;
 using Bricks;
 using PlayerFiles.ModificationContent;
 using UnityEngine;
@@ -106,12 +105,12 @@ namespace GameScene.BallContent
             this._speed = Mathf.Clamp(speed, MinSpeed, _maxSpeed);
         }
 
-        public void SetDirection(Vector3 direction)
+        private void SetDirection(Vector3 direction)
         {
             _direction = direction;
         }
 
-        public void IncreaseSpeed()
+        private void IncreaseSpeed()
         {
             if (!_isSpeedUp)
                 _speed = Mathf.Clamp(_speed * _speedUpValue, MinSpeed, _mediumSpeed);

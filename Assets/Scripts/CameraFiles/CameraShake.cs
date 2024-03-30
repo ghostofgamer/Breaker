@@ -37,7 +37,7 @@ namespace CameraFiles
             _originalPosition = transform.localPosition;
         }
 
-        public void OnShake()
+        private void OnShake()
         {
             StartCoroutine(ShakeCoroutine());
         }

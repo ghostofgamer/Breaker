@@ -50,10 +50,10 @@ namespace ModificationFiles
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
 
-            _coroutine = StartCoroutine(StartSpawnlaser());
+            _coroutine = StartCoroutine(StartSpawnLaser());
         }
 
-        private IEnumerator StartSpawnlaser()
+        private IEnumerator StartSpawnLaser()
         {
             while (_isWork)
             {

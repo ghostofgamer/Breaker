@@ -45,7 +45,10 @@ namespace Bricks.LevelBricksMoving.Level1
 
             foreach (Brick brick in _brickObjects)
             {
-                brick.transform.position = new Vector3(transform.position.x, brick.transform.position.y, brick.transform.position.z);
+                brick.transform.position = new Vector3(
+                    transform.position.x,
+                    brick.transform.position.y,
+                    brick.transform.position.z);
             }
 
             if (transform.position == targetPosition)

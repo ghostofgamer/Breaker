@@ -7,7 +7,7 @@ namespace Bricks.LevelBricksMoving
     {
         [SerializeField] private BrickCounter _brickCounter;
 
-        public bool IsWork { get; private set; } = true;
+        protected bool IsWork { get; private set; } = true;
 
         private void OnEnable()
         {

@@ -1,5 +1,4 @@
 using System.Collections;
-using PlayerFiles.PlatformaContent;
 using TMPro;
 using UnityEngine;
 
@@ -14,14 +13,6 @@ namespace UI
 
         private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
         private Coroutine _coroutine;
-
-        public void GoResume()
-        {
-            if (_coroutine != null)
-                StopCoroutine(_coroutine);
-
-            _coroutine = StartCoroutine(Resume());
-        }
 
         public IEnumerator Resume()
         {

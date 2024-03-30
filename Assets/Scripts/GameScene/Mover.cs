@@ -19,7 +19,7 @@ namespace GameScene
         private float _minX = -11f;
         private float _maxX = 11f;
 
-        public float Speed => _speed;
+        protected float Speed => _speed;
     
         protected virtual void Start()
         {
