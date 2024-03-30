@@ -37,7 +37,7 @@ namespace ModificationFiles
 
         protected BaseMovement BaseMovement => _baseMovement;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             if (_isImproving)
             {

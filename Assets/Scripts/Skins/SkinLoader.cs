@@ -9,6 +9,7 @@ namespace Skins
         [SerializeField] private Load _load;
         [SerializeField] private GameObject[] _skins;
         [SerializeField] private PortalTeleporterBall _portalTeleporterBall;
+        [SerializeField] private ParticleSystem[] _skinParticleSystems;
 
         private int _skinBallIndex;
         private int _startIndex = 0;
@@ -17,7 +18,7 @@ namespace Skins
         {
             _skinBallIndex = _load.Get(Save.SkinBall, _startIndex);
             _skins[_skinBallIndex].SetActive(true);
-            _portalTeleporterBall.Init(_skins[_skinBallIndex].GetComponentInChildren<ParticleSystem>());
+            _portalTeleporterBall.Init(_skinParticleSystems[_skinBallIndex]);
         }
     }
 }

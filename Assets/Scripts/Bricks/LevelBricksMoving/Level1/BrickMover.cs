@@ -28,10 +28,10 @@ namespace Bricks.LevelBricksMoving.Level1
         private void Update()
         {
             if (!_isPaused)
-                BricksMove();
+                Move();
         }
 
-        private void BricksMove()
+        private void Move()
         {
             if (!_isTargetPosition)
                 MoveDirection(_targetPosition, true);

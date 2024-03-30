@@ -27,7 +27,7 @@ namespace GameScene
             _sceneLoader.ShowActivation();
             yield return _waitForSeconds;
             _baseRevive.gameObject.SetActive(true);
-            _baseRevive.GetLife();
+            _baseRevive.RespawnWithExtraLife();
             _ballRevive.Revive();
         }
     }

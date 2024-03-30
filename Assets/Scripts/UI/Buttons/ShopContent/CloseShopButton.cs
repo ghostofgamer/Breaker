@@ -10,20 +10,31 @@ namespace UI.Buttons.ShopContent
         [SerializeField] private CameraMover _cameraMover;
         [SerializeField] private Level[] _levels;
         [SerializeField] private ShopScreen _shopScreen;
-        [SerializeField] private ColliderController _colliderController;
+        [SerializeField] private ColliderToggle _colliderToggle;
+
+        private BoxCollider[] _levelColliders;
+
+        private void Awake()
+        {
+            _levelColliders = new BoxCollider[_levels.Length];
+            for (int i = 0; i < _levels.Length; i++)
+            {
+                _levelColliders[i] = _levels[i].GetComponent<BoxCollider>();
+            }
+        }
 
         protected override void OnClick()
         {
-            if (_colliderController != null)
-                _colliderController.ColliderActivation();
+            if (_colliderToggle != null)
+                _colliderToggle.ColliderActivation();
 
             if (_cameraMover != null && !_cameraMover.enabled)
                 _cameraMover.enabled = true;
 
-            if (_levels.Length > 0)
+            if (_levelColliders.Length > 0)
             {
-                foreach (var level in _levels)
-                    level.GetComponent<BoxCollider>().enabled = true;
+                foreach (var levelCollider in _levelColliders)
+                    levelCollider.enabled = true;
             }
 
             _shopScreen.Close();

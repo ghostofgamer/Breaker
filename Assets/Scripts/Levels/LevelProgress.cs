@@ -6,7 +6,7 @@ namespace Levels
     public class LevelProgress : Level
     {
         [SerializeField] private Level[] _nextLevel;
-        [SerializeField] private EffectInstaller _effectInstaller;
+        [SerializeField] private EffectChanger _effectChanger;
 
         private LevelState _currentLevelState;
         
@@ -20,16 +20,16 @@ namespace Levels
                     
                     if (State == LevelState.Completed && _currentLevelState == LevelState.Completed)
                     {
-                        _effectInstaller.SetLine(i, PassedColor);
-                        _effectInstaller.LineMoveActivation(i);
+                        _effectChanger.SetLine(i, PassedColor);
+                        _effectChanger.LineMoveActivation(i);
                     }
                     else if (State >= LevelState.Unlocked && _currentLevelState >= LevelState.Unlocked)
                     {
-                        _effectInstaller.SetLine(i, State == LevelState.Completed ? PassedColor : NotPassedColor);
+                        _effectChanger.SetLine(i, State == LevelState.Completed ? PassedColor : NotPassedColor);
                     }
                     else
                     {
-                        _effectInstaller.SetLine(i, NotOpenColor);
+                        _effectChanger.SetLine(i, NotOpenColor);
                     }
                 }
             }

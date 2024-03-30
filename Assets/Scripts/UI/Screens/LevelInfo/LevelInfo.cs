@@ -20,7 +20,7 @@ namespace UI.Screens.LevelInfo
         [SerializeField] private int _index;
         [SerializeField] private Load _load;
         [SerializeField] private TMP_Text _score;
-        [SerializeField] private ColliderController _colliderController;
+        [SerializeField] private ColliderToggle _colliderToggle;
         [SerializeField] private CloseChangeLevelScreenButton _closeChangeLevelScreenButtonOne;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private UIAnimations _uiAnimations;
@@ -76,7 +76,7 @@ namespace UI.Screens.LevelInfo
             SetActive(_fullAlpha, true);
             _audioSource.PlayOneShot(_audioSource.clip);
             _uiAnimations.Open();
-            _colliderController.ColliderDeactivation();
+            _colliderToggle.ColliderDeactivation();
         }
 
         private IEnumerator CloseScreen()
@@ -84,7 +84,7 @@ namespace UI.Screens.LevelInfo
             if (_cameraMover != null)
                 _cameraMover.EnableFreeMovement();
 
-            _colliderController.ColliderActivation();
+            _colliderToggle.ColliderActivation();
             _uiAnimations.Close();
             _audioSource.PlayOneShot(_audioSource.clip);
             IsOpen = false;

@@ -1,6 +1,6 @@
 namespace PlayerFiles.PlatformaContent
 {
-    public class Base : Player
+    public class BaseLife : Player
     {
         public bool IsAlive { get; private set; }
 

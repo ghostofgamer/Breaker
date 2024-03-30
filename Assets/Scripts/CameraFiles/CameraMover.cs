@@ -60,7 +60,7 @@ namespace CameraFiles
             }
         }
 
-        public void SetTargetPosition(Vector3 position)
+        public void ChangeTargetPosition(Vector3 position)
         {
             StartCoroutine(SetTarget(position));
         }

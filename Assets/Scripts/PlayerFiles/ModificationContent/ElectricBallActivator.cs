@@ -10,12 +10,12 @@ namespace PlayerFiles.ModificationContent
 
         private void OnEnable()
         {
-            _ballTrigger.Bounced += OnSetValue;
+            _ballTrigger.Bounced += OnBallTouch;
         }
 
         private void OnDisable()
         {
-            _ballTrigger.Bounced -= OnSetValue;
+            _ballTrigger.Bounced -= OnBallTouch;
         }
 
         private bool TryActivatedElectricEffect()
@@ -23,7 +23,7 @@ namespace PlayerFiles.ModificationContent
             return Random.Range(MinValue, MaxValue) > BonusChances;
         }
 
-        private void OnSetValue()
+        private void OnBallTouch()
         {
             _electricBall.gameObject.SetActive(TryActivatedElectricEffect());
         }

@@ -9,10 +9,10 @@ namespace CameraFiles
         private float _distance = 80f;
         private Vector3 _targetPosition;
 
-        public void MoveCameraToTarget(Transform target)
+        public void AssignMovementTarget(Transform target)
         {
             _targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z - _distance);
-            _cameraMover.SetTargetPosition(_targetPosition);
+            _cameraMover.ChangeTargetPosition(_targetPosition);
             _cameraMover.DisableFreeMovement();
         }
     }

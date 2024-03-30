@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Levels
 {
-    public class EffectInstaller : MonoBehaviour
+    public class EffectChanger : MonoBehaviour
     {
         [SerializeField] private ParticleSystem _dontSelectedCircle;
         [SerializeField] private ParticleSystem _selectedCircle;

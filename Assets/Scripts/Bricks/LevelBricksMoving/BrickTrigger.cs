@@ -8,7 +8,7 @@ namespace Bricks.LevelBricksMoving
         [SerializeField] private Brick[] _bricks;
         [SerializeField] private Brick[] _bricksTrigger;
 
-        private List<Rigidbody> _rigidbodys;
+        private List<Rigidbody> _rigidbodies;
 
         private void OnEnable()
         {
@@ -24,10 +24,10 @@ namespace Bricks.LevelBricksMoving
 
         protected virtual void Start()
         {
-            _rigidbodys = new List<Rigidbody>();
+            _rigidbodies = new List<Rigidbody>();
 
             foreach (Brick brick in _bricks)
-                _rigidbodys.Add(brick.GetComponent<Rigidbody>());
+                _rigidbodies.Add(brick.GetComponent<Rigidbody>());
         }
 
         protected virtual void OnShutdown()
@@ -38,16 +38,16 @@ namespace Bricks.LevelBricksMoving
 
         protected void GiveImpulse(Vector3 direction, float minValue, float maxValue)
         {
-            foreach (var brick in _bricks)
+            foreach (Rigidbody rigidbodyValue in _rigidbodies)
             {
-                brick.GetComponent<Rigidbody>().isKinematic = false;
-                brick.GetComponent<Rigidbody>().AddForce(-direction.normalized * Random.Range(minValue, maxValue), ForceMode.Impulse);
+                rigidbodyValue.isKinematic = false;
+                rigidbodyValue.AddForce(-direction.normalized * Random.Range(minValue, maxValue), ForceMode.Impulse);
             }
         }
 
         private void DisableKinematic()
         {
-            foreach (Rigidbody rigidbodyValue in _rigidbodys)
+            foreach (Rigidbody rigidbodyValue in _rigidbodies)
                 rigidbodyValue.isKinematic = false;
         }
     }

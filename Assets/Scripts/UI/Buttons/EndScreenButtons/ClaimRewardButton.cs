@@ -8,7 +8,7 @@ namespace UI.Buttons.EndScreenButtons
     public class ClaimRewardButton : AbstractButton
     {
         [SerializeField] private GameObject[] _infoObjects;
-        [SerializeField] private TMP_Text _creditsTxt;
+        [SerializeField] private TMP_Text _creditsText;
         [SerializeField] private RewardTripleCredit _rewardTripleCredit;
         [SerializeField] private AudioSource _audioSource;
 
@@ -42,7 +42,7 @@ namespace UI.Buttons.EndScreenButtons
         private IEnumerator OpenButton()
         {
             yield return _waitForSeconds;
-            _creditsTxt.text = _credits.ToString();
+            _creditsText.text = _credits.ToString();
 
             foreach (GameObject infoObject in _infoObjects)
                 infoObject.SetActive(true);

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using Bricks;
 using UnityEngine;
 
@@ -9,28 +8,30 @@ namespace PlayerFiles.ModificationContent
     {
         [SerializeField] private Transform _bricksContainer;
 
-        private List<Transform> _filtredBrick;
         private float _factor = 1.65f;
+        private List<BrickExplosion> _brickExplosions;
+
+        private void Awake()
+        {
+            _brickExplosions = new List<BrickExplosion>();
+
+            for (int i = 0; i < _bricksContainer.childCount; i++)
+            {
+                Transform child = _bricksContainer.GetChild(i);
+                BrickExplosion brickExp = child.GetComponent<BrickExplosion>();
+
+                if (brickExp != null && !child.GetComponent<Brick>().IsEternal && child.gameObject.activeSelf)
+                    _brickExplosions.Add(brickExp);
+            }
+        }
 
         private void Start()
         {
-            List<Transform> bricksList = new List<Transform>();
-            _filtredBrick = new List<Transform>();
-
-            for (int i = 0; i < _bricksContainer.childCount; i++)
-                bricksList.Add(_bricksContainer.GetChild(i));
-
-            _filtredBrick = bricksList
-                .Where(p => p.gameObject.GetComponent<BrickExplosion>() &&
-                            !p.gameObject.GetComponent<Brick>().IsEternal &&
-                            p.gameObject.activeSelf == true).ToList();
-
-            foreach (var brick in _filtredBrick)
+            foreach (var brick in _brickExplosions)
             {
-                BrickExplosion brickExp = brick.GetComponent<BrickExplosion>();
-                float radius = brickExp.Radius;
+                float radius = brick.Radius;
                 radius *= _factor;
-                brickExp.SetRadius(radius);
+                brick.SetRadius(radius);
             }
         }
     }

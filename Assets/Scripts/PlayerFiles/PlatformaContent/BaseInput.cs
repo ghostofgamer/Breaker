@@ -7,7 +7,7 @@ namespace PlayerFiles.PlatformaContent
     {
         [SerializeField] private GameObject _positionMouse;
         [SerializeField] private BaseMovement _baseMovement;
-        [SerializeField] private SlowMo _slowMo;
+        [SerializeField] private SlowMotionEffect _slowMotionEffect;
         [SerializeField] private Ball _ball;
 
         private bool _isFirstThrow = true;
@@ -23,7 +23,7 @@ namespace PlayerFiles.PlatformaContent
             {
                 _isMousePressed = true;
                 _positionMouse.SetActive(true);
-                _slowMo.DisableSlowMoEffect();
+                _slowMotionEffect.DisableSlowMoEffect();
             }
 
             if (Input.GetMouseButtonUp(0))
@@ -36,7 +36,7 @@ namespace PlayerFiles.PlatformaContent
                 _positionMouse.SetActive(false);
 
                 if (!_isFirstThrow)
-                    _slowMo.EnableSlowMotionEffect();
+                    _slowMotionEffect.EnableSlowMotionEffect();
 
                 if (_isFirstThrow)
                     _isFirstThrow = false;

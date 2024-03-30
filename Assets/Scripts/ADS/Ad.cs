@@ -8,20 +8,23 @@ namespace ADS
 
         protected virtual void OnOpen()
         {
-            AudioListener.volume = 0;
-            Time.timeScale = 0;
+            SetValue(0);
         }
 
         protected virtual void OnClose(bool isClosed)
         {
-            Time.timeScale = 1;
-            AudioListener.volume = 1;
+            SetValue(1);
         }
 
         protected virtual void OnClose()
         {
-            Time.timeScale = 1;
-            AudioListener.volume = 1;
+            SetValue(1);
+        }
+
+        private void SetValue(int value)
+        {
+            Time.timeScale = value;
+            AudioListener.volume = value;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace UI.Buttons
 
         private IEnumerator SelectLevel()
         {
-            _cameraMover.SetTargetPosition(_target.position);
+            _cameraMover.ChangeTargetPosition(_target.position);
             _cameraMover.SpeedUp();
             _canvasAnimator.Close();
             _backToMenuButton.FadeBackGround();

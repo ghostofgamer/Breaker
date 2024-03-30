@@ -29,22 +29,22 @@ namespace GameScene.BallContent
             _missileEffect = missileEffect;
         }
 
-        public void TeleportBall()
+        public void PortalTravel()
         {
             if (transform.position.x > _xMaxPosition)
-                Teleport(new Vector3(_xMinPosition, transform.position.y, transform.position.z));
+                SetPosition(new Vector3(_xMinPosition, transform.position.y, transform.position.z));
 
             if (transform.position.x < _xMinPosition)
-                Teleport(new Vector3(_xMaxPosition, transform.position.y, transform.position.z));
+                SetPosition(new Vector3(_xMaxPosition, transform.position.y, transform.position.z));
 
             if (transform.position.z < _zMinPosition)
-                Teleport(new Vector3(transform.position.x, transform.position.y, _zMaxPosition));
+                SetPosition(new Vector3(transform.position.x, transform.position.y, _zMaxPosition));
 
             if (transform.position.z > _zMaxPosition)
-                Teleport(new Vector3(transform.position.x, transform.position.y, _zMinPosition));
+                SetPosition(new Vector3(transform.position.x, transform.position.y, _zMinPosition));
         }
 
-        private void Teleport(Vector3 position)
+        private void SetPosition(Vector3 position)
         {
             ActivationEffect();
             _missileEffect.gameObject.SetActive(false);

@@ -9,7 +9,7 @@ namespace Levels
     [RequireComponent(typeof(BoxCollider))]
     public class Level : MonoBehaviour
     {
-        [SerializeField] private EffectInstaller _effectInstaller;
+        [SerializeField] private EffectChanger _effectChanger;
         [SerializeField] private LevelInfo _levelInfo;
         [SerializeField] private LevelInfo[] _levelsInfo;
         [SerializeField] private Color _notPassedColor;
@@ -48,11 +48,11 @@ namespace Levels
                 return;
 
             foreach (Level level in _allLevels)
-                level.GetComponent<EffectInstaller>().StopParticles();
+                level.GetComponent<EffectChanger>().StopParticles();
 
-            _effectInstaller.ActivationEffects();
-            _effectInstaller.SelectedEffectPlay();
-            _cameraDistance.MoveCameraToTarget(transform);
+            _effectChanger.ActivationEffects();
+            _effectChanger.SelectedEffectPlay();
+            _cameraDistance.AssignMovementTarget(transform);
 
             foreach (LevelInfo levelInfo in _levelsInfo)
             {
@@ -70,14 +70,14 @@ namespace Levels
             switch (levelState)
             {
                 case LevelState.Locked:
-                    _effectInstaller.ColorChanger(_notOpenColor);
+                    _effectChanger.ColorChanger(_notOpenColor);
                     break;
                 case LevelState.Unlocked:
                     _levelCubeJumping.enabled = true;
-                    _effectInstaller.ColorChanger(_notPassedColor);
+                    _effectChanger.ColorChanger(_notPassedColor);
                     break;
                 case LevelState.Completed:
-                    _effectInstaller.ColorChanger(_passedColor);
+                    _effectChanger.ColorChanger(_passedColor);
                     break;
             }
         }

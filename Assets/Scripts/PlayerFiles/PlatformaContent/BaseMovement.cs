@@ -1,9 +1,8 @@
-using GameScene.BallContent;
 using UnityEngine;
 
 namespace PlayerFiles.PlatformaContent
 {
-    public class BaseMovement : Base
+    public class BaseMovement : BaseLife
     {
         [SerializeField] private GameObject _positionMouse;
 
@@ -53,7 +52,7 @@ namespace PlayerFiles.PlatformaContent
 
                 float clampedX = Mathf.Clamp(targetPosition.x, _minX, _maxX);
                 float clampedZ = Mathf.Clamp(targetPosition.z, _minZ, _maxZ);
-                GetDirection(clampedX);
+                SetDirection(clampedX);
                 Vector3 clampedTargetPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
                 Vector3 targetPositiomMouse = new Vector3(hit.point.x, 4, hit.point.z);
                 _positionMouse.transform.position = targetPositiomMouse;
@@ -64,7 +63,7 @@ namespace PlayerFiles.PlatformaContent
             }
         }
 
-        private void GetDirection(float x)
+        private void SetDirection(float x)
         {
             if (x > transform.position.x)
                 DirectionX = _directionX;

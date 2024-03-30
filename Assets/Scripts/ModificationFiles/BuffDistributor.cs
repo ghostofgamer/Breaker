@@ -19,7 +19,7 @@ namespace ModificationFiles
             {
                 int index = Random.Range(0, _effects.Length);
 
-                if (_effects[index].GetComponent<Buff>())
+                if (_effects[index].IsPositiveEffect)
                     _buffCounter.IncreaseBuffCount();
 
                 return _effects[index];

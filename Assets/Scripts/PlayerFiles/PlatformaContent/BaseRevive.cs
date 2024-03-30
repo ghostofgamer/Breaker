@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace PlayerFiles.PlatformaContent
 {
-    public class BaseRevive : Base
+    public class BaseRevive : BaseLife
     {
         [SerializeField] private GameObject _mousePosition;
         [SerializeField] private ParticleSystem _loseEffect;
@@ -11,7 +11,7 @@ namespace PlayerFiles.PlatformaContent
         private float _positionY = 5.1f;
         private float _positionZ = -6.5f;
 
-        public void GetLife()
+        public void RespawnWithExtraLife()
         {
             transform.position = new Vector3(0, _positionY, _positionZ);
             _loseEffect.transform.parent = gameObject.transform;

@@ -10,8 +10,16 @@ namespace ModificationFiles.DebuffsFiles
     {
         [SerializeField] private Transform _bricksContainer;
 
-        private List<Transform> _bricks;
-        private List<Transform> _filtredBricks;
+        private List<Brick> _bricks;
+        private List<Brick> _filtredBricks;
+
+        private void Awake()
+        {
+            _filtredBricks = new List<Brick>();
+            _bricks = new List<Brick>();
+
+            FindAllChildren(_bricksContainer);
+        }
 
         public override void OnApplyModification()
         {
@@ -20,7 +28,7 @@ namespace ModificationFiles.DebuffsFiles
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                SetCoroutine(StartCoroutine(OnImmuneBricksActivated())); 
+                SetCoroutine(StartCoroutine(OnImmuneBricksActivated()));
                 ShowNameEffect();
             }
         }
@@ -32,7 +40,9 @@ namespace ModificationFiles.DebuffsFiles
 
         private IEnumerator OnImmuneBricksActivated()
         {
-            SetList();
+            _filtredBricks = _bricks
+                .Where(p => p.gameObject.activeSelf == true).ToList();
+            
             ChangeBricksImmortal(true);
             yield return WaitForSeconds;
             ChangeBricksImmortal(false);
@@ -43,20 +53,8 @@ namespace ModificationFiles.DebuffsFiles
         {
             SetActive(immortalBrick);
 
-            foreach (Transform brick in _filtredBricks)
-                brick.GetComponent<Brick>().SetBoolImmortal(immortalBrick);
-        }
-
-        private void SetList()
-        {
-            _bricks = new List<Transform>();
-            _filtredBricks = new List<Transform>();
-
-            FindAllChildren(_bricksContainer);
-
-            _filtredBricks = _bricks
-                .Where(p => p.gameObject.GetComponent<Brick>() && !p.gameObject.GetComponent<Brick>().IsEternal &&
-                            p.gameObject.activeSelf == true).ToList();
+            foreach (Brick brick in _filtredBricks)
+                brick.SetBoolImmortal(immortalBrick);
         }
 
         private void FindAllChildren(Transform parent)
@@ -64,7 +62,11 @@ namespace ModificationFiles.DebuffsFiles
             for (int i = 0; i < parent.childCount; i++)
             {
                 Transform child = parent.GetChild(i);
-                _bricks.Add(child);
+                Brick brick = child.GetComponent<Brick>();
+
+                if (brick != null && !brick.IsEternal && child.gameObject.activeSelf)
+                    _bricks.Add(brick);
+
                 FindAllChildren(child);
             }
         }

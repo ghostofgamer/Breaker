@@ -14,12 +14,20 @@ namespace ModificationFiles.BuffsFiles
         [SerializeField] private Effect[] _effects;
         [SerializeField] private BuffCounter _buffCounter;
 
-        private List<Transform> _bricksList;
-        private List<Transform> _filtredBrick;
+        private List<Brick> _bricksList;
+        private List<Brick> _filtredBrick;
         private int _randomIndex;
         private int _randomEffectIndex;
         private Effect _startEffect;
         private Material _startMaterial;
+        private List<Renderer> _renderers;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _renderers = new List<Renderer>();
+            FindAllChildren(_bricks);
+        }
 
         public override void OnApplyModification()
         {
@@ -40,13 +48,8 @@ namespace ModificationFiles.BuffsFiles
 
         private IEnumerator OnBonusTargetActivated()
         {
-            _bricksList = new List<Transform>();
-            _filtredBrick = new List<Transform>();
-            FindAllChildren(_bricks);
-
             _filtredBrick = _bricksList
-                .Where(p => p.gameObject.GetComponent<Brick>() && !p.gameObject.GetComponent<Brick>().IsEternal &&
-                            p.gameObject.activeSelf == true).ToList();
+                .Where(p => !p.IsEternal && p.gameObject.activeSelf == true).ToList();
 
             if (_filtredBrick.Count > 0)
             {
@@ -62,14 +65,14 @@ namespace ModificationFiles.BuffsFiles
             SetActive(true);
             _randomIndex = GetRandomIndex(_filtredBrick.Count);
             _randomEffectIndex = GetRandomIndex(_effects.Length);
-            _startMaterial = _filtredBrick[_randomIndex].GetComponent<Renderer>().material;
-            _startEffect = _filtredBrick[_randomIndex].GetComponent<Brick>().EffectElement;
+            _startMaterial = _renderers[_randomIndex].material;
+            _startEffect = _filtredBrick[_randomIndex].EffectElement;
 
             if (_startEffect == null)
                 _buffCounter.IncreaseBuffCount();
 
-            _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_effects[_randomEffectIndex], true);
-            _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _newMaterial;
+            _filtredBrick[_randomIndex].SetEffect(_effects[_randomEffectIndex], true);
+            _renderers[_randomIndex].material = _newMaterial;
         }
 
         private void FindAllChildren(Transform parent)
@@ -77,7 +80,16 @@ namespace ModificationFiles.BuffsFiles
             for (int i = 0; i < parent.childCount; i++)
             {
                 Transform child = parent.GetChild(i);
-                _bricksList.Add(child);
+                Brick brick = child.GetComponent<Brick>();
+                Renderer renderer = child.GetComponent<Renderer>();
+
+                if (brick != null && !brick.IsEternal && child.gameObject.activeSelf)
+                {
+                    _bricksList.Add(brick);
+                    if (renderer != null)
+                        _renderers.Add(renderer);
+                }
+
                 FindAllChildren(child);
             }
         }
@@ -91,8 +103,8 @@ namespace ModificationFiles.BuffsFiles
         private void Reset()
         {
             SetActive(false);
-            _filtredBrick[_randomIndex].GetComponent<Brick>().SetEffect(_startEffect, false);
-            _filtredBrick[_randomIndex].GetComponent<Renderer>().material = _startMaterial;
+            _filtredBrick[_randomIndex].SetEffect(_startEffect, false);
+            _renderers[_randomIndex].material = _startMaterial;
 
             if (_filtredBrick[_randomIndex].gameObject.activeSelf != false && _startEffect == null)
                 _buffCounter.DecreaseBuffCount();

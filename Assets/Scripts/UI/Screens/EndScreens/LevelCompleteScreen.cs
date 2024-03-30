@@ -39,12 +39,6 @@ namespace UI.Screens.EndScreens
             _brickCounter.AllBrickDestroyed -= OnWin;
         }
 
-        private void SetValue()
-        {
-            gameObject.SetActive(true);
-            _text.enabled = true;
-        }
-
         private void OnWin()
         {
             if (_reviveScreen.IsLose)
@@ -61,7 +55,7 @@ namespace UI.Screens.EndScreens
             _save.SetData(Save.LevelStatus + _indexLevel, (int)LevelState.Completed);
             _save.SetData(Save.Score + _indexLevel, _scoreCounter.GetScore());
             _score.Increase(_scoreCounter.GetScore());
-            SetValue();
+            _text.enabled = true;
             _uiAnimationsText.Open();
             yield return _waitForSeconds;
             _claimButton.gameObject.SetActive(true);

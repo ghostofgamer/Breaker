@@ -59,7 +59,7 @@ namespace GameScene.BallContent
                 _ballTrigger.CheckPlatformCollision();
 
                 if (_isPortal)
-                    _portalTeleporterBall.TeleportBall();
+                    _portalTeleporterBall.PortalTravel();
                 else
                     CheckBehindWall();
 

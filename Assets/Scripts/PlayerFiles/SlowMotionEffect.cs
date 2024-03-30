@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PlayerFiles
 {
-    public class SlowMo : MonoBehaviour
+    public class SlowMotionEffect : MonoBehaviour
     {
         private float _slowMove = 0.35f;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.3f);

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace PlayerFiles.PlatformaContent
 {
     [RequireComponent(typeof(BaseMovement))]
-    public class BaseDisabler : MonoBehaviour
+    public class BaseHandler : MonoBehaviour
     {
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private ParticleSystem _victoryEffect;
@@ -35,18 +35,18 @@ namespace PlayerFiles.PlatformaContent
 
         private void OnVictoriousDestruction()
         {
-            SetValue(_victoryEffect);
+            BaseDeactivation(_victoryEffect);
             transform.parent = _environment;
             _baseMovement.Die();
         }
 
         private void OnLosingDestruction()
         {
-            SetValue(_loseEffect);
+            BaseDeactivation(_loseEffect);
             _baseMovement.Die();
         }
 
-        private void SetValue(ParticleSystem effect)
+        private void BaseDeactivation(ParticleSystem effect)
         {
             effect.transform.parent = null;
             effect.Play();

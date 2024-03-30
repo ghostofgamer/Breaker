@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Levels
 {
-    public class ColliderController : MonoBehaviour
+    public class ColliderToggle : MonoBehaviour
     {
         [SerializeField] private Level[] _levels;
 

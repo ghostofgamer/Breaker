@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Statistics;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace Bricks.LevelBricksMoving
         [SerializeField] private Brick _brick;
         [SerializeField] private BrickCounter _brickCounter;
 
+        private List<Rigidbody> _rigidbodies;
+        
         private void OnEnable()
         {
             if (_brick != null)
@@ -30,12 +33,20 @@ namespace Bricks.LevelBricksMoving
                 _brickCounter.AllBrickDestroyed += OnSetParentEnviropment;
         }
 
+        private void Start()
+        {
+            _rigidbodies = new List<Rigidbody>();
+
+            foreach (Brick brick in _bricks)
+                _rigidbodies.Add(brick.GetComponent<Rigidbody>());
+        }
+
         private void ChangeParent()
         {
-            foreach (var brick in _bricks)
+            foreach (Rigidbody rigidbodyValue in _rigidbodies)
             {
-                brick.GetComponent<Rigidbody>().isKinematic = false;
-                brick.transform.parent = _parentTarget;
+                rigidbodyValue.isKinematic = false;
+                rigidbodyValue.transform.parent = _parentTarget;
             }
         }
 

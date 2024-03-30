@@ -12,11 +12,22 @@ namespace Bricks.LevelBricksMoving.Level5b
 
         private WaitForSeconds _delay;
         private WaitForSeconds _delayRotaion;
-
-        private void Start()
+        private AccelerateRotate[] _accelerateRotateComponents;
+                                    private DecelerateStop[] _decelerateStopComponents;
+                            
+                                    private void Start()
         {
             _delay = new WaitForSeconds(_delayBetweenObjects);
             _delayRotaion = new WaitForSeconds(_rotationTime);
+            _accelerateRotateComponents = new AccelerateRotate[_objects.Length];
+            _decelerateStopComponents = new DecelerateStop[_objects.Length];
+
+            for (int i = 0; i < _objects.Length; i++)
+            {
+                _accelerateRotateComponents[i] = _objects[i].GetComponent<AccelerateRotate>();
+                _decelerateStopComponents[i] = _objects[i].GetComponent<DecelerateStop>();
+            }
+
             StartCoroutine(RotateObjects());
         }
 
@@ -28,7 +39,7 @@ namespace Bricks.LevelBricksMoving.Level5b
 
                 for (int i = 0; i < _objects.Length; i++)
                 {
-                    _objects[i].GetComponent<AccelerateRotate>().StartRotation();
+                    _accelerateRotateComponents[i].StartRotation();
                     yield return _delay;
                 }
 
@@ -36,10 +47,8 @@ namespace Bricks.LevelBricksMoving.Level5b
 
                 for (int i = _objects.Length - 1; i >= 0; i--)
                 {
-                    _objects[i].GetComponent<AccelerateRotate>().StopRotation();
-                    _objects[i].GetComponent<DecelerateStop>()
-                        .StartDeceleration(_objects[i].GetComponent<AccelerateRotate>().MaxSpeed);
-
+                    _accelerateRotateComponents[i].StopRotation();
+                    _decelerateStopComponents[i].StartDeceleration(_accelerateRotateComponents[i].MaxSpeed);
                     yield return _delay;
                 }
             }

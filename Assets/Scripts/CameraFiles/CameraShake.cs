@@ -32,11 +32,6 @@ namespace CameraFiles
             }
         }
 
-        private void Awake()
-        {
-            _originalPosition = transform.localPosition;
-        }
-
         private void OnShake()
         {
             StartCoroutine(ShakeCoroutine());
@@ -49,18 +44,24 @@ namespace CameraFiles
 
             while (_elapsedTime < _duration)
             {
-                float x = Random.Range(_minValue, _maxValue) * _magnitude;
-                float y = Random.Range(_minValue, _maxValue) * _magnitude;
+                float x = GetValue();
+                float y = GetValue();
 
-                transform.localPosition =
-                    new Vector3(_originalPosition.x + x, _originalPosition.y + y, _originalPosition.z);
-
+                transform.localPosition = new Vector3(
+                    _originalPosition.x + x,
+                    _originalPosition.y + y,
+                    _originalPosition.z);
                 _elapsedTime += Time.deltaTime;
 
                 yield return null;
             }
 
             transform.localPosition = _originalPosition;
+        }
+
+        private float GetValue()
+        {
+            return Random.Range(_minValue, _maxValue) * _magnitude;
         }
     }
 }

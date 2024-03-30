@@ -11,7 +11,7 @@ namespace UI.Buttons
         private const string NameScene = "MainScene";
 
         [SerializeField] private CanvasAnimator _canvasAnimator;
-        [SerializeField] private ColliderController _colliderController;
+        [SerializeField] private ColliderToggle _colliderToggle;
         [SerializeField] private Image _fadeImage;
         [SerializeField] private AudioSource _audioSource;
 
@@ -46,7 +46,7 @@ namespace UI.Buttons
         private IEnumerator GoMainScene()
         {
             _canvasAnimator.Close();
-            _colliderController.ColliderDeactivation();
+            _colliderToggle.ColliderDeactivation();
             yield return _waitForSeconds;
             SceneManager.LoadScene(NameScene);
         }
