@@ -1550,7 +1550,7 @@
           <e p="Bricks" t="Include">
             <e p="Brick.cs" t="Include" />
             <e p="BrickActivator.cs" t="Include" />
-            <e p="BrickDestroy.cs" t="Include" />
+            <e p="BrickDestroyer.cs" t="Include" />
             <e p="BrickExplosion.cs" t="Include" />
             <e p="Eternal" t="Include">
               <e p="BrickEternal.cs" t="Include" />
@@ -1594,6 +1594,7 @@
             </e>
             <e p="LootDropper.cs" t="Include" />
             <e p="ShaderChanger.cs" t="Include" />
+            <e p="SimpleBrick.cs" t="Include" />
           </e>
           <e p="BulletFiles" t="Include">
             <e p="Bullet.cs" t="Include" />
@@ -1621,6 +1622,8 @@
           <e p="GameScene" t="Include">
             <e p="BallContent" t="Include">
               <e p="Ball.cs" t="Include" />
+              <e p="BallDeath.cs" t="Include" />
+              <e p="BallDirection.cs" t="Include" />
               <e p="BallMover.cs" t="Include" />
               <e p="BallRevive.cs" t="Include" />
               <e p="BallTrigger.cs" t="Include" />

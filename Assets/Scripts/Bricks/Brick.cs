@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using ModificationFiles;
 using Statistics;
 using UnityEngine;
@@ -16,13 +15,12 @@ namespace Bricks
         [SerializeField] private BuffDistributor _buffDistributor;
         [SerializeField] private bool _isImmortal = false;
         [SerializeField] private Effect _effect;
-        [SerializeField] private GameObject _hologramEffectDie;
         [SerializeField] private GameObject _targetVisual;
         [SerializeField] private bool _isEternal = false;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private LootDropper _lootDropper;
 
-        protected bool IsTargetBonus;
+        private bool _isTargetBonus;
         private int _minBonus = 1;
         private int _maxBonus = 3;
         private float _randomProcent = 0.5f;
@@ -37,16 +35,18 @@ namespace Bricks
 
         public int BonusAmount => _bonusAmount;
 
-        protected LootDropper LootDropper => _lootDropper;
+        public bool IsImmortal => _isImmortal;
 
-        protected AudioSource AudioSource => _audioSource;
+        public AudioSource AudioSource => _audioSource;
 
-        protected int Reward => _reward;
+        public LootDropper LootDropper => _lootDropper;
 
-        protected BrickCounter BrickCounter => _brickCounter;
+        public int Reward => _reward;
 
-        protected bool IsImmortal => _isImmortal;
-
+        public BrickCounter BrickCounter => _brickCounter;
+        
+        protected bool IsTargetBonus => _isTargetBonus;
+        
         private void Start()
         {
             if (!_isEternal)
@@ -84,30 +84,13 @@ namespace Bricks
         public void EnableTargetBonus()
         {
             _targetVisual.SetActive(true);
-            IsTargetBonus = true;
+            _isTargetBonus = true;
         }
 
         public void DisableTargetBonus()
         {
             _targetVisual.SetActive(false);
-            IsTargetBonus = false;
-        }
-
-        protected void Destroy()
-        {
-            if (_isImmortal)
-            {
-                _audioSource.PlayOneShot(_audioSource.clip);
-                return;
-            }
-
-            BrickDie();
-            _hologramEffectDie.SetActive(true);
-            _hologramEffectDie.transform.parent = null;
-            _lootDropper.DropBuff(_effect);
-            _brickCounter.ChangeValue(_reward);
-            _lootDropper.DropBonus();
-            gameObject.SetActive(false);
+            _isTargetBonus = false;
         }
 
         protected void BrickDie()

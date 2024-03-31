@@ -1,4 +1,6 @@
 using System;
+using Bricks;
+using PlayerFiles.ModificationContent;
 using PlayerFiles.PlatformaContent;
 using UnityEngine;
 
@@ -6,16 +8,13 @@ namespace GameScene.BallContent
 {
     public class BallTrigger : MonoBehaviour
     {
-        private const string MouseX = "Mouse X";
-        private const string MouseY = "Mouse Y";
-
-        [SerializeField] private BallMover _ballMover;
         [SerializeField] private LayerMask _platformLayer;
         [SerializeField] private AudioSource _audioSource;
-
+        [SerializeField] private BallDirection _ballDirection;
+        [SerializeField] private ElectricBall _electricBall;
+        [SerializeField]private BallDeath _ballDeath;
+        
         private int _factor = 2;
-
-        public event Action Dying;
 
         public event Action Bounced;
 
@@ -23,37 +22,46 @@ namespace GameScene.BallContent
         {
             if (other.collider.TryGetComponent(out Bourder bourder))
             {
-                Dying?.Invoke();
-                gameObject.SetActive(false);
-                GetComponent<Ball>().OnStopMove();
-                Time.timeScale = 1;
+                _ballDeath.Die();
             }
 
             if (other.collider.TryGetComponent(out BaseMovement platformaMover))
             {
-                float mouse = Input.GetAxis(MouseX) * _factor;
-                float mouseY = Input.GetAxis(MouseY);
                 Bounced?.Invoke();
                 _audioSource.PlayOneShot(_audioSource.clip);
                 ContactPoint contact = other.contacts[0];
-                Vector3 newVector = new Vector3(mouse, 0, mouseY).normalized;
                 Vector3 platformNormal = contact.normal;
-                _ballMover.ChangeDirection(newVector, platformNormal);
+                _ballDirection.DirectReflection(platformNormal);
+            }
+
+            if (other.collider.TryGetComponent(out Brick brick))
+            {
+                if (_electricBall.gameObject.activeSelf && !brick.IsEternal)
+                {
+                    _electricBall.DestroyBrick(brick);
+                    return;
+                }
+
+                _ballDirection.ReflectBall(other.GetContact(0).normal);
+                brick.Die();
+            }
+
+            if (other.collider.TryGetComponent(out Wall wall) ||
+                other.collider.TryGetComponent(out WallTrigger wallTrigger))
+            {
+                _ballDirection.ReflectBall(other.GetContact(0).normal);
             }
         }
 
         public void CheckPlatformCollision()
         {
-            float mouse = Input.GetAxis(MouseX) * _factor;
-            float mouseY = Input.GetAxis(MouseY);
-            Vector3 newVector = new Vector3(mouse, 0, mouseY).normalized;
             float maxDistance = 2.1f;
             RaycastHit hit;
 
             if (Physics.SphereCast(
                 transform.position,
                 transform.lossyScale.x / _factor,
-                _ballMover.Direction,
+                _ballDirection.Direction,
                 out hit,
                 maxDistance, _platformLayer))
             {
@@ -61,7 +69,7 @@ namespace GameScene.BallContent
                 {
                     Bounced?.Invoke();
                     _audioSource.PlayOneShot(_audioSource.clip);
-                    _ballMover.ChangeDirection(newVector, hit.normal);
+                    _ballDirection.DirectReflection(hit.normal);
                 }
             }
         }

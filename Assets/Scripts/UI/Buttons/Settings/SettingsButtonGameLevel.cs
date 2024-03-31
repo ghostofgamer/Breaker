@@ -12,7 +12,7 @@ namespace UI.Buttons.Settings
         [SerializeField] private SettingsScreen _settingsScreen;
         [SerializeField] private BaseMovement _baseMovement;
         [SerializeField] private BrickCounter _brickCounter;
-        [SerializeField] private BallTrigger _ball;
+        [SerializeField] private BallDeath _ball;
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private BaseInput _baseInput;

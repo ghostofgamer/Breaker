@@ -8,7 +8,7 @@ namespace Sound
 {
     public class SoundEffect : MonoBehaviour
     {
-        [SerializeField] private BallTrigger _ballTrigger;
+        [SerializeField] private BallDeath _ballDeath;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _audioClipDiePlatform;
         [SerializeField] private AudioClip _audioClipCountDown;
@@ -24,7 +24,7 @@ namespace Sound
 
         private void OnEnable()
         {
-            _ballTrigger.Dying += OnPlayDieSound;
+            _ballDeath.Dying += OnPlayDieSound;
             _reviveScreen.Losed += OnStopCountDown;
             _reviveScreen.Reviving += OnStopCountDown;
             _brickCounter.AllBrickDestroyed += OnPlayVictorySound;
@@ -32,7 +32,7 @@ namespace Sound
 
         private void OnDisable()
         {
-            _ballTrigger.Dying -= OnPlayDieSound;
+            _ballDeath.Dying -= OnPlayDieSound;
             _reviveScreen.Losed -= OnStopCountDown;
             _reviveScreen.Reviving -= OnStopCountDown;
             _brickCounter.AllBrickDestroyed -= OnPlayVictorySound;

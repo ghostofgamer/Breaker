@@ -11,7 +11,7 @@ namespace PlayerFiles.PlatformaContent
         [SerializeField] private ParticleSystem _victoryEffect;
         [SerializeField] private ParticleSystem _loseEffect;
         [SerializeField] private GameObject _mousePosition;
-        [SerializeField] private BallTrigger _ballTrigger;
+        [SerializeField] private BallDeath _ballDeath;
         [SerializeField] private Transform _environment;
 
         private BaseMovement _baseMovement;
@@ -24,13 +24,13 @@ namespace PlayerFiles.PlatformaContent
         private void OnEnable()
         {
             _brickCounter.AllBrickDestroyed += OnVictoriousDestruction;
-            _ballTrigger.Dying += OnLosingDestruction;
+            _ballDeath.Dying += OnLosingDestruction;
         }
 
         private void OnDisable()
         {
             _brickCounter.AllBrickDestroyed -= OnVictoriousDestruction;
-            _ballTrigger.Dying -= OnLosingDestruction;
+            _ballDeath.Dying -= OnLosingDestruction;
         }
 
         private void OnVictoriousDestruction()

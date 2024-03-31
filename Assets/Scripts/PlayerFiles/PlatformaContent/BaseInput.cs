@@ -8,7 +8,7 @@ namespace PlayerFiles.PlatformaContent
         [SerializeField] private GameObject _positionMouse;
         [SerializeField] private BaseMovement _baseMovement;
         [SerializeField] private SlowMotionEffect _slowMotionEffect;
-        [SerializeField] private Ball _ball;
+        [SerializeField]private BallMover _ballMover;
 
         private bool _isFirstThrow = true;
         private string _mouseX = "Mouse X";
@@ -30,8 +30,8 @@ namespace PlayerFiles.PlatformaContent
             {
                 _isMousePressed = false;
 
-                if (!_ball.IsMoving)
-                    _ball.SetMove(mouse);
+                if (!_ballMover.IsMoving)
+                    _ballMover.SetMove(mouse);
 
                 _positionMouse.SetActive(false);
 

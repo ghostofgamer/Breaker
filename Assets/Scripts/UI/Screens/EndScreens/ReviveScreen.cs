@@ -13,7 +13,7 @@ namespace UI.Screens.EndScreens
     {
         [SerializeField] private Slider _slider;
         [SerializeField] private GameOverScreen _gameOverScreen;
-        [SerializeField] private BallTrigger _ball;
+        [SerializeField] private BallDeath _ballDeath;
         [SerializeField] private UIAnimations _uiAnimationsWallet;
         [SerializeField] private BonusCounter _bonusCounter;
         [SerializeField] private LuckySave _luckySave;
@@ -32,12 +32,12 @@ namespace UI.Screens.EndScreens
 
         private void OnEnable()
         {
-            _ball.Dying += OnOpen;
+            _ballDeath.Dying += OnOpen;
         }
 
         private void OnDisable()
         {
-            _ball.Dying -= OnOpen;
+            _ballDeath.Dying -= OnOpen;
         }
 
         public override void OnOpen()

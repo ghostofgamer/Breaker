@@ -9,7 +9,8 @@ namespace Bricks
         [SerializeField] private float _force;
         [SerializeField] private ParticleSystem _explodeEffect;
         [SerializeField] private ParticleSystem _bombFuseEffect;
-
+        [SerializeField] private BrickDestroyer _brickDestroyer;
+        
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.6f);
         private bool _wickBurning = false;
 
@@ -25,7 +26,8 @@ namespace Bricks
 
             if (!_wickBurning && IsTargetBonus)
             {
-                Destroy();
+                BrickDie();
+                _brickDestroyer.Destroy();
             }
 
             if (!_wickBurning)
@@ -44,7 +46,7 @@ namespace Bricks
 
             for (int i = 0; i < overlappingColliders.Length; i++)
             {
-                if (overlappingColliders[i].TryGetComponent(out BrickDestroy brick))
+                if (overlappingColliders[i].TryGetComponent(out SimpleBrick brick))
                 {
                     brick.GetComponent<Rigidbody>().AddExplosionForce(_force, transform.position, _radius);
                 }

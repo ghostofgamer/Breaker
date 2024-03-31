@@ -10,7 +10,7 @@ namespace ModificationFiles
     {
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private Effect _effect;
-        [SerializeField] private BallTrigger _ballTrigger;
+        [SerializeField] private BallDeath _ballDeath;
         [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private BuffCounter _buffCounter;
 
@@ -23,7 +23,7 @@ namespace ModificationFiles
             _brickCounter.BricksDestructionHelping += OnSpawnLaser;
             _reviveScreen.Reviving += OnSpawnLaser;
             _brickCounter.AllBrickDestroyed += OnSpawnOver;
-            _ballTrigger.Dying += OnSpawnOver;
+            _ballDeath.Dying += OnSpawnOver;
         }
 
         private void OnDisable()
@@ -31,7 +31,7 @@ namespace ModificationFiles
             _brickCounter.BricksDestructionHelping -= OnSpawnLaser;
             _brickCounter.AllBrickDestroyed -= OnSpawnOver;
             _reviveScreen.Reviving -= OnSpawnLaser;
-            _ballTrigger.Dying -= OnSpawnOver;
+            _ballDeath.Dying -= OnSpawnOver;
         }
 
         private void OnSpawnOver()

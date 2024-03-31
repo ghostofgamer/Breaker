@@ -7,18 +7,18 @@ namespace ModificationFiles.NeutralFiles
 {
     public class ResetModifications : Modification
     {
-        [SerializeField] private BallTrigger _ball;
+        [SerializeField] private BallDeath _ballDeath;
         [SerializeField] private BrickCounter _brickCounter;
 
         private void OnEnable()
         {
-            _ball.Dying += OnApplyModification;
+            _ballDeath.Dying += OnApplyModification;
             _brickCounter.AllBrickDestroyed += OnApplyModification;
         }
 
         private void OnDisable()
         {
-            _ball.Dying -= OnApplyModification;
+            _ballDeath.Dying -= OnApplyModification;
             _brickCounter.AllBrickDestroyed -= OnApplyModification;
         }
 
