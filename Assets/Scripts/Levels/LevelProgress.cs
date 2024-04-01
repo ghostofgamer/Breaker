@@ -9,7 +9,7 @@ namespace Levels
         [SerializeField] private EffectChanger _effectChanger;
 
         private LevelState _currentLevelState;
-        
+
         public void SetLevels()
         {
             if (_nextLevel.Length > 0)
@@ -17,7 +17,7 @@ namespace Levels
                 for (int i = 0; i < _nextLevel.Length; i++)
                 {
                     _currentLevelState = _nextLevel[i].State;
-                    
+
                     if (State == LevelState.Completed && _currentLevelState == LevelState.Completed)
                     {
                         _effectChanger.SetLine(i, PassedColor);

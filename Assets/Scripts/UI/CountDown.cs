@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -12,8 +13,9 @@ namespace UI
         [SerializeField] private AudioSource _audioSource;
 
         private WaitForSecondsRealtime _waitForSeconds = new WaitForSecondsRealtime(1f);
-        private Coroutine _coroutine;
         private Animator[] _animators;
+
+        public event Action TimeActivated;
 
         private void Awake()
         {
@@ -34,7 +36,7 @@ namespace UI
                 _numbersText[i].gameObject.SetActive(false);
             }
 
-            Time.timeScale = 1;
+            TimeActivated?.Invoke();
         }
     }
 }

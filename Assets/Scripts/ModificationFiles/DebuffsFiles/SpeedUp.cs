@@ -4,7 +4,6 @@ namespace ModificationFiles.DebuffsFiles
 {
     public class SpeedUp : Modification
     {
-
         public override void OnApplyModification()
         {
             if (Player.TryApplyEffect(this))

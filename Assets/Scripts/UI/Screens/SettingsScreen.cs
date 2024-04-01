@@ -13,7 +13,6 @@ namespace UI.Screens
 
         private CanvasGroup _canvasGroup;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1f);
-        private Coroutine _coroutine;
         private float _timePauseCloseEnd = 0.15f;
         private float _timePauseOpenEnd = 0.45f;
         private int _zeroAlpha = 0;

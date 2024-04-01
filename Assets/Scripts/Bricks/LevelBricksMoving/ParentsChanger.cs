@@ -8,17 +8,17 @@ namespace Bricks.LevelBricksMoving
     {
         [SerializeField] private Transform _parentTarget;
         [SerializeField] private Transform _environment;
-        [SerializeField] private Brick[] _bricks;
-        [SerializeField] private Brick[] _bricksEternal;
-        [SerializeField] private Brick _brick;
+        [SerializeField] private BrickCoordinator[] _bricks;
+        [SerializeField] private BrickCoordinator[] _bricksEternal;
+        [SerializeField] private BrickCoordinator _brickCoordinator;
         [SerializeField] private BrickCounter _brickCounter;
 
         private List<Rigidbody> _rigidbodies;
-        
+
         private void OnEnable()
         {
-            if (_brick != null)
-                _brick.Dead += ChangeParent;
+            if (_brickCoordinator != null)
+                _brickCoordinator.Dead += ChangeParent;
 
             if (_brickCounter != null)
                 _brickCounter.AllBrickDestroyed += OnSetParentEnviropment;
@@ -26,8 +26,8 @@ namespace Bricks.LevelBricksMoving
 
         private void OnDisable()
         {
-            if (_brick != null)
-                _brick.Dead -= ChangeParent;
+            if (_brickCoordinator != null)
+                _brickCoordinator.Dead -= ChangeParent;
 
             if (_brickCounter != null)
                 _brickCounter.AllBrickDestroyed += OnSetParentEnviropment;
@@ -37,7 +37,7 @@ namespace Bricks.LevelBricksMoving
         {
             _rigidbodies = new List<Rigidbody>();
 
-            foreach (Brick brick in _bricks)
+            foreach (BrickCoordinator brick in _bricks)
                 _rigidbodies.Add(brick.GetComponent<Rigidbody>());
         }
 

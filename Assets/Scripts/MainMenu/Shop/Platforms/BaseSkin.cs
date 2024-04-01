@@ -15,7 +15,7 @@ namespace MainMenu.Shop.Platforms
         {
             _isBought = true;
         }
-        
+
         public void DisableBought()
         {
             _isBought = false;
@@ -25,7 +25,7 @@ namespace MainMenu.Shop.Platforms
         {
             _isActive = true;
         }
-        
+
         public void DisableActive()
         {
             _isActive = false;

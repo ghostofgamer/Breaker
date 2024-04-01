@@ -14,7 +14,7 @@ namespace ModificationFiles.BuffsFiles
                 if (Coroutine != null)
                     StopCoroutine(Coroutine);
 
-                SetCoroutine(StartCoroutine(OnShieldActivated())); 
+                SetCoroutine(StartCoroutine(OnShieldActivated()));
                 ShowNameEffect();
             }
         }

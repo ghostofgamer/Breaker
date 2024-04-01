@@ -12,15 +12,15 @@ namespace PlayerFiles.ModificationContent
 
         private void OnEnable()
         {
-            _ballTrigger.Bounced += AttemptShieldActivation;
+            _ballTrigger.Bounced += OnAttemptShieldActivation;
         }
 
         private void OnDisable()
         {
-            _ballTrigger.Bounced -= AttemptShieldActivation;
+            _ballTrigger.Bounced -= OnAttemptShieldActivation;
         }
 
-        private void AttemptShieldActivation()
+        private void OnAttemptShieldActivation()
         {
             if (Random.Range(MinValue, MaxValue) > BonusChances)
                 return;

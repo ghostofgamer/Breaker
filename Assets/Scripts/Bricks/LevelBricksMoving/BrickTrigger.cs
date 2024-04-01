@@ -5,8 +5,8 @@ namespace Bricks.LevelBricksMoving
 {
     public class BrickTrigger : MonoBehaviour
     {
-        [SerializeField] private Brick[] _bricks;
-        [SerializeField] private Brick[] _bricksTrigger;
+        [SerializeField] private BrickCoordinator[] _bricks;
+        [SerializeField] private BrickCoordinator[] _bricksTrigger;
 
         private List<Rigidbody> _rigidbodies;
 
@@ -26,7 +26,7 @@ namespace Bricks.LevelBricksMoving
         {
             _rigidbodies = new List<Rigidbody>();
 
-            foreach (Brick brick in _bricks)
+            foreach (BrickCoordinator brick in _bricks)
                 _rigidbodies.Add(brick.GetComponent<Rigidbody>());
         }
 

@@ -8,7 +8,7 @@ namespace Bricks.LevelBricksMoving.Level2
         [SerializeField] private float _moveDistanceForward;
         [SerializeField] private float _moveDistanceBack;
         [SerializeField] private float _duration;
-        [SerializeField] private Brick[] _brickObjects;
+        [SerializeField] private BrickCoordinator[] _brickObjects;
 
         private Vector3 _initialPosition;
         private Vector3 _targetPosition;
@@ -84,7 +84,7 @@ namespace Bricks.LevelBricksMoving.Level2
 
         private void SetPosition()
         {
-            foreach (Brick brick in _brickObjects)
+            foreach (BrickCoordinator brick in _brickObjects)
             {
                 brick.transform.position = new Vector3(
                     brick.transform.position.x,

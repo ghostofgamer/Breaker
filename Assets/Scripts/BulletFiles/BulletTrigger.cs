@@ -13,7 +13,7 @@ namespace BulletFiles
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out Brick brick))
+            if (other.TryGetComponent(out BrickCoordinator brick))
             {
                 Hit();
                 brick.Die();

@@ -42,7 +42,7 @@ namespace ModificationFiles.DebuffsFiles
                 Vector3 randomPoint = Random.insideUnitCircle * _spawnRadius;
                 Vector3 spawnPosition = _spawnPosition.position + new Vector3(randomPoint.x, 0, randomPoint.y);
                 GameObject cube = Instantiate(_brickPrefab, _bricksContainer);
-                cube.GetComponent<Brick>().Init(_brickCounter, _buffDistributor);
+                cube.GetComponent<BrickCoordinator>().Init(_brickCounter, _buffDistributor);
                 _lootDropper.Init(_fragmentsCounter);
                 cube.transform.position = spawnPosition;
                 cube.transform.localScale = new Vector3(_localScale, _localScale, _localScale);

@@ -20,7 +20,7 @@ namespace PlayerFiles.ModificationContent
                 Transform child = _bricksContainer.GetChild(i);
                 BrickExplosion brickExp = child.GetComponent<BrickExplosion>();
 
-                if (brickExp != null && !child.GetComponent<Brick>().IsEternal && child.gameObject.activeSelf)
+                if (brickExp != null && !child.GetComponent<BrickCoordinator>().IsEternal && child.gameObject.activeSelf)
                     _brickExplosions.Add(brickExp);
             }
         }

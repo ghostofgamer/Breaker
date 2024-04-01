@@ -10,7 +10,7 @@ namespace ModificationFiles
         [SerializeField] private bool _isPositiveEffect;
 
         public bool IsPositiveEffect => _isPositiveEffect;
-        
+
         public BuffType BuffType => _buffType;
 
         public void Destroy()

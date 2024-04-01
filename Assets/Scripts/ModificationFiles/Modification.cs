@@ -26,9 +26,9 @@ namespace ModificationFiles
         private float _factor = 1.5f;
 
         protected WaitForSeconds WaitForSeconds => _waitForSeconds;
-        
+
         protected Coroutine Coroutine => _coroutine;
-        
+
         protected Player Player => _player;
 
         protected float Duration => _duration;
@@ -76,7 +76,7 @@ namespace ModificationFiles
         {
             _buffUI.gameObject.SetActive(false);
         }
-        
+
         protected void ShowNameEffect()
         {
             _nameEffect.Show();
@@ -86,7 +86,7 @@ namespace ModificationFiles
         {
             _waitForSeconds = new WaitForSeconds(value);
         }
-        
+
         protected void SetCoroutine(Coroutine coroutine)
         {
             _coroutine = coroutine;

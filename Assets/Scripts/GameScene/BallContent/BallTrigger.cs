@@ -13,7 +13,7 @@ namespace GameScene.BallContent
         [SerializeField] private BallDirection _ballDirection;
         [SerializeField] private ElectricBall _electricBall;
         [SerializeField]private BallDeath _ballDeath;
-        
+
         private int _factor = 2;
 
         public event Action Bounced;
@@ -34,7 +34,7 @@ namespace GameScene.BallContent
                 _ballDirection.DirectReflection(platformNormal);
             }
 
-            if (other.collider.TryGetComponent(out Brick brick))
+            if (other.collider.TryGetComponent(out BrickCoordinator brick))
             {
                 if (_electricBall.gameObject.activeSelf && !brick.IsEternal)
                 {
@@ -63,7 +63,8 @@ namespace GameScene.BallContent
                 transform.lossyScale.x / _factor,
                 _ballDirection.Direction,
                 out hit,
-                maxDistance, _platformLayer))
+                maxDistance,
+                _platformLayer))
             {
                 if (hit.collider.gameObject.TryGetComponent(out BaseMovement platformaMover))
                 {

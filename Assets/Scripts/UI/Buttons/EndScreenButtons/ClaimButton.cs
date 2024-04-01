@@ -10,10 +10,10 @@ namespace UI.Buttons.EndScreenButtons
     {
         [SerializeField] private LevelCompleteScreen _levelCompleteScreen;
         [SerializeField] private VictoryScreen _victoryScreen;
-        [SerializeField] private TMP_Text _creditsTxt;
+        [SerializeField] private TMP_Text _creditsText;
         [SerializeField] private Image _creditIcon;
         [SerializeField] private ClaimRewardButton _claimRewardButton;
-        [SerializeField] private TMP_Text _claimTxt;
+        [SerializeField] private TMP_Text _claimText;
         [SerializeField] private AudioSource _audioSource;
 
         private int _credits = 0;
@@ -49,22 +49,22 @@ namespace UI.Buttons.EndScreenButtons
         {
             _elapsedTime = 0;
             yield return _waitForSeconds;
-            _creditsTxt.enabled = true;
+            _creditsText.enabled = true;
             _creditIcon.enabled = true;
-            _claimTxt.enabled = true;
+            _claimText.enabled = true;
 
             while (_elapsedTime < _endTime)
             {
                 _elapsedTime += Time.deltaTime;
                 float time = _elapsedTime / _endTime;
                 _credits = (int)Mathf.Lerp(_credits, credits, time);
-                _creditsTxt.text = _credits.ToString();
+                _creditsText.text = _credits.ToString();
                 yield return null;
             }
 
             Button.interactable = true;
             _credits = credits;
-            _creditsTxt.text = _credits.ToString();
+            _creditsText.text = _credits.ToString();
             _claimRewardButton.SetActive(_credits);
         }
     }

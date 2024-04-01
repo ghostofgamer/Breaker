@@ -14,8 +14,8 @@ namespace ModificationFiles.BuffsFiles
         [SerializeField] private Effect[] _effects;
         [SerializeField] private BuffCounter _buffCounter;
 
-        private List<Brick> _bricksList;
-        private List<Brick> _filtredBrick;
+        private List<BrickCoordinator> _bricksList;
+        private List<BrickCoordinator> _filtredBrick;
         private int _randomIndex;
         private int _randomEffectIndex;
         private Effect _startEffect;
@@ -81,12 +81,12 @@ namespace ModificationFiles.BuffsFiles
             for (int i = 0; i < parent.childCount; i++)
             {
                 Transform child = parent.GetChild(i);
-                Brick brick = child.GetComponent<Brick>();
+                BrickCoordinator brickCoordinator = child.GetComponent<BrickCoordinator>();
                 Renderer renderer = child.GetComponent<Renderer>();
 
-                if (brick != null && !brick.IsEternal && child.gameObject.activeSelf)
+                if (brickCoordinator != null && !brickCoordinator.IsEternal && child.gameObject.activeSelf)
                 {
-                    _bricksList.Add(brick);
+                    _bricksList.Add(brickCoordinator);
                     if (renderer != null)
                         _renderers.Add(renderer);
                 }

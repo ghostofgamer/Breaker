@@ -2,31 +2,31 @@ using UnityEngine;
 
 namespace Bricks
 {
-    [RequireComponent(typeof(Brick))]
+    [RequireComponent(typeof(BrickCoordinator))]
     public class BrickDestroyer : MonoBehaviour
     {
         [SerializeField] private GameObject _hologramEffectDie;
 
-        private Brick _brick;
+        private BrickCoordinator _brickCoordinator;
 
         private void Start()
         {
-            _brick = GetComponent<Brick>();
+            _brickCoordinator = GetComponent<BrickCoordinator>();
         }
 
         public void Destroy()
         {
-            if (_brick.IsImmortal)
+            if (_brickCoordinator.IsImmortal)
             {
-                _brick.AudioSource.PlayOneShot( _brick.AudioSource.clip);
+                _brickCoordinator.AudioSource.PlayOneShot(_brickCoordinator.AudioSource.clip);
                 return;
             }
-            
+
             _hologramEffectDie.SetActive(true);
             _hologramEffectDie.transform.parent = null;
-            _brick.LootDropper.DropBuff(_brick.EffectElement);
-            _brick.BrickCounter.ChangeValue(_brick.Reward);
-            _brick.LootDropper.DropBonus();
+            _brickCoordinator.LootDropper.DropBuff(_brickCoordinator.EffectElement);
+            _brickCoordinator.BrickCounter.ChangeValue(_brickCoordinator.Reward);
+            _brickCoordinator.LootDropper.DropBonus();
             gameObject.SetActive(false);
         }
     }

@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace Bricks
 {
-    public class BrickExplosion : Brick
+    public class BrickExplosion : BrickCoordinator
     {
         [SerializeField] private float _radius;
         [SerializeField] private float _force;
         [SerializeField] private ParticleSystem _explodeEffect;
         [SerializeField] private ParticleSystem _bombFuseEffect;
         [SerializeField] private BrickDestroyer _brickDestroyer;
-        
+
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.6f);
         private bool _wickBurning = false;
 

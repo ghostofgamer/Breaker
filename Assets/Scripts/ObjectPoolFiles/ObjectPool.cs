@@ -43,12 +43,12 @@ namespace ObjectPoolFiles
         {
             AutoExpand = true;
         }
-        
+
         public void DisableAutoExpand()
         {
             AutoExpand = false;
         }
-        
+
         public void Reset()
         {
             foreach (var item in _poolGeneric)

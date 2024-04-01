@@ -6,19 +6,22 @@ namespace ADS
     {
         public abstract void Show();
 
+        private int _activeValue = 1;
+        private int _inactiveValue = 0;
+
         protected virtual void OnOpen()
         {
-            SetValue(0);
+            SetValue(_inactiveValue);
         }
 
         protected virtual void OnClose(bool isClosed)
         {
-            SetValue(1);
+            SetValue(_activeValue);
         }
 
         protected virtual void OnClose()
         {
-            SetValue(1);
+            SetValue(_activeValue);
         }
 
         private void SetValue(int value)

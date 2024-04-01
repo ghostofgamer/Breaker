@@ -6,9 +6,9 @@ namespace GameScene.BallContent
     public class BallDeath : MonoBehaviour
     {
         [SerializeField]private BallMover _ballMover;
-        
+
         public event Action Dying;
-        
+
         public void Die()
         {
             Dying?.Invoke();

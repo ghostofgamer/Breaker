@@ -10,13 +10,13 @@ namespace ModificationFiles.DebuffsFiles
     {
         [SerializeField] private Transform _bricksContainer;
 
-        private List<Brick> _bricks;
-        private List<Brick> _filtredBricks;
+        private List<BrickCoordinator> _bricks;
+        private List<BrickCoordinator> _filtredBricks;
 
-        private void Awake()
+        protected override void Awake()
         {
-            _filtredBricks = new List<Brick>();
-            _bricks = new List<Brick>();
+            _filtredBricks = new List<BrickCoordinator>();
+            _bricks = new List<BrickCoordinator>();
 
             FindAllChildren(_bricksContainer);
         }
@@ -53,7 +53,7 @@ namespace ModificationFiles.DebuffsFiles
         {
             EnableBuffUI();
 
-            foreach (Brick brick in _filtredBricks)
+            foreach (BrickCoordinator brick in _filtredBricks)
                 brick.EnableImmortalEffect();
         }
 
@@ -61,7 +61,7 @@ namespace ModificationFiles.DebuffsFiles
         {
             DisableBuffUI();
 
-            foreach (Brick brick in _filtredBricks)
+            foreach (BrickCoordinator brick in _filtredBricks)
                 brick.DisableImmortalEffect();
         }
 
@@ -70,10 +70,10 @@ namespace ModificationFiles.DebuffsFiles
             for (int i = 0; i < parent.childCount; i++)
             {
                 Transform child = parent.GetChild(i);
-                Brick brick = child.GetComponent<Brick>();
+                BrickCoordinator brickCoordinator = child.GetComponent<BrickCoordinator>();
 
-                if (brick != null && !brick.IsEternal && child.gameObject.activeSelf)
-                    _bricks.Add(brick);
+                if (brickCoordinator != null && !brickCoordinator.IsEternal && child.gameObject.activeSelf)
+                    _bricks.Add(brickCoordinator);
 
                 FindAllChildren(child);
             }

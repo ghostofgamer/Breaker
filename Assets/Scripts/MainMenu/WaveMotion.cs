@@ -19,7 +19,7 @@ namespace MainMenu
         private int _columns;
         private int _rows;
         private float _waveTimer = 0;
-        private List<Brick> _brickList;
+        private List<BrickCoordinator> _brickList;
         private bool _isFlyOver = false;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.6f);
         private float _distanceStartFly = 15f;
@@ -54,22 +54,22 @@ namespace MainMenu
             }
         }
 
-        public void Init(List<Brick> brickList, int columns, int rows)
+        public void Init(List<BrickCoordinator> brickList, int columns, int rows)
         {
-            _brickList = new List<Brick>();
+            _brickList = new List<BrickCoordinator>();
             _brickList = brickList;
             _columns = columns;
             _rows = rows;
         }
 
-        public void MoveActivation(Brick[,] brickGrid)
+        public void MoveActivation(BrickCoordinator[,] brickGrid)
         {
             StartCoroutine(MoveCubes(brickGrid));
         }
 
         public void FlyBackAllCubes()
         {
-            foreach (Brick cube in _brickList)
+            foreach (BrickCoordinator cube in _brickList)
             {
                 if (cube != null)
                 {
@@ -79,7 +79,7 @@ namespace MainMenu
             }
         }
 
-        private IEnumerator MoveCubes(Brick[,] brickGrid)
+        private IEnumerator MoveCubes(BrickCoordinator[,] brickGrid)
         {
             for (int i = 0; i < _columns; i++)
             {
@@ -110,7 +110,7 @@ namespace MainMenu
             _isFlyOver = true;
         }
 
-        private IEnumerator MoveCube(Brick cube, Vector3 target, float speed)
+        private IEnumerator MoveCube(BrickCoordinator cube, Vector3 target, float speed)
         {
             while (cube.transform.position != target)
             {
@@ -120,7 +120,7 @@ namespace MainMenu
             }
         }
 
-        private IEnumerator FlyBackCube(Brick cube, float speed)
+        private IEnumerator FlyBackCube(BrickCoordinator cube, float speed)
         {
             Vector3 startPosition = cube.transform.position;
             Vector3 endPosition = startPosition - new Vector3(0, 0, -_distanceEndFly);

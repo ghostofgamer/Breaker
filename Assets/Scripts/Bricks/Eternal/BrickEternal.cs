@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Bricks.Eternal
 {
-    public class BrickEternal : Brick
+    public class BrickEternal : BrickCoordinator
     {
         [SerializeField] private AudioSource _sourceAudio;
 

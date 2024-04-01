@@ -8,7 +8,7 @@ namespace Bricks.LevelBricksMoving.Level1
         [SerializeField] private float _moveDistance;
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _duration;
-        [SerializeField] private Brick[] _brickObjects;
+        [SerializeField] private BrickCoordinator[] _brickObjects;
 
         private Vector3 _initialPosition;
         private Vector3 _targetPosition;
@@ -49,7 +49,7 @@ namespace Bricks.LevelBricksMoving.Level1
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, _moveSpeed * Time.deltaTime);
 
-            foreach (Brick brick in _brickObjects)
+            foreach (BrickCoordinator brick in _brickObjects)
             {
                 brick.transform.position = new Vector3(
                     transform.position.x,

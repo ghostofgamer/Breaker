@@ -32,14 +32,14 @@ namespace ModificationFiles.BuffsFiles
             DisablePortalEffect();
             Player.DeleteEffect(this);
         }
-        
+
         private void EnablePortalEffect()
         {
             EnableBuffUI();
-            
+
             foreach (BoxCollider wall in _walls)
                 wall.enabled = false;
-            
+
             BallMover.PortalActivated();
             _portal.SetActive(true);
         }
@@ -47,10 +47,10 @@ namespace ModificationFiles.BuffsFiles
         private void DisablePortalEffect()
         {
             DisableBuffUI();
-            
+
             foreach (BoxCollider wall in _walls)
                 wall.enabled = true;
-            
+
             BallMover.PortalDeactivation();
             _portal.SetActive(false);
         }

@@ -6,7 +6,7 @@ namespace Bricks
 {
     public class LootDropper : MonoBehaviour
     {
-        [SerializeField] private Brick _brick;
+        [SerializeField] private BrickCoordinator _brickCoordinator;
         [SerializeField] private GameObject _bonusPrefab;
         [SerializeField] private FragmentsCounter _fragmentsCounter;
 
@@ -20,14 +20,14 @@ namespace Bricks
 
         public void DropBonus()
         {
-            if (!_brick.IsBonus)
+            if (!_brickCoordinator.IsBonus)
                 return;
 
-            _fragmentsCounter.SetAmountFragments(_brick.BonusAmount);
+            _fragmentsCounter.SetAmountFragments(_brickCoordinator.BonusAmount);
 
-            for (int i = 0; i < _brick.BonusAmount; i++)
+            for (int i = 0; i < _brickCoordinator.BonusAmount; i++)
             {
-                float angle = (i * Mathf.PI * _factor) / _brick.BonusAmount;
+                float angle = (i * Mathf.PI * _factor) / _brickCoordinator.BonusAmount;
                 float x = transform.position.x + (Mathf.Cos(angle) * _bonusRadius);
                 float z = transform.position.z + (Mathf.Sin(angle) * _bonusRadius);
                 Vector3 bonusPosition = new Vector3(x, transform.position.y, z);

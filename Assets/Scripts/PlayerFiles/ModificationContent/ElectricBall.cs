@@ -5,14 +5,14 @@ namespace PlayerFiles.ModificationContent
 {
     public class ElectricBall : MonoBehaviour
     {
-        public void DestroyBrick(Brick brick)
+        public void DestroyBrick(BrickCoordinator brickCoordinator)
         {
-            BrickExplosion brickExplosion = brick.GetComponent<BrickExplosion>();
+            BrickExplosion brickExplosion = brickCoordinator.GetComponent<BrickExplosion>();
 
             if (brickExplosion != null)
                 brickExplosion.Detonate();
             else
-                brick.Die();
+                brickCoordinator.Die();
         }
     }
 }

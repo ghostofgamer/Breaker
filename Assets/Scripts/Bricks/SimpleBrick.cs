@@ -2,10 +2,10 @@ using UnityEngine;
 
 namespace Bricks
 {
-    public class SimpleBrick : Brick
+    public class SimpleBrick : BrickCoordinator
     {
         [SerializeField] private BrickDestroyer _brickDestroyer;
-        
+
         public override void Die()
         {
             BrickDie();

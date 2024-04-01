@@ -6,7 +6,7 @@ namespace GameScene.BallContent
     {
         private const string MouseX = "Mouse X";
         private const string MouseY = "Mouse Y";
-        
+
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private BallMover _ballMover;
 
@@ -23,7 +23,7 @@ namespace GameScene.BallContent
         private float _maxY = 5.1f;
         private float _directionForward = 1;
         private int _factor = 2;
-        
+
         public Vector3 Direction => _direction;
 
         public void SetStartDirection(float directionX)
@@ -38,7 +38,7 @@ namespace GameScene.BallContent
             Vector3 newVector = new Vector3(mouse, 0, mouseY).normalized;
             ChangeDirection(newVector, platformNormal);
         }
-        
+
         public void ReflectBall(Vector3 normal)
         {
             Vector3 reflect = Vector3.Reflect(_direction, normal);
