@@ -37,6 +37,8 @@ namespace Levels
 
         protected Color NotOpenColor => _notOpenColor;
 
+        protected EffectChanger EffectChanger => _effectChanger;
+
         private void Start()
         {
             _boxCollider = GetComponent<BoxCollider>();
@@ -44,7 +46,7 @@ namespace Levels
 
         private void OnMouseDown()
         {
-            if (_shopScreen.IsOpen)
+            if (_shopScreen.IsOpen && _shopScreen != null)
                 return;
 
             foreach (Level level in _allLevels)

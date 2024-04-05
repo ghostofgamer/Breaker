@@ -5,31 +5,34 @@ namespace Levels
 {
     public class LevelProgress : Level
     {
-        [SerializeField] private Level[] _nextLevel;
-        [SerializeField] private EffectChanger _effectChanger;
+        // [SerializeField] private Level[] _nextLevel;
+        // [SerializeField] private EffectChanger _effectChanger;
 
         private LevelState _currentLevelState;
 
         public void SetLevels()
         {
-            if (_nextLevel.Length > 0)
+            if (NextLevel.Length > 0)
             {
-                for (int i = 0; i < _nextLevel.Length; i++)
+                for (int i = 0; i < NextLevel.Length; i++)
                 {
-                    _currentLevelState = _nextLevel[i].State;
+                    _currentLevelState = NextLevel[i].State;
 
                     if (State == LevelState.Completed && _currentLevelState == LevelState.Completed)
                     {
-                        _effectChanger.SetLine(i, PassedColor);
-                        _effectChanger.LineMoveActivation(i);
+                        Debug.Log("1");
+                        EffectChanger.SetLine(i, PassedColor);
+                        EffectChanger.LineMoveActivation(i);
                     }
                     else if (State >= LevelState.Unlocked && _currentLevelState >= LevelState.Unlocked)
                     {
-                        _effectChanger.SetLine(i, State == LevelState.Completed ? PassedColor : NotPassedColor);
+                        Debug.Log("136");
+                        EffectChanger.SetLine(i, State == LevelState.Completed ? PassedColor : NotPassedColor);
                     }
                     else
                     {
-                        _effectChanger.SetLine(i, NotOpenColor);
+                        Debug.Log("15");
+                        EffectChanger.SetLine(i, NotOpenColor);
                     }
                 }
             }
