@@ -10,16 +10,16 @@ namespace Bricks
     {
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private bool _isBonus;
-        [SerializeField] private int _reward;
-        [SerializeField] private int _bonusAmount;
         [SerializeField] private BuffDistributor _buffDistributor;
         [SerializeField] private bool _isImmortal = false;
-        [SerializeField] private Effect _effect;
         [SerializeField] private GameObject _targetVisual;
         [SerializeField] private bool _isEternal = false;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private LootDropper _lootDropper;
 
+        private int _reward = 5;
+        private int _bonusAmount;
+        private Effect _effect;
         private bool _isTargetBonus;
         private int _minBonus = 1;
         private int _maxBonus = 3;

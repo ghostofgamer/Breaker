@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e92f7346cca334e81c119e871bf8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletMover: {fileID: 935873237003690297}
+  _bulletMover: {fileID: 935873237003690297}
 --- !u!114 &418086929643040386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,10 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44efba24cf580784591bab3371bef237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletMover: {fileID: 935873237003690297}
-  _explosion: {fileID: 5742121236302153494, guid: ab62d21528f873749857447bf1a9a88c, type: 3}
+  _bulletMover: {fileID: 935873237003690297}
   _explosionEffect: {fileID: 8122498011639011607}
-  _effectActivator: {fileID: -3185185942081297962, guid: ab62d21528f873749857447bf1a9a88c, type: 3}
 --- !u!54 &-6898091092536399841
 Rigidbody:
   m_ObjectHideFlags: 0
