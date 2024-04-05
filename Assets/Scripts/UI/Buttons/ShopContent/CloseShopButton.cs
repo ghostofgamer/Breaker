@@ -1,3 +1,4 @@
+using System;
 using CameraFiles;
 using Levels;
 using UI.Screens;
@@ -14,13 +15,12 @@ namespace UI.Buttons.ShopContent
 
         private BoxCollider[] _levelColliders;
 
-        private void Awake()
+        private void Start()
         {
             _levelColliders = new BoxCollider[_levels.Length];
+
             for (int i = 0; i < _levels.Length; i++)
-            {
                 _levelColliders[i] = _levels[i].GetComponent<BoxCollider>();
-            }
         }
 
         protected override void OnClick()

@@ -71,7 +71,7 @@ namespace MainMenu
         {
             foreach (BrickCoordinator cube in _brickList)
             {
-                if (cube != null)
+                if (cube != null&&cube.gameObject.activeSelf)
                 {
                     _flySpeed = Random.Range(_minValue, _maxValue);
                     StartCoroutine(FlyBackCube(cube, _flySpeed));
@@ -122,6 +122,7 @@ namespace MainMenu
 
         private IEnumerator FlyBackCube(BrickCoordinator cube, float speed)
         {
+            _isFlyOver = false;
             Vector3 startPosition = cube.transform.position;
             Vector3 endPosition = startPosition - new Vector3(0, 0, -_distanceEndFly);
             float flyTime = _factor / speed;

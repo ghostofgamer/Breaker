@@ -1074,6 +1074,7 @@ GameObject:
   - component: {fileID: 7806693370177251813}
   - component: {fileID: 7855965581392237097}
   - component: {fileID: 6064270677285009477}
+  - component: {fileID: 5383741484277414398}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -1294,6 +1295,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &5383741484277414398
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875824812544616713}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &880181452334144072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,6 +1434,7 @@ GameObject:
   - component: {fileID: 3127389604429149232}
   - component: {fileID: 2661043490286171608}
   - component: {fileID: 6213577587761301403}
+  - component: {fileID: 524851679086400524}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -1552,7 +1566,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 5289994664358526303}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 2
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &6213577587761301403
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1649,6 +1663,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &524851679086400524
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939966288080092894}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &956958713915211924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1847,7 @@ GameObject:
   - component: {fileID: 1233441091246158981}
   - component: {fileID: 8264338572403564583}
   - component: {fileID: 3337444706724373065}
+  - component: {fileID: 1262637525530536635}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -2041,6 +2068,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &1262637525530536635
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064598619001344241}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1158465300207859487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2676,7 @@ GameObject:
   - component: {fileID: 2295395034547550639}
   - component: {fileID: 5984963027340592171}
   - component: {fileID: 3343174378097244288}
+  - component: {fileID: 3047665427162571643}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -2761,6 +2801,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &3047665427162571643
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346877813968297945}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1359428316352087936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,6 +3602,7 @@ GameObject:
   - component: {fileID: 1804763783919589821}
   - component: {fileID: 7763520850386489171}
   - component: {fileID: 9184754625431297112}
+  - component: {fileID: 2841379536498134065}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -3770,6 +3823,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &2841379536498134065
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870505236026819055}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1890306598871795934
 GameObject:
   m_ObjectHideFlags: 0
@@ -5397,6 +5462,7 @@ GameObject:
   - component: {fileID: 5535938191492412502}
   - component: {fileID: 548972766011846591}
   - component: {fileID: 2679601500566115689}
+  - component: {fileID: 3254519173985227091}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -5521,6 +5587,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &3254519173985227091
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392228593680704956}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3537939790192100609
 GameObject:
   m_ObjectHideFlags: 0
@@ -5535,6 +5613,7 @@ GameObject:
   - component: {fileID: 1058814557570554680}
   - component: {fileID: 2008934715058675747}
   - component: {fileID: 3674513677648202979}
+  - component: {fileID: 9069080290609395408}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -5666,7 +5745,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 3210649096959231881}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 3
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &3674513677648202979
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5763,6 +5842,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &9069080290609395408
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537939790192100609}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3560711478390578030
 GameObject:
   m_ObjectHideFlags: 0
@@ -5853,6 +5944,7 @@ GameObject:
   - component: {fileID: 7827830662359466875}
   - component: {fileID: 8951522961581796977}
   - component: {fileID: 3413465300188650769}
+  - component: {fileID: 994022578609734371}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -5977,6 +6069,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &994022578609734371
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3581249649791105660}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3978719190914380507
 GameObject:
   m_ObjectHideFlags: 0
@@ -6513,6 +6617,7 @@ GameObject:
   - component: {fileID: 1434152328619252035}
   - component: {fileID: 8977589527805685378}
   - component: {fileID: 2113506911629311885}
+  - component: {fileID: 7757598561689328715}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -6644,7 +6749,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 279846834825400360}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 5
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &2113506911629311885
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6741,6 +6846,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &7757598561689328715
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413090400641506585}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4457347622541004852
 GameObject:
   m_ObjectHideFlags: 0
@@ -7757,6 +7874,7 @@ GameObject:
   - component: {fileID: 3267952813409087822}
   - component: {fileID: 1053733206277886722}
   - component: {fileID: 6903765743116670856}
+  - component: {fileID: 7157134917998313904}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -7977,6 +8095,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &7157134917998313904
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5294014315511490846}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5469178393011127904
 GameObject:
   m_ObjectHideFlags: 0
@@ -8141,6 +8271,7 @@ GameObject:
   - component: {fileID: 2461910481336384570}
   - component: {fileID: 2527589683409753445}
   - component: {fileID: 2844095519112463646}
+  - component: {fileID: 3189740651958974094}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -8272,7 +8403,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 1845846893827524670}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 7
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &2844095519112463646
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8369,6 +8500,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &3189740651958974094
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5643840437094882154}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5847349415297401128
 GameObject:
   m_ObjectHideFlags: 0
@@ -8382,6 +8525,7 @@ GameObject:
   - component: {fileID: 7849259256432561042}
   - component: {fileID: 2123078789402165024}
   - component: {fileID: 960750032893775795}
+  - component: {fileID: 2577366192281080538}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -8506,6 +8650,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &2577366192281080538
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5847349415297401128}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5893786854472139896
 GameObject:
   m_ObjectHideFlags: 0
@@ -9003,6 +9159,7 @@ GameObject:
   - component: {fileID: 829445016051391572}
   - component: {fileID: 4078569408746741130}
   - component: {fileID: 674966373650096082}
+  - component: {fileID: 3949671835402240747}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -9223,6 +9380,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &3949671835402240747
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107412181963091943}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6148446999159576285
 GameObject:
   m_ObjectHideFlags: 0
@@ -9237,6 +9406,7 @@ GameObject:
   - component: {fileID: 5492555506282676336}
   - component: {fileID: 4389487105870893885}
   - component: {fileID: 7812065567951230060}
+  - component: {fileID: 1816396731811023662}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -9368,7 +9538,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 5943558959928349995}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 0
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &7812065567951230060
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9465,6 +9635,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &1816396731811023662
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148446999159576285}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6183835504418935019
 GameObject:
   m_ObjectHideFlags: 0
@@ -9785,6 +9967,7 @@ GameObject:
   - component: {fileID: 3153065526632656160}
   - component: {fileID: 7012981740181330985}
   - component: {fileID: 2669017408456356603}
+  - component: {fileID: 6913624176795408899}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -9916,7 +10099,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 6354021762029789788}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 8
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &2669017408456356603
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10013,6 +10196,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &6913624176795408899
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337276090711624437}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6351566884103322522
 GameObject:
   m_ObjectHideFlags: 0
@@ -10176,6 +10371,7 @@ GameObject:
   - component: {fileID: 8418387994906524323}
   - component: {fileID: 1359242097495671943}
   - component: {fileID: 2631936136681185321}
+  - component: {fileID: 5553218684728744152}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -10300,6 +10496,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &5553218684728744152
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433746753632046317}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6443500312561408111
 GameObject:
   m_ObjectHideFlags: 0
@@ -10314,6 +10522,7 @@ GameObject:
   - component: {fileID: 2774112291467256563}
   - component: {fileID: 3147850526392914337}
   - component: {fileID: 6120943548205051451}
+  - component: {fileID: 7384811746503356853}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -10534,6 +10743,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &7384811746503356853
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443500312561408111}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6495233988093222418
 GameObject:
   m_ObjectHideFlags: 0
@@ -10698,6 +10919,7 @@ GameObject:
   - component: {fileID: 5967542603302135160}
   - component: {fileID: 4866298338056647924}
   - component: {fileID: 388271296611511961}
+  - component: {fileID: 4034068742856774934}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -10829,7 +11051,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 3776623735390007323}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 6
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &388271296611511961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10926,6 +11148,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &4034068742856774934
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6526957180972370855}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6568923798378489356
 GameObject:
   m_ObjectHideFlags: 0
@@ -11169,6 +11403,7 @@ GameObject:
   - component: {fileID: 6313114775944593395}
   - component: {fileID: 3238276936470895787}
   - component: {fileID: 4655945473561812922}
+  - component: {fileID: 7912286728954829259}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -11293,6 +11528,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &7912286728954829259
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6619402148974344230}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6732628774881103856
 GameObject:
   m_ObjectHideFlags: 0
@@ -12063,6 +12310,7 @@ GameObject:
   - component: {fileID: 1149881103674355210}
   - component: {fileID: 4991876695954639156}
   - component: {fileID: 1020124648389139399}
+  - component: {fileID: 1638609161173024992}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -12187,6 +12435,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &1638609161173024992
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145864565194415773}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7173978631343490740
 GameObject:
   m_ObjectHideFlags: 0
@@ -13401,6 +13661,7 @@ GameObject:
   - component: {fileID: 8083745049185420338}
   - component: {fileID: 1543009055218162003}
   - component: {fileID: 8359183235751798523}
+  - component: {fileID: 1404212171393728371}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -13525,6 +13786,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &1404212171393728371
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907616063697998214}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8002719818872756539
 GameObject:
   m_ObjectHideFlags: 0
@@ -13748,6 +14021,7 @@ GameObject:
   - component: {fileID: 5081490043239080752}
   - component: {fileID: 8289562701147006708}
   - component: {fileID: 4504560234799010957}
+  - component: {fileID: 7118273643534051131}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -13879,7 +14153,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 3175170784551521818}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 4
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &4504560234799010957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13976,6 +14250,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &7118273643534051131
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025501060311325702}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8311919995945235944
 GameObject:
   m_ObjectHideFlags: 0
@@ -13990,6 +14276,7 @@ GameObject:
   - component: {fileID: 1218214270299819119}
   - component: {fileID: 1924300131714436424}
   - component: {fileID: 7148996248413520709}
+  - component: {fileID: 6284391948071785217}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -14210,6 +14497,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &6284391948071785217
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311919995945235944}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8347687485687712977
 GameObject:
   m_ObjectHideFlags: 0
@@ -14337,6 +14636,7 @@ GameObject:
   - component: {fileID: 726940710995974033}
   - component: {fileID: 43646085037269721}
   - component: {fileID: 2660781726748370535}
+  - component: {fileID: 1579091399047177302}
   m_Layer: 5
   m_Name: BuyButton (1)
   m_TagString: Untagged
@@ -14468,7 +14768,7 @@ MonoBehaviour:
   _priceTxt: {fileID: 3300768497585104343}
   _color: {r: 0.7372549, g: 0.15686275, b: 0.15686275, a: 0.9254902}
   _index: 1
-  _platformaSkinShop: {fileID: 0}
+  _baseStore: {fileID: 0}
 --- !u!82 &2660781726748370535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14565,6 +14865,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &1579091399047177302
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397727772706252914}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8471813155831600606
 GameObject:
   m_ObjectHideFlags: 0
@@ -14975,6 +15287,7 @@ GameObject:
   - component: {fileID: 7751574621078204483}
   - component: {fileID: 7570148349968781213}
   - component: {fileID: 1335247801985508470}
+  - component: {fileID: 9022327135913841008}
   m_Layer: 5
   m_Name: CloseButtonBackground
   m_TagString: Untagged
@@ -15099,6 +15412,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &9022327135913841008
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8620570610214203928}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8766045180162848761
 GameObject:
   m_ObjectHideFlags: 0
@@ -15445,6 +15770,7 @@ GameObject:
   - component: {fileID: 1348387915361381673}
   - component: {fileID: 1693357305868352849}
   - component: {fileID: 8818604297648938701}
+  - component: {fileID: 686233792120222324}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -15665,6 +15991,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &686233792120222324
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993263395517887726}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9197175366052569906
 GameObject:
   m_ObjectHideFlags: 0
@@ -15679,6 +16017,7 @@ GameObject:
   - component: {fileID: 5581327928561916927}
   - component: {fileID: 6714701691841112992}
   - component: {fileID: 3935985248133974780}
+  - component: {fileID: 2085847256411545906}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -15899,3 +16238,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &2085847256411545906
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9197175366052569906}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

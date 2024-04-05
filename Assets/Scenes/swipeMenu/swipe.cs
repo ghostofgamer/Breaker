@@ -8,8 +8,9 @@ public class swipe : MonoBehaviour
     [SerializeField] private BaseStore _platfromaSkinShop;
     [SerializeField] private Sprite _off;
     [SerializeField] private Sprite _on;
-    
-    public GameObject scrollbar, imageContent;
+
+    public GameObject _scrollbar;
+    public GameObject _imageContent;
     private float _scrollPosition = 0;
     private float[] _positions;
     private bool _runIt = false;
@@ -22,6 +23,14 @@ public class swipe : MonoBehaviour
     private Vector3[] _newPosition;
     private Image _knobOff;
     private Image _knobOn;
+    private float _factor = 2f;
+    private float _sizeSelect = 1.65f;
+    private float _sizeUnSelect = 0.8f;
+    private float _distance = 50f;
+    private float _targetDistance = 150f;
+    private float _progress = 0.1f;
+    private float _localPositionZ = 15f;
+    private float _speedlerp = 1f;
 
     private void Start()
     {
@@ -38,10 +47,9 @@ public class swipe : MonoBehaviour
         for (int i = 0; i < _children.Length; i++)
         {
             _newPosition[i] = _children[i].transform.localPosition;
-            _newPosition[i].z -= 50f;
+            _newPosition[i].z -= _distance;
         }
-
-
+        
         for (int i = 0; i < transform.childCount; i++)
         {
             _startPosition[i] = transform.GetChild(i).position;
@@ -72,51 +80,79 @@ public class swipe : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            _scrollPosition = scrollbar.GetComponent<Scrollbar>().value;
+            _scrollPosition = _scrollbar.GetComponent<Scrollbar>().value;
         }
         else
         {
             for (int i = 0; i < _positions.Length; i++)
             {
-                if (_scrollPosition < _positions[i] + (distance / 2) &&
-                    _scrollPosition > _positions[i] - (distance / 2))
+                if (_scrollPosition < _positions[i] + (distance / _factor) &&
+                    _scrollPosition > _positions[i] - (distance / _factor))
                 {
-                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value,
-                        _positions[i], 0.1f);
+                    _scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(_scrollbar.GetComponent<Scrollbar>().value,
+                        _positions[i], _progress);
                 }
             }
         }
-        
+
         for (int i = 0; i < _positions.Length; i++)
         {
-            if (_scrollPosition < _positions[i] + (distance / 2) && _scrollPosition > _positions[i] - (distance / 2))
+            if (_scrollPosition < _positions[i] + (distance / _factor) &&
+                _scrollPosition > _positions[i] - (distance / _factor))
             {
                 transform.GetChild(i).localScale = Vector3.Lerp(transform.GetChild(i).localScale,
-                    new Vector3(1.65f, 1.65f, 1.65f), 0.1f);
+                    new Vector3(_sizeSelect, _sizeSelect, _sizeSelect), _progress);
                 _platfromaSkinShop.UpdateButtons(i);
-                transform.GetChild(i).localPosition = Vector3.Lerp(transform.GetChild(i).localPosition,
-                    new Vector3(transform.GetChild(i).localPosition.x, transform.GetChild(i).localPosition.y, -150f),
-                    0.1f);
-                imageContent.transform.GetChild(i).GetComponent<Image>().sprite = _on;
+                transform.GetChild(i).localPosition = Vector3.Lerp(
+                    transform.GetChild(i).localPosition,
+                    new Vector3(transform.GetChild(i).localPosition.x, transform.GetChild(i).localPosition.y,
+                        -_targetDistance),
+                    _progress);
+                _imageContent.transform.GetChild(i).GetComponent<Image>().sprite = _on;
                 EnableRotate(transform.GetChild(i));
 
                 for (int j = 0; j < _positions.Length; j++)
                 {
                     if (j != i)
                     {
-                        imageContent.transform.GetChild(j).GetComponent<Image>().sprite = _off;
-                        imageContent.transform.GetChild(j).localScale =
-                            Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
-                        transform.GetChild(j).localScale = Vector3.Lerp(transform.GetChild(j).localScale,
-                            new Vector3(0.8f, 0.8f, 0.8f), 0.1f);
-                        
+                        _imageContent.transform.GetChild(j).GetComponent<Image>().sprite = _off;
+                        _imageContent.transform.GetChild(j).localScale =
+                            Vector2.Lerp(
+                                _imageContent.transform.GetChild(j).localScale,
+                                new Vector2(_sizeUnSelect, _sizeUnSelect),
+                                _progress);
+                        transform.GetChild(j).localScale = Vector3.Lerp(
+                            transform.GetChild(j).localScale,
+                            new Vector3(_sizeUnSelect, _sizeUnSelect, _sizeUnSelect),
+                            _progress);
+
                         transform.GetChild(j).localPosition = Vector3.Lerp(transform.GetChild(j).localPosition,
-                            new Vector3(transform.GetChild(j).localPosition.x, transform.GetChild(j).localPosition.y,
-                                -15f), 0.1f);
-                        
+                            new Vector3(
+                                transform.GetChild(j).localPosition.x,
+                                transform.GetChild(j).localPosition.y,
+                                -_localPositionZ),
+                            _progress);
+
                         DisableRotate(transform.GetChild(j));
                     }
                 }
+            }
+        }
+    }
+
+    public void WhichBtnClicked(Button button)
+    {
+        button.transform.name = "clicked";
+
+        for (int i = 0; i < button.transform.parent.transform.childCount; i++)
+        {
+            if (button.transform.parent.transform.GetChild(i).transform.name == button.transform.name)
+            {
+                _buttonNumber = i;
+                _takeButton = button;
+                _time = 0;
+                _scrollPosition = (_positions[_buttonNumber]);
+                _runIt = true;
             }
         }
     }
@@ -126,7 +162,7 @@ public class swipe : MonoBehaviour
         var platforma = capsula.GetComponentInChildren<BaseRotator>();
         platforma.EnableRotate();
     }
-    
+
     private void DisableRotate(Transform capsula)
     {
         var platforma = capsula.GetComponentInChildren<BaseRotator>();
@@ -137,33 +173,18 @@ public class swipe : MonoBehaviour
     {
         for (int i = 0; i < pos.Length; i++)
         {
-            if (_scrollPosition < pos[i] + (distance / 2) && _scrollPosition > pos[i] - (distance / 2))
+            if (_scrollPosition < pos[i] + (distance / _factor) && _scrollPosition > pos[i] - (distance / _factor))
             {
-                scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value,
-                    pos[_buttonNumber], 1f * Time.deltaTime);
+                _scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(
+                    _scrollbar.GetComponent<Scrollbar>().value,
+                    pos[_buttonNumber],
+                    _speedlerp * Time.deltaTime);
             }
         }
 
         for (int i = 0; i < btn.transform.parent.transform.childCount; i++)
         {
             btn.transform.name = ".";
-        }
-    }
-
-    public void WhichBtnClicked(Button btn)
-    {
-        btn.transform.name = "clicked";
-
-        for (int i = 0; i < btn.transform.parent.transform.childCount; i++)
-        {
-            if (btn.transform.parent.transform.GetChild(i).transform.name == "clicked")
-            {
-                _buttonNumber = i;
-                _takeButton = btn;
-                _time = 0;
-                _scrollPosition = (_positions[_buttonNumber]);
-                _runIt = true;
-            }
         }
     }
 }
