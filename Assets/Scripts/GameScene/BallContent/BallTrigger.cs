@@ -1,5 +1,6 @@
 using System;
 using Bricks;
+using ModificationFiles;
 using PlayerFiles.ModificationContent;
 using PlayerFiles.PlatformaContent;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace GameScene.BallContent
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private BallDirection _ballDirection;
         [SerializeField] private ElectricBall _electricBall;
-        [SerializeField]private BallDeath _ballDeath;
+        [SerializeField] private BallDeath _ballDeath;
 
         private int _factor = 2;
 

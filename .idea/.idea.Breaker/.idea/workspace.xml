@@ -23,17 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13fe1ffc-2891-4d7b-a21c-bc28304d6685" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Bonus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Bonus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bricks/BrickSpawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bricks/BrickSpawn.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bricks/SimpleBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bricks/SimpleBrick.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/LaserBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/LaserBullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ExplosionBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ExplosionBrick.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickCoordinator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickCoordinator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level1/BrickMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level1/BrickMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/BonusTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/BonusTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/MoreBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/MoreBrick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/Immune.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/Immune.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +72,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/Settings/QuitButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Others/AnimationsActivator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/MagnifierRadiusExplosion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ModificationFiles/WallShield.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/BaseModification.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/Settings/SettingsButtonGameLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
@@ -155,9 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/Platforms/BaseStore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/LevelCompleteScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveAndLoad/Save.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Levels/LockLevel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Brick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallMover.cs" />
@@ -176,7 +173,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ADS/Ad.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/TimeInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CountDown.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/Immune.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/SpeedUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPoolFiles/ObjectPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/Modification.cs" />
@@ -192,7 +188,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/ParentsChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroyer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/Ball.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level4/WaveBrickMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/WaveMotion.cs" />
@@ -205,7 +200,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickCoordinator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/MoreBrick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/BonusTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/BrickTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level1/BrickMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/Immune.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/WallShield.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
       </list>
     </option>
   </component>
@@ -334,7 +334,8 @@
       <workItem from="1711788269972" duration="44003000" />
       <workItem from="1711872949318" duration="1676000" />
       <workItem from="1711977467377" duration="5544000" />
-      <workItem from="1712307777726" duration="12915000" />
+      <workItem from="1712307777726" duration="13024000" />
+      <workItem from="1712480486987" duration="4737000" />
     </task>
     <servers />
   </component>

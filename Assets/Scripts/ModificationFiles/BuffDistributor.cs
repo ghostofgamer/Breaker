@@ -19,10 +19,10 @@ namespace ModificationFiles
             {
                 int index = Random.Range(0, _effects.Length);
 
-                if (_effects[1].IsPositiveEffect)
+                if (_effects[9].IsPositiveEffect)
                     _buffCounter.IncreaseBuffCount();
 
-                return _effects[1];
+                return _effects[9];
             }
 
             return null;

@@ -17,7 +17,6 @@ namespace ModificationFiles.DebuffsFiles
         {
             _filtredBricks = new List<BrickCoordinator>();
             _bricks = new List<BrickCoordinator>();
-
             FindAllChildren(_bricksContainer);
         }
 

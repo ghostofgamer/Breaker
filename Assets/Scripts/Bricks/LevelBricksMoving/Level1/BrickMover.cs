@@ -33,16 +33,7 @@ namespace Bricks.LevelBricksMoving.Level1
 
         private void Move()
         {
-            if (!_isTargetPosition)
-            {
-                MoveDirection(_targetPosition);
-                EnableTargetPosition();
-            }
-            else
-            {
-                MoveDirection(_initialPosition);
-                DisableTargetPosition();
-            }
+            MoveDirection(!_isTargetPosition ? _targetPosition : _initialPosition);
         }
 
         private void MoveDirection(Vector3 targetPosition)
@@ -60,17 +51,13 @@ namespace Bricks.LevelBricksMoving.Level1
             if (transform.position == targetPosition)
             {
                 ActivatedPause();
+                SetActivatedValue();
             }
         }
 
-        private void EnableTargetPosition()
+        private void SetActivatedValue()
         {
-            _isTargetPosition = true;
-        }
-
-        private void DisableTargetPosition()
-        {
-            _isTargetPosition = false;
+            _isTargetPosition = !_isTargetPosition;
         }
 
         private void ActivatedPause()
