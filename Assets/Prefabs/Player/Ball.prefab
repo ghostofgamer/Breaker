@@ -38092,6 +38092,8 @@ GameObject:
   - component: {fileID: 1188179175354770416}
   - component: {fileID: 9088703257747006984}
   - component: {fileID: 27113883216377393}
+  - component: {fileID: 4258897522300586623}
+  - component: {fileID: 5974140088862044975}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -38240,9 +38242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _brickCounter: {fileID: 0}
-  _startPosition: {fileID: 0}
-  _platformaMover: {fileID: 0}
-  _enviropment: {fileID: 0}
+  _baseMovement: {fileID: 0}
+  _environment: {fileID: 0}
 --- !u!114 &6026973674224796074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38256,17 +38257,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _portalTeleporterBall: {fileID: 5640304892965018494}
-  _xMinPosition: -13
-  _xMaxPosition: 13
-  _zMaxPosition: 37
-  _zMinPosition: -10.65
   _isPortal: 0
   _ballTrigger: {fileID: 5845790270848573784}
-  _rayLength: 1
-  _audioSource: {fileID: 27113883216377393}
-  _audioClip: {fileID: 8300000, guid: 254e8f6d4efd6c0419033c659e1475bd, type: 3}
-  _electricBall: {fileID: 6842966069441816308}
-  _radius: 0.5
+  _ball: {fileID: 3361751570956921044}
+  _ballDirection: {fileID: 5974140088862044975}
+  _brickCounter: {fileID: 0}
 --- !u!114 &5640304892965018494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38298,11 +38293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4940a568b47c614280fc1d64fa623ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ballMover: {fileID: 6026973674224796074}
   _platformLayer:
     serializedVersion: 2
     m_Bits: 128
   _audioSource: {fileID: 27113883216377393}
+  _ballDirection: {fileID: 5974140088862044975}
+  _electricBall: {fileID: 6842966069441816308}
+  _ballDeath: {fileID: 4258897522300586623}
 --- !u!114 &1188179175354770416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38315,7 +38312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ff0093b5faa5348bf5db042d7d655a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ball: {fileID: 3361751570956921044}
 --- !u!114 &9088703257747006984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38328,8 +38324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2796991db4eb7e54e936fcdad3bf75a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ball: {fileID: 3361751570956921044}
-  _skinsBall: []
   _load: {fileID: 0}
   _skins:
   - {fileID: 3293291436393690691}
@@ -38341,8 +38335,17 @@ MonoBehaviour:
   - {fileID: 4875552590228959523}
   - {fileID: 1082405515051553231}
   - {fileID: 5453357028827186185}
-  _ballTrigger: {fileID: 5845790270848573784}
   _portalTeleporterBall: {fileID: 5640304892965018494}
+  _skinParticleSystems:
+  - {fileID: 7234270805841586560}
+  - {fileID: 5623206793445522185}
+  - {fileID: 140351092769367079}
+  - {fileID: 7717814664767337933}
+  - {fileID: 763582185909535044}
+  - {fileID: 2424815931215371239}
+  - {fileID: 3763089959865163675}
+  - {fileID: 1754440933461667879}
+  - {fileID: 3715878836707203590}
 --- !u!82 &27113883216377393
 AudioSource:
   m_ObjectHideFlags: 0
@@ -38439,6 +38442,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4258897522300586623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3749759880070372491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae026da8c1b8e04381946582e1002cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ballMover: {fileID: 6026973674224796074}
+--- !u!114 &5974140088862044975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3749759880070372491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a44ce4085a9ab840b1cb79fc2f2b36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 27113883216377393}
+  _ballMover: {fileID: 6026973674224796074}
 --- !u!1 &4555490375719454823
 GameObject:
   m_ObjectHideFlags: 0

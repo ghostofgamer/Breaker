@@ -27,6 +27,7 @@ namespace Bricks
             _brickCoordinator.LootDropper.DropBuff(_brickCoordinator.EffectElement);
             _brickCoordinator.BrickCounter.ChangeValue(_brickCoordinator.Reward);
             _brickCoordinator.LootDropper.DropBonus();
+            _brickCoordinator.BrickDie();
             gameObject.SetActive(false);
         }
     }

@@ -58349,6 +58349,7 @@ GameObject:
   - component: {fileID: 674621366029658059}
   - component: {fileID: 1102014640323849554}
   - component: {fileID: 7573956887916659518}
+  - component: {fileID: 8081275654985122748}
   m_Layer: 7
   m_Name: Platform
   m_TagString: Platform
@@ -58448,7 +58449,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _positionMouse: {fileID: 0}
-  _ball: {fileID: 0}
 --- !u!114 &6970566592706954858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58568,8 +58568,8 @@ MonoBehaviour:
   _victoryEffect: {fileID: 2723238139924557915}
   _loseEffect: {fileID: 6282632721279514591}
   _mousePosition: {fileID: 0}
-  _ballTrigger: {fileID: 0}
-  _enviropment: {fileID: 0}
+  _ballDeath: {fileID: 0}
+  _environment: {fileID: 0}
 --- !u!114 &54731867506902998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58584,6 +58584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mousePosition: {fileID: 0}
   _loseEffect: {fileID: 6282632721279514591}
+  _baseInput: {fileID: 8081275654985122748}
 --- !u!114 &8330426738732886309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58722,7 +58723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916c55d23a157e040acf3e981d9ee20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BonusChances: 16
+  _bonusChances: 50
   _ballTrigger: {fileID: 0}
   _shield: {fileID: 0}
 --- !u!114 &4420948367723577600
@@ -58737,7 +58738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b915c709ec1514dabc8475b15c6e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BonusChances: 50
+  _bonusChances: 50
 --- !u!114 &674621366029658059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58750,7 +58751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de3f8b5ade072440826b522a39ad705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BonusChances: 50
+  _bonusChances: 50
 --- !u!114 &1102014640323849554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58776,9 +58777,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d588e95883fe68b428da9c842b741111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BonusChances: 30
+  _bonusChances: 50
   _ballTrigger: {fileID: 0}
   _electricBall: {fileID: 0}
+--- !u!114 &8081275654985122748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985952689263646130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351a525b989a0184384c441eb28e6ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionMouse: {fileID: 0}
+  _baseMovement: {fileID: 6615342652980386992}
+  _slowMotionEffect: {fileID: 0}
+  _ballMover: {fileID: 0}
 --- !u!1 &4986716488539870573
 GameObject:
   m_ObjectHideFlags: 0

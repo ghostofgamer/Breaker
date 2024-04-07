@@ -9,7 +9,8 @@ namespace Sound
     public class SoundEffect : MonoBehaviour
     {
         [SerializeField] private BallDeath _ballDeath;
-        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioSource _audioSourceSFX;
+        [SerializeField] private AudioSource _audioSourceMusic;
         [SerializeField] private AudioClip _audioClipDiePlatform;
         [SerializeField] private AudioClip _audioClipCountDown;
         [SerializeField] private ReviveScreen _reviveScreen;
@@ -45,7 +46,7 @@ namespace Sound
 
         private void OnPlayDieSound()
         {
-            _audioSource.PlayOneShot(_audioClipDiePlatform);
+            _audioSourceSFX.PlayOneShot(_audioClipDiePlatform);
         }
 
         private void OnStopCountDown()
@@ -59,7 +60,7 @@ namespace Sound
 
             for (int i = 0; i < _countDown; i++)
             {
-                _audioSource.PlayOneShot(_audioClipCountDown);
+                _audioSourceSFX.PlayOneShot(_audioClipCountDown);
                 yield return _waitForCountDown;
             }
         }
@@ -70,7 +71,7 @@ namespace Sound
                 return;
 
             _audioBackGroundSound.enabled = false;
-            _audioSource.PlayOneShot(_audioClipVictory);
+            _audioSourceMusic.PlayOneShot(_audioClipVictory);
         }
     }
 }

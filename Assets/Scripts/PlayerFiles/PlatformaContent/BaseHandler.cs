@@ -36,7 +36,7 @@ namespace PlayerFiles.PlatformaContent
         private void OnVictoriousDestruction()
         {
             BaseDeactivation(_victoryEffect);
-            transform.parent = _environment;
+            // transform.parent = _environment;
             _baseMovement.Die();
         }
 

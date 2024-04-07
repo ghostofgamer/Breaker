@@ -65,17 +65,15 @@ namespace ModificationFiles.BuffsFiles
             EnableBuffUI();
             _randomIndex = GetRandomIndex(_filtredBrick.Count);
             _randomEffectIndex = GetRandomIndex(_effects.Length);
-            _startMaterial = _renderers[_randomIndex].material;
+            _startMaterial = _filtredBrick[_randomIndex].GetComponent<MeshRenderer>().material;
             _startEffect = _filtredBrick[_randomIndex].EffectElement;
-Debug.Log("_startMaterial " + _startMaterial);
 
             if (_startEffect == null)
                 _buffCounter.IncreaseBuffCount();
 
             _filtredBrick[_randomIndex].SetEffect(_effects[_randomEffectIndex]);
             _filtredBrick[_randomIndex].EnableTargetBonus();
-            _renderers[_randomIndex].material = _newMaterial;
-            Debug.Log("material " + _renderers[_randomIndex].material);
+            _filtredBrick[_randomIndex].GetComponent<MeshRenderer>().material = _newMaterial;
         }
 
         private void FindAllChildren(Transform parent)
@@ -89,13 +87,13 @@ Debug.Log("_startMaterial " + _startMaterial);
             for (int i = 0; i < parent.childCount; i++)
             {
                 Transform child = parent.GetChild(i);
+                
                 if (child == null)
                 {
                     continue;
                 }
 
                 BrickCoordinator brickCoordinator = child.GetComponent<BrickCoordinator>();
-                // Renderer renderer = brickCoordinator.GetComponent<Renderer>();
 
                 if (brickCoordinator != null && !brickCoordinator.IsEternal && child.gameObject.activeSelf)
                 {
@@ -103,43 +101,15 @@ Debug.Log("_startMaterial " + _startMaterial);
                     {
                         _bricksList = new List<BrickCoordinator>();
                     }
-                    
+
                     _bricksList.Add(brickCoordinator);
                     Renderer renderer = brickCoordinator.GetComponent<Renderer>();
                     _renderers.Add(renderer);
-                    // if (renderer != null)
-                    // {
-                    //     if (_renderers == null)
-                    //     {
-                    //         _renderers = new List<Renderer>();
-                    //     }
-                    //     _renderers.Add(renderer);
-                    // }
                 }
 
                 FindAllChildren(child);
             }
         }
-        
-        /*private void FindAllChildren(Transform parent)
-        {
-            for (int i = 0; i < parent.childCount; i++)
-            {
-                Transform child = parent.GetChild(i);
-                BrickCoordinator brickCoordinator = child.GetComponent<BrickCoordinator>();
-                Renderer renderer = child.GetComponent<Renderer>();
-
-                if (brickCoordinator != null && !brickCoordinator.IsEternal && child.gameObject.activeSelf)
-                {
-                    _bricksList.Add(brickCoordinator);
-                    
-                    if (renderer != null)
-                        _renderers.Add(renderer);
-                }
-
-                FindAllChildren(child);
-            }
-        }*/
 
         private int GetRandomIndex(int count)
         {
@@ -152,7 +122,7 @@ Debug.Log("_startMaterial " + _startMaterial);
             DisableBuffUI();
             _filtredBrick[_randomIndex].SetEffect(_startEffect);
             _filtredBrick[_randomIndex].DisableTargetBonus();
-            _renderers[_randomIndex].material = _startMaterial;
+            _filtredBrick[_randomIndex].GetComponent<MeshRenderer>().material = _startMaterial;
 
             if (_filtredBrick[_randomIndex].gameObject.activeSelf != false && _startEffect == null)
                 _buffCounter.DecreaseBuffCount();

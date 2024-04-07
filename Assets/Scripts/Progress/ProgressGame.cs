@@ -42,8 +42,8 @@ namespace Progress
             for (int i = 0; i < _levels.Length; i++)
                 _levels[i].Init(_levelStates[i]);
 
-            foreach (var level in _levelsProgress)
-                level.SetLevels();
+            for (int i = 0; i < _levelsProgress.Length; i++)
+                _levelsProgress[i].SetLevels(_levelStates[i]);
         }
 
         private void CheckNextLevel()

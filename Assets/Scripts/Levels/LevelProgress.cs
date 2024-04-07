@@ -1,5 +1,4 @@
 using Enum;
-using UnityEngine;
 
 namespace Levels
 {
@@ -7,7 +6,7 @@ namespace Levels
     {
         private LevelState _currentLevelState;
 
-        public void SetLevels()
+        public void SetLevels(LevelState levelState)
         {
             if (NextLevel.Length > 0)
             {
@@ -15,12 +14,12 @@ namespace Levels
                 {
                     _currentLevelState = NextLevel[i].State;
 
-                    if (State == LevelState.Completed && _currentLevelState == LevelState.Completed)
+                    if (levelState == LevelState.Completed && _currentLevelState == LevelState.Completed)
                     {
                         EffectChanger.SetLine(i, PassedColor);
                         EffectChanger.LineMoveActivation(i);
                     }
-                    else if (State >= LevelState.Unlocked && _currentLevelState >= LevelState.Unlocked)
+                    else if (levelState >= LevelState.Unlocked && _currentLevelState >= LevelState.Unlocked)
                     {
                         EffectChanger.SetLine(i, State == LevelState.Completed ? PassedColor : NotPassedColor);
                     }

@@ -93,7 +93,7 @@ namespace Bricks
             _isTargetBonus = false;
         }
 
-        protected void BrickDie()
+        public void BrickDie()
         {
             Dead?.Invoke();
         }

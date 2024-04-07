@@ -26,13 +26,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Breaker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/GameLevels/StartScene/BasicRim 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bricks/BrickSpawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bricks/BrickSpawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bricks/SimpleBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bricks/SimpleBrick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelGameScenes/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelGameScenes/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Platform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Platform.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level1/BrickMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level1/BrickMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickCoordinator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickCoordinator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroyer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bricks/SimpleBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bricks/SimpleBrick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Levels/LevelProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Levels/LevelProgress.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/Immune.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/Immune.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/BonusTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/BonusTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/WallShield.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/WallShield.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Progress/ProgressGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Progress/ProgressGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEffect.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +80,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/Settings/QuitButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Others/AnimationsActivator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/MagnifierRadiusExplosion.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ModificationFiles/WallShield.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFiles/ModificationContent/BaseModification.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/Settings/SettingsButtonGameLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
@@ -163,7 +170,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/Settings/SettingsButtonGameLevel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/NeutralFiles/ResetModifications.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/PlatformaContent/BaseHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/EndScreens/ReviveScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/swipeMenu/swipe.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/SettingsScreen.cs" />
@@ -180,32 +186,33 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/Shield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Shop/Platforms/BaseSkin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Progress/ProgressGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallDirection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallDeath.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/SimpleBrick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/Eternal/BrickEternal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/ParentsChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickExplosion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroyer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/Ball.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level4/WaveBrickMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/WaveMotion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFiles/Wallet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ShopContent/CloseShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Levels/EffectChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Levels/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/LevelInfo/LevelInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Levels/LevelProgress.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickCoordinator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/MoreBrick.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/BonusTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/BrickTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/LevelBricksMoving/Level1/BrickMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/DebuffsFiles/Immune.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/WallShield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScene/BallContent/BallTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/SimpleBrick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickDestroyer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bricks/BrickCoordinator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffsFiles/BonusTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Levels/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Progress/ProgressGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Levels/LevelProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModificationFiles/BuffDistributor.cs" />
       </list>
     </option>
   </component>
@@ -335,7 +342,7 @@
       <workItem from="1711872949318" duration="1676000" />
       <workItem from="1711977467377" duration="5544000" />
       <workItem from="1712307777726" duration="13024000" />
-      <workItem from="1712480486987" duration="4737000" />
+      <workItem from="1712480486987" duration="7687000" />
     </task>
     <servers />
   </component>

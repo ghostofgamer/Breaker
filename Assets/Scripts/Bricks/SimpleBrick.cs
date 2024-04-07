@@ -8,7 +8,6 @@ namespace Bricks
 
         public override void Die()
         {
-            BrickDie();
             _brickDestroyer.Destroy();
         }
     }
