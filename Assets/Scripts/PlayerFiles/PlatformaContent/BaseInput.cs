@@ -8,7 +8,7 @@ namespace PlayerFiles.PlatformaContent
         [SerializeField] private GameObject _positionMouse;
         [SerializeField] private BaseMovement _baseMovement;
         [SerializeField] private SlowMotionEffect _slowMotionEffect;
-        [SerializeField]private BallMover _ballMover;
+        [SerializeField] private BallMover _ballMover;
 
         private bool _isFirstThrow = true;
         private string _mouseX = "Mouse X";

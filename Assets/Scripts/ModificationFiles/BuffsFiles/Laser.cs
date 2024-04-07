@@ -1,4 +1,5 @@
 using System.Collections;
+using Statistics;
 using UnityEngine;
 using WeaponFiles;
 
@@ -9,9 +10,20 @@ namespace ModificationFiles.BuffsFiles
         [SerializeField] private Weapon _weapon;
         [SerializeField] private Weapon _mirrorPlatformWeapon;
         [SerializeField] private float _timeBetweenShots;
+        [SerializeField] private BrickCounter _brickCounter;
 
         private float _elapsedTime = 0;
         private bool _isActive = false;
+
+        private void OnEnable()
+        {
+            _brickCounter.AllBrickDestroyed += Stop;
+        }
+
+        private void OnDisable()
+        {
+            _brickCounter.AllBrickDestroyed -= Stop;
+        }
 
         protected override void Start()
         {
