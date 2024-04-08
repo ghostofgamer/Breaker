@@ -29,6 +29,7 @@ namespace UI.Buttons.Settings
             _audioSource.PlayOneShot(_audioSource.clip);
             _settingsScreen.Close();
             yield return _waitForSeconds;
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneName);
         }
     }
