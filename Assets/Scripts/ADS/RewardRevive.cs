@@ -9,7 +9,6 @@ namespace ADS
 {
     public class RewardRevive : RewardVideo
     {
-        [SerializeField] private ReviveScreen _reviveScreen;
         [SerializeField] private Reviver _reviver;
         [SerializeField] private BrickCounter _brickCounter;
         [SerializeField] private Button _button;
@@ -29,7 +28,6 @@ namespace ADS
 
         private IEnumerator Revive()
         {
-            _reviveScreen.ChooseRevive();
             yield return _waitForSeconds;
             _reviver.RevivePlatform();
             _brickCounter.CheckAliveBrickCount();
