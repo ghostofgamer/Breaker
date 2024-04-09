@@ -1,3 +1,4 @@
+using System;
 using ModificationFiles;
 using Statistics;
 using UnityEngine;
@@ -6,12 +7,17 @@ namespace Bricks
 {
     public class LootDropper : MonoBehaviour
     {
-        [SerializeField] private BrickCoordinator _brickCoordinator;
         [SerializeField] private GameObject _bonusPrefab;
         [SerializeField] private FragmentsCounter _fragmentsCounter;
 
+        private BrickCoordinator _brickCoordinator;
         private int _factor = 2;
         private float _bonusRadius = 1.65f;
+
+        private void Start()
+        {
+            _brickCoordinator = GetComponent<BrickCoordinator>();
+        }
 
         public void Init(FragmentsCounter fragmentsCounter)
         {

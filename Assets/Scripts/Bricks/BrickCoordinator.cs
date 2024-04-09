@@ -14,9 +14,9 @@ namespace Bricks
         [SerializeField] private bool _isImmortal = false;
         [SerializeField] private GameObject _targetVisual;
         [SerializeField] private bool _isEternal = false;
-        [SerializeField] private AudioSource _audioSource;
-        [SerializeField] private LootDropper _lootDropper;
 
+        private AudioSource _audioSource;
+        private LootDropper _lootDropper;
         private int _reward = 5;
         private int _bonusAmount;
         private Effect _effect;
@@ -47,8 +47,11 @@ namespace Bricks
 
         protected bool IsTargetBonus => _isTargetBonus;
 
-        private void Start()
+        protected virtual void Start()
         {
+            _lootDropper = GetComponent<LootDropper>();
+            _audioSource = GetComponent<AudioSource>();
+                    
             if (!_isEternal)
             {
                 _isBonus = Random.value > _randomProcent;

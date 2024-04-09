@@ -4,7 +4,13 @@ namespace Bricks
 {
     public class SimpleBrick : BrickCoordinator
     {
-        [SerializeField] private BrickDestroyer _brickDestroyer;
+        private BrickDestroyer _brickDestroyer;
+
+        protected override void Start()
+        {
+            base.Start();
+            _brickDestroyer = GetComponent<BrickDestroyer>();
+        }
 
         public override void Die()
         {

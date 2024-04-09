@@ -9,12 +9,18 @@ namespace Bricks
         [SerializeField] private float _force;
         [SerializeField] private ParticleSystem _explodeEffect;
         [SerializeField] private ParticleSystem _bombFuseEffect;
-        [SerializeField] private BrickDestroyer _brickDestroyer;
 
+        private BrickDestroyer _brickDestroyer;
         private WaitForSeconds _waitForSeconds = new WaitForSeconds(1.6f);
         private bool _wickBurning = false;
 
         public float Radius => _radius;
+
+        protected override void Start()
+        {
+            base.Start();
+            _brickDestroyer = GetComponent<BrickDestroyer>();
+        }
 
         public override void Die()
         {
