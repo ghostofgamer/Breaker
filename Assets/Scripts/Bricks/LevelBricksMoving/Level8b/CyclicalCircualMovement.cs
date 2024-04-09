@@ -9,7 +9,7 @@ namespace Bricks.LevelBricksMoving.Level8b
         [SerializeField] private float _movementSpeed;
         [SerializeField] private float _rotateSpeed;
         [SerializeField] private float _movementDistance;
-        [SerializeField] private BaseMovement _baseMovement;
+        [SerializeField] private BaseInput _baseInput;
 
         private float _startZPosition;
         private Vector3 _position;
@@ -36,8 +36,10 @@ namespace Bricks.LevelBricksMoving.Level8b
                 _position = Vector3.MoveTowards(_position, _targetPosition, _movementSpeed * Time.deltaTime);
                 transform.position = _position;
 
-                if (_baseMovement != null)
-                    transform.Rotate(0, -_baseMovement.DirectionX * _rotateSpeed, 0);
+                if (_baseInput != null && _baseInput.IsMousePressed)
+                {
+                    transform.Rotate(0, -_baseInput.MouseValueX * _rotateSpeed, 0);
+                }
 
                 if (transform.position == _targetPosition)
                 {

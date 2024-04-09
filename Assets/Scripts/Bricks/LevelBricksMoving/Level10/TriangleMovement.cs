@@ -7,6 +7,7 @@ namespace Bricks.LevelBricksMoving.Level10
     {
         [SerializeField] private float _movementSpeed;
         [SerializeField] private BaseMovement _baseMovement;
+        [SerializeField] private BaseInput _baseInput;
         [SerializeField] private float _minX;
         [SerializeField] private float _maxX;
         [SerializeField] private float _moveStep;
@@ -16,10 +17,11 @@ namespace Bricks.LevelBricksMoving.Level10
 
         private void Update()
         {
-            if (IsWork)
+            if (IsWork && _baseInput.IsMousePressed)
             {
                 _position = transform.position;
-                _targetX = _position.x + (_baseMovement.DirectionX * _movementSpeed * Time.deltaTime);
+                // _targetX = _position.x + (_baseMovement.DirectionX * _movementSpeed * Time.deltaTime);
+                _targetX = _position.x + (_baseInput.MouseValueX * _movementSpeed * Time.deltaTime);
                 _targetX = Mathf.Clamp(_targetX, _minX, _maxX);
 
                 _position = Vector3.MoveTowards(

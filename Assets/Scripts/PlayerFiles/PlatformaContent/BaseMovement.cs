@@ -36,8 +36,6 @@ namespace PlayerFiles.PlatformaContent
 
         public void MovePlatformWithMouse()
         {
-            Vector3 mouseScreenPosition = Input.mousePosition;
-            mouseScreenPosition.z = Camera.main.nearClipPlane;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 

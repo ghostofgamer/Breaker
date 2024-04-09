@@ -14,10 +14,14 @@ namespace PlayerFiles.PlatformaContent
         private string _mouseX = "Mouse X";
         private float _factor = 2f;
         private bool _isMousePressed = false;
+        
+        public float MouseValueX { get; private set; }
+        
+        public bool IsMousePressed => _isMousePressed;
 
         private void Update()
         {
-            float mouse = Input.GetAxis(_mouseX) * _factor;
+            MouseValueX = Input.GetAxis(_mouseX) * _factor;
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -31,7 +35,7 @@ namespace PlayerFiles.PlatformaContent
                 _isMousePressed = false;
 
                 if (!_ballMover.IsMoving)
-                    _ballMover.SetMove(mouse);
+                    _ballMover.SetMove(MouseValueX);
 
                 _positionMouse.SetActive(false);
 
