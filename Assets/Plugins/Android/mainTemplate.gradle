@@ -7,14 +7,16 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
     implementation 'androidx.annotation:annotation:1.7.1' // Packages/io.appmetrica.analytics/Editor/AppMetricaDependencies.xml:5
-    implementation 'io.appmetrica.analytics:analytics:7.12.0' // Packages/io.appmetrica.analytics/Editor/AppMetricaDependencies.xml:4
+    implementation 'androidx.lifecycle:lifecycle-process:2.4.1' // Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:12
+    implementation 'com.yandex.android:mobileads:7.18.2' // Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:7
+    // implementation 'io.appmetrica.analytics:analytics:7.12.0' // Packages/io.appmetrica.analytics/Editor/AppMetricaDependencies.xml:4
+    implementation 'io.appmetrica.analytics:analytics:7.14.0' // Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:17
 // Android Resolver Dependencies End
 **DEPS**}
 
 // Android Resolver Exclusions Start
 android {
   packaging {
-      exclude ('/lib/arm64-v8a/*' + '*')
       exclude ('/lib/armeabi/*' + '*')
       exclude ('/lib/mips/*' + '*')
       exclude ('/lib/mips64/*' + '*')
