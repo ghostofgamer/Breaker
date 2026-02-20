@@ -5304,6 +5304,7 @@ GameObject:
   - component: {fileID: 1954798232383875706}
   - component: {fileID: 4247380919155953685}
   - component: {fileID: 6744223401944376320}
+  - component: {fileID: 9187465289025113793}
   m_Layer: 5
   m_Name: MusicOff
   m_TagString: Untagged
@@ -5429,6 +5430,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9187465289025113793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959386867387287196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Off
+  FallbackText: 'Off
+
+'
 --- !u!1 &2006194741069963394
 GameObject:
   m_ObjectHideFlags: 0
@@ -10656,6 +10673,7 @@ GameObject:
   - component: {fileID: 1970604084030130637}
   - component: {fileID: 3767152528376918896}
   - component: {fileID: 3527844832553994589}
+  - component: {fileID: 1732111495340141512}
   m_Layer: 5
   m_Name: MusicOn
   m_TagString: Untagged
@@ -10779,6 +10797,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1732111495340141512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767452785701546306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: On
+  FallbackText: On
 --- !u!1 &3779763313472453046
 GameObject:
   m_ObjectHideFlags: 0
@@ -12070,6 +12102,7 @@ GameObject:
   - component: {fileID: 3894917833581780228}
   - component: {fileID: 8959743921861163507}
   - component: {fileID: 1590144336855936482}
+  - component: {fileID: 1131776056750950712}
   m_Layer: 5
   m_Name: MusicNameText
   m_TagString: Untagged
@@ -12193,6 +12226,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1131776056750950712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219220417477773776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Music
+  FallbackText: 'music :'
 --- !u!1 &4223908131150640341
 GameObject:
   m_ObjectHideFlags: 0
@@ -13311,6 +13358,7 @@ GameObject:
   - component: {fileID: 857745395374899204}
   - component: {fileID: 1758264738766482825}
   - component: {fileID: 7351130199705322835}
+  - component: {fileID: 4735822923946868715}
   m_Layer: 5
   m_Name: MusicOn
   m_TagString: Untagged
@@ -13434,6 +13482,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4735822923946868715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4484238111099807357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: On
+  FallbackText: On
 --- !u!1 &4541059318598889264
 GameObject:
   m_ObjectHideFlags: 0
@@ -15840,6 +15902,7 @@ GameObject:
   - component: {fileID: 371621879135534724}
   - component: {fileID: 5142729379425601998}
   - component: {fileID: 5471483459216018448}
+  - component: {fileID: 2296604688058778899}
   m_Layer: 5
   m_Name: MusicNameText
   m_TagString: Untagged
@@ -15863,8 +15926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -109.05002, y: -1.800003}
-  m_SizeDelta: {x: -334.02, y: -60.96}
+  m_AnchoredPosition: {x: -83.91, y: -1.800003}
+  m_SizeDelta: {x: -283.74, y: -60.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5142729379425601998
 CanvasRenderer:
@@ -15963,6 +16026,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2296604688058778899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150449143692265835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: SFX
+  FallbackText: 'sfx :'
 --- !u!1 &5163181870536061358
 GameObject:
   m_ObjectHideFlags: 0
@@ -19738,6 +19815,7 @@ GameObject:
   - component: {fileID: 7964552612750780793}
   - component: {fileID: 1152396231873971758}
   - component: {fileID: 4160342664400242547}
+  - component: {fileID: 8887547054332768145}
   m_Layer: 5
   m_Name: MusicOff
   m_TagString: Untagged
@@ -19863,6 +19941,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8887547054332768145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6286096454929462560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Off
+  FallbackText: 'Off
+
+'
 --- !u!1 &6338526976887047393
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,12 +20,10 @@ namespace ModificationFiles.BuffsFiles
         private int _randomEffectIndex;
         private Effect _startEffect;
         private Material _startMaterial;
-        private List<Renderer> _renderers;
 
         protected override void Awake()
         {
             base.Awake();
-            _renderers = new List<Renderer>();
             FindAllChildren(_bricks);
         }
 
@@ -80,14 +78,13 @@ namespace ModificationFiles.BuffsFiles
         {
             if (parent == null)
             {
-                Debug.LogError("Parent is null!");
                 return;
             }
 
             for (int i = 0; i < parent.childCount; i++)
             {
                 Transform child = parent.GetChild(i);
-                
+
                 if (child == null)
                 {
                     continue;
@@ -98,13 +95,9 @@ namespace ModificationFiles.BuffsFiles
                 if (brickCoordinator != null && !brickCoordinator.IsEternal && child.gameObject.activeSelf)
                 {
                     if (_bricksList == null)
-                    {
                         _bricksList = new List<BrickCoordinator>();
-                    }
 
                     _bricksList.Add(brickCoordinator);
-                    Renderer renderer = brickCoordinator.GetComponent<Renderer>();
-                    _renderers.Add(renderer);
                 }
 
                 FindAllChildren(child);

@@ -14,7 +14,7 @@ public class BallControl : MonoBehaviour
             {
                 Vector3 randomDir = UnityEngine.Random.onUnitSphere * UnityEngine.Random.Range(10,30);
                 randomDir.y = 0;
-                rb.velocity = randomDir;
+                rb.linearVelocity = randomDir;
                 rb.AddForce(transform.up * UnityEngine.Random.Range(100, 1000));
             }
         }

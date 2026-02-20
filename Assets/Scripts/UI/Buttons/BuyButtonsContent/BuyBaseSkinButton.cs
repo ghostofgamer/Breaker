@@ -8,9 +8,14 @@ namespace UI.Buttons.BuyButtonsContent
         [SerializeField] private int _index;
         [SerializeField] private BaseStore _baseStore;
 
-        protected override void Buy()
+        public void Purchase()
         {
             _baseStore.BuyCapsuleSkin(_index);
+        }
+
+        protected override void Buy()
+        {
+            Purchase();
         }
     }
 }

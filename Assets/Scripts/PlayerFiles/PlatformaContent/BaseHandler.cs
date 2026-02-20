@@ -12,7 +12,6 @@ namespace PlayerFiles.PlatformaContent
         [SerializeField] private ParticleSystem _loseEffect;
         [SerializeField] private GameObject _mousePosition;
         [SerializeField] private BallDeath _ballDeath;
-        [SerializeField] private Transform _environment;
 
         private BaseMovement _baseMovement;
 
@@ -36,7 +35,6 @@ namespace PlayerFiles.PlatformaContent
         private void OnVictoriousDestruction()
         {
             BaseDeactivation(_victoryEffect);
-            // transform.parent = _environment;
             _baseMovement.Die();
         }
 

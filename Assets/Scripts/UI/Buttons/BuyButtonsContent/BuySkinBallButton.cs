@@ -13,11 +13,16 @@ namespace UI.Buttons.BuyButtonsContent
 
         private int _purchased = 1;
 
-        protected override void Buy()
+        public void Purchase()
         {
             _save.SetData(_ballSkins.ToString(), _purchased);
             Button.interactable = false;
             _skin.ChangeValue();
+        }
+        
+        protected override void Buy()
+        {
+            Purchase();
         }
     }
 }
