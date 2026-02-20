@@ -11,7 +11,7 @@ namespace AppMetricaContent
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void ActivateAppMetrica()
         {
-            AppMetricaConfig appMetricaConfig = new AppMetricaConfig("39342b38-5bc8-4c65-b28f-38be2f98652a")
+            AppMetricaConfig appMetricaConfig = new AppMetricaConfig("3ffa28cd-741f-4ea9-b06c-4c5cfa574f16")
             {
                 CrashReporting = true,
                 SessionTimeout = 10,
@@ -40,6 +40,7 @@ namespace AppMetricaContent
         public static string ToJson(params (string key, object value)[] pairs)
         {
             var entries = new List<string>();
+            
             foreach (var pair in pairs)
             {
                 string valueStr = pair.value == null ? "null" : $"\"{pair.value}\"";
